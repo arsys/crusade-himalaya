@@ -1,0 +1,149 @@
+
+
+#hp-wrapper{
+    bottom: 0;
+    right: 0;
+    left: unset;
+    padding: 1em ;
+    width:70%;
+    background-color: white;
+    h5{        
+        color:  $grey-darken-4;
+    }
+}
+#price-wrapper{
+    padding: 20px 15px 16px 15px;
+    letter-spacing: 1px;
+    width: 30%;
+    z-index: 1;
+    bottom: -15px;
+    left: -10px;
+    right: unset;
+    background-color: $green;
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    .price{
+        color: $white;
+        text-transform: uppercase;
+        span{
+            display: block;
+        }
+        span:nth-child(odd) {
+            font-size: 10px;
+            font-weight: bold;
+        }
+        span:nth-child(even) {
+            font-weight: bold;
+            font-size: 17px;
+        }        
+    }
+}
+.home-tours{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+//static image start
+ #banner {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+#banner .inner {
+  padding-top: 21%; /* height/width of image */
+    display: block;
+    height: 0;
+}
+
+/* default screen, non-retina */
+ #banner { background-image: url("/img/banner.svg"); }
+
+@media only screen and (max-width: 320px) {
+    /* Small screen, non-retina */
+ #banner{ background-image: url("/img/banner.svg"); }
+}
+
+.banner-title {
+ 
+   /* position: absolute;
+     bottom: 150px;
+     left: 360px;
+     right:360px;
+     color:white; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    color: white;
+    font-weight:10px;
+    
+}
+.inner{
+  position:relative;
+    display: inline-block;
+ }
+.banner{
+    display:block;
+}
+//static image end
+
+
+
+
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+}
+
+.first-text {
+  position: relative;
+  color: $white;
+  text-align: center;
+  animation: fadeIn 1s infinite alternate;
+}
+.second-text {
+  position: relative;
+  color: $white;
+  text-align: center;
+  animation: fadeIn 1s infinite alternate;
+}
+
+
+//why  us start 
+
+.intro{
+  .intro-sign{
+    font-size:54px;
+    font-weight:800;
+
+  }
+  .intro-title{
+    font-size:18px;
+    font-weight:bold;
+  }
+}
+.who-para{
+  font-size:14px;
+  font-weight:bold;
+}
+//why us end
+
+//supported us start
+
+   .supported-img:hover{
+       content: url('/img/logo/trip.png');
+       width:193px;
+       height:33px;
+    }
+.featured{
+  font-size:18px;
+  font-weight:bold;
+}
+//supported us end
+

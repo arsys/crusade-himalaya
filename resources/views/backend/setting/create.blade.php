@@ -1,0 +1,195 @@
+@extends('layouts.backend')
+@section('content')
+<div class="row">
+    <div class="col-lg-offset-1 col-md-10">
+        {!! Form::open(['route' => 'setting.store', 'class'=>'form form-validate','files'=> true ]) !!}
+        <div class="card">
+            <div class="card-head style-primary">
+                <header>Site Settings</header>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('site_name') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="site_name {{$errors->has('site_name') ? 'inputError' : ''}}" name="site_name"
+                            value="{{ old('site_name') }}" required>
+                            @if($errors->has('site_name'))
+                            <span class="help-block">{{ $errors->first('site_name') }}</span>
+                            @endif
+                            {{ Form::label('site_name', 'Site Name ') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('facebook') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="facebook {{$errors->has('facebook') ? 'inputError' : ''}}" name="facebook"
+                            value="{{ old('facebook') }}" required>
+                            @if($errors->has('facebook'))
+                            <span class="help-block">{{ $errors->first('facebook') }}</span>
+                            @endif
+                            {{ Form::label('facebook', 'Facebook ') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('tagline') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="tagline {{$errors->has('tagline') ? 'inputError' : ''}}" name="tagline"
+                            value="{{ old('tagline') }}" required>
+                            @if($errors->has('tagline'))
+                            <span class="help-block">{{ $errors->first('tagline') }}</span>
+                            @endif
+                            {{ Form::label('tagline', 'Tagline ') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('twitter') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="twitter {{$errors->has('twitter') ? 'inputError' : ''}}" name="twitter"
+                            value="{{ old('twitter') }}" required>
+                            @if($errors->has('twitter'))
+                            <span class="help-block">{{ $errors->first('twitter') }}</span>
+                            @endif
+                            {{ Form::label('twitter', 'Twitter ') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('address') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="address {{$errors->has('address') ? 'inputError' : ''}}" name="address"
+                            value="{{ old('address') }}" required>
+                            @if($errors->has('address'))
+                            <span class="help-block">{{ $errors->first('address') }}</span>
+                            @endif
+                            {{ Form::label('address', 'Address ') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('instagram') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="instagram {{$errors->has('instagram') ? 'inputError' : ''}}" name="instagram"
+                            value="{{ old('instagram') }}" required>
+                            @if($errors->has('instagram'))
+                            <span class="help-block">{{ $errors->first('instagram') }}</span>
+                            @endif
+                            {{ Form::label('instagram', 'Instagram ') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('city') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="city {{$errors->has('city') ? 'inputError' : ''}}" name="city"
+                            value="{{ old('city') }}" required>
+                            @if($errors->has('city'))
+                            <span class="help-block">{{ $errors->first('city') }}</span>
+                            @endif
+                            {{ Form::label('city', 'City ') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('googleplus') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="googleplus {{$errors->has('googleplus') ? 'inputError' : ''}}"
+                            name="googleplus"
+                            value="{{ old('googleplus') }}" required>
+                            @if($errors->has('googleplus'))
+                            <span class="help-block">{{ $errors->first('googleplus') }}</span>
+                            @endif
+                            {{ Form::label('googleplus', 'Google+ ') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('phone') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="phone {{$errors->has('phone') ? 'inputError' : ''}}" name="phone"
+                            value="{{ old('phone') }}" required>
+                            @if($errors->has('phone'))
+                            <span class="help-block">{{ $errors->first('phone') }}</span>
+                            @endif
+                            {{ Form::label('phone', 'Phone ') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('youtube') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="youtube {{$errors->has('youtube') ? 'inputError' : ''}}" name="youtube"
+                            value="{{ old('youtube') }}" required>
+                            @if($errors->has('youtube'))
+                            <span class="help-block">{{ $errors->first('youtube') }}</span>
+                            @endif
+                            {{ Form::label('youtube', 'Youtube ') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('website') ? 'has-error' : ''}}">
+                            <input type="website" class="form-control"
+                            id="website {{$errors->has('website') ? 'inputError' : ''}}" name="website"
+                            value="{{ old('website') }}" required>
+                            @if($errors->has('website'))
+                            <span class="help-block">{{ $errors->first('website') }}</span>
+                            @endif
+                            {{ Form::label('website', 'Website ') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('whats_app') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="whats_app {{$errors->has('whats_app') ? 'inputError' : ''}}" name="whats_app"
+                            value="{{ old('whats_app') }}" required>
+                            @if($errors->has('whats_app'))
+                            <span class="help-block">{{ $errors->first('whats_app') }}</span>
+                            @endif
+                            {{ Form::label('whats_app', 'Whats app ') }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Google Map Link</h4>
+                        <div class="form-group floating-label {{$errors->has('map') ? 'has-error' : ''}}">
+                            <textarea name="map"
+                            id="map {{$errors->has('map') ? 'inputError' : ''}}"
+                            cols="30" rows="5" required style="width: 100%; resize: none;"></textarea>
+                            @if($errors->has('map'))
+                            <span class="help-block">{{ $errors->first('map') }}</span>
+                            @endif
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4>Google Tag </h4>
+                        <div class="form-group floating-label {{$errors->has('gtag') ? 'has-error' : ''}}">
+                            <textarea name="gtag"
+                            id="gtag {{$errors->has('gtag') ? 'inputError' : ''}}"
+                            cols="30" rows="5" required style="width: 100%; resize: none;"></textarea>
+                            @if($errors->has('gtag'))
+                            <span class="help-block">{{ $errors->first('gtag') }}</span>
+                            @endif
+
+                        </div>
+                    </div>                    
+                </div>
+            </div><!--end .card body-->
+            <div class="card-actionbar">
+                <div class="card-actionbar-row">
+                    <div class="col-sm-12">
+                        {{ Form::submit('Save', ['class' => 'btn btn-lg  btn-block btn-primary ink-reaction'] )}}
+                    </div>
+                </div>
+            </div>
+
+            {!! Form::close() !!}
+        </div><!--end .col -->
+    </div>
+</div>
+@stop

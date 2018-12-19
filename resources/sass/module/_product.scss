@@ -1,0 +1,441 @@
+
+// breadcrumbs start
+#breadcrumb{
+    position: relative;
+    li a{        
+        color: rgb(255, 255, 255);
+
+    }
+}
+.breadcrumb {
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+.uk-container-expand{
+ position:relative;
+}
+//breadcrumb end
+
+
+//product()
+.trip-details{
+    padding: 28px;
+    border-top: 3px solid $green;
+    border-bottom: 3px solid $green;
+}
+//product_page start(price_details in mobile mode)
+
+.mobile-days{
+    .mobile-count{
+        font-size:20px;
+        font-weight: bold;
+        padding-top: 22px;
+    }
+}
+.mobile-duration{
+    .price-details{ 
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+}
+.price-divide{
+    border-left:3px solid $teal-lighten-1;
+}
+//product_page end(price_details in mobile mode)
+#product-price-wrapper,#product-price-wrapper1{
+   position: relative;
+}
+#product-price{
+    position: absolute;     
+    z-index: 1;
+    background-color:$white;
+    width: inherit;
+    span{
+        padding: 4px 0px;
+    }
+    .top{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .middle{
+        .middle-1{
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .middle-2{
+            font-size: 40px;
+            font-weight: 600;
+        }        
+    }
+    .bottom{
+        #goto{
+            width: 100%;
+        }
+    }
+
+}
+.non-sticky{
+    bottom:20px; 
+}
+.sticky-price{
+    top: -200px;
+}
+
+
+#tab-wrapper{
+    ul{
+        background-color: $white;
+        li{
+            padding: 20px 40px;
+
+        }
+        .uk-active{
+            border-bottom: solid 2px $green;
+            transition: width .3s;
+        }
+    }
+}
+
+
+
+
+.sticky-wrapper{
+    background-color:$white;
+}
+
+//similar tours overlay start
+
+.similar-tours
+{
+    background-color:$white;
+}
+#similar-tours-img{
+    padding-bottom: 10px;
+}
+
+
+#meta-title{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    a:hover{
+        text-decoration:none;
+    }
+    h4{
+        margin: unset;
+        color: white;
+        text-align: left;
+        padding-left: 1em;
+    }
+}
+
+.tours{
+    text-align: center;
+}
+.discover{
+    margin-bottom:8px;
+    margin-right:10px;
+}
+.left{
+    max-width: 10%;
+    padding-left:9px;
+    margin-bottom:12px;
+    margin-right:10px;
+
+    .count{
+        font-size:16px;
+        font-weight: bold;
+        text-align: center;
+        margin-left:15px;
+
+    }
+}
+.center{
+    max-width: 60%;
+    padding-left:20px;
+    .center-price-info{
+        max-width: 30%;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .center-price{
+       max-width: 70%;
+        font-size: 25px;
+        font-weight: bold;
+        margin-left:15px;
+        margin-top:7px;
+    }
+}
+#content-wrapper{
+    position: relative;
+}
+.brandname{
+    background-color:$white;
+}
+#product-price-wrapper,#product-price-wrapper1{
+ position: relative;
+}
+#product-price{
+    position: absolute;     
+    z-index: 1;
+    background-color:$white;
+    width: inherit;
+    span{
+        padding: 4px 0px;
+    }
+    .top{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .middle{
+        .middle-1{
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .middle-2{
+            font-size: 40px;
+            font-weight: 600;
+        }        
+    }
+}
+
+.non-sticky{
+    bottom:20px; 
+}
+.sticky-price{
+    top: -200px;
+}
+
+
+.sticky-wrapper{
+    background-color:$white;
+}
+.similar-tours
+{
+    background-color:$white;
+}
+#similar-tours-img{
+    padding-bottom: 10px;
+}
+#meta-title{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    a:hover{
+        text-decoration:none;
+    }
+    h4{
+        margin: unset;
+    }
+}
+.left{
+    width: 10%;
+    .count{
+        font-size:20px;
+        font-weight: bold;
+    }
+}
+.center{
+    width: 60%;
+    .price-info{
+        width: 30%;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .price{
+        width: 70%;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+#content-wrapper{
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .sticky-price{
+    display:none;
+}
+} 
+
+
+#tab-wrapper{
+    ul{
+        background-color: $white;
+    }
+}
+
+.attribute-wrapper{
+    .attr-icons{
+        i{
+            font-size: 2.5em;
+        }
+    }
+    .attr-details{
+        .attr-title, .attr-meta{
+            font-size: 1em;
+            font-weight: 700;
+        }
+    }
+}
+//content-review
+.review-client{
+    font-weight: 600;
+}
+
+
+// contact page details start
+.booking-contact-info{
+    .booking-call{
+        line-height: normal;
+    }
+    .booking-call-details{
+        padding-left:10px;
+        font-weight:bold;
+        font-size:16px;
+    }
+.booking-phone{
+    padding-left:70px;
+    font-weight:bold;
+    font-size:16px;
+    color: $pink-base;
+ 
+}
+.booking-chat{
+    padding-left:70px;
+    padding-buttom:130px;
+    font-weight:bold;
+    font-size:16px;
+    color: $pink-base;
+
+}
+ .booking-call-meta{
+    padding-left:70px;
+    font-weight:bold;
+    font-size:12px;
+    font-weight: bold;
+ 
+}
+    .booking-email{
+        padding-top:45px;
+        line-height: normal;
+        font-size: 16px;
+    }
+    .booking-mail-details{
+        padding-left:25px;
+        font-weight:bold;
+        font-size:16px;
+        line-height:normal;
+    }
+
+
+}
+
+
+
+//bookingstep1 progressive step bar start
+/* .booking{
+     background-color: #f8f8f8;
+}
+
+
+.circle-text {
+    display: block;
+    margin: auto;
+    height: 120px;
+    width: 120px;
+
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background:$green ;
+
+    color: #fff;
+    font: 18px "josefin sans", arial;
+    line-height: 120px;
+
+  }
+
+.a {
+  display: inline-block;
+  position: relative;  
+}
+
+
+
+.uk-process-step {
+  position: relative;
+}
+
+.uk-process-step:before {
+  top: 60px;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  height: 3px;
+  left: 15%; 
+  right:15%;
+ border-bottom: 3px dashed $grey;
+
+ 
+}
+
+.uk-process-step .uk-width-1-3 {
+  position: relative;
+} */
+
+//bookingstep1 progressive step bar end
+
+
+//bookingstep2 progressive step bar start
+.booking{
+     background-color: #f8f8f8;
+}
+.circle-text {
+  display: block;
+    margin: auto;
+    height: 90px;
+    width: 90px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background:$green ;
+    color: #fff;
+    font: 12px "josefin sans", arial;
+    line-height: 90px;
+    z-index: 1;
+    position: relative;
+}
+.step:nth-child(2) .circle-text {
+  background: red;
+}
+.step:nth-child(3) .circle-text {
+  background: green;
+}
+
+
+.a {
+  display: inline-block;
+  position: relative;  
+}
+
+.uk-process-step {
+    position: relative;
+}
+.step:not(:first-child)::before {
+    content: "";
+    
+    left: -50%;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    border-bottom: 5px solid $grey;
+}
+.step.active ~ .step:before {
+    border-bottom: 5px dotted $grey;
+}
+.uk-process-step .uk-width-1-3 {
+    position: relative;
+}
+//bookingstep2 progressive step bar end

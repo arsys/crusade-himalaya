@@ -1,0 +1,173 @@
+
+.green {
+  background-color: #2ed3ae !important;
+}
+
+.green-lighten-5 {
+  background-color: #74e2c9 !important;
+}
+
+.green-lighten-4 {
+  background-color: #66dfc4 !important;
+}
+
+.green-lighten-3 {
+  background-color: #58dcbe !important;
+}
+
+.green-lighten-2 {
+  background-color: #4ad9b9 !important;
+}
+
+.green-lighten-1 {
+  background-color: #3cd6b3 !important;
+}
+
+.green-darken-1 {
+  background-color: #2ac6a3 !important;
+}
+
+.green-darken-2 {
+  background-color: #27b898 !important;
+}
+
+.green-darken-3 {
+  background-color: #24aa8c !important;
+}
+
+.green-darken-4 {
+  background-color: #219c81 !important;
+}
+
+.green-darken-5 {
+  background-color: #1e8e75 !important;
+}
+
+.grey {
+  background-color: #9e9e9e !important;
+}
+
+.grey-lighten-5 {
+  background-color: #fafafa !important;
+}
+
+.grey-lighten-4 {
+  background-color: #f5f5f5 !important;
+}
+
+.grey-lighten-3 {
+  background-color: #eeeeee !important;
+}
+
+.grey-lighten-2 {
+  background-color: #e0e0e0 !important;
+}
+
+.grey-lighten-1 {
+  background-color: #bdbdbd !important;
+}
+
+.grey-darken-1 {
+  background-color: #757575 !important;
+}
+
+.grey-darken-2 {
+  background-color: #616161 !important;
+}
+
+.grey-darken-3 {
+  background-color: #424242 !important;
+}
+
+.grey-darken-4 {
+  background-color: #212121 !important;
+}
+
+.black {
+  background-color: #000000 !important;
+}
+
+.white {
+  background-color: #FFFFFF !important;
+}
+
+.transparent {
+  background-color: transparent !important;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-medium {
+  font-size: 14px;
+}
+
+.text-large {
+  font-size: 16px;
+}
+
+.text-x-large {
+  font-size: 18px;
+}
+
+.text-xx-large {
+  font-size: 24px;
+}
+
+$green: #2ed3ae;
+$white: #fff;
+$dark: #333;
+$grey-light:#f8f8f8;
+$transparent:transparent;
+$grey-darken-2 :#616161 ;
+$grey: #9e9e9e;
+
+
+$color-primary:#24A3BF;
+$color-secondary:#BF1363;
+$color-tertiary: #06B0D6;
+$btn-primary: #FFB30F;
+$btn-primary-hover: #fdad00;
+$btn-secondary:#84BCDA;
+$pink-base: #e91e63;
+$light-blue-lighten-2: #4fc3f7;
+$light-blue-lighten-1: #29b6f6;
+$light-blue-base: #03a9f4;
+$teal-lighten-1: #26a69a;
+
+ $orange-base: #ff9800;
+ $grey-darken-4: #212121;
+ $black: #000000;
+ $white: #FFFFFF;
+ $transparent: transparent;
+
+body{
+  background-color:$white;
+}
+
+@media(min-width:768px){
+
+    #toggle-button{
+      display:none;
+    }
+
+}
+/* @import "module/ui-kit"; */
+@import "module/_nav";
+ @import "module/_footer";
+ @import "module/_home";
+ @import "module/_contact";
+ @import "module/_category";
+ @import "module/_product";
+//back to top botton start
+@import "module/_scroll";
+//back to top botton end
+@import "module/_toastr";
+@import "module/_parsley";
+
+@import "module/_buttons";
+@import "module/_heading";
+@import "module/_ghost";
+
+

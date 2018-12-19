@@ -1,0 +1,6 @@
+<div class="uk-section uk-section-small uk-section-default">
+	<div class="uk-container">
+		<h2 class=" uk-text-center heading-primary"><span>Title</span></h2>
+		<p class="uk-margin-medium-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nisi error ipsum, temporibus eum veritatis natus at, sit expedita beatae soluta! Atque iusto quaerat natus? Dolor, placeat sit adipisci molestiae. Debitis tempore sint nobis beatae consectetur eaque sunt quasi deserunt odio reprehenderit nisi, qui neque, sed magnam doloribus id consequuntur ipsam similique officia quis saepe quae placeat laborum. Quidem sequi deserunt ipsa doloribus, ex, quos autem officiis facilis voluptatum repellat perferendis temporibus consequuntur nostrum adipisci, vero quisquam doloremque. At explicabo, aut magnam dolor. Impedit modi aliquam aperiam nobis dignissimos alias ipsa ut consequuntur. Autem delectus, aut. Illum, laboriosam distinctio minima. Rerum officiis ipsum quibusdam, dolor dignissimos, odit vel enim dolorum iste cupiditate sequi, magnam totam facere, minima aliquam voluptas perferendis aliquid sed itaque.</p>
+	</div>
+</div>

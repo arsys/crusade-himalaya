@@ -2,7 +2,7 @@
   <div class="uk-container">
     <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
         <div>
-            <h2 class=" uk-text-center heading-secondary uk-text-center uk-margin-mediumm-bottom"><span>Review</span></h2>
+            <h2 class=" uk-text-center  uk-text-center uk-margin-mediumm-bottom"><span>Review</span></h2>
             @for($c=1; $c<=3; $c++) 
             <div class="uk-text-left uk-margin-medium-top" uk-grid>
                 <div class="uk-width-1-4">
@@ -29,7 +29,7 @@
 </div>
 
 <div>
-   <h2 class=" uk-text-center heading-secondary uk-text-center"><span>Follow</span></h2> 
+   <h2 class=" uk-text-center  uk-text-center"><span>Follow</span></h2> 
         <table class="uk-table uk-table-divider uk-table-table-bordered uk-margin-medium-top">
             <tbody>
                 <tr>

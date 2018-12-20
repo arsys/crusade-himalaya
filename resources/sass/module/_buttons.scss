@@ -1,9 +1,9 @@
 
 .hover-effect{
-  transition: all 0.5s ease 0s;
+    transition: all 0.8s ease 0s;
 }
 .uk-button{
-  
+
     color: $white;
     background-color: $green;
     border: 1px solid #e5e5e5;
@@ -21,12 +21,12 @@
     text-transform: uppercase;
     transition: 0.1s ease-in-out;
     transition-property: color, background-color, border-color;
-        
-    &:hover{
 
-    color:$white;
-    background-color:$grey-darken-4;
-  }
+    &:hover{
+        @extend .hover-effect;
+        color:$white;
+        background-color:$grey-darken-4;
+    }
 
 }
 
@@ -49,10 +49,10 @@
     text-transform: uppercase;
     transition: 0.1s ease-in-out;
     transition-property: color, background-color, border-color;
-  &:hover{
-  
-    color:$white;
-    background-color:$green;
+    &:hover{
+      @extend .hover-effect;
+      color:$white;
+      background-color:$green;
   }
 }
 

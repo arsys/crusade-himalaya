@@ -1,11 +1,7 @@
 
 
 #hp-wrapper{
-    bottom: 0;
-    right: 0;
-    left: unset;
     padding: 1em ;
-    width:70%;
     background-color: white;
     h5{        
         color:  $grey-darken-4;
@@ -133,16 +129,17 @@
 }
 //why us end
 
-//supported us start
+//featured us start
 
-   .supported-img:hover{
-       content: url('/img/logo/trip.png');
-       width:193px;
-       height:33px;
-    }
 .featured{
-  font-size:18px;
-  font-weight:600 !important;
+  div{
+    img{
+      filter: grayscale(100%);
+      &:hover{
+      filter: none;
+      transition: all 0.5s ease;
+      }
+    }
+  }
 }
-//supported us end
-
+//featured us end

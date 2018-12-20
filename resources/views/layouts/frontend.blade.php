@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Get2Nepal</title>
+	<title>Crusade Himalaya | Empower, Educate, Encourage</title>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">

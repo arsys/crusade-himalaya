@@ -18,38 +18,38 @@
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid">
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?nepal" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>1</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?trekking" alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Trekking</h1></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?india" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>2</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?surf" alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Surfing</h1></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?nepal" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>3</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?ski" alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Sking</h1></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?mountain" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>4</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?afca" alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Safari</h1></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?cat" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>5</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?fishing" alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Fishing</h1></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?dog" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>6</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?rock-climb" alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Climbing</h1></div>
                     </div>
                 </li>
                 <li>
@@ -60,20 +60,20 @@
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?mustang" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>8</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?temple" alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Culture</h1></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?everest"alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>9</h1></div>
+                        <img src="https://source.unsplash.com/320x450/?yoga"alt="">
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Retreat</h1></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
                         <img src="https://source.unsplash.com/320x450/?annapurna" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>10</h1></div>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Nature</h1></div>
                     </div>
                 </li>
             </ul>

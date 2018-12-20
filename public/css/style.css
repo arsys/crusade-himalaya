@@ -207,7 +207,6 @@ body {
 }
 
 #hp-wrapper {
-  padding: 1em;
   background-color: white;
 }
 
@@ -218,12 +217,25 @@ body {
 #price-wrapper {
   padding: 5px;
   letter-spacing: 1px;
-  width: 36%;
+  width: 50%;
   z-index: 1;
   top: 166px;
-  left: -8px;
+  left: -10px;
   right: unset;
+  text-align: left;
   background-color: #2ed3ae;
+  position: relative;
+}
+
+#price-wrapper:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  bottom: -10px;
+  border-width: 0 10px 10px 0;
+  border-right-color: #219c81;
+  left: 0;
 }
 
 #price-wrapper .price {

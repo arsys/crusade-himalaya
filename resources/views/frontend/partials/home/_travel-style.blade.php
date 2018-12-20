@@ -36,7 +36,7 @@
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?afca" alt="">
+                        <img src="https://source.unsplash.com/320x450/?africa-safari" alt="">
                         <div class="uk-position-center uk-panel" id="activity-title"><h1>Safari</h1></div>
                     </div>
                 </li>

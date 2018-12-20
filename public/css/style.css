@@ -118,11 +118,10 @@ body {
   background-color: #FFFFFF;
 }
 
-@media (min-width: 768px) {
-  #toggle-button {
-    display: none;
-  }
-}
+/* .responsive-image {
+  width: 100%;
+  height: auto;
+} */
 
 /* @import "module/ui-kit"; */
 
@@ -249,16 +248,14 @@ body {
 }
 
 #price-wrapper {
-  padding: 20px 15px 16px 15px;
+  padding: 5px;
   letter-spacing: 1px;
-  width: 30%;
+  width: 36%;
   z-index: 1;
-  bottom: -15px;
-  left: -10px;
+  top: 166px;
+  left: -8px;
   right: unset;
   background-color: #2ed3ae;
-  -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
 }
 
 #price-wrapper .price {
@@ -271,13 +268,11 @@ body {
 }
 
 #price-wrapper .price span:nth-child(odd) {
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 15px;
 }
 
 #price-wrapper .price span:nth-child(even) {
-  font-weight: bold;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 .home-tours {
@@ -383,7 +378,6 @@ body {
 
 .who-para {
   font-size: 14px;
-  font-weight: bold;
 }
 
 .supported-img:hover {
@@ -394,7 +388,7 @@ body {
 
 .featured {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600 !important;
 }
 
 .contact-info .call {
@@ -800,56 +794,6 @@ body {
   font-size: 16px;
   line-height: normal;
 }
-
-/* .booking{
-     background-color: #f8f8f8;
-}
-
-
-.circle-text {
-    display: block;
-    margin: auto;
-    height: 120px;
-    width: 120px;
-
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 50%;
-    background:$green ;
-
-    color: #fff;
-    font: 18px "josefin sans", arial;
-    line-height: 120px;
-
-  }
-
-.a {
-  display: inline-block;
-  position: relative;  
-}
-
-
-
-.uk-process-step {
-  position: relative;
-}
-
-.uk-process-step:before {
-  top: 60px;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  height: 3px;
-  left: 15%; 
-  right:15%;
- border-bottom: 3px dashed $grey;
-
- 
-}
-
-.uk-process-step .uk-width-1-3 {
-  position: relative;
-} */
 
 .booking {
   background-color: #f8f8f8;

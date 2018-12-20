@@ -9,7 +9,7 @@
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">        
-     <!--    <link rel="stylesheet" href="{{asset('css/app.css')}}"> -->
+ 
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 <body>

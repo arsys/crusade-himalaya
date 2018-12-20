@@ -16,41 +16,41 @@
 
             <div>
 
-                <img src="{{asset('img/Insta/iam.jpg')}}" alt="" >
+                <img src="https://source.unsplash.com/400x300/?heli" alt="" >
             </div>
 
             <div>
-                <img src="{{asset('img/Insta/gosaikunda-1.jpg')}}" alt="">
+                <img src="https://source.unsplash.com/400x300/?everest" alt="">
             </div>
             <div>
-                <img src="{{asset('img/Insta/larkey.jpg')}}" alt="">
+                <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
             </div>
 
             <div>
-                <img src="{{asset('img/Insta/thorangla.jpg')}}" alt="">
+                <img src="https://source.unsplash.com/400x300/?nepal" alt="">
             </div>
             <div>
-                <img src="{{asset('img/Insta/gosaikunda-1.jpg')}}" alt="">
+                <img src="https://source.unsplash.com/400x300/?mountain" alt="">
             </div> 
 
 
             <div>
-                <img src="{{asset('img/Insta/larkey.jpg')}}" alt="" >
+                <img src="https://source.unsplash.com/400x300/?langtang" alt="" >
             </div>
             <div>
-                <img src="{{asset('img/Insta/mountain.jpg')}}" alt="">
-            </div>
-
-            <div>
-                <img src="{{asset('img/Insta/thorangla.jpg')}}"alt="">
+                <img src="https://source.unsplash.com/400x300/?everest" alt="">
             </div>
 
             <div>
-                <img src="{{asset('img/Insta/upper-dolpa.jpg')}}" alt="">
+                <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
             </div>
 
             <div>
-                <img src="{{asset('img/Insta/upper-mustang.jpg')}}" alt="">
+                <img src="https://source.unsplash.com/400x300/?heli" alt="">
+            </div>
+
+            <div>
+                <img src="https://source.unsplash.com/400x300/?annapurna" alt="">
             </div> 
 
         </div>

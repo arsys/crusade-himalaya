@@ -6,12 +6,10 @@
                 <li class="uk-margin-small-bottom">
                     <div class="uk-card uk-card-default uk-height-medium">
                         <div class="uk-card-media-top">
-                            <img src="{{asset('img/Tours/annapurna.jpg')}}" alt="">
-                            <div class="uk-overlay uk-overlay-default uk-position-bottom" id="price-wrapper">
+                            <img src="https://source.unsplash.com/400x300/?heli" alt="">
+                            <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                                 <span class="price">
-                                    <span>From</span>
                                     <span>USD $500</span>
-                                    <span>all inclusive</span>
                                 </span>
                             </div>
                             <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
@@ -23,12 +21,10 @@
                 <li class="uk-margin-small-bottom">
                     <div class="uk-card uk-card-default uk-height-medium">
                         <div class="uk-card-media-top">
-                            <img src="{{asset('img/Tours/ebc-home.jpg')}}" alt="">
-                            <div class="uk-overlay uk-overlay-default uk-position-bottom" id="price-wrapper">
+                            <img src="https://source.unsplash.com/400x300/?annapurna" alt="">
+                            <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                                 <span class="price">
-                                    <span>From</span>
                                     <span>USD $500</span>
-                                    <span>all inclusive</span>
                                 </span>
                             </div>
                             <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
@@ -40,13 +36,11 @@
                 <li class="uk-margin-small-bottom">
                     <div class="uk-card uk-card-default uk-height-medium">
                         <div class="uk-card-media-top">
-                            <img src="{{asset('img/Tours/mera-peak-climbing.jpg')}}" alt="">
-                            <div class="uk-overlay uk-overlay-default uk-position-bottom" id="price-wrapper">
-                                <div class="price">
-                                    <span>From</span>
+                            <img src="https://source.unsplash.com/400x300/?everest" alt="">
+                            <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
+                                <span class="price">
                                     <span>USD $500</span>
-                                    <span>all inclusive</span>
-                                </div>
+                                </span>
                             </div>
                             <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                                 <h5>Product Name</h5>
@@ -57,12 +51,10 @@
                 <li class="uk-margin-small-bottom">
                     <div class="uk-card uk-card-default uk-height-medium">
                         <div class="uk-card-media-top">
-                            <img src="{{asset('img/Tours/island-peak.jpg')}}" alt="">
-                            <div class="uk-overlay uk-overlay-default uk-position-bottom" id="price-wrapper">
+                            <img src="https://source.unsplash.com/400x300/?nepal" alt="">
+                              <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                                 <span class="price">
-                                    <span>From</span>
                                     <span>USD $500</span>
-                                    <span>all inclusive</span>
                                 </span>
                             </div>
                             <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">

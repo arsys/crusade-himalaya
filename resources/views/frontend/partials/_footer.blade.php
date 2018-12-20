@@ -19,7 +19,7 @@
             <div class="uk-flex uk-flex-column">                
                 <a class=" uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
                     <span class=" uk-margin-small-top " uk-icon="file-text"></span>
-                    <span>Request Broucher</span>
+                    <span>Request </span>
                     <span class=" uk-margin-small-top" uk-icon="chevron-right"></span>
                 </a>
                 <a class=" uk-button-default uk-width-2-3 uk-margin-small-top" href="#">

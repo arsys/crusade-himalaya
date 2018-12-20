@@ -12,16 +12,15 @@
     }
 }
 #price-wrapper{
-    padding: 20px 15px 16px 15px;
+    padding: 5px;
     letter-spacing: 1px;
-    width: 30%;
+    width: 36%;
     z-index: 1;
-    bottom: -15px;
-    left: -10px;
+    top:166px;
+    left: -8px;
     right: unset;
     background-color: $green;
-    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
-    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  
     .price{
         color: $white;
         text-transform: uppercase;
@@ -29,12 +28,12 @@
             display: block;
         }
         span:nth-child(odd) {
-            font-size: 10px;
-            font-weight: bold;
+            font-size: 15px;
+          
         }
         span:nth-child(even) {
-            font-weight: bold;
-            font-size: 17px;
+           
+            font-size: 15px;
         }        
     }
 }
@@ -130,7 +129,7 @@
 }
 .who-para{
   font-size:14px;
-  font-weight:bold;
+ 
 }
 //why us end
 
@@ -143,7 +142,7 @@
     }
 .featured{
   font-size:18px;
-  font-weight:bold;
+  font-weight:600 !important;
 }
 //supported us end
 

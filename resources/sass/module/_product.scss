@@ -279,12 +279,12 @@
         }
     }
 }
-//content-review
+//content-review start
 .review-client{
     font-weight: 600;
 }
 
-
+//content-review end
 // contact page details start
 .booking-contact-info{
     .booking-call{
@@ -332,61 +332,7 @@
 
 }
 
-
-
-//bookingstep1 progressive step bar start
-/* .booking{
-     background-color: #f8f8f8;
-}
-
-
-.circle-text {
-    display: block;
-    margin: auto;
-    height: 120px;
-    width: 120px;
-
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 50%;
-    background:$green ;
-
-    color: #fff;
-    font: 18px "josefin sans", arial;
-    line-height: 120px;
-
-  }
-
-.a {
-  display: inline-block;
-  position: relative;  
-}
-
-
-
-.uk-process-step {
-  position: relative;
-}
-
-.uk-process-step:before {
-  top: 60px;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  height: 3px;
-  left: 15%; 
-  right:15%;
- border-bottom: 3px dashed $grey;
-
- 
-}
-
-.uk-process-step .uk-width-1-3 {
-  position: relative;
-} */
-
-//bookingstep1 progressive step bar end
-
+// contact page details end
 
 //bookingstep2 progressive step bar start
 .booking{

@@ -145,14 +145,10 @@ $teal-lighten-1: #26a69a;
 body{
   background-color:$white;
 }
-
-@media(min-width:768px){
-
-    #toggle-button{
-      display:none;
-    }
-
-}
+/* .responsive-image {
+  width: 100%;
+  height: auto;
+} */
 /* @import "module/ui-kit"; */
 @import "module/_nav";
  @import "module/_footer";

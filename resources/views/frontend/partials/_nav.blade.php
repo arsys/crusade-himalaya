@@ -107,30 +107,88 @@
 <!-- nav bar end -->
 <!-- Off canvas start -->
 <div class="uk-offcanvas-content">
-    <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+    <div id="offcanvas-nav" uk-offcanvas="flip: true; overlay: true">
         <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide sidebar">
             <ul class="uk-nav uk-nav-default">
-                <li class="uk-active"><a href="/home">Home</a></li>              
+                <li class="uk-active"><a href="/">Home</a></li>              
                     <ul uk-accordion>
                         <li><a class="uk-accordion-title" href="#">Item </a>
                             <div class="uk-accordion-content">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     <ul uk-accordion>
-                                        <li class="list-item"><a class="uk-accordion-title" href="#">List item 1</a>
+                                        <li class="list-item"><a class="uk-accordion-title" href="#">Everest Region</a>
                                             <div class="uk-accordion-content">
                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                    <li class="link"><a href="#">link 1list itm3 list item3 list iten3</a></li>
-                                                    <li class="link"><a href="#">link 2list itm3 list item3 list iten3</a></li>
-                                                    <li class="link"><a href="#">link 3list itm3 list item3 list iten3</a></li>
+                                                    <li class="list-item"><a href="#">Everest Base Camp Trek</a></li>
+                                                    <li class="list-item"><a href="#">Everest Base Camp via Gokyo</a></li>
+                                                    <li class="list-item"><a href="#">High Passes Trek</a></li>
+                                                    <li class="list-item"><a href="#">Gokyo Lake Trek</a></li>
+                                                    <li class="list-item"><a href="#">Everest View Trek</a></li>
+                                                    <li class="list-item"><a href="#">Everest Base Camp Trek and Fly</a></li>
+
+                                                </ul>
+                                               
+                                            </div>
+                                        </li>
+                                         <li class="list-item"><a class="uk-accordion-title" href="#">Tours</a>
+                                            <div class="uk-accordion-content">
+                                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                     <li class="list-item"><a href="#">Chitwan National Park</a></li>
+                                                     <li class="list-item"><a href="#">Kathmandu Valley</a></li>
+                                                     <li class="list-item"><a href="#">Bardia Notional Park</a></li>
+                                                     <li class="list-item"><a href="#">Koshi Tappu Wildlife Reserve</a></li>
+
+                                                </ul>
+                                               
+                                            </div>
+                                        </li>
+                                          <li class="list-item"><a class="uk-accordion-title" href="#">Adventure Tours</a>
+                                            <div class="uk-accordion-content">
+                                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                   <li class="list-item"><a href="#">Kathmandu Valley Biking Tour</a></li>
+                                                   <li class="list-item"><a href="#">Upper Mustang Biking Tour</a></li>
+                                                   <li class="list-item"><a href="#">Annapurna Mountain Biking Tour</a></li>
+                                                   <li class="list-item"><a href="#">Tamang Heritage Trail</a></li>
+
+                                                </ul>
+                                               
+                                            </div>
+                                        </li>
+                                          <li class="list-item"><a class="uk-accordion-title" href="#">Remote Region</a>
+                                            <div class="uk-accordion-content">
+                                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                   <li class="list-item"><a href="#">Lower Mustang Trek</a></li>
+                                                   <li class="list-item"><a href="#">Tsum Valley Trek</a></li>
+                                                   <li class="list-item"><a href="#">Upper Mustang Trek</a></li>
+                                                   <li class="list-item"><a href="#">Rara Lake Trek</a></li>
+                                                   <li class="list-item"><a href="#">Shey Phoksunda Lake Trek</a></li>
+                                                   <li class="list-item"><a href="#">Makalu High Pass Trek</a></li>
+                                                   <li class="list-item"><a href="#">Upper Dolpa Trek</a></li>
+                                                   <li class="list-item"><a href="#">Lower Dolpa Trek</a></li>
+                                                   <li class="list-item"><a href="#">Manaslu Trek</a></li>
+
+                                                </ul>
+                                               
+                                            </div>
+                                        </li>
+                                          <li class="list-item"><a class="uk-accordion-title" href="#">Peak Climbing Packages:Tentative</a>
+                                            <div class="uk-accordion-content">
+                                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                   <li class="list-item"><a href="#">Mera Peak Climbing</a></li>
+                                                   <li class="list-item"><a href="#">Island Peak Climbing</a></li>
+                                                   <li class="list-item"><a href="#">Island Peak Climbing via EBC</a></li>
+                                                   <li class="list-item"><a href="#">Lobuche Peak Climbing</a></li>
+                                                   <li class="list-item"><a href="#">Three Peak Climbing:Island Mera and Lobuche</a></li>
+                                                   <li class="list-item"><a href="#">Mardi Himal Peak Climbing</a></li>
 
                                                 </ul>
                                                
                                             </div>
                                         </li>
                                     </ul>
-                                    <li class="list-item"><a href="#">List item 2list itm3 list item3 list iten3</a></li>
-                                    <li class="list-item"><a href="#">List item 3list itm3 list item3 list iten3</a></li>
-                                    <li class="list-item"><a href="#">List item 4list itm3 list item3 list iten3</a></li>
+                                  <!--   <li class="list-item"><a href="#">List item 2list itm3 list item3 list iten3</a></li>
+                                  <li class="list-item"><a href="#">List item 3list itm3 list item3 list iten3</a></li>
+                                  <li class="list-item"><a href="#">List item 4list itm3 list item3 list iten3</a></li> -->
                                 </ul>
                             </div>
                         </li>

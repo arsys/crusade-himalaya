@@ -1,3 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);html,
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+  font-family: 'Raleway', sans-serif !important;
+}
+
 .green {
   background-color: #2ed3ae !important;
 }
@@ -206,6 +224,11 @@ body {
   color: #000000;
 }
 
+a:hover {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
 #hp-wrapper {
   background-color: white;
 }
@@ -346,9 +369,10 @@ body {
           animation: fadeIn 1s infinite alternate;
 }
 
-.intro .intro-sign {
+.intro .intro-icon {
   font-size: 54px;
   font-weight: 800;
+  color: #2ed3ae;
 }
 
 .intro .intro-title {
@@ -977,7 +1001,6 @@ textarea.parsley-error {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0 40px;
   vertical-align: middle;
   font-size: 12px;
   font-weight: 400;
@@ -996,14 +1019,14 @@ textarea.parsley-error {
   background-color: #2ed3ae;
 }
 
-.heading-primary {
+.home-heading-primary {
   text-decoration: none;
   position: relative;
   font-weight: 400px;
   text-transform: uppercase;
 }
 
-.heading-primary:after {
+.home-heading-primary:after {
   position: absolute;
   content: '';
   height: 16px;
@@ -1021,14 +1044,14 @@ textarea.parsley-error {
   background-repeat: no-repeat;
 }
 
-.heading-secondary {
+.home-heading-secondary {
   text-decoration: none;
   position: relative;
   font-weight: 900px;
   text-transform: uppercase;
 }
 
-.heading-secondary:after {
+.home-heading-secondary:after {
   position: absolute;
   content: '';
   height: 16px;
@@ -1052,6 +1075,49 @@ textarea.parsley-error {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 35px;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+  font-family: Raleway;
+  font-weight: bold;
+}
+
+.main-heading:after {
+  width: 200px;
+  content: "";
+  border-top: 1px solid #2ed3ae;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.page-heading {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 10px;
+  font-family: Raleway;
+  font-weight: bold;
+  top: 50%;
+  bottom: 50%;
+}
+
+.page-heading:after {
+  width: 200px;
+  content: "";
+  border-top: 1px solid #2ed3ae;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+.page-subheading {
+  position: relative;
+  top: 50%;
+  bottom: 50%;
 }
 
 .ghost {

@@ -17,20 +17,20 @@
         <div class="foobar-btn-wrapper">
 
             <div class="uk-flex uk-flex-column">                
-                <a class=" uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
+                <a class=" uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
                     <span class=" uk-margin-small-top " uk-icon="file-text"></span>
-                    <span>Request </span>
+                    <span>Request Broucher</span>
                     <span class=" uk-margin-small-top" uk-icon="chevron-right"></span>
                 </a>
-                <a class=" uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
+                <a class=" uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
                     <span class="uk-margin-small-top " uk-icon="mail"></span>
-                    <span>Contact Us </span> 
+                    <span>Contact Us</span> 
                     <span class=" uk-margin-small-top " uk-icon="chevron-right"></span>
                 </a>
 
-                <a class="uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
+                <a class="uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
                     <span class=" uk-margin-small-top " uk-icon="location"></span>
-                    <span>Find Location </span> 
+                    <span>Find Location</span> 
                     <span class=" uk-margin-small-top" uk-icon="chevron-right"></span>
                 </a>
             </div>

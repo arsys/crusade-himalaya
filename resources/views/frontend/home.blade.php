@@ -5,7 +5,7 @@
   @include ('frontend.partials.home._carousel')
   {{-- carousel end --}}
   {{-- content start --}}
-  @include ('frontend.partials.home._content')
+  @include ('frontend.partials.home._intro')
   <!--  content end -->
   <!-- packages start -->
   @include ('frontend.partials.home._travel-style')
@@ -14,7 +14,7 @@
   @include ('frontend.partials.home._destination')
   <!--destination end-->
   <!-- parallex start -->
-<!--   @include ('frontend.partials.home._staticimage') -->
+{{-- <!--   @include ('frontend.partials.home._staticimage') --> --}}
   <!-- parallex end -->
   <!-- Handpicked tour start -->
   @include ('frontend.partials.home._tour')

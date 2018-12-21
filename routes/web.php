@@ -107,8 +107,6 @@ Route::get('/bookingstep1','FrontendController@getBookingstep1');
 
 Route::get('/slideshow','FrontendController@getSlideshow');
 
-
-
 Route::prefix('trip')->group(function () {
 	Route::get('{category}/{slug}','FrontendController@productDetail')->name('product.single');
 });

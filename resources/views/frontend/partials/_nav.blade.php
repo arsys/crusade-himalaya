@@ -2,7 +2,6 @@
 
 <div class=" uk-padding-remove uk-margin-remove uk-card uk-card-default " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" id="nav-wrapper">       
     <nav class="uk-navbar-container  parent"  uk-navbar id="navbar">
-
        <div class="uk-navbar-left "> 
             <span class="uk-margin-left"><img data-src="{{asset('img/crusade-logo.svg')}}" alt="" style="height:110px; width: 140px;" uk-img ></span> 
      

@@ -2,3 +2,21 @@
  	width=400;
  	height=400;
 }
+
+
+#breadcrumb{
+    position: relative;
+    li a{        
+        color: $white;
+
+    }
+}
+.breadcrumb {
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+.uk-container-expand{
+ position:relative;
+}

@@ -11,87 +11,85 @@
                 <li class="uk-active"><a href="/">Home</a></li>
 
                 <li><a href="#">Where We GO</a>
-                    <div class="uk-navbar-dropdown" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">
-                        <div class="uk-navbar-dropdown-grid uk-child-width-1-5" uk-grid>
-                            <div>
-                                <h3>Everest Region</h3>
+                    <div class="uk-navbar-dropdown " uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;" uk-slider>
+                        <ul class="uk-slider-items uk-navbar-dropdown-grid uk-child-width-1-6" uk-grid>
+                            <li>
+                                <a href=""><h5>Everest Region</h5></a>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Everest Base Camp Trek</a></li>
-                                    <li><a href="#">Everest Base Camp via Gokyo</a></li>
-                                    <li><a href="#">High Passes Trek</a></li>
-                                    <li><a href="#">Gokyo Lake Trek</a></li>
-                                    <li><a href="#">Everest View Trek</a></li>
-                                    <li><a href="#">Everest Base Camp Trek and Fly</a></li>
+                                    <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
                                 </ul>
-                                <h3>Tours</h3>
+                            </li>
+                            <li>
+                                <a href=""><h5>Annapurna Region</h5></a>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Chitwan National Park</a></li>
-                                    <li><a href="#">Kathmandu Valley</a></li>
-                                    <li><a href="#">Bardia Notional Park</a></li>
-                                    <li><a href="#">Koshi Tappu Wildlife Reserve</a></li>
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
                                 </ul>
-                            </div>
-                            <div>
-                                <h3>Annapurna Region</h3>
+                            </li>
+                            <li>
+                                <a href=""><h5>Langtang Region</h5></a>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Annapurna Base Camp</a></li>
-                                    <li><a href="#">Annapurna Sanctuary Trek</a></li>
-                                    <li><a href="#">Annapurna Circuit Trek</a></li>
-                                    <li><a href="#">Ghorepani Poon Hill Trek</a></li>
-                                    <li><a href="#">Annapurna View Trek</a></li>
-                                    <li><a href="#">Nar Phu Valley Trek</a></li>
-                                    <li><a href="#">Mardi Himal Trek</a></li>
-                                    <li><a href="#">Annapurna Panorama Luxury Trek</a></li>
-                                    <li><a href="#">Tilicho Lake Trek</a></li>
-                                    <li><a href="#">Khopra Dada Trek</a></li>
-                                    <li><a href="#">Dhaulagiri Circuit Trek</a></li>
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
                                 </ul>
-                            </div>
-                            <div>
-                                <h3>Langtang Region</h3>
+                            </li>
+                            <li>
+                                <a href=""><h5>Remote Region</h5></a>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Langtang Trek</a></li>
-                                    <li><a href="#">Gosaikunda lake Trek</a></li>
-                                    <li><a href="#">Langtang Helambu Trek</a></li>
-                                    <li><a href="#">Tamang Heritage Trail</a></li>
+                                  <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
                                 </ul>
-                                <h3>Adventure Tours</h3>
+                            </li>
+                            <li>
+                                <a href=""><h5>Peak Climbing</h5></a>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Kathmandu Valley Biking Tour</a></li>
-                                    <li><a href="#">Upper Mustang Biking Tour</a></li>
-                                    <li><a href="#">Annapurna Mountain Biking Tour</a></li>
-                                    <li><a href="#">Tamang Heritage Trail</a></li>
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
                                 </ul>
-                            </div>
-                            <div>
-                                <h3>Remote Region</h3>
+                            </li>
+                            <li>
+                                <a href=""><h5>Peak Climbing</h5></a>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Lower Mustang Trek</a></li>
-                                    <li><a href="#">Tsum Valley Trek</a></li>
-                                    <li><a href="#">Upper Mustang Trek</a></li>
-                                    <li><a href="#">Rara Lake Trek</a></li>
-                                    <li><a href="#">Shey Phoksunda Lake Trek</a></li>
-                                    <li><a href="#">Makalu High Pass Trek</a></li>
-                                    <li><a href="#">Upper Dolpa Trek</a></li>
-                                    <li><a href="#">Lower Dolpa Trek</a></li>
-                                    <li><a href="#">Manaslu Trek</a></li>
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
                                 </ul>
-                            </div>
-                            <div>
-                                <h3>Peak Climbing Packages:Tentative</h3>
+                            </li>
+                            <li>
+                                <a href=""><h5>Everest Region</h5></a>
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="#">Mera Peak Climbing</a></li>
-                                    <li><a href="#">Island Peak Climbing</a></li>
-                                    <li><a href="#">Island Peak Climbing via EBC</a></li>
-                                    <li><a href="#">Lobuche Peak Climbing</a></li>
-                                    <li><a href="#">Three Peak Climbing:Island Mera and Lobuche</a></li>
-                                    <li><a href="#">Mardi Himal Peak Climbing</a></li>
+                                    <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
                                 </ul>
-                            </div>
-                        </div>
+                            </li>
+                            <li>
+                                <a href=""><h5>Annapurna Region</h5></a>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><h5>Langtang Region</h5></a>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><h5>Remote Region</h5></a>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                  <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><h5>Peak Climbing</h5></a>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""><h5>Peak Climbing</h5></a>
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                            <a class="uk-position-center-left uk-position-medium uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-medium uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                     </div>
                 </li>
-                <li><a href="{{ route('frontend-eventCalender') }}">Whats On</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/product">Product</a></li>

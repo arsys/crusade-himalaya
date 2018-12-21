@@ -3,7 +3,7 @@
 #breadcrumb{
     position: relative;
     li a{        
-        color: rgb(255, 255, 255);
+        color:$white;
 
     }
 }
@@ -130,10 +130,10 @@
 .tours{
     text-align: center;
 }
-.discover{
+/* .discover{
     margin-bottom:8px;
     margin-right:10px;
-}
+} */
 .left{
     max-width: 10%;
     padding-left:9px;

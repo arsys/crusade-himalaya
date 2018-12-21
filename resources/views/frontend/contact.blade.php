@@ -3,9 +3,6 @@
 <!-- image start -->
 @include ('frontend.partials.contact._image')
 <!-- image end -->
-<!-- about us start-->
-@include ('frontend.partials.contact._about')
-<!-- about us end-->
 <!-- form start -->
 @include ('frontend.partials.contact._contactform')
 <!-- form end -->

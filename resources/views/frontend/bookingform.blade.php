@@ -30,7 +30,7 @@
 <div class="uk-container ">
    <h3 class="uk-padding-small uk-text-center"><span>Booking Form</span></h3> 
     <div class="" uk-grid>
-        <div class="uk-width-3-5">           
+        <div class="uk-width-3-5@m">           
             <form class="uk-form-stacked" action="">
                 <div class="uk-margin">
                     <label class="uk-form-label" for="form-stacked-text">Full Name</label>
@@ -97,7 +97,7 @@
                 </div>
             </form>
         </div>
-        <div class="uk-width-2-5 ">   
+        <div class="uk-width-2-5@m ">   
             <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                     <img src="https://source.unsplash.com/1200x900/?arts" alt="">

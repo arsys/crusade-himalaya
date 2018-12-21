@@ -1,4 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+html,.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6,span,p{
+  font-family: 'Raleway', sans-serif !important;
+}
 .green {
   background-color: #2ed3ae !important;
 }
@@ -145,14 +148,13 @@ $teal-lighten-1: #26a69a;
 body{
   background-color:$white;
 }
-
-@media(min-width:768px){
-
-    #toggle-button{
-      display:none;
-    }
-
+.uk-padding-xsmall{
+  padding: 5px !important;
 }
+/* .responsive-image {
+  width: 100%;
+  height: auto;
+} */
 /* @import "module/ui-kit"; */
 @import "module/_nav";
  @import "module/_footer";

@@ -2,21 +2,14 @@
   <div class="uk-container">
     <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
         <div>
-            <h2 class=" uk-text-center heading-secondary uk-text-center uk-margin-mediumm-bottom"><span>Review</span></h2>
+            <h2 class=" uk-text-center  uk-text-center uk-margin-mediumm-bottom"><span>Review</span></h2>
             @for($c=1; $c<=3; $c++) 
             <div class="uk-text-left uk-margin-medium-top" uk-grid>
                 <div class="uk-width-1-4">
-                   <img src="https://via.placeholder.com/150x150" alt="" >
+                   <img src="https://source.unsplash.com/150x150/?face" alt="" >
                </div>
                <div class="uk-width-3-4">
                     <span style="font-weight:bold">Title</span>
-                    <div class="rating">
-                        <span uk-icon="star" style="color:black"></span>
-                        <span uk-icon="star" style="color:black"></span>
-                        <span uk-icon="star" style="color:black"></span>
-                        <span uk-icon="star" style="color:black"></span>
-                        <span uk-icon="star" style="color:black"></span>
-                    </div>
                     <p class="review-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                    
                     <i class="fas fa-flag"></i>
@@ -29,7 +22,7 @@
 </div>
 
 <div>
-   <h2 class=" uk-text-center heading-secondary uk-text-center"><span>Follow</span></h2> 
+   <h2 class=" uk-text-center  uk-text-center"><span>Follow</span></h2> 
         <table class="uk-table uk-table-divider uk-table-table-bordered uk-margin-medium-top">
             <tbody>
                 <tr>

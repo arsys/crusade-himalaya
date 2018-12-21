@@ -5,7 +5,7 @@
 		@for($a=1; $a<=5; $a++)
 			<div class="uk-text-left" uk-grid>
 				<div class="uk-width-1-4">
-					<img src="https://via.placeholder.com/150x150" alt="" >
+					<img src="https://source.unsplash.com/150x150/?face" alt="" >
 				</div>
 				<div class="uk-width-3-4 review-wrapper">
 					<span class="review-client">Review Heading</span>

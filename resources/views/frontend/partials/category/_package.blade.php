@@ -2,7 +2,7 @@
     <div class="uk-container">
     	 <h2 class="heading-primary uk-text-center "><span>About Us</span></h2>
         <div class="text-align-left uk-margin-medium-top" uk-grid>
-            <div class="uk-width-1-4" >
+            <div class="uk-width-1-4@m" >
         	   <div>
         			<h4>Divider</h4>
         			<ul class="uk-list uk-list-large uk-list-divider">
@@ -13,13 +13,13 @@
     			</div>
             </div>
        
-        	<div class="uk-width-3-4" uk-grid>
+        	<div class="uk-width-3-4@m" >
         		<div class="uk-child-width-1-3@m" uk-grid>
 				   @for($a=1; $a<=6; $a++)
 			    	<div class="package-info">
 				        <div class="uk-card uk-card-default">
 				            <div class="uk-card-media-top">
-				                <img src="{{asset('img/travel/heli.jpg')}}" alt="Image">
+				                <img src="{{asset('img/Tours/annapurna.jpg')}}" alt="Image">
 				            </div>
 
 			               	<div class="uk-card-body">

@@ -4,7 +4,6 @@
 		<div class="uk-child-width-expand@s" uk-grid>
 			<div class="uk-grid-item-match">
 				<div class="">
-					<h3 class="heading-secondary uk-text-center uk-margin-medium-bottom"><span>CONTACT US</span></h3>
 					@include('frontend.partials._message')
 					<form method="POST" action="{{ route('frontend-postContact') }}" data-parsley-validate>
 						@csrf

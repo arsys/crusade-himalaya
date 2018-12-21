@@ -80,6 +80,9 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::resource('announcement','AnnouncementController');
 	Route::resource('partner', 'PartnerController');
 	Route::resource('setting', 'SettingController');
+
+	//Event controller
+	Route::resource('/events','EventController');
 });
 Route::name('frontend-')->group(function () {
 	Route::get('/','GetController@index');

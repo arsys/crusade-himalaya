@@ -201,6 +201,8 @@
 		$('#demo-date-format').datepicker({autoclose: true, todayHighlight: true, format: "yyyy/mm/dd"});
 		$('#demo-date-range').datepicker({todayHighlight: true,  format: "yyyy/mm/dd"});
 		$('#demo-date-inline').datepicker({todayHighlight: true});
+		$('#event-start').datepicker({autoclose: true, todayHighlight: true, format: "yyyy/mm/dd"});
+		$('#event-end').datepicker({autoclose: true, todayHighlight: true, format: "yyyy/mm/dd"});
 	};
 
 	// =========================================================================

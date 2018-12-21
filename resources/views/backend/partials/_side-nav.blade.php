@@ -78,7 +78,7 @@
 					</li>
 					<li>
 						<a href="{{ route('departure.index') }}">
-							<div class="gui-icon"><i class="fas fa-file-alt md"></i></div>
+							<div class="gui-icon"><i class="fas fa-plane-departure md"></i></i></div>
 							<span class="title">Departure</span>
 						</a>
 					</li>					
@@ -106,6 +106,13 @@
 							<span class="title ">Partners</span>
 						</a>
 					</li>	
+
+					<li>
+						<a href="{{ route('events.index') }}">
+							<div class="gui-icon"><i class="fas fa-calendar-day md"></i></i></div>
+							<span class="title ">Events</span>
+						</a>
+					</li>
 
 					<li>
 						<a href="{{ route('setting.index') }}">

@@ -88,6 +88,7 @@ Route::name('frontend-')->group(function () {
 	Route::get('/','GetController@index');
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
+	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 });
 Route::get('/', 'FrontendController@getIndex');
 Route::get('/about', 'FrontendController@getAbout');

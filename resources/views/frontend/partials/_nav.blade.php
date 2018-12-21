@@ -92,6 +92,7 @@
                         </div>
                     </div>
                 </li>
+                <li><a href="{{ route('frontend-eventCalender') }}">Whats On</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
                 <li><a href="/product">Product</a></li>

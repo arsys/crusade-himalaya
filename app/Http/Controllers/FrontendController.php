@@ -8,6 +8,8 @@ use App\Itinerary;
 use App\Departure;
 use App\Insta;
 use App\Partner;
+use App\Event;
+use Calendar;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -20,7 +22,7 @@ class FrontendController extends Controller
         $instaFeeds = Insta::take(10)->get();
         $partners = Partner::all();
 
-    	return view('frontend.home')
+        return view('frontend.home')
         ->withCarousels($carousels)
         ->withCategories($categories)
         ->withFeatureds($featureds)
@@ -47,40 +49,40 @@ class FrontendController extends Controller
     public function getContact()
     {
      return view('frontend.contact'); 
-    }
-    public function getProduct()
-    {
-        return view('frontend.product');
-    }
-    public function getContact1()
-    {
-        return view('frontend.contact1');
-    }
-     public function getAbout1()
-    {
-        return view('frontend.about1');
-    }
-    public function getCategory()
-    {
-        return view ('frontend.category');
-    }
-    public function getReview()
-    {
-        return view('frontend.review');
-    }
-    public function getBookingform()
-    {
-        return view('frontend.bookingform');
-    }
-     public function getBookingstep1()
-    {
-        return view('frontend.bookingstep1');
-    }
-    public function getSlideshow()
-    {
-        return view('frontend.slideshow'); 
-    }
-  
+ }
+ public function getProduct()
+ {
+    return view('frontend.product');
+}
+public function getContact1()
+{
+    return view('frontend.contact1');
+}
+public function getAbout1()
+{
+    return view('frontend.about1');
+}
+public function getCategory()
+{
+    return view ('frontend.category');
+}
+public function getReview()
+{
+    return view('frontend.review');
+}
+public function getBookingform()
+{
+    return view('frontend.bookingform');
+}
+public function getBookingstep1()
+{
+    return view('frontend.bookingstep1');
+}
+public function getSlideshow()
+{
+    return view('frontend.slideshow'); 
+}
+
 
     //Gets single product details
 public function tourDetailtest($slug)
@@ -118,5 +120,29 @@ public function tourDetailtest($slug)
     ->withSimilars($similars)
     ->withDatecount($dates_count);
 }  
+
+public function eventCalender()
+{
+    $events = [];
+    $data = Event::all();
+    if($data->count()) {
+        foreach ($data as $key => $value) {
+            $events[] = Calendar::event(
+                $value->title,
+                true,
+                new \DateTime($value->start_date),
+                new \DateTime($value->end_date.' +1 day'),
+                null,
+                    // Add color and link on event
+                [
+                    'color' => '#2ed3ae',
+                    'url' => $value->url,
+                ]
+            );
+        }
+    }
+    $calendar = Calendar::addEvents($events);
+    return view('frontend.calender', compact('calendar'));
+}
 
 }

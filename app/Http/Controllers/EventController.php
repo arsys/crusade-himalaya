@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Event;
 use Calendar;
 use Session;
@@ -99,7 +98,6 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        return 1;
     }
 
     /**
@@ -109,9 +107,17 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Event $event)
+    public function update(Request $request)
     {
-        //
+        $event = Event::find($request->id);
+        $event->title = $request->title;
+        $event->url = $request->url;
+        $event->start_date = $request->start;
+        $event->end_date = $request->end;
+
+        $event->save();
+
+        return response()->json($event);
     }
 
     /**
@@ -122,6 +128,8 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        Session::flash('success', 'Event deleted.');
+        $event->destroy();
+        return redirect()->route('events.index');
     }
 }

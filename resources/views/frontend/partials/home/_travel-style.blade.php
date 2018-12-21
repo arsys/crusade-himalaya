@@ -1,7 +1,7 @@
 
 <div class="uk-section uk-section-xsmall uk-section-default uk-margin-medium-top uk-margin-medium-bottom bgcolor-wrapper">
     <div class="uk-container">
-        <h2 class="uk-text-center heading-primary uk-text-center uk-margin-medium-bottom"><span>Travel Style</span></h2>
+        <h2 class="uk-text-center home-heading-primary uk-text-center uk-margin-large-bottom"><span>Travel Style</span></h2>
         <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider>
             @if($categories->count())
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid">

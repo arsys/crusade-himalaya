@@ -4,7 +4,7 @@
     <nav class="uk-navbar-container  parent"  uk-navbar id="navbar">
 
        <div class="uk-navbar-left "> 
-            <span class="uk-margin-left"><img data-src="{{asset('img/logo.png')}}" alt="" style="height:50px; width: 100px;" uk-img ></span> 
+            <span class="uk-margin-left"><img data-src="{{asset('img/logo-blue.png')}}" alt="" style="height:50px; width: 100px;" uk-img ></span> 
      
         </div>
         <div class="uk-navbar-right">

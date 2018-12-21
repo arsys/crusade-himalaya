@@ -136,8 +136,7 @@ public function eventCalender()
                     // Add color and link on event
                 [
                     'color' => '#2ed3ae',
-                    'url' => $value->url,
-                ]
+                    'url' => $value->url,                ]
             );
         }
     }

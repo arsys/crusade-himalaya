@@ -1,7 +1,7 @@
-<section class="uk-section uk-section-xsmall uk-section-default  bgcolor-wrapper">
+<section class="uk-section uk-section-xsmall uk-section-default ">
     <div class="uk-margin-medium-top uk-margin-medium-bottom ">
         <div class="uk-container">
-            <h2 class=" uk-text-center heading-primary uk-text-center uk-margin-medium-bottom"><span>DESTINATION</span></h2>
+            <h2 class=" uk-text-center home-heading-primary uk-text-center uk-margin-large-bottom"><span>DESTINATION</span></h2>
             <div class="uk-grid-collapse uk-child-width-1-2 uk-child-height-1-2 uk-grid" uk-grid="">
                 <div class="uk-first-column">
                     <div><img src="https://source.unsplash.com/1200x500/?annapurna" alt="" class="uk-padding-xsmall"></div>

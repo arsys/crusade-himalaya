@@ -1,3 +1,4 @@
+
 // contact page details start
 .contact-info{
     .call{
@@ -54,3 +55,22 @@
 }
 // contact page details end
 
+
+// contact-breadcrumbs start
+#contact-breadcrumb{
+    position: relative;
+    li a{        
+        color:$white;
+
+    }
+}
+.contact-breadcrumb {
+  float: right;
+  position: absolute;
+  bottom: 0;
+ text-align:center;
+}
+.uk-container-expand{
+ position:relative;
+}
+//breadcrumb end

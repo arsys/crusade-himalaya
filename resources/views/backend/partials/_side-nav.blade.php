@@ -113,6 +113,17 @@
 							<span class="title ">Events</span>
 						</a>
 					</li>
+					<li class="gui-folder">
+						<a>
+							<div class="gui-icon"><i class="fa fa-users"></i></div>
+							<span class="title">Team</span>
+						</a>
+						<!--start submenu -->
+						<ul>
+							<li><a href="{{ route('team.index') }}"><span class="title">Members</span></a></li>
+							<li><a href="{{ route('position.index') }}"><span class="title">Position</span></a></li>
+						</ul>
+					</li>				
 
 					<li>
 						<a href="{{ route('setting.index') }}">

@@ -376,12 +376,8 @@ a:hover {
 }
 
 .intro .intro-title {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.who-para {
   font-size: 14px;
+  font-weight: bold;
 }
 
 .featured div img {
@@ -447,6 +443,25 @@ a:hover {
   font-size: 15px;
 }
 
+#contact-breadcrumb {
+  position: relative;
+}
+
+#contact-breadcrumb li a {
+  color: #FFFFFF;
+}
+
+.contact-breadcrumb {
+  float: right;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.uk-container-expand {
+  position: relative;
+}
+
 .package-details {
   width: 60%;
 }
@@ -468,7 +483,7 @@ a:hover {
 }
 
 #breadcrumb li a {
-  color: white;
+  color: #FFFFFF;
 }
 
 .breadcrumb {
@@ -592,10 +607,10 @@ a:hover {
   text-align: center;
 }
 
-.discover {
-  margin-bottom: 8px;
-  margin-right: 10px;
-}
+/* .discover{
+    margin-bottom:8px;
+    margin-right:10px;
+} */
 
 .left {
   max-width: 10%;
@@ -1129,7 +1144,9 @@ textarea.parsley-error {
   text-transform: uppercase;
   color: #FFFFFF !important;
   bottom: 0;
-  left: 50%;
+  width: 48px;
+  height: 48px;
+  left: 48%;
   z-index: 2;
   display: inline-block;
   -webkit-transform: translate(0, -50%);
@@ -1140,7 +1157,7 @@ textarea.parsley-error {
 .ghost span {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 48%;
   width: 24px;
   height: 24px;
   margin-left: -12px;
@@ -1152,36 +1169,5 @@ textarea.parsley-error {
   animation: sdb 2s infinite;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-  }
-
-  20% {
-    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-  }
-
-  40% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-  }
-}
-
-@keyframes sdb {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-            transform: rotate(-45deg) translate(0, 0);
-  }
-
-  20% {
-    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-            transform: rotate(-45deg) translate(-10px, 10px);
-  }
-
-  40% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-            transform: rotate(-45deg) translate(0, 0);
-  }
 }
 

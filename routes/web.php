@@ -83,6 +83,10 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 
 	//Event controller
 	Route::resource('/events','EventController');
+	//Team Controller
+	Route::resource('/team', 'TeamController');
+	//Member Controller
+	Route::resource('/position', 'MemberController');
 });
 Route::name('frontend-')->group(function () {
 	Route::get('/','GetController@index');

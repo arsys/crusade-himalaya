@@ -170,3 +170,45 @@ a:hover{
   }
 }
 //tour end
+//destination overlay text start
+.destination {
+  position: relative;
+ 
+}
+.dest-topic{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(36, 183, 206, 0.6);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.destination:hover .dest-topic {
+ visibility: visible;
+  opacity: 1;
+}
+
+
+.dest-title {
+
+  color: $white;
+  font-size: 18px;
+  transition: .2s;
+  transform: translateY(1em);
+
+}
+.destination:hover .dest-title{
+ transform: translateY(0);
+}
+
+//destinationn overlay text end

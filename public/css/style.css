@@ -413,6 +413,53 @@ a:hover {
   font-weight: bold;
 }
 
+.destination {
+  position: relative;
+}
+
+.dest-topic {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(36, 183, 206, 0.6);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* transition effect. not necessary */
+  -webkit-transition: opacity .2s, visibility .2s;
+  transition: opacity .2s, visibility .2s;
+}
+
+.destination:hover .dest-topic {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dest-title {
+  color: #FFFFFF;
+  font-size: 18px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-transform: translateY(1em);
+          transform: translateY(1em);
+}
+
+.destination:hover .dest-title {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .contact-info .call {
   line-height: normal;
 }
@@ -933,16 +980,6 @@ a:hover {
   z-index: 0;
   background-color: rgba(255, 153, 153, 0.3);
 }
-
-/* @media only screen and (max-device-width: 768px) {
-    .about{
-       max-width: 100%;
-       max-height:100%;
-    }
- 
-
-}
- */
 
 #scroll {
   display: inline-block;

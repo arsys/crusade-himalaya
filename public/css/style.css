@@ -216,11 +216,19 @@ body {
   font-size: 13px;
 }
 
-.social-icons span i {
+.social-icons a {
   color: #2ed3ae;
 }
 
-.social-icons span i:hover {
+.social-icons a:hover {
+  color: #000000;
+}
+
+.social-icons a i {
+  color: #2ed3ae;
+}
+
+.social-icons a i:hover {
   color: #000000;
 }
 
@@ -378,6 +386,10 @@ a:hover {
 .intro .intro-title {
   font-size: 14px;
   font-weight: bold;
+}
+
+.intro .intro-paragraph {
+  font-size: 14px;
 }
 
 .featured div img {
@@ -972,7 +984,8 @@ textarea.parsley-error {
 
 .hover-effect,
 .foobar-btn-wrapper a.uk-button a.uk-button:hover,
-.social-icons span i:hover,
+.social-icons a:hover,
+.social-icons a i:hover,
 .uk-button:hover,
 .uk-button-default:hover {
   -webkit-transition: all 0.8s ease 0s;

@@ -4,14 +4,14 @@
        <div class="uk-child-width-1-3@m uk-margin-medium-top uk-margin-xlarge-bottom" uk-grid>
 
         <div>
-         <img data-src="{{asset('img/logo.png')}}" alt="" style="height:50px; width: 100px;"  uk-img class="foobar-logo">
+         <img data-src="{{asset('img/crusade-logo.svg')}}" alt="" style="width: 150px;"  uk-img class="foobar-logo">
       
             <div class="uk-margin-small-top social-icons uk-margin-medium-top">
-               <span class="uk-margin-left social-icons-facebook"><i class="fab fa-facebook-f"></i></span>
-               <span class="uk-margin-left social-icons-twitter"><i class="fab fa-twitter"></i></span>
-               <span class="uk-margin-left social-icons-instagram"><i class="fab fa-instagram"></i></span>
-               <span class="uk-margin-left social-icons-youtube"><i class="fab fa-youtube"></i></span>
-               <span class="uk-margin-left social-icons-google"><i class="fab fa-google-plus-g"></i></span>
+               <a href="#" class="uk-margin-left social-icons-facebook" ><i class="fab fa-facebook-f"></i></a>
+               <a href="#" class="uk-margin-left social-icons-twitter"><i class="fab fa-twitter"></i></a>
+               <a href="#" class="uk-margin-left social-icons-instagram"><i class="fab fa-instagram"></i></a>
+               <a href="#" class="uk-margin-left social-icons-youtube"><i class="fab fa-youtube"></i></a>
+               <a href="#" class="uk-margin-left social-icons-google"><i class="fab fa-google-plus-g"></i></a>
             </div>
         </div>
         <div class="foobar-btn-wrapper">
@@ -22,7 +22,7 @@
                     <span>Request Broucher</span>
                     <span class=" uk-margin-small-top" uk-icon="chevron-right"></span>
                 </a>
-                <a class=" uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
+                <a class=" uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="/contact">
                     <span class="uk-margin-small-top " uk-icon="mail"></span>
                     <span>Contact Us</span> 
                     <span class=" uk-margin-small-top " uk-icon="chevron-right"></span>
@@ -41,7 +41,7 @@
 
             <ul class="uk-list">
                 <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="/contact">Terms & Conditions</a></li>
                 <li><a href="#">Site Map</a></li>
                 <li>Address : 236 KESAR MAHAL MARG</li>
                 <li>THAMEL-26, KATHMANDU-44600, NEPAL</li>

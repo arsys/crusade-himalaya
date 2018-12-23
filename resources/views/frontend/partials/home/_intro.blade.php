@@ -24,34 +24,34 @@
                     </div>
 
                 </div>
-                 <div class="uk-text-center " uk-grid>
-                    <div class="uk-width-1-3 intro ">
-                       <i class="fas fa-fingerprint intro-icon"></i>
-                        <h6 class="uk-text-center intro-title">Quirky Holidays</h6>
-                        <p class="uk-text-center intro-paragraph">We realize that on your dream vacation you..</p>
+                <div class="uk-text-center " uk-grid>
+                    <div class="uk-width-1-3  intro">
+                        <i class="fas fa-grin-hearts intro-icon"></i>
+                        <h6 class="uk-text-center intro-title">Happiness Guaranteed </h6>
+                        <p class="uk-text-center intro-paragraph">When you book a trip with us we assure you..</p>
                     </div>
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-handshake intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Lasting Friendship</h6>
                         <p class="uk-text-center intro-paragraph">Our online payment gateway is safe and...</p>
                     </div>
-                    <div class="uk-width-1-3  intro">
-                        <i class="fas fa-grin-hearts intro-icon"></i>
-                        <h6 class="uk-text-center intro-title">Happiness Guaranteed </h6>
-                        <p class="uk-text-center intro-paragraph">When you book a trip with us we assure you..</p>
-                        
-                    </div>
-                </div>
-                
+                    <div class="uk-width-1-3 intro ">
+                       <i class="fas fa-fingerprint intro-icon"></i>
+                       <h6 class="uk-text-center intro-title">Quirky Holidays</h6>
+                       <p class="uk-text-center intro-paragraph">We realize that on your dream vacation you..</p>
+                   </div>
+               </div>
+           </div>
+           <div>
+            <h1 class="uk-h1 home-heading-secondary uk-text-center "><span>Who are we ?</span></h1>
+            <p class="uk-padding-small uk-padding-remove-horizontal">
+                Crusade Himalaya is a unique and independent travel partner; we are a boutique travel studio who wish to offer you, our Atithis (revered guests), enriching and fulfilling experience of their Nepal visit. We wish to Empower, Educate, and Encourage you to have real-life experiences as you set out to discover the timeless wonders of Nepal.
+            </p>
+            <p>
+                At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. Putting comfort and pleasure above anything else, we wish to earn your smiles. From the moment you land in Nepal, till the time we bid our goodbyes, the team of Crusade Himalaya will continuously strive to ensure your experience is highly memorable
+            </p>
 
-
-            </div>
-            <div>
-                <h1 class="uk-h1 home-heading-secondary uk-text-center "><span>Who are we ?</span></h1>
-                    <p class="uk-text-center uk-padding-large">Crusade Himalaya is a boutique Tour Operator in Kathmandu established with a sole aim to empower,edcute & encourage(3E) travelers to Nepal with experiences discovering the timeless wonders of Nepal.</p>
-                   
-
-            </div>
         </div>
     </div>
+</div>
 </div>

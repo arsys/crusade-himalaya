@@ -15,6 +15,10 @@ class RegionController extends Controller
 
     function __construct()
     {
+        if (!File::exists($this->path) || !File::exists($this->thumb)) {
+            File::makeDirectory($this->path);
+            File::makeDirectory($this->thumb);
+        }
         $this->medias = Media::all();
     }
     /**
@@ -51,10 +55,7 @@ class RegionController extends Controller
         $this->validate($request, array(
             'name' => 'required|max:255'
         ));
-        if (!File::exists($this->path) || !File::exists($this->thumb)) {
-            File::makeDirectory($this->path);
-            File::makeDirectory($this->thumb);
-        }
+
         $region = new Region();
         $region->name = $request->name;
         $region->slug = str_slug($request->name, '-');

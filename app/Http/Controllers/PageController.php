@@ -183,7 +183,10 @@ class PageController extends Controller
      */
     public function destroy(Page $page)
     {
-        //
+        File::delete(public_path($page->banner));
+        $page->delete();
+        Session::flash('success', 'Page deleted sucessfully !');
+        return redirect()->route('pages.index');
     }
 
     public function publish($id)

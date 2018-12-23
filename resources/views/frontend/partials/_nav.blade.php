@@ -13,7 +13,7 @@
       <li class="uk-active"><a href="/">Home</a></li>
 
       <li><a href="#">Where We GO</a>
-        <div class="uk-navbar-dropdown " uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;" uk-slider>
+        <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;" uk-slider>
           <ul class="uk-slider-items uk-navbar-dropdown-grid uk-child-width-1-6" uk-grid>
             <li>
               <a href=""><h5>Everest Region</h5></a>

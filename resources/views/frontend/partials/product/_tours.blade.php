@@ -21,8 +21,7 @@
 						<div class="uk-flex uk-flex-column center">
 							<span class="center-price"><sup>$</sup>1500</span>
 						</div>
-						<div class="uk-flex uk-flex-row center">
-						<!-- 	<a class="uk-button-default  " href="#"><span>Discover</span></a> -->
+						<div class="uk-flex uk-flex-column center">
 							<a href="#" class="uk-button-default" >Discover </a>
 						</div>								
 					</div>	

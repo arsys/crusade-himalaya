@@ -6,8 +6,11 @@
                 <div class="uk-first-column">
                     <div><img src="https://source.unsplash.com/1200x500/?annapurna" alt="" class="uk-padding-xsmall"></div>
                         <div class="uk-child-width-expand@s uk-text-center uk-grid uk-grid-collapse" uk-grid="">
-                            <div class="uk-first-column uk-panel uk-padding-xsmall">
-                                <img src="https://source.unsplash.com/1200x500/?heli"alt="">
+                            <div class="uk-first-column uk-panel uk-padding-xsmall destination">
+                                <img src="https://source.unsplash.com/1200x500/?heli"alt="" class="dest-image">
+                                    <div class="dest-topic">
+                                        <div class="dest-title">Annapurna Base Camp</div>
+                                    </div>
                             </div>
                             <div class="uk-panel uk-padding-xsmall">
                                  <img src="https://source.unsplash.com/1200x500/?cat"alt="">

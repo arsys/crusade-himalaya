@@ -18,6 +18,7 @@ class CreateRegionsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('path')->nullable();
+            $table->string('thumb')->nullable();
             $table->timestamps();
         });
     }

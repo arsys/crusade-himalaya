@@ -34,11 +34,11 @@ class GetController extends Controller
 	public function fetchByCategory($slug)
 	{
 		$category = TourCategory::where('slug','=', $slug)->first();
-		$query = Tour::whereHas('category', function($r) use($category) {
-			$r->where('tour_categories.slug','=', $category->slug);
-		})->get();
+		$tours = $category->tours()->with('region')->get(['region_id']);
+		$regions = $tours->pluck('region')->unique();
+
 		return view('frontend.pages.travel-style')
-		->withResults($query)
+		->withResults($regions)
 		->withCategory($category);
 	}
 

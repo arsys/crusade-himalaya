@@ -1,8 +1,30 @@
 @extends('layouts.frontend')
 @section('content')
-<section class="uk-container-expand about">
-	<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-background-image@s" data-src="https://source.unsplash.com/1024x512/?daisy" uk-img>
-		<h1>Background Image</h1>
+<!-- static section -->
+<!-- <section class="uk-container-expand about" uk-grid>
+	<div class="uk-height-medium  uk-background-cover uk-light page-cover uk-background-image@s" data-src="https://source.unsplash.com/1024x512/?daisy" uk-img>
+		<h1 class="page-heading uk-margin-large-left">About us</h1>
+		<h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">Lorem ipsum dolor sit amet.</h3>
+		<div class="breadcrumb ">
+			<ul class="uk-breadcrumb" id="breadcrumb">
+				<li><a href="#">list</a></li>
+				<li><a href="#">list</a></li>
+				<li class="uk-disabled"><a>Disabled</a></li>
+				<li><span>Active</span></li>
+			</ul>
+		</div>
+	</div>
+</section> -->
+<section class="uk-container-expand about" uk-grid>
+	<div class="uk-height-medium  uk-background-cover uk-light page-cover uk-background-image@s" data-src="{{ $category->path }}" uk-img>
+		<h1 class="page-heading uk-margin-large-left">{{ $category->title }}</h1>
+		<h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $category->description }}</h3>
+		<div class="breadcrumb ">
+			<ul class="uk-breadcrumb" id="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</li>
+			</ul>
+		</div>
 	</div>
 </section>
 <div class="uk-section uk-section-small uk-section-default">
@@ -10,7 +32,7 @@
 		<div class="text-align-left uk-margin-medium-top" uk-grid>
 			<div class="uk-width-1-1@m" >
 				<div class="uk-child-width-1-3@m" uk-grid>
-					@for($a=1; $a<=6; $a++)
+{{-- 					@for($a=1; $a<=6; $a++)
 					<div class="package-info">
 						<div class="uk-card uk-card-default">
 							<div class="uk-card-media-top">
@@ -39,7 +61,12 @@
 							</div>
 						</div>
 					</div>
-					@endfor
+					@endfor --}}
+					<h3>{{ $results->count() }}</h3>
+					@foreach($results as $region)
+					<img src="{{ $region->thumb }}" alt="" style="height: 400px; width: 200px;"><br>
+					<h4>{{ $region->name }}</h4>
+					@endforeach
 				</div>
 
 			</div>

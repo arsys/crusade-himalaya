@@ -15,42 +15,41 @@
         <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
 
             <div>
-
-                <img src="https://source.unsplash.com/400x300/?heli" alt="" >
+                <a href="#"><img src="https://source.unsplash.com/400x300/?heli" alt="" ></a>
             </div>
 
             <div>
-                <img src="https://source.unsplash.com/400x300/?everest" alt="">
+                <a href="#"><img src="https://source.unsplash.com/400x300/?everest" alt=""></a>
             </div>
             <div>
-                <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
+                <a href="#"><img src="https://source.unsplash.com/400x300/?kathmandu" alt=""></a>
             </div>
 
             <div>
-                <img src="https://source.unsplash.com/400x300/?nepal" alt="">
+                <a href="#"><img src="https://source.unsplash.com/400x300/?nepal" alt=""></a>
             </div>
             <div>
-                <img src="https://source.unsplash.com/400x300/?mountain" alt="">
+                <a href="#"><img src="https://source.unsplash.com/400x300/?mountain" alt=""></a>
             </div> 
 
 
             <div>
-                <img src="https://source.unsplash.com/400x300/?langtang" alt="" >
+                <a href="#"><img src="https://source.unsplash.com/400x300/?langtang" alt="" ></a>
             </div>
             <div>
-                <img src="https://source.unsplash.com/400x300/?everest" alt="">
-            </div>
-
-            <div>
-                <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
+                <a href="#"><img src="https://source.unsplash.com/400x300/?everest" alt=""></a>
             </div>
 
             <div>
-                <img src="https://source.unsplash.com/400x300/?heli" alt="">
+                <a href="#"><img src="https://source.unsplash.com/400x300/?kathmandu" alt=""></a>
             </div>
 
             <div>
-                <img src="https://source.unsplash.com/400x300/?annapurna" alt="">
+                <a href="#"><img src="https://source.unsplash.com/400x300/?heli" alt=""></a>
+            </div>
+
+            <div>
+                <a href="#"><img src="https://source.unsplash.com/400x300/?annapurna" alt=""></a>
             </div> 
 
         </div>

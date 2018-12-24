@@ -19,7 +19,7 @@
 			    	<div class="package-info">
 				        <div class="uk-card uk-card-default">
 				            <div class="uk-card-media-top">
-				                <img src="{{asset('img/Tours/annapurna.jpg')}}" alt="Image">
+				                <a href="/product"><img src="{{asset('img/Tours/annapurna.jpg')}}" alt="Image"></a>
 				            </div>
 
 			               	<div class="uk-card-body">

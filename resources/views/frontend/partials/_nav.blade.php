@@ -1,108 +1,110 @@
 <!-- nav bar start -->
-
 <div class=" uk-padding-remove uk-margin-remove uk-card uk-card-default " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" id="nav-wrapper">       
-  <nav class="uk-navbar-container  parent"  uk-navbar id="navbar">
-   <div class="uk-navbar-left "> 
-    <div class="uk-margin-left">
-      <img data-src="{{asset('img/crusade-logo.svg')}}" alt="" style=" width: 140px;" uk-img >
-    </div> 
-
-  </div>
-  <div class="uk-navbar-right">
-    <ul id="menu1" class="uk-navbar-nav uk-visible@l">
-      <li class="uk-active"><a href="/">Home</a></li>
-
-      <li><a href="#">Where We GO</a>
-        <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;" uk-slider>
-          <ul class="uk-slider-items uk-navbar-dropdown-grid uk-child-width-1-6" uk-grid>
-            <li>
-              <a href=""><h5>Everest Region</h5></a>
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-              </ul>
+    <nav class="uk-navbar-container  parent"  uk-navbar id="navbar">
+    <div class="uk-navbar-left "> 
+        <div class="uk-margin-medium-left">
+          <img data-src="{{asset('img/crusade-logo.svg')}}" alt="" style=" width: 140px;" uk-img >
+        </div> 
+    </div>
+    <div class="uk-navbar-right">
+        <ul id="menu1" class="uk-navbar-nav uk-visible@l uk-margin-medium-right">
+            <li class="uk-active"><a href="/">Home</a></li>
+            <li><a href="#">Where We GO</a>
+                <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;" uk-slider>
+                    <ul class="uk-slider-items uk-navbar-dropdown-grid uk-child-width-1-6" uk-grid>
+                        <li>
+                            <a href=""><h5>Everest Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Annapurna Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Langtang Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Remote Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Peak Climbing</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Peak Climbing</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Everest Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Annapurna Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                       </li>
+                       <li>
+                            <a href=""><h5>Langtang Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Remote Region</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Peak Climbing</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav uk-margin-remove-right">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""><h5>Peak Climbing</h5></a>
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="uk-position-center-left uk-position-medium uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-medium uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                </div>
             </li>
+            <li><a href="{{ route('frontend-eventCalender') }}">Whats on</a></li>
+            <li><a href="/about">About</a></li>
+
+            <li><a href="/product">Product</a></li>
+            <li><a href="/category">Category</a></li>
             <li>
-              <a href=""><h5>Annapurna Region</h5></a>
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-               <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-             </ul>
-           </li>
-           <li>
-            <a href=""><h5>Langtang Region</h5></a>
-            <ul class="uk-nav uk-navbar-dropdown-nav">
-             <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-           </ul>
-         </li>
-         <li>
-          <a href=""><h5>Remote Region</h5></a>
-          <ul class="uk-nav uk-navbar-dropdown-nav">
-            <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-          </ul>
-        </li>
-        <li>
-          <a href=""><h5>Peak Climbing</h5></a>
-          <ul class="uk-nav uk-navbar-dropdown-nav">
-           <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-         </ul>
-       </li>
-       <li>
-        <a href=""><h5>Peak Climbing</h5></a>
-        <ul class="uk-nav uk-navbar-dropdown-nav">
-         <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-       </ul>
-     </li>
-     <li>
-      <a href=""><h5>Everest Region</h5></a>
-      <ul class="uk-nav uk-navbar-dropdown-nav">
-        <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-      </ul>
-    </li>
-    <li>
-      <a href=""><h5>Annapurna Region</h5></a>
-      <ul class="uk-nav uk-navbar-dropdown-nav">
-       <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-     </ul>
-   </li>
-   <li>
-    <a href=""><h5>Langtang Region</h5></a>
-    <ul class="uk-nav uk-navbar-dropdown-nav">
-     <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-   </ul>
- </li>
- <li>
-  <a href=""><h5>Remote Region</h5></a>
-  <ul class="uk-nav uk-navbar-dropdown-nav">
-    <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
-  </ul>
-</li>
-<li>
-  <a href=""><h5>Peak Climbing</h5></a>
-  <ul class="uk-nav uk-navbar-dropdown-nav">
-   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
- </ul>
-</li>
-<li>
-  <a href=""><h5>Peak Climbing</h5></a>
-  <ul class="uk-nav uk-navbar-dropdown-nav">
-   <li class="uk-active"><a href="#"><img src="https://source.unsplash.com/320x200/?heli"  alt=""></a></li>
- </ul>
-</li>
-</ul>
-<a class="uk-position-center-left uk-position-medium uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-<a class="uk-position-center-right uk-position-medium uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-</div>
-</li>
-<li><a href="{{ route('frontend-eventCalender') }}">Whats on</a></li>
-<li><a href="/about">About</a></li>
-<li><a href="/contact">Contact</a></li>
-<li><a href="/product">Product</a></li>
-<li><a href="/category">Category</a></li>
+                <div class="uk-navbar-item uk-margin-remove-left">
+                    <a class="contact-button" href="/contact">Contact</a>
+                </div>
+            </li>
+        </ul>
 
-</ul>
 
-<span class="uk-navbar-toggle uk-hidden@l uk-margin-small-right " uk-toggle="target: #offcanvas-nav" uk-navbar-toggle-icon></span>
-</div>
-</nav>
+        <span class="uk-navbar-toggle uk-hidden@l uk-margin-small-right " uk-toggle="target: #offcanvas-nav" uk-navbar-toggle-icon></span>
+    </div>
+    </nav>
 </div>
 
 <!-- nav bar end -->

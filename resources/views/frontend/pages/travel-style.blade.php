@@ -23,15 +23,19 @@
 			<ul class="uk-breadcrumb" id="breadcrumb">
 				<li><a href="/">Home</a></li>
 				<li><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</li>
-			</ul>
+				</ul>
+			</div>
 		</div>
-	</div>
-</section>
-<div class="uk-section uk-section-small uk-section-default">
-	<div class="uk-container">
-		<div class="text-align-left uk-margin-medium-top" uk-grid>
-			<div class="uk-width-1-1@m" >
-				<div class="uk-child-width-1-3@m" uk-grid>
+	</section>
+	<div class="uk-section uk-section-small uk-section-default">
+		<div class="uk-container">
+			<div class="text-align-left uk-margin-medium-top" uk-grid>
+				<div class="uk-width-1-1@m" >
+					<div class="uk-child-width-1-3@m" uk-grid>
+						<span>Path</span>
+						<img src="{{ asset($category->path) }}" alt="">
+						<span>Thumb</span>
+						<img src="{{ asset($category->thumb) }}" alt="">
 {{-- 					@for($a=1; $a<=6; $a++)
 					<div class="package-info">
 						<div class="uk-card uk-card-default">

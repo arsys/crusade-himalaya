@@ -7,9 +7,10 @@
                 <div class="uk-width-1-3@s team">
                 <img class="uk-border-circle" src="https://source.unsplash.com/200x200/?face" alt="Border circle">
                     <h2 class="uk-text-center">title</h2>
-                    <p class="uk-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, dignissimos.<a class="" href="">Read More</a></p>
+                    <p class="uk-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, dignissimos.<a class="#read_more" href="">Read More</a></p>
                 </div>
                 @endfor
             </div>
+        
     </div>
 </div>

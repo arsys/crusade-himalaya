@@ -1,4 +1,4 @@
-{{ dd($category->path) }}
+
 @extends('layouts.frontend')
 @section('content')
 <!-- static section -->

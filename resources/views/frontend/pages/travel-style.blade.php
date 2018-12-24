@@ -1,4 +1,4 @@
-@extends('layouts.backend')
+@extends('layouts.frontend')
 @section('content')
 <section class="uk-container-expand about">
 	<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-background-image@s" data-src="https://source.unsplash.com/1024x512/?daisy" uk-img>

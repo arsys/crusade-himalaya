@@ -28,4 +28,22 @@ class GetController extends Controller
 		$instas = Insta::all();
 		return view('frontend.insta')->withInstas($instas);
 	}	
+
+	public function fetchByCategory($slug)
+	{
+		$category = TourCategory::where('slug','=', $slug)->first();
+		$query = Tour::whereHas('category', function($r) use($category) {
+			$r->where('tour_categories.slug','=', $slug);
+		})->get();
+		return view('frontend.pages.travel-style')
+		->withResults($query)
+		->withCategory($category);
+	}
+
+	public function fetchByregion($slug)
+	{
+
+	}
+
+
 }

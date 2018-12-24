@@ -113,5 +113,6 @@ Route::get('/slideshow','FrontendController@getSlideshow');
 
 Route::prefix('trip')->group(function () {
 	Route::get('{category}/{slug}','FrontendController@productDetail')->name('product.single');
+	Route::get('/{category}','GetController@fetchByCategory')->name('fetchByCategory');
 });
 

@@ -8,8 +8,8 @@
                 @foreach($categories as $category)
                 <li>
                     <div class="uk-panel">
-                        <img src="{{ asset($category->thumb) }}" alt="{{ $category->name }}">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>{{ $category->name }}</h1></div>
+                        <a href="/product"><img src="{{ asset($category->thumb) }}" alt="{{ $category->name }}"></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>{{ $category->name }}</h2></div>
                     </div>
                 </li>
                 @endforeach
@@ -18,62 +18,62 @@
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@m uk-grid">
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?trekking" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Trekking</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?trekking" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Trekking</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?surf" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Surfing</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?surf" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Surfing</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?ski" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Sking</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?ski" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Sking</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?africa-safari" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Safari</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?africa-safari" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Safari</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?fishing" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Fishing</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?fishing" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Fishing</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?rock-climb" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Climbing</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?rock-climb" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Climbing</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?god" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>7</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?god" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>7</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?temple" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Culture</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?temple" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Culture</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?yoga"alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Retreat</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?yoga"alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Retreat</h2></div>
                     </div>
                 </li>
                 <li>
                     <div class="uk-panel">
-                        <img src="https://source.unsplash.com/320x450/?annapurna" alt="">
-                        <div class="uk-position-center uk-panel" id="activity-title"><h1>Nature</h1></div>
+                        <a href="/product"><img src="https://source.unsplash.com/320x450/?annapurna" alt=""></a>
+                        <div class="uk-position-center uk-panel" id="activity-title"><h2>Nature</h2></div>
                     </div>
                 </li>
             </ul>

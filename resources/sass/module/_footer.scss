@@ -52,7 +52,12 @@
 
 }
 .social-icons{
-	span{
+	a{
+		color:$green;	
+		&:hover{
+			color: $black ;
+			@extend .hover-effect;
+		}
 		i{
 			color:$green;	
 			&:hover{

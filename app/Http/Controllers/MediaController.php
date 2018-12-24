@@ -12,6 +12,14 @@ class MediaController extends Controller
 {
     private $path = "uploads/images/media/";
     private $thumb = "uploads/images/media/thumb/";
+    public function __construct()
+    {
+        if (!is_dir($this->path) && !is_dir($this->thumb)) {
+            mkdir($this->path, 0755, true);
+            mkdir($this->thumb, 0755, true);
+        }
+    }
+
 
     /**
      * Display a listing of the resource.
@@ -51,10 +59,10 @@ class MediaController extends Controller
         $this->validate($request, [
             'photo' => 'max:15000'
         ]);
-        if (!is_dir($this->path) && !is_dir($this->thumb)) {
-            mkdir($this->path, 0755, true);
-            mkdir($this->thumb, 0755, true);
-        }
+        // if (!is_dir($this->path) && !is_dir($this->thumb)) {
+        //     mkdir($this->path, 0755, true);
+        //     mkdir($this->thumb, 0755, true);
+        // }
         $media = new Media;
 
         $paths = Media::uploadImage($this->path,$this->thumb,$request->file('photo'));

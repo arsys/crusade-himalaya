@@ -11,7 +11,13 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    private $banner = "uploads/page/";
+    private $banner = "uploads/page/";    
+    public function __construct()
+    {
+        if (!is_dir($this->banner)) {
+            mkdir($this->banner, 0755, true);
+        }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -49,7 +55,7 @@ class PageController extends Controller
     public function store(Request $request)
     {
      // dd($request->all());
-     try {
+       try {
         $this->validate($request, [
             'title' => 'required|max:255',
             'page_content' => 'required',
@@ -177,7 +183,10 @@ class PageController extends Controller
      */
     public function destroy(Page $page)
     {
-        //
+        File::delete(public_path($page->banner));
+        $page->delete();
+        Session::flash('success', 'Page deleted sucessfully !');
+        return redirect()->route('pages.index');
     }
 
     public function publish($id)

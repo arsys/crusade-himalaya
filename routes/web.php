@@ -80,11 +80,19 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::resource('announcement','AnnouncementController');
 	Route::resource('partner', 'PartnerController');
 	Route::resource('setting', 'SettingController');
+
+	//Event controller
+	Route::resource('/events','EventController');
+	//Team Controller
+	Route::resource('/team', 'TeamController');
+	//Member Controller
+	Route::resource('/position', 'MemberController');
 });
 Route::name('frontend-')->group(function () {
 	Route::get('/','GetController@index');
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
+	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 });
 Route::get('/', 'FrontendController@getIndex');
 Route::get('/about', 'FrontendController@getAbout');
@@ -102,8 +110,6 @@ Route::get('/bookingform','FrontendController@getBookingform');
 Route::get('/bookingstep1','FrontendController@getBookingstep1');
 
 Route::get('/slideshow','FrontendController@getSlideshow');
-
-
 
 Route::prefix('trip')->group(function () {
 	Route::get('{category}/{slug}','FrontendController@productDetail')->name('product.single');

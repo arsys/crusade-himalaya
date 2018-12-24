@@ -16,7 +16,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
     <link type="text/css" rel="stylesheet" href="{{asset('assets/backend/css/bootstrap.css')}}" />
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/backend/css/materialadmin.css') }}" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/backend/css/material-design-iconic-font.min.css') }}" />
     <link type="text/css" rel="stylesheet" href="{{asset('assets/backend/css/libs/toastr/toastr.css')}}" />
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> --}}

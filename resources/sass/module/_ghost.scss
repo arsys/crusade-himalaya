@@ -1,11 +1,15 @@
-.ghost {
-  padding-top: 90px;
+
+.ghost,
+.ghost:before {
+    position: absolute;
+    left: 50%;
 }
 .ghost {
   position: absolute;
   text-transform: uppercase;
   color: $white !important;
-  bottom:0;
+  bottom:138px;
+ 
   left: 50%;
   z-index: 2;
   display: inline-block;
@@ -14,8 +18,8 @@
   text-decoration: none;
 }
 .ghost span {
-  position: absolute;
-  top: 0;
+ position: absolute;
+  top: -35px;
   left: 50%;
   width: 24px;
   height: 24px;
@@ -28,27 +32,15 @@
   animation: sdb 2s infinite;
   box-sizing: border-box;
 }
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-  }
-  20% {
-    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
-  }
-  40% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-  }
-}
-@keyframes sdb {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-  }
-  20% {
-    transform: rotate(-45deg) translate(-10px, 10px);
-  }
-  40% {
-    transform: rotate(-45deg) translate(0, 0);
-  }
+
+@media only screen and (max-device-width: 768px) {
+    .ghost {
+        height: 8px;
+        left:45%;
+        bottom:14px;
+    }
+ 
+
 }
 
 

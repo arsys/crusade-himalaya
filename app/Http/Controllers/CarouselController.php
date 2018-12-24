@@ -12,6 +12,12 @@ use Illuminate\Http\Request;
 class CarouselController extends Controller
 {
     private $path = "uploads/carousel/";
+    public function __construct()
+    {
+        if (!is_dir($this->path) ) {
+            mkdir($this->path, 0755, true);
+        }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -49,9 +55,9 @@ class CarouselController extends Controller
 
         $file = $request->file('photo');
         $name = md5($file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
-        if (!is_dir($this->path)) {
-            mkdir($this->path, 0755, true);
-        }
+        // if (!is_dir($this->path)) {
+        //     mkdir($this->path, 0755, true);
+        // }
         $file->move($this->path, $name);
         ImageOptimizer::optimize($this->path.'/'.$name);
         $carousels->create(['path'=> $this->path.'/'.$name]);

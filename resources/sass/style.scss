@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 html,.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6,span,p{
   font-family: 'Raleway', sans-serif !important;
 }
@@ -162,6 +162,7 @@ body{
  @import "module/_contact";
  @import "module/_category";
  @import "module/_product";
+ @import "module/_about";
 //back to top botton start
 @import "module/_scroll";
 //back to top botton end

@@ -16,8 +16,8 @@
 	</div>
 </section> -->
 <section class="uk-container-expand about" uk-grid>
-	<div class="uk-height-medium  uk-background-cover uk-light page-cover uk-background-image@s" data-src="{{ $category->path }}" uk-img>
-		<h1 class="page-heading uk-margin-large-left">{{ $category->title }}</h1>
+	<div class="uk-height-medium  uk-background-cover uk-light page-cover uk-background-image@s" data-src="{{ asset($category->path) }}" uk-img>
+		<h1 class="page-heading uk-margin-large-left">{{ $category->name }}</h1>
 		<h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $category->description }}</h3>
 		<div class="breadcrumb ">
 			<ul class="uk-breadcrumb" id="breadcrumb">
@@ -64,7 +64,7 @@
 					@endfor --}}
 					<h3>{{ $results->count() }}</h3>
 					@foreach($results as $region)
-					<img src="{{ $region->thumb }}" alt="" style="height: 400px; width: 200px;"><br>
+					<img src="{{ asset($region->thumb) }}" alt="" style="height: 400px; width: 200px;"><br>
 					<h4>{{ $region->name }}</h4>
 					@endforeach
 				</div>

@@ -3,7 +3,7 @@
 @section('content')
 <!-- static section -->
 <section class="uk-container-expand about" uk-grid>
-	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="https://source.unsplash.com/1024x512/?daisy" uk-img>
+	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover uk-background-image@s" data-src="https://source.unsplash.com/1024x512/?daisy" uk-img>
 		<h1 class="page-heading uk-margin-large-left">About us</h1>
 		<h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">Lorem ipsum dolor sit amet.</h3>
 		<div class="breadcrumb ">
@@ -17,7 +17,7 @@
 	</div>
 </section>
 <section class="uk-container-expand about" uk-grid>
-	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="https://source.unsplash.com/1024x512/?daisy" uk-img>
+	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{ asset($category->path) }}" uk-img>
 		<h1 class="page-heading uk-margin-large-left">{{ $category->name }}</h1>
 		<h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $category->description }}</h3>
 		<div class="breadcrumb ">

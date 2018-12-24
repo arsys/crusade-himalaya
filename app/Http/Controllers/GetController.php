@@ -35,7 +35,7 @@ class GetController extends Controller
 	{
 		$category = TourCategory::where('slug','=', $slug)->first();
 		$query = Tour::whereHas('category', function($r) use($category) {
-			$r->where('tour_categories.slug','=', $slug);
+			$r->where('tour_categories.slug','=', $category->slug);
 		})->get();
 		return view('frontend.pages.travel-style')
 		->withResults($query)

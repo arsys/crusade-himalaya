@@ -8,23 +8,22 @@
 		<div class="breadcrumb ">
 			<ul class="uk-breadcrumb" id="breadcrumb">
 				<li><a href="/">Home</a></li>
-				<li class="uk-disabled"><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</li>
-				</ul>
-			</div>
+				<li class="uk-disabled"><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</a></li>
+			</ul>
 		</div>
+	</div>
 </section>
 <div class="uk-container">
-	<div class=" uk-grid-match uk-grid-small uk-text-center" uk-grid>
-	    <div class="uk-width-1-2@s">
-	    	<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://source.unsplash.com/320x480/?trekking" uk-img>
-			  	<h1>Trekking</h1>
+	@foreach (array_chunk($results->all(), 2) as $row)
+	<div class=" uk-grid-match uk-grid-small uk-text-center uk-margin-medium" uk-grid>
+		@foreach($row as $region)
+		<div class="uk-width-1-2@s">
+			<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($region->thumb) }}" uk-img>
+				<h1>{{ $region->name }}</h1>
 			</div>
-	    </div>
-	    <div class="uk-width-1-2@s">
-          	<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://source.unsplash.com/320x480/?trekking" uk-img>
-			  	<h1>Trekking</h1>
-			</div>
-	    </div>
+		</div>
+		@endforeach
 	</div>
+	@endforeach
 </div>
 @stop

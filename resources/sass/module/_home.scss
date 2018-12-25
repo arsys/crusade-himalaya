@@ -6,14 +6,15 @@ a:hover{
 #hp-wrapper{
   
   background-color: white;
+  padding :18px 18px;
   h5{        
     color:  $grey-darken-4;
   }
 }
 #price-wrapper{
-  padding: 5px;
+  padding: 2px;
   letter-spacing: 1px;
-  width: 50%;
+  /* width: 50%; */
   z-index: 1;
   top:166px;
   left: -10px;
@@ -100,10 +101,6 @@ a:hover{
 
 
 
-
-@keyframes fadeIn { 
-  from { opacity: 0; } 
-}
 
 
 
@@ -197,3 +194,11 @@ a:hover{
 .hp-link{
   color:$black !important;
 }
+//home intro start
+#home-sub-title{
+  text-transform:capitalize; 
+}
+.home-title{
+  text-transform: uppercase;
+}
+//home intro end

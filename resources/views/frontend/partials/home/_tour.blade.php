@@ -6,6 +6,28 @@
             <li class="uk-margin-small-bottom">
                 <div class="uk-card uk-card-default uk-height-medium">
                     <div class="uk-card-media-top">
+                        <a href="/product" class="hp-link"><img src="https://source.unsplash.com/400x300/?nepal" alt=""></a>
+                        <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
+                            <span class="price">
+                                <span>USD $500</span>
+                            </span>
+                        </div>
+                        <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
+                            <div class="uk-flex uk-flex-center">
+                                <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
+                                  <a href="/product" class="hp-link"><span class="hp-product">Langtang Base Camp</span></a>
+                                </div>
+                                <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
+                                    <span class="hp-days">15 Days</span>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </li>
+            <li class="uk-margin-small-bottom">
+                <div class="uk-card uk-card-default uk-height-medium">
+                    <div class="uk-card-media-top">
                         <a href="/product" class="hp-link"><img src="https://source.unsplash.com/400x300/?heli" alt=""></a>
                         <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                             <span class="price">
@@ -14,10 +36,10 @@
                         </div>
                         <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                             <div class="uk-flex uk-flex-center">
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                  <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
+                                <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
+                                  <a href="/product" class="hp-link"><span class="hp-product">Heli Base Camp</span></a>
                                 </div>
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
+                                <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
                                     <span class="hp-days">15 Days</span>
                                 </div>    
                             </div>
@@ -28,29 +50,7 @@
             <li class="uk-margin-small-bottom">
                 <div class="uk-card uk-card-default uk-height-medium">
                     <div class="uk-card-media-top">
-                        <img src="https://source.unsplash.com/400x300/?annapurna" alt="">
-                        <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
-                            <span class="price">
-                                <span>USD $500</span>
-                            </span>
-                        </div>
-                         <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
-                            <div class="uk-flex uk-flex-center">
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                  <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
-                                </div>
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                    <span class="hp-days">15 Days</span>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>                        
-                </div>
-            </li>
-            <li class="uk-margin-small-bottom">
-                <div class="uk-card uk-card-default uk-height-medium">
-                    <div class="uk-card-media-top">
-                        <img src="https://source.unsplash.com/400x300/?everest" alt="">
+                        <a href="/product" class="hp-link"><img src="https://source.unsplash.com/400x300/?everest" alt=""></a>
                         <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                             <span class="price">
                                 <span>USD $500</span>
@@ -58,10 +58,10 @@
                         </div>
                         <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                             <div class="uk-flex uk-flex-center">
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                  <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
+                                <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
+                                  <a href="/product" class="hp-link"><span class="hp-product">Everest Base Camp</span></a>
                                 </div>
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
+                                <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
                                     <span class="hp-days">15 Days</span>
                                 </div>    
                             </div>
@@ -72,18 +72,18 @@
             <li class="uk-margin-small-bottom">
                 <div class="uk-card uk-card-default uk-height-medium">
                     <div class="uk-card-media-top">
-                        <img src="https://source.unsplash.com/400x300/?nepal" alt="">
-                          <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
+                        <a href="/product" class="hp-link"><img src="https://source.unsplash.com/400x300/?annapurna" alt=""></a>
+                        <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                             <span class="price">
                                 <span>USD $500</span>
                             </span>
                         </div>
                         <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                             <div class="uk-flex uk-flex-center">
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                  <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
+                                <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
+                                  <a href="/product" class="hp-link"><span class="hp-product">Annapurna Base Camp</span></a>
                                 </div>
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
+                                <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
                                     <span class="hp-days">15 Days</span>
                                 </div>    
                             </div>

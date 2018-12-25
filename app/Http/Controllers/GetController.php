@@ -53,7 +53,7 @@ class GetController extends Controller
         $category = TourCategory::where('slug','=', $category)->first();
         $region = Region::where('slug','=',$region)->first();
         $query = Tour::whereHas('category', function ($r) use ($category) {
-            $r->where('tcategories.slug', $category->slug);
+            $r->where('tour_categories.slug', $category->slug);
         })->whereHas('region', function ($s) use ($region) {
             $s->where('regions.slug', $region->slug);
         })->get();  

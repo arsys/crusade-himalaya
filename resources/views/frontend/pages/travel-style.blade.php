@@ -26,23 +26,14 @@
 
 	</div>
 </div>
-<div class="uk-section uk-section-small uk-section-default">
-	<div class="uk-container">
-		<ul class="uk-pagination uk-flex-center" uk-margin>
-			<li><a href="#"><span uk-pagination-previous></span></a></li>
-			<li><a href="#">1</a></li>
-			<li class="uk-disabled"><span>...</span></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">5</a></li>
-			<li><a href="#">6</a></li>
-			<li class="uk-active"><span>7</span></li>
-			<li><a href="#">8</a></li>
-			<li><a href="#">9</a></li>
-			<li><a href="#">10</a></li>
-			<li class="uk-disabled"><span>...</span></li>
-			<li><a href="#">20</a></li>
-			<li><a href="#"><span uk-pagination-next></span></a></li>
-		</ul>
+<div class="uk-container">
+	<div class=" uk-grid-match uk-grid-small uk-text-center" uk-grid>
+	    <div class="uk-width-1-2@s">
+	       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati debitis, assumenda voluptate, velit quas impedit fugit, nisi odio dolor dolore incidunt dolorem nobis dolorum error laudantium perspiciatis necessitatibus dignissimos in quia! Ullam libero excepturi sapiente cum quos dolor porro minus mollitia asperiores hic placeat alias nobis nemo pariatur quasi similique minima, blanditiis non a accusamus architecto, omnis cupiditate! Sint consequuntur, repellat soluta suscipit molestiae fuga inventore laudantium id temporibus beatae cum dignissimos ipsa necessitatibus quasi accusamus neque reiciendis ratione voluptates. Facilis enim reiciendis porro ullam ea voluptates quae consequatur, voluptatem distinctio excepturi molestiae iste officiis est soluta molestias at rerum minus sit, animi rem perspiciatis asperiores obcaecati voluptatum ab. Sunt est omnis nostrum cum enim eveniet quia, vel dolorum cupiditate! Aspernatur, sed, quae.</p>
+	    </div>
+	    <div class="uk-width-1-2@s">
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat possimus quasi, voluptas, distinctio commodi omnis maxime voluptate sed quo rerum natus nisi debitis doloribus rem repudiandae at nemo corporis perferendis itaque. Itaque odit debitis illum. Nostrum necessitatibus, aliquid, nobis velit optio iste molestias, dignissimos in veniam nihil beatae dolor quas magnam soluta eos maiores perferendis rerum reprehenderit provident nulla odio, ducimus. Reiciendis quod officia omnis, fuga perspiciatis suscipit, corporis, nesciunt mollitia nobis repellendus excepturi alias aspernatur animi. Facilis minima impedit saepe, fuga veritatis nobis earum est commodi, itaque quod recusandae nesciunt aliquam officiis deleniti culpa id inventore error at et dolorem eveniet tempore laudantium libero rem! Voluptas, ad et delectus! Dolores alias minus asperiores ullam, earum quod veritatis, quasi. Inventore quidem, ut dicta.</p>
+	    </div>
 	</div>
 </div>
 @stop

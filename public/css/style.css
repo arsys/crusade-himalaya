@@ -464,6 +464,10 @@ a:hover {
           transform: translateY(0);
 }
 
+.hp-link {
+  color: #000000 !important;
+}
+
 .contact-info .call {
   line-height: normal;
 }
@@ -989,8 +993,8 @@ a:hover {
   background-color: rgba(255, 153, 153, 0.3);
 }
 
-.more {
-  overflow: hidden;
+.moretext {
+  display: none;
 }
 
 #scroll {

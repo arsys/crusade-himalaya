@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Insta;
 use App\Tour;
+use App\Region;
 use App\TourCategory;
 use Vinkla\Instagram\Instagram;
 use Illuminate\Http\Request;

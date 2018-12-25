@@ -111,8 +111,8 @@ Route::get('/bookingstep1','FrontendController@getBookingstep1');
 
 Route::get('/slideshow','FrontendController@getSlideshow');
 
-Route::prefix('trip')->group(function () {
-	Route::get('{category}/{slug}','FrontendController@productDetail')->name('product.single');
+Route::prefix('trip')->name('trip.')->group(function () {
+	Route::get('/{slug}','GetController@tripDetail')->name('detail');
 });
 Route::get('travel-style/{slug}','GetController@fetchByCategory')->name('fetchByCategory');
 Route::get('travel-style/{category}/{region}','GetController@region2package')->name('region2package');

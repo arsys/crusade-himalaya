@@ -6,7 +6,7 @@
                 <li class="uk-margin-small-bottom">
                     <div class="uk-card uk-card-default uk-height-medium">
                         <div class="uk-card-media-top">
-                            <a href="product"><img src="https://source.unsplash.com/400x300/?heli" alt=""></a>
+                            <a href="/product" class="hp-link"><img src="https://source.unsplash.com/400x300/?heli" alt=""></a>
                             <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                                 <span class="price">
                                     <span>USD $500</span>
@@ -15,7 +15,7 @@
                             <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                                 <div class="uk-flex uk-flex-center">
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                      <a href="/product"><span class="hp-product">product name</span></a>
+                                      <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
                                     </div>
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
                                         <span class="hp-days">15 Days</span>
@@ -37,7 +37,7 @@
                              <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                                 <div class="uk-flex uk-flex-center">
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                      <a href="/product"><span class="hp-product">product name</span></a>
+                                      <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
                                     </div>
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
                                         <span class="hp-days">15 Days</span>
@@ -59,7 +59,7 @@
                             <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                                 <div class="uk-flex uk-flex-center">
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                      <a href="/product"><span class="hp-product">product name</span></a>
+                                      <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
                                     </div>
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
                                         <span class="hp-days">15 Days</span>
@@ -81,7 +81,7 @@
                             <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                                 <div class="uk-flex uk-flex-center">
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
-                                      <a href="/product"><span class="hp-product">product name</span></a>
+                                      <a href="/product" class="hp-link"><span class="hp-product">product name</span></a>
                                     </div>
                                     <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
                                         <span class="hp-days">15 Days</span>

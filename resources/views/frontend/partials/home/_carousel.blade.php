@@ -3,8 +3,8 @@
         <li>
             <img src="https://source.unsplash.com/1024x768/?mountain" alt="" uk-cover>
             <div class="uk-position-center uk-position-small uk-text-center uk-overlay-panel uk-overlay-background uk-overlay-fade uk-light">
-                <h1 uk-slideshow-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Headline 1</h1> 
-                <p uk-slideshow-parallax="opacity: 0,1,1; y: -100,0,0; x: 100,100,0; scale: 2,1,1; viewport: 0.5;">Slideshow Paragraph 1</p>
+                 <h1 class="uk-heading-primary" uk-slideshow-parallax="x: 600,-600" style="transform: translate3d(-600px, 0px, 0px);">Heading 1</h1>
+                <p class="uk-text-lead" uk-slideshow-parallax="x: 400,-400" style="transform: translate3d(0px, 0px, -400px);">Slideshow paragraph 1</p>
             </div>
         </li>
         <li>

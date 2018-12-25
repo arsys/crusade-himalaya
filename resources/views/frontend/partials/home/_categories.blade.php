@@ -1,5 +1,5 @@
 
-<div class="uk-section uk-section-xsmall uk-section-default bgcolor-wrapper">
+<div class="uk-section uk-section-xsmall uk-section-default">
     <div class="uk-container">
         <h2 class=" uk-text-center strike uk-margin-medium-bottom"><span>Travel Style</span></h2>
         <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider>

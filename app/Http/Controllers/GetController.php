@@ -65,7 +65,8 @@ class GetController extends Controller
 
 	public function tripDetail($slug)
 	{
-		# code...
+		$tour = Tour::where('slug','=', $slug)->first();
+		return view('frontend.tour.details')->withTrip($tour);
 	}
 
 }

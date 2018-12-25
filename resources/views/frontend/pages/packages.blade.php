@@ -28,10 +28,10 @@
                         </div>
                         <div class="uk-overlay uk-overlay-default uk-position-bottom" id="hp-wrapper">
                             <div class="uk-flex uk-flex-center">
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
+                                <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
                                   <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link"><span class="hp-product">{{ $package->title }}</span></a>
                                 </div>
-                                <div class="uk-flex uk-flex-column uk-width-1-2 hp-meta">
+                                <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
                                     <span class="hp-days">{{ $package->days }} Days</span>
                                 </div>    
                             </div>

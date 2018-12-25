@@ -15,7 +15,7 @@
 </section>
 <div class="uk-container">
 	@foreach (array_chunk($results->all(), 2) as $row)
-	<div class=" uk-grid-match uk-grid-small uk-text-center uk-margin-medium" uk-grid>
+	<div class=" uk-grid-match uk-grid-small uk-text-center uk-margin-medium uk-margin-remove-left uk-margin-remove-right" uk-grid>
 		@foreach($row as $region)
 		<div class="uk-width-1-2@s">
 			<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($region->thumb) }}" uk-img>

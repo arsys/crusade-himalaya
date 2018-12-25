@@ -1,7 +1,8 @@
 .uk-navbar-nav{
-    li{
-        a{
+    .nav-list{
+        .nav-a{
             font-weight:420;
+            color:#333 !important;
         }
         :hover{
             color:$green !important;
@@ -10,13 +11,6 @@
     .uk-active {
         a{
             color:$green !important;            
-        }
-    }
-}
-#menu1{
-    li{
-        a{
-            color:#333  !important;
         }
     }
 }

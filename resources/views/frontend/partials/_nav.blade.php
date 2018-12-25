@@ -8,8 +8,8 @@
     </div>
     <div class="uk-navbar-right">
         <ul id="menu1" class="uk-navbar-nav uk-visible@l uk-margin-medium-right">
-            <li class="uk-active"><a href="/">Home</a></li>
-            <li><a href="#">Where We GO</a>
+            <li class="uk-active"><a href="/" class="nav-a">Home</a></li>
+            <li class="nav-list"><a href="#" class="nav-a">Where We GO</a>
                 <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;" uk-slider>
                     <ul class="uk-slider-items uk-navbar-dropdown-grid uk-child-width-1-6" uk-grid>
                         <li>
@@ -89,13 +89,13 @@
                     <a class="uk-position-center-right uk-position-medium uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                 </div>
             </li>
-            <li><a href="{{ route('frontend-eventCalender') }}">Whats on</a></li>
-            <li><a href="/about">About</a></li>
+            <li class="nav-list"><a href="{{ route('frontend-eventCalender') }}" class="nav-a">Whats on</a></li>
+            <li class="nav-list"><a href="/about" class="nav-a">About</a></li>
 
-            <li><a href="/product">Product</a></li>
-            <li><a href="/category">Category</a></li>
+            <li class="nav-list"><a href="/product" class="nav-a">Product</a></li>
+            <li class="nav-list"><a href="/category" class="nav-a">Category</a></li>
             <li>
-                <div class="uk-navbar-item uk-margin-remove-left">
+                <div class="uk-navbar-item uk-margin-remove-left uk-margin-remove-top">
                     <a class="contact-button" href="/contact">Contact</a>
                 </div>
             </li>

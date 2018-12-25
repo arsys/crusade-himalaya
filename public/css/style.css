@@ -240,6 +240,7 @@ a:hover {
 
 #hp-wrapper {
   background-color: white;
+  padding: 18px 18px;
 }
 
 #hp-wrapper h5 {
@@ -247,9 +248,9 @@ a:hover {
 }
 
 #price-wrapper {
-  padding: 5px;
+  padding: 2px;
   letter-spacing: 1px;
-  width: 50%;
+  /* width: 50%; */
   z-index: 1;
   top: 166px;
   left: -10px;
@@ -345,18 +346,6 @@ a:hover {
   display: block;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}
-
 .intro .intro-icon {
   font-size: 54px;
   font-weight: 800;
@@ -442,6 +431,14 @@ a:hover {
 
 .hp-link {
   color: #000000 !important;
+}
+
+#home-sub-title {
+  text-transform: capitalize;
+}
+
+.home-title {
+  text-transform: uppercase;
 }
 
 .contact-info .call {

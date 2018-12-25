@@ -56,6 +56,14 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">
+                            <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                            <label for="name">Name</label>
+                        </div>
+                    </div>
+                </div>                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
                             <button type="button" class="btn btn-block ink-reaction btn-info" data-toggle="modal"
                             data-target="#myModal">
                             <i class="far fa-image"></i>  Image

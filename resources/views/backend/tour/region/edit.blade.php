@@ -28,6 +28,14 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    {{ Form::label('description', 'Description ') }}
+                    {!! Form::textarea('description', null, ['id' => 'description', 'rows' => 10, 'cols' => 30, 'style' => 'resize:none']) !!}
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
                 <button type="submit" class="btn btn-block btn-success ink-reaction">Update</button>
             </div>

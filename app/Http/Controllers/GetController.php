@@ -47,5 +47,19 @@ class GetController extends Controller
 
 	}
 
+	public function region2package($category,$region)
+	{
+        $category = TourCategory::where('slug','=', $category)->first();
+        $region = Region::where('slug','=',$region)->first();
+        $query = Tour::whereHas('category', function ($r) use ($category) {
+            $r->where('tcategories.slug', $category->slug);
+        })->whereHas('region', function ($s) use ($region) {
+            $s->where('regions.slug', $region->slug);
+        })->get();  
+        return view('public.pages.packages')        
+        ->withCategory($category)
+        ->withRegion($region)
+        ->withResults($query);
+	}
 
 }

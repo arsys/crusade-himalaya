@@ -19,7 +19,7 @@
 		@foreach($row as $region)
 		<div class="uk-width-1-2@s">
 			<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($region->thumb) }}" uk-img>
-				<h1>{{ $region->name }}</h1>
+				<h3><a href="{{ route('region2package',[$category->slug,$region->slug]) }}">{{ $region->name }}</a></h3>
 			</div>
 		</div>
 		@endforeach

@@ -86,6 +86,9 @@ public function getDestination()
 {
     return view('frontend.destination'); 
 }
+public function getPackages(){
+    return view('frontend.packages');
+}
 
 
     //Gets single product details

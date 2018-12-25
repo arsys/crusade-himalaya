@@ -117,3 +117,4 @@ Route::prefix('trip')->group(function () {
 Route::get('travel-style/{slug}','GetController@fetchByCategory')->name('fetchByCategory');
 Route::get('destination/{slug}','GetController@fetchByCategory')->name('fetchByRegion');
 Route::get('/destination','FrontendController@getDestination');
+Route::get('/packages','FrontendController@getPackages');

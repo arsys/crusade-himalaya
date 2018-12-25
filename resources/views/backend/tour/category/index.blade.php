@@ -55,12 +55,23 @@
                         <div class="form-group">
                             <input type="text" class="form-control" id="name" name="name">
                             <label for="name">Name</label>
-                            @if ($errors->has('image'))
+                            @if ($errors->has('name'))
                             <span class="help-block">{{$errors->first('name')}}</span>
                             @endif
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <textarea name="description" class="form-control"></textarea>
+                            <label for="description">Description</label>
+                            @if ($errors->has('description'))
+                            <span class="help-block">{{$errors->first('description')}}</span>
+                            @endif
+                        </div>
+                    </div>
+                </div>                
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="form-group">

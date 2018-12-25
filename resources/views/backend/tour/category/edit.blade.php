@@ -29,7 +29,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         {{ Form::label('description', 'Description ') }}
-                        {!! Form::textarea('description', null, ['id' => 'description', 'rows' => 10, 'cols' => 30, 'style' => 'resize:none']) !!}
+                        {!! Form::textarea('description', null, ['id' => 'description', 'class' => 'form-control',  'style' => 'resize:none']) !!}
                     </div>
                 </div>
             </div>

@@ -80,12 +80,6 @@ a:hover{
 }
 
 .banner-title {
-
-   /* position: absolute;
-     bottom: 150px;
-     left: 360px;
-     right:360px;
-     color:white; */
      position: absolute;
      top: 50%;
      left: 50%;
@@ -111,18 +105,6 @@ a:hover{
   from { opacity: 0; } 
 }
 
-.first-text {
-  position: relative;
-  color: $white;
-  text-align: center;
-  animation: fadeIn 1s infinite alternate;
-}
-.second-text {
-  position: relative;
-  color: $white;
-  text-align: center;
-  animation: fadeIn 1s infinite alternate;
-}
 
 
 //why  us start 

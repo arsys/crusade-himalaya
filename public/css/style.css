@@ -147,12 +147,12 @@ body {
 
 /* @import "module/ui-kit"; */
 
-.uk-navbar-nav li a {
+.uk-navbar-nav .nav-list .nav-a {
   font-weight: 420;
   color: #333 !important;
 }
 
-.uk-navbar-nav li :hover {
+.uk-navbar-nav .nav-list :hover {
   color: #2ed3ae !important;
 }
 
@@ -326,11 +326,6 @@ a:hover {
 }
 
 .banner-title {
-  /* position: absolute;
-     bottom: 150px;
-     left: 360px;
-     right:360px;
-     color:white; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -360,22 +355,6 @@ a:hover {
   from {
     opacity: 0;
   }
-}
-
-.first-text {
-  position: relative;
-  color: #FFFFFF;
-  text-align: center;
-  -webkit-animation: fadeIn 1s infinite alternate;
-          animation: fadeIn 1s infinite alternate;
-}
-
-.second-text {
-  position: relative;
-  color: #FFFFFF;
-  text-align: center;
-  -webkit-animation: fadeIn 1s infinite alternate;
-          animation: fadeIn 1s infinite alternate;
 }
 
 .intro .intro-icon {
@@ -1141,7 +1120,7 @@ textarea.parsley-error {
 .contact-button {
   color: #000000 !important;
   background-color: transparent;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #333;
   overflow: visible;
   text-transform: none;
   display: inline-block;
@@ -1151,7 +1130,7 @@ textarea.parsley-error {
   vertical-align: middle;
   font-size: 12px;
   font-weight: 400;
-  line-height: 53px;
+  line-height: 32px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;

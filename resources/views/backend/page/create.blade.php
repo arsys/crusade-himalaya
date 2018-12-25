@@ -20,6 +20,17 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group {{$errors->has('subheading') ? 'has-error' : ''}}">
+                            {{ Form::text('subheading', Request::old('subheading'), ['class' => 'form-control', 'placeholder' => 'Enter subheading here', 'required']) }}
+                            @if($errors->has('subheading'))
+                            <span class="help-block">{{ $errors->first('subheading') }}</span>
+                            @endif
+                            {{ Form::label('subheading', 'Title ') }}
+                        </div>
+                    </div>
+                </div>                
+                <div class="row">
                     <div class="col-md-2">
                         <div class="form-group  {{$errors->has('position') ? 'has-error' : ''}}">
                             <input type="text" class="form-control input-md m-b-sm" name="position">

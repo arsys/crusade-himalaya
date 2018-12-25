@@ -58,6 +58,7 @@ class PageController extends Controller
        try {
         $this->validate($request, [
             'title' => 'required|max:255',
+            'subheading' => 'required',
             'page_content' => 'required',
             'position' => 'required|numeric',
             'mtitle' => 'required',
@@ -133,6 +134,7 @@ class PageController extends Controller
         try {
             $this->validate($request, [
                 'title' => 'required|max:255',
+                'subheading' => 'required',
                 'page_content' => 'required',
                 'position' => 'required|numeric',
                 'mtitle' => 'required',

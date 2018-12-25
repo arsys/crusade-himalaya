@@ -13,3 +13,41 @@
         font-weight: bold;
     }
 }
+//breadcrumb start
+#cat-breadcrumb{
+    position: relative;
+    li a{        
+        color: $white;
+
+    }
+}
+.cat-breadcrumb {
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+.category{
+ position:relative;
+}
+//breadcrumb end
+//overlay start
+.category-cover{
+
+  display:block;
+
+  position: relative;
+  color:white;
+}
+.category-cover:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  background-color: hsla(0, 100%, 80%, 0.3);
+}
+//overlay end

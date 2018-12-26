@@ -70,4 +70,10 @@ class Tour extends Model
     {
         return $this->hasMany('App\Departure', 'tour_id');
     }
+
+    public function itinerary()
+    {
+        return $this->hasMany('App\Itinerary', 'tour_id')->orderBy('id', 'asc');;
+    }
+
 }

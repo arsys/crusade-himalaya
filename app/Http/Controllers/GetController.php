@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Insta;
+use App\Tour;
+use App\Region;
+use App\TourCategory;
 use Vinkla\Instagram\Instagram;
 use Illuminate\Http\Request;
 
@@ -28,4 +31,47 @@ class GetController extends Controller
 		$instas = Insta::all();
 		return view('frontend.insta')->withInstas($instas);
 	}	
+
+	public function fetchByCategory($slug)
+	{
+		$category = TourCategory::where('slug','=', $slug)->first();
+		$tours = $category->tours()->with('region')->get(['region_id']);
+		$regions = $tours->pluck('region')->unique();
+
+		return view('frontend.pages.travel-style')
+		->withResults($regions)
+		->withCategory($category);
+	}
+
+	public function fetchByregion($slug)
+	{
+
+	}
+
+	public function region2package($category,$region)
+	{
+        $category = TourCategory::where('slug','=', $category)->first();
+        $region = Region::where('slug','=',$region)->first();
+        $query = Tour::whereHas('category', function ($r) use ($category) {
+            $r->where('tour_categories.slug', $category->slug);
+        })->whereHas('region', function ($s) use ($region) {
+            $s->where('regions.slug', $region->slug);
+        })->get();  
+        return view('frontend.pages.packages')        
+        ->withCategory($category)
+        ->withRegion($region)
+        ->withResults($query);
+	}
+
+	public function tripDetail($slug)
+	{
+		$tour = Tour::where('slug','=', $slug)->first();
+		return view('frontend.tour.details')->withTour($tour);
+	}
+
+	public function comingSoon()
+	{
+		return view('frontend.comingsoon');
+	}
+
 }

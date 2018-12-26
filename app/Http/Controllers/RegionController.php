@@ -59,6 +59,7 @@ class RegionController extends Controller
         $region = new Region();
         $region->name = $request->name;
         $region->slug = str_slug($request->name, '-');
+        $region->description = $request->description;
         $media = Media::find($request->featured);
         $UploadImage = new UploadImage;
         $path = $UploadImage->uploadSingle($this->path,$media->path,1024,512);
@@ -110,6 +111,7 @@ class RegionController extends Controller
         
         $region->name = $request->name;
         $region->slug = str_slug($request->name, '-');
+        $region->description = $request->description;
         if (!empty($request->featured)) {
             //fetch old image path
             $oldPath = $region->path;

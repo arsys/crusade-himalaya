@@ -147,11 +147,12 @@ body {
 
 /* @import "module/ui-kit"; */
 
-.uk-navbar-nav li a {
+.uk-navbar-nav .nav-list .nav-a {
   font-weight: 420;
+  color: #333 !important;
 }
 
-.uk-navbar-nav li :hover {
+.uk-navbar-nav .nav-list :hover {
   color: #2ed3ae !important;
 }
 
@@ -239,6 +240,7 @@ a:hover {
 
 #hp-wrapper {
   background-color: white;
+  padding: 18px 18px;
 }
 
 #hp-wrapper h5 {
@@ -246,9 +248,9 @@ a:hover {
 }
 
 #price-wrapper {
-  padding: 5px;
+  padding: 2px;
   letter-spacing: 1px;
-  width: 50%;
+  /* width: 50%; */
   z-index: 1;
   top: 166px;
   left: -10px;
@@ -325,11 +327,6 @@ a:hover {
 }
 
 .banner-title {
-  /* position: absolute;
-     bottom: 150px;
-     left: 360px;
-     right:360px;
-     color:white; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -347,34 +344,6 @@ a:hover {
 
 .banner {
   display: block;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}
-
-.first-text {
-  position: relative;
-  color: #FFFFFF;
-  text-align: center;
-  -webkit-animation: fadeIn 1s infinite alternate;
-          animation: fadeIn 1s infinite alternate;
-}
-
-.second-text {
-  position: relative;
-  color: #FFFFFF;
-  text-align: center;
-  -webkit-animation: fadeIn 1s infinite alternate;
-          animation: fadeIn 1s infinite alternate;
 }
 
 .intro .intro-icon {
@@ -426,7 +395,7 @@ a:hover {
   background: rgba(36, 183, 206, 0.6);
   color: #fff;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0.2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,7 +412,7 @@ a:hover {
 
 .destination:hover .dest-topic {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.2;
 }
 
 .dest-title {
@@ -458,6 +427,18 @@ a:hover {
 .destination:hover .dest-title {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.hp-link {
+  color: #666 !important;
+}
+
+#home-sub-title {
+  text-transform: capitalize;
+}
+
+.home-title {
+  text-transform: uppercase;
 }
 
 .contact-info .call {
@@ -544,6 +525,48 @@ a:hover {
   width: 70%;
   font-size: 24px;
   font-weight: bold;
+}
+
+#cat-breadcrumb {
+  position: relative;
+}
+
+#cat-breadcrumb li a {
+  color: #FFFFFF;
+}
+
+.cat-breadcrumb {
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+
+.category {
+  position: relative;
+}
+
+/* .category-cover{
+
+  display:block;
+  height:635px;
+  position: relative;
+  color:white;
+}
+.category-cover:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  background-color: hsla(0, 100%, 80%, 0.3);
+} */
+
+.tm-nav li a {
+  color: #333;
 }
 
 #breadcrumb {
@@ -939,11 +962,6 @@ a:hover {
   position: relative;
 }
 
-.team {
-  width: 400;
-  height: 400;
-}
-
 #breadcrumb {
   position: relative;
 }
@@ -965,6 +983,7 @@ a:hover {
 
 .page-cover {
   display: block;
+  height: 635px;
   position: relative;
   color: white;
 }
@@ -978,7 +997,15 @@ a:hover {
   height: 100%;
   display: block;
   z-index: 0;
-  background-color: rgba(255, 153, 153, 0.3);
+  background-color: rgba(159, 158, 158, 0.3);
+}
+
+#read {
+  display: none;
+}
+
+#text {
+  display: none;
 }
 
 #scroll {
@@ -1086,10 +1113,40 @@ textarea.parsley-error {
 .foobar-btn-wrapper a.uk-button a.uk-button:hover,
 .social-icons a:hover,
 .social-icons a i:hover,
+.contact-button:hover,
 .uk-button:hover,
-.uk-button-default:hover {
+.uk-button-default:hover,
+.button-link:hover {
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+}
+
+.contact-button {
+  color: #000000 !important;
+  background-color: transparent;
+  border: 1px solid #333;
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 40px;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+
+.contact-button:hover {
+  color: #FFFFFF !important;
+  background-color: #2ed3ae;
 }
 
 .uk-button {
@@ -1146,6 +1203,45 @@ textarea.parsley-error {
   color: #FFFFFF;
   background-color: #2ed3ae;
 }
+
+.button-link {
+  color: #333;
+  overflow: visible;
+  text-transform: none;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 53px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+
+.button-link:hover {
+  color: #2ed3ae;
+}
+
+/* .right-arrow{
+    margin-left:10px;
+    font-weight:900;
+    font-family: "Font Awesome 5 Free";
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    content: 'f061';
+}
+ */
 
 .home-heading-primary {
   text-decoration: none;
@@ -1246,6 +1342,15 @@ textarea.parsley-error {
   position: relative;
   top: 50%;
   bottom: 50%;
+}
+
+.heading-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+  width: 55%;
+  padding: 20px 20px;
+  bottom: 30%;
+  left: 67px;
+  right: 0px;
 }
 
 .ghost,

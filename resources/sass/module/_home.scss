@@ -3,17 +3,10 @@ a:hover{
   cursor: pointer;
 }
 
-#hp-wrapper{
-  
-  background-color: white;
-  h5{        
-    color:  $grey-darken-4;
-  }
-}
 #price-wrapper{
-  padding: 5px;
+  padding: 2px;
   letter-spacing: 1px;
-  width: 50%;
+  /* width: 50%; */
   z-index: 1;
   top:166px;
   left: -10px;
@@ -80,12 +73,6 @@ a:hover{
 }
 
 .banner-title {
-
-   /* position: absolute;
-     bottom: 150px;
-     left: 360px;
-     right:360px;
-     color:white; */
      position: absolute;
      top: 50%;
      left: 50%;
@@ -107,22 +94,6 @@ a:hover{
 
 
 
-@keyframes fadeIn { 
-  from { opacity: 0; } 
-}
-
-.first-text {
-  position: relative;
-  color: $white;
-  text-align: center;
-  animation: fadeIn 1s infinite alternate;
-}
-.second-text {
-  position: relative;
-  color: $white;
-  text-align: center;
-  animation: fadeIn 1s infinite alternate;
-}
 
 
 //why  us start 
@@ -184,7 +155,7 @@ a:hover{
   background: rgba(36, 183, 206, 0.6);
   color: #fff;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0.2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +166,8 @@ a:hover{
 
 .destination:hover .dest-topic {
  visibility: visible;
-  opacity: 1;
+  opacity: 0.2;
+
 }
 
 
@@ -212,3 +184,14 @@ a:hover{
 }
 
 //destinationn overlay text end
+.hp-link{
+  color:#666!important;
+}
+//home intro start
+#home-sub-title{
+  text-transform:capitalize; 
+}
+.home-title{
+  text-transform: uppercase;
+}
+//home intro end

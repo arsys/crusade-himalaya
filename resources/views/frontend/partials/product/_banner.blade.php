@@ -1,8 +1,8 @@
 <section class=" uk-container-expand">
-	<div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200 media: @s" style="background-image: url('/img/Tours/product.jpg');">
- 	 	<h5 class="uk-text-center uk-margin-auto uk-margin-auto-vertical strike">Background-image</h1>
-		<div class="breadcrumb ">
-			<ul class="uk-breadcrumb  " id="breadcrumb">
+	<div class="uk-height-large uk-flex  uk-background-cover uk-light" data-src="https://source.unsplash.com/1200x800/?bird" uk-img>
+ 	 	<h3 class="uk-text-center uk-margin-auto uk-margin-auto-vertical">Background-image</h3>
+		<div class="breadcrumb uk-visible@l ">
+			<ul class="uk-breadcrumb" id="breadcrumb">
 				<li><a href="#">Item</a></li>
 				<li><a href="#">Item</a></li>
 				<li class="uk-disabled"><a>Disabled</a></li>

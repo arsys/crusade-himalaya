@@ -82,6 +82,13 @@ public function getSlideshow()
 {
     return view('frontend.slideshow'); 
 }
+public function getDestination()
+{
+    return view('frontend.destination'); 
+}
+public function getPackages(){
+    return view('frontend.packages');
+}
 
 
     //Gets single product details
@@ -143,5 +150,4 @@ public function eventCalender()
     $calendar = Calendar::addEvents($events);
     return view('frontend.calender', compact('calendar'));
 }
-
 }

@@ -2,8 +2,11 @@
     <div class="uk-container">
         <div class="uk-grid-divider uk-child-width-expand@s " uk-grid>
             <div>
-                <h1 class="uk-h1 home-heading-secondary uk-text-center"><span>Why us ?</span></h1>
-                <div class="uk-text-center uk-margin-large-top " uk-grid>
+                <h1 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title"><span>Our Essence</span></h1>
+                 <p class="uk-text-center uk-margin-remove-top home-heading-secondary " id="home-sub-title"><span>Educate, Empower, Encourage</span></p>
+
+
+                <div class="uk-text-center uk-margin-large-top  " uk-grid>
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-hand-holding-heart intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Passion & Exportise</h6>
@@ -24,7 +27,7 @@
                     </div>
 
                 </div>
-                <div class="uk-text-center " uk-grid>
+                <div class="uk-text-center uk-margin-large-top " uk-grid>
                     <div class="uk-width-1-3  intro">
                         <i class="fas fa-grin-hearts intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Happiness Guaranteed </h6>
@@ -42,16 +45,16 @@
                    </div>
                </div>
            </div>
-           <div>
-            <h1 class="uk-h1 home-heading-secondary uk-text-center "><span>Who are we ?</span></h1>
-            <p class="uk-padding-small uk-padding-remove-horizontal">
-                Crusade Himalaya is a unique and independent travel partner; we are a boutique travel studio who wish to offer you, our Atithis (revered guests), enriching and fulfilling experience of their Nepal visit. We wish to Empower, Educate, and Encourage you to have real-life experiences as you set out to discover the timeless wonders of Nepal.
-            </p>
-            <p>
-                At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. Putting comfort and pleasure above anything else, we wish to earn your smiles. From the moment you land in Nepal, till the time we bid our goodbyes, the team of Crusade Himalaya will continuously strive to ensure your experience is highly memorable
-            </p>
-
-        </div>
+            <div >
+                <h1 class="uk-h1 home-heading-secondary uk-text-center "><span>The Story...</span></h1>
+                <p class="uk-padding-small uk-padding-remove-horizontal">
+                    Crusade Himalaya is a unique and independent travel partner; we are a boutique travel studio who wish to offer you, our Atithis (revered guests), enriching and fulfilling experience of their Nepal visit. We wish to Empower, Educate, and Encourage you to have real-life experiences as you set out to discover the timeless wonders of Nepal.
+                </p>
+                <p >
+                    At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. Putting comfort and pleasure above anything else, we wish to earn your smiles. From the moment you land in Nepal, till the time we bid our goodbyes, the team of Crusade Himalaya will continuously strive to ensure your experience is highly memorable
+                </p>
+                <a href="#" class="button-link">Explore <span uk-icon="arrow-right"></span></a>
+            </div>
     </div>
 </div>
 </div>

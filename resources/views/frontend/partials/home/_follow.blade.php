@@ -12,48 +12,59 @@
             @endforeach
         </div>      
         @else   
-        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
-
-            <div>
-
-                <img src="https://source.unsplash.com/400x300/?heli" alt="" >
-            </div>
-
-            <div>
-                <img src="https://source.unsplash.com/400x300/?everest" alt="">
-            </div>
-            <div>
-                <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
-            </div>
-
-            <div>
-                <img src="https://source.unsplash.com/400x300/?nepal" alt="">
-            </div>
-            <div>
+        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 "uk-grid  uk-lightbox="animation: slide">   
+        <div>
+            <a class="uk-inline" href="{{asset('img/1.jpg')}}" data-caption="Caption 1">
+                <img src="https://source.unsplash.com/400x300/?india" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/2.jpg')}}" data-caption="Caption 2" >
+                <img src="https://source.unsplash.com/400x300/?nepal" alt="" >
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/3.jpg')}}" data-caption="Caption 3">
+                <img src="https://source.unsplash.com/400x300/?india" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/4.jpg')}}" data-caption="Caption 1">
+                <img src="https://source.unsplash.com/400x300/?china" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/5.jpg')}}" data-caption="Caption 2">
+                <img src="https://source.unsplash.com/400x300/?bhutan" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/6.jpg')}}" data-caption="Caption 3">
                 <img src="https://source.unsplash.com/400x300/?mountain" alt="">
-            </div> 
-
-
-            <div>
-                <img src="https://source.unsplash.com/400x300/?langtang" alt="" >
-            </div>
-            <div>
-                <img src="https://source.unsplash.com/400x300/?everest" alt="">
-            </div>
-
-            <div>
-                <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
-            </div>
-
-            <div>
-                <img src="https://source.unsplash.com/400x300/?heli" alt="">
-            </div>
-
-            <div>
-                <img src="https://source.unsplash.com/400x300/?annapurna" alt="">
-            </div> 
-
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/7.jpg')}}" data-caption="Caption 1">
+                <img src="https://source.unsplash.com/400x300/?bird" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/8.jpg')}}" data-caption="Caption 2">
+                <img src="https://source.unsplash.com/400x300/?cat" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="{{asset('img/9.jpg')}}" data-caption="Caption 3">
+                <img src="https://source.unsplash.com/400x300/?perfume" alt="">
+            </a>
+        </div>
+         <div>
+            <a class="uk-inline" href="{{asset('img/1.jpg')}}" data-caption="Caption 3">
+                <img src="https://source.unsplash.com/400x300/?shoes" alt="">
+            </a>
         </div>
     </div>
+
     @endif
 </section>
+

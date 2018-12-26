@@ -25,7 +25,14 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        {{ Form::label('description', 'Description ') }}
+                        {!! Form::textarea('description', null, ['id' => 'description', 'class' => 'form-control',  'style' => 'resize:none']) !!}
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <button type="submit" class="btn btn-block btn-success ink-reaction">Add</button>

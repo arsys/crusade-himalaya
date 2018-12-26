@@ -24,7 +24,7 @@
     <a href="#" id="scroll" style="display: none;"><span></span></a>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+{{-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
 <script src="{{asset('js/app.js')}}">  </script>

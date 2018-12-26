@@ -1,5 +1,5 @@
 <section class=" uk-container-expand">
-	<div class="uk-height-large uk-flex  uk-light uk-background-cover uk-light" data-src="{{ asset($tour->banner) }}" uk-img>
+	<div class="uk-height-large uk-flex  uk-light uk-background-cover uk-light" data-src="{{ asset($tour->image->banner) }}" uk-img>
 		<h5 class="uk-text-center uk-margin-auto uk-margin-auto-vertical strike">{{ $tour->title }}</h1>
 			<div class="breadcrumb ">
 				<ul class="uk-breadcrumb  " id="breadcrumb">

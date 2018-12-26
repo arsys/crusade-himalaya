@@ -7,7 +7,7 @@
 					<li>
 						<a href="{{ route('region2package',[$tour->category->slug,$tour->region->slug]) }}">{{ $tour->region->name }}</a>
 					</li>
-					<li><a href="{{url()->current()}}">{{ ucfirst($category->name) }}">{{ $tour->title }}</a></li>
+					<li><a href="{{url()->current()}}">{{ $tour->title }}</a></li>
 				</ul>
 			</div>		
 		</div>	

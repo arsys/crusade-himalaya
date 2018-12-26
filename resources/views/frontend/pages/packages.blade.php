@@ -1,8 +1,8 @@
 @extends('layouts.frontend')
 @section('content')
 <section class="uk-container-expand about" uk-grid>
-    <div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($category->path) }}" uk-img>
-        <div class="uk-overlay uk-overlay-primary uk-position-bottom trekking">
+    <div class="uk-height-large uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($category->path) }}" uk-img>
+        <div class="uk-overlay uk-overlay-primary uk-position-bottom packages-wrapper">
             <h1 class="page-heading uk-margin-large-left">{{ $category->name }}</h1>
             <p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $category->description }}</p>
         </div>

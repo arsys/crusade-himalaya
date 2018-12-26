@@ -10,38 +10,38 @@
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-hand-holding-heart intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Passion & Exportise</h6>
-                        <p class="uk-text-justify intro-paragraph">When you book a trip with us but are forced ..</p>
+                        <p class="uk-text-center intro-paragraph">When you book a trip with us but are forced ..</p>
                     </div>
 
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-compass intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Freedom to Explore</h6>
-                        <p class="uk-text-justify intro-paragraph">Refer our company or any of our trips to your..</p>
+                        <p class="uk-text-center intro-paragraph">Refer our company or any of our trips to your..</p>
                     </div>
 
                     <div class="uk-width-1-3  intro">
                         <i class="fab fa-pagelines intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Environmentally Engaged</h6>
-                        <p class="uk-text-justify intro-paragraph">Gain loyalty bonus by choosing to travel with...</p>
+                        <p class="uk-text-center intro-paragraph">Gain loyalty bonus by choosing to travel with...</p>
                         
                     </div>
 
                 </div>
-                <div class="uk-text-center " uk-grid>
+                <div class="uk-text-center uk-margin-large-top uk-margin-medium-right " uk-grid>
                     <div class="uk-width-1-3  intro">
                         <i class="fas fa-grin-hearts intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Happiness Guaranteed </h6>
-                        <p class="uk-text-justify intro-paragraph">When you book a trip with us we assure you..</p>
+                        <p class="uk-text-center intro-paragraph">When you book a trip with us we assure you..</p>
                     </div>
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-handshake intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Lasting Friendship</h6>
-                        <p class="uk-text-justify intro-paragraph">Our online payment gateway is safe and...</p>
+                        <p class="uk-text-center intro-paragraph">Our online payment gateway is safe and...</p>
                     </div>
                     <div class="uk-width-1-3 intro ">
                        <i class="fas fa-fingerprint intro-icon"></i>
                        <h6 class="uk-text-center intro-title">Quirky Holidays</h6>
-                       <p class="uk-text-justify intro-paragraph">We realize that on your dream vacation you..</p>
+                       <p class="uk-text-center intro-paragraph">We realize that on your dream vacation you..</p>
                    </div>
                </div>
            </div>

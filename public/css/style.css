@@ -441,15 +441,6 @@ a:hover {
   text-transform: uppercase;
 }
 
-.packages-wrapper {
-  background: rgba(0, 0, 0, 0.3);
-  width: 55%;
-  padding: 20px 20px;
-  bottom: 30%;
-  left: 67px;
-  right: 0px;
-}
-
 .contact-info .call {
   line-height: normal;
 }
@@ -1009,7 +1000,11 @@ a:hover {
   background-color: rgba(159, 158, 158, 0.3);
 }
 
-.moretext {
+#read {
+  display: none;
+}
+
+#text {
   display: none;
 }
 
@@ -1347,6 +1342,15 @@ textarea.parsley-error {
   position: relative;
   top: 50%;
   bottom: 50%;
+}
+
+.heading-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+  width: 55%;
+  padding: 20px 20px;
+  bottom: 30%;
+  left: 67px;
+  right: 0px;
 }
 
 .ghost,

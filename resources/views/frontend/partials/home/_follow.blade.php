@@ -12,107 +12,59 @@
             @endforeach
         </div>      
         @else   
-        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
-
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?heli" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?heli" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?everest" alt="">
-                    </div>
-                </div>
-            </div>
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?kathmandu" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?nepal" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?nepal" alt="">
-                    </div>
-                </div>
-            </div>
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?mountain" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?mountain" alt="">
-                    </div>
-                </div>
-            </div> 
-
-
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?langtang" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?langtang" alt="">
-                    </div>
-                </div>
-            </div>
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?everest" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?kathmandu" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?kathmandu" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?heli" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?heli" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?annapurna" alt="" ></a>
-                <div id="modal-media-image" class="uk-flex-top" uk-modal>
-                    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
-                        <button class="uk-modal-close-outside" type="button" uk-close></button>
-                        <img src="https://source.unsplash.com/400x300/?annapurna" alt="">
-                    </div>
-                </div>
-            </div> 
-
+        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 "uk-grid  uk-lightbox="animation: slide">   
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/1200x800/?nepal" data-caption="Caption 1">
+                <img src="https://source.unsplash.com/400x300/?heli" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 2">
+                <img src="https://source.unsplash.com/400x300/?nepal" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 3">
+                <img src="https://source.unsplash.com/400x300/?india" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 1">
+                <img src="https://source.unsplash.com/400x300/?china" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 2">
+                <img src="https://source.unsplash.com/400x300/?bhutan" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 3">
+                <img src="https://source.unsplash.com/400x300/?mountain" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 1">
+                <img src="https://source.unsplash.com/400x300/?bird" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 2">
+                <img src="https://source.unsplash.com/400x300/?cat" alt="">
+            </a>
+        </div>
+        <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 3">
+                <img src="https://source.unsplash.com/400x300/?perfume" alt="">
+            </a>
+        </div>
+         <div>
+            <a class="uk-inline" href="https://source.unsplash.com/400x300/?heli" data-caption="Caption 3">
+                <img src="https://source.unsplash.com/400x300/?shoes" alt="">
+            </a>
         </div>
     </div>
+
     @endif
 </section>
+

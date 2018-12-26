@@ -8,7 +8,7 @@
         </div>
         <div class="breadcrumb">
             <ul class="uk-breadcrumb" id="breadcrumb">
-                <li><a href="/">Home</a></li>
+                <li><a href="/" uk-icon="icon: home"></a></li>
                 <li><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</a></li>
             </ul>
         </div>

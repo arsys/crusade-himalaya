@@ -1,4 +1,3 @@
-<!-- 
 <section class="uk-container-expand category" uk-grid>
 	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light category-cover" data-src="https://source.unsplash.com/1200x800/?bird" uk-img>
 		<h1 class="page-heading uk-margin-large-left">Category</h1>
@@ -12,9 +11,9 @@
 			</ul>
 		</div>
 	</div>
-</section> -->
+</section>
 
-<section class="uk-container-expand category" uk-grid>
+<!-- <section class="uk-container-expand category" uk-grid>
 	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light category-cover" data-src="https://source.unsplash.com/1200x800/?bird" uk-img>
 		<div class="uk-overlay uk-overlay-primary uk-position-bottom trekking">
 			<h1 class="page-heading uk-margin-large-left">Category</h1>
@@ -29,5 +28,5 @@
 			</ul>
 		</div>
 	</div>
-</section>
+</section> -->
 

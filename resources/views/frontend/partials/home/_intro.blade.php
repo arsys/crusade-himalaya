@@ -53,6 +53,7 @@
                 <p class="uk-margin-large-left">
                     At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. Putting comfort and pleasure above anything else, we wish to earn your smiles. From the moment you land in Nepal, till the time we bid our goodbyes, the team of Crusade Himalaya will continuously strive to ensure your experience is highly memorable
                 </p>
+                <a href="#" class="button-link uk-margin-large-left">Explore<i class="fas fa-arrow-right uk-margin-small-left"></i></a>
             </div>
     </div>
 </div>

@@ -166,7 +166,8 @@ a:hover{
 
 .destination:hover .dest-topic {
  visibility: visible;
-  opacity: 1;
+  opacity: 0.2;
+
 }
 
 
@@ -184,7 +185,7 @@ a:hover{
 
 //destinationn overlay text end
 .hp-link{
-  color:$black !important;
+  color:#666!important;
 }
 //home intro start
 #home-sub-title{

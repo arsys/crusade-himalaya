@@ -6,7 +6,7 @@
             <h1 class="page-heading uk-margin-large-left">{{ $category->name }}</h1>
             <p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $category->description }}</p>
         </div>
-        <div class="breadcrumb">
+        <div class="breadcrumb uk-visible@l">
             <ul class="uk-breadcrumb" id="breadcrumb">
                 <li><a href="/" uk-icon="icon: home"></a></li>
                 <li><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</a></li>

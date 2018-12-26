@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('content')
 {{-- banner start --}}
-@include ('frontend.tour.partial._banner')
+@include ('frontend.tour.partials._banner')
 {{-- banner end --}}
 {{-- sticky tab start --}}
 <section class="uk-container" >

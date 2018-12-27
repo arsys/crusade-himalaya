@@ -17,7 +17,7 @@
 	@foreach (array_chunk($categories->all(), 4) as $row)
 	<div class=" uk-grid-match uk-grid-small uk-text-center " uk-grid>
 		@foreach($row as $category)
-		<div class="uk-width-1-2@s">
+		<div class="uk-width-1-4@s">
 			<div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($category->thumb) }}" uk-img>
 				<h3><a href="#">{{ $category->name }}</a></h3>
 			</div>

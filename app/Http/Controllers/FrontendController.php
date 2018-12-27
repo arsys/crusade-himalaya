@@ -25,7 +25,7 @@ class FrontendController extends Controller
         $partners = Partner::all();
 
         $oddDestinations = DB::table('regions')
-        ->select(DB::raw('regions.id'))
+        ->select(DB::raw('*'))
         ->whereRaw('MOD(id, 2) = 1')
         ->get();
         dd($oddDestinations);

@@ -62,10 +62,10 @@ class FrontendController extends Controller
 
     public function getContact()
     {
-     return view('frontend.contact'); 
- }
- public function getProduct()
- {
+       return view('frontend.contact'); 
+   }
+   public function getProduct()
+   {
     return view('frontend.product');
 }
 public function getContact1()
@@ -104,6 +104,10 @@ public function getPackages(){
     return view('frontend.packages');
 }
 
+public function comingSoon()
+{
+    return view('frontend.comingsoon');
+}
 
     //Gets single product details
 public function tourDetailtest($slug)

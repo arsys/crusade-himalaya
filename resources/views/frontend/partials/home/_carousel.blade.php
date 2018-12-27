@@ -2,10 +2,10 @@
     <ul class="uk-slideshow-items">
         @foreach($carousels as $carousel)
         <li>
-            <img src="https://source.unsplash.com/1024x768/?mountain" alt="" uk-cover>
+            <img src="{{ $carousel->path }}" alt="" uk-cover>
             <div class="uk-position-center uk-position-small uk-text-center uk-overlay-panel uk-overlay-background uk-overlay-fade uk-light">
-               <h1 class="uk-heading-primary  uk-animation-slide-left-medium" uk-slideshow-parallax="x: 600,-600" {{-- style="transform: translate3d(-600px, 0px, 0px);" --}}>Heading 1</h1>
-               <p class="uk-text-lead  uk-animation-slide-right-medium" uk-slideshow-parallax="x: 400,-400" {{-- style="transform: translate3d(0px, 0px, -400px);" --}}>Slideshow paragraph 1</p>
+               <h1 class="uk-heading-primary" uk-slideshow-parallax="x: 600,-600" style="transform: translate3d(-600px, 0px, 0px);">{{ $carousel->heading}}</h1>
+               <p class="uk-text-lead " uk-slideshow-parallax="x: 400,-400" style="transform: translate3d(0px, 0px, -400px);">{{ $carousel->subheading}}</p>
            </div>
        </li>
        @endforeach

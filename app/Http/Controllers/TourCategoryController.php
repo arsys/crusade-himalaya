@@ -58,7 +58,7 @@ class TourCategoryController extends Controller
             ));
             $categories = new TourCategory;
             $categories->name = $request->name;
-            $region->description = $request->description;
+            $categories->description = $request->description;
             if (!File::exists($this->path) || !File::exists($this->thumb)) {
                 File::makeDirectory($this->path);
                 File::makeDirectory($this->thumb);
@@ -120,7 +120,7 @@ class TourCategoryController extends Controller
         ]);
 
         $tourCategory->name = $request->name;
-        $region->description = $request->description;
+        $tourCategory->description = $request->description;
         if (!empty($request->featured)) {
             //fetch old image path
             $oldPath = $tourCategory->path;

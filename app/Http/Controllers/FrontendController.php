@@ -10,6 +10,8 @@ use App\Insta;
 use App\Partner;
 use App\Event;
 use Calendar;
+use DB;
+
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -21,6 +23,17 @@ class FrontendController extends Controller
         $carousels = Carousel::where('status' ,1)->get();
         $instaFeeds = Insta::take(10)->get();
         $partners = Partner::all();
+
+        $oddDestinations = DB::table('regions')
+        ->select(DB::raw('regions.id'))
+        ->whereRaw('MOD(id, 2) = 1')
+        ->get();
+        dd($oddDestinations);
+
+        $evenDestinations = DB::table('regions')
+        ->select(DB::raw('regions.id'))
+        ->whereRaw('MOD(id, 2) = 0')
+        ->get();        
 
         return view('frontend.home')
         ->withCarousels($carousels)
@@ -144,7 +157,7 @@ public function eventCalender()
                 [
                     'color' => '#2ed3ae',
                     'url' => $value->url,                ]
-            );
+                );
         }
     }
     $calendar = Calendar::addEvents($events);

@@ -118,7 +118,8 @@ Route::prefix('travel-style')->group(function () {
 	Route::get('{slug}','GetController@fetchByCategory')->name('fetchByCategory');
 	Route::get('{category}/{region}','GetController@region2package')->name('region2package');
 });
-
-Route::get('destination/{slug}','GetController@fetchByCategory')->name('fetchByRegion');
+Route::prefix('destination')->group(function () {
+	Route::get('{slug}','GetController@fetchByregion')->name('fetchByRegion');
+});
 Route::get('/destination','FrontendController@getDestination');
 Route::get('/packages','FrontendController@getPackages');

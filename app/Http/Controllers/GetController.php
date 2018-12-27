@@ -43,24 +43,24 @@ class GetController extends Controller
 		->withCategory($category);
 	}
 
-	public function fetchByregion($slug)
-	{
-
-	}
-
 	public function region2package($category,$region)
 	{
-        $category = TourCategory::where('slug','=', $category)->first();
-        $region = Region::where('slug','=',$region)->first();
-        $query = Tour::whereHas('category', function ($r) use ($category) {
-            $r->where('tour_categories.slug', $category->slug);
-        })->whereHas('region', function ($s) use ($region) {
-            $s->where('regions.slug', $region->slug);
-        })->get();  
-        return view('frontend.pages.packages')        
-        ->withCategory($category)
-        ->withRegion($region)
-        ->withResults($query);
+		$category = TourCategory::where('slug','=', $category)->first();
+		$region = Region::where('slug','=',$region)->first();
+		$query = Tour::whereHas('category', function ($r) use ($category) {
+			$r->where('tour_categories.slug', $category->slug);
+		})->whereHas('region', function ($s) use ($region) {
+			$s->where('regions.slug', $region->slug);
+		})->get();  
+		return view('frontend.pages.packages')        
+		->withCategory($category)
+		->withRegion($region)
+		->withResults($query);
+	}
+
+	public function fetchByregion($slug)
+	{
+		return 1;
 	}
 
 	public function tripDetail($slug)

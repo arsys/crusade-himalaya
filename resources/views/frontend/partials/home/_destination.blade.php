@@ -7,9 +7,9 @@
                     @foreach($odds as $odd)
                     @if($loop->iteration % 2 == 0)
                     <div class="destination">
-                        <a href="/destination"><img src="{{ asset($odd->thumb) }}" alt="" class="uk-padding-xsmall dest-image"></a>
+                        <a href="{{ route('fetchByRegion',$odd->slug) }}"><img src="{{ asset($odd->thumb) }}" alt="" class="uk-padding-xsmall dest-image"></a>
                         <div class="dest-topic">
-                            <a href="/destination">
+                            <a href="{{ route('fetchByRegion',$odd->slug) }}">
                                 <div class="dest-title">{{ $odd->name }}</div>
                             </a>
                         </div>

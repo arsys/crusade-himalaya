@@ -89,12 +89,13 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::resource('/position', 'MemberController');
 });
 Route::name('frontend-')->group(function () {
-	Route::get('/','GetController@comingSoon');
+	// Route::get('/','GetController@comingSoon');
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 });
-Route::get('/', 'FrontendController@comingSoon');
+// Route::get('/', 'FrontendController@comingSoon');
+Route::get('/', 'FrontendController@getIndex');
 Route::get('/about', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
 Route::get('/product','FrontendController@getProduct');

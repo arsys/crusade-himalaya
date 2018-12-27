@@ -56,9 +56,9 @@ class MediaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'photo' => 'max:15000'
-        ]);
+        // $this->validate($request, [
+        //     'photo' => 'max:15000'
+        // ]);
         // if (!is_dir($this->path) && !is_dir($this->thumb)) {
         //     mkdir($this->path, 0755, true);
         //     mkdir($this->thumb, 0755, true);

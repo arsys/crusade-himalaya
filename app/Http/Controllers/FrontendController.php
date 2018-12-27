@@ -28,10 +28,9 @@ class FrontendController extends Controller
         ->select(DB::raw('*'))
         ->whereRaw('MOD(id, 2) = 1')
         ->get();
-        dd($oddDestinations);
 
         $evenDestinations = DB::table('regions')
-        ->select(DB::raw('regions.id'))
+        ->select(DB::raw('*'))
         ->whereRaw('MOD(id, 2) = 0')
         ->get();        
 
@@ -40,7 +39,9 @@ class FrontendController extends Controller
         ->withCategories($categories)
         ->withFeatureds($featureds)
         ->withInstafeeds($instaFeeds)
-        ->withPartners($partners);
+        ->withPartners($partners)
+        ->withOdds($oddDestinations)
+        ->withEvens($evenDestinations);
     }
 
     public function getAbout()

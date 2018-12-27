@@ -31,34 +31,37 @@
                         </div>
                     </div>
                 </div>
+
+
                 <div>
                     <div class="uk-child-width-expand@s uk-text-center uk-grid uk-grid-collapse" uk-grid="">
+                        @foreach($evens as $even)
+                        @if($loop->iteration % 2 != 0)
                         <div class="uk-first-column uk-panel uk-padding-xsmall destination">
-                            <a href="/destination"><img src="https://source.unsplash.com/1200x500/?langtang" alt="" class="dest-image"></a>
+                            <a href="/destination"><img src="{{ asset($even->thumb) }}" alt="" class="dest-image"></a>
                             <div class="dest-topic">
                                 <a href="/destination">
-                                    <div class="dest-title">Langtang Base Camp</div>
+                                    <div class="dest-title">{{ $even->name }}</div>
                                 </a>
                             </div>
                         </div>
-                        <div class="uk-panel uk-padding-xsmall destination">
-                            <a href="/destination"><img src="https://source.unsplash.com/1200x500/?annapurna" alt="" class="dest-image"></a>
-                            <div class="dest-topic">
-                                <a href="/destination">
-                                    <div class="dest-title">Everest Base Camp</div>
-                                </a>
-                            </div>
-                        </div>
+                        @endif
+                        @endforeach
                     </div>
+                    @foreach($evens as $even)
+                    @if($loop->iteration % 2 == 0)
                     <div class="destination">
-                        <a href="/destination"><img src="https://source.unsplash.com/1200x500/?everest" alt="" class="uk-padding-xsmall" class="dest-image"></a>
+                        <a href="/destination"><img src="{{ asset($even->thumb) }}" alt="" class="uk-padding-xsmall" class="dest-image"></a>
                         <div class="dest-topic">
                             <a href="/destination">
-                                <div class="dest-title">Everest Base Camp</div>
+                                <div class="dest-title">{{ $even->name }}</div>
                             </a>
                         </div>
                     </div>
+                    @endif
+                    @endforeach
                 </div>
+
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@
 			</div>
 			<!-- itinerary end -->
 			<!-- pricing start	 -->
-			<div class="uk-card uk-card-default uk-card-body " id="price">
+			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom " id="price">
 				<h3 class="uk-card-title "><span>Pricing & Availability</span></h3>
 				 @include ('frontend.partials.product.content._price') 
 			</div>

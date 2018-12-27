@@ -238,15 +238,6 @@ a:hover {
   cursor: pointer;
 }
 
-#hp-wrapper {
-  background-color: white;
-  padding: 18px 18px;
-}
-
-#hp-wrapper h5 {
-  color: #212121;
-}
-
 #price-wrapper {
   padding: 2px;
   letter-spacing: 1px;

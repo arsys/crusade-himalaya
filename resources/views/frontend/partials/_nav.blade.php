@@ -12,45 +12,47 @@
       <ul id="menu1" class="uk-navbar-nav uk-visible@l uk-margin-medium-right">
         <li class="uk-active"><a href="/" class="nav-a">Home</a></li>
         <li class="nav-list"><a href="#" class="nav-a">Where We GO</a>
-          <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;" uk-slider>
-          <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
-              <li>
-                <h5>Everest </h5>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?heli" width="300" alt=""></a>
-              </li>
-              <li>
-                <a href=""><h5>Annapurna Region</h5></a>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?everest" width="300" alt=""></a>
-              </li>
-              <li>
-                <a href=""><h5>Langtang Region</h5></a>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?nepal" width="300" alt=""></a>
-              </li>
-              <li>
-                <a href=""><h5>Remote Region</h5></a>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?china" width="300" alt=""></a>
-              </li>
-              <li>
-                <a href=""><h5>Remote Region</h5></a>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?chitwan" width="300" alt=""></a>
-              </li>
-              <li>
-                <a href=""><h5>Annapurna Region</h5></a>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?pokhara" width="300" alt=""></a>
-              </li>
-              <li>
-                <a href=""><h5>langtang Region</h5></a>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?annapurna" width="300" alt=""></a>
-              </li>
-              <li>
-                <a href=""><h5>Heli Region</h5></a>
-                <a href="#"><img src="https://source.unsplash.com/320x200/?heli" width="300" alt=""></a>
-              </li>
+          <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">
+            <div class="uk-position-relative uk-visible-toggle" uk-slider="sets: true">
+            <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
+                <li>
+                  <h5>Everest </h5>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?heli" width="300" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><h5>Annapurna Region</h5></a>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?everest" width="300" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><h5>Langtang Region</h5></a>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?nepal" width="300" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><h5>Remote Region</h5></a>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?china" width="300" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><h5>Remote Region</h5></a>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?chitwan" width="300" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><h5>Annapurna Region</h5></a>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?pokhara" width="300" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><h5>langtang Region</h5></a>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?annapurna" width="300" alt=""></a>
+                </li>
+                <li>
+                  <a href=""><h5>Heli Region</h5></a>
+                  <a href="#"><img src="https://source.unsplash.com/320x200/?heli" width="300" alt=""></a>
+                </li>
 
-          </ul>
+            </ul>
            
               <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
               <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            </div>
 
         </div>
           <!-- 

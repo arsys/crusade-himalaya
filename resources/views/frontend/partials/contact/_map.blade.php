@@ -1,5 +1,5 @@
 	<div class="map-wrapper uk-section-default">
-	    <div id="map"></div>
+	    <div id="map" style="height: 300px;"></div>
 	</div>
 @section('scripts')
 <script>

@@ -58,10 +58,30 @@ class GetController extends Controller
 		->withResults($query);
 	}
 
-	public function fetchByregion($slug)
+	public function fetchByregion($destination)
 	{
-		return 1;
+		$region = Region::where('slug','=',$destination)->first();
+		$tours = $country->tours()->with('category')->get(['category_id']);
+		$categories = $tours->pluck('category')->unique();
+
+		return view('frontend.pages.destinations')
+		->withCategories($categories)
+		->withRegion($region);
 	}
+
+	public function destionation2package($category,$region)
+	{
+		$stuff = TourCategory::where('slug',$category)->first();
+		$query = Tour::whereHas('country', function ($r) use ($country) {
+			$r->where('countries.name', $country);
+		})->whereHas('category', function ($s) use ($category) {
+			$s->where('tcategories.slug', $category);
+		})->get();
+		return view('public.pages.packages')
+		->withResults($query)
+		->withCategory($stuff)
+		->withCountry($country);
+	}	
 
 	public function tripDetail($slug)
 	{

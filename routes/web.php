@@ -120,6 +120,7 @@ Route::prefix('travel-style')->group(function () {
 });
 Route::prefix('destination')->group(function () {
 	Route::get('{slug}','GetController@fetchByregion')->name('fetchByRegion');
+	Route::get('{destionation}/{category}','GetController@destination2package')->name('destionation2package');
 });
 Route::get('/destination','FrontendController@getDestination');
 Route::get('/packages','FrontendController@getPackages');

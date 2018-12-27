@@ -61,7 +61,7 @@ class GetController extends Controller
 	public function fetchByregion($destination)
 	{
 		$region = Region::where('slug','=',$destination)->first();
-		$tours = $country->tours()->with('category')->get(['category_id']);
+		$tours = $region->tours()->with('category')->get(['category_id']);
 		$categories = $tours->pluck('category')->unique();
 
 		return view('frontend.pages.destinations')

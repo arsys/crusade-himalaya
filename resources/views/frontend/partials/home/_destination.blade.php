@@ -10,7 +10,7 @@
                         <a href="/destination"><img src="{{ asset($odd->thumb) }}" alt="" class="uk-padding-xsmall dest-image"></a>
                         <div class="dest-topic">
                             <a href="/destination">
-                                <div class="dest-title">{{ $odd->title }}</div>
+                                <div class="dest-title">{{ $odd->name }}</div>
                             </a>
                         </div>
                     </div>

@@ -69,4 +69,6 @@ class GetController extends Controller
 		return view('frontend.tour.details')->withTour($tour);
 	}
 
+
+
 }

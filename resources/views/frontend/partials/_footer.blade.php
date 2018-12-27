@@ -7,11 +7,11 @@
          <img data-src="{{asset('img/crusade-logo.svg')}}" alt="" style="width: 150px;"  uk-img class="foobar-logo">
       
             <div class="uk-margin-small-top social-icons uk-margin-medium-top">
-               <a href="#" class="uk-margin-left social-icons-facebook" ><i class="fab fa-facebook-f"></i></a>
-               <a href="#" class="uk-margin-left social-icons-twitter"><i class="fab fa-twitter"></i></a>
-               <a href="#" class="uk-margin-left social-icons-instagram"><i class="fab fa-instagram"></i></a>
-               <a href="#" class="uk-margin-left social-icons-youtube"><i class="fab fa-youtube"></i></a>
-               <a href="#" class="uk-margin-left social-icons-google"><i class="fab fa-google-plus-g"></i></a>
+               <a href="#" class="uk-margin-left" ><i class="fab fa-facebook-f"></i></a>
+               <a href="#" class="uk-margin-left"><i class="fab fa-twitter"></i></a>
+               <a href="#" class="uk-margin-left"><i class="fab fa-instagram"></i></a>
+               <a href="#" class="uk-margin-left"><i class="fab fa-youtube"></i></a>
+               <a href="#" class="uk-margin-left"><i class="fab fa-google-plus-g"></i></a>
             </div>
         </div>
         <div class="foobar-btn-wrapper">

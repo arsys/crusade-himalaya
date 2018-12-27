@@ -238,15 +238,6 @@ a:hover {
   cursor: pointer;
 }
 
-#hp-wrapper {
-  background-color: white;
-  padding: 18px 18px;
-}
-
-#hp-wrapper h5 {
-  color: #212121;
-}
-
 #price-wrapper {
   padding: 2px;
   letter-spacing: 1px;
@@ -439,6 +430,26 @@ a:hover {
 
 .home-title {
   text-transform: uppercase;
+}
+
+.previous {
+  color: #000000;
+}
+
+.previous:hover {
+  color: #000000;
+}
+
+.next {
+  color: #000000;
+}
+
+.next:hover {
+  color: #000000;
+}
+
+.modal {
+  width: 1200px;
 }
 
 .contact-info .call {

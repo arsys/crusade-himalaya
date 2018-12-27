@@ -195,3 +195,20 @@ a:hover{
   text-transform: uppercase;
 }
 //home intro end
+//follow start
+.previous{
+  color:$black;
+  &:hover{
+    color:$black;
+  }
+}
+.next{
+  color:$black;
+  &:hover{
+    color:$black;
+  }
+}
+.modal{
+  width:1200px;
+}
+//follow end

@@ -111,3 +111,17 @@
   right:0px;
 }
 //treking end
+//home intro start
+#home-sub-title{
+  text-transform:capitalize; 
+  color: $dark;
+  font-style:italic;
+   quotes:'"' '"';
+}
+#sub-title{
+  text-transform: lowercase;
+}
+.home-title{
+  text-transform: uppercase;
+}
+//home intro end

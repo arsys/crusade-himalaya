@@ -424,14 +424,6 @@ a:hover {
   color: #666 !important;
 }
 
-#home-sub-title {
-  text-transform: capitalize;
-}
-
-.home-title {
-  text-transform: uppercase;
-}
-
 .previous {
   color: #000000;
 }
@@ -1365,6 +1357,21 @@ textarea.parsley-error {
   bottom: 30%;
   left: 67px;
   right: 0px;
+}
+
+#home-sub-title {
+  text-transform: capitalize;
+  color: #333;
+  font-style: italic;
+  quotes: '"' '"';
+}
+
+#sub-title {
+  text-transform: lowercase;
+}
+
+.home-title {
+  text-transform: uppercase;
 }
 
 .ghost,

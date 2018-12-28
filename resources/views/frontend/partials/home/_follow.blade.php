@@ -1,6 +1,7 @@
 <section class=" uk-margin-medium-top uk-margin-medium-bottom bgcolor-wrapper">
     <div class="uk-container">
-        <h2 class="uk-text-center uk-margin-small-bottom instagram"><a href="#">#brandname</a></h2> 
+        <h2 class="uk-text-center uk-margin-small-bottom instagram"><a href="#">#brandname</a></h2>
+       
     </div>
     <div class="uk-container-expand">
         @if($instafeeds->count())
@@ -14,16 +15,16 @@
         @else   
     <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
 
-        <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?heli" alt="" ></a>
-        <a href="#modal-media-image2" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image3" uk-toggle><img src="https://source.unsplash.com/400x300/?cat" alt="" ></a>
-        <a href="#modal-media-image4" uk-toggle><img src="https://source.unsplash.com/400x300/?nepal" alt="" ></a>
-        <a href="#modal-media-image5" uk-toggle><img src="https://source.unsplash.com/400x300/?china" alt="" ></a>
-        <a href="#modal-media-image6" uk-toggle><img src="https://source.unsplash.com/400x300/?japan" alt="" ></a>
-        <a href="#modal-media-image7" uk-toggle><img src="https://source.unsplash.com/400x300/?annapurna" alt="" ></a>
-        <a href="#modal-media-image8" uk-toggle><img src="https://source.unsplash.com/400x300/?food" alt="" ></a>
-        <a href="#modal-media-image9" uk-toggle><img src="https://source.unsplash.com/400x300/?coffee" alt="" ></a>
-        <a href="#modal-media-image10" uk-toggle><img src="https://source.unsplash.com/400x300/?chocolate" alt="" ></a>
+        <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/306x306/?heli" alt="" ></a>
+        <a href="#modal-media-image2" uk-toggle><img src="https://source.unsplash.com/306x306/?everest" alt="" ></a>
+        <a href="#modal-media-image3" uk-toggle><img src="https://source.unsplash.com/306x306/?cat" alt="" ></a>
+        <a href="#modal-media-image4" uk-toggle><img src="https://source.unsplash.com/306x306/?nepal" alt="" ></a>
+        <a href="#modal-media-image5" uk-toggle><img src="https://source.unsplash.com/306x306/?china" alt="" ></a>
+        <a href="#modal-media-image6" uk-toggle><img src="https://source.unsplash.com/306x306/?japan" alt="" ></a>
+        <a href="#modal-media-image7" uk-toggle><img src="https://source.unsplash.com/306x306/?annapurna" alt="" ></a>
+        <a href="#modal-media-image8" uk-toggle><img src="https://source.unsplash.com/306x306/?food" alt="" ></a>
+        <a href="#modal-media-image9" uk-toggle><img src="https://source.unsplash.com/306x306/?coffee" alt="" ></a>
+        <a href="#modal-media-image10" uk-toggle><img src="https://source.unsplash.com/306x306/?chocolate" alt="" ></a>
     </div>
 
     <div id="modal-media-image" class="uk-flex-top" uk-modal>

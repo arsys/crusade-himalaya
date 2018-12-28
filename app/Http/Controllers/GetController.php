@@ -78,7 +78,7 @@ class GetController extends Controller
 		})->whereHas('region', function ($s) use ($region) {
 			$s->where('regions.slug', $region->slug);
 		})->get();  
-		dd($tours);
+		dd($query);
 		return view('frontend.pages.packages')        
 		->withCategory($category)
 		->withRegion($region)

@@ -104,9 +104,13 @@ public function getPackages(){
     return view('frontend.packages');
 }
 
-public function comingSoon()
+public function getComingSoon()
 {
     return view('frontend.comingsoon');
+}
+public function getPreloader()
+{
+    return view('frontend.preloader');
 }
 
     //Gets single product details

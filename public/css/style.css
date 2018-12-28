@@ -433,19 +433,19 @@ a:hover {
 }
 
 .previous {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .previous:hover {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .next {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .next:hover {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .modal {

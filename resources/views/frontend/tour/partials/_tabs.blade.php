@@ -73,7 +73,7 @@
 								<i class="fas fa-envelope"></i>   
 							</div>
 							<div>
-								<a href="#" class="uk-link-text uk-link-reset">Email a friend</a>
+								<a href="#" class="uk-link-text uk-link-reset"><span>Email a friend</span></a>
 							</div>
 						</div>
 					</li>
@@ -83,7 +83,7 @@
 								<i class="fas fa-tasks"></i>
 							</div>
 							<div>
-								<a class="uk-link-text uk-link-reset" href="#">Download Itinary</a>
+								<a class="uk-link-text uk-link-reset" href="#"><span>Download Itinary</span></a>
 							</div>
 						</div>
 					</li>

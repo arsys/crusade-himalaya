@@ -2,7 +2,7 @@
 @extends('layouts.frontend')
 @section('content')
 <section class="uk-container-expand about" uk-grid>
-	<a href=""><div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($region->path) }}" uk-img>
+<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($region->path) }}" uk-img>
 	 	<div class="uk-overlay uk-overlay-primary uk-position-bottom heading-wrapper">
 			<h1 class="page-heading uk-margin-large-left">{{ $region->name }}</h1>
 			<p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $region->description }}</p>
@@ -14,7 +14,6 @@
 			</ul>
 		</div>
 	</div>
-</a>
 </section>
 <div class="uk-container uk-margin-medium-top uk-margin-medium-bottom">
 	@foreach (array_chunk($categories->all(), 4) as $row)

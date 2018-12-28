@@ -24,8 +24,8 @@ class GetController extends Controller
 	    foreach( $posts as $post)
 	    {
 	    	Insta::firstOrCreate([
-	    		'thumb_link' => $post->images->low_resolution->url ,
-	    		'standard_link' => $post->images->standard_resolution->url ,
+	    		'thumb_link' => $post->images->low_resolution->url  ,
+	    		'standard_link' => $post->images->low_resolution->url  ,
 	    		'caption' => $post->caption->text
 	    	]);
 	    }

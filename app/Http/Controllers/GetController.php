@@ -69,7 +69,7 @@ class GetController extends Controller
 		->withRegion($region);
 	}
 
-	public function destionation2package($region,$category)
+	public function destination2package($region,$category)
 	{
 		$category = TourCategory::where('slug','=', $category)->first();
 		$region = Region::where('slug','=',$region)->first();

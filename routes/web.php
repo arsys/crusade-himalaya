@@ -125,3 +125,4 @@ Route::prefix('destination')->group(function () {
 });
 Route::get('/destination','FrontendController@getDestination');
 Route::get('/packages','FrontendController@getPackages');
+Route::get('/preloader', 'FrontendController@getPreloader');

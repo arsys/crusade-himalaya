@@ -17,7 +17,7 @@
 </section>
 <div class="uk-container uk-text-center  home-tours uk-margin-medium-top uk-margin-medium-bottom">
     <div class="uk-position-relative uk-visible-toggle uk-light">
-        <ul class="uk-child-width-1-4@m uk-child-width-1-1@s uk-grid-small uk-grid-match  "  uk-grid>
+        <ul class="uk-child-width-1-1@s uk-child-width-1-3@m  uk-grid-match "  uk-grid>
          @foreach($results as $package)
          <li class="uk-margin-small-bottom">
             <div class="uk-card uk-card-default uk-height-medium">
@@ -30,7 +30,7 @@
                            <span>USD ${{ $package->price }}</span>
                        </span>
                    </div>
-                   <div class="uk-overlay uk-overlay-default uk-position-bottom uk-padding-small" id="hp-wrapper">
+                   <div class="uk-overlay uk-overlay-default uk-padding-small" id="hp-wrapper">
                     <div class="uk-flex uk-flex-center">
                         <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
                             <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link"><span class="hp-product">{{ $package->title }}</span></a>

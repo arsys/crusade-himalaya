@@ -9,6 +9,7 @@
     <div class="breadcrumb uk-visible@l">
         <ul class="uk-breadcrumb" id="breadcrumb">
             <li><a href="/" uk-icon="icon: home"></a></li>
+            <li><a href="{{ route('fetchByRegion',$region->slug) }}">{{ $region->name }}</a></li>
             <li><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</a></li>
         </ul>
     </div>

@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('content')
 <section class="uk-container-expand about" uk-grid>
-    <div class="uk-height-large uk-width-*@s uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($category->path) }}" uk-img>
+    <a href=""><div class="uk-height-large uk-width-*@s uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($category->path) }}" uk-img>
         <div class="uk-overlay uk-overlay-primary uk-position-bottom heading-wrapper">
             <h1 class="page-heading uk-margin-large-left">{{ $category->name }}</h1>
             <p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom ">{{ $category->description }}</p>
@@ -13,6 +13,7 @@
             </ul>
         </div>
     </div>
+</a>
 </section>
 <div class="uk-container uk-text-center  home-tours uk-margin-medium-top uk-margin-medium-bottom bgcolor-wrapper">
     <div class="uk-position-relative uk-visible-toggle uk-light">
@@ -44,4 +45,5 @@
         </ul>
     </div>
 </div>
+
 @stop

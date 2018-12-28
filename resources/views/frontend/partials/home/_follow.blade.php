@@ -27,11 +27,11 @@
     </div>
 
     <div id="modal-media-image" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?fiji" alt="" uk-img uk-height-viewport="min-height:500;">   
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?drink" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -45,11 +45,11 @@
 
     </div>
     <div id="modal-media-image2" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
-               <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?nepal" alt="" uk-img uk-height-viewport="min-height:500;">   
+                <div class="uk-background-cover uk-width-3-4@s">  
+                    <a href=""><img src="https://source.unsplash.com/1024x912/?ice" alt="" ></a>  
                 </div>
                <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -61,11 +61,11 @@
             <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image3" uk-slidenav-next uk-toggle></a>
     </div>
     <div id="modal-media-image3" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?india" alt="" uk-img uk-height-viewport="min-height:500;">   
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?chips" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -77,11 +77,11 @@
             <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image4" uk-slidenav-next uk-toggle></a>
     </div>
     <div id="modal-media-image4" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?nepal" alt="" uk-img uk-height-viewport="min-height:500;">   
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?sweet" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -94,11 +94,11 @@
     </div>
         
     <div id="modal-media-image5" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?ice" alt="" uk-img uk-height-viewport="min-height:500;">   
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?momo" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -111,11 +111,11 @@
 
     </div>
     <div id="modal-media-image6" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?coffee" alt="" uk-img uk-height-viewport="min-height:500;">   
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?coke" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -128,11 +128,11 @@
     </div>
         
     <div id="modal-media-image7" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
-                     <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?goa" alt="" uk-img uk-height-viewport="min-height:500;">   
+                <div class="uk-background-cover uk-width-3-4@s">  
+                    <a href=""><img src="https://source.unsplash.com/1024x912/?burger" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -148,7 +148,7 @@
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?china" alt="" uk-img uk-height-viewport="min-height:500;">   
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?fchicken" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -161,11 +161,11 @@
     </div>
         
     <div id="modal-media-image9" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?japan" alt="" uk-img uk-height-viewport="min-height:500;">   
+                    <a href=""><img src="https://source.unsplash.com/1024x912/?chocolate" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>
@@ -177,11 +177,11 @@
             <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image10" uk-slidenav-next uk-toggle></a>
     </div>
     <div id="modal-media-image10" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-width-xxlarge modal">
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
             <button class="uk-modal-close-outside" type="button" uk-close></button>
             <div class="uk-grid-collapse" uk-grid>
                 <div class="uk-background-cover uk-width-3-4@s">  
-                    <img data-src=https://source.unsplash.com/400x300/?america" alt="" uk-img uk-height-viewport="min-height:500;">   
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?pizza" alt="" ></a>  
                 </div>
                 <div class=" uk-width-1-4@s uk-padding">
                     <h5 class="user-instagram">@username</h5>

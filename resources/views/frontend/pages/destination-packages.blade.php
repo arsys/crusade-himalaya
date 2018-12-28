@@ -22,7 +22,7 @@
             <div class="uk-card uk-card-default uk-height-medium">
                 <div class="uk-card-media-top">
                     <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link">
-                        <img src="{{ asset($tour->image->thumb) }}" alt="{{ $tour->slug }}">
+                        <img src="{{ asset($package->image->thumb) }}" alt="{{ $package->slug }}">
                     </a>
                     <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                         <span class="price">

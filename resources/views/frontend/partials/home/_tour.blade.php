@@ -1,8 +1,8 @@
 
-<div class="uk-container uk-text-center  home-tours uk-margin-medium-top uk-margin-medium-bottom bgcolor-wrapper">
+<div class="uk-container uk-text-center  home-tours uk-margin-medium-top uk-margin-medium-bottom">
     <h2 class="uk-text-center home-heading-primary uk-margin-large-bottom"><span>Handpicked Tours</span></h2>
     <div class="uk-position-relative uk-visible-toggle uk-light">
-        <ul class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small uk-grid-match uk-child-width-1-1 "  uk-grid>
+        <ul class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small uk-grid-match  "  uk-grid>
             @foreach($featureds as $featured)
             <li class="uk-margin-small-bottom">
                 <div class="uk-card uk-card-default uk-height-medium">

@@ -19,7 +19,7 @@
                 height: 100vh;
                 z-index: 1;
                 overflow: hidden;
-                background: blue url('img/loader.gif') no-repeat center center;                
+                background: black url('img/white-loader.gif') no-repeat center center;                
             }
         </style>
 </head>

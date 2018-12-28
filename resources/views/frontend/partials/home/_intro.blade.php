@@ -46,7 +46,8 @@
                </div>
            </div>
             <div >
-                <h1 class="uk-h1 home-heading-secondary uk-text-center "><span>The Story...</span></h1>
+                <h1 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title"><span>The Story ...</span></h1>
+                <p class="uk-text-center uk-margin-remove-top home-heading-secondary " id="home-sub-title"><span>obsession towards comfy tours</span></p>
                 <p class="uk-padding-small uk-padding-remove-horizontal">
                     Crusade Himalaya is a unique and independent travel partner; we are a boutique travel studio who wish to offer you, our Atithis (revered guests), enriching and fulfilling experience of their Nepal visit. We wish to Empower, Educate, and Encourage you to have real-life experiences as you set out to discover the timeless wonders of Nepal.
                 </p>

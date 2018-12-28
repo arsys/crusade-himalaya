@@ -367,10 +367,12 @@ a:hover {
 .hp-meta .hp-product {
   text-transform: capitalize;
   font-weight: bold;
+  color: #333;
 }
 
 .hp-meta .hp-days {
   font-weight: bold;
+  color: #333;
 }
 
 .destination {
@@ -383,10 +385,9 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(36, 183, 206, 0.6);
+  background: rgba(36, 183, 206, 0.2);
   color: #fff;
   visibility: hidden;
-  opacity: 0.2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,7 +404,6 @@ a:hover {
 
 .destination:hover .dest-topic {
   visibility: visible;
-  opacity: 0.2;
 }
 
 .dest-title {
@@ -450,6 +450,10 @@ a:hover {
 
 .modal {
   width: 1200px;
+}
+
+.caption-instagram {
+  font-size: 14px;
 }
 
 .contact-info .call {
@@ -1008,7 +1012,6 @@ a:hover {
   height: 100%;
   display: block;
   z-index: 0;
-  background-color: rgba(159, 158, 158, 0.3);
 }
 
 #read {
@@ -1189,9 +1192,9 @@ textarea.parsley-error {
 }
 
 .uk-button-default {
-  color: #000000;
+  color: #333;
   background-color: transparent;
-  border: 1px solid #e5e5e5;
+  border: 1px solid #333;
   overflow: visible;
   text-transform: none;
   display: inline-block;

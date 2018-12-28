@@ -3,8 +3,10 @@
 @section('content')
 <section class="uk-container-expand about" uk-grid>
 	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($region->path) }}" uk-img>
-		<h1 class="page-heading uk-margin-large-left">{{ $region->name }}</h1>
-		<p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $region->description }}</p>
+	 	<div class="uk-overlay uk-overlay-primary uk-position-bottom heading-wrapper">
+			<h1 class="page-heading uk-margin-large-left">{{ $region->name }}</h1>
+			<p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $region->description }}</p>
+		</div>
 		<div class="breadcrumb uk-visible@l">
 			<ul class="uk-breadcrumb" id="breadcrumb">
 				<li><a href="/" uk-icon="icon: home"></a></li>

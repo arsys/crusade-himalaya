@@ -135,9 +135,11 @@ a:hover{
   .hp-product{
     text-transform:  capitalize;
     font-weight:bold;
+    color:$dark;
   }
   .hp-days{
     font-weight:bold;
+     color:$dark;
   }
 }
 //tour end
@@ -152,22 +154,20 @@ a:hover{
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(36, 183, 206, 0.6);
+  background: rgba(36, 183, 206, 0.2);
   color: #fff;
   visibility: hidden;
-  opacity: 0.2;
   display: flex;
   align-items: center;
   justify-content: center;
+
 
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 
 .destination:hover .dest-topic {
- visibility: visible;
-  opacity: 0.2;
-
+  visibility: visible;
 }
 
 
@@ -210,5 +210,8 @@ a:hover{
 }
 .modal{
   width:1200px;
+}
+.caption-instagram{
+  font-size:14px;
 }
 //follow end

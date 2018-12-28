@@ -16,14 +16,14 @@
 
         <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/400x300/?heli" alt="" ></a>
         <a href="#modal-media-image2" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image3" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image4" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image5" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image6" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image7" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image8" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image9" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
-        <a href="#modal-media-image10" uk-toggle><img src="https://source.unsplash.com/400x300/?everest" alt="" ></a>
+        <a href="#modal-media-image3" uk-toggle><img src="https://source.unsplash.com/400x300/?cat" alt="" ></a>
+        <a href="#modal-media-image4" uk-toggle><img src="https://source.unsplash.com/400x300/?nepal" alt="" ></a>
+        <a href="#modal-media-image5" uk-toggle><img src="https://source.unsplash.com/400x300/?china" alt="" ></a>
+        <a href="#modal-media-image6" uk-toggle><img src="https://source.unsplash.com/400x300/?japan" alt="" ></a>
+        <a href="#modal-media-image7" uk-toggle><img src="https://source.unsplash.com/400x300/?annapurna" alt="" ></a>
+        <a href="#modal-media-image8" uk-toggle><img src="https://source.unsplash.com/400x300/?food" alt="" ></a>
+        <a href="#modal-media-image9" uk-toggle><img src="https://source.unsplash.com/400x300/?coffee" alt="" ></a>
+        <a href="#modal-media-image10" uk-toggle><img src="https://source.unsplash.com/400x300/?chocolate" alt="" ></a>
     </div>
 
     <div id="modal-media-image" class="uk-flex-top" uk-modal>

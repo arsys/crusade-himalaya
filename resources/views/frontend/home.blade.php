@@ -23,7 +23,7 @@
   {{-- @include ('frontend.partials.home._review') --}}
   <!-- review end -->
   <!--follow start-->
-  @include ('frontend.partials.home._follow')0
+  @include ('frontend.partials.home._follow')
   <!--follow start-->
   <!-- supporter start -->
   @include ('frontend.partials.home._supported')

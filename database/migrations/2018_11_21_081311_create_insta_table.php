@@ -15,7 +15,8 @@ class CreateInstaTable extends Migration
     {
         Schema::create('instas', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('link');
+            $table->text('thumb_link');
+            $table->text('standard_link');
             $table->text('caption')->nullable();
             $table->timestamps();
         });

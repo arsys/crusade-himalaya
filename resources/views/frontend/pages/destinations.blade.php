@@ -21,8 +21,8 @@
 	<div class=" uk-grid-match uk-grid-small uk-text-center " uk-grid>
 		@foreach($row as $category)
 		<div class="uk-width-1-4@s">
-			<a href=""><div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($category->thumb) }}" uk-img></a>
-				<h3><a href="#">{{ $category->name }}</a></h3>
+			<a href="{{ route('destionation2package',[$region->slug,$category->slug]) }}"><div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($category->thumb) }}" uk-img></a>
+				<h3><a href="{{ route('destionation2package',[$region->slug,$category->slug]) }}">{{ $category->name }}</a></h3>
 			</div>
 		</div>
 		@endforeach

@@ -71,16 +71,20 @@ class GetController extends Controller
 
 	public function destionation2package($category,$region)
 	{
-		$stuff = TourCategory::where('slug',$category)->first();
-		$query = Tour::whereHas('country', function ($r) use ($country) {
-			$r->where('countries.name', $country);
-		})->whereHas('category', function ($s) use ($category) {
-			$s->where('tcategories.slug', $category);
-		})->get();
-		return view('public.pages.packages')
-		->withResults($query)
-		->withCategory($stuff)
-		->withCountry($country);
+		$category = TourCategory::where('slug','=', $category)->first();
+		$region = Region::where('slug','=',$region)->first();
+		$query = Tour::whereHas('category', function ($r) use ($category) {
+			$r->where('tour_categories.slug', $category->slug);
+		})->whereHas('region', function ($s) use ($region) {
+			$s->where('regions.slug', $region->slug);
+		})->get();  
+		dd($tours);
+		return view('frontend.pages.packages')        
+		->withCategory($category)
+		->withRegion($region)
+		->withResults($query);
+
+		
 	}	
 
 	public function tripDetail($slug)

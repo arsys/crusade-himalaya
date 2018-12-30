@@ -28,24 +28,27 @@
             console.log("ready");
             $('.button').on('click', '#fetch-dates', function () {
                 console.log("click");
-                // var t = $("#tour-id").val(),
-                // e = $("#travel-year").val(),
-                // o = $("#travel-month").val();
-                // $('#ajax-action').hide(), $("#ajaxloader").show(), $.ajax({
-                //     type: "GET",
-                //     url: "/fetch-departures",
-                //     headers: {
-                //         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
-                //     },
-                //     data: {
-                //         tour_id: t,
-                //         year: e,
-                //         month: o
-                //     },
-                //     success: function (a) {
-                //         $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide(), $('#ajax-action').show()
-                //     }
-                // })
+                var t = $("#tour-id").val(),
+                e = $("#travel-year").val(),
+                o = $("#travel-month").val();
+                console.log(t);
+                console.log(e);
+                console.log(o);
+                $('#ajax-action').hide(), $("#ajaxloader").show(), $.ajax({
+                    type: "GET",
+                    url: "/fetch-departures",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+                    },
+                    data: {
+                        tour_id: t,
+                        year: e,
+                        month: o
+                    },
+                    success: function (a) {
+                        $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide(), $('#ajax-action').show()
+                    }
+                })
             })
         });
     }();

@@ -26,11 +26,15 @@
             "use strict";
             $(document).ready(function () {
                 $("#search").click(function (a) {
+                    console.log(1);
                     a.preventDefault();
                     var t = $("#tour-id").val(),
                         e = $("#year").val(),
                         o = $("#month").val();
-                     $("#ajaxloader").show(), $.ajax({
+                        console.lgo(t);
+                        console.lgo(e);
+                        console.lgo(o);
+                     $("#ajaxloader").show(), $.ajax({                        
                         type: "GET",
                         url: "/trip/fetch-departures",
                         headers: {

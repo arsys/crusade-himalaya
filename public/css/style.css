@@ -1241,20 +1241,6 @@ textarea.parsley-error {
   color: #2ed3ae;
 }
 
-/* .right-arrow{
-    margin-left:10px;
-    font-weight:900;
-    font-family: "Font Awesome 5 Free";
-    -webkit-font-smoothing: antialiased;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    line-height: 1;
-    content: 'f061';
-}
- */
-
 .home-heading-primary {
   text-decoration: none;
   position: relative;

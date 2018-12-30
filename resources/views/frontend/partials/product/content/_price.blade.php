@@ -40,13 +40,13 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<button class="uk-button-default ">Search</button>
+					<button class="contact-button ">Search</button>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--table start-->
-	<div class="uk-overflow-auto uk-padding-large ">					
+	<div class="uk-overflow-auto uk-padding ">					
 		<table class="uk-table uk-table-hover uk-table-divider">
 			<thead>
 				<tr>

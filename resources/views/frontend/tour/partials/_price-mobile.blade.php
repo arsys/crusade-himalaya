@@ -32,7 +32,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<a href="#" class="uk-button uk-button-default" id="find-dates-mob">Search</a>
+					<a href="#" class="uk-button-default" id="find-dates-mob">Search</a>
 				</div>
 			</div>
 		</div>
@@ -49,8 +49,7 @@
 					<th></th>
 				</tr>
 			</thead>
-			{{-- <div id="ajaxloader" style="display: none;">Loading...</div> --}}
-			<span uk-spinner="ratio: 3" id="ajaxloader" style="display: none;" ></span>
+			<span uk-spinner="ratio: 3" class="ajaxloader" style="display: none;" ></span>
 			<tbody class="ajaxloadmoredeparture">
 				@foreach($departures as $departure)
 				<tr>

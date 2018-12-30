@@ -22,18 +22,14 @@
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>
 <script>
-    $(document).ready(function() {
-    console.log('Ready');
+  $(document).ready(function() {
     $('.search-wrapper').on('click', '#find-dates', function(a) {
       a.preventDefault();
-      console.log('click');
       var t = $("#tour-id").val(),
-        e = $("#travel-year").val(),
-        o = $("#travel-month").val();
-      console.log(t);
-      console.log(e);
-      console.log(o);
-      $("#ajaxloader").show(), $.ajax({
+      e = $("#travel-year").val(),
+      o = $("#travel-month").val();
+
+      $(".ajaxloader").show(), $.ajax({
         type: "GET",
         url: "/ajax/fetch-departures",
         headers: {
@@ -45,20 +41,17 @@
           month: o
         },
         success: function(a) {
-          $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
+          $(".ajaxloadmoredeparture").html(a), $(".ajaxloader").hide()
         }
       })
     }),
-        $('.search-wrapper-mob').on('click', '#find-dates-mob', function(a) {
-      a.preventDefault();
-      console.log('click');
+    $('.search-wrapper-mob').on('click', '#find-dates-mob', function(a) {
+      a.preventDefault();      
       var t = $("#tour-id-mob").val(),
-        e = $("#travel-year-mob").val(),
-        o = $("#travel-month-mob").val();
-      console.log(t);
-      console.log(e);
-      console.log(o);
-      $("#ajaxloader").show(), $.ajax({
+      e = $("#travel-year-mob").val(),
+      o = $("#travel-month-mob").val();
+
+      $(".ajaxloader").show(), $.ajax({
         type: "GET",
         url: "/ajax/fetch-departures",
         headers: {
@@ -70,7 +63,7 @@
           month: o
         },
         success: function(a) {
-          $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
+          $(".ajaxloadmoredeparture").html(a), $(".ajaxloader").hide()
         }
       })
     })

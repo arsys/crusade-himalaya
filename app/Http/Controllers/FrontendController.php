@@ -9,7 +9,6 @@ use App\Departure;
 use App\Insta;
 use App\Partner;
 use App\Event;
-use App\Departure;
 use Calendar;
 use DB;
 

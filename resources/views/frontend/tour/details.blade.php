@@ -21,36 +21,32 @@
 @stop
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>
-    <script type="text/javascript">
-        !function () {
-            "use strict";
-            $(document).ready(function () {
-                $("#search").click(function (a) {
-                    console.log(1);
-                    a.preventDefault();
-                    var t = $("#tour-id").val(),
-                        e = $("#year").val(),
-                        o = $("#month").val();
-                        console.lgo(t);
-                        console.lgo(e);
-                        console.lgo(o);
-                     $("#ajaxloader").show(), $.ajax({                        
-                        type: "GET",
-                        url: "/trip/fetch-departures",
-                        headers: {
-                            "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
-                        },
-                        data: {
-                            tour_id: t,
-                            year: e,
-                            month: o
-                        },
-                        success: function (a) {
-                            $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
-                        }
-                    })
+<script type="text/javascript">
+    !function () {
+        "use strict";
+        $(document).ready(function () {
+            $("#fetch-dates").click(function (a) {
+                a.preventDefault();
+                var t = $("#tour-id").val(),
+                e = $("#year").val(),
+                o = $("#month").val();
+                $('#ajax-action').hide(), $("#ajaxloader").show(), $.ajax({
+                    type: "GET",
+                    url: "/fetch-departures",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+                    },
+                    data: {
+                        tour_id: t,
+                        year: e,
+                        month: o
+                    },
+                    success: function (a) {
+                        $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide(), $('#ajax-action').show()
+                    }
                 })
-            });
-        }();
-    </script>
+            })
+        });
+    }();
+</script>
 @stop

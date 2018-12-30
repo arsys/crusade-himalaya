@@ -69,7 +69,7 @@
 
 <div class="card">
 	<div class="card-title">
-		<div class="row">
+		<div class="row wrapper">
 			<div class="col s12 m6 l5">
 				<p class="uk-margin-left">Please Check Available Dates for The Year of:</p>
 				<input type="hidden" value="{{$tour->id}}" id="tour-id">
@@ -100,7 +100,7 @@
 						@endfor
 					</select>
 				</div>
-				<div class="col s12 m4 l4 button">
+				<div class="col s12 m4 l4">
 					<a class="waves-effect waves-light btn center uk-margin-top uk-margin-left search"
 					id="fetch-dates">search</a>
 				</div>

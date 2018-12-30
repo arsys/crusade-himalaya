@@ -21,7 +21,7 @@
 @stop
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>
-<script type="text/javascript">
+{{-- <script type="text/javascript">
 
   $(document).ready(function() {
     console.log('Ready');
@@ -51,5 +51,5 @@
       })
     })
   });
-</script>
+</script> --}}
 @stop

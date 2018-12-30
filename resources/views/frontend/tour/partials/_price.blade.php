@@ -32,7 +32,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<button class="uk-button-default" id="search">Search</button>
+					<a href="#" class="uk-button-default" id="search"></a>
 				</div>
 			</div>
 		</div>

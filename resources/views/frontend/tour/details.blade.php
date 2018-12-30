@@ -27,7 +27,6 @@
         $(document).ready(function () {
             console.log("ready");
             $('.button').on('click', '#fetch-dates', function () {
-                a.preventDefault();
                 console.log("click");
                 // var t = $("#tour-id").val(),
                 // e = $("#travel-year").val(),

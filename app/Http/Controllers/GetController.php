@@ -94,7 +94,18 @@ class GetController extends Controller
 	public function tripDetail($slug)
 	{
 		$tour = Tour::where('slug','=', $slug)->first();
-		return view('frontend.tour.details')->withTour($tour);
+		$similars = Tour::whereHas('category', function ($r) {
+			$r->where('tour_categories.slug', '=', $tour->category->slug);
+		})
+		->orderByRaw('RAND()')
+		->take(3)
+		->get();
+
+		$depature_dates = $tour->departure()->fixedDates($tour->id, date('m'),date('Y'))->get();
+		return view('frontend.tour.details')
+		->withTour($tour)
+		->withSimilars($similars)
+		->withDepartures($depature_dates);
 	}
 
 

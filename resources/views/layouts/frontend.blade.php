@@ -40,7 +40,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
 <script src="{{asset('js/app.js')}}">  </script>
- @yield('scripts')
+{{--  @yield('scripts')
      <script type="text/javascript">
         
         var loader;
@@ -66,5 +66,5 @@
             loadNow(1);
         });
         
-    </script>
+    </script> --}}
 </html>

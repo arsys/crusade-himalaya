@@ -9,7 +9,7 @@
             @foreach($row as $feed)
             <div>
                 <a href="#instagram-{{ $loop->iteration }}" uk-toggle>
-                    <img src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}" data-height="720" data-width="480">
+                    <img src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}">
                 </a>
             </div>
             @endforeach
@@ -34,7 +34,7 @@
                 <button class="uk-modal-close-outside" type="button" uk-close></button>
                 <div class="uk-grid-collapse" uk-grid>
                     <div class="uk-background-cover uk-width-3-4@s">  
-                        <img src="{{ $feed->standard_link }}" alt="{{ $feed->caption }}" >
+                        <img src="{{ $feed->standard_link }}" alt="{{ $feed->caption }}" data-height="720" data-width="480">
                     </div>
                     <div class=" uk-width-1-4@s uk-padding">
                         <h5 class="user-instagram">@username</h5>

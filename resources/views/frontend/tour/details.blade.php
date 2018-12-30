@@ -25,16 +25,12 @@
         !function () {
             "use strict";
             $(document).ready(function () {
-                $("#search").click(function (a) {
-                    console.log(1);
+                $("#fetch-dates").click(function (a) {
                     a.preventDefault();
                     var t = $("#tour-id").val(),
-                        e = $("#year").val(),
-                        o = $("#month").val();
-                        console.lgo(t);
-                        console.lgo(e);
-                        console.lgo(o);
-                     $("#ajaxloader").show(), $.ajax({                        
+                        e = $("#travel-year").val(),
+                        o = $("#travel-month").val();
+                    $('#ajax-action').hide(), $("#ajaxloader").show(), $.ajax({
                         type: "GET",
                         url: "/trip/fetch-departures",
                         headers: {
@@ -46,7 +42,7 @@
                             month: o
                         },
                         success: function (a) {
-                            $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
+                            $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide(), $('#ajax-action').show()
                         }
                     })
                 })

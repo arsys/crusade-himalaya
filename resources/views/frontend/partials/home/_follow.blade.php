@@ -1,13 +1,12 @@
 <section class=" uk-margin-medium-top uk-margin-medium-bottom bgcolor-wrapper">
     <div class="uk-container">
-        <h1>{{ $instafeeds->count() }}</h1>
         <h2 class="uk-text-center uk-margin-small-bottom instagram"><a href="#">#brandname</a></h2>
 
     </div>
     <div class="uk-container-expand">
         <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
             @foreach($instafeeds as $feed)
-            <a href="#instagram-post-{{ $loop->iteration }}" uk-toggle><img src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}"></a>
+            <a href="#instagram-post-{{ $loop->iteration }}" uk-toggle><img src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}" uk-img></a>
             @endforeach
         </div>
         @foreach($instafeeds as $feed)

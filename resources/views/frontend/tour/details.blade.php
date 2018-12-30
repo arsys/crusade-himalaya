@@ -32,7 +32,7 @@
                 o = $("#month").val();
                 $('#ajax-action').hide(), $("#ajaxloader").show(), $.ajax({
                     type: "GET",
-                    url: "/fetch-departures",
+                    url: "/trip/fetch-departures",
                     headers: {
                         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
                     },

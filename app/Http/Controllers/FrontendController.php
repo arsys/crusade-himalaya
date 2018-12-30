@@ -18,7 +18,7 @@ class FrontendController extends Controller
 {
     public function getIndex()
     {
-        $featureds = Tour::where('status',1)->where('featured',1)->take(4)->get();
+        $featureds = Tour::where('status',1)->where('featured',1)->take(6)->get();
         $categories = TourCategory::all();
         $carousels = Carousel::where('status' ,1)->get();
         $instaFeeds = Insta::take(10)->get();

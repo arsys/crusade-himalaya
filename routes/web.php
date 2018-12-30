@@ -116,7 +116,7 @@ Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
 });
 Route::prefix('ajax')->group(function () {
-	Route::get('fetch-departures','GetFrontendController@ajaxsearchdeparture')->name('departure');
+	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');
 });
 Route::prefix('travel-style')->group(function () {
 	Route::get('{slug}','GetController@fetchByCategory')->name('fetchByCategory');

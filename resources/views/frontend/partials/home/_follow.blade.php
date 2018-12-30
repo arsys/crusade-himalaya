@@ -7,7 +7,7 @@
     <div class="uk-container-expand">
         <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
             @foreach($instafeeds as $feed)
-            <a href="#instagram-post-{{ $loop->iteration }}" uk-toggle><img src="{{ $thumb_link }}" alt="{{ $feed->caption }}"></a>
+            <a href="#instagram-post-{{ $loop->iteration }}" uk-toggle><img src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}"></a>
             @endforeach
         </div>
         @foreach($instafeeds as $feed)
@@ -27,7 +27,7 @@
             @if($loop->iteration != 1)
             <a class="uk-position-center-left uk-position-small uk-slidenav-large previous" href="#instagram-post-{{ $loop->iteration-1 }}" uk-slidenav-previous uk-toggle></a>
             @endif
-            @if($loop->iteration != 20)
+            @if($loop->iteration != 10)
             <a class="uk-position-center-right uk-position-small  uk-slidenav-large next" href="#instagram-post-{{ $loop->iteration+1}}" uk-slidenav-next uk-toggle></a>
             @endif
         </div>

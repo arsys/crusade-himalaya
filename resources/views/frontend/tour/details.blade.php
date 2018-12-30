@@ -1,4 +1,3 @@
-{{ dd($departures) }}
 @extends('layouts.frontend')
 @section('content')
 {{-- banner start --}}

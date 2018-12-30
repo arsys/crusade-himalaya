@@ -28,9 +28,9 @@
             console.log("ready");
             $('.wrapper').on('click', '#fetch-dates', function () {
                 console.log("click");
-                var t = $("#tour-id").val(),
-                e = $("#year").val(),
-                o = $("#month").val();
+                var t = $("#tour-id").val();
+                var e = $("#year").val();
+                var o = $("#month").val();
                 console.log(t);
                 console.log(e);
                 console.log(o);

@@ -21,36 +21,4 @@
 @stop
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>
-<script type="text/javascript">
-    !function () {
-        "use strict";
-        $(document).ready(function () {
-            console.log("ready");
-            $('.wrapper').on('click', '#fetch-dates', function () {
-                console.log("click");
-                var t = $("#tour-id").val();
-                var e = $("#year").val();
-                var o = $("#month").val();
-                console.log(t);
-                console.log(e);
-                console.log(o);
-                $('#ajax-action').hide(), $("#ajaxloader").show(), $.ajax({
-                    type: "GET",
-                    url: "/fetch-departures",
-                    headers: {
-                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
-                    },
-                    data: {
-                        tour_id: t,
-                        year: e,
-                        month: o
-                    },
-                    success: function (a) {
-                        $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide(), $('#ajax-action').show()
-                    }
-                })
-            })
-        });
-    }();
-</script>
 @stop

@@ -26,7 +26,7 @@
         "use strict";
         $(document).ready(function () {
             console.log("ready");
-            $("#fetch-dates").click(function (a) {
+            $('.button').on('click', '#fetch-dates', function () {
                 a.preventDefault();
                 console.log("click");
                 // var t = $("#tour-id").val(),

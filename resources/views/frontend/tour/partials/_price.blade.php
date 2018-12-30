@@ -100,7 +100,7 @@
 						@endfor
 					</select>
 				</div>
-				<div class="col s12 m4 l4">
+				<div class="col s12 m4 l4 button">
 					<a class="waves-effect waves-light btn center uk-margin-top uk-margin-left search"
 					id="fetch-dates">search</a>
 				</div>

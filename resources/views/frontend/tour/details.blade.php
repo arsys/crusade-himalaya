@@ -35,7 +35,7 @@
       console.log(o);
       $("#ajaxloader").show(), $.ajax({
         type: "GET",
-        url: "/trip/fetch-departures",
+        url: "/ajax/fetch-departures",
         headers: {
           "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
         },
@@ -60,7 +60,7 @@
       console.log(o);
       $("#ajaxloader").show(), $.ajax({
         type: "GET",
-        url: "/trip/fetch-departures",
+        url: "/ajax/fetch-departures",
         headers: {
           "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
         },

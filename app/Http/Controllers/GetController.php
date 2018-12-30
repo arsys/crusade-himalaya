@@ -94,7 +94,7 @@ class GetController extends Controller
 	public function tripDetail($slug)
 	{
 		$tour = Tour::where('slug','=', $slug)->first();
-		$similars = Tour::whereHas('category', function ($r) {
+		$similars = Tour::whereHas('category', function ($r) use($tour){
 			$r->where('tour_categories.slug', '=', $tour->category->slug);
 		})
 		->orderByRaw('RAND()')

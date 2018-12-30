@@ -4,7 +4,7 @@
 
     </div>
     <div class="uk-container-expand">
-        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
+        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-expand@s uk-child-height-1-2 uk-grid" uk-grid="">
             @foreach($instafeeds as $feed)
             <a href="#instagram-post-{{ $loop->iteration }}" uk-toggle><img src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}" uk-img></a>
             @endforeach

@@ -9,6 +9,7 @@ use App\Departure;
 use App\Insta;
 use App\Partner;
 use App\Event;
+use App\Departure;
 use Calendar;
 use DB;
 
@@ -62,10 +63,10 @@ class FrontendController extends Controller
 
     public function getContact()
     {
-       return view('frontend.contact'); 
-   }
-   public function getProduct()
-   {
+     return view('frontend.contact'); 
+ }
+ public function getProduct()
+ {
     return view('frontend.product');
 }
 public function getContact1()
@@ -171,5 +172,16 @@ public function eventCalender()
     }
     $calendar = Calendar::addEvents($events);
     return view('frontend.calender', compact('calendar'));
+}
+
+public function ajaxsearchdeparture(Request $request)
+{
+    $tour = Tour::find($request->tour_id);
+    $departures = Departure::where('tour_id', '=', $request->tour_id)
+    ->whereMonth('start', '=', $request->month)
+    ->whereYear('start', '=', $request->year)
+    ->get();
+
+    return view('frontend.tour.dates', compact('departures', 'tour'));
 }
 }

@@ -41,7 +41,7 @@
             @if($loop->iteration != $loop->first)
             <a class="uk-position-center-left uk-position-small uk-slidenav-large previous" href="#instagram-{{$loop->iteration-1 }}" uk-slidenav-previous uk-toggle></a>
             @endif
-            @if($loop->iteration != $loo->last)
+            @if($loop->iteration != $loop->last)
             <a class="uk-position-center-right uk-position-small  uk-slidenav-large next" href="#instagram-{{ $loop->iteration+1 }}" uk-slidenav-next uk-toggle></a>
             @endif
         </div>

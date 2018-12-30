@@ -11,17 +11,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">      
  
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
-        @yield('styles')
-        <style>
-            #loader{
-                position: fixed;
-                width: 100%;
-                height: 100vh;
-                z-index: 1;
-                overflow: hidden;
-                background: black url('img/white-loader.gif') no-repeat center center;                
-            }
-        </style>
 </head>
 <body>
     <div id="loader"></div>

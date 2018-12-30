@@ -3,7 +3,7 @@
     <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Handpicked Tours</span></h2>
     <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span> Crafted tours for  light mined gypsies</span></p>
     <div class="uk-position-relative uk-visible-toggle uk-light">
-        <ul class="uk-child-width-1-4@m uk-child-width-1-2@s uk-grid-small uk-grid-match  "  uk-grid>
+        <ul class="uk-child-width-1-3@m uk-child-width-1-2@s uk-grid-small uk-grid-match  "  uk-grid>
             @foreach($featureds as $featured)
             <li class="uk-margin-small-bottom">
                 <div class="uk-card uk-card-default uk-height-medium">

@@ -13,10 +13,10 @@ class Departure extends Model
 		return $this->belongsTo('App\Tour', 'tour_id');
 	}
 
-	public function fixedDates($id,$month, $year)
-	{
-		return $this->where('tour_id', '=' , $id )
-		-> whereMonth('start','=',$month)
-		->whereYear('start', '=' , $year);
-	}    
+    public function scopeFixedDates($query, $id,$month, $year)
+    {
+        return $query->where('tour_id', '=' , $id )
+            -> whereMonth('start','=',$month)
+            ->whereYear('start', '=' , $year);
+    }   
 }

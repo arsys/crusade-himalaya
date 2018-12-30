@@ -190,15 +190,15 @@ a:hover{
 
 //follow start
 .previous{
-  color:$black;
+  color:$white;
   &:hover{
-    color:$black;
+    color:$white;
   }
 }
 .next{
-  color:$black;
+  color:$white;
   &:hover{
-    color:$black;
+    color:$white;
   }
 }
 .modal{
@@ -206,5 +206,12 @@ a:hover{
 }
 .caption-instagram{
   font-size:14px;
+}
+
+@media (max-width:640px) {
+  .follow > div:nth-child(2n+1) {
+    text-align:right;
+  }
+ 
 }
 //follow end

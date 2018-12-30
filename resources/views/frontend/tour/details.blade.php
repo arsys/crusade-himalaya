@@ -28,7 +28,7 @@
             console.log('Ready');
             $('.search-wrapper').on('click','#find-dates',function(a) {
                 a.preventDefault();
-                consol.log('click');
+                console.log('click');
                 var t = $("#tour-departure-tourid").val(),
                 e = $("#travel-year").val(),
                 o = $("#travel-month").val();

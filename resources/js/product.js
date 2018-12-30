@@ -73,7 +73,29 @@ window.addEventListener("load", function(){
 			$.each(msg,function(key,value){
 				$('.print-error-msg').find('ul').append("<li>"+ value +"</li>");
 			});
-		}		
+		};
+
+		$("#fetch-dates").click(function (a) {
+			a.preventDefault();
+			var t = $("#tour-id").val(),
+			e = $("#year").val(),
+			o = $("#month").val();
+			$('#ajax-action').hide(), $("#ajaxloader").show(), $.ajax({
+				type: "GET",
+				url: "/trip/fetch-departures",
+				headers: {
+					"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+				},
+				data: {
+					tour_id: t,
+					year: e,
+					month: o
+				},
+				success: function (a) {
+					$(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide(), $('#ajax-action').show()
+				}
+			})
+		})	
 
 	});
 }(jQuery));

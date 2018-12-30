@@ -32,7 +32,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<a class="uk-button-default" id="fetch-dates"></a>
+					<a class="uk-button-default uk-button" id="fetch-dates"></a>
 				</div>
 			</div>
 		</div>

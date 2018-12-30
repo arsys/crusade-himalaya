@@ -7,7 +7,7 @@
 					<input type="hidden" value="{{$tour->id}}" id="tour-id">
 				</div>
 				<div class="search-wrapper">
-					<select class="uk-select" id="year">Select year
+					<select class="uk-select" id="travel-year">Select year
 						<option value="" disabled selected>Select year</option>
 						@for($i= date('Y'); $i <= date('Y')+2; $i++)
 						<option value="{{ $i }}">{{ $i }}</option>
@@ -15,7 +15,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<select class="uk-select" id="month">Select Month
+					<select class="uk-select" id="travel-month">Select Month
 						<option value="" disabled selected>Select Month</option>
 						<option value="1">Jan</option>
 						<option value="2">Feb</option>
@@ -32,7 +32,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<button class="uk-button-default" id="search">Search</button>
+					<a href="#" class="uk-button uk-button-default">Search</a>
 				</div>
 			</div>
 		</div>

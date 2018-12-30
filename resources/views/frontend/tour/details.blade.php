@@ -21,4 +21,32 @@
 @stop
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>
+<script type="text/javascript">
+    ! function() {
+        "use strict";
+        $(document).ready(function() {
+            $("#find-dates").click(function(a) {
+                a.preventDefault();
+                var t = $("#tour-departure-tourid").val(),
+                e = $("#travel-year").val(),
+                o = $("#travel-month").val();
+                $("#ajaxloader").show(), $.ajax({
+                    type: "GET",
+                    url: "/trip/fetch-departures",
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+                    },
+                    data: {
+                        tour_id: t,
+                        year: e,
+                        month: o
+                    },
+                    success: function(a) {
+                        $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
+                    }
+                })
+            })
+        })
+    }();
+</script>
 @stop

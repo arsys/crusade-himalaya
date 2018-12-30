@@ -25,11 +25,16 @@
     ! function() {
         "use strict";
         $(document).ready(function() {
-            $("#find-dates").click(function(a) {
+            console.log('Ready');
+            $('.search-wrapper').on('click','#find-dates',function(a) {
                 a.preventDefault();
+                consol.log('click');
                 var t = $("#tour-departure-tourid").val(),
                 e = $("#travel-year").val(),
                 o = $("#travel-month").val();
+                console.log(t);
+                console.log(e);
+                console.log(o);
                 $("#ajaxloader").show(), $.ajax({
                     type: "GET",
                     url: "/trip/fetch-departures",

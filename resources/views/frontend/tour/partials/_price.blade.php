@@ -1,12 +1,12 @@
 <div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">		
 	<div class="uk-container-expand ">
 		<div class="uk-card uk-card-default uk-card-body ">
-			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small">
-				<div class="search-wrapper">
+			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small search-wrapper">
+				<div>
 					<p>Please Check Available Dates for The Year:</p>
 					<input type="hidden" value="{{$tour->id}}" id="tour-id">
 				</div>
-				<div class="search-wrapper">
+				<div>
 					<select class="uk-select" id="travel-year">Select year
 						<option value="" disabled selected>Select year</option>
 						@for($i= date('Y'); $i <= date('Y')+2; $i++)
@@ -14,7 +14,7 @@
 						@endfor
 					</select>
 				</div>
-				<div class="search-wrapper">
+				<div>
 					<select class="uk-select" id="travel-month">Select Month
 						<option value="" disabled selected>Select Month</option>
 						<option value="1">Jan</option>

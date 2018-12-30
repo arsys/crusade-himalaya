@@ -29,8 +29,8 @@
             $('.wrapper').on('click', '#fetch-dates', function () {
                 console.log("click");
                 var t = $("#tour-id").val(),
-                e = $("#travel-year").val(),
-                o = $("#travel-month").val();
+                e = $("#year").val(),
+                o = $("#month").val();
                 console.log(t);
                 console.log(e);
                 console.log(o);

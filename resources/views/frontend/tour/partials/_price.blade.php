@@ -76,7 +76,7 @@
 			</div>
 			<div class="col s12 m6 l7">
 				<div class="input-field col s12  m4 l4">
-					<select id="travel-month">
+					<select id="month">
 						<option value="" disabled selected>Select Month</option>
 						<option value="1">Jan</option>
 						<option value="2">Feb</option>
@@ -93,7 +93,7 @@
 					</select>
 				</div>
 				<div class="input-field col s12  m4 l4">
-					<select id="travel-year">
+					<select id="year">
 						<option value="" disabled selected>Select Year</option>
 						@for($i=date('Y');$i<=date('Y')+2;$i++)
 						<option value="{{$i}}">{{$i}}</option>

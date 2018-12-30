@@ -181,6 +181,6 @@ public function ajaxsearchdeparture(Request $request)
     ->whereYear('start', '=', $request->year)
     ->get();
 
-    return view('frontend.tour.partialsdates', compact('departures', 'tour'));
+    return view('frontend.tour.partials.dates', compact('departures', 'tour'));
 }
 }

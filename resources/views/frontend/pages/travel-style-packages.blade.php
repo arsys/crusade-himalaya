@@ -20,33 +20,35 @@
         <ul class="uk-child-width-1-1@s uk-child-width-1-3@m  uk-grid-match "  uk-grid>
          @foreach($results as $package)
          <li class="uk-margin-small-bottom">
-            <div class="uk-card uk-card-default uk-height-medium">
+            <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                     <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link">
                         <img src="{{ asset($package->image->thumb) }}" alt="{{ $package->slug }}">
                     </a>
                     <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
-                        <span class="price">
-                           <span>USD ${{ $package->price }}</span>
-                       </span>
-                   </div>
-                   <div class="uk-overlay uk-overlay-default uk-padding-small" id="hp-wrapper">
-                    <div class="uk-flex uk-flex-center">
-                        <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
-                            <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link"><span class="hp-product">{{ $package->title }}</span></a>
-                        </div>
-                        <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
-                            <span class="hp-days">{{ $package->days }} Days</span>
-                        </div>    
+                            <span class="price">
+                               <span>USD ${{ $package->price }}</span>
+                           </span>
                     </div>
-                </div>
-            </div>                        
-        </div>
-    </li>
-    @endforeach
-</ul>
+                    <div class="uk-overlay uk-overlay-default uk-padding-medium" id="hp-wrapper">
+                        <div class="uk-flex uk-flex-center">
+                            <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
+                                <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link"><span class="hp-product">{{ $package->title }}</span></a>
+                            </div>
+                            <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
+                                <span class="hp-days">{{ $package->days }} Days</span>
+                            </div>    
+                        </div>
+                    </div>
+                </div>                        
+            </div>
+        </li>
+        @endforeach
+        </ul>
+    </div>
 </div>
-</div>
+
+
 
 
 

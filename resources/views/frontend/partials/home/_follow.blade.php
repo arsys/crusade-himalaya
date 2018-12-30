@@ -1,35 +1,224 @@
 <section class=" uk-margin-medium-top uk-margin-medium-bottom bgcolor-wrapper">
     <div class="uk-container">
         <h2 class="uk-text-center uk-margin-small-bottom instagram"><a href="#">#brandname</a></h2>
-
+       
     </div>
     <div class="uk-container-expand">
-        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-expand@s uk-child-height-1-2 uk-grid" uk-grid="">
-            @foreach($instafeeds as $feed)
-            <a href="#instagram-post-{{ $loop->iteration }}" uk-toggle><img src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}" uk-img></a>
+        @if($instafeeds->count())
+        <div class="follow uk-grid-collapse uk-child-width-1-2 uk-child-width-1-5@m uk-child-height-1-2 uk-grid" uk-grid="">
+            @foreach($instafeeds as $Instafeed)
+            <div>
+                <img src="{{ $Instafeed->link }}" alt="{{ $Instafeed->caption }}" >
+            </div>
             @endforeach
-        </div>
-        @foreach($instafeeds as $feed)
-        <div id="instagram-post-{{ $loop->iteration }}" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
-                <button class="uk-modal-close-outside" type="button" uk-close></button>
-                <div class="uk-grid-collapse" uk-grid>
-                    <div class="uk-background-cover uk-width-3-4@s">
-                        <img src="{{ $feed->standard_link }}" alt="{{ $feed->caption }}">
-                    </div>
-                    <div class=" uk-width-1-4@s uk-padding">
-                        <h5 class="user-instagram">@username</h5>
-                        <p class="caption-instagram">{{ $feed->caption }}</p>
-                    </div>
+        </div>      
+        @else 
+<div class="follow uk-grid-collapse uk-child-width-expand@s uk-child-width-1-2   uk-child-height-1-2 " uk-grid="">
+        <div><a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/150x150/?heli" alt="" ></a></div>
+        <div><a href="#modal-media-image2" uk-toggle><img src="https://source.unsplash.com/150x150/?everest" alt="" ></a></div>
+        <div><a href="#modal-media-image3" uk-toggle><img src="https://source.unsplash.com/150x150/?cat" alt="" ></a></div>
+        <div><a href="#modal-media-image4" uk-toggle><img src="https://source.unsplash.com/150x150/?nepal" alt="" ></a></div>
+        <div><a href="#modal-media-image5" uk-toggle><img src="https://source.unsplash.com/150x150/?china" alt="" ></a></div>
+        <div><a href="#modal-media-image6" uk-toggle><img src="https://source.unsplash.com/150x150/?japan" alt="" ></a></div>
+        <div><a href="#modal-media-image7" uk-toggle><img src="https://source.unsplash.com/150x150/?annapurna" alt="" ></a></div>
+        <div><a href="#modal-media-image8" uk-toggle><img src="https://source.unsplash.com/150x150/?food" alt="" ></a></div>
+        <div><a href="#modal-media-image9" uk-toggle><img src="https://source.unsplash.com/150x150/?coffee" alt="" ></a></div>
+        <div><a href="#modal-media-image10" uk-toggle><img src="https://source.unsplash.com/150x150/?chocolate" alt="" ></a></div>
+
+    </div>
+  
+    <div class="follow uk-grid-collapse uk-child-width-expand@s uk-child-width-1-2   uk-child-height-1-2  " uk-grid="">
+        <div><a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/150x150/?heli" alt="" ></a></div>
+        <div><a href="#modal-media-image2" uk-toggle><img src="https://source.unsplash.com/150x150/?everest" alt="" ></a></div>
+        <div><a href="#modal-media-image3" uk-toggle><img src="https://source.unsplash.com/150x150/?cat" alt="" ></a></div>
+        <div><a href="#modal-media-image4" uk-toggle><img src="https://source.unsplash.com/150x150/?nepal" alt="" ></a></div>
+        <div><a href="#modal-media-image5" uk-toggle><img src="https://source.unsplash.com/150x150/?china" alt="" ></a></div>
+        <div><a href="#modal-media-image6" uk-toggle><img src="https://source.unsplash.com/150x150/?japan" alt="" ></a></div>
+        <div><a href="#modal-media-image7" uk-toggle><img src="https://source.unsplash.com/150x150/?annapurna" alt="" ></a></div>
+        <div><a href="#modal-media-image8" uk-toggle><img src="https://source.unsplash.com/150x150/?food" alt="" ></a></div>
+        <div><a href="#modal-media-image9" uk-toggle><img src="https://source.unsplash.com/150x150/?coffee" alt="" ></a></div>
+        <div><a href="#modal-media-image10" uk-toggle><img src="https://source.unsplash.com/150x150/?chocolate" alt="" ></a></div>
+
+    </div>
+
+<!-- <div class="follow uk-grid-collapse uk-child-width-expand@s uk-child-width-1-2   uk-child-height-1-2 " uk-grid="">
+    <a href="#modal-media-image" uk-toggle><img src="https://source.unsplash.com/150x150/?heli" alt="" ></a>
+    <a href="#modal-media-image2" uk-toggle><img src="https://source.unsplash.com/150x150/?everest" alt="" ></a>
+    <a href="#modal-media-image3" uk-toggle><img src="https://source.unsplash.com/150x150/?cat" alt="" ></a>
+    <a href="#modal-media-image4" uk-toggle><img src="https://source.unsplash.com/150x150/?nepal" alt="" ></a>
+    <a href="#modal-media-image5" uk-toggle><img src="https://source.unsplash.com/150x150/?china" alt="" ></a>
+    <a href="#modal-media-image6" uk-toggle><img src="https://source.unsplash.com/150x150/?japan" alt="" ></a>
+    <a href="#modal-media-image7" uk-toggle><img src="https://source.unsplash.com/150x150/?annapurna" alt="" ></a>
+    <a href="#modal-media-image8" uk-toggle><img src="https://source.unsplash.com/150x150/?food" alt="" ></a>
+    <a href="#modal-media-image9" uk-toggle><img src="https://source.unsplash.com/150x150/?coffee" alt="" ></a>
+    <a href="#modal-media-image10" uk-toggle><img src="https://source.unsplash.com/150x150/?chocolate" alt="" ></a>
+</div> -->
+    <div id="modal-media-image" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?drink" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
             </div>
-            @if($loop->iteration != 1)
-            <a class="uk-position-center-left uk-position-small uk-slidenav-large previous" href="#instagram-post-{{ $loop->iteration-1 }}" uk-slidenav-previous uk-toggle></a>
-            @endif
-            @if($loop->iteration != 10)
-            <a class="uk-position-center-right uk-position-small  uk-slidenav-large next" href="#instagram-post-{{ $loop->iteration+1}}" uk-slidenav-next uk-toggle></a>
-            @endif
+        
         </div>
-        @endforeach
+            <a class="uk-position-center-left uk-position-small uk-slidenav-large previous" href="#modal-media-image2" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small  uk-slidenav-large next" href="#modal-media-image2" uk-slidenav-next uk-toggle></a>
+
     </div>
+    <div id="modal-media-image2" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                    <a href=""><img src="https://source.unsplash.com/1024x912/?ice" alt="" ></a>  
+                </div>
+               <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image3" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image3" uk-slidenav-next uk-toggle></a>
+    </div>
+    <div id="modal-media-image3" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?chips" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image4" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image4" uk-slidenav-next uk-toggle></a>
+    </div>
+    <div id="modal-media-image4" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?sweet" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image5" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image5" uk-slidenav-next uk-toggle></a>
+    </div>
+        
+    <div id="modal-media-image5" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?momo" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image6" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image6" uk-slidenav-next uk-toggle></a>
+
+    </div>
+    <div id="modal-media-image6" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?coke" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image7" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image7" uk-slidenav-next uk-toggle></a>  
+    </div>
+        
+    <div id="modal-media-image7" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                    <a href=""><img src="https://source.unsplash.com/1024x912/?burger" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large" href="#modal-media-image8" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" href="#modal-media-image8" uk-slidenav-next uk-toggle></a>
+    </div>
+    <div id="modal-media-image8" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?chicken" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image9" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image9" uk-slidenav-next uk-toggle></a>
+    </div>
+        
+    <div id="modal-media-image9" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                    <a href=""><img src="https://source.unsplash.com/1024x912/?chocolate" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image10" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image10" uk-slidenav-next uk-toggle></a>
+    </div>
+    <div id="modal-media-image10" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog  modal uk-width-auto uk-margin-auto-vertical">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <div class="uk-grid-collapse" uk-grid>
+                <div class="uk-background-cover uk-width-3-4@s">  
+                   <a href=""><img src="https://source.unsplash.com/1024x912/?pizza" alt="" ></a>  
+                </div>
+                <div class=" uk-width-1-4@s uk-padding">
+                    <h5 class="user-instagram">@username</h5>
+                    <p class="caption-instagram">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large previous" href="#modal-media-image" uk-slidenav-previous uk-toggle></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large next" href="#modal-media-image" uk-slidenav-next uk-toggle></a>
+    </div>
+    @endif
 </section>
+

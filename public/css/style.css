@@ -425,19 +425,19 @@ a:hover {
 }
 
 .previous {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .previous:hover {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .next {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .next:hover {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .modal {
@@ -446,6 +446,12 @@ a:hover {
 
 .caption-instagram {
   font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .follow > div:nth-child(2n+1) {
+    text-align: right;
+  }
 }
 
 .contact-info .call {

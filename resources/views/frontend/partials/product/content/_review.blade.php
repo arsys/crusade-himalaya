@@ -1,4 +1,4 @@
-@for($a=1; $a<=3; $a++)
+<!-- @for($a=1; $a<=3; $a++)
 <div class="uk-text-left" uk-grid>
 	<div class="uk-width-1-4">
 		<img src="https://source.unsplash.com/150x150/?face" alt="" >
@@ -18,4 +18,16 @@
 	</div>
 </div>
 @endfor 
-<a class="uk-button-default uk-align-center uk-width-medium uk-text-center " href="/review">Read More</a>
+<a class="uk-button-default uk-align-center uk-width-medium uk-text-center " href="/review">Read More</a> -->
+
+
+<div class="uk-child-width-1-3@m uk-grid-small" uk-grid uk-lightbox="animation: slide">
+	@for($a=1; $a<=6; $a++)
+    <div>
+        <a class="uk-inline" href="{{asset('img/paris.jpg')}}" data-caption>
+            <img src="https://source.unsplash.com/400x300/?coke" alt="">
+        </a>
+    </div>
+    @endfor
+   
+</div>

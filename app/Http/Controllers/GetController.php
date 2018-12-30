@@ -19,7 +19,7 @@ class GetController extends Controller
 	{
 		$instagram = new Instagram('9206517006.1677ed0.68ddd01c5ff942e8aa0587a75a1f0579');
 	    $posts = $instagram->media(); //gets 20 latest insta posts of a user
-	    dd($posts);
+	    // dd($posts);
 	    $fromDBs = Insta::orderBy('id', 'desc')->take(20)->get(); //get last 20 rows from table
 	    foreach( $posts as $post)
 	    {

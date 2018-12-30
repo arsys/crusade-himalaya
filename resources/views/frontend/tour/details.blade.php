@@ -21,9 +21,8 @@
 @stop
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>
-{{-- <script type="text/javascript">
-
-  $(document).ready(function() {
+<script>
+    $(document).ready(function() {
     console.log('Ready');
     $('.search-wrapper').on('click', '#find-dates', function(a) {
       a.preventDefault();
@@ -49,7 +48,32 @@
           $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
         }
       })
+    }),
+        $('.search-wrapper-mob').on('click', '#find-dates-mob', function(a) {
+      a.preventDefault();
+      console.log('click');
+      var t = $("#tour-id-mob").val(),
+        e = $("#travel-year-mob").val(),
+        o = $("#travel-month-mob").val();
+      console.log(t);
+      console.log(e);
+      console.log(o);
+      $("#ajaxloader").show(), $.ajax({
+        type: "GET",
+        url: "/trip/fetch-departures",
+        headers: {
+          "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+        },
+        data: {
+          tour_id: t,
+          year: e,
+          month: o
+        },
+        success: function(a) {
+          $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
+        }
+      })
     })
   });
-</script> --}}
+</script>
 @stop

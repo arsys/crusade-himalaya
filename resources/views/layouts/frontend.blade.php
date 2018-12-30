@@ -25,36 +25,6 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-<script>
-    $(document).ready(function() {
-    console.log('Ready');
-    $('.search-wrapper').on('click', '#find-dates', function(a) {
-      a.preventDefault();
-      console.log('click');
-      var t = $("#tour-id").val(),
-        e = $("#travel-year").val(),
-        o = $("#travel-month").val();
-      console.log(t);
-      console.log(e);
-      console.log(o);
-      $("#ajaxloader").show(), $.ajax({
-        type: "GET",
-        url: "/trip/fetch-departures",
-        headers: {
-          "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
-        },
-        data: {
-          tour_id: t,
-          year: e,
-          month: o
-        },
-        success: function(a) {
-          $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
-        }
-      })
-    })
-  });
-</script>
 {{-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>

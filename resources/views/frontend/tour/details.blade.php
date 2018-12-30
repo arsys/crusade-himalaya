@@ -22,36 +22,34 @@
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>
 <script type="text/javascript">
-    ! function() {
-        "use strict";
-        $(document).ready(function() {
-            console.log('Ready');
-            $('.search-wrapper').on('click','#find-dates',function(a) {
-                a.preventDefault();
-                console.log('click');
-                var t = $("#tour-id").val(),
-                e = $("#travel-year").val(),
-                o = $("#travel-month").val();
-                console.log(t);
-                console.log(e);
-                console.log(o);
-                $("#ajaxloader").show(), $.ajax({
-                    type: "GET",
-                    url: "/trip/fetch-departures",
-                    headers: {
-                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
-                    },
-                    data: {
-                        tour_id: t,
-                        year: e,
-                        month: o
-                    },
-                    success: function(a) {
-                        $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
-                    }
-                })
-            })
-        })
-    }();
+
+  $(document).ready(function() {
+    console.log('Ready');
+    $('.search-wrapper').on('click', '#find-dates', function(a) {
+      a.preventDefault();
+      console.log('click');
+      var t = $("#tour-id").val(),
+        e = $("#travel-year").val(),
+        o = $("#travel-month").val();
+      console.log(t);
+      console.log(e);
+      console.log(o);
+      $("#ajaxloader").show(), $.ajax({
+        type: "GET",
+        url: "/trip/fetch-departures",
+        headers: {
+          "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+        },
+        data: {
+          tour_id: t,
+          year: e,
+          month: o
+        },
+        success: function(a) {
+          $(".ajaxloadmoredeparture").html(a), $("#ajaxloader").hide()
+        }
+      })
+    })
+  });
 </script>
 @stop

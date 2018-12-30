@@ -30,7 +30,6 @@
             @if($loop->iteration != 20)
             <a class="uk-position-center-right uk-position-small  uk-slidenav-large next" href="#instagram-post-{{ $loop->iteration+1}}" uk-slidenav-next uk-toggle></a>
             @endif
-            @endforeach
         </div>
         @endforeach
     </div>

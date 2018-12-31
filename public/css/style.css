@@ -272,11 +272,11 @@ a:hover {
 }
 
 #price-wrapper .price span:nth-child(odd) {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #price-wrapper .price span:nth-child(even) {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .home-tours {
@@ -441,7 +441,7 @@ a:hover {
 }
 
 .modal {
-  width: 1200px;
+  width: 850px;
 }
 
 .caption-instagram {
@@ -455,14 +455,26 @@ a:hover {
 }
 
 .insta-lightbox {
-  width: 100vw;
-  height: 100vh;
+  width: auto;
+  height: auto;
 }
 
 @media (max-width: 640px) {
   .travel-heading {
     font-size: 16px;
   }
+}
+
+.home-img {
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 1.6s ease;
+  transition: all 1.6s ease;
+}
+
+.home-img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .contact-info .call {

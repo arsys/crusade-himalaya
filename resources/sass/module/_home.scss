@@ -32,12 +32,12 @@ a:hover{
       display: block;
     }
     span:nth-child(odd) {
-      font-size: 15px;
+      font-size: 20px;
 
     }
     span:nth-child(even) {
 
-      font-size: 15px;
+      font-size: 20px;
     }        
   }
 }
@@ -197,7 +197,7 @@ a:hover{
   }
 }
 .modal{
-  width:1200px;
+  width:850px;
 }
 .caption-instagram{
   font-size:14px;
@@ -210,8 +210,8 @@ a:hover{
  
 }
 .insta-lightbox{
-  width:100vw;
-  height:100vh;
+  width:auto;
+  height:auto;
 }
 //follow end
 @media (max-width:640px){
@@ -219,4 +219,13 @@ a:hover{
     font-size:16px;
    
   }
+}
+.home-img{
+    background-size: cover;
+  background-position: center;
+  transition: all 1.6s ease;
+}
+.home-img:hover
+{
+  transform: scale(1.2);
 }

@@ -10,7 +10,7 @@
                 <li>
                     <div class="uk-panel">
                         <a href="{{ route('fetchByCategory',$category->slug) }}">
-                            <img src="{{ asset($category->thumb) }}" alt="{{ $category->name }}">
+                            <img class="home-img" src="{{ asset($category->thumb) }}" alt="{{ $category->name }}">
                         </a>
                         <div class="uk-position-center uk-panel" id="activity-title">
                             <h2 class="travel-heading"><a href="{{ route('fetchByCategory',$category->slug) }}">{{ $category->name }}</a></h2>

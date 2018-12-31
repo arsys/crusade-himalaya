@@ -243,7 +243,7 @@ a:hover {
   letter-spacing: 1px;
   /* width: 50%; */
   z-index: 1;
-  top: 166px;
+  top: 225px;
   left: -10px;
   right: unset;
   text-align: left;
@@ -451,6 +451,17 @@ a:hover {
 @media (max-width: 640px) {
   .follow > div:nth-child(2n+1) {
     text-align: right;
+  }
+}
+
+.insta-lightbox {
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (max-width: 640px) {
+  .travel-heading {
+    font-size: 16px;
   }
 }
 

@@ -5,9 +5,9 @@
         <ul class="uk-child-width-1-3@m uk-child-width-1-1@s  uk-grid-match  "  uk-grid>
             @foreach($featureds as $featured)
             <li class="uk-margin-small-bottom">
-                <div class="uk-card uk-card-default home-img">
-                    <div class="uk-card-media-top">
-                        <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><img   src="{{ asset($featured->image->thumb) }}" alt="{{ $featured->slug }}"></a>
+                <div class="uk-card uk-card-default ">
+                    <div class="uk-card-media-top tour-wrapper">
+                        <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><img class="tour-img"   src="{{ asset($featured->image->thumb) }}" alt="{{ $featured->slug }}"></a>
                         <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                             <span class="price">
                                 <span>USD ${{ $featured->price }}</span>

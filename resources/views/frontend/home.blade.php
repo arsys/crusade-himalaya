@@ -20,7 +20,7 @@
   @include ('frontend.partials.home._tour')
   <!-- hHandpicked tour end -->
   <!-- review start -->
-  {{-- @include ('frontend.partials.home._review') --}}
+  @include ('frontend.partials.home._review')
   <!-- review end -->
   <!--follow start-->
   @include ('frontend.partials.home._follow')

@@ -12,12 +12,14 @@ class RegionController extends Controller
 {
     private $path = "uploads/images/region/";
     private $thumb = "uploads/images/region/thumb/";
+    private $nav = "uploads/images/region/nav/";
 
     function __construct()
     {
-        if (!File::exists($this->path) || !File::exists($this->thumb)) {
+        if (!File::exists($this->path) || !File::exists($this->thumb) || !File::exists($this->nav)) {
             File::makeDirectory($this->path);
             File::makeDirectory($this->thumb);
+            File::makeDirectory($this->nav);
         }
         $this->medias = Media::all();
     }
@@ -64,8 +66,10 @@ class RegionController extends Controller
         $UploadImage = new UploadImage;
         $path = $UploadImage->uploadSingle($this->path,$media->path,1024,512);
         $thumb = $UploadImage->uploadSingle($this->thumb,$media->path,800,400);
+        $nav = $UploadImage->uploadSingle($this->nav,$media->path,225,150);
         $region->path = $path;
         $region->thumb = $thumb;
+        $region->nav = $nav;
         $region->save();
         Session::flash('success', 'New item added sucessfully.');
         return redirect()->route('regions.index');
@@ -116,18 +120,22 @@ class RegionController extends Controller
             //fetch old image path
             $oldPath = $region->path;
             $oldThumb = $region->thumb;
+            $oldNav = $region->nav;
 
             //assign new image path to objects
             $media = Media::find($request->featured);
             $UploadImage = new UploadImage;
             $path = $UploadImage->uploadSingle($this->path,$media->path,1024,512);
             $thumb = $UploadImage->uploadSingle($this->thumb,$media->path,800,400);
+            $nav = $UploadImage->uploadSingle($this->nav,$media->path,225,150);
             $region->path = $path;
             $region->thumb = $thumb;
+            $region->nav = $nav;
 
             //delete old image
             File::delete(public_path($oldPath));
             File::delete(public_path($oldThumb));
+            File::delete(public_path($oldNav));
         }
         $region->save();
 
@@ -143,6 +151,9 @@ class RegionController extends Controller
     public function destroy($id)
     {
         $region = Region::findOrFail($id);
+        File::delete(public_path($region->thumb));
+        File::delete(public_path($region->nav));
+        File::delete(public_path($region->path));
         $region->delete();
         return response()->json($region);
     }

@@ -20,6 +20,7 @@ class CreateTourCategoriesTable extends Migration
             $table->text('description')->nullable();
             $table->string('thumb')->nullable();
             $table->string('path')->nullable();
+            $table->string('nav')->nullable();
             $table->timestamps();
         });
     }

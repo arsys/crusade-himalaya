@@ -14,10 +14,16 @@ class TourCategoryController extends Controller
 {
     private $path = "uploads/images/tour-category/";
     private $thumb = "uploads/images/tour-category/thumb/";
+    private $nav = "uploads/images/tour-category/nav/";
 
     function __construct()
     {
         $this->medias = Media::all();
+        if (!File::exists($this->path) || !File::exists($this->thumb) || !File::exists($this->nav)) {
+            File::makeDirectory($this->path);
+            File::makeDirectory($this->thumb);
+            File::makeDirectory($this->nav);
+        }
     }
     /**
      * Display a listing of the resource.
@@ -59,17 +65,15 @@ class TourCategoryController extends Controller
             $categories = new TourCategory;
             $categories->name = $request->name;
             $categories->description = $request->description;
-            if (!File::exists($this->path) || !File::exists($this->thumb)) {
-                File::makeDirectory($this->path);
-                File::makeDirectory($this->thumb);
-            }
             
             $media = Media::find($request->featured);
             $uploadImage = new UploadImage;
             $path = $uploadImage->uploadSingle($this->path,$media->path,1024,512);
             $thumb = $uploadImage->uploadSingle($this->thumb,$media->path,320,480);
+            $nav = $UploadImage->uploadSingle($this->nav,$media->path,225,150);
             $categories->path = $path;
             $categories->thumb = $thumb;
+            $category->nav = $nav;
 
             $categories->save();
         } catch (QueryException $e) {
@@ -125,18 +129,22 @@ class TourCategoryController extends Controller
             //fetch old image path
             $oldPath = $tourCategory->path;
             $oldThumb = $tourCategory->thumb;
+            $oldNav = $tourCategory->nav;
 
             //assign new image path to objects
             $media = Media::find($request->featured);
             $UploadImage = new UploadImage;
             $path = $UploadImage->uploadSingle($this->path,$media->path,1024,512);
             $thumb = $UploadImage->uploadSingle($this->thumb,$media->path,320,480);
+            $nav = $UploadImage->uploadSingle($this->nav,$media->path,225,150);
             $tourCategory->path = $path;
             $tourCategory->thumb = $thumb;
+            $tourCategory->nav = $nav;
 
             //delete old image
             File::delete(public_path($oldPath));
             File::delete(public_path($oldThumb));
+            File::delete(public_path($oldNav));
         }
         $tourCategory->save();
 
@@ -154,6 +162,7 @@ class TourCategoryController extends Controller
         $category = TourCategory::findOrFail($id);
         File::delete(public_path($category->path));
         File::delete(public_path($category->thumb));
+        File::delete(public_path($category->nav));
         $category->delete();
         return response()->json($category);
     }

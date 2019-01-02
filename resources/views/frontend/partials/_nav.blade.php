@@ -18,7 +18,7 @@
                 @foreach($dos as $do)
                 <li>
                   <h5>{{ $do->name }} </h5>
-                  <a href="#"><img src="{{ asset($do->thumb) }}" width="300" alt=""></a>
+                  <a href="#"><img src="{{ asset($do->nav) }}" width="300" alt=""></a>
                 </li>
                 @endforeach
               </ul>
@@ -36,7 +36,7 @@
                 @foreach($wheres as $where)
                 <li>
                   <h5>{{ $where->name }} </h5>
-                  <a href="#"><img src="{{ asset($where->thumb) }}" width="300" alt=""></a>
+                  <a href="#"><img src="{{ asset($where->nav) }}" width="300" alt=""></a>
                 </li>
                 @endforeach
               </ul>

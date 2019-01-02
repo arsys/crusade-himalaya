@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Composers;
-
+use App\TourCategory;
+use App\Region;
 // use Hamcrest\Core\Set;
 use Illuminate\Contracts\View\View;
 

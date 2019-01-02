@@ -57,7 +57,7 @@ class AttributeSeeder extends Seeder
         // foreach ($data as $key => $value) {
         //     Event::create($value);
         // }
-        $region = Region::all();
+        $regions = Region::all();
         foreach ($regions as $region) {
             $UploadImage = new UploadImage;
             $loc = $UploadImage->uploadSingle("uploads/images/region/nav/",$region->path,225,150);

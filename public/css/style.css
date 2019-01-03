@@ -1035,6 +1035,11 @@ a:hover {
   position: relative;
 }
 
+.table-wrapper {
+  color: #333;
+  font-size: 1.0rem !important;
+}
+
 #breadcrumb {
   position: relative;
 }

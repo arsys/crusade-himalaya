@@ -38,10 +38,10 @@
 		</div>
 	</div>
 	<!--table start-->
-	<div class="uk-overflow-auto uk-padding-large ">					
+	<div class="uk-overflow-auto">					
 		<table class="uk-table uk-table-hover uk-table-divider">
 			<thead>
-				<tr>
+				<tr class="table-wrapper">
 					<th>Start Date</th>
 					<th>End Date</th>
 					<th>Status</th>

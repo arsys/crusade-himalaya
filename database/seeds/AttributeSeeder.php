@@ -91,7 +91,7 @@ class AttributeSeeder extends Seeder
             $new->name = $faker->name;
             $new->position = $faker->jobTitle;
             $new->member_id = $faker->numberBetween($min = 1, $max = 6);
-            $new->description = $faker->paragraph($nbSentences = numberBetween($min = 4, $max = 6) , $variableNbSentences = true);
+            $new->description = $faker->paragraph($nbSentences = $faker->numberBetween($min = 4, $max = 6) , $variableNbSentences = true);
             $new->avatar = $faker->imageUrl($width, $height, 'avatar');
             $new->save();
         }

@@ -3,7 +3,7 @@
 		<div class="uk-card uk-card-default uk-card-body ">
 			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small search-wrapper">
 				<div>
-					<p>Please Check Available Dates for The Year:</p>
+					<p class="text-color">Please Check Available Dates for The Year:</p>
 					<input type="hidden" value="{{$tour->id}}" id="tour-id">
 				</div>
 				<div>
@@ -15,7 +15,7 @@
 					</select>
 				</div>
 				<div>
-					<select class="uk-select" id="travel-month">Select Month
+					<select class="uk-select text-color" id="travel-month">Select Month
 						<option value="" disabled selected>Select Month</option>
 						<option value="1">Jan</option>
 						<option value="2">Feb</option>
@@ -32,7 +32,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<a href="#" class="contact-button" id="find-dates">Search</a>
+					<a href="#" class="contact-button search-btn" id="find-dates">Search</a>
 				</div>
 			</div>
 		</div>
@@ -54,11 +54,11 @@
 			<tbody class="ajaxloadmoredeparture">
 				@foreach($departures as $departure)
 				<tr>
-					<td>{{ date("jS M, Y", strtotime($departure->start))}}</td>
-					<td>{{ date("jS M, Y", strtotime($departure->end))}}</td>
-					<td>{{$departure->slot}} space left</td>
-					<td>USD {{$departure->price}}</td>
-					<td><a class="uk-button btn" href="/bookingstep1">Book Now</a></td>
+					<td class="text-color">{{ date("jS M, Y", strtotime($departure->start))}}</td>
+					<td class="text-color">{{ date("jS M, Y", strtotime($departure->end))}}</td>
+					<td class="text-color">{{$departure->slot}} space left</td>
+					<td class="text-color">USD {{$departure->price}}</td>
+					<td class="text-color"><a class="uk-button btn" href="/bookingstep1">Book Now</a></td>
 				</tr>
 				@endforeach
 			</tbody>

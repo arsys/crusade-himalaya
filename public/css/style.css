@@ -657,8 +657,9 @@ a:hover {
   position: relative;
 }
 
-.search-wrapper {
-  margin-bottom: 28px;
+.search-btn {
+  margin-bottom: 25px !important;
+  line-height: 40px !important;
 }
 
 .trip-details {
@@ -1035,9 +1036,17 @@ a:hover {
   position: relative;
 }
 
-.table-wrapper {
+.uk-table th {
   color: #333;
   font-size: 1.0rem !important;
+}
+
+.text-color {
+  color: #333 !important;
+}
+
+html {
+  color: #333 !important;
 }
 
 #breadcrumb {

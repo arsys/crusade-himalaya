@@ -38,13 +38,16 @@
 //overlay end
 //responsive image start
 
-//responsive image end
 //readmre start
-#read {
+.toggle-text {
   display: none;
 }
 
 //readmore end
-#text{
-  display:none;
+.team-name{
+  display: inline;
+}
+.team-designation{
+  display: inline;
+  font-style: italic;
 }

@@ -32,7 +32,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<a href="#" class="uk-button-default" id="find-dates">Search</a>
+					<a href="#" class="contact-button" id="find-dates">Search</a>
 				</div>
 			</div>
 		</div>

@@ -37,27 +37,26 @@
 
 @section('scripts')
 <script>
-// Add click event dynamically
-$(document).on("click", ".toggle-text-button", function() {
-  // Check if text is more or less
-  if ($(this).text() == "Read More") {
+    $(document).ready(function() {
+      $(".toggle-text").hide();
+      $(document).on("click", ".toggle-text-button", function() {                                                     
+        if ($(this).text() == "Read More") {
+          readMore($(this));
+      } else {
+          readLess($(this));
+      }
 
-    // Change link text
-    $(this).text("Read Less");
-    
-    // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide down
-    $(this).parent().children(".toggle-text").slideDown();
-    
-} else {
+      function readMore(click) {
+          click.text("Read Less");
+          click.parent().children(".toggle-text").slideDown();
+      }
 
-    // Change link text
-    $(this).text("Read More");
-    
-    // Travel up DOM tree to parent, then find any children with CLASS .toggle-text and slide up 
-    $(this).parent().children(".toggle-text").slideUp();
-    
-}
+      function readLess(click) {
+          click.text("Read More");
+          click.parent().children(".toggle-text").slideUp();
+      }
 
-});
+  });
+  });
 </script>
 @stop

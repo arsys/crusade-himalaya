@@ -50,9 +50,13 @@ class FrontendController extends Controller
         $teams = Team::whereHas('member', function ($r) {
             $r->where('name', 'Administration');
         })->get();
+        $others = Team::whereHas('member', function ($r) {
+            $r->whereIn('members.name', ['Administration']);
+        })->get();
 
         return view('frontend.about')
-        ->withTeams($teams);
+        ->withTeams($teams)
+        ->withOthers($others);
     } 
 
     public function truelyNepal()

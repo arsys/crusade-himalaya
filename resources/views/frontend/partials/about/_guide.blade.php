@@ -11,8 +11,8 @@
                     </div>
                     <div class="uk-width-3-4@s">
                         <div class="uk-flex uk-flex-row">
-                            <span class="team-name">Name</span>
-                            <span class="team-designation">Designation</span>
+                            <span class="team-name">{{ $team->name }}</span>
+                            <span class="team-designation">{{ $team->position }}</span>
                         </div>
                         <p class="uk-text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque officia optio nostrum voluptas, rem error nulla sed illo eveniet quasi.</p>        
                         <p class="uk-text-justify toggle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate repellat quae in nobis laborum laboriosam praesentium molestiae, aliquam maxime modi eos ab voluptatibus magnam, provident, dolorum, dolore adipisci! Qui dignissimos illum voluptate omnis similique repellendus. Quas quam assumenda aliquid quos expedita, sit dolorem eveniet omnis.</p><a class="toggle-text-button">Read More</a>

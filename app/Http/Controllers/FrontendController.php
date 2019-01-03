@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Tour;
+use App\Team;
 use App\TourCategory;
 use App\Carousel;
 use App\Itinerary;
@@ -72,10 +73,7 @@ public function getContact1()
 {
     return view('frontend.contact1');
 }
-public function getAbout1()
-{
-    return view('frontend.about1');
-}
+
 public function getCategory()
 {
     return view ('frontend.category');

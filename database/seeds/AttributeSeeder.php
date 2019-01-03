@@ -11,6 +11,7 @@ use App\Included;
 use App\Excluded;
 use App\Event;
 use App\UploadImage;
+use App\Member;
 class AttributeSeeder extends Seeder
 {
     /**
@@ -57,22 +58,40 @@ class AttributeSeeder extends Seeder
         // foreach ($data as $key => $value) {
         //     Event::create($value);
         // }
-        $regions = Region::all();
-        foreach ($regions as $region) {
-            $UploadImage = new UploadImage;
-            $loc = $UploadImage->uploadSingle("uploads/images/region/nav/",$region->path,225,150);
-            $new = new Region;
-            $new -> nav = loc;
+        // $regions = Region::all();
+        // foreach ($regions as $region) {
+        //     $UploadImage = new UploadImage;
+        //     $loc = $UploadImage->uploadSingle("uploads/images/region/nav/",$region->path,225,150);
+        //     $new = new Region;
+        //     $new -> nav = loc;
+        //     $new->save();
+        // }
+
+        //         // }
+        // $categories = TourCategory::all();
+        // foreach ($categories as $category) {
+        //     $UploadImage = new UploadImage;
+        //     $loc = $UploadImage->uploadSingle("uploads/images/tour-category/nav/",$category->path,225,150);
+        //     $new = new TourCategory;
+        //     $new -> nav = loc;
+        //     $new->save();
+        // }
+
+        $members = array('Administration','Trekking Guide', 'Climbing Guide', 'Porter', 'Agent' , 'Others');
+        foreach ($members as $member) {
+            $new = new Member;
+            $new->name = $member;
             $new->save();
         }
 
-                // }
-        $categories = TourCategory::all();
-        foreach ($categories as $category) {
-            $UploadImage = new UploadImage;
-            $loc = $UploadImage->uploadSingle("uploads/images/tour-category/nav/",$category->path,225,150);
-            $new = new TourCategory;
-            $new -> nav = loc;
+        $faker = Faker\Factory::create();
+        for ($i=1; $i <= 12 ; $i++) { 
+            $new = new Team;
+            $new->name = $faker->name;
+            $new->position = $faker->jobTitle;
+            $new->member_id = $faker->numberBetween($min = 1, $max = 6);
+            $new->description = $faker->paragraph($nbSentences = numberBetween($min = 4, $max = 6) , $variableNbSentences = true);
+            $new->avatar = $faker->imageUrl($width, $height, 'avatar');
             $new->save();
         }
     }

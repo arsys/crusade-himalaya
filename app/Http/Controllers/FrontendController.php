@@ -51,9 +51,9 @@ class FrontendController extends Controller
             $r->where('name', 'Administration');
         })->get();
         $others = Team::whereHas('member', function ($r) {
-            $r->whereNotIn('name', 'Administration');
+            $r->whereIn('members.name', 'Trekking Guide', 'Climbing Guide', 'Porter', 'Agent' , 'Others');
         })->get();
-        dd($others);
+        dd($members);
         return view('frontend.about')
         ->withTeams($teams)
         ->withOthers($others);

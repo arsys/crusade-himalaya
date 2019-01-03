@@ -25,7 +25,11 @@
  position:relative;
 }
 //breadcrumb end
-
+//price search start
+.search-wrapper{
+    margin-bottom: 28px;
+}
+//price search end
 
 //product()
 .trip-details{
@@ -391,3 +395,7 @@
     position: relative;
 }
 //bookingstep2 progressive step bar end
+.table-wrapper{
+   color: #333;
+font-size:1.0rem !important;
+}

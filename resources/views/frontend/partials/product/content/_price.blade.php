@@ -40,7 +40,7 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<button class="contact-button ">Search</button>
+					<button class="contact-button search-btn ">Search</button>
 				</div>
 			</div>
 		</div>

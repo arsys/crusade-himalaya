@@ -26,8 +26,9 @@
 }
 //breadcrumb end
 //price search start
-.search-wrapper{
-    margin-bottom: 28px;
+.search-btn{
+    margin-bottom: 25px !important;
+   line-height:40px !important;
 }
 //price search end
 
@@ -395,7 +396,13 @@
     position: relative;
 }
 //bookingstep2 progressive step bar end
-.table-wrapper{
+.uk-table th{
    color: #333;
 font-size:1.0rem !important;
+}
+.text-color{
+    color :#333 !important;
+}
+html{
+    color: #333 !important;
 }

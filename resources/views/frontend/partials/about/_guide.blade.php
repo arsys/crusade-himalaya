@@ -35,6 +35,7 @@
                 </div>
                 @endif
                 @endforeach
+                
                 @foreach($others as $other)
                 @if($loop->iteration % 2 == 0)
                 <div class="uk-text-left" uk-grid>

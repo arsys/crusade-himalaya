@@ -50,27 +50,11 @@ class FrontendController extends Controller
         $teams = Team::whereHas('member', function ($r) {
             $r->where('name', 'Administration');
         })->get();
-        $guides = Team::whereHas('member', function ($r) {
-            $r->where('name', 'Trekking Guide');
-        })->get();
-        $climbers = Team::whereHas('member', function ($r) {
-            $r->where('name', 'Climbing Guide');
-        })->get();
-        $porters = Team::whereHas('member', function ($r) {
-            $r->where('name', 'Porter');
-        })->get();
-        $agents = Team::whereHas('member', function ($r) {
-            $r->where('name', 'Agents');
-        })->get();
         $others = Team::whereHas('member', function ($r) {
-            $r->where('name', 'Others');
+            $r->whereNotIn('name', 'Administration');
         })->get();
         return view('frontend.about')
         ->withTeams($teams)
-        ->withGuides($guides)
-        ->withClimbers($climbers)
-        ->withPorters($porters)
-        ->withAgents($agents)
         ->withOthers($others);
     } 
 

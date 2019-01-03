@@ -1,6 +1,6 @@
 <section class=" uk-margin-medium-top uk-margin-medium-bottom bgcolor-wrapper">
     <div class="uk-container">
-        <h2 class="uk-text-center uk-margin-small-bottom instagram"><a href="#">#brandname</a></h2>
+        <h2 class="uk-text-center uk-margin-small-bottom instagram"><a href="https://www.instagram.com/crusadehimalaya/">#crusadehimalaya</a></h2>
 
     </div>
     <div class="uk-container-expand">

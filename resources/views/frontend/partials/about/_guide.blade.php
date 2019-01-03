@@ -8,37 +8,37 @@
                 <div class="uk-text-left" uk-grid>
                     <div class="uk-width-1-4@s uk-text-center">
                         <img class="uk-border-square" src="{{ $team->avatar }}" alt="{{ $team->name }}">
-                 </div>
-                 <div class="uk-width-3-4@s">
-                    <h1 style="display: inline">Name</h1><h2 style="display: inline;  font-style: italic;">(Designation)</h2>
-                    <p class="uk-text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque officia optio nostrum voluptas, rem error nulla sed illo eveniet quasi.</p>        
-                    <p class="uk-text-justify toggle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate repellat quae in nobis laborum laboriosam praesentium molestiae, aliquam maxime modi eos ab voluptatibus magnam, provident, dolorum, dolore adipisci! Qui dignissimos illum voluptate omnis similique repellendus. Quas quam assumenda aliquid quos expedita, sit dolorem eveniet omnis.</p><a class="toggle-text-button">Read More</a>
+                    </div>
+                    <div class="uk-width-3-4@s">
+                        <h1 style="display: inline">Name</h1>
+                        <h2 style="display: inline;  font-style: italic;">(Designation)</h2>
+                        <p class="uk-text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque officia optio nostrum voluptas, rem error nulla sed illo eveniet quasi.</p>        
+                        <p class="uk-text-justify toggle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate repellat quae in nobis laborum laboriosam praesentium molestiae, aliquam maxime modi eos ab voluptatibus magnam, provident, dolorum, dolore adipisci! Qui dignissimos illum voluptate omnis similique repellendus. Quas quam assumenda aliquid quos expedita, sit dolorem eveniet omnis.</p><a class="toggle-text-button">Read More</a>
+                    </div>
                 </div>
+                @endif
+                @if($loop->iteration % 2 != 0)
+                <div class="uk-text-left" uk-grid>
+                    <div class="uk-width-3-4@s">
+                        <h1 style="display: inline">Name</h1><h2 style="display: inline;  font-style: italic;">(Designation)</h2>
+                        <p class="uk-text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque officia optio nostrum voluptas, rem error nulla sed illo eveniet quasi.</p>        
+                        <p class="uk-text-justify toggle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate repellat quae in nobis laborum laboriosam praesentium molestiae, aliquam maxime modi eos ab voluptatibus magnam, provident, dolorum, dolore adipisci! Qui dignissimos illum voluptate omnis similique repellendus. Quas quam assumenda aliquid quos expedita, sit dolorem eveniet omnis.</p><a class="toggle-text-button">Read More</a>
+                    </div>
+                    <div class="uk-width-1-4@s uk-text-center">
+                        <img class="uk-border-square" src="https://source.unsplash.com/200x200?face" alt="Border square">
+                    </div>
+                </div>
+                @endif
+                @endforeach
             </div>
-            @endforeach
-            @if($loop->iteration % 2 != 0)
-            <div class="uk-text-left" uk-grid>
-                <div class="uk-width-3-4@s">
-                    <h1 style="display: inline">Name</h1><h2 style="display: inline;  font-style: italic;">(Designation)</h2>
-                    <p class="uk-text-justify ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque officia optio nostrum voluptas, rem error nulla sed illo eveniet quasi.</p>        
-                    <p class="uk-text-justify toggle-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate repellat quae in nobis laborum laboriosam praesentium molestiae, aliquam maxime modi eos ab voluptatibus magnam, provident, dolorum, dolore adipisci! Qui dignissimos illum voluptate omnis similique repellendus. Quas quam assumenda aliquid quos expedita, sit dolorem eveniet omnis.</p><a class="toggle-text-button">Read More</a>
-                </div>
-                <div class="uk-width-1-4@s uk-text-center">
-                    <img class="uk-border-square" src="https://source.unsplash.com/200x200?face" alt="Border square">
-                </div>
-            </div>
-            @endif
-            @endforeach
         </div>
     </div>
-</div>
 </div>
 
 @section('scripts')
 <script>
 // Add click event dynamically
 $(document).on("click", ".toggle-text-button", function() {
-
   // Check if text is more or less
   if ($(this).text() == "Read More") {
 
@@ -49,7 +49,6 @@ $(document).on("click", ".toggle-text-button", function() {
     $(this).parent().children(".toggle-text").slideDown();
     
 } else {
-
 
     // Change link text
     $(this).text("Read More");

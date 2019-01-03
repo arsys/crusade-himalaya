@@ -12,6 +12,7 @@ use App\Excluded;
 use App\Event;
 use App\UploadImage;
 use App\Member;
+use App\Team;
 class AttributeSeeder extends Seeder
 {
     /**
@@ -77,12 +78,12 @@ class AttributeSeeder extends Seeder
         //     $new->save();
         // }
 
-        $members = array('Administration','Trekking Guide', 'Climbing Guide', 'Porter', 'Agent' , 'Others');
-        foreach ($members as $member) {
-            $new = new Member;
-            $new->name = $member;
-            $new->save();
-        }
+        // $members = array('Administration','Trekking Guide', 'Climbing Guide', 'Porter', 'Agent' , 'Others');
+        // foreach ($members as $member) {
+        //     $new = new Member;
+        //     $new->name = $member;
+        //     $new->save();
+        // }
 
         $faker = Faker\Factory::create();
         for ($i=1; $i <= 12 ; $i++) { 

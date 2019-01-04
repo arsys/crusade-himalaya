@@ -8,7 +8,7 @@
 			@foreach ($similars as $similar)
 				<div class="uk-card uk-card-default uk-text-center ">
 					<div class="uk-inline-clip uk-transition-toggle" tabindex="0" id="similar-tours-img">
-						<a href="{{ route('trip.detail',$similar->slug) }}"><img src="{{ asset($featured->image->thumb) }}" alt="{{ $similar->title }}"></a>
+						<a href="{{ route('trip.detail',$similar->slug) }}"><img src="{{ asset($similar->image->thumb) }}" alt="{{ $similar->title }}"></a>
 						<div class="uk-position-bottom" id="meta-title">
 							<a href="{{ route('trip.detail',$similar->slug) }}"><h4>{{ $similar->title }}</h4></a>
 						</div>

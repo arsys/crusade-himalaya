@@ -136,8 +136,9 @@ public function tourDetailtest($slug)
     $similars = Tour::whereHas('category', function ($r) use ($cat) {
         $r->where('tcategories.name', '=', $cat);
     })
+    ->whereNotIn('id', [$tour->id])
     ->orderByRaw('RAND()')
-    ->take(3)
+    ->take(4)
     ->get();
 
     // $reviews = Review::where('tour_id','=',$tour->id)

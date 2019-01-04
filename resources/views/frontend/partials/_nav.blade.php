@@ -18,7 +18,7 @@
                 @foreach($dos as $do)
                 <li>
                   <h5>{{ $do->name }} </h5>
-                  <a href="#"><img src="{{ asset($do->nav) }}" width="300" alt=""></a>
+                  <a href="{{ route('fetchByCategory',$do->slug) }}"><img src="{{ asset($do->nav) }}" alt="{{ $do->name }}"></a>
                 </li>
                 @endforeach
               </ul>
@@ -36,7 +36,7 @@
                 @foreach($wheres as $where)
                 <li>
                   <h5>{{ $where->name }} </h5>
-                  <a href="#"><img src="{{ asset($where->nav) }}" width="300" alt=""></a>
+                  <a href="{{ route('fetchByRegion',$where->slug) }}"><img src="{{ asset($where->nav) }}" alt="{{ $where->name }}"></a>
                 </li>
                 @endforeach
               </ul>

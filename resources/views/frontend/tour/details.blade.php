@@ -17,7 +17,7 @@
 @include ('frontend.tour.partials._content')
 {{-- content end --}}
 <!-- related tour start -->
-@include ('frontend.tour.partials._similar')
+{{-- @include ('frontend.tour.partials._similar') --}}
 @stop
 @section('scripts')
 <script src="{{asset('js/product.js')}}">	</script>

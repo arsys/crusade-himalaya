@@ -1,34 +1,31 @@
-<section class="similar-tours  uk-padding-small uk-padding-remove-horizontal" id="related-tours" >
-	<div class="uk-container uk-container-expand ">
- 	 	<div class="uk-container">
-	 	 	  <h2 class="heading-primary uk-text-center uk-margin-medium-bottom"><span>Related Tours</span></h2>
- 	 	</div>
-		<div class="uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small uk-margin-medium-top " uk-grid>
-			
-			@foreach ($similars as $similar)
-				<div class="uk-card uk-card-default uk-text-center ">
-					<div class="uk-inline-clip uk-transition-toggle" tabindex="0" id="similar-tours-img">
-						<a href="{{ route('trip.detail',$similar->slug) }}"><img src="{{ asset($similar->image->thumb) }}" alt="{{ $similar->title }}"></a>
-						<div class="uk-position-bottom" id="meta-title">
-							<a href="{{ route('trip.detail',$similar->slug) }}"><h4>{{ $similar->title }}</h4></a>
-						</div>
-					</div>
-				 	<div class="uk-flex uk-flex-center">
-						<div class="uk-flex uk-flex-column left">
-							<span class="count">{{ $similar->days }}</span>
-							<span class="count">Days</span>
-						</div>
-						<div class="uk-flex uk-flex-column center">
-							<span class="center-price"><sup>$</sup>{{ $similar->price }}</span>
-						</div>
-						<div class="uk-flex uk-flex-column center">
-							<a href="{{ route('trip.detail',$similar->slug) }}}" class="uk-button-default discover" >Discover </a>
-						</div>								
-					</div>	
-				</div>
-
-			@endforeach
-
-		</div>
-	</div>
-</section>
+<div class="uk-container uk-text-center  home-tours uk-margin-medium-top uk-margin-medium-bottom">
+  	<h2 class="heading-primary uk-text-center uk-margin-medium-bottom"><span>Related Tours</span></h2>
+    <div class="uk-position-relative uk-visible-toggle uk-light">
+        <ul class="uk-child-width-1-3@m uk-child-width-1-1@s  uk-grid-match  "  uk-grid>
+            @foreach ($similars as $similar)
+            <li class="uk-margin-small-bottom">
+                <div class="uk-card uk-card-default ">
+                    <div class="uk-card-media-top tour-wrapper">
+                       		<a href="{{ route('trip.detail',$similar->slug) }}"><img src="{{ asset($similar->image->thumb) }}" alt="{{ $similar->title }}"></a>
+	                   	<div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
+	                       <span class="price">
+	                           <span>USD ${{ $similar->price }}</span>
+	                       </span>
+	                   	</div>
+	                   	<div class="uk-overlay uk-overlay-default  uk-padding-medium " id="hp-wrapper">
+	                       	<div class="uk-flex uk-flex-center">
+	                           	<div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
+	                             	<a href="{{ route('trip.detail',$similar->slug) }}"><h4>{{ $similar->title }}</h4></a>
+	                           	</div>
+	                           	<div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
+	                               <span class="hp-days">{{ $similar->days }} Days</span>
+	                           	</div>    
+	                       	</div>
+	                   	</div>
+                    </div>                        
+                </div>
+            </li>
+            @endforeach
+        </ul>
+    </div>
+</div>

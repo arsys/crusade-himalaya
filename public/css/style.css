@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);html,
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900);html,
 .uk-h1,
 .uk-h2,
 .uk-h3,
@@ -13,7 +13,7 @@ h5,
 h6,
 span,
 p {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: 'Nunito', sans-serif !important;
 }
 
 .green {
@@ -510,8 +510,9 @@ a:hover {
   width: auto !important;
 }
 
-.travel {
+.travel-wrapper {
   /*  transition: all 1s ease; */
+  margin-bottom: 15px;
 }
 
 .travel:hover {
@@ -519,17 +520,21 @@ a:hover {
   left: 0;
   right: 0;
   visibility: visible !important;
-  padding: 20px 20px;
+  padding: 10px 10px;
   background: rgba(0, 0, 0, 0.1);
 }
 
 .travel-heading {
-  margin-left: 30px;
+  margin-left: 10px;
+}
+
+.travel-title {
+  margin-left: 10px;
   border-left: 2px solid #ffffff;
 }
 
 .travel-view {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .travel-view a:hover {
@@ -537,6 +542,10 @@ a:hover {
 }
 
 .next {
+  color: #ffffff !important;
+}
+
+.travel-tours {
   color: #ffffff !important;
 }
 
@@ -815,7 +824,7 @@ a:hover {
 }
 
 .left .count {
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
   text-align: center;
   margin-left: 15px;
@@ -830,13 +839,13 @@ a:hover {
 
 .center .center-price-info {
   max-width: 30%;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
 }
 
 .center .center-price {
   max-width: 70%;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   margin-left: 15px;
   margin-top: 7px;
@@ -919,8 +928,12 @@ a:hover {
 }
 
 .left .count {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
+}
+
+.discover {
+  line-height: 42px !important;
 }
 
 .center {
@@ -1077,6 +1090,10 @@ a:hover {
 
 html {
   color: #333 !important;
+}
+
+.uk-card-default {
+  color: #333;
 }
 
 #breadcrumb {

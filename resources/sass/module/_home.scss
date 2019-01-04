@@ -266,9 +266,9 @@ a:hover{
   width:auto !important;
 }
 //tripadvisior end
-.travel{
+.travel-wrapper{
    /*  transition: all 1s ease; */
-    
+margin-bottom:15px;
  
 }
 .travel:hover{
@@ -276,15 +276,18 @@ a:hover{
     left: 0;
     right: 0;
     visibility: visible !important;
-    padding: 20px 20px;
+    padding:10px 10px;
     background: rgba(0,0,0,0.1);
 }
 .travel-heading {
-  margin-left:30px;
-     border-left: 2px solid #ffffff;
+      margin-left:10px;
+}
+.travel-title{
+  margin-left:10px;
+  border-left: 2px solid #ffffff;
 }
 .travel-view{
-  margin-left:30px;
+  margin-left:20px;
 
 }
 .travel-view a:hover{
@@ -293,4 +296,8 @@ a:hover{
 .next{
   color:#ffffff !important;
 
+}
+.travel-tours{
+
+  color:#ffffff !important;
 }

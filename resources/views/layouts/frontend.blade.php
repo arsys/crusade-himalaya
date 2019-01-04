@@ -35,13 +35,21 @@
     <meta name="theme-color" content="#ffffff">
     {{-- favicon end --}}
     {{-- og start --}}
-
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Crusade Himalaya">
+    <meta property="og:description" content="Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.">
+    ">
+    <meta property="og:url" content="https://crusadehimalaya.com/">
+    <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
     {{-- og end --}}
     {{-- twitter card start --}}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@CrusadeHimalaya">
     <meta name="twitter:title" content="Crusade Himalaya">
-    <meta name="twitter:description" content="Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.">
+    <meta name="twitter:description" content="Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.
+    ">
+    <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+    <meta name="twitter:image:alt" content="Trekking in Himalayas">
     {{-- twitter card end --}}
     <title>Crusade Himalaya | Empower, Educate, Encourage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />

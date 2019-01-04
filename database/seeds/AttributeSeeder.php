@@ -22,23 +22,23 @@ class AttributeSeeder extends Seeder
      */
     public function run()
     {
-    	// $levels = array('Easy', 'Moderate','Difficult','Strenuous','Alpine');
-    	// foreach ($levels as $level) {
-    	// 	$difficulty = new Difficulty;
-    	// 	$difficulty->create([
-    	// 		'name'=> $level]);
-    	// }
-    	// $group = new Group;
-    	// $group->name = "Min.2-16 Max";
-    	// $group->save();
+    	$levels = array('Easy', 'Moderate','Difficult','Strenuous','Alpine');
+    	foreach ($levels as $level) {
+    		$difficulty = new Difficulty;
+    		$difficulty->create([
+    			'name'=> $level]);
+    	}
+    	$group = new Group;
+    	$group->name = "Min.2-16 Max";
+    	$group->save();
     	
-    	// $regions =  array('Everest Region','Annapurna Region', 'Manaslu Region', 'Langtang Region','Mustang Region', 'Off Beaten Path' );
-    	// foreach ($regions as $region) {
-    	// 	$name = new Region;
-    	// 	$name->name = $region;
-    	// 	$name->slug = str_slug($region, '-');
-    	// 	$name->save();
-    	// }
+    	$regions =  array('Everest Region','Annapurna Region', 'Manaslu Region', 'Langtang Region','Mustang Region', 'Off Beaten Path' );
+    	foreach ($regions as $region) {
+    		$name = new Region;
+    		$name->name = $region;
+    		$name->slug = str_slug($region, '-');
+    		$name->save();
+    	}
         // $faker = Faker\Factory::create();
         // for ($i = 1; $i <= 5; $i++) {
 
@@ -78,22 +78,22 @@ class AttributeSeeder extends Seeder
         //     $new->save();
         // }
 
-        // $members = array('Administration','Trekking Guide', 'Climbing Guide', 'Porter', 'Agent' , 'Others');
-        // foreach ($members as $member) {
-        //     $new = new Member;
-        //     $new->name = $member;
-        //     $new->save();
-        // }
-
-        $faker = Faker\Factory::create();
-        for ($i=1; $i <= 12 ; $i++) { 
-            $new = new Team;
-            $new->name = $faker->name;
-            $new->position = $faker->jobTitle;
-            $new->member_id = $faker->numberBetween($min = 1, $max = 6);
-            $new->description = $faker->paragraph($nbSentences = $faker->numberBetween($min = 4, $max = 6) , $variableNbSentences = true);
-            $new->avatar = $faker->imageUrl(200, 200, 'people');
+        $members = array('Administration','Trekking Guide', 'Climbing Guide', 'Porter', 'Agent' , 'Others');
+        foreach ($members as $member) {
+            $new = new Member;
+            $new->name = $member;
             $new->save();
         }
+
+        // $faker = Faker\Factory::create();
+        // for ($i=1; $i <= 12 ; $i++) { 
+        //     $new = new Team;
+        //     $new->name = $faker->name;
+        //     $new->position = $faker->jobTitle;
+        //     $new->member_id = $faker->numberBetween($min = 1, $max = 6);
+        //     $new->description = $faker->paragraph($nbSentences = $faker->numberBetween($min = 4, $max = 6) , $variableNbSentences = true);
+        //     $new->avatar = $faker->imageUrl(200, 200, 'people');
+        //     $new->save();
+        // }
     }
 }

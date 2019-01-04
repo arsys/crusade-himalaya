@@ -6,17 +6,17 @@
             <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
                 @foreach($categories as $category)
                 <li>
-                    <div class="uk-panel uk-animation-toggle">
+                    <div class="uk-panel travel home-img">
                         <a href="{{ route('fetchByCategory',$category->slug) }}">
-                            <img class="home-img" src="{{ asset($category->thumb) }}" alt="{{ $category->name }}">
+                            <img class=" travel-image" src="{{ asset($category->thumb) }}" alt="{{ $category->name }}">
                         </a>
-                        <div class="uk-position-bottom  travel  uk-animation-slide-top-medium " id="activity-title">
+                        <div class="uk-position-bottom  travel travel-overlay" id="activity-title">
                             <div class="uk-flex uk-flex-column  ">
-                                <div class="uk-flex uk-flex-row travel-wrapper">
-                                    <span class="travel-heading uk-flex uk-flex-column uk-width-4-5@l"><a class="travel-title" href="{{ route('fetchByCategory',$category->slug) }}">{{ $category->name }}</a></span>
-                                    <span class="travel-tours uk-flex uk-flex-column uk-width-1-5@l ">4 Tours</span>
+                                <div class="uk-flex uk-flex-row  travel-details fadeIn-bottom ">
+                                    <span class="travel-heading uk-flex uk-flex-column uk-width-4-5@l travel-title"><a class="travel-border" href="{{ route('fetchByCategory',$category->slug) }}">{{ $category->name }}</a></span>
+                                    <span class="travel-tours uk-flex uk-flex-column uk-width-1-5@l  travel-text">4 Tours</span>
                                 </div>
-                                <span class="travel-view"><a href="">View All tours </a></span>
+                                <span class="travel-view "><a href="">View All tours </a></span>
                             </div>
 
                         </div>

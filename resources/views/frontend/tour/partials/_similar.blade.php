@@ -1,5 +1,5 @@
-<div class="uk-container uk-text-center  home-tours uk-margin-medium-top uk-margin-medium-bottom">
-  	<h2 class="heading-primary uk-text-center uk-margin-medium-bottom"><span>Related Tours</span></h2>
+<div class="uk-container uk-text-center  home-tours uk-margin-medium-bottom" id="related-tours">
+  	<h2 class="heading-primary uk-text-center"><span>Related Tours</span></h2>
     <div class="uk-position-relative uk-visible-toggle uk-light">
         <ul class="uk-child-width-1-3@m uk-child-width-1-1@s  uk-grid-match  "  uk-grid>
             @foreach ($similars as $similar)

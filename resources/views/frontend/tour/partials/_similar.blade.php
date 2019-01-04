@@ -22,7 +22,7 @@
 							<span class="center-price"><sup>$</sup>{{ $similar->price }}</span>
 						</div>
 						<div class="uk-flex uk-flex-column center">
-							<a href="{{ route('trip.detail',$similar->slug) }}}" class="uk-button-default" >Discover </a>
+							<a href="{{ route('trip.detail',$similar->slug) }}}" class="uk-button-default discover" >Discover </a>
 						</div>								
 					</div>	
 				</div>

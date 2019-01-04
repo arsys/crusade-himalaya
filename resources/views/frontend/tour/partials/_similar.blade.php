@@ -15,7 +15,7 @@
 	                   	<div class="uk-overlay uk-overlay-default  uk-padding-medium " id="hp-wrapper">
 	                       	<div class="uk-flex uk-flex-center">
 	                           	<div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
-	                             	<a href="{{ route('trip.detail',$similar->slug) }}"><h4>{{ $similar->title }}</h4></a>
+	                             	<a href="{{ route('trip.detail',$similar->slug) }}"><h4 class="hp-days">{{ $similar->title }}</h4></a>
 	                           	</div>
 	                           	<div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
 	                               <span class="hp-days">{{ $similar->days }} Days</span>

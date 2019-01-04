@@ -114,7 +114,7 @@
   <li class="uk-box-shadow-small uk-padding uk-background-default">
     <a class="uk-accordion-title" href="#">Price & Availability</a>
     <div class="uk-accordion-content uk-animation-slide-top-medium">
-     @include ('frontend.tour.partials._price')
+     @include ('frontend.tour.partials._price-mobile')
  </div>
 </li>
 <!--Price & Availability end-->

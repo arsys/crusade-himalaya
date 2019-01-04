@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Tour;
+use App\Team;
 use App\TourCategory;
 use App\Carousel;
 use App\Itinerary;
@@ -10,29 +11,52 @@ use App\Insta;
 use App\Partner;
 use App\Event;
 use Calendar;
+use DB;
+
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function getIndex()
     {
-        $featureds = Tour::where('status',1)->where('featured',1)->take(4)->get();
+        $featureds = Tour::where('status',1)->where('featured',1)->take(6)->get();
         $categories = TourCategory::all();
         $carousels = Carousel::where('status' ,1)->get();
         $instaFeeds = Insta::take(10)->get();
         $partners = Partner::all();
+
+        $oddDestinations = DB::table('regions')
+        ->select(DB::raw('*'))
+        ->whereRaw('MOD(id, 2) = 1')
+        ->get();
+
+        $evenDestinations = DB::table('regions')
+        ->select(DB::raw('*'))
+        ->whereRaw('MOD(id, 2) = 0')
+        ->get();        
 
         return view('frontend.home')
         ->withCarousels($carousels)
         ->withCategories($categories)
         ->withFeatureds($featureds)
         ->withInstafeeds($instaFeeds)
-        ->withPartners($partners);
+        ->withPartners($partners)
+        ->withOdds($oddDestinations)
+        ->withEvens($evenDestinations);
     }
 
     public function getAbout()
     {
-        return view('frontend.about');
+        $teams = Team::whereHas('member', function ($r) {
+            $r->where('name', 'Administration');
+        })->get();
+        $others = Team::whereHas('member', function ($r) {
+            $r->whereNotIn('members.name', ['Administration']);
+        })->get();
+        dd($team->count());
+        return view('frontend.about')
+        ->withTeams($teams)
+        ->withOthers($others);
     } 
 
     public function truelyNepal()
@@ -48,20 +72,17 @@ class FrontendController extends Controller
 
     public function getContact()
     {
-       return view('frontend.contact'); 
-   }
-   public function getProduct()
-   {
+     return view('frontend.contact'); 
+ }
+ public function getProduct()
+ {
     return view('frontend.product');
 }
 public function getContact1()
 {
     return view('frontend.contact1');
 }
-public function getAbout1()
-{
-    return view('frontend.about1');
-}
+
 public function getCategory()
 {
     return view ('frontend.category');
@@ -90,9 +111,13 @@ public function getPackages(){
     return view('frontend.packages');
 }
 
-public function comingSoon()
+public function getComingSoon()
 {
     return view('frontend.comingsoon');
+}
+public function getPreloader()
+{
+    return view('frontend.preloader');
 }
 
     //Gets single product details
@@ -111,8 +136,9 @@ public function tourDetailtest($slug)
     $similars = Tour::whereHas('category', function ($r) use ($cat) {
         $r->where('tcategories.name', '=', $cat);
     })
+    ->whereNotIn('id', [$tour->id])
     ->orderByRaw('RAND()')
-    ->take(3)
+    ->take(4)
     ->get();
 
     // $reviews = Review::where('tour_id','=',$tour->id)
@@ -153,5 +179,16 @@ public function eventCalender()
     }
     $calendar = Calendar::addEvents($events);
     return view('frontend.calender', compact('calendar'));
+}
+
+public function ajaxsearchdeparture(Request $request)
+{
+    $tour = Tour::find($request->tour_id);
+    $departures = Departure::where('tour_id', '=', $request->tour_id)
+    ->whereMonth('start', '=', $request->month)
+    ->whereYear('start', '=', $request->year)
+    ->get();
+
+    return view('frontend.tour.partials.dates', compact('departures', 'tour'));
 }
 }

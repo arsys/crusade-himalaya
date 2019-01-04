@@ -89,12 +89,13 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::resource('/position', 'MemberController');
 });
 Route::name('frontend-')->group(function () {
-	Route::get('/','GetController@comingSoon');
+	// Route::get('/','GetController@comingSoon');
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 });
-Route::get('/', 'FrontendController@comingSoon');
+// Route::get('/', 'FrontendController@comingSoon');
+Route::get('/', 'FrontendController@getIndex');
 Route::get('/about', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
 Route::get('/product','FrontendController@getProduct');
@@ -114,11 +115,17 @@ Route::get('/slideshow','FrontendController@getSlideshow');
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
 });
+Route::prefix('ajax')->group(function () {
+	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');
+});
 Route::prefix('travel-style')->group(function () {
 	Route::get('{slug}','GetController@fetchByCategory')->name('fetchByCategory');
 	Route::get('{category}/{region}','GetController@region2package')->name('region2package');
 });
-
-Route::get('destination/{slug}','GetController@fetchByCategory')->name('fetchByRegion');
+Route::prefix('destination')->group(function () {
+	Route::get('{slug}','GetController@fetchByregion')->name('fetchByRegion');
+	Route::get('{destionation}/{category}','GetController@destination2package')->name('destionation2package');
+});
 Route::get('/destination','FrontendController@getDestination');
 Route::get('/packages','FrontendController@getPackages');
+Route::get('/preloader', 'FrontendController@getPreloader');

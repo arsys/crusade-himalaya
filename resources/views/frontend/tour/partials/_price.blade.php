@@ -1,29 +1,21 @@
 <div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">		
 	<div class="uk-container-expand ">
 		<div class="uk-card uk-card-default uk-card-body ">
-			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small">
-				<div class="search-wrapper">
-						<p>Please Check Available Dates for The Year:</p>
+			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small search-wrapper">
+				<div>
+					<p class="text-color">Please Check Available Dates for The Year:</p>
+					<input type="hidden" value="{{$tour->id}}" id="tour-id">
 				</div>
-				<div class="search-wrapper">
+				<div>
 					<select class="uk-select" id="travel-year">Select year
 						<option value="" disabled selected>Select year</option>
-						<option value="1">2018</option>
-						<option value="2">2019</option>
-						<option value="3">2020</option>
-						<option value="4">2021</option>
-						<option value="5">2022</option>
-						<option value="6">2023</option>
-						<option value="7">2024</option>
-						<option value="8">2025</option>
-						<option value="9">2026</option>
-						<option value="10">2027</option>
-						<option value="11">2028</option>
-						<option value="12">2029</option>
+						@for($i= date('Y'); $i <= date('Y')+2; $i++)
+						<option value="{{ $i }}">{{ $i }}</option>
+						@endfor
 					</select>
 				</div>
-				<div class="search-wrapper">
-					<select class="uk-select" id="travel-month">Select Month
+				<div>
+					<select class="uk-select text-color" id="travel-month">Select Month
 						<option value="" disabled selected>Select Month</option>
 						<option value="1">Jan</option>
 						<option value="2">Feb</option>
@@ -40,16 +32,16 @@
 					</select>
 				</div>
 				<div class="search-wrapper">
-					<button class="uk-button-default ">Search</button>
+					<a href="#" class="contact-button search-btn" id="find-dates">Search</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--table start-->
-	<div class="uk-overflow-auto uk-padding-large ">					
+	<div class="uk-overflow-auto">					
 		<table class="uk-table uk-table-hover uk-table-divider">
 			<thead>
-				<tr>
+				<tr class="table-wrapper">
 					<th>Start Date</th>
 					<th>End Date</th>
 					<th>Status</th>
@@ -57,28 +49,18 @@
 					<th></th>
 				</tr>
 			</thead>
-			<tbody>
+			{{-- <div id="ajaxloader" style="display: none;">Loading...</div> --}}
+			<span uk-spinner="ratio: 3" class="ajaxloader" style="display: none;" ></span>
+			<tbody class="ajaxloadmoredeparture">
+				@foreach($departures as $departure)
 				<tr>
-					<td>Date</td>
-					<td>Date</td>
-					<td>available</td>
-					<td>$1200</td>
-					<td> <a class="uk-button btn" href="/bookingstep1">Book Now</a></td>
+					<td class="text-color">{{ date("jS M, Y", strtotime($departure->start))}}</td>
+					<td class="text-color">{{ date("jS M, Y", strtotime($departure->end))}}</td>
+					<td class="text-color">{{$departure->slot}} space left</td>
+					<td class="text-color">USD {{$departure->price}}</td>
+					<td class="text-color"><a class="uk-button btn" href="/bookingstep1">Book Now</a></td>
 				</tr>
-				<tr>
-					<td>Date</td>
-					<td>Date</td>
-					<td>available</td>
-					<td>$1200</td>
-					<td> <a class="uk-button btn" href="/bookingstep1">Book Now</a></td>
-				</tr>
-				<tr>
-					<td>Date</td>
-					<td>Date</td>
-					<td>available</td>
-					<td>$1200</td>
-					<td> <a class="uk-button btn" href="/bookingstep1">Book Now</a></td>
-				</tr>
+				@endforeach
 			</tbody>
 		</table>
 	</div>	

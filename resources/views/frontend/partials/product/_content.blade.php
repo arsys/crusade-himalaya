@@ -22,7 +22,7 @@
 			<!-- pricing end -->
 			<!-- review start -->
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom uk-margin-small-top" id="review">
-				<h3 class=""><span>Review</span></h3> 
+				<h3 class=""><span>Gallary</span></h3> 
 				 @include ('frontend.partials.product.content._review')  
 			</div>
 			<!-- 	review end -->

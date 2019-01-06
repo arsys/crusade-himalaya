@@ -39,6 +39,13 @@ class AttributeSeeder extends Seeder
     		$name->slug = str_slug($region, '-');
     		$name->save();
     	}
+
+        $categories = array('Trekking','Climbing', 'Heli Tour', 'Weekend Tour', 'Ski', 'Adventure Sport');
+        foreach ($categories as $category) {
+            $name = new TourCategory;
+            $name->name = $category;
+            $name->save();
+        }
         // $faker = Faker\Factory::create();
         // for ($i = 1; $i <= 5; $i++) {
 

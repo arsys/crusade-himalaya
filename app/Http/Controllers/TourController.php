@@ -350,20 +350,22 @@ class TourController extends Controller
 
     }    
 
-    public function moveTotrash(Tour $tour)
+    public function moveTotrash($id)
     {
-    	$tour->trash = 1;
-    	$tour->save();
-    	Session::flash('warning', 'Tour move to Trash !');
-    	return redirect()->route('tour.index');
+        DB::table('tours')
+        ->where('id', $id)
+        ->update(['trash' => 1]);
+        Session::flash('warning', 'Tour move to Trash !');
+        return redirect()->route('tour.index');
     }
 
-    public function removeFromtrash(Tour $tour)
+    public function removeFromtrash($id)
     {
-    	$tour->trash = 0;
-    	$tour->save();
-    	Session::flash('info', 'Tour remove to Trash !');
-    	return redirect()->route('tour.index');
+        DB::table('tours')
+        ->where('id', $id)
+        ->update(['trash' => 0]);
+        Session::flash('info', 'Tour remove to Trash !');
+        return redirect()->route('tour.index');
     }    
 
     public function viewTrash()

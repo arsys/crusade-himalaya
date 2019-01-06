@@ -17,7 +17,7 @@
               <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($dos as $do)
                 <li>
-                  <h5>{{ $do->name }} </h5>
+                  <h5><a href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }} </a></h5>
                   <a href="{{ route('fetchByCategory',$do->slug) }}"><img src="{{ asset($do->nav) }}" alt="{{ $do->name }}"></a>
                 </li>
                 @endforeach
@@ -35,7 +35,7 @@
               <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($wheres as $where)
                 <li>
-                  <h5>{{ $where->name }} </h5>
+                  <h5><a href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></h5>
                   <a href="{{ route('fetchByRegion',$where->slug) }}"><img src="{{ asset($where->nav) }}" alt="{{ $where->name }}"></a>
                 </li>
                 @endforeach

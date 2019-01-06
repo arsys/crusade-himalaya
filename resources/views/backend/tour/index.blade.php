@@ -82,15 +82,11 @@
                                <i class="fa fa-star" aria-hidden="true"></i> Remove as Featured
                            </a>
                            @endif
-                           <a href="{{ route('move.trash',$tour->id)}}"
-                            class="btn btn-block btn-sm ink-reaction btn-danger">
-                            <i class="fas fa-trash-alt" aria-hidden="true"></i> Trash
-                        </a>
-{{--                          {!!  Form::open( array('route'=>array('tour.destroy', $tour->id),'method'=>'DELETE')) !!}
+                         {!!  Form::open( array('route'=>array('tour.destroy', $tour->id),'method'=>'DELETE')) !!}
                          <button type="submit" class="btn btn-block btn-sm ink-reaction btn-danger form-delete">
                             <i class="fas fa-trash-alt" aria-hidden="true"></i> Delete
                         </button>
-                        {!! Form::close() !!} --}}
+                        {!! Form::close() !!}
                     </th>
                 </tr>
                 @endforeach

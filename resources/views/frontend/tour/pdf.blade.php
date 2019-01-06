@@ -89,10 +89,8 @@
 			</div>
 			<div class="row">
 				@foreach($tour->itinerary as $itinerary)
-				<div class="panel panel-default">
-					<div class="panel-heading">Day {{$itinerary->day}}: {{ $itinerary->title }}</div>
-					<div class="panel-body">{{ $itinerary->plan }}</div>
-				</div>
+				<h4>Day {{$itinerary->day}}: {{ $itinerary->title }}</h4>				
+				{!! $itinerary->plan !!}
 				@endforeach
 			</div>
 		</div>

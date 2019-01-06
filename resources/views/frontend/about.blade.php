@@ -4,7 +4,7 @@
 @include ('frontend.partials.about._image')
 <!-- image end -->
 <!-- about us start-->
-@include ('frontend.partials.about._about')
+@include ('frontend.partials.about._content')
 <!-- about us end-->
 <!-- guide start -->
 @include ('frontend.partials.about._guide')

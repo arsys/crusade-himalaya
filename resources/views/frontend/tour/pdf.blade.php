@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="{{ asset('css/pdf/main.min.css') }}" media="all">
 	<style>
 	body{
-		color: #333;
+		color: #333 !important;
 	}
 	.container-fluid{
 		background-color: white !important

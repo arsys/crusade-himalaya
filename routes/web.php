@@ -114,6 +114,7 @@ Route::get('/slideshow','FrontendController@getSlideshow');
 
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
+	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');

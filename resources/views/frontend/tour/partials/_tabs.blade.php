@@ -5,11 +5,11 @@
 		<div class="uk-flex uk-flex-column sticky-price" id="product-price">
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom text-color">		
 				<span class="top"> 
-					15 Days
+					{{ $tour->days }} Days
 				</span>
 				<span class="middle uk-flex uk-flex-column ">
 					<span class="middle-1">From USD</span>
-					<span class="middle-2"> <sup>$</sup> 1500</span>
+					<span class="middle-2"> <sup>$</sup> {{ $tour->price }}</span>
 				</span>
 				<span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column" uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
 					
@@ -83,7 +83,9 @@
 								<i class="fas fa-tasks"></i>
 							</div>
 							<div>
-								<a class="uk-link-text uk-link-reset" href="#"><span>Download Itinary</span></a>
+								<a class="uk-link-text uk-link-reset" href="{{ route('trip.download',$tour->slug) }}">
+									<span>Download Itinary</span>
+								</a>
 							</div>
 						</div>
 					</li>

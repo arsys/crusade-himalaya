@@ -21,22 +21,7 @@
 	<div class="container-fluid">
 		<div class="tab-pane active" id="overview">
 			<div class="row">
-				<div class="col-sm-6 col-lg-6 col-md-6">
-					<h3>{{ $tour->title }}</h3>
-					<h4>What's included ?</h4>
-					<ul class="included">
-						@foreach($tour->includes as $included)
-						<li>{{$included->name}}</li>
-						@endforeach
-					</ul>
-					<h4>What's excluded ?</h4>
-					<ul class="excluded">
-						@foreach($tour->excludes as $excluded)
-						<li>{{$excluded->name}}</li>
-						@endforeach
-					</ul> 
-				</div>
-				<div class="col-sm-6 col-lg-6 col-md-6">
+								<div class="col-sm-6 col-lg-6 col-md-6">
 					<div class="border-box">
 						<br>
 						<div class="box-title">Trip Overview</div>
@@ -85,6 +70,21 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+				<div class="col-sm-6 col-lg-6 col-md-6">
+					<h3>{{ $tour->title }}</h3>
+					<h4>What's included ?</h4>
+					<ul class="included">
+						@foreach($tour->includes as $included)
+						<li>{{$included->name}}</li>
+						@endforeach
+					</ul>
+					<h4>What's excluded ?</h4>
+					<ul class="excluded">
+						@foreach($tour->excludes as $excluded)
+						<li>{{$excluded->name}}</li>
+						@endforeach
+					</ul> 
 				</div>
 			</div>
 		</div>

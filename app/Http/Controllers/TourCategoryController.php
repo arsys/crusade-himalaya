@@ -73,7 +73,7 @@ class TourCategoryController extends Controller
             $nav = $uploadImage->uploadSingle($this->nav,$media->path,300,200);
             $categories->path = $path;
             $categories->thumb = $thumb;
-            $category->nav = $nav;
+            $categories->nav = $nav;
 
             $categories->save();
         } catch (QueryException $e) {

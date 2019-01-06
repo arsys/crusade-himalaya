@@ -352,18 +352,18 @@ class TourController extends Controller
 
     public function moveTotrash($id)
     {
-        DB::table('tours')
-        ->where('id', $id)
-        ->update(['trash' => 1]);
+        $tour = Tour::find($id);
+        $tour->trash = 1;
+        $tour->save();
         Session::flash('warning', 'Tour move to Trash !');
         return redirect()->route('tour.index');
     }
 
     public function removeFromtrash($id)
     {
-        DB::table('tours')
-        ->where('id', $id)
-        ->update(['trash' => 0]);
+        $tour = Tour::find($id);
+        $tour->trash = 0;
+        $tour->save();
         Session::flash('info', 'Tour remove to Trash !');
         return redirect()->route('tour.index');
     }    

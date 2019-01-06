@@ -7,6 +7,7 @@ use App\Region;
 use App\TourCategory;
 use Vinkla\Instagram\Instagram;
 use Illuminate\Http\Request;
+use PDF;
 
 class GetController extends Controller
 {
@@ -110,5 +111,11 @@ class GetController extends Controller
 	}
 
 
-
+	public function downloadPDF($slug)
+	{
+		$tour = Tour::where('slug','=' $slug)->first();
+		return view('frontend.tour.pdf')->withTour($tour);
+		// $pdf = PDF::loadView('pdf', compact('user'));
+		// return $pdf->download('invoice.pdf');
+	}
 }

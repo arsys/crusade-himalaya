@@ -4,10 +4,8 @@
 		<h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">Lorem ipsum dolor sit amet.</h3>
 		<div class="breadcrumb ">
 			<ul class="uk-breadcrumb" id="breadcrumb">
-				<li><a href="#">list</a></li>
-				<li><a href="#">list</a></li>
-				<li class="uk-disabled"><a>Disabled</a></li>
-				<li><span>Active</span></li>
+				<li><a href="/" uk-icon="icon: home" ></a></li>
+				<li class="uk-disabled"><a href="{{ url()->current() }}">About</a></li>
 			</ul>
 		</div>
 	</div>

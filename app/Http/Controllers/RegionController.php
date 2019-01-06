@@ -66,7 +66,7 @@ class RegionController extends Controller
         $UploadImage = new UploadImage;
         $path = $UploadImage->uploadSingle($this->path,$media->path,1024,512);
         $thumb = $UploadImage->uploadSingle($this->thumb,$media->path,800,400);
-        $nav = $UploadImage->uploadSingle($this->nav,$media->path,300,2000);
+        $nav = $UploadImage->uploadSingle($this->nav,$media->path,300,200);
         $region->path = $path;
         $region->thumb = $thumb;
         $region->nav = $nav;
@@ -127,7 +127,7 @@ class RegionController extends Controller
             $UploadImage = new UploadImage;
             $path = $UploadImage->uploadSingle($this->path,$media->path,1024,512);
             $thumb = $UploadImage->uploadSingle($this->thumb,$media->path,800,400);
-            $nav = $UploadImage->uploadSingle($this->nav,$media->path,300,2000);
+            $nav = $UploadImage->uploadSingle($this->nav,$media->path,300,200);
             $region->path = $path;
             $region->thumb = $thumb;
             $region->nav = $nav;

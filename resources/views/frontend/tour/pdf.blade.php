@@ -19,9 +19,9 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="tab-pane active" id="overview">
+		<div class="tab-panel active" id="overview">
 			<div class="row">
-								<div class="col-sm-6 col-lg-6 col-md-6">
+				<div class="col-sm-6 col-lg-6 col-md-6">
 					<div class="border-box">
 						<br>
 						<div class="box-title">Trip Overview</div>
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-6 col-md-6">
-					<h3>{{ $tour->title }}</h3>
+					<h3>{{ $tour->days }} Days {{ $tour->title }}</h3>
 					<h4>What's included ?</h4>
 					<ul class="included">
 						@foreach($tour->includes as $included)
@@ -86,6 +86,14 @@
 						@endforeach
 					</ul> 
 				</div>
+			</div>
+			<div class="row">
+				@foreach($tour->itinerary as $itinerary)
+				<div class="panel panel-default">
+					<div class="panel-heading">Day {{$itinerary->day}}: {{ $itinerary->title }}</div>
+					<div class="panel-body">{{ $itinerary->plan }}</div>
+				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>

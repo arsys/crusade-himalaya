@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="{{ asset('css/pdf/bootstrap.css') }}" media="all">
-	<link rel="stylesheet" href="{{ asset('css/pdf/font/iconfont/iconstyle.css') }}" media="all">
-	<link rel="stylesheet" href="{{ asset('css/pdf/font/font-awesome/css/font-awesome.css') }}" media="all">
-	<link rel="stylesheet" href="{{ asset('css/pdf/main.css') }}" media="all">
+	<link rel="stylesheet" href="{{ asset('css/pdf/bootstrap.min.css') }}" media="all">
+	<link rel="stylesheet" href="{{ asset('css/pdf/iconfont/iconstyle.css') }}" media="all">
+	<link rel="stylesheet" href="{{ asset('css/pdf/font-awesome/css/font-awesome.css') }}" media="all">
+	<link rel="stylesheet" href="{{ asset('css/pdf/main.min.css') }}" media="all">
 </head>
 <body>
 	<div class="container">

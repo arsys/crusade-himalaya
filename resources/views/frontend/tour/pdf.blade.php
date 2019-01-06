@@ -22,6 +22,7 @@
 		<div class="tab-panel active" id="overview">
 			<div class="row">
 				<div class="col-sm-6 col-lg-6 col-md-6">
+					<h3>{{ $tour->days }} Days {{ $tour->title }}</h3>
 					<div class="border-box">
 						<br>
 						<div class="box-title">Trip Overview</div>
@@ -72,7 +73,6 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-6 col-md-6">
-					<h3>{{ $tour->days }} Days {{ $tour->title }}</h3>
 					<h4>What's included ?</h4>
 					<ul class="included">
 						@foreach($tour->includes as $included)

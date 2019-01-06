@@ -88,10 +88,12 @@
 				</div>
 			</div>
 			<div class="row">
-				@foreach($tour->itinerary as $itinerary)
-				<h4>Day {{$itinerary->day}}: {{ $itinerary->title }}</h4>				
-				{!! $itinerary->plan !!}
-				@endforeach
+				<div class="col-lg-12">
+					@foreach($tour->itinerary as $itinerary)
+					<h4>Day {{$itinerary->day}}: {{ $itinerary->title }}</h4>				
+					{!! $itinerary->plan !!}
+					@endforeach
+				</div>
 			</div>
 		</div>
 	</div>

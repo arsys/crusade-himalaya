@@ -116,6 +116,6 @@ class GetController extends Controller
 		$tour = Tour::where('slug','=', $slug)->first();
 		// return view('frontend.tour.pdf')->withTour($tour);
 		$pdf = PDF::loadView('frontend.tour.pdf', compact('tour'));
-		return $pdf->download('invoice.pdf');
+		return $pdf->download($tour->title'.pdf');
 	}
 }

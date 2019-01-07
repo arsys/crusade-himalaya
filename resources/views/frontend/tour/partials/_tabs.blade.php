@@ -38,7 +38,7 @@
 								<i class="fas fa-envelope"></i>   
 							</div>
 							<div>
-								<a href="#modal-refer-friend" class="uk-link-text uk-link-reset"><span>Email a friend</span></a>
+								<a href="#modal-refer-friend" class="uk-link-text uk-link-reset" uk-toggle><span>Email a friend</span></a>
 								@include('frontend.tour.partials.modal._refer')
 							</div>
 						</div>

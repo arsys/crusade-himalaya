@@ -126,8 +126,11 @@ a:hover{
 }
 //featured us end
 //tour start
+.similar-wrapper{
+  padding:0px 0px !important;
+}
 #hp-wrapper{
-  padding:15px 15px;
+  padding:15px 15px !important;
 }
 .hp-meta{
   .hp-product{
@@ -223,25 +226,7 @@ a:hover{
   height:auto;
 }
 //follow end
-@media (max-width:640px){
-  .travel-heading{
-    font-size:16px;
-   
-  }
-}
-.home-img{
-    background-size: cover;
-  background-position: center;
-  transition: all 5s ease;
-}
-.home-img:hover
-{
-  transform: scale(1.1);
-}
-.tour-wrapper {
-    overflow: hidden;
-  cursor: pointer;
-}
+
 //tour image animation start
 .tour-img {
     height: 100%;
@@ -266,25 +251,49 @@ a:hover{
   width:auto !important;
 }
 //tripadvisior end
-.travel-wrapper{
-   /*  transition: all 1s ease; */
-margin-bottom:15px;
+//travel-style start
+.travel .travel-overlay {
+  background: rgba(0,0,0,0.1);
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  left: 0;
+/*   top: 0; */
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.travel:hover .travel-overlay{
+  opacity: 1;
+    height: 20%;
+}
+.travel-details {
+  position: absolute;
+  text-align: center;
  
+  width: 100%;
+  top: 20%;
+  left: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
 }
-.travel:hover{
-    bottom: 0;
-    left: 0;
-    right: 0;
-    visibility: visible !important;
-    padding:10px 10px;
-    background: rgba(0,0,0,0.1);
+
+.travel:hover .travel-details{
+  top: 70%;
+  left: 50%;
+  opacity: 1;
 }
-.travel-heading {
-      margin-left:10px;
-}
-.travel-title{
-  margin-left:10px;
-  border-left: 2px solid #ffffff;
+.fadeIn-bottom{
+  top: 80%;
 }
 .travel-view{
   margin-left:20px;
@@ -293,11 +302,48 @@ margin-bottom:15px;
 .travel-view a:hover{
   color:$green;
 }
+.travel-title{
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  width:60% !important;
+ 
+  
+  text-transform: uppercase;
+   
+}
+.travel-border{
+    border-left: 2px solid #ffffff;
+    margin-left:18px;
+}
+
+
+.travel-text{
+  color: #fff;
+  font-size: 0.8em;
+}
 .next{
   color:#ffffff !important;
 
 }
-.travel-tours{
 
-  color:#ffffff !important;
+@media (max-width:640px){
+  .travel-heading{
+    font-size:16px;
+   
+  }
 }
+.home-img{
+    background-size: cover;
+  background-position: center;
+  transition: all 5s ease;
+}
+.home-img:hover
+{
+  transform: scale(1.1);
+}
+.tour-wrapper {
+    overflow: hidden;
+  cursor: pointer;
+}
+//travel-style end

@@ -26,7 +26,7 @@
 							<div>
 								<a href="#modal-quick-enquiry" class="uk-link-text uk-link-reset" uk-toggle>Quick Enquiry</a>
 								<!-- This is the modal -->
-								@include('fronend.tour.partials.modal._enquiry')
+								@include('frontend.tour.partials.modal._enquiry')
 								<!--modal end-->
 							</div>
 						</div>
@@ -39,7 +39,7 @@
 							</div>
 							<div>
 								<a href="#modal-refer-friend" class="uk-link-text uk-link-reset"><span>Email a friend</span></a>
-								@include('fronend.tour.partials.modal._refer')
+								@include('frontend.tour.partials.modal._refer')
 							</div>
 						</div>
 					</li>

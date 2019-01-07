@@ -7,6 +7,7 @@ use Mail;
 use Validator;
 use App\Mail\Contact;
 use App\Mail\QuickEnquiry;
+use App\Mail\Refer;
 use Session;
 class PostController extends Controller
 {
@@ -63,4 +64,35 @@ class PostController extends Controller
         }
         return response()->json(['error'=>$validator->errors()->all()]);
     }
+
+    public function referFriend(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'fname' => 'required',
+            'lname' => 'required',
+            'myEmail' => 'required|email',
+            'comment' => 'required',
+            'sendTo1' => 'required|email'
+        ]);
+        if ($validator->passes()) {
+            $data = array(
+                'name' => $request->fname.''.$request->lname,
+                'sender' => $request->myEmail,
+                'receiver' => $request->myEmail,
+                'bodyMessage' => $request->comment,
+            );
+            if(isset($request->sendTo2)) {
+             $data['receiver2'] = $request->sendTo2;
+         }
+         if(isset($request->sendTo3)) {
+             $data['receiver3'] = $request->sendTo3;
+         }
+         if(isset($request->copy)) {
+             $data['copy'] = $request->copy;
+         }
+         Mail::send(new Refer($data));
+         return response()->json(['success'=>'Mail sent sucessfully.']);
+     }
+     return response()->json(['error'=>$validator->errors()->all()]);
+ }    
 }

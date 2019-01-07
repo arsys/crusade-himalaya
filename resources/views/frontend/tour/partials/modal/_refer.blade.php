@@ -5,7 +5,11 @@
 			<h5 class="uk-modal-title">Refer a friend</h5>
 		</div>
 		<div class="uk-modal-body">
-			<form action="#" id="refer-friend" class="uk-form-stacked">
+			<div class="uk-alert-danger print-error-msg uk-alert" id="response-msg" style="display: none;">
+				<ul class="uk-list">
+				</ul>
+			</div>
+			<form action="{{ route('frontend-referFriend') }}" id="refer-friend" class="uk-form-stacked">
 				<div uk-grid>
 					<div class="uk-width-1-2">
 						<div class="uk-margin">
@@ -35,25 +39,22 @@
 						<h6>Send to</h6>
 						<div class="uk-margin">
 							<div class="uk-width-1-1">
-								<label class="uk-form-label" for="form-stacked-text">To:</label>
 								<input class="uk-input" placeholder="Enter email 1 (Required)" type="email" name="sendTo1" required>
 							</div>
 						</div>
 						<div class="uk-margin">
 							<div class="uk-width-1-1">
-								<label class="uk-form-label" for="form-stacked-text">Email</label>
 								<input class="uk-input" placeholder="Enter email 2" type="email" name="sendTo2">
 							</div>
 						</div>
 						<div class="uk-margin">
 							<div class="uk-width-1-1">
-								<label class="uk-form-label" for="form-stacked-text">Email</label>
 								<input class="uk-input" placeholder="Enter email 3" type="email" name="sendTo3">
 							</div>
 						</div>
 					</div>
 				</div>
-				<button class="uk-button uk-button-primary send-refer uk-width-1-1" type="submit">Send</button>
+				<button class="uk-button uk-margin-small uk-button-primary send-refer uk-width-1-1" type="submit">Send</button>
 			</form>
 		</div>
 	</div>

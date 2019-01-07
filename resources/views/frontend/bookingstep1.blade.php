@@ -1,23 +1,23 @@
 @extends('layouts.frontend')
 @section('content')
 <!-- booking step start -->
- <div class="uk-container uk-container-expand  uk-padding-large booking">
+ <div class="uk-container uk-container-expand  uk-padding-large booking-step">
    <div class="uk-text-center uk-process-step" uk-grid>
-     <div class="uk-width-1-3 step circle">
+     <div class="uk-width-1-3 steps circle">
        <div class="circle-text ">
-         <i class="medium material-icons">Step 1</i>
+         <i class="medium material-icons">steps 1</i>
        </div>
        <p class="center-align  uk-margin-top">Choose Your Trip</p>
      </div>
-     <div class="uk-width-1-3 step ">
+     <div class="uk-width-1-3 steps ">
        <div class="circle-text a">
-         <i class="medium material-icons">Step 2</i>
+         <i class="medium material-icons">steps 2</i>
        </div>
        <p class="center-align uk-margin-top ">Request for reservation</p>
      </div>
-     <div class="uk-width-1-3 step">
+     <div class="uk-width-1-3 steps">
        <div class="circle-text ">
-         <i class="medium material-icons">Step 3</i>
+         <i class="medium material-icons">steps 3</i>
        </div>
        <p class="center-align  uk-margin-top">Successfully</p>
      </div>
@@ -58,7 +58,7 @@
                 </div>
         </div>
         <div class="uk-margin">
-            <a href="/bookingform" class=" uk-button-default">Next</a>
+            <a href="/bookingform" class=" uk-button">Next</a>
         </div>
     </form>
 </div>

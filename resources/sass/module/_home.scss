@@ -147,7 +147,7 @@ a:hover{
 }
 //tour end
 //destination overlay text start
-.destination {
+/* .destination {
   position: relative;
  
 }
@@ -165,7 +165,7 @@ a:hover{
   justify-content: center;
 
 
-  /* transition effect. not necessary */
+  transition effect. not necessary
   transition: opacity .2s, visibility .2s;
 }
 
@@ -185,7 +185,7 @@ a:hover{
 .destination:hover .dest-title{
  transform: translateY(0);
 }
-
+ */
 //destinationn overlay text end
 .hp-link{
   color:#666!important;
@@ -228,26 +228,6 @@ a:hover{
   height:auto;
 }
 //follow end
-
-//tour image animation start
-.tour-img {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-transition: all 10s;
-    -moz-transition: all 10s;
-    -o-transition: all 10s;
-    transition: all 10s;
-}
-.tour-img:hover {
-    -ms-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-}
-//tour image animation end
 //tripadvisior start
 #CDSWIDSSP{
   width:auto !important;
@@ -274,17 +254,6 @@ a:hover{
   opacity: 1;
   height: 25%;
 }
-/* .travel-details {
-position: absolute;
-
-width: 100%;
-top: 50%;
-left: 50%;
-opacity: 1;
-  transform: translate(-50%, -50%);
-transition: all 0.3s ease-in-out 0s;
-} */
-
 .uk-heading-bullet::before{
  border-left-color:rgba(255,255,255,.9) !important;
  margin-left:4px;

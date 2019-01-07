@@ -7,8 +7,8 @@
 			
 			@for ($i = 1; $i <= 4; $i++)
 				<div class="uk-card uk-card-default uk-text-center ">
-					<div class="uk-inline-clip uk-transition-toggle" tabindex="0" id="similar-tours-img">
-						<a href="#"><img src="{{asset('img/Tours/annapurna.jpg')}}" alt=""></a>
+					<div class=" uk-overflow-hidden" id="similar-tours-img">
+						<a href="#"><img class="uk-animation-reverse uk-transform-origin-top-right" uk-scrollspy="cls: uk-animation-kenburns; repeat: true" src="{{asset('img/Tours/annapurna.jpg')}}" alt=""></a>
 						<div class="uk-position-bottom" id="meta-title">
 							<a href="#"><h4>Package Title</h4></a>
 						</div>

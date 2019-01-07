@@ -27,7 +27,7 @@
                                 <i class="fas fa-envelope"></i>   
                             </div>
                             <div>
-                                <a href="#" class="uk-link-text uk-link-reset">Email a friend</a>
+                                <a href="#modal-refer-friend" class="uk-link-text uk-link-reset" uk-toggle>Email a friend</a>
                             </div>
                         </div>
                     </li>

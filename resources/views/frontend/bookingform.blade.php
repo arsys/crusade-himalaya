@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <button class="uk-button-default">Submit</button>
+                    <button class="uk-button uk-button">Submit</button>
                 </div>
             </form>
         </div>

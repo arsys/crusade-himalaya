@@ -92,6 +92,7 @@ Route::name('frontend-')->group(function () {
 	// Route::get('/','GetController@comingSoon');
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
+	Route::post('/refer-a-friend','PostController@referFriend')->name('referFriend');
 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 });
 // Route::get('/', 'FrontendController@comingSoon');

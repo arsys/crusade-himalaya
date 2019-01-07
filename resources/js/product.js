@@ -70,6 +70,38 @@ window.addEventListener("load", function(){
 				}
 			});
 		});
+		$('#refer-friend').on('submit', function(e){
+			e.preventDefault();
+			$(".send-refer").prop("disabled", true);
+			data = $(this).serialize();
+			action = $(this).attr('action');
+			$.ajax({
+				type: 'POST',
+				url: action,
+				data: data,
+				headers: {
+					"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+				},
+				success: function (data) {
+					if($.isEmptyObject(data.error))
+					{
+						$("#refer-friend").trigger("reset");
+						$('.print-error-msg').find('ul').empty();
+						$('.print-error-msg').css('display','block');
+						$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
+						$('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");
+						setTimeout(function() {
+							$('.print-error-msg').fadeOut();
+							$(".send-refer").prop("disabled", false);
+							UIkit.modal("#modal-refer-friend").hide();
+						}, 3000);
+					}
+					else{
+						printMessageErrors(data.error);
+					}
+				}
+			});
+		});
 		function printMessageErrors(msg){
 			$('.print-error-msg').find('ul').empty();
 			$('.print-error-msg').css('display','block');

@@ -7,7 +7,7 @@
             <li class="uk-margin-small-bottom">
                 <div class="uk-card uk-card-default ">
                     <div class="uk-card-media-top tour-wrapper">
-                        <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><img class="tour-img"   src="{{ asset($featured->image->thumb) }}" alt="{{ $featured->slug }}"></a>
+                        <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><img    src="{{ asset($featured->image->thumb) }}" alt="{{ $featured->slug }}"></a>
                         <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
                             <span class="price">
                                 <span>USD ${{ $featured->price }}</span>

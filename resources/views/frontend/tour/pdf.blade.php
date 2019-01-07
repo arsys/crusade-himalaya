@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="{{ asset('css/pdf/main.min.css') }}" media="all">
 	<style>
 	body{
-		color: #333;
+		color: #333 !important;
 	}
 	.container-fluid{
 		background-color: white !important
@@ -19,24 +19,10 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="tab-pane active" id="overview">
+		<div class="tab-panel active" id="overview">
 			<div class="row">
 				<div class="col-sm-6 col-lg-6 col-md-6">
-					<h3>{{ $tour->title }}</h3>
-					<h4>What's included ?</h4>
-					<ul class="included">
-						@foreach($tour->includes as $included)
-						<li>{{$included->name}}</li>
-						@endforeach
-					</ul>
-					<h4>What's excluded ?</h4>
-					<ul class="excluded">
-						@foreach($tour->excludes as $excluded)
-						<li>{{$excluded->name}}</li>
-						@endforeach
-					</ul> 
-				</div>
-				<div class="col-sm-6 col-lg-6 col-md-6">
+					<h3>{{ $tour->days }} Days {{ $tour->title }}</h3>
 					<div class="border-box">
 						<br>
 						<div class="box-title">Trip Overview</div>
@@ -85,6 +71,28 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+				<div class="col-sm-6 col-lg-6 col-md-6">
+					<h4>What's included ?</h4>
+					<ul class="included">
+						@foreach($tour->includes as $included)
+						<li>{{$included->name}}</li>
+						@endforeach
+					</ul>
+					<h4>What's excluded ?</h4>
+					<ul class="excluded">
+						@foreach($tour->excludes as $excluded)
+						<li>{{$excluded->name}}</li>
+						@endforeach
+					</ul> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					@foreach($tour->itinerary as $itinerary)
+					<h4>Day {{$itinerary->day}}: {{ $itinerary->title }}</h4>				
+					{!! $itinerary->plan !!}
+					@endforeach
 				</div>
 			</div>
 		</div>

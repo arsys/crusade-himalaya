@@ -54,7 +54,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="uk-button uk-button-primary send-refer uk-width-1-1" type="submit">Send</button>
+				<button class="uk-button uk-margin-small uk-button-primary send-refer uk-width-1-1" type="submit">Send</button>
 			</form>
 		</div>
 	</div>

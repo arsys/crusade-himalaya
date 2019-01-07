@@ -137,10 +137,12 @@ a:hover{
     text-transform:  capitalize;
     font-weight:bold;
     color:$dark;
+    margin:10px !important;
   }
   .hp-days{
     font-weight:bold;
      color:$dark;
+     margin:10px !important;
   }
 }
 //tour end
@@ -252,100 +254,6 @@ a:hover{
 }
 //tripadvisior end
 //travel-style start
-/* .travel .travel-overlay {
-  background: rgba(0,0,0,0.1);
-  position: absolute;
-  height: 15%;
-  width: 100%;
-  left: 0;
-top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 1;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
-}
-
-.travel:hover .travel-overlay{
-  opacity: 1;
-    height: 20%;
-}
-.travel-details {
-  position: absolute;
-  text-align: center;
- 
-  width: 100%;
-  top: 20%;
-  left: 50%;
-  opacity: 1;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.travel:hover .travel-details{
-  top: 70%;
-  left: 50%;
-  opacity: 1;
-}
-.fadeIn-bottom{
-  top: 80%;
-}
-.travel-view{
-  margin-left:20px;
-
-}
-.travel-view a:hover{
-  color:$green;
-}
-.travel-title{
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  width:60% !important;
- 
-  
-  text-transform: uppercase;
-   
-}
-.uk-heading-bullet::before{
- border-left-color:rgba(255,255,255,.9) !important;
-}
-
-
-.travel-text{
-  color: #fff;
-  font-size: 0.8em;
-}
-.next{
-  color:#ffffff !important;
-
-}
-
-@media (max-width:640px){
-  .travel-heading{
-    font-size:16px;
-   
-  }
-}
-.home-img{
-    background-size: cover;
-  background-position: center;
-  transition: all 5s ease;
-}
-.home-img:hover
-{
-  transform: scale(1.1);
-}
-.tour-wrapper {
-    overflow: hidden;
-  cursor: pointer;
-} */
-//travel-style end
 .travel-wrapper {
   position: relative;
   overflow: hidden;
@@ -354,7 +262,7 @@ top: 0;
 .travel-wrapper .travel-overlay {
   background: rgba(0,0,0,0.1);
   position: absolute;
-  height: 15%;
+  height: 20%;
   width: auto;
   left: 0;
   bottom: 0;
@@ -364,48 +272,28 @@ top: 0;
 }
 .travel-wrapper:hover .travel-overlay{
   opacity: 1;
-  height: 20%;
+  height: 25%;
 }
-.travel-wrapper a{
-    overflow: hidden;
-    float:left;
-}
+/* .travel-details {
+position: absolute;
 
-.travel-details {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  opacity: 1;
+width: 100%;
+top: 50%;
+left: 50%;
+opacity: 1;
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease-in-out 0s;
-}
+transition: all 0.3s ease-in-out 0s;
+} */
 
-.travel-wrapper:hover .travel-details{
-  top: 70%;
-  left: 50%;
-  opacity: 1;
-}
 .uk-heading-bullet::before{
  border-left-color:rgba(255,255,255,.9) !important;
+ margin-left:4px;
 }
 
 .travel-title{
    color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  width:60% !important;
-  text-transform: uppercase;
-}
-
-.travel-date{
-  color: #fff;
-  font-size: 0.8em;
-}
-
-.fadeIn-bottom{
-  top: 80%;
+  text-transform:capitalize;
+  margin-top:20px;
 }
 .travel-view{
   margin-left:10px;
@@ -417,3 +305,7 @@ top: 0;
   color:#ffffff !important;
 
 }
+.travel-wrapper a img{
+  transition: .9s ease-out !important;
+}
+//travel-style end

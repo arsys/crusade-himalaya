@@ -252,13 +252,13 @@ a:hover{
 }
 //tripadvisior end
 //travel-style start
-.travel .travel-overlay {
+/* .travel .travel-overlay {
   background: rgba(0,0,0,0.1);
   position: absolute;
   height: 15%;
   width: 100%;
   left: 0;
-/*   top: 0; */
+top: 0;
   bottom: 0;
   right: 0;
   opacity: 1;
@@ -312,9 +312,8 @@ a:hover{
   text-transform: uppercase;
    
 }
-.travel-border{
-    border-left: 2px solid #ffffff;
-    margin-left:18px;
+.uk-heading-bullet::before{
+ border-left-color:rgba(255,255,255,.9) !important;
 }
 
 
@@ -345,5 +344,76 @@ a:hover{
 .tour-wrapper {
     overflow: hidden;
   cursor: pointer;
-}
+} */
 //travel-style end
+.travel-wrapper {
+  position: relative;
+  overflow: hidden;
+  
+}
+.travel-wrapper .travel-overlay {
+  background: rgba(0,0,0,0.1);
+  position: absolute;
+  height: 15%;
+  width: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  transition: all 0.4s ease-in-out 0s;
+}
+.travel-wrapper:hover .travel-overlay{
+  opacity: 1;
+  height: 20%;
+}
+.travel-wrapper a{
+    overflow: hidden;
+    float:left;
+}
+
+.travel-details {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.travel-wrapper:hover .travel-details{
+  top: 70%;
+  left: 50%;
+  opacity: 1;
+}
+.uk-heading-bullet::before{
+ border-left-color:rgba(255,255,255,.9) !important;
+}
+
+.travel-title{
+   color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  width:60% !important;
+  text-transform: uppercase;
+}
+
+.travel-date{
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom{
+  top: 80%;
+}
+.travel-view{
+  margin-left:10px;
+}
+.travel-view a:hover{
+  color:$green;
+}
+.next{
+  color:#ffffff !important;
+
+}

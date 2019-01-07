@@ -73,22 +73,22 @@ a:hover{
 }
 
 .banner-title {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate( -50%, -50% );
-     text-align: center;
-     color: white;
-     font-weight:10px;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate( -50%, -50% );
+ text-align: center;
+ color: white;
+ font-weight:10px;
 
-   }
-   .inner{
-    position:relative;
-    display: inline-block;
-  }
-  .banner{
-    display:block;
-  }
+}
+.inner{
+  position:relative;
+  display: inline-block;
+}
+.banner{
+  display:block;
+}
 //static image end
 
 //why  us start 
@@ -141,15 +141,15 @@ a:hover{
   }
   .hp-days{
     font-weight:bold;
-     color:$dark;
-     margin:10px !important;
+    color:$dark;
+    margin:10px !important;
   }
 }
 //tour end
 //destination overlay text start
 .destination {
   position: relative;
- 
+  
 }
 .dest-topic{
   position: absolute;
@@ -213,7 +213,7 @@ a:hover{
 @media (max-width:640px){
   .instagram{
     font-size:16px !important;
-   
+    
   }
 }
 
@@ -221,7 +221,7 @@ a:hover{
   .follow > div:nth-child(2n+1) {
     text-align:right;
   }
- 
+  
 }
 .insta-lightbox{
   width:auto;
@@ -231,21 +231,21 @@ a:hover{
 
 //tour image animation start
 .tour-img {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-transition: all 10s;
-    -moz-transition: all 10s;
-    -o-transition: all 10s;
-    transition: all 10s;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 10s;
+  -moz-transition: all 10s;
+  -o-transition: all 10s;
+  transition: all 10s;
 }
 .tour-img:hover {
-    -ms-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 //tour image animation end
 //tripadvisior start
@@ -286,14 +286,15 @@ transition: all 0.3s ease-in-out 0s;
 } */
 
 .uk-heading-bullet::before{
- border-left-color:rgba(255,255,255,.9) !important;
- margin-left:4px;
+  border-left: 2px !important;
+  border-left-color:rgba(255,255,255,.9) !important;
+  margin-left:4px;
 }
 
 .travel-title{
-   color: #fff;
-  text-transform:capitalize;
-  margin-top:20px;
+ color: #fff;
+ text-transform:capitalize;
+ margin-top:20px;
 }
 .travel-view{
   margin-left:10px;

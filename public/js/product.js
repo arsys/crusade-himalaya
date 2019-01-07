@@ -124,6 +124,9 @@ window.addEventListener("load", function () {
 				type: 'POST',
 				url: action,
 				data: data,
+				headers: {
+					"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+				},
 				success: function success(data) {
 					if ($.isEmptyObject(data.error)) {
 						$("#quick-enquiry").trigger("reset");

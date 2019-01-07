@@ -152,6 +152,49 @@ window.addEventListener("load", function () {
 				$('.print-error-msg').find('ul').append("<li>" + value + "</li>");
 			});
 		}
+		$('.search-wrapper').on('click', '#find-dates', function (a) {
+			a.preventDefault();
+			var t = $("#tour-id").val(),
+			    e = $("#travel-year").val(),
+			    o = $("#travel-month").val();
+
+			$(".ajaxloader").show(), $.ajax({
+				type: "GET",
+				url: "/ajax/fetch-departures",
+				headers: {
+					"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+				},
+				data: {
+					tour_id: t,
+					year: e,
+					month: o
+				},
+				success: function success(a) {
+					$(".ajaxloadmoredeparture").html(a), $(".ajaxloader").hide();
+				}
+			});
+		}), $('.search-wrapper-mob').on('click', '#find-dates-mob', function (a) {
+			a.preventDefault();
+			var t = $("#tour-id-mob").val(),
+			    e = $("#travel-year-mob").val(),
+			    o = $("#travel-month-mob").val();
+
+			$(".ajaxloader").show(), $.ajax({
+				type: "GET",
+				url: "/ajax/fetch-departures",
+				headers: {
+					"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+				},
+				data: {
+					tour_id: t,
+					year: e,
+					month: o
+				},
+				success: function success(a) {
+					$(".ajaxloadmoredeparture").html(a), $(".ajaxloader").hide();
+				}
+			});
+		});
 	});
 })(jQuery);
 

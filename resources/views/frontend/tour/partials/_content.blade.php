@@ -21,8 +21,8 @@
 			</div>
 			<!-- pricing end -->
 			<!-- review start -->
-			<div class="uk-card uk-card-default uk-card-body uk-margin-small-top" id="review">
-				<h3 class=""><span>Gallary</span></h3> 
+			<div class="uk-card uk-card-default uk-card-body uk-margin-small-top" id="gallery">
+				<h3 class=""><span>Gallery</span></h3> 
 				 @include ('frontend.tour.partials._review')  
 			</div>
 			<!-- 	review end -->

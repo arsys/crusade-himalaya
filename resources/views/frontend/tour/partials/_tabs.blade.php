@@ -103,7 +103,7 @@
 					<li class="uk-active uk-width-1-4"><a href="#overview">Overview</a></li> 
 					<li class="uk-width-1-4"><a href="#itinerary">Itinerary</a></li>
 					<li class="uk-width-1-4"><a href="#price">Price & Availability </a></li>
-					<li class="uk-width-1-4"><a href="#review">Reviews</a></li>
+					<li class="uk-width-1-4"><a href="#gallery">Gallery</a></li>
 				</ul>
 			</div>	
 		</div>

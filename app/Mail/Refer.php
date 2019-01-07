@@ -29,7 +29,7 @@ class Refer extends Mailable
     public function build()
     {
         $this->from($this->data['sender']);
-        $this->subject($this->data['subject']);
+        $this->subject($this->data['comment']);
         $this->to($this->data['receiver']);
         if (isset($this->data['receiver2'])) {
             $this->to($this->data['receiver2']);

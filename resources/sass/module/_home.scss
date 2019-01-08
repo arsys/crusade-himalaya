@@ -3,12 +3,12 @@ a:hover{
   cursor: pointer;
 }
 
-#price-wrapper{
+.price-wrapper{
   padding: 2px;
   letter-spacing: 1px;
   /* width: 50%; */
   z-index: 1;
-  top:225px;
+  top:200px;
   left: -10px;
   right: unset;
   text-align: left;
@@ -45,6 +45,14 @@ a:hover{
   margin-top:40px;
   margin-bottom:40px;
 }
+
+@media(max-width:360px){
+  .price-wrapper{
+    top:220px;
+  }
+}
+
+
 
 //static image start
 #banner {
@@ -129,8 +137,8 @@ a:hover{
 .similar-wrapper{
   padding:0px 0px !important;
 }
-#hp-wrapper{
-  padding:15px 15px !important;
+.hp-wrapper{
+  padding:7px 7px !important;
 }
 .hp-meta{
   .hp-product{
@@ -142,12 +150,12 @@ a:hover{
   .hp-days{
     font-weight:bold;
      color:$dark;
-     margin:10px !important;
+     margin:0px !important;
   }
 }
 //tour end
 //destination overlay text start
-/* .destination {
+.destination {
   position: relative;
  
 }
@@ -163,14 +171,10 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-
-
-  transition effect. not necessary
-  transition: opacity .2s, visibility .2s;
 }
 
 .destination:hover .dest-topic {
-  visibility: visible;
+visibility: visible;
 }
 
 
@@ -185,7 +189,6 @@ a:hover{
 .destination:hover .dest-title{
  transform: translateY(0);
 }
- */
 //destinationn overlay text end
 .hp-link{
   color:#666!important;
@@ -255,6 +258,7 @@ a:hover{
   height: 25%;
 }
 .uk-heading-bullet::before{
+  border-left: 2px solid !important;
  border-left-color:rgba(255,255,255,.9) !important;
  margin-left:4px;
 }
@@ -262,10 +266,33 @@ a:hover{
 .travel-title{
    color: #fff;
   text-transform:capitalize;
-  margin-top:20px;
+  margin-top:25px;
+  margin-left:15px;
 }
+.travel-tours{
+     color: #fff;
+  text-transform:capitalize;
+  margin-top:25px;
+  margin-right:15px;
+
+}
+@media (max-width:640px){
+ .travel-title , .travel-tours{
+    color:#fff;
+    font-size:10px;
+    margin-left:20px;
+    margin-top:10px;
+    text-transform: capitalize;
+  }
+}
+@media(max-width: 640px){
+  .travel-view{
+    font-size:10px;
+  }
+}
+
 .travel-view{
-  margin-left:10px;
+  margin-left:25px;
 }
 .travel-view a:hover{
   color:$green;
@@ -277,4 +304,5 @@ a:hover{
 .travel-wrapper a img{
   transition: .9s ease-out !important;
 }
+
 //travel-style end

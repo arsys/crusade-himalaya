@@ -367,6 +367,13 @@
     z-index: 1;
     position: relative;
 }
+/* @media only screen and (min-width: 360px) {
+  .circle-text{
+    height:70px;
+    width:70px;
+    line-height:70px;
+}
+} */
 .step:nth-child(2) .circle-text {
   background: $grey;
 }

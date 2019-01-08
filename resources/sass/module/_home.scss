@@ -161,10 +161,10 @@ a:hover{
 }
 .dest-topic{
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
   background: rgba(0, 0, 0, 0.3);
   color: #fff;
   visibility: hidden;
@@ -177,19 +177,17 @@ a:hover{
 visibility: visible;
 padding:0px !important;
 }
-
-
 .dest-title {
 
   color: $white;
-  font-size: 18px;
+  font-size: 15px;
   transition: .1s;
+   align-items: center;
+  justify-content: center;
   transform: translateY(1em);
 
 }
-/* .destination:hover .dest-title{
- transform: translateY(0);
-} */
+
 //destinationn overlay text end
 .hp-link{
   color:#666!important;
@@ -269,14 +267,14 @@ padding:0px !important;
   text-transform:capitalize;
   margin-top:20px;
   margin-left:10px;
-  font-size:12px;
+  font-size:15px;
 }
 .travel-tours{
      color: #fff;
   text-transform:capitalize;
   margin-top:20px;
   margin-right:2px;
-  font-size:12px;
+  font-size:15px;
 
 }
 @media (max-width:640px){
@@ -290,7 +288,7 @@ padding:0px !important;
 }
 @media(max-width: 640px){
   .travel-view{
-    font-size:12px;
+    font-size:15px;
   }
 }
 

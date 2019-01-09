@@ -303,7 +303,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
             <div class="modal-body text-center">
                 @if(!empty($images))
                 <select class="slides show-html"
-                name="slides" multiple="multiple">
+                name="slides[]" multiple="multiple">
                 <option value=""></option>
                 @foreach($images  as $image)
 

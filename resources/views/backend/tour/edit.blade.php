@@ -195,7 +195,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
             <div class="col-sm-6">
                 <div class="form-group">
                     <button type="button" class="btn btn-block ink-reaction btn-info" data-toggle="modal"
-                    data-target="#myModal"><i class="fa fa-plus"></i> Slides
+                    data-target="#myModal"><i class="fa fa-plus"></i> Featured Image
                 </button>
             </div>
         </div>

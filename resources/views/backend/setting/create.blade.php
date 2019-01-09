@@ -155,6 +155,30 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('mobile') ? 'has-error' : ''}}">
+                            <input type="mobile" class="form-control"
+                            id="mobile {{$errors->has('mobile') ? 'inputError' : ''}}" name="mobile"
+                            value="{{ old('mobile') }}" required>
+                            @if($errors->has('mobile'))
+                            <span class="help-block">{{ $errors->first('mobile') }}</span>
+                            @endif
+                            {{ Form::label('mobile', 'Mobile ') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group floating-label {{$errors->has('mailbox') ? 'has-error' : ''}}">
+                            <input type="text" class="form-control"
+                            id="mailbox {{$errors->has('mailbox') ? 'inputError' : ''}}" name="mailbox"
+                            value="{{ old('mailbox') }}" required>
+                            @if($errors->has('mailbox'))
+                            <span class="help-block">{{ $errors->first('mailbox') }}</span>
+                            @endif
+                            {{ Form::label('mailbox', 'Mail Box ') }}
+                        </div>
+                    </div>
+                </div>                
+                <div class="row">
+                    <div class="col-sm-6">
                         <h4>Google Map Link</h4>
                         <div class="form-group floating-label {{$errors->has('map') ? 'has-error' : ''}}">
                             <textarea name="map"

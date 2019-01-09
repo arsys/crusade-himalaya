@@ -11,7 +11,7 @@ class UploadImage extends Model
 	public  function  uploadSingle($savePath, $image,$width,$height)
 	{
 
-		$filename = Hash::make(basename($image)).'.'.pathinfo($image, PATHINFO_EXTENSION);
+		$filename = Hash::make(now().basename($image)).'.'.pathinfo($image, PATHINFO_EXTENSION);
 		$location = $savePath . $filename;
 		Image::make($image)->fit($width, $height, function ($constraint) {
 			$constraint->upsize();

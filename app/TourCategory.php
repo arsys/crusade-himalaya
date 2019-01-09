@@ -26,7 +26,7 @@ class TourCategory extends Model
 
     public static function  uploadImage($path, $image,$width,$height)
     {
-        $filename = md5($image->getClientOriginalName()).'.'. $image->getClientOriginalExtension();
+        $filename = md5(now().$image->getClientOriginalName()).'.'. $image->getClientOriginalExtension();
         $location = $path . $filename;
         Image::make($image)->fit($width, $height)->save($location);
         ImageOptimizer::optimize($location);

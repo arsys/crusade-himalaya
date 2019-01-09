@@ -21,16 +21,16 @@
          @foreach($results as $package)
          <li class="uk-margin-small-bottom">
             <div class="uk-card uk-card-default">
-                <div class="uk-card-media-top">
+                <div class="uk-card-media-top tour-wrapper">
                     <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link">
                         <img src="{{ asset($package->image->thumb) }}" alt="{{ $package->slug }}">
                     </a>
-                    <div class="uk-overlay uk-overlay-default uk-position-top" id="price-wrapper">
+                    <div class="uk-overlay uk-overlay-default uk-position-top price-wrapper">
                             <span class="price">
                                <span>USD ${{ $package->price }}</span>
                            </span>
                     </div>
-                    <div class="uk-overlay uk-overlay-default uk-padding-medium" id="hp-wrapper">
+                    <div class="uk-overlay uk-overlay-default uk-padding-medium hp-wrapper">
                         <div class="uk-flex uk-flex-center">
                             <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
                                 <a href="{{ route('trip.detail',$package->slug) }}" class="hp-link"><span class="hp-product">{{ $package->title }}</span></a>
@@ -47,9 +47,6 @@
         </ul>
     </div>
 </div>
-
-
-
 
 
 

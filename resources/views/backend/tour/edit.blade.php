@@ -199,56 +199,66 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                 </button>
             </div>
         </div>
-
         <div class="col-sm-6">
-            <div class="form-group {{$errors->has('status') ? 'has-error' : ''}}">
-                <label class="col-sm-3 control-label">Status</label>
-                <div class="col-sm-9">
-                    <label class="radio-inline radio-styled radio-success">
-                        <input type="radio" value="1" name="status" {{$tour->status?'checked': ''}}><span>Publish</span>
-                    </label>
-                    <label class="radio-inline radio-styled radio-warning">
-                        <input type="radio" value="0" name="status" {{$tour->status?' ': 'checked'}}><span>Draft</span>
-                    </label>
-                </div>
-                @if($errors->has('status'))
-                <span class="help-block">{{ $errors->first('status') }}</span>
-                @endif
+            <div class="form-group">
+                <button type="button" class="btn btn-block ink-reaction btn-info" data-toggle="modal"
+                data-target="#gallery">
+                <i class="far fa-images"></i>  Gallery
+            </button>
+        </div>
+    </div>        
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group {{$errors->has('status') ? 'has-error' : ''}}">
+            <label class="col-sm-3 control-label">Status</label>
+            <div class="col-sm-9">
+                <label class="radio-inline radio-styled radio-success">
+                    <input type="radio" value="1" name="status" {{$tour->status?'checked': ''}}><span>Publish</span>
+                </label>
+                <label class="radio-inline radio-styled radio-warning">
+                    <input type="radio" value="0" name="status" {{$tour->status?' ': 'checked'}}><span>Draft</span>
+                </label>
             </div>
+            @if($errors->has('status'))
+            <span class="help-block">{{ $errors->first('status') }}</span>
+            @endif
         </div>
     </div>
-    <div class="row">
-        <div class="form-group">
-            <h4>Overview</h4>
-            {{ Form::textarea('overview',null, ['class' => 'form-control ','id'=>'overview']) }}
+</div>
+<div class="row">
+    <div class="form-group">
+        <h4>Overview</h4>
+        {{ Form::textarea('overview',null, ['class' => 'form-control ','id'=>'overview']) }}
+    </div>
+</div>
+{{--Overview --}}
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group {{$errors->has('mtitle') ? 'has-error' : ''}} floating-label">
+            {{ Form::text('mtitle', null, ['class' => 'form-control', 'id'=>'mtitle', 'required' =>'required']) }}
+            @if($errors->has('mtitle'))
+            <span class="help-block">{{ $errors->first('mtitle') }}</span>
+            @endif
+            {{ Form::label('mtitle', 'Meta Title ') }}
         </div>
     </div>
-    {{--Overview --}}
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="form-group {{$errors->has('mtitle') ? 'has-error' : ''}} floating-label">
-                {{ Form::text('mtitle', null, ['class' => 'form-control', 'id'=>'mtitle', 'required' =>'required']) }}
-                @if($errors->has('mtitle'))
-                <span class="help-block">{{ $errors->first('mtitle') }}</span>
-                @endif
-                {{ Form::label('mtitle', 'Meta Title ') }}
-            </div>
+</div>
+{{--Meta Title --}}
+<div class="row">
+    <div class="col-sm-12" id="desc">
+        <div class="form-group  {{$errors->has('description') ? 'has-error' : ''}} floating-label">
+            {{ Form::text('description', null, ['class' => 'form-control', 'id'=>'description', 'required' =>'required']) }}
+            @if ($errors->has('description'))
+            <span class="help-block">{{$errors->first('description')}}</span>
+            @endif
+            <label for="textarea2">Description</label>
         </div>
     </div>
-    {{--Meta Title --}}
-    <div class="row">
-        <div class="col-sm-12" id="desc">
-            <div class="form-group  {{$errors->has('description') ? 'has-error' : ''}} floating-label">
-                {{ Form::text('description', null, ['class' => 'form-control', 'id'=>'description', 'required' =>'required']) }}
-                @if ($errors->has('description'))
-                <span class="help-block">{{$errors->first('description')}}</span>
-                @endif
-                <label for="textarea2">Description</label>
-            </div>
-        </div>
-    </div>
-    {{--meta Description --}}
+</div>
+{{--meta Description --}}
 </div><!--end .card body-->
+{{-- featured image modal start --}}
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
 
@@ -279,6 +289,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
 
 </div>
 </div>
+{{-- featured image modal end --}}
+{{-- slides modal start --}}
+<div id="gallery" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Media Images</h4>
+            </div>
+            <div class="modal-body text-center">
+                @if(!empty($images))
+                <select class="slides show-html"
+                name="slides" multiple="multiple">
+                <option value=""></option>
+                @foreach($images  as $image)
+
+                <option data-img-src="{{asset($image->thumb)}}"
+                    value="{{$image->id}}">
+                </option>
+                @endforeach
+            </select>
+            @else
+            <h2>No images uploaded in media.</h2>
+            @endif
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
+</div>
+</div>
+{{-- slides modal end --}}
 <div class="card-actionbar">
     <div class="card-actionbar-row">
         {{ Form::submit('Create', ['class' => 'btn btn-lg btn-flat btn-primary ink-reaction'] )}}
@@ -307,6 +352,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
         buttonWidth: '400px'
     });
     $(".image-picker").imagepicker();
+    $(".slides").imagepicker();
     CKEDITOR.replace('overview', {
         height: 500
     });

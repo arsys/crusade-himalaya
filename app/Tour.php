@@ -76,4 +76,10 @@ class Tour extends Model
         return $this->hasMany('App\Itinerary', 'tour_id')->orderBy('id', 'asc');;
     }
 
+    public function slides()
+    {
+        return $this->hasMany('App\Slide', 'tour_id');
+    }
+
+
 }

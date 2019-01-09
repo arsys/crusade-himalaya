@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItinerariesTable extends Migration
+class CreateSlidesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateItinerariesTable extends Migration
      */
     public function up()
     {
-        Schema::create('itineraries', function (Blueprint $table) {
+        Schema::create('slides', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('tour_id')->unsigned()->index();
-            $table->string('day');
-            $table->text('title');
-            $table->text('plan')->nullable();
-            $table->foreign('tour_id')->references('id')->on('tours')->onDelete('cascade');
+            $table->int('tour_id');
+            $table->text('path');
+            $table->text('thumb');
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ class CreateItinerariesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('itineraries');
+        Schema::dropIfExists('galleries');
     }
 }

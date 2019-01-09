@@ -45,7 +45,7 @@
 						<div class="call"><span uk-icon="icon: receiver; ratio: 2"></span> 
 							<span class="call-details">Call Us On<span uk-icon="chevron-right"></span></span>
 						</div>
-							<span class="call-meta">{{ $contact->mobile }}</span>
+							<span class="call-meta">{{ $setting->mobile }}</span>
 							<span class="call-meta">or Chat Online <i class="fab fa-whatsapp"></i>
 							</span>
 
@@ -53,10 +53,10 @@
 							<span class="mail-details">Operational Office<span uk-icon="chevron-right"></span> </span>
 						</div>
 							<span class="mail-meta">Crusade Himalaya</span>
-							<span class="mail-meta">P.O. Box 20062{{ $contact->mailbox }} </span>
-							<span class="mail-meta">{{ $contact->phone }}</span>
-							<span class="mail-meta">{{ $contact->address }}</span>
-							<span class="mail-meta">{{ $contact->city }}, Nepal</span>
+							<span class="mail-meta">P.O. Box 20062{{ $setting->mailbox }} </span>
+							<span class="mail-meta">{{ $setting->phone }}</span>
+							<span class="mail-meta">{{ $setting->address }}</span>
+							<span class="mail-meta">{{ $setting->city }}, Nepal</span>
 
 					</div>
 				</div>

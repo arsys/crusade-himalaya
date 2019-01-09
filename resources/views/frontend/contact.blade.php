@@ -9,6 +9,8 @@
 <!--  map start -->
 @include ('frontend.partials.contact._map')
 <!--   map end -->
+@stop
+@section('scripts')
 <script>
     function initMap() {
         var uluru = {lat: 27.7159776, lng: 85.3145912};
@@ -25,6 +27,4 @@
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo_dSCAjkI&callback=initMap">
 </script>
-@stop
-@section('scripts')
 @stop

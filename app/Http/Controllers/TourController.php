@@ -14,6 +14,7 @@ use App\Excluded;
 use App\Media;
 use App\FeaturedImage;
 use App\UploadImage;
+use App\Slide;
 use Illuminate\Http\Request;
 use Session;
 use File;
@@ -21,6 +22,18 @@ class TourController extends Controller
 {
     private $banner = 'uploads/tour/';
     private $thumb = 'uploads/tour/thumb/';
+    private $slides = 'uploads/slides/';
+    private $sthumb = 'uploads/slides/thumb/';
+
+    public function __construct()
+    {
+        if (!is_dir($this->banner) || !is_dir($this->thumb)|| !is_dir($this->slides)|| !is_dir($this->sthumb)) {
+            mkdir($this->banner, 0755, true);
+            mkdir($this->thumb, 0755, true);
+            mkdir($this->slides, 0755, true);
+            mkdir($this->sthumb, 0755, true);
+        }
+    }
     /**
      * Display a listing of the resource.
      *
@@ -119,10 +132,10 @@ class TourController extends Controller
             if (isset($request->excludes)) {
                 $tour->excludes()->sync($request->excludes, false);
             }
-            if (! File::exists($this->banner) || ! File::exists($this->thumb)) {
-                File::makeDirectory($this->banner,0775, true);
-                File::makeDirectory($this->thumb,0775, true);
-            }
+            // if (! File::exists($this->banner) || ! File::exists($this->thumb)) {
+            //     File::makeDirectory($this->banner,0775, true);
+            //     File::makeDirectory($this->thumb,0775, true);
+            // }
             $media = Media::find($request->featured);
             $upload = new UploadImage;
             $bannerPath = $upload->uploadSingle($this->banner, $media->path, 1024,512);
@@ -132,6 +145,18 @@ class TourController extends Controller
                 'banner' => $bannerPath,
                 'thumb' => $thumbPath
             ]));
+            $medias = Media::whereIn('id', $request->slides)->get();
+            foreach ($medias as $media) {
+                $upload = new UploadImage;
+                $path = $upload->uploadSingle($this->slides, $media->path, 1024,768);
+                $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
+                $tour->slides()->save(new Slide([
+                    'banner' => $path,
+                    'thumb' => $thumb,
+                    'name' => $media->name
+                ]));
+            }
+
 
         } catch (QueryException $e) {
             DB::rollback();
@@ -242,10 +267,10 @@ class TourController extends Controller
             if (isset($request->excludes)) {
                 $tour->excludes()->sync($request->excludes);
             }
-            if (! File::exists($this->banner) || ! File::exists($this->thumb)) {
-                File::makeDirectory($this->banner,0775, true);
-                File::makeDirectory($this->thumb,0775, true);
-            }
+            // if (! File::exists($this->banner) || ! File::exists($this->thumb)) {
+            //     File::makeDirectory($this->banner,0775, true);
+            //     File::makeDirectory($this->thumb,0775, true);
+            // }
             $oldBanner = $tour->image->banner;
             $oldThumb = $tour->image->thumb;
             $image = $tour->image;
@@ -261,6 +286,24 @@ class TourController extends Controller
 
             File::delete(public_path($oldBanner));
             File::delete(public_path($oldThumb));
+
+            $medias = Media::whereIn('id', $request->slides)->get();
+            foreach ($medias as $media) {
+                $oldIds = Slide::where('tour_id','=', $tour->id)->get();
+                foreach ($oldIds as $oldId) {
+                    File::delete(public_path($oldId->path));
+                    File::delete(public_path($oldId->thumb));
+                    $oldId->delete();
+                }
+                $upload = new UploadImage;
+                $path = $upload->uploadSingle($this->slides, $media->path, 1024,768);
+                $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
+                $tour->slides()->save(new Slide([
+                    'banner' => $path,
+                    'thumb' => $thumb,
+                    'name' => $media->name
+                ]));
+            }
 
         } catch (QueryException $e) {
             DB::rollback();
@@ -287,7 +330,11 @@ class TourController extends Controller
             File::delete(public_path($tour->image->banner));
             $tour->image->delete();
         }
-
+        foreach ($tour->slides as $slide) {
+            File::delete(public_path($slides->path));
+            File::delete(public_path($slides->thumb));
+            $slide()->detach();
+        }
         if ($test = $tour->includes()->count() != null) {
             $tour->includes()->detach();
         }

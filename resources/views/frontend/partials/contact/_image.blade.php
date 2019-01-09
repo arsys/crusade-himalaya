@@ -3,10 +3,8 @@
 	<h1 class="main-heading">Contact us</h1>
 		<div class="contact-breadcrumb ">
 			<ul class="uk-breadcrumb  " id="contact-breadcrumb">
-				<li><a href="#">Item</a></li>
-				<li><a href="#">Item</a></li>
-				<li class="uk-disabled"><a>Disabled</a></li>
-				<li><span>Active</span></li>
+				<li><a href="/" uk-icon="icon: home" ></a></li>
+				<li class="uk-disabled"><a href="{{ url()->current() }}">Contact Us</a></li>
 			</ul>
 		</div>	
 	</div>

@@ -45,17 +45,18 @@
 						<div class="call"><span uk-icon="icon: receiver; ratio: 2"></span> 
 							<span class="call-details">Call Us On<span uk-icon="chevron-right"></span></span>
 						</div>
-							<span class="call-meta">987654324</span>
-							<span class="call-meta">or Chat Online</span>
+							<span class="call-meta">{{ $contact->mobile }}</span>
+							<span class="call-meta">or Chat Online <i class="fab fa-whatsapp"></i>
+							</span>
 
-						<div class="email"><i class="fas fa-address-card"></i></span>
+						<div class="email"><i class="fas fa-map-marked-alt"></i></span>
 							<span class="mail-details">Operational Office<span uk-icon="chevron-right"></span> </span>
 						</div>
-							<span class="mail-meta">Karmatara Residency</span>
-							<span class="mail-meta">P.O. Box 20062 </span>
-							<span class="mail-meta">Fax: 00977 - 1 -4316884</span>
-							<span class="mail-meta">Kesharmahal</span>
-							<span class="mail-meta">Kathmandu Nepal</span>
+							<span class="mail-meta">Crusade Himalaya</span>
+							<span class="mail-meta">P.O. Box 20062{{ $contact->mailbox }} </span>
+							<span class="mail-meta">{{ $contact->phone }}</span>
+							<span class="mail-meta">{{ $contact->address }}</span>
+							<span class="mail-meta">{{ $contact->city }}, Nepal</span>
 
 					</div>
 				</div>

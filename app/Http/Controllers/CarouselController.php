@@ -54,7 +54,7 @@ class CarouselController extends Controller
         $carousels = new Carousel;
 
         $file = $request->file('photo');
-        $name = md5($file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
+        $name = md5(now().$file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
         // if (!is_dir($this->path)) {
         //     mkdir($this->path, 0755, true);
         // }

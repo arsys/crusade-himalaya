@@ -32,9 +32,7 @@ class NavServiceProvider extends ServiceProvider
         view()->composer('frontend.partials._nav','App\Http\Composers\FrontendComposer@whereWego');
     }     
     private function footerMenu(){
-        // view()->composer('frontend.partials._footer','App\Http\Composers\FrontendComposer@countries');        
-        // view()->composer('frontend.partials._footer','App\Http\Composers\FrontendComposer@pages');     
-        // view()->composer('frontend.partials._footer','App\Http\Composers\FrontendComposer@activity');     
-        // view()->composer('frontend.partials._footer','App\Http\Composers\FrontendComposer@contact');               
+        view()->composer('frontend.partials._footer','App\Http\Composers\FrontendComposer@footer');
+        view()->composer('frontend.contact','App\Http\Composers\FrontendComposer@footer');              
     }     
 }

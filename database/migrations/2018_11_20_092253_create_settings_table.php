@@ -19,7 +19,9 @@ class CreateSettingsTable extends Migration
     		$table->string('tagline')->nullable();
     		$table->string('address')->nullable();
     		$table->string('city')->nullable();
-    		$table->string('phone')->nullable();
+            $table->string('mobile')->nullable();
+            $table->string('phone')->nullable();
+    		$table->string('mailbox')->nullable();
     		$table->string('website')->nullable();
 
     		$table->string('facebook')->nullable();

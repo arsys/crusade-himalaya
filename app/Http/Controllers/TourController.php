@@ -82,7 +82,7 @@ class TourController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        // try {
+        try {
         //     $this->validate($request, [
         //         'title' => 'required|max:255',
         //         'days' => 'required|numeric|max:90',

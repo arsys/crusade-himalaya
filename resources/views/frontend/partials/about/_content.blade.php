@@ -3,20 +3,20 @@
 		<div class="text-align-left uk-margin-medium-top" uk-grid>
 			<div class=" uk-flex uk-flex-column uk-width-1-3@l uk-width-1-1@s" >
 				<div>
-					<p class="heading-wrapper uk-padding-remove uk-align-center"><strong>Why Nepal?</strong></p>
+					<p class="about-heading-wrapper uk-padding-remove uk-align-center"><strong>Why Nepal?</strong></p>
 
 					<p>Nepal as a destination often surpasses a visitor&#39;s expectations &ndash; the lush green plains to the world&#39;s tallest mountain, &nbsp;dense jungles to arid valleys, glacial lakes to raging rivers, diverse culture and their lives, to experience Nepal is one of the most exhilarating experience one can indulge in. &nbsp;&nbsp;</p>
 
 					<p>Although constituting &nbsp;a reasonably finite geographical area, the experiences one can indulge in this nation are infinite. Paradise like landscapes, pristine peaks, a day of solitude and yet the next day with adventure, the intertwining of history and modernity &ndash; these are only some of the facets of Nepal. To truly understand and fully comprehend the vastness of Nepal, one has to visit the nation.</p>
 				</div>
 				<div>
-					<p class="heading-wrapper uk-padding-remove uk-align-center"><strong>Why Crusade Himalaya?</strong></p>
+					<p class="about-heading-wrapper uk-padding-remove uk-align-center"><strong>Why Crusade Himalaya?</strong></p>
 
 					<p>Crusade Himalaya is a unique and independent travel partner; we are a boutique travel studio who wish to offer you, our Atithis (revered guests), enriching and fulfilling experience of their Nepal visit. We wish to Empower, Educate, and Encourage you to have real-life experiences as you set out to discover the timeless wonders of Nepal.</p> 
 				</div>
 
 				<div>
-					<p class="heading-wrapper uk-padding-remove uk-align-center"><strong>How we work?</strong></p>
+					<p class="about-heading-wrapper uk-padding-remove uk-align-center"><strong>How we work?</strong></p>
 
 					<p>At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. </p>
 				</div>
@@ -32,7 +32,7 @@
 					and a hospitable friend who will ensure your comfort during your entire stay.</em></strong></p>
 
 					<p>&nbsp;</p>
-					<p class="heading-wrapper  uk-padding-remove uk-align-center"><strong>What makes Crusade Himalaya different?</strong></p>
+					<p class="about-heading-wrapper  uk-padding-remove uk-align-center"><strong>What makes Crusade Himalaya different?</strong></p>
 
 					<p>Besides <strong>&#39;knowledge infused with deep passion for meaningful travel&#39;</strong>, what sets Crusade Himalayas apart is their unique working style. We are an independent travel partner, and will therefore organize your trip as per your expectations, with our recommendations.</p>
 
@@ -43,7 +43,7 @@
 			</div>
 			<div class=" uk-flex uk-flex-column uk-width-1-3@l uk-width-1-1@s" >
 				<div>
-				<p class="heading-wrapper  uk-padding-remove uk-align-center"><strong>What is our mission?</strong></p>
+				<p class="about-heading-wrapper  uk-padding-remove uk-align-center"><strong>What is our mission?</strong></p>
 
 				<p>Our mission is simple, it is <strong>to make you happy</strong>. To do so, we will take you across many of the delights Nepal has to offer, introduce you to different cultures, and all the while ensuring your comfort and satisfaction.</p>
 				</div>

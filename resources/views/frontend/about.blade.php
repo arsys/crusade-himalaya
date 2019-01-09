@@ -13,3 +13,10 @@
 {{-- @include ('frontend.partials.about._team') --}}
 <!-- team end -->
 @stop
+@section('scripts')
+<script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+</script>
+<script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.js" async></script>
+@stop

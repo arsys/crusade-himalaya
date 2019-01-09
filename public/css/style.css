@@ -393,6 +393,8 @@ a:hover {
 
 .destination {
   position: relative;
+  /*    opacity: 0;
+   transition: .5s ease; */
 }
 
 .dest-topic {
@@ -413,6 +415,9 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  opacity: 1;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
 }
 
 .destination:hover .dest-topic {
@@ -529,27 +534,32 @@ a:hover {
   font-size: 15px;
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .travel-title,
   .travel-tours {
     color: #fff;
-    font-size: 10px;
-    margin-left: 20px;
+    font-size: 10px !important;
     margin-top: 10px;
     text-transform: capitalize;
   }
 }
 
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   .travel-view {
-    font-size: 15px;
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .travel-tours {
+    margin-right: -69px !important;
   }
 }
 
 .travel-view {
   margin-left: 25px;
   margin-top: 5px;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .travel-view a:hover {
@@ -1318,21 +1328,24 @@ textarea.parsley-error {
   position: relative;
   background-color: #2ed3ae;
   border-radius: 1px;
+}
+
+.r-tabs-nav {
   text-align: center;
 }
 
 /* Tab element */
 
-.r-tabs .r-tabs-list .r-tabs-tab {
+.r-tabs .r-tabs-nav .r-tabs-tab {
   position: relative;
   background-color: #2ed3ae;
 }
 
 /* Tab anchor */
 
-.r-tabs .r-tabs-list .r-tabs-anchor {
+.r-tabs .r-tabs-nav .r-tabs-anchor {
   display: inline-block;
-  padding: 10px 15px;
+  padding: 20px 20px;
   text-decoration: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
   font-size: 14px;
@@ -1342,7 +1355,7 @@ textarea.parsley-error {
 
 /* Active state tab anchor */
 
-.r-tabs .r-tabs-list .r-tabs-state-active .r-tabs-anchor {
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
   color: #2ed3ae;
   text-shadow: none;
   background-color: white;

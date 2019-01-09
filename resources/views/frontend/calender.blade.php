@@ -1,7 +1,7 @@
 @extends('layouts.frontend')
 @section('content')
 <div id="responsiveTabsDemo" class="r-tabs uk-margin-medium-top">
-    <ul class="r-tabs-list">
+    <ul class="r-tabs-nav uk-margin-medium-top">
     	<li class="r-tabs-tab"><a href="#all" class="r-tabs-anchor"> All </a></li>
         <li class="r-tabs-tab"><a href="#jan" class="r-tabs-anchor"> january </a></li>
         <li class="r-tabs-tab"><a href="#feb" class="r-tabs-anchor"> Febuary</a></li>

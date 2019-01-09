@@ -3,19 +3,24 @@
   position: relative;
 background-color: $green;
   border-radius: 1px;
+ 
+
+}
+.r-tabs-nav{
   text-align: center;
 
 }
+
 /* Tab element */
-.r-tabs .r-tabs-list .r-tabs-tab {
+.r-tabs .r-tabs-nav .r-tabs-tab {
   position: relative;
   background-color: $green;
 }
 
 /* Tab anchor */
-.r-tabs .r-tabs-list .r-tabs-anchor {
+.r-tabs .r-tabs-nav .r-tabs-anchor {
   display: inline-block;
-  padding: 10px 15px;
+  padding: 20px 20px;
   text-decoration: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.4);
   font-size: 14px;
@@ -25,7 +30,7 @@ background-color: $green;
 
 
 /* Active state tab anchor */
-.r-tabs .r-tabs-list .r-tabs-state-active .r-tabs-anchor {
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
   color: $green;
   text-shadow: none;
   background-color: white;

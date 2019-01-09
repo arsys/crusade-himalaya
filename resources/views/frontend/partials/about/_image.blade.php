@@ -13,4 +13,18 @@
 		</div>
 	</div>
 </section>
+<!-- <figure>
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/chicago.jpg" alt="Chicago">
+</figure>
 
+<h1>75% Wide Container</h1>
+
+ <figure class="figure-75">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/chicago.jpg" alt="Chicago">
+</figure>
+
+ <h1>50% Wide Container</h1>
+
+ <figure class="figure-50">
+  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/chicago.jpg" alt="Chicago">
+</figure> -->

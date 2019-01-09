@@ -367,6 +367,19 @@
     z-index: 1;
     position: relative;
 }
+@media  screen and (min-width: 320px) and (max-width:800px) {
+  .circle-text{
+    height:70px;
+    width:70px;
+    line-height:70px;
+}
+.steps:not(:first-child)::before{
+    top:37px !important;
+  }
+  .step:not(:first-child)::before{
+    top:37px !important;
+  }
+}
 .step:nth-child(2) .circle-text {
   background: $grey;
 }
@@ -422,7 +435,6 @@ html{
 }
 .steps:not(:first-child)::before {
     content: "";
-    
     left: -50%;
     position: absolute;
     top: 77px;

@@ -294,7 +294,7 @@ class TourController extends Controller
                 });
                 $upload = new UploadImage;
                 $path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
-                dd($path);
+                // dd($path);
                 $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
                 $tour->slides()->save(new Slide([
                     'path' => $path,

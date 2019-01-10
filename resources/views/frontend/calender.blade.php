@@ -1,20 +1,32 @@
 @extends('layouts.frontend')
 @section('content')
+<section class="uk-container-expand">
+    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://source.unsplash.com/1200x800/?calender" uk-img>
+    <h1 class="main-heading">Calender</h1>
+        <div class="breadcrumb ">
+            <ul class="uk-breadcrumb  " id="breadcrumb">
+                <li><a href="/" uk-icon="icon: home" ></a></li>
+                <li class="uk-disabled"><a href="{{url()->current()}}">Calender</a></li>
+            </ul>
+        </div>  
+    </div>
+</section>
+
 <div id="responsiveTabsDemo" class="r-tabs uk-margin-medium-top">
     <ul class="r-tabs-nav uk-margin-medium-top">
     	<li class="r-tabs-tab"><a href="#all" class="r-tabs-anchor"> All </a></li>
-        <li class="r-tabs-tab"><a href="#jan" class="r-tabs-anchor"> january </a></li>
+        <li class="r-tabs-tab"><a href="#jan" class="r-tabs-anchor"> January </a></li>
         <li class="r-tabs-tab"><a href="#feb" class="r-tabs-anchor"> Febuary</a></li>
-        <li class="r-tabs-tab"><a href="#march" class="r-tabs-anchor"> march </a></li>
-        <li class="r-tabs-tab"><a href="#april" class="r-tabs-anchor"> april</a></li>
-        <li class="r-tabs-tab"><a href="#may" class="r-tabs-anchor"> may</a></li>
-        <li class="r-tabs-tab"><a href="#june" class="r-tabs-anchor"> june </a></li>
-        <li class="r-tabs-tab"><a href="#july" class="r-tabs-anchor"> july </a></li>
-        <li class="r-tabs-tab"><a href="#aug" class="r-tabs-anchor"> august</a></li>
-        <li class="r-tabs-tab"><a href="#sep" class="r-tabs-anchor"> september </a></li>
-        <li class="r-tabs-tab"><a href="#oct" class="r-tabs-anchor"> october </a></li>
-        <li class="r-tabs-tab"><a href="#nov" class="r-tabs-anchor"> november</a></li>
-        <li class="r-tabs-tab"><a href="#dec" class="r-tabs-anchor"> december </a></li>
+        <li class="r-tabs-tab"><a href="#march" class="r-tabs-anchor"> March </a></li>
+        <li class="r-tabs-tab"><a href="#april" class="r-tabs-anchor"> April</a></li>
+        <li class="r-tabs-tab"><a href="#may" class="r-tabs-anchor"> May</a></li>
+        <li class="r-tabs-tab"><a href="#june" class="r-tabs-anchor"> June </a></li>
+        <li class="r-tabs-tab"><a href="#july" class="r-tabs-anchor"> July </a></li>
+        <li class="r-tabs-tab"><a href="#aug" class="r-tabs-anchor"> August</a></li>
+        <li class="r-tabs-tab"><a href="#sep" class="r-tabs-anchor"> September </a></li>
+        <li class="r-tabs-tab"><a href="#oct" class="r-tabs-anchor"> October </a></li>
+        <li class="r-tabs-tab"><a href="#nov" class="r-tabs-anchor"> November</a></li>
+        <li class="r-tabs-tab"><a href="#dec" class="r-tabs-anchor"> December </a></li>
     </ul>
     <div id="all" class="r-tabs-accordion-title r-tabs-tab">
       	<h3>All Date</h3>

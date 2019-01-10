@@ -58,38 +58,7 @@
     border-left:3px solid $teal-lighten-1;
 }
 //product_page end(price_details in mobile mode)
-#product-price-wrapper,#product-price-wrapper1{
-   position: relative;
-}
-#product-price{
-    position: absolute;     
-    z-index: 1;
-    background-color:$white;
-    width: inherit;
-    span{
-        padding: 4px 0px;
-    }
-    .top{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .middle{
-        .middle-1{
-            font-weight: 500;
-            font-size: 14px;
-        }
-        .middle-2{
-            font-size: 40px;
-            font-weight: 600;
-        }        
-    }
-    .bottom{
-        #goto{
-            width: 100%;
-        }
-    }
 
-}
 
 #tab-wrapper{
     ul{
@@ -173,7 +142,7 @@
     background-color:$white;
 }
 #product-price-wrapper,#product-price-wrapper1{
- position: relative;
+   position: relative;
 }
 #product-price{
     position: absolute;     
@@ -197,8 +166,13 @@
             font-weight: 600;
         }        
     }
-}
+    .bottom{
+        #goto{
+            width: 100%;
+        }
+    }
 
+}
 .non-sticky{
     bottom:20px; 
 }

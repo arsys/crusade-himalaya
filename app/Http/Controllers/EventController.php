@@ -59,7 +59,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('backend.event.create')->withMedias($medias);
+        return view('backend.event.create')->withMedias($this->medias);
     }
 
     /**

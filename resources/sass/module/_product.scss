@@ -90,13 +90,6 @@
     }
 
 }
-.non-sticky{
-    bottom:20px; 
-}
-.sticky-price{
-    top: -200px;
-}
-
 
 #tab-wrapper{
     ul{
@@ -111,9 +104,7 @@
         }
     }
 }
-.sticky-wrapper{
-    background-color:$white;
-}
+
 
 //similar tours overlay start
 
@@ -143,10 +134,6 @@
 .tours{
     text-align: center;
 }
-/* .discover{
-    margin-bottom:8px;
-    margin-right:10px;
-} */
 .left{
     max-width: 10%;
     padding-left:9px;
@@ -218,7 +205,6 @@
 .sticky-price{
     top: -200px;
 }
-
 
 .sticky-wrapper{
     background-color:$white;
@@ -293,12 +279,7 @@
         }
     }
 }
-//content-review start
-.review-client{
-    font-weight: 600;
-}
 
-//content-review end
 // contact page details start
 .booking-contact-info{
     .booking-call{

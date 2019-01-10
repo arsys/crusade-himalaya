@@ -388,7 +388,7 @@ a:hover {
 .hp-meta .hp-days {
   font-weight: bold;
   color: #333;
-  margin: 0px !important;
+  margin: 7px !important;
 }
 
 .destination {
@@ -783,14 +783,6 @@ a:hover {
   width: 100%;
 }
 
-.non-sticky {
-  bottom: 20px;
-}
-
-.sticky-price {
-  top: -200px;
-}
-
 #tab-wrapper ul {
   background-color: #FFFFFF;
 }
@@ -803,10 +795,6 @@ a:hover {
   border-bottom: solid 2px #2ed3ae;
   -webkit-transition: width .3s;
   transition: width .3s;
-}
-
-.sticky-wrapper {
-  background-color: #FFFFFF;
 }
 
 .similar-tours {
@@ -836,11 +824,6 @@ a:hover {
 .tours {
   text-align: center;
 }
-
-/* .discover{
-    margin-bottom:8px;
-    margin-right:10px;
-} */
 
 .left {
   max-width: 10%;
@@ -1000,10 +983,6 @@ a:hover {
 .attribute-wrapper .attr-details .attr-meta {
   font-size: 1em;
   font-weight: 700;
-}
-
-.review-client {
-  font-weight: 600;
 }
 
 .booking-contact-info .booking-call {

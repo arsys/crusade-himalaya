@@ -12,7 +12,7 @@ class Slide extends Model
 		return $this->belongsTo('App\Tour', 'tour_id');
 	}
 
-	public function tour()
+	public function media()
 	{
 		return $this->belongsTo('App\Media', 'media_id');
 	}

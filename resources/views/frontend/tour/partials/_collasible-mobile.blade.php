@@ -84,7 +84,7 @@
 <li class="uk-box-shadow-small uk-padding uk-background-default">
     <a class="uk-accordion-title" href="#">Gallery</a>
     <div class="uk-accordion-content uk-animation-slide-top-medium">
-     @include ('frontend.tour.partials._review')
+     @include ('frontend.tour.partials._gallery')
  </div>
 </li>
 <!--review end-->

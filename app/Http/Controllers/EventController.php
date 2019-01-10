@@ -2,12 +2,23 @@
 
 namespace App\Http\Controllers;
 use App\Event;
+use App\Media;
+use App\UploadImage;
 use Calendar;
 use Session;
+use File;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+    private $thumb = 'uploads/event/';
+    public function __construct()
+    {
+        if (!File::exists($this->thumb) ) {
+            mkdir($this->thumb, 0755, true);
+        }
+        $this->medias = Media::all();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -48,7 +59,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('backend.event.create');
+        return view('backend.event.create')->withMedias($this->medias);
     }
 
     /**
@@ -63,13 +74,22 @@ class EventController extends Controller
         try {
             $this->validate($request, [
                 'title' => 'required|max:255',
-                'url' => 'sometimes'
+                'url' => 'sometimes',
+                'featured' => 'required'
             ]);            
             $event = new Event;
             $event->title = $request->title;
             $event->url = $request->url;
             $event->start_date = $request->start;
             $event->end_date = $request->end;
+
+            if (isset($request->featured)) {
+                $media = Media::find($request->featured);
+                $upload = new UploadImage;
+                $thumbPath = $upload->uploadSingle($this->thumb, $media->path, 400,300);
+                $event->path = $thumbPath;
+            }
+
             $event->save();
         } catch (Exception $e) {
             DB::rollback();
@@ -128,8 +148,11 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        Session::flash('success', 'Event deleted.');
+        if ($event->path) {
+            File::delete(public_path($eventthumb));
+        }
         $event->destroy();
+        Session::flash('success', 'Event deleted.');
         return redirect()->route('events.index');
     }
 }

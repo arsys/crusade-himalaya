@@ -45,7 +45,7 @@ class ItineraryController extends Controller
         $this->validate($request, [
             'day' => 'required',
             'title' => 'required|max:255',
-            'plan' => 'required'
+            // 'plan' => 'required'
         ]);
 
         $itinerary = new Itinerary;

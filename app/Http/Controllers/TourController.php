@@ -266,43 +266,44 @@ class TourController extends Controller
                 $tour->excludes()->sync($request->excludes);
             }
 
-            $oldBanner = $tour->image->banner;
-            $oldThumb = $tour->image->thumb;
-            $image = $tour->image;
+            if (isset($request->featured)) {
+                $oldBanner = $tour->image->banner;
+                $oldThumb = $tour->image->thumb;
+                $image = $tour->image;
 
-            $media = Media::find($request->featured);
-            
-            $upload = new UploadImage;
+                $media = Media::find($request->featured);
 
-            $image->banner = $upload->uploadSingle($this->banner, $media->path, 1024,512);
-            $image->thumb = $upload->uploadSingle($this->thumb, $media->path, 400,300);
-
-            $tour->image()->save($image);
-
-            File::delete(public_path($oldBanner));
-            File::delete(public_path($oldThumb));
-
-            $medias = Media::whereIn('id', $request->slides)->get();
-            // dd($medias);
-            foreach ($medias as $media) {
-                $oldIds = Slide::where('tour_id','=', $tour->id)->get();
-                $oldIds->whenNotEmpty(function ($oldIds) {
-                    foreach ($oldIds as $oldId) {
-                        File::delete(public_path($oldId->path));
-                        File::delete(public_path($oldId->thumb));
-                        $oldId->delete();
-                    }
-                });
                 $upload = new UploadImage;
-                $path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
-                // dd($path);
-                $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
-                $tour->slides()->save(new Slide([
-                    'path' => $path,
-                    'thumb' => $thumb,
-                    'name' => $media->name,
-                    'media_id' => $media->id
-                ]));
+
+                $image->banner = $upload->uploadSingle($this->banner, $media->path, 1024,512);
+                $image->thumb = $upload->uploadSingle($this->thumb, $media->path, 400,300);
+
+                $tour->image()->save($image);
+                File::delete(public_path($oldBanner));
+                File::delete(public_path($oldThumb));
+            }
+
+            if (isset($request->slides)) {
+                $medias = Media::whereIn('id', $request->slides)->get();
+                foreach ($medias as $media) {
+                    $oldIds = Slide::where('tour_id','=', $tour->id)->get();
+                    $oldIds->whenNotEmpty(function ($oldIds) {
+                        foreach ($oldIds as $oldId) {
+                            File::delete(public_path($oldId->path));
+                            File::delete(public_path($oldId->thumb));
+                            $oldId->delete();
+                        }
+                    });
+                    $upload = new UploadImage;
+                    $path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
+                    $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
+                    $tour->slides()->save(new Slide([
+                        'path' => $path,
+                        'thumb' => $thumb,
+                        'name' => $media->name,
+                        'media_id' => $media->id
+                    ]));
+                }
             }
 
         } catch (QueryException $e) {
@@ -333,7 +334,7 @@ class TourController extends Controller
         foreach ($tour->slides as $slide) {
             File::delete(public_path($slide->path));
             File::delete(public_path($slide->thumb));
-            $slide()->detach();
+            $slide->delete();
         }
         if ($test = $tour->includes()->count() != null) {
             $tour->includes()->detach();

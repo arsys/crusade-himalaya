@@ -119,7 +119,7 @@
                     success: function (data) {
                         $('#myModal').modal('hide');
                         toastr.success('Item update success!', 'Info Alert');
-                        // location.reload();
+                        location.reload();
                     }
 
                 });

@@ -27,10 +27,10 @@ class TourController extends Controller
 
     public function __construct()
     {
-        if (!is_dir($this->banner) || !is_dir($this->thumb)|| !is_dir($this->slide)|| !is_dir($this->sthumb)) {
+        if (!File::exists($this->banner) || !File::exists($this->thumb)|| !File::exists($this->slide)|| !File::exists($this->sthumb)) {
             mkdir($this->banner, 0755, true);
             mkdir($this->thumb, 0755, true);
-            mkdir($this->slides, 0755, true);
+            mkdir($this->slide, 0755, true);
             mkdir($this->sthumb, 0755, true);
         }
     }

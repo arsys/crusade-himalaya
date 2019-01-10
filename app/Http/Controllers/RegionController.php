@@ -17,9 +17,9 @@ class RegionController extends Controller
     function __construct()
     {
         if (!File::exists($this->path) || !File::exists($this->thumb) || !File::exists($this->nav)) {
-            File::makeDirectory($this->path);
-            File::makeDirectory($this->thumb);
-            File::makeDirectory($this->nav);
+            mkdir($this->path, 0755, true);
+            mkdir($this->thumb, 0755, true);;
+            mkdir($this->nav, 0755, true);
         }
         $this->medias = Media::all();
     }

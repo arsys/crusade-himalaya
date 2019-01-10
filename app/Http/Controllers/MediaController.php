@@ -102,9 +102,17 @@ class MediaController extends Controller
      * @param  \App\Media  $media
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Media $media)
+    public function update(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|max:244'
+        ]);
+        $media = Media::find($request->id);
+        $media->name = $request->name;
+
+        $media->save();
+
+        return response()->json($media);
     }
 
     /**

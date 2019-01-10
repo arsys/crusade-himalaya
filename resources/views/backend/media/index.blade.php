@@ -35,7 +35,7 @@
                 <h4><span class="text-danger">No alt name given</span></h4>
                 @endif
                 <p>
-                    <button  type="button" class="btn btn-info" data-id="{{$media->id}}" data-name="{{$media->name}}" data-header="{{$media->header}}" data-subheader="{{$media->subheader}}" data-toggle="modal"
+                    <button  type="button" class="btn btn-info" data-id="{{$media->id}}" data-name="{{$media->name}}" data-toggle="modal"
                        data-target="#editModal" id="edit-modal"><i class="fa fa-pencil-square-o"></i> Edit</button>
                        <button type="button" class="btn btn-danger" id="delete-modal" data-id="{{$media->id}}"   data-toggle="modal"
                         data-target="#myModal"><i
@@ -61,18 +61,6 @@
                         <div class="form-group">
                             <label for="name-edit" class="col-sm-2">Name</label>
                             <input type="text" class=" col-sm-8" id="name-edit" >
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="header-edit" class="col-sm-2">Header</label>
-                            <input type="text" class=" col-sm-8" id="header-edit" >
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group">
-                            <label for="subheader-edit" class="col-sm-2">Sub header</label>
-                            <input type="text" class=" col-sm-8" id="subheader-edit" >
                         </div>
                     </div>
                 </div>
@@ -126,14 +114,12 @@
                     data: {
                         '_token': $('meta[name="csrf-token"]').attr('content'),
                         'id': $("#id-edit").val(),
-                        'name': $('#name-edit').val(),
-                        'title': $('#header-edit').val(),
-                        'subtitle': $('#subheader-edit').val()
+                        'name': $('#name-edit').val()
                     },
                     success: function (data) {
                         $('#myModal').modal('hide');
                         toastr.success('Item update success!', 'Info Alert');
-                        location.reload();
+                        // location.reload();
                     }
 
                 });

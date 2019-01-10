@@ -6,6 +6,7 @@ use App\Media;
 use App\UploadImage;
 use Calendar;
 use Session;
+use File;
 use Illuminate\Http\Request;
 
 class EventController extends Controller

@@ -36,4 +36,9 @@ class Media extends Model
 
 		return $filecount;
 	}
+
+    public function slides()
+    {
+        return $this->hasMany('App\Slide', 'media_id');
+    }	
 }

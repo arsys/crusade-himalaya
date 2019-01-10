@@ -152,7 +152,8 @@ class TourController extends Controller
                 $tour->slides()->save(new Slide([
                     'path' => $path,
                     'thumb' => $thumb,
-                    'name' => $media->name
+                    'name' => $media->name,
+                    'media_id' =>$media->id
                 ]));
             }
 
@@ -299,7 +300,8 @@ class TourController extends Controller
                 $tour->slides()->save(new Slide([
                     'path' => $path,
                     'thumb' => $thumb,
-                    'name' => $media->name
+                    'name' => $media->name,
+                    'media_id' => $media->id
                 ]));
             }
 

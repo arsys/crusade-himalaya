@@ -116,6 +116,11 @@ class MediaController extends Controller
     public function destroy($id)
     {
         $media = Media::findOrFail($id);
+        foreach ($media->slides as $slide) {
+            File::delete(public_path($slide->path));
+            File::delete(public_path($slide->thumb));
+            $slide->delete();
+        }
         File::delete(public_path($media->path));
         File::delete(public_path($media->thumb));
         $media->delete();

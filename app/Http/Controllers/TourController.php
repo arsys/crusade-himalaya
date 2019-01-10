@@ -281,7 +281,7 @@ class TourController extends Controller
             // File::delete(public_path($oldBanner));
             // File::delete(public_path($oldThumb));
 
-            // $medias = Media::whereIn('id', $request->slides)->get();
+            $medias = Media::whereIn('id', $request->slides)->get();
             dd($medias);
             foreach ($medias as $media) {
                 $oldIds = Slide::where('tour_id','=', $tour->id)->get();

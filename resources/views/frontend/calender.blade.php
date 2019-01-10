@@ -1,5 +1,17 @@
 @extends('layouts.frontend')
 @section('content')
+<section class="uk-container-expand">
+    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://source.unsplash.com/1200x800/?calender" uk-img>
+    <h1 class="main-heading">Calender</h1>
+        <div class="breadcrumb ">
+            <ul class="uk-breadcrumb  " id="breadcrumb">
+                <li><a href="/" uk-icon="icon: home" ></a></li>
+                <li class="uk-disabled"><a href="#">Calender</a></li>
+            </ul>
+        </div>  
+    </div>
+</section>
+
 <div id="responsiveTabsDemo" class="r-tabs uk-margin-medium-top">
     <ul class="r-tabs-nav uk-margin-medium-top">
     	<li class="r-tabs-tab"><a href="#all" class="r-tabs-anchor"> All </a></li>

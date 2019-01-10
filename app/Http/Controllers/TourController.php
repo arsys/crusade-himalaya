@@ -22,12 +22,12 @@ class TourController extends Controller
 {
     private $banner = 'uploads/tour/';
     private $thumb = 'uploads/tour/thumb/';
-    private $slides = 'uploads/slides/';
+    private $slide = 'uploads/slides/';
     private $sthumb = 'uploads/slides/thumb/';
 
     public function __construct()
     {
-        if (!is_dir($this->banner) || !is_dir($this->thumb)|| !is_dir($this->slides)|| !is_dir($this->sthumb)) {
+        if (!is_dir($this->banner) || !is_dir($this->thumb)|| !is_dir($this->slide)|| !is_dir($this->sthumb)) {
             mkdir($this->banner, 0755, true);
             mkdir($this->thumb, 0755, true);
             mkdir($this->slides, 0755, true);
@@ -80,8 +80,7 @@ class TourController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        // dd($request->all());
+    {        
         try {
             $this->validate($request, [
                 'title' => 'required|max:255',
@@ -148,10 +147,10 @@ class TourController extends Controller
             $medias = Media::whereIn('id', $request->slides)->get();
             foreach ($medias as $media) {
                 $upload = new UploadImage;
-                $path = $upload->uploadSingle($this->slides, $media->path, 1024,768);
+                $path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
                 $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
                 $tour->slides()->save(new Slide([
-                    'banner' => $path,
+                    'path' => $path,
                     'thumb' => $thumb,
                     'name' => $media->name
                 ]));
@@ -216,76 +215,75 @@ class TourController extends Controller
      */
     public function update(Request $request, Tour $tour)
     {
-        dd($request->all());
         try {
-            // $this->validate($request, [
-            //     'title' => 'required|max:255',
-            //     'days' => 'required|numeric|max:90',
-            //     'price' => 'required|numeric',
-            //     'elevation' => 'required|numeric',
-            //     'difficulty' => 'required',
-            //     'group' => 'required',
-            //     'region' => 'sometimes',
-            //     'accommodation' => 'required',
-            //     'meal' => 'required',
-            //     'includes'  => 'required|array|min:1',
-            //     'excludes'  => 'required|array|min:1',
-            //     'featured' => 'sometimes',
-            //     'status' => 'required',
-            //     'overview' => 'required',
-            //     'mtitle' => 'required',
-            //     'description' => 'required',
-            //     'featured' => 'required'
-            // ]);
+            $this->validate($request, [
+                'title' => 'required|max:255',
+                'days' => 'required|numeric|max:90',
+                'price' => 'required|numeric',
+                'elevation' => 'required|numeric',
+                'difficulty' => 'required',
+                'group' => 'required',
+                'region' => 'sometimes',
+                'accommodation' => 'required',
+                'meal' => 'required',
+                'includes'  => 'required|array|min:1',
+                'excludes'  => 'required|array|min:1',
+                'featured' => 'sometimes',
+                'status' => 'required',
+                'overview' => 'required',
+                'mtitle' => 'required',
+                'description' => 'required',
+                'featured' => 'required'
+            ]);
 
-            // $tour->title = $request->title;
-            // $tour->days = $request->days;
-            // $tour->price = $request->price;
-            // $tour->elevation = $request->elevation;
-            // $tour->difficulty_id = $request->difficulty;
-            // $tour->group_id = $request->group;
+            $tour->title = $request->title;
+            $tour->days = $request->days;
+            $tour->price = $request->price;
+            $tour->elevation = $request->elevation;
+            $tour->difficulty_id = $request->difficulty;
+            $tour->group_id = $request->group;
 
-            // $tour->category_id = $request->category;
+            $tour->category_id = $request->category;
 
-            // if (!empty($request->region)) {
-            //     $tour->region_id = $request->region;
-            // }
-            // $tour->accommodation_id = $request->accommodation;
-            // $tour->meal_id = $request->meal;
+            if (!empty($request->region)) {
+                $tour->region_id = $request->region;
+            }
+            $tour->accommodation_id = $request->accommodation;
+            $tour->meal_id = $request->meal;
 
-            // $tour->status = $request->status;
-            // $tour->overview = $request->overview;
-            // $tour->mtitle = $request->mtitle;
-            // $tour->description = $request->description;
+            $tour->status = $request->status;
+            $tour->overview = $request->overview;
+            $tour->mtitle = $request->mtitle;
+            $tour->description = $request->description;
 
-            // $tour->save();
-            // // dd($request->excludes);
-            // if (isset($request->includes) ) {
-            //     $tour->includes()->sync($request->includes);
-            // }
+            $tour->save();
+            // dd($request->excludes);
+            if (isset($request->includes) ) {
+                $tour->includes()->sync($request->includes);
+            }
 
-            // if (isset($request->excludes)) {
-            //     $tour->excludes()->sync($request->excludes);
-            // }
-            // if (! File::exists($this->banner) || ! File::exists($this->thumb)) {
-            //     File::makeDirectory($this->banner,0775, true);
-            //     File::makeDirectory($this->thumb,0775, true);
-            // }
-            // $oldBanner = $tour->image->banner;
-            // $oldThumb = $tour->image->thumb;
-            // $image = $tour->image;
+            if (isset($request->excludes)) {
+                $tour->excludes()->sync($request->excludes);
+            }
+            if (! File::exists($this->banner) || ! File::exists($this->thumb)) {
+                File::makeDirectory($this->banner,0775, true);
+                File::makeDirectory($this->thumb,0775, true);
+            }
+            $oldBanner = $tour->image->banner;
+            $oldThumb = $tour->image->thumb;
+            $image = $tour->image;
 
-            // $media = Media::find($request->featured);
-            // // dd($media);
-            // $upload = new UploadImage;
+            $media = Media::find($request->featured);
+            // dd($media);
+            $upload = new UploadImage;
 
-            // $image->banner = $upload->uploadSingle($this->banner, $media->path, 1024,512);
-            // $image->thumb = $upload->uploadSingle($this->thumb, $media->path, 400,300);
+            $image->banner = $upload->uploadSingle($this->banner, $media->path, 1024,512);
+            $image->thumb = $upload->uploadSingle($this->thumb, $media->path, 400,300);
 
-            // $tour->image()->save($image);
+            $tour->image()->save($image);
 
-            // File::delete(public_path($oldBanner));
-            // File::delete(public_path($oldThumb));
+            File::delete(public_path($oldBanner));
+            File::delete(public_path($oldThumb));
 
             $medias = Media::whereIn('id', $request->slides)->get();
             foreach ($medias as $media) {
@@ -296,10 +294,10 @@ class TourController extends Controller
                     $oldId->delete();
                 }
                 $upload = new UploadImage;
-                $path = $upload->uploadSingle($this->slides, $media->path, 1024,768);
+                $path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
                 $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
                 $tour->slides()->save(new Slide([
-                    'banner' => $path,
+                    'path' => $path,
                     'thumb' => $thumb,
                     'name' => $media->name
                 ]));

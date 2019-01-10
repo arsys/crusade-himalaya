@@ -2,7 +2,7 @@
 	
     <div>
     	@foreach($tour->slides as $slide)
-        <a class="uk-inline" href="{{asset($slide->path)}}" data-caption="image caption">
+        <a class="uk-inline" href="{{asset($slide->path)}}" data-caption="{{ $slide->name }}">
             <img src="{{ asset($slide->thumb) }}" alt="{{ $slide->name }}">
         </a>
         @endforeach

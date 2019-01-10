@@ -1,3 +1,4 @@
+{{ dd($tour->slides->count())}}
 @extends('layouts.backend')
 @section('content')
 <div class="row">

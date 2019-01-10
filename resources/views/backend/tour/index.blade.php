@@ -20,8 +20,6 @@
               <th class="sort-alpha">Category</th>
               <th data-orderable="false">Meta Title</th>
               <th data-orderable="false">Meta Description</th>
-              <th data-orderable="false">Image</th>
-              <th data-orderable="false">Thumb</th>
               <th class="sort-alpha">Status</th>
               <th data-orderable="false">Action</th>
             </tr>
@@ -41,20 +39,6 @@
               </th>
               <th>
                 @if($tour->description)
-                <i class="fas fa-check text-success"></i>
-                @else
-                <i class="fas fa-times text-danger"></i>
-                @endif
-              </th>
-              <th>
-                @if($tour->image->path)
-                <i class="fas fa-check text-success"></i>
-                @else
-                <i class="fas fa-times text-danger"></i>
-                @endif
-              </th>
-              <th>
-                @if($tour->image->thumb)
                 <i class="fas fa-check text-success"></i>
                 @else
                 <i class="fas fa-times text-danger"></i>

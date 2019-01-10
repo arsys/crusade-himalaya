@@ -266,7 +266,7 @@ class TourController extends Controller
                 $tour->excludes()->sync($request->excludes);
             }
 
-            if (!isset($request->featured)) {
+            if (isset($request->featured)) {
                 $oldBanner = $tour->image->banner;
                 $oldThumb = $tour->image->thumb;
                 $image = $tour->image;
@@ -283,7 +283,7 @@ class TourController extends Controller
                 File::delete(public_path($oldThumb));
             }
 
-            if (!isset($request->slides)) {
+            if (isset($request->slides)) {
                 $medias = Media::whereIn('id', $request->slides)->get();
                 foreach ($medias as $media) {
                     $oldIds = Slide::where('tour_id','=', $tour->id)->get();
@@ -334,7 +334,7 @@ class TourController extends Controller
         foreach ($tour->slides as $slide) {
             File::delete(public_path($slide->path));
             File::delete(public_path($slide->thumb));
-            $slide()->detach();
+            $slide->delete();
         }
         if ($test = $tour->includes()->count() != null) {
             $tour->includes()->detach();

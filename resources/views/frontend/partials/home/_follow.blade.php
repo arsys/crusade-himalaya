@@ -7,9 +7,12 @@
         @foreach($instafeeds->chunk(10) as $row)
         <div class="follow uk-grid-collapse uk-child-width-expand@s uk-child-width-1-2   uk-child-height-1-2 " uk-grid="">
             @foreach($row as $feed)
-            <div>
+            <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
                 <a href="#instagram-{{ $loop->iteration }}" uk-toggle>
                     <img  src="{{ $feed->thumb_link }}" alt="{{ $feed->caption }}">
+                       <div class="uk-position-center insta-color">
+                            <span class=""><i class="fab fa-instagram"></i></span>
+                        </div>
                 </a>
             </div>
             @endforeach
@@ -22,9 +25,10 @@
                 <div class="uk-grid-collapse" uk-grid>
                     <div class="uk-background-cover uk-width-3-4@s">  
                         <img class="insta-lightbox" src="{{ $feed->standard_link }}" alt="{{ $feed->caption }}" height="720" width="480">
+
                     </div>
                     <div class=" uk-width-1-4@s uk-padding">
-                        <h5 class="user-instagram">@username</h5>
+                        <h5 class="user-instagram"><a href="www.instagram.com/crusadehimalya" target="_blank">@crusadehimalaya</a></h5>
                         <p class="caption-instagram">{{ $feed->caption }}</p>
                     </div>
                 </div>

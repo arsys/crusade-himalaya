@@ -64,8 +64,5 @@
 		</div>
 	</div>
 </div>
-@section('scripts')
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
-@stop
+
 

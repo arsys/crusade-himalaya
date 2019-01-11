@@ -1,16 +1,13 @@
+
 @extends('layouts.frontend')
 @section('content')
-<!-- image start -->
 @include ('frontend.partials.contact._image')
-<!-- image end -->
-<!-- form start -->
 @include ('frontend.partials.contact._contactform')
-<!-- form end -->
-<!--  map start -->
 @include ('frontend.partials.contact._map')
-<!--   map end -->
 @stop
 @section('scripts')
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
 <script>
     function initMap() {
         var uluru = {lat: 27.7159776, lng: 85.3145912};

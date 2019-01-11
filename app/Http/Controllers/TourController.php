@@ -147,14 +147,13 @@ class TourController extends Controller
             $medias = Media::whereIn('id', $request->slides)->get();
             foreach ($medias as $media) {
                 $upload = new UploadImage;
-                $path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
-                $thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
-                $tour->slides()->save(new Slide([
-                    'path' => $path,
-                    'thumb' => $thumb,
-                    'name' => $media->name,
-                    'media_id' =>$media->id
-                ]));
+                $sImage = new Slide;
+                $sImage->tour_id = $tour->id;
+                $sImage->media_id = $media->id; 
+                $sImage->path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
+                $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
+                $sImage->name = $media->name; 
+                $sImage->save();
             }
 
 
@@ -297,6 +296,7 @@ class TourController extends Controller
                     $upload = new UploadImage;
                     $sImage = new Slide;
                     $sImage->tour_id = $tour->id;
+                    $sImage->media_id = $media->id; 
                     $sImage->path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
                     $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
                     $sImage->name = $media->name; 

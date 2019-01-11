@@ -292,6 +292,7 @@ class TourController extends Controller
                         $oldId->delete();
                     }
                 });
+                $medias = Media::whereIn('id', $request->slides)->get();
                 foreach ($medias as $media) {
                     $upload = new UploadImage;
                     $sImage = new Slide;

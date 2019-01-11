@@ -352,7 +352,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
         buttonWidth: '400px'
     });
     $(".image-picker").imagepicker();
+
     $(".slides").imagepicker();
+    $(".slides").val({!! json_encode($media->slides()->allRelatedIds()) !!});
+    $(".slides").data('picker').sync_picker_with_select();
     CKEDITOR.replace('overview', {
         height: 500
     });

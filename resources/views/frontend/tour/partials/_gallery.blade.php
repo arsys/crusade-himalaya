@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="uk-child-width-1-3@m " uk-grid uk-lightbox="animation: slide">
 	
 	@foreach($tour->slides as $slide)

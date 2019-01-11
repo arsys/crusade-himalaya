@@ -10,6 +10,7 @@
 @include ('frontend.partials.contact._map')
 <!--   map end -->
 @stop
+
 @section('scripts')
 <script>
     function initMap() {

@@ -26,6 +26,8 @@ class FrontendComposer
 	public function footer(View $view)
 	{
 		$setting = Setting::firstOrFail();
-		$view->withSetting($setting);
+		$oldIds->whenNotEmpty(function ($oldIds) { 
+			$view->withSetting($setting);
+		});
 	}
 }

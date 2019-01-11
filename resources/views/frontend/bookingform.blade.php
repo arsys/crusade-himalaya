@@ -28,7 +28,7 @@
 <!-- booking step end -->
 
 <div class="uk-container ">
-   <h3 class="uk-padding-small uk-text-center"><span>Booking Form</span></h3> 
+   <h3 class="uk-padding-small uk-text-center"><span>Travellers Details</span></h3> 
     <div class="" uk-grid>
         <div class="uk-width-3-5@m">           
             <form class="uk-form-stacked" action="">

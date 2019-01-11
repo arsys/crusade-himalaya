@@ -30,7 +30,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group floating-label {{$errors->has('days') ? 'has-error' : ''}}">
-                            <input type="text" class="form-control"
+                            <input type="number" class="form-control"
                             id="days {{$errors->has('days') ? 'inputError' : ''}}" name="days"
                             value="{{ old('days') }}" required>
                             @if($errors->has('days'))
@@ -41,7 +41,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>   
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            <input type="text" class="form-control"
+                            <input type="number" class="form-control"
                             id="price {{$errors->has('price') ? 'inputError' : ''}}" name="price"
                             value="{{ old('price') }}" required>
                             @if($errors->has('price'))
@@ -52,7 +52,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            <input type="text" class="form-control"
+                            <input type="number" class="form-control"
                             id="elevation {{$errors->has('elevation') ? 'inputError' : ''}}" name="elevation"
                             value="{{ old('elevation') }}" required>
                             @if($errors->has('elevation'))

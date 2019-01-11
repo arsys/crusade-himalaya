@@ -13,7 +13,7 @@
         <li class="uk-active"><a href="/" class="nav-a">Home</a></li>
         <li class="nav-list"><a href="#" class="nav-a">What we do</a>
           <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">
-            <div class="uk-position-relative uk-visible-toggle" uk-slider="sets: true">
+            <div class="uk-position-relative uk-visible-toggle" uk-slider>
               <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($dos as $do)
                 <li>
@@ -31,7 +31,7 @@
         </li>
         <li class="nav-list"><a href="#" class="nav-a">Where We GO</a>
           <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">
-            <div class="uk-position-relative uk-visible-toggle" uk-slider="sets: true">
+            <div class="uk-position-relative uk-visible-toggle" uk-slider>
               <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($wheres as $where)
                 <li>

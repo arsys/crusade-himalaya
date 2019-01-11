@@ -28,7 +28,7 @@
 
   <!-- fieldsets  start-->
 <div class="uk-container uk-container-xsmall uk-padding">
-    <h3 class="uk-padding-small uk-text-center"><span>Trip Booking</span></h3> 
+    <h3 class="uk-padding-small uk-text-center"><span>No. of Travellers</span></h3> 
     <form class="uk-form-stacked" action="">
         <div class="uk-margin">
             <div class="uk-form-controls">

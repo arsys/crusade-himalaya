@@ -40,7 +40,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group floating-label {{$errors->has('days') ? 'has-error' : ''}}">
-                            {{ Form::text('days', null, ['class' => 'form-control', 'id'=>'days']) }}
+                            {{ Form::number('days', null, ['class' => 'form-control', 'id'=>'days']) }}
                             @if($errors->has('days'))
                             <span class="help-block">{{ $errors->first('days') }}</span>
                             @endif
@@ -49,7 +49,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            {{ Form::text('price', null, ['class' => 'form-control', 'id'=>'price']) }}
+                            {{ Form::number('price', null, ['class' => 'form-control', 'id'=>'price']) }}
                             @if($errors->has('price'))
                             <span class="help-block">{{ $errors->first('price') }}</span>
                             @endif
@@ -58,7 +58,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            {{ Form::text('elevation', null, ['class' => 'form-control', 'id'=>'elevation']) }}
+                            {{ Form::number('elevation', null, ['class' => 'form-control', 'id'=>'elevation']) }}
                             @if($errors->has('elevation'))
                             <span class="help-block">{{ $errors->first('elevation') }}</span>
                             @endif
@@ -354,8 +354,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
     $(".image-picker").imagepicker();
 
     $(".slides").imagepicker();
-    $(".slides").val({!! json_encode($media->slides()->allRelatedIds()) !!});
-    $(".slides").data('picker').sync_picker_with_select();
     CKEDITOR.replace('overview', {
         height: 500
     });

@@ -281,18 +281,19 @@ class TourController extends Controller
                 File::delete(public_path($oldBanner));
                 File::delete(public_path($oldThumb));
             }
+            // dd($request->slides);
 
             if (isset($request->slides)) {
                 $medias = Media::whereIn('id', $request->slides)->get();
+                $oldIds = Slide::where('tour_id','=', $tour->id)->get();
+                $oldIds->whenNotEmpty(function ($oldIds) {
+                    foreach ($oldIds as $oldId) {
+                        File::delete(public_path($oldId->path));
+                        File::delete(public_path($oldId->thumb));
+                        $oldId->delete();
+                    }
+                });
                 foreach ($medias as $media) {
-                    $oldIds = Slide::where('tour_id','=', $tour->id)->get();
-                    $oldIds->whenNotEmpty(function ($oldIds) {
-                        foreach ($oldIds as $oldId) {
-                            File::delete(public_path($oldId->path));
-                            File::delete(public_path($oldId->thumb));
-                            $oldId->delete();
-                        }
-                    });
                     $upload = new UploadImage;
                     $sImage = new Slide;
                     $sImage->tour_id = $tour->id;

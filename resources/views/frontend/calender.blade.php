@@ -12,8 +12,8 @@
     </div>
 </section>
 
-<div id="responsiveTabsDemo" class="r-tabs uk-margin-medium-top">
-    <ul class="r-tabs-nav uk-margin-medium-top">
+<div id="responsiveTabsDemo" class="r-tabs ">
+    <ul class="r-tabs-nav">
     	<li class="r-tabs-tab"><a href="#all" class="r-tabs-anchor"> All </a></li>
         <li class="r-tabs-tab"><a href="#jan" class="r-tabs-anchor"> January </a></li>
         <li class="r-tabs-tab"><a href="#feb" class="r-tabs-anchor"> Febuary</a></li>
@@ -29,9 +29,79 @@
         <li class="r-tabs-tab"><a href="#dec" class="r-tabs-anchor"> December </a></li>
     </ul>
     <div id="all" class="r-tabs-accordion-title r-tabs-tab">
-      	<h3>All Date</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quia tempora laborum, ducimus sequi voluptas, debitis quis a praesentium architecto! Esse, aliquam, cum. Ducimus quis cum inventore similique voluptatem perferendis maiores, iure accusamus consequatur.
-        </p>
+        <div class="uk-container uk-container-small">
+            @for($i=1;$i<=2; $i++)
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+                <div class="uk-card-media-left  article-body">
+                    <img src="https://source.unsplash.com/1200x800/?holi" alt="">
+                    
+                </div>
+            
+                    <div class="uk-card-body article-inner">
+                        <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+                            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+                                <li><span>color festival</span></li>
+                            </ul>
+                       
+                        <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+                    </div>
+            
+            </div>
+            @endfor
+        </div>
+        <div class="uk-container uk-margin-large-top">
+             <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Upcoming Festivals</span></h2>
+            <div class="uk-child-width-1-2@s uk-child-width-1-3@m " uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default article-wrap">
+                        <div class="uk-card-media-top article-body">
+                            <img src="https://source.unsplash.com/1200x800/?christmas" alt="">
+                            <div class="article-inner uk-margin-left">
+                                <h4 class="  uk-margin-remove"><span>christmas Festival</span></h4>
+                                <div class=" uk-margin-remove-top">
+                                   <i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus provident recusandae ullam fugit non vitae, illo, magni praesentium sapiente consectetur quod doloremque, mollitia!</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default article-wrap">
+                        <div class="uk-card-media-top article-body">
+                            <img src="https://source.unsplash.com/1200x800/?holi" alt="">
+                            <div class="article-inner uk-margin-left">
+                                <h4 class="  uk-margin-remove"><span>Holi Festival</span></h4>
+                                <div class=" uk-margin-remove-top">
+                                   <i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus provident recusandae ullam fugit non vitae, illo, magni praesentium sapiente consectetur quod doloremque, mollitia!</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default article-wrap">
+                        <div class="uk-card-media-top article-body">
+                            <img src="https://source.unsplash.com/1200x800/?diwali" alt="">
+                            <div class="article-inner uk-margin-left">
+                                <h4 class="  uk-margin-remove"><span>Diwali Festival</span></h4>
+                                <div class=" uk-margin-remove-top">
+                                   <i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus provident recusandae ullam fugit non vitae, illo, magni praesentium sapiente consectetur quod doloremque, mollitia!</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
     </div>
     <div id="jan" class="r-tabs-accordion-title r-tabs-tab">
       	<h3>jan</h3>

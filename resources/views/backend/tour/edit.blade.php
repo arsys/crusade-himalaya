@@ -1,4 +1,3 @@
-{{--{{ dd($tour->featuredImage->path) }}--}}
 @php
 $inIds = json_decode(json_encode($tour->includes()->allRelatedIds()), true);
 $exIds =json_decode(json_encode($tour->excludes()->allRelatedIds()), true);
@@ -354,8 +353,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
     $(".image-picker").imagepicker();
 
     $(".slides").imagepicker();
-    $(".slides").val({!! json_encode($media->slides()->allRelatedIds()) !!});
-    $(".slides").data('picker').sync_picker_with_select();
     CKEDITOR.replace('overview', {
         height: 500
     });

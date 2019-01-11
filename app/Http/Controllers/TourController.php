@@ -284,7 +284,6 @@ class TourController extends Controller
             // dd($request->slides);
 
             if (isset($request->slides)) {
-                $medias = Media::whereIn('id', $request->slides)->get();
                 $oldIds = Slide::where('tour_id','=', $tour->id)->get();
                 $oldIds->whenNotEmpty(function ($oldIds) {
                     foreach ($oldIds as $oldId) {

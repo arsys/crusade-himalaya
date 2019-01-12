@@ -4,13 +4,11 @@
     <div class="col-lg-10 col-lg-offset-1">
         <div class="card">
             <div class="card-body">
-                {!! Form::open( ['route'=> 'events.store', 'method' =>'POST','class'=>'form'] ) !!}
+                {!! Form::model($event,['route'=> ['events.update',$event->id ],'class'=>'form form-validate','method' => 'PUT', 'files'=>true])!!}
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group floating-label {{$errors->has('title') ? 'has-error' : ''}}">
-                            <input type="text" class="form-control"
-                            id="title {{$errors->has('title') ? 'inputError' : ''}}" name="title"
-                            value="{{ old('title') }}" required>
+                            {{ Form::text('title', null, ['class' => 'form-control', 'id'=>'title']) }}
                             @if($errors->has('title'))
                             <span class="help-block">{{ $errors->first('title') }}</span>
                             @endif
@@ -19,9 +17,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group floating-label {{$errors->has('url') ? 'has-error' : ''}}">
-                            <input type="text" class="form-control"
-                            id="url {{$errors->has('url') ? 'inputError' : ''}}" name="url"
-                            value="{{ old('url') }}">
+                            {{ Form::text('url', null, ['class' => 'form-control', 'id'=>'url']) }}
                             @if($errors->has('url'))
                             <span class="help-block">{{ $errors->first('url') }}</span>
                             @endif
@@ -35,7 +31,7 @@
                             <div class="input-group date" id="event-start">
                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 <div class="input-group-content">
-                                    <input type="text" class="form-control" name="start">
+                                    {{ Form::text('start_date', null, ['class' => 'form-control', 'id'=>'start_date']) }}
                                     <label>Event Start</label>
                                 </div>
                                 
@@ -47,7 +43,7 @@
                             <div class="input-group date" id="event-end">
                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 <div class="input-group-content">
-                                    <input type="text" class="form-control" name="end">
+                                    {{ Form::text('end_date', null, ['class' => 'form-control', 'id'=>'end_date']) }}
                                     <label>Event End</label>
                                 </div>
                                 
@@ -65,7 +61,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         .  <div class="form-group {{$errors->has('description') ? 'has-error' : ''}}">
-                            <textarea name="description" class="form-control" rows="8" style="resize: none;" id="description {{$errors->has('description') ? 'inputError' : ''}}" value="{{old('description')}}"></textarea>
+                            {{ Form::textarea('description',null, ['class' => 'form-control ','id'=>'description']) }}
                             @if($errors->has('description'))
                             <span class="help-block">{{ $errors->first('description') }}</span>
                             @endif

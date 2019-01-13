@@ -4,8 +4,8 @@
         <li>
             <img src="{{ $carousel->path }}" alt="" uk-cover>
             <div class="uk-position-center uk-position-small uk-text-center uk-overlay-panel uk-overlay-background uk-overlay-fade uk-light">
-               <h1 class="uk-heading-primary heading" uk-slideshow-parallax="x: 600,-600" style="transform: translate3d(-600px, 0px, 0px);">{{ $carousel->header}}</h1>
-               <p class="uk-text-lead " uk-slideshow-parallax="x: 400,-400" style="transform: translate3d(0px, 0px, -400px);">{{ $carousel->subheader}}</p>
+               <h1 class=" uk-heading-primary carousel-heading" uk-slideshow-parallax="x: 600,-600" style="transform: translate3d(-600px, 0px, 0px);">{{ $carousel->header}}</h1>
+               <p class="uk-text-lead carousel-heading " uk-slideshow-parallax="x: 400,-400" style="transform: translate3d(0px, 0px, -400px);">{{ $carousel->subheader}}</p>
            </div>
        </li>
        @endforeach

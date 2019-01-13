@@ -126,3 +126,10 @@
   text-transform: uppercase;
 }
 //home intro end
+//carousel heading start
+@media screen and (max-width: 800px){
+  .carousel-heading{
+   font-size:15px;
+  }
+}
+//carousel heading end

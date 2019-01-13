@@ -24,9 +24,9 @@
 								<i class="fas fa-info"></i>      
 							</div>
 							<div>
-								<a href="#modal-quick-enquiry" class="uk-link-text uk-link-reset" uk-toggle>Quick Enquiry</a>
+								<a href="#quick-enquiry" class="uk-link-text uk-link-reset" >Quick Enquiry</a>
 								<!-- This is the modal -->
-								@include('frontend.tour.partials.modal._enquiry')
+							{{-- 	@include('frontend.tour.partials.modal._enquiry') --}}
 								<!--modal end-->
 							</div>
 						</div>

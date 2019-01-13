@@ -17,7 +17,7 @@
     <ul class="r-tabs-nav">
         <li class="r-tabs-tab"><a href="#all" class="r-tabs-anchor"> All </a></li>
         @for($i=1;$i<=12;$i++)
-        <li class="r-tabs-tab"><a href="#{{ date('M') }}" class="r-tabs-anchor"> {{ date("F") }} </a></li>
+        <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
         @endfor
     </ul>
     <div id="all" class="r-tabs-accordion-title r-tabs-tab">

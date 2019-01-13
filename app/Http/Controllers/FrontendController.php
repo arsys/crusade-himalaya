@@ -10,7 +10,6 @@ use App\Departure;
 use App\Insta;
 use App\Partner;
 use App\Event;
-use Calendar;
 use DB;
 
 use Illuminate\Http\Request;
@@ -159,25 +158,8 @@ public function tourDetailtest($slug)
 
 public function eventCalender()
 {
-    $events = [];
-    $data = Event::all();
-    if($data->count()) {
-        foreach ($data as $key => $value) {
-            $events[] = Calendar::event(
-                $value->title,
-                true,
-                new \DateTime($value->start_date),
-                new \DateTime($value->end_date.' +1 day'),
-                null,
-                    // Add color and link on event
-                [
-                    'color' => '#2ed3ae',
-                    'url' => $value->url,                ]
-                );
-        }
-    }
-    $calendar = Calendar::addEvents($events);
-    return view('frontend.calender', compact('calendar'));
+    $events = Event::all();
+    return view('frontend.calender')->withEvents($events);
 }
 
 public function ajaxsearchdeparture(Request $request)

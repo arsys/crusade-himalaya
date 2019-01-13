@@ -16,8 +16,8 @@
                             <div class="uk-width-auto uk-first-column">
                                 <i class="fas fa-info"></i>   
                             </div>
-                            <div>
-                                <a href="#modal-quick-enquiry" class="uk-link-text uk-link-reset" uk-toggle>Quick Enquiry</a> 
+                            <div uk-scrollspy-nav="closest: a; scroll: true; offset: 120" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon" uk-nav>
+                                <a href="#mob-enquiry" class="uk-link-text uk-link-reset">Quick Enquiry</a> 
                             </div>
                         </div>
                     </li>
@@ -56,37 +56,39 @@
         <li class="uk-box-shadow-small uk-padding uk-background-default  ">
             <a class="uk-accordion-title" href="">Overview</a>
             <div class="uk-accordion-content uk-animation-slide-top-medium">
-             <div class="left-img uk-width-medium@s uk-first-column uk-visible@l">
-
-             </div>
-             <div>
+                <div class="left-img uk-width-medium@s uk-first-column uk-visible@l">
+                </div>
+            <div>
                @include ('frontend.tour.partials._overview')    
            </div>
        </li>
        <!--overview end-->
        <!--Itinerary start-->
-       <li class="uk-box-shadow-small uk-padding uk-background-default">
-        <a class="uk-accordion-title" href="#">Itinerary</a>
-        <div class="uk-accordion-content uk-animation-slide-top-medium">
-          @include ('frontend.tour.partials._itinerary')
-      </div>
-  </li>
-  <!--Itinerary end-->
-  <!--Price & Availability start-->
-  <li class="uk-box-shadow-small uk-padding uk-background-default">
-    <a class="uk-accordion-title" href="#">Price & Availability</a>
-    <div class="uk-accordion-content uk-animation-slide-top-medium">
-     @include ('frontend.tour.partials._price-mobile')
- </div>
-</li>
-<!--Price & Availability end-->
-<!--review start-->
-<li class="uk-box-shadow-small uk-padding uk-background-default">
-    <a class="uk-accordion-title" href="#">Gallery</a>
-    <div class="uk-accordion-content uk-animation-slide-top-medium">
-     @include ('frontend.tour.partials._gallery')
- </div>
-</li>
-<!--review end-->
-</ul>
-</div
+        <li class="uk-box-shadow-small uk-padding uk-background-default">
+            <a class="uk-accordion-title" href="#">Itinerary</a>
+                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                @include ('frontend.tour.partials._itinerary')
+                </div>
+        </li>
+        <!--Itinerary end-->
+        <!--Price & Availability start-->
+        <li class="uk-box-shadow-small uk-padding uk-background-default">
+            <a class="uk-accordion-title" href="#">Price & Availability</a>
+                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                    @include ('frontend.tour.partials._price-mobile')
+                </div>
+        </li>
+        <!--Price & Availability end-->
+        <!--review start-->
+        <li class="uk-box-shadow-small uk-padding uk-background-default">
+            <a class="uk-accordion-title" href="#">Gallery</a>
+                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                    @include ('frontend.tour.partials._gallery')
+                </div>
+        </li>
+        <!--review end-->
+    </ul>
+</div>
+<div class="uk-card uk-card-default uk-card-body uk-margin-small-top  uk-hidden@l" id="mob-enquiry"> 
+    @include('frontend.tour.partials.modal._enquiry')
+</div>

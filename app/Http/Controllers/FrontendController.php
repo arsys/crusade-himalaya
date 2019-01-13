@@ -158,8 +158,8 @@ public function tourDetailtest($slug)
 
 public function eventCalender()
 {
-    $events = Event::all();
-    $jan = $events->whereMonth('start_date',date('m'))->get();
+    $jan = Event::whereMonth('start_date',date('m'))->get();
+    // $jan = $events->whereMonth('start_date',date('m'))->get();
     return view('frontend.calender')
     ->withJan($jan);
 }

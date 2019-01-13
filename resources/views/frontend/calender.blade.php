@@ -21,21 +21,19 @@
 </ul>
 
 <div id="Jan" class="r-tabs-accordion-title r-tabs-tab">
-  @foreach($jan as $jan)
+  @foreach($Jan as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
@@ -43,220 +41,220 @@
 </div>
 
 <div id="Feb" class="r-tabs-tab">
+  @foreach($Feb as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 
 <div id="Mar" class="r-tabs-tab">
+  @foreach($Mar as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 <div id="Apr" class="r-tabs-tab">
+  @foreach($Apr as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 
 <div id="May" class="r-tabs-tab">
+  @foreach($May as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 
 <div id="Jun" class="r-tabs-tab">
+  @foreach($Jun as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 <div id="Jul" class="r-tabs-tab">
+  @foreach($Jul as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 
 <div id="Aug" class="r-tabs-tab">
+  @foreach($Aug as $aug)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 
 <div id="Sep" class="r-tabs-tab">
+  @foreach($Sep as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 <div id="Oct" class="r-tabs-tab">
+  @foreach($Oct as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 
 <div id="Nov" class="r-tabs-tab">
+  @foreach($Nov as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 
 <div id="Dec" class="r-tabs-tab">
+  @foreach($Dec as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
-      <img src="https://source.unsplash.com/1200x800/?holi" alt="">
-
+      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
     </div>
 
     <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>Holi Festival</span></h4>
+      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
       <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left"> 3rd March</span></li>
+        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
         <li><span>color festival</span></li>
       </ul>
-
-      <p>Celebrate all the good things in life! Spring comes a calling. Fagu Purnima or Holi is a Hindu festival celebrated on a full-moon day at the end of the month of Falgun, from mid February to mid May. </p><a href="#">Read More</a>
+      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
     </div>
 
   </div>
+  @endforeach
 </div>
 </div>
 

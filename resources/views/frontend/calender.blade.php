@@ -16,7 +16,7 @@
 <div id="responsiveTabsDemo" class="r-tabs ">
     <ul class="r-tabs-nav">
         <li class="r-tabs-tab"><a href="#all" class="r-tabs-anchor"> All </a></li>
-        @for($i=1;i<=12;$i++)
+        @for($i=1;$i<=12;$i++)
         <li class="r-tabs-tab"><a href="#{{ date('M') }}" class="r-tabs-anchor"> {{ date("F") }} </a></li>
         @endfor
     </ul>

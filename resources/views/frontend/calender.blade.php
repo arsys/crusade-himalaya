@@ -14,13 +14,14 @@
 </section>
 
 <div id="responsiveTabsDemo" class="r-tabs ">
-{{--     <ul class="r-tabs-nav">
+     <ul class="r-tabs-nav">
         <li class="r-tabs-tab"><a href="#all" class="r-tabs-anchor"> All </a></li>
         @for($i=1;$i<=12;$i++)
         <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
         @endfor
     </ul>
-    <div id="all" class="r-tabs-accordion-title r-tabs-tab">
+    
+{{--     <div id="all" class="r-tabs-accordion-title r-tabs-tab">
         <div class="uk-container uk-container-small">
             @for($i=1;$i
             <=2; $i++) 
@@ -43,8 +44,8 @@
         </div>
         @endfor
     </div>
-</div>
---}}
+</div> --}}
+
 <div id="Jan" class="r-tabs-accordion-title r-tabs-tab">
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">

@@ -21,7 +21,7 @@
 </ul>
 
 <div id="Jan" class="r-tabs-accordion-title r-tabs-tab">
-  @foreach($Jan as $event)
+  @foreach($jan as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -41,7 +41,7 @@
 </div>
 
 <div id="Feb" class="r-tabs-tab">
-  @foreach($Feb as $event)
+  @foreach($feb as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -61,7 +61,7 @@
 </div>
 
 <div id="Mar" class="r-tabs-tab">
-  @foreach($Mar as $event)
+  @foreach($mar as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -80,7 +80,7 @@
   @endforeach
 </div>
 <div id="Apr" class="r-tabs-tab">
-  @foreach($Apr as $event)
+  @foreach($apr as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -100,7 +100,7 @@
 </div>
 
 <div id="May" class="r-tabs-tab">
-  @foreach($May as $event)
+  @foreach($may as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -120,7 +120,7 @@
 </div>
 
 <div id="Jun" class="r-tabs-tab">
-  @foreach($Jun as $event)
+  @foreach($jun as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -139,7 +139,7 @@
   @endforeach
 </div>
 <div id="Jul" class="r-tabs-tab">
-  @foreach($Jul as $event)
+  @foreach($jul as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -159,7 +159,7 @@
 </div>
 
 <div id="Aug" class="r-tabs-tab">
-  @foreach($Aug as $aug)
+  @foreach($aug as $aug)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -179,7 +179,7 @@
 </div>
 
 <div id="Sep" class="r-tabs-tab">
-  @foreach($Sep as $event)
+  @foreach($sep as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -198,7 +198,7 @@
   @endforeach
 </div>
 <div id="Oct" class="r-tabs-tab">
-  @foreach($Oct as $event)
+  @foreach($oct as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -218,7 +218,7 @@
 </div>
 
 <div id="Nov" class="r-tabs-tab">
-  @foreach($Nov as $event)
+  @foreach($nov as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
@@ -238,7 +238,7 @@
 </div>
 
 <div id="Dec" class="r-tabs-tab">
-  @foreach($Dec as $event)
+  @foreach($dec as $event)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">

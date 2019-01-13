@@ -24,13 +24,15 @@ class GetController extends Controller
 	    $fromDBs = Insta::orderBy('id', 'desc')->take(20)->get(); //get last 20 rows from table
 	    foreach( $posts as $post)
 	    {
-	    	Insta::firstOrCreate([
-	    		'thumb_link' => $post->images->thumbnail->url  ,
-	    		'standard_link' => $post->images->standard_resolution->url  ,
-	    		'caption' => $post->caption->text
-	    	]);
+	    	// Insta::firstOrCreate([
+	    	// 	'thumb_link' => $post->images->thumbnail->url  ,
+	    	// 	'standard_link' => $post->images->standard_resolution->url  ,
+	    	// 	'caption' => $post->caption->text
+	    	// ]);
+	    	$path = $post->images->thumbnail->url ;
+	    	echo "<img src=".$path."><br>";
 	    }
-	    return redirect()->route('show.Insta');
+	    // return redirect()->route('show.Insta');
 	}
 	public function showInsta()
 	{

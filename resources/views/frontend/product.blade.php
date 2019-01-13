@@ -20,52 +20,5 @@
 @include ('frontend.partials.product._tours')
 @stop
 @section('scripts')
-<script src="{{asset('js/product.js')}}">	</script>
-{{-- <script>
-	$(document).ready(function () {
-		
-		$.ajaxSetup({
-			headers:{
-				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-			}
-		});
-		$('#quick-enquiry').on('submit', function(e){
-			e.preventDefault();
-			$(".submit").prop("disabled", true);
-			data = $(this).serialize();
-			action = $(this).attr('action');
-			$.ajax({
-				type: 'POST',
-				url: action,
-				data: data,
-				success: function (data) {
-					if($.isEmptyObject(data.error))
-					{
-						$("#quick-enquiry").trigger("reset");
-						$('.print-error-msg').find('ul').empty();
-						$('.print-error-msg').css('display','block');
-						$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
-						$('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");
-						setTimeout(function() {
-							$('.print-error-msg').fadeOut();
-							$(".submit").prop("disabled", false);
-							UIkit.modal("#modal-quick-enquiry").hide();
-						}, 3000);
-					}
-					else{
-						printMessageErrors(data.error);
-					}
-				}
-			});
-		});
-		function printMessageErrors(msg){
-			$('.print-error-msg').find('ul').empty();
-			$('.print-error-msg').css('display','block');
-			$.each(msg,function(key,value){
-				$('.print-error-msg').find('ul').append("<li>"+ value +"</li>");
-			});
-		}
-
-});
-</script> --}}
+<script src="{{asset('js/product.js')}}"></script>
 @stop

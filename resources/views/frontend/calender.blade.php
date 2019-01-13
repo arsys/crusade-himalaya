@@ -21,7 +21,7 @@
 </ul>
 
 <div id="Jan" class="r-tabs-accordion-title r-tabs-tab">
-  @foreach($events->whereMonth('start','=', date('m')) as $event)
+  @foreach($jan as $jan)
   <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
     <div class="uk-card-media-left  article-body">
       <img src="https://source.unsplash.com/1200x800/?holi" alt="">

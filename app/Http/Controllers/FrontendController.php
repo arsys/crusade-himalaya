@@ -159,7 +159,9 @@ public function tourDetailtest($slug)
 public function eventCalender()
 {
     $events = Event::all();
-    return view('frontend.calender')->withEvents($events);
+    $jan = $events->whereMonth('start_date',date('m'))->get();
+    return view('frontend.calender')
+    ->withJan($jan);
 }
 
 public function ajaxsearchdeparture(Request $request)

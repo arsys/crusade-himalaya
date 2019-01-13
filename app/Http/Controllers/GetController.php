@@ -32,7 +32,7 @@ class GetController extends Controller
 	    	$path = $post->images->thumbnail->url ;
 	    	echo "<img src=".$path."><br>";
 	    }
-	    return redirect()->route('show.Insta');
+	    // return redirect()->route('show.Insta');
 	}
 	public function showInsta()
 	{

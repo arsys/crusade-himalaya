@@ -1,6 +1,6 @@
 @extends('layouts.frontend') @section('content')
 <section class="uk-container-expand">
-  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://source.unsplash.com/1200x800/?calender" uk-img>
+  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{asset('img/holi.png')}}" uk-img>
     <h1 class="main-heading">Event Calender</h1>
     <div class="breadcrumb ">
       <ul class="uk-breadcrumb  " id="breadcrumb">

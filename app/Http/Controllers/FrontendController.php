@@ -158,10 +158,14 @@ public function tourDetailtest($slug)
 
 public function eventCalender()
 {
-    $jan = Event::whereMonth('start_date',date('m'))->get();
-    // $jan = $events->whereMonth('start_date',date('m'))->get();
-    return view('frontend.calender')
-    ->withJan($jan);
+    for ($i=1; $i <=12 ; $i++) { 
+        ${{ date('M', mktime(0, 0, 0, $i, 1)) }} = Event::whereMonth('start_date',date('M', mktime(0, 0, 0, $i, 1)))->get();
+    }
+    return view('frontend.calender')->withJan($Jan)->withFeb($Feb)->withMar($Mar)
+    ->withApr($Apr)->withMay($May)->withJun($Jun)
+    ->withJul($Jul)->withAug($Aug)->withSep($Sep)
+    ->withOct($Oct)->withNov($Nov)->withDec($Dec)
+
 }
 
 public function ajaxsearchdeparture(Request $request)

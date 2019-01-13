@@ -20,6 +20,11 @@
 				 @include ('frontend.tour.partials._price') 
 			</div>
 			<!-- pricing end -->
+			<div id="enquiry">
+				<div class="uk-card uk-card-default uk-card-body uk-margin-small-top" > 
+					@include('frontend.tour.partials.modal._enquiry')
+				</div>
+			</div>
 			<!-- review start -->
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-top" id="gallery">
 				<h3 class=""><span>Gallery</span></h3> 

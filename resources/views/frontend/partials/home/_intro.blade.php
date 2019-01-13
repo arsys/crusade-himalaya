@@ -10,19 +10,19 @@
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-hand-holding-heart intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Passion & Exportise</h6>
-                        <p class="uk-text-center intro-paragraph">When you book a trip with us but are forced ..</p>
+                        <p class="uk-text-center intro-paragraph">we strive to open minds & refuse to sacrifice quality over quantity.</p>
                     </div>
 
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-compass intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Freedom to Explore</h6>
-                        <p class="uk-text-center intro-paragraph">Refer our company or any of our trips to your..</p>
+                        <p class="uk-text-center intro-paragraph">we provide liberty to play on our trips & itineraries.</p>
                     </div>
 
                     <div class="uk-width-1-3  intro">
                         <i class="fab fa-pagelines intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Environmentally Engaged</h6>
-                        <p class="uk-text-center intro-paragraph">Gain loyalty bonus by choosing to travel with...</p>
+                        <p class="uk-text-center intro-paragraph">your least effort for the environment, you earn respect.</p>
                         
                     </div>
 
@@ -31,17 +31,17 @@
                     <div class="uk-width-1-3  intro">
                         <i class="fas fa-grin-hearts intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Happiness Guaranteed </h6>
-                        <p class="uk-text-center intro-paragraph">When you book a trip with us we assure you..</p>
+                        <p class="uk-text-center intro-paragraph">Unless you go Happy, we don't exist.</p>
                     </div>
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-handshake intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Lasting Friendship</h6>
-                        <p class="uk-text-center intro-paragraph">Our online payment gateway is safe and...</p>
+                        <p class="uk-text-center intro-paragraph">While memories fade, It's friendships that last. Are we friends now? </p>
                     </div>
                     <div class="uk-width-1-3 intro ">
                        <i class="fas fa-fingerprint intro-icon"></i>
                        <h6 class="uk-text-center intro-title">Quirky Holidays</h6>
-                       <p class="uk-text-center intro-paragraph">We realize that on your dream vacation you..</p>
+                       <p class="uk-text-center intro-paragraph">Our trips are as fresh as Daisy. Soulless trips, not our thing.</p>
                    </div>
                </div>
            </div>

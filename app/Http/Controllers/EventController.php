@@ -82,6 +82,7 @@ class EventController extends Controller
             $event->url = $request->url;
             $event->start_date = $request->start;
             $event->end_date = $request->end;
+            $event->description = $request->description;
 
             if (isset($request->featured)) {
                 $media = Media::find($request->featured);
@@ -118,6 +119,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
+        return view ('backend.event.edit')->withEvent($event)->withImages($this->medias);
     }
 
     /**
@@ -127,17 +129,40 @@ class EventController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, Event $event)
     {
-        $event = Event::find($request->id);
-        $event->title = $request->title;
-        $event->url = $request->url;
-        $event->start_date = $request->start;
-        $event->end_date = $request->end;
+        try {
+            $this->validate($request, [
+                'title' => 'required|max:255',
+                'url' => 'sometimes',
+                'featured' => 'required'
+            ]);            
+            $event->title = $request->title;
+            $event->url = $request->url;
+            if ($request->start_date) {
+                $event->start_date = $request->start_date;
+            }
+            if ($request->end_date) {
+                $event->end_date = $request->end_date;
+            }
 
-        $event->save();
+            $event->description = $request->description;
 
-        return response()->json($event);
+            if (isset($request->featured)) {
+                File::delete(public_path($event->path));
+                $media = Media::find($request->featured);
+                $upload = new UploadImage;
+                $thumbPath = $upload->uploadSingle($this->thumb, $media->path, 400,300);
+                $event->path = $thumbPath;
+            }
+
+            $event->save();
+        } catch (Exception $e) {
+            DB::rollback();
+            Session::flash('success', $e->getMessage());            
+        }
+        Session::flash('success', 'Event added sucessfully.');
+        return redirect()->route('events.index');
     }
 
     /**
@@ -149,9 +174,9 @@ class EventController extends Controller
     public function destroy(Event $event)
     {
         if ($event->path) {
-            File::delete(public_path($eventthumb));
+            File::delete(public_path($event->path));
         }
-        $event->destroy();
+        $event->delete();
         Session::flash('success', 'Event deleted.');
         return redirect()->route('events.index');
     }

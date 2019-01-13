@@ -158,14 +158,22 @@ public function tourDetailtest($slug)
 
 public function eventCalender()
 {
-    for ($i=1; $i <=12 ; $i++) { 
-        ${{ date('M', mktime(0, 0, 0, $i, 1)) }} = Event::whereMonth('start_date',date('M', mktime(0, 0, 0, $i, 1)))->get();
-    }
-    return view('frontend.calender')->withJan($Jan)->withFeb($Feb)->withMar($Mar)
+    $Jan = Event::whereMonth('start_date','=', 1)->get();
+    $Feb = Event::whereMonth('start_date','=', 2)->get();
+    $Mar = Event::whereMonth('start_date','=', 3)->get();
+    $Apr = Event::whereMonth('start_date','=', 4)->get();
+    $May = Event::whereMonth('start_date','=', 5)->get();
+    $Jun = Event::whereMonth('start_date','=', 6)->get();
+    $Jul = Event::whereMonth('start_date','=', 7)->get();
+    $Aug = Event::whereMonth('start_date','=', 8)->get();
+    $Sep = Event::whereMonth('start_date','=', 9)->get();
+    $Oct = Event::whereMonth('start_date','=', 10)->get();
+    $Nov = Event::whereMonth('start_date','=', 11)->get();
+    $Dec = Event::whereMonth('start_date','=', 12)->get();
+    return view('frontend.calender')->withJan($Jan) ->withFeb($Feb)->withMar($Mar)
     ->withApr($Apr)->withMay($May)->withJun($Jun)
     ->withJul($Jul)->withAug($Aug)->withSep($Sep)
-    ->withOct($Oct)->withNov($Nov)->withDec($Dec)
-
+    ->withOct($Oct)->withNov($Nov)->withDec($Dec);
 }
 
 public function ajaxsearchdeparture(Request $request)

@@ -23,11 +23,8 @@
 							<div class="uk-width-auto uk-first-column">
 								<i class="fas fa-info"></i>      
 							</div>
-							<div>
-								<a href="#quick-enquiry" class="uk-link-text uk-link-reset" >Quick Enquiry</a>
-								<!-- This is the modal -->
-							{{-- 	@include('frontend.tour.partials.modal._enquiry') --}}
-								<!--modal end-->
+							<div uk-scrollspy-nav="closest: a; scroll: true; offset: 120" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon" uk-nav>
+								<a href="#enquiry" class="uk-link-text uk-link-reset" ><span>Quick Enquiry</span></a>
 							</div>
 						</div>
 					</li>

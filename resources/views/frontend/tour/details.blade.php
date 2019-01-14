@@ -1,4 +1,18 @@
 @extends('layouts.frontend')
+@section('mtitle'){!! $tour->mtitle !!}@stop
+@section('title'){!! ucfirst($tour->title) !!}-{{$tour->days}} @if($tour->days > 1) Days @else Day @endif
+@stop
+@section('description'){!! $tour->description !!}@stop
+@section('twitter')
+<meta name="twitter:data1" content="${{ $tour->price }}">
+<meta name="twitter:label1" content="Price">
+<meta name="twitter:data2" content="{{ $tour->difficulty->name }}">
+<meta name="twitter:label2" content="Difficulty">
+@stop
+@section('og')
+<meta property="og:price:amount" content="{{ $tour->price }}" />
+<meta property="og:price:currency" content="USD" />
+@stop
 @section('content')
 {{-- banner start --}}
 @include ('frontend.tour.partials._banner')

@@ -112,3 +112,8 @@ background-color: $green;
   }
 }
 
+@media (min-width: 640px){
+  .article-wrap>* {
+    width: auto;
+}
+}

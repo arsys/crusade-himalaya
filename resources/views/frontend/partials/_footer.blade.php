@@ -1,5 +1,5 @@
 
-<footer class="page footer bgcolor-wrapper" id="foobar" >
+<footer class="page footer " id="foobar" >
     <div class="uk-container">
      <div class="uk-child-width-1-3@m uk-margin-medium-top uk-margin-xlarge-bottom" uk-grid>
 

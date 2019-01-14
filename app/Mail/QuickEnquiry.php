@@ -30,7 +30,8 @@ class QuickEnquiry extends Mailable
     {
         $this->from($this->data['email']);
         $this->to('mail@crucadehimalaya.com');
-        $this->replyTo($this->data['email']);        
+        $this->replyTo($this->data['email']);    
+        $this->->subject($this->$data['subject']);    
         return $this->markdown('emails.enquiry');
     }
 }

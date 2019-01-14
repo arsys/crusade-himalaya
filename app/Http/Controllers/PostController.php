@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tour;
 use Mail;
 use Validator;
 use App\Mail\Contact;

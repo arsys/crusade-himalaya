@@ -1,4 +1,4 @@
-<div class="uk-section uk-section-small uk-section-default">
+<!-- <div class="uk-section uk-section-small uk-section-default">
 	<div class="uk-container">
 		<div class="text-align-left uk-margin-medium-top" uk-grid>
 			<div class=" uk-flex uk-flex-column uk-width-1-3@l uk-width-1-1@s" >
@@ -71,3 +71,8 @@
 </div>
 
 
+ -->
+ <div class="uk-section uk-section-small uk-section-default">
+	<div class="uk-container uk-container-expand">
+	</div>
+</div>

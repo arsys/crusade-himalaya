@@ -7,9 +7,9 @@
 @include ('frontend.partials.about._content')
 <!-- about us end-->
 <!-- guide start -->
-@include ('frontend.partials.about._guide')
+{{-- @include ('frontend.partials.about._guide') --}}
 <!-- guide end -->
-<!-- team start -->
-@include ('frontend.partials.about._team') 
+{{-- <!-- team start -->
+@include ('frontend.partials.about._team')  --}}
 <!-- team end -->
 @stop

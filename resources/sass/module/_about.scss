@@ -58,3 +58,16 @@
   text-align:center;
 }
 //content end
+#team-wrapper{
+    ul{
+        background-color: $white;
+        li{
+            padding: 20px 40px;
+
+        }
+        .uk-active{
+            border-bottom: solid 2px $green;
+            transition: width .3s;
+        }
+    }
+}

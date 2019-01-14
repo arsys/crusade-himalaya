@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="Crusade Himalaya | Himalaya Tours">
-    <meta name="description" content="Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.">
-    <meta name="keywords" content="crusade himalaya, nepal travel partner, himalaya trekking">
-    <meta name="robots" content="index, follow">
+    <meta name="title" content="@yield('mtitle','Crusade Himalaya | Himalaya Tours')">
+    <meta name="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
+    <meta name="robots" content="@yield('robot','index, follow')">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
@@ -34,47 +33,60 @@
     <meta name="msapplication-TileImage" content="{{ asset('assets/img/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
     {{-- favicon end --}}
-    {{-- og start --}}
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="Crusade Himalaya">
-    <meta property="og:description" content="Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.">
-    <meta property="og:url" content="https://crusadehimalaya.com/">
-    <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
-    {{-- og end --}}
-    {{-- twitter card start --}}
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@CrusadeHimalaya">
-    <meta name="twitter:title" content="Crusade Himalaya">
-    <meta name="twitter:description" content="Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.
-    ">
-    <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
-    <meta name="twitter:image:alt" content="Trekking in Himalayas">
-    {{-- twitter card end --}}
-    <title>Crusade Himalaya | Empower, Educate, Encourage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
+    <!-- Update your html tag to include the itemscope and itemtype attributes. -->
+    <html itemscope itemtype="http://schema.org/Product">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">      
+    <!-- Place this data between the <head> tags of your website -->
+        <title>@yield('title','Crusade Himalaya | Empower, Educate, Encourage')</title>
 
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-</head>
-<body>
-    <div id="loader"></div>
-    <div id="content">
-        @include('frontend.partials._nav')
-        {{-- Navigation End --}}
-        @yield('content')
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
+        <meta itemprop="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
+        <meta itemprop="image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
 
-        <!-- footer start-->
-        @include('frontend.partials._footer')
-        <a href="#" id="scroll" style="display: none;"><span></span></a>
-    </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-{{-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
-<script src="{{asset('js/app.js')}}">  </script>
-@yield('scripts')
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="product">
+        <meta name="twitter:site" content="@CrusadeHimalaya">
+        <meta name="twitter:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
+        <meta name="twitter:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
+        <meta name="twitter:creator" content="@CrusadeHimalaya">
+        <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
 
-</html>
+
+        <!-- Open Graph data -->
+        <meta property="og:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{ url()->current() }}" />
+        <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
+        <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')" />
+        <meta property="og:site_name" content="Crusade Himalaya" />
+        <meta property="fb:admins" content="Facebook numeric ID" />
+
+        {{-- twitter card end --}}        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">      
+
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    </head>
+    <body>
+        <div id="loader"></div>
+        <div id="content">
+            @include('frontend.partials._nav')
+            {{-- Navigation End --}}
+            @yield('content')
+
+            <!-- footer start-->
+            @include('frontend.partials._footer')
+            <a href="#" id="scroll" style="display: none;"><span></span></a>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+    {{-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
+    <script src="{{asset('js/app.js')}}">  </script>
+    @yield('scripts')
+
+    </html>

@@ -105,11 +105,15 @@
 // page->packages->treking start
 .heading-wrapper{
   background:rgba(0,0,0,0.3) !important;
-  width:55%;
   padding:20px 20px;
-  bottom:30%;
-  left:67px;
-  right:0px;
+  bottom:20%;
+  left:5%;
+  right:30%;
+}
+@media screen and(max-width:800){
+  .heading-wrapper{
+    font-size:15px;
+  }
 }
 //treking end
 //home intro start

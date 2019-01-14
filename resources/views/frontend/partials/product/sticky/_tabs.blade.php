@@ -1,7 +1,5 @@
 <div class="uk-width-medium@s uk-first-column uk-visible@l" >
-
 	<div class="uk-panel uk-text-center" uk-sticky="offset: 202" id="product-price-wrapper1">
-
 		<div class="uk-flex uk-flex-column sticky-price" id="product-price">
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom">		
 				<span class="top"> 

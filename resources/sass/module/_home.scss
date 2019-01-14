@@ -1,3 +1,10 @@
+.uk-sticky-placeholder{
+      height: 0px !important;
+    margin: 0px;
+
+}
+
+
 a:hover{
   text-decoration: none !important;
   cursor: pointer;
@@ -232,7 +239,7 @@ transform: translateY(1em);
 }
 .insta-lightbox{
   width:auto;
-  height:auto;
+  height:100%;
 }
 .insta-color span i{
       font-size: 32px;      

@@ -1,3 +1,4 @@
+
 <div class="uk-width-medium@s uk-first-column uk-visible@l" >
 
 	<div class="uk-panel uk-text-center" uk-sticky="offset: 202" id="product-price-wrapper1">
@@ -23,7 +24,7 @@
 							<div class="uk-width-auto uk-first-column">
 								<i class="fas fa-info"></i>      
 							</div>
-							<div uk-scrollspy-nav="closest: a; scroll: true; offset: 120" uk-nav>
+							<div  uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
 								<a href="#enquiry" class="uk-link-text uk-link-reset" ><span>Quick Enquiry</span></a>
 							</div>
 						</div>

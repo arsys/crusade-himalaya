@@ -61,7 +61,6 @@ window.addEventListener("load", function(){
 						setTimeout(function() {
 							$('.print-error-msg').fadeOut();
 							$(".submit").prop("disabled", false);
-							UIkit.modal("#modal-quick-enquiry").hide();
 						}, 3000);
 					}
 					else{
@@ -70,6 +69,37 @@ window.addEventListener("load", function(){
 				}
 			});
 		});
+		$('#quick-enquiry-mob').on('submit', function(e){
+			e.preventDefault();
+			$(".submit").prop("disabled", true);
+			data = $(this).serialize();
+			action = $(this).attr('action');
+			$.ajax({
+				type: 'POST',
+				url: action,
+				data: data,
+				headers: {
+					"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+				},
+				success: function (data) {
+					if($.isEmptyObject(data.error))
+					{
+						$("#quick-enquiry-mob").trigger("reset");
+						$('.print-error-msg').find('ul').empty();
+						$('.print-error-msg').css('display','block');
+						$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
+						$('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");
+						setTimeout(function() {
+							$('.print-error-msg').fadeOut();
+							$(".submit").prop("disabled", false);
+						}, 3000);
+					}
+					else{
+						printMessageErrors(data.error);
+					}
+				}
+			});
+		});		
 		$('#refer-friend').on('submit', function(e){
 			e.preventDefault();
 			$(".send-refer").prop("disabled", true);

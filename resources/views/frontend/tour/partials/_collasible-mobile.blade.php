@@ -16,7 +16,7 @@
                             <div class="uk-width-auto uk-first-column">
                                 <i class="fas fa-info"></i>   
                             </div>
-                            <div uk-scrollspy-nav="closest: a; scroll: true; offset: 120" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon" uk-nav>
+                            <div {{-- uk-scrollspy-nav="closest: a; scroll: true; offset: 40" uk-nav --}}>
                                 <a href="#mob-enquiry" class="uk-link-text uk-link-reset">Quick Enquiry</a> 
                             </div>
                         </div>
@@ -90,5 +90,5 @@
     </ul>
 </div>
 <div class="uk-card uk-card-default uk-card-body uk-margin-small-top  uk-hidden@l" id="mob-enquiry"> 
-    @include('frontend.tour.partials.modal._enquiry')
+    @include('frontend.tour.partials.modal._enquiry-mob')
 </div>

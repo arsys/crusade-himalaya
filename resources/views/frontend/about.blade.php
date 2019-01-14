@@ -10,6 +10,6 @@
 @include ('frontend.partials.about._guide')
 <!-- guide end -->
 <!-- team start -->
-{{-- @include ('frontend.partials.about._team') --}}
+@include ('frontend.partials.about._team') 
 <!-- team end -->
 @stop

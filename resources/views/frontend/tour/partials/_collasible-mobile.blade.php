@@ -90,5 +90,5 @@
     </ul>
 </div>
 <div class="uk-card uk-card-default uk-card-body uk-margin-small-top  uk-hidden@l" id="mob-enquiry"> 
-    @include('frontend.tour.partials.modal._enquiry')
+    @include('frontend.tour.partials.modal._enquiry-mob')
 </div>

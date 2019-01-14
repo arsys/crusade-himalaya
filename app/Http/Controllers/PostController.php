@@ -52,11 +52,13 @@ class PostController extends Controller
             $userIP = $request->ip();
             $IPdata = file_get_contents("http://api.ipstack.com/{$userIP}?access_key=2f40cb1cb05f40c9439fe91a309910b0");
             $IPdata = json_decode($IPdata);
+            $tour = Tour::find($request->tour_id);
             $user_info = "IP: {$IPdata->ip} <br> [ Country: <b>{$IPdata->country_name}</b> | City: {$IPdata->city} ]";
             $data = array(
                 'name' => $request->name,
                 'email' => $request->email,
-                'bodyMessage' => $request->content,
+                'subject' => 'Quick Enquiry for '.$tour->title.' '.$tour->days.' Days',
+                'bodyMessage' => $request->enquiryMessage,
                 'user_info' => $user_info,
             );
             Mail::send(new QuickEnquiry($data));

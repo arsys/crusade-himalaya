@@ -32,6 +32,7 @@ class Contact extends Mailable
         $this->subject($this->data['subject']);
         $this->to('mail@crucadehimalaya.com');
         $this->replyTo($this->data['email']);
+        $this->subject($this->data['subject']);
         return $this->markdown('emails.contact');
     }
 }

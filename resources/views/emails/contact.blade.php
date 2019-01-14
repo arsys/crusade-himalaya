@@ -2,7 +2,7 @@
 @component('mail::panel')
 Senders info: {!! $data['user_info'] !!}
 @endcomponent
-#You have new email from contact form
+#We have new email from contact form
 Full name: {{$data['name']}}<br>
 Email    : <a href="mailto:{{$data['email'] }}">{{$data['email'] }}</a> <br>
 Subject: {{$data['subject']}}<br>
@@ -11,5 +11,5 @@ Message	 :
 {{$data['bodyMessage'] }}
 @endcomponent
 Good Day,<br>
-Crucade Himalaya
+{{ config('app.name') }}
 @endcomponent

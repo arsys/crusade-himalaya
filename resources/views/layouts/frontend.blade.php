@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+
 <head>
     {{-- meta tag start --}}
     <meta charset="utf-8">
@@ -11,9 +12,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="revisit-after" content="1 days">
-    <meta name="author" content="Crusade Himalaya">
-    {{-- meta tag end --}}
-    {{-- favicon start --}}
+    <meta name="author" content="Crusade Himalaya"> {{-- meta tag end --}} {{-- favicon start --}}
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('assets/img/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('assets/img/apple-icon-60x60.png') }}">
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/img/apple-icon-72x72.png') }}">
@@ -24,69 +23,67 @@
     <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/img/apple-icon-152x152.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/apple-icon-180x180.png') }}">
 
-    <link rel="icon" type="image/png" sizes="192x192"  href="{{ asset('assets/img/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('assets/img/android-icon-192x192.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('assets/img/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('assets/img/manifest.json') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('assets/img/ms-icon-144x144.png') }}">
-    <meta name="theme-color" content="#ffffff">
-    {{-- favicon end --}}
+    <meta name="theme-color" content="#ffffff"> {{-- favicon end --}}
     <!-- Update your html tag to include the itemscope and itemtype attributes. -->
     <html itemscope itemtype="http://schema.org/Product">
 
     <!-- Place this data between the <head> tags of your website -->
-        <title>@yield('title','Crusade Himalaya | Empower, Educate, Encourage')</title>
+    <title>@yield('title','Crusade Himalaya | Empower, Educate, Encourage')</title>
 
-        <!-- Schema.org markup for Google+ -->
-        <meta itemprop="name" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
-        <meta itemprop="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
-        <meta itemprop="image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
+    <meta itemprop="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
+    <meta itemprop="image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
 
-        <!-- Twitter Card data -->
-        <meta name="twitter:card" content="product">
-        <meta name="twitter:site" content="@CrusadeHimalaya">
-        <meta name="twitter:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
-        <meta name="twitter:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
-        <meta name="twitter:creator" content="@CrusadeHimalaya">
-        <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="@CrusadeHimalaya">
+    <meta name="twitter:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
+    <meta name="twitter:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
+    <meta name="twitter:creator" content="@CrusadeHimalaya">
+    <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+    @yield('twitter')
+    <!-- Open Graph data -->
+    <meta property="og:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
+    <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')" />
+    <meta property="og:site_name" content="Crusade Himalaya" />
+    @yield('og')
+    <meta property="fb:admins" content="Facebook numeric ID" /> {{-- twitter card end --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
-        <!-- Open Graph data -->
-        <meta property="og:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="{{ url()->current() }}" />
-        <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
-        <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')" />
-        <meta property="og:site_name" content="Crusade Himalaya" />
-        <meta property="fb:admins" content="Facebook numeric ID" />
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+</head>
 
-        {{-- twitter card end --}}        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
+<body>
+    <div id="loader"></div>
+    <div id="content">
+        @include('frontend.partials._nav') {{-- Navigation End --}} @yield('content')
 
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">      
+        <!-- footer start-->
+        @include('frontend.partials._footer')
+        <a href="#" id="scroll" style="display: none;"><span></span></a>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+{{--
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
+<script src="{{asset('js/app.js')}}">
+</script>
+@yield('scripts')
 
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    </head>
-    <body>
-        <div id="loader"></div>
-        <div id="content">
-            @include('frontend.partials._nav')
-            {{-- Navigation End --}}
-            @yield('content')
-
-            <!-- footer start-->
-            @include('frontend.partials._footer')
-            <a href="#" id="scroll" style="display: none;"><span></span></a>
-        </div>
-    </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
-    {{-- <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
-    <script src="{{asset('js/app.js')}}">  </script>
-    @yield('scripts')
-
-    </html>
+</html>

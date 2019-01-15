@@ -133,9 +133,9 @@
  --}}
  {{-- tabs end --}}
 
-<div class="uk-card uk-card-default uk-visible@l" id="team-wrapper">	
-	<div class="uk-panel "   uk-sticky="offset:80" >
-		<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 190" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color" uk-nav>
+<div class="uk-card uk-card-default uk-visible@l" >	
+	<div class="uk-panel " id="content-wrapper"  uk-sticky="offset:80" >
+		<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 230" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color" uk-nav>
 				<li class="uk-active  uk-width-1-5"><a href="#justify">Why Nepal?</a></li>	     
 		        <li  class=" uk-width-1-5"><a href="#item1">Why Crusade Himalaya?</a></li>
 		        <li class="uk-width-1-5"><a href="#item2">How we work?</a></li>
@@ -254,7 +254,7 @@
         </li>
         <!--What makes Crusade Himalaya differentend-->
         <!--What is our mission start-->
-        <li class="uk-box-shadow-small uk-padding uk-background-default">
+        <li class="uk-box-shadow-small uk-padding uk-background-default" >
             <a class="uk-accordion-title" href="#">What is our mission?</a>
                 <div class="uk-accordion-content uk-animation-slide-top-medium">
                   	<p>Our mission is simple, it is <strong>to make you happy</strong>. To do so, we will take you across many of the delights Nepal has to offer, introduce you to different cultures, and all the while ensuring your comfort and satisfaction.</p>
@@ -274,3 +274,18 @@
         <!--What is our mission end-->
     </ul>
 </div>
+<script>
+window.addEventListener("load", function(){ 
+	
+	let about = document.getElementById("team-wrapper");
+	window.addEventListener("scroll", function() {
+		if(about.getBoundingClientRect().top - window.innerHeight <= 0){
+			$('#content-wrapper').fadeOut();
+		} else {
+			$('#content-wrapper').fadeIn();
+		}
+	});
+
+});
+
+</script>

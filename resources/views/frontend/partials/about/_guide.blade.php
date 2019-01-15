@@ -1,8 +1,8 @@
 <div class="uk-section uk-section-small uk-section-default" >
     <div class="uk-container">
         <div class="uk-card uk-card-default uk-body uk-padding">
-            <h2 class="heading-primary uk-text-center"><span>Meet the guide</span></h2>
-                <p class="uk-margin-medium-top uk-text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio commodi eius harum.</p>
+            <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Meet the guide</span></h2>
+            <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  "><span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dolor, voluptate eligendi?</span></p>
                 <div class=" guide" uk-grid>
                     @foreach($others as $other)
                     <div class="uk-width-1-3@s  team">

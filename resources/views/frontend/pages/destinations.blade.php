@@ -4,8 +4,8 @@
 <section class="uk-container-expand about" uk-grid>
 <div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($region->path) }}" uk-img>
 	 	<div class="uk-overlay uk-overlay-primary uk-position-bottom heading-wrapper">
-			<h1 class="page-heading uk-margin-large-left">{{ $region->name }}</h1>
-			<h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $region->description }}</h3>
+			<h1 class="travel-heading  uk-margin-large-left">{{ $region->name }}</h1>
+			<h3 class="travel-sub-heading uk-margin-large-left uk-margin-top uk-margin-bottom">{{ $region->description }}</h3>
 		</div>
 		<div class="breadcrumb uk-visible@l">
 			<ul class="uk-breadcrumb" id="breadcrumb">

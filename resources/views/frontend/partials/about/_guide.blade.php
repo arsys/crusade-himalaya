@@ -2,7 +2,7 @@
     <div class="uk-container">
         <div class="uk-card uk-card-default uk-body uk-padding">
             <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Meet the guide</span></h2>
-            <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  "><span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum dolor, voluptate eligendi?</span></p>
+            <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span>with ultra experienced, knowledgeable  & dedicated guides. You won't miss a thing !</span></p>
                 <div class=" guide" uk-grid>
                     @foreach($others as $other)
                     <div class="uk-width-1-3@s  team">

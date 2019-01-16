@@ -1,6 +1,6 @@
 <div class="uk-container uk-text-center  home-tours uk-margin-medium-top uk-margin-medium-bottom">
     <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Handpicked Tours</span></h2>
-    <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span> Crafted tours for  light mined gypsies</span></p>
+    <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span> Crafted tours for  like minded gypsies</span></p>
     <div class="uk-position-relative uk-visible-toggle uk-light">
         <ul class="uk-child-width-1-3@m uk-child-width-1-1@s  uk-grid-match  "  uk-grid>
             @foreach($featureds as $featured)

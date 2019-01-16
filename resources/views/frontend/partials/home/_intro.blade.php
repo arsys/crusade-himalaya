@@ -9,7 +9,7 @@
                 <div class="uk-text-center uk-margin-large-top  " uk-grid>
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-hand-holding-heart intro-icon"></i>
-                        <h6 class="uk-text-center intro-title">Passion & Exportise</h6>
+                        <h6 class="uk-text-center intro-title">Passion & Expertise</h6>
                         <p class="uk-text-center intro-paragraph">we strive to open minds & refuse to sacrifice quality over quantity.</p>
                     </div>
 

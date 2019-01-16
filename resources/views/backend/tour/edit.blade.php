@@ -271,6 +271,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                 @if(!empty($images))
                 <select class="image-picker show-html"
                 name="featured"> 
+                <option value=""></option>
                 @foreach($images  as $image)
                 <option data-img-src="{{asset($image->thumb)}}"
                     value="{{$image->id}}">

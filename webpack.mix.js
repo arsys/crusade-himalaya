@@ -16,5 +16,7 @@ mix.browserSync('localhost:8000')
 .js('resources/js/app.js', 'public/js')
 .js('resources/js/product.js', 'public/js')
 .js('resources/js/navbar.js', 'public/js')
+// .js('resources/vendor/calender.js', 'public/js')
 .sass('resources/sass/app.scss', 'public/css')
 .sass('resources/sass/backend/style.scss','public/assets/backend/css/');
+// .sass('resources/vendor/calender.scss', 'public/css');

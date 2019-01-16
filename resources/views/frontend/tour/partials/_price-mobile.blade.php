@@ -57,7 +57,7 @@
 					<td>{{ date("jS M, Y", strtotime($departure->end))}}</td>
 					<td>{{$departure->slot}} space left</td>
 					<td>USD {{$departure->price}}</td>
-					<td><a class="uk-button btn" href="/bookingstep1">Book Now</a></td>
+					<td><a class="uk-button btn" href="{{route('trip.stepOne',$tour->slug)}}">Book Now</a></td>
 				</tr>
 				@endforeach
 			</tbody>

@@ -117,6 +117,10 @@ public function getPreloader()
 {
     return view('frontend.preloader');
 }
+public function getThankyou()
+{
+    return view('frontend.thankyou');
+}
 
     //Gets single product details
 public function tourDetailtest($slug)

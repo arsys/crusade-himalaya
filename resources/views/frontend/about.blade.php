@@ -1,6 +1,12 @@
-@section('mtitle')Contact Us@stop
-@section('title')Contact Us@stop
-@section('description')Contact Us@stop
+@section('mtitle')
+About	
+@stop
+@section('title')
+About
+@stop
+@section('description')
+About
+@stop
 @extends('layouts.frontend')
 @section('content')
 <!-- image start -->

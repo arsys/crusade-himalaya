@@ -265,7 +265,7 @@ class TourController extends Controller
                 $tour->excludes()->sync($request->excludes);
             }
 
-            if (isset($request->featured)) {
+            if (!empty($request->featured)) {
                 $oldBanner = $tour->image->banner;
                 $oldThumb = $tour->image->thumb;
                 $image = $tour->image;

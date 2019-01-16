@@ -58,7 +58,7 @@
     <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')" />
     <meta property="og:site_name" content="Crusade Himalaya" />
     @yield('og')
-    <meta property="fb:admins" content="Facebook numeric ID" /> {{-- twitter card end --}}
+    <meta property="fb:admins" content="2171959919686300" /> {{-- twitter card end --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">

@@ -27,12 +27,13 @@
   bottom: 0;
   right: 20px;
 }
+
+//breadcrumb end
+//overlay start
 .category{
  position:relative;
 }
-//breadcrumb end
-//overlay start
-/* .category-cover{
+.category-cover{
 
   display:block;
   height:635px;
@@ -48,6 +49,6 @@
   height:100%;
   display: block;
   z-index:0;
-  background-color: hsla(0, 100%, 80%, 0.3);
-} */
+  background-color: rgba(0, 0,0 , 0.3);
+}
 //overlay end

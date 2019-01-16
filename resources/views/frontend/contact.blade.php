@@ -1,7 +1,13 @@
-@section('mtitle')Contact Us@stop
-@section('title')Contact Us@stop
-@section('description')Contact Us@stop
 @extends('layouts.frontend')
+@section('mtitle')
+Contact Us
+@stop
+@section('title')
+Contact Us
+@stop
+@section('description')
+Contact Us
+@stop
 @section('content')
 @include ('frontend.partials.contact._image')
 @include ('frontend.partials.contact._contactform')

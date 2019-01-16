@@ -232,8 +232,7 @@ class TourController extends Controller
                 'status' => 'required',
                 'overview' => 'required',
                 'mtitle' => 'required',
-                'description' => 'required',
-                'featured' => 'required'
+                'description' => 'required'
             ]);
 
             $tour->title = $request->title;

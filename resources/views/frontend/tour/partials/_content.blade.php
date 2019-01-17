@@ -8,6 +8,12 @@
 				<h3 class="over"><span>Overview</span></h3>
 				@include ('frontend.tour.partials._overview')
 			</div>
+			{{-- includes & excludes start --}}
+			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom " id="include">
+				<h3 class=""><span>Includes & Excludes</span></h3>
+				@include ('frontend.tour.partials._include')
+			</div>
+			{{-- includes & excludes end --}}
 			<!-- itinerary start -->
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom " id="itinerary">
 				<h3 class=""><span>Detailed Itinerary ({{ $tour->days }} Days)</span></h3>

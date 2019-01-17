@@ -34,9 +34,12 @@
             <div class="uk-position-relative uk-visible-toggle" uk-slider>
               <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($wheres as $where)
-                <li>
+                <li  class="uk-inline-clip uk-transition-toggle" tabindex="0">
                   <h5><a href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></h5>
                   <a href="{{ route('fetchByRegion',$where->slug) }}"><img src="{{ asset($where->nav) }}" alt="{{ $where->name }}"></a>
+                     <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle nav-wrap">
+                        <p class="uk-h4 uk-margin-remove nav-para"><a href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></p>
+                    </div>
                 </li>
                 @endforeach
               </ul>

@@ -12,9 +12,8 @@
                         <span class="uk-text-center">{{ $other->name }}</span>
                         <span class="team-designation uk-text-center">{{ $other->position }}</span>
                     </div>                 
-                    <div>
-                        <p class="uk-text-justify"id="read-more" >{!! $other->description !!}</p> 
-
+                    <div class="field">
+                        {!! $other->description !!}
                     </div>
 
                 </div>
@@ -23,31 +22,3 @@
         </div> 
     </div>
 </div>
-@section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/readmore-js@2.2.1/readmore.min.js"></script>
-<script>
-    $(document).ready(function(){
-        var lineHeight = 20;
-        var lines = 2;
-
-        $('#read-more').readmore({
-          speed: 1000,
-          collapsedHeight: lineHeight * lines
-      });
-    });
-// $(document).on("click", ".toggle-text-button", function() {
-//   if ($(this).text() == "Read More") {
-//     $(this).text("Read Less");
-//     $(this).parent().children(".toggle-text").slideDown();
-
-//   } else {
-//     $(this).text("Read More");
-//     $(this).parent().children(".toggle-text").slideUp();
-
-//   }
-
-// });
-</script>
-
-
-@stop

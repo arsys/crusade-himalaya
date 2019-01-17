@@ -3,7 +3,7 @@
 		<h4>Includes</h4>
 		<ul class="uk-list includes">
 			@foreach($tour->includes as $include)
-			<li><span class="uk-margin-small-right included" uk-icon="check"></span>{{ $included->name }}</li>
+			<li><span class="uk-margin-small-right included" uk-icon="check"></span>{{ $include->name }}</li>
 			@endforeach
 		</ul>
 

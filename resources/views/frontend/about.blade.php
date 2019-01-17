@@ -25,8 +25,8 @@ About
 
 @stop
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/readmore-js@2.2.1/readmore.min.js"></script>
-<script>
+{{-- <script src="https://cdn.jsdelivr.net/npm/readmore-js@2.2.1/readmore.min.js"></script> --}}
+{{-- <script>
 	$(document).ready(function(){
 		var lineHeight = 20;
 		var lines = 2;
@@ -40,7 +40,7 @@ About
 		});		
 	});
 
-</script>
+</script> --}}
 
 
 @stop

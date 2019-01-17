@@ -5,7 +5,7 @@
             <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span>With ultra experienced, knowledgeable  & dedicated guides. You won't miss a thing !</span></p>
             <div class=" guide" uk-grid>
                 @foreach($others as $other)
-                <div class="uk-width-1-3@s  team">
+                <div class="uk-width-1-4@s  team">
                     <img class="uk-border-square uk-align-center" src="{{ $other->avatar }}" alt="{{ $other->name }}">
 
                     <div class="uk-flex uk-flex-column">

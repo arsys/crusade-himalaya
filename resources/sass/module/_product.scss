@@ -28,7 +28,7 @@
 //price search start
 .search-btn{
     margin-bottom: 25px !important;
-   line-height:40px !important;
+    line-height:40px !important;
 }
 //price search end
 
@@ -62,16 +62,16 @@
 
 #tab-wrapper{
    .tab-ul{
-        background-color: $white;
-        .tab-li{
-            padding: 20px 40px;
+    background-color: $white;
+    .tab-li{
+        padding: 20px 40px;
 
-        }
-        .uk-active{
-            border-bottom: solid 2px $green;
-            transition: width .3s;
-        }
     }
+    .uk-active{
+        border-bottom: solid 2px $green;
+        transition: width .3s;
+    }
+}
 }
 
 
@@ -130,11 +130,11 @@
     }
     .center-price{
        max-width: 70%;
-        font-size: 20px;
-        font-weight: bold;
-        margin-left:15px;
-        margin-top:7px;
-    }
+       font-size: 20px;
+       font-weight: bold;
+       margin-left:15px;
+       margin-top:7px;
+   }
 }
 .brandname{
     background-color:$white;
@@ -262,28 +262,28 @@
         font-weight:bold;
         font-size:16px;
     }
-.booking-phone{
-    padding-left:70px;
-    font-weight:bold;
-    font-size:16px;
-    color: $pink-base;
- 
-}
-.booking-chat{
-    padding-left:70px;
-    padding-buttom:130px;
-    font-weight:bold;
-    font-size:16px;
-    color: $pink-base;
+    .booking-phone{
+        padding-left:70px;
+        font-weight:bold;
+        font-size:16px;
+        color: $pink-base;
 
-}
- .booking-call-meta{
-    padding-left:70px;
-    font-weight:bold;
-    font-size:12px;
-    font-weight: bold;
- 
-}
+    }
+    .booking-chat{
+        padding-left:70px;
+        padding-buttom:130px;
+        font-weight:bold;
+        font-size:16px;
+        color: $pink-base;
+
+    }
+    .booking-call-meta{
+        padding-left:70px;
+        font-weight:bold;
+        font-size:12px;
+        font-weight: bold;
+
+    }
     .booking-email{
         padding-top:45px;
         line-height: normal;
@@ -303,22 +303,22 @@
 
 //bookingstep2 progressive step bar start
 .booking{
-     background-color: #f8f8f8;
+ background-color: #f8f8f8;
 }
 .circle-text {
   display: block;
-    margin: auto;
-    height: 150px;
-    width: 150px;
-    text-align: center;
-    vertical-align: middle;
-    border-radius: 50%;
-    background:$green ;
-    color: #fff;
-    font: 12px "josefin sans", arial;
-    line-height: 150px;
-    z-index: 1;
-    position: relative;
+  margin: auto;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background:$green ;
+  color: #fff;
+  font: 12px "josefin sans", arial;
+  line-height: 150px;
+  z-index: 1;
+  position: relative;
 }
 @media  screen and (min-width: 320px) and (max-width:800px) {
   .circle-text{
@@ -328,10 +328,10 @@
 }
 .steps:not(:first-child)::before{
     top:37px !important;
-  }
-  .step:not(:first-child)::before{
+}
+.step:not(:first-child)::before{
     top:37px !important;
-  }
+}
 }
 .step:nth-child(2) .circle-text {
   background: $grey;
@@ -365,7 +365,7 @@
 //bookingstep2 progressive step bar end
 .uk-table th{
    color: #333;
-font-size:1.0rem !important;
+   font-size:1.0rem !important;
 }
 .text-color{
     color :#333 !important;
@@ -379,7 +379,7 @@ html{
 //booking form step 1 start
 
 .booking-step{
-     background-color: #f8f8f8;
+ background-color: #f8f8f8;
 }
 .steps:nth-child(2) .circle-text {
   background: $grey;
@@ -402,23 +402,19 @@ html{
     position: relative;
 }
 //booking-form-step 1 end
-
-// includes start -tabs
-.uk-list .include-ul .icon:before, .uk-list .exclude-list-ul .icon:before{
-   font-family: FontAwesome;
-   display: inline-block;
-   padding-right: 10px;
-   vertical-align: middle;
-
-}
- .include-list::before {
-  content: "\f00c";
+.includes{
+   .included{
     color:$green;
-  }
-.exclude-list::before{
-    content: "\f00d";
+} 
+}
+.excludes{
+  .excluded{
     color:red;
 }
- 
+  
+}
+
+
+
 //includes end -tabs
- 
+

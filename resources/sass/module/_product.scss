@@ -403,3 +403,15 @@ html{
 }
 //booking-form-step 1 end
 
+// includes start -tabs
+.include-ul{
+    .include-list i{
+        color:$green;
+    }
+}
+.exclude-ul{
+    .exclude-list i{
+        color:red;
+    }
+}
+//includes end -tabs

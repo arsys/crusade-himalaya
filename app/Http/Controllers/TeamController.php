@@ -70,7 +70,7 @@ class TeamController extends Controller
 
         $media = Media::find($request->avatar);
         $upload = new UploadImage;
-        $bannerPath = $upload->uploadSingle($this->path, $media->path, 250,250);
+        $bannerPath = $upload->uploadSingle($this->path, $media->path, 200,200);
         $team->avatar =  $bannerPath;
         $team->save();
         Session::flash('success', 'Team created sucessfully !');
@@ -136,7 +136,7 @@ class TeamController extends Controller
         if (isset($request->avatar)) {
             $media = Media::find($request->avatar);
             $upload = new UploadImage;
-            $bannerPath = $upload->uploadSingle($this->path, $media->path, 250,250);
+            $bannerPath = $upload->uploadSingle($this->path, $media->path, 200,200);
             $team->avatar =  $bannerPath;
         }
 

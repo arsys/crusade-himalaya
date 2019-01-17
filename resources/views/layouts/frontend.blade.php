@@ -35,29 +35,36 @@
     <html itemscope itemtype="http://schema.org/Product">
 
     <!-- Place this data between the <head> tags of your website -->
-    <title>@yield('title','Crusade Himalaya | Empower, Educate, Encourage')</title>
+        <title>@yield('title','Crusade Himalaya | Empower, Educate, Encourage')</title>
 
-    <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
-    <meta itemprop="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
-    <meta itemprop="image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+        <!-- Schema.org markup for Google+ -->
+        <meta itemprop="name" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
+        <meta itemprop="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
+        <meta itemprop="image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
 
-    <!-- Twitter Card data -->
-    <meta name="twitter:card" content="product">
-    <meta name="twitter:site" content="@CrusadeHimalaya">
-    <meta name="twitter:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
-    <meta name="twitter:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
-    <meta name="twitter:creator" content="@CrusadeHimalaya">
-    <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
-    @yield('twitter')
-    <!-- Open Graph data -->
-    <meta property="og:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
-    <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')" />
-    <meta property="og:site_name" content="Crusade Himalaya" />
-    @yield('og')
+        <!-- Twitter Card data -->
+        <meta name="twitter:card" content="product">
+        <meta name="twitter:site" content="@CrusadeHimalaya">
+        <meta name="twitter:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
+        <meta name="twitter:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
+        <meta name="twitter:creator" content="@CrusadeHimalaya">
+        <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+        @yield('twitter')
+        <!-- Open Graph data -->
+        <meta property="og:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{ url()->current() }}" />
+        <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
+        <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')" />
+        <meta property="og:site_name" content="Crusade Himalaya" />
+        @yield('og')
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WPFHTPR');</script>
+    <!-- End Google Tag Manager -->
     <meta property="fb:admins" content="2171959919686300" /> {{-- twitter card end --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
 
@@ -69,21 +76,25 @@
 </head>
 
 <body>
-    <div id="loader"></div>
-    <div id="content">
-        @include('frontend.partials._nav') {{-- Navigation End --}} @yield('content')
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPFHTPR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <div id="loader"></div>
+        <div id="content">
+            @include('frontend.partials._nav') {{-- Navigation End --}} @yield('content')
 
-        <!-- footer start-->
-        @include('frontend.partials._footer')
-        <a href="#" id="scroll" style="display: none;"><span></span></a>
-    </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <!-- footer start-->
+            @include('frontend.partials._footer')
+            <a href="#" id="scroll" style="display: none;"><span></span></a>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 {{--
-<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
-<script src="{{asset('js/app.js')}}">
-</script>
-@yield('scripts')
-</html>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
+    <script src="{{asset('js/app.js')}}">
+    </script>
+    @yield('scripts')
+    </html>

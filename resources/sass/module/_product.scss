@@ -404,7 +404,7 @@ html{
 //booking-form-step 1 end
 
 // includes start -tabs
-.icon:before{
+.uk-list .include-ul .icon:before, .uk-list .exclude-list-ul .icon:before{
    font-family: FontAwesome;
    display: inline-block;
    padding-right: 10px;

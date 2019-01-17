@@ -1,4 +1,4 @@
-<div class="uk-card uk-card-default uk-visible@l" >	
+<div class="uk-card uk-card-default uk-box-shadow-medium uk-visible@l" >	
 	<div class="uk-panel " id="about-content-wrapper"  uk-sticky="offset:80" >
 		<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 230" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color about-ul" uk-nav>
 				<li class="uk-active  uk-width-1-5 about-li"><a href="#justify">Why Nepal?</a></li>	     
@@ -28,11 +28,11 @@
 			<h3 class="over"><span>How we work?</span></h3>
 				<p>At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. </p>
 				<p>  Putting comfort and pleasure above anything else, we wish to earn your smiles. From the moment you land in Nepal, till the time we bid our goodbyes, the team of Crusade Himalaya will continuously strive to ensure your experience is highly memorable.</p>
-				<p><strong><em>Our team will be your perfect travel friend;<br />
+				<p><strong>Our team will be your perfect travel friend;<br />
 						a knowledgeable guide when you wonder the timeless alleys of the Durbar Square,<br />
 						a trusted friend when you trek the heavenly trails leading to the Himalayas,<br />
 						a perfect organizer who will plan your trip as per your wish,<br />
-					and a hospitable friend who will ensure your comfort during your entire stay.</em></strong></p>
+					and a hospitable friend who will ensure your comfort during your entire stay.</strong></p>
 
 				<p>&nbsp;</p>
 			</div>
@@ -42,7 +42,7 @@
 					<h3 class="over"><span>What makes Crusade Himalaya different?</span></h3>
 					<p>Besides <strong>&#39;knowledge infused with deep passion for meaningful travel&#39;</strong>, what sets Crusade Himalayas apart is their unique working style. We are an independent travel partner, and will therefore organize your trip as per your expectations, with our recommendations.</p>
 
-					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. <em>You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</em></p>
+					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</p>
 			</div>
 			{{-- What makes Crusade Himalaya different end --}}
 			<!-- What is our missionstart -->
@@ -89,7 +89,7 @@
                 <div class="uk-accordion-content uk-animation-slide-top-medium">
 	       			<p>Besides <strong>&#39;knowledge infused with deep passion for meaningful travel&#39;</strong>, what sets Crusade Himalayas apart is their unique working style. We are an independent travel partner, and will therefore organize your trip as per your expectations, with our recommendations.</p>
 
-					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. <em>You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</em></p>
+					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</p>
                 </div>
         </li>
        <!--How we work? start-->
@@ -98,11 +98,11 @@
                 <div class="uk-accordion-content uk-animation-slide-top-medium">
 	       			<p>At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. </p>
 					<p>  Putting comfort and pleasure above anything else, we wish to earn your smiles. From the moment you land in Nepal, till the time we bid our goodbyes, the team of Crusade Himalaya will continuously strive to ensure your experience is highly memorable.</p>
-					<p><strong><em>Our team will be your perfect travel friend;<br />
+					<p><strong>Our team will be your perfect travel friend;<br />
 							a knowledgeable guide when you wonder the timeless alleys of the Durbar Square,<br />
 							a trusted friend when you trek the heavenly trails leading to the Himalayas,<br />
 							a perfect organizer who will plan your trip as per your wish,<br />
-						and a hospitable friend who will ensure your comfort during your entire stay.</em></strong></p>
+						and a hospitable friend who will ensure your comfort during your entire stay.</strong></p>
 
 					<p>&nbsp;</p>
                 </div>
@@ -114,7 +114,7 @@
                 <div class="uk-accordion-content uk-animation-slide-top-medium">
                		<p>Besides <strong>&#39;knowledge infused with deep passion for meaningful travel&#39;</strong>, what sets Crusade Himalayas apart is their unique working style. We are an independent travel partner, and will therefore organize your trip as per your expectations, with our recommendations.</p>
 
-					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. <em>You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</em></p>
+					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</p>
                 </div>
         </li>
         <!--What makes Crusade Himalaya differentend-->

@@ -7,20 +7,20 @@
         <div>
           @foreach($teams as $team)
           @if($loop->iteration % 2 == 0)
-          <div class="uk-text-left" uk-grid>
+        <div class="uk-text-left" uk-grid>
             <div class="uk-width-1-4@s uk-text-center">
-              <img class="uk-border-circle"  src="{{ $team->avatar }}" alt="{{ $team->name }}">
+                <img class="uk-border-circle"  src="{{ $team->avatar }}" alt="{{ $team->name }}">
             </div>
             <div class="uk-width-3-4@s">
-              <div class="uk-flex uk-flex-row">
-                <span class="team-name">{{ $team->name }}</span>
-                <span class="team-designation">{{ $team->position }}</span>
-              </div>
-              <div class="team">                              
-                {!! $team->description !!}
-              </div>
+                <div class="uk-flex uk-flex-column">
+                    <span class="team-name"><b>{{ $team->name }}</b></span>
+                    <span class="team-designation">{{ $team->position }}</span>
+                </div>
+                <div class="team">                              
+                    {!! $team->description !!}
+                </div>
             </div>
-          </div>
+        </div>
           @endif
           @if($loop->iteration % 2 != 0)
           <div class="uk-text-left" uk-grid>

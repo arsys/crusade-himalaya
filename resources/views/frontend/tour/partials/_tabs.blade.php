@@ -64,10 +64,11 @@
 		<div class="uk-card uk-card-default uk-visible@l">	
 			<div class="uk-panel " id="tab-wrapper"  uk-sticky="offset: 0" >
 				<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 120" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color tab-ul" uk-nav>
-					<li class="uk-active uk-width-1-4 tab-li"><a href="#overview">Overview</a></li> 
-					<li class="uk-width-1-4  tab-li"><a href="#itinerary">Itinerary</a></li>
-					<li class="uk-width-1-4  tab-li"><a href="#price">Price & Availability </a></li>
-					<li class="uk-width-1-4  tab-li"><a href="#gallery">Gallery</a></li>
+					<li class="uk-active uk-width-1-5 tab-li"><a href="#overview">Overview</a></li> 
+					<li class="uk-width-1-5  tab-li"><a href="#itinerary">Itinerary</a></li>
+					<li class="uk-width-1-5  tab-li"><a href="#price">Price & Availability </a></li>
+					<li class="uk-width-1-5  tab-li"><a href="#">Includes & Excludes</a></li>
+					<li class="uk-width-1-5  tab-li"><a href="#gallery">Gallery</a></li>
 				</ul>
 			</div>	
 		</div>

@@ -63,6 +63,15 @@
            </div>
        </li>
        <!--overview end-->
+       {{-- includes start --}}
+        <li class="uk-box-shadow-small uk-padding uk-background-default">
+            <a class="uk-accordion-title" href="#">Includes & Excludes</a>
+                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                @include ('frontend.tour.partials._include')
+                </div>
+        </li>
+
+       {{-- includes end --}}
        <!--Itinerary start-->
         <li class="uk-box-shadow-small uk-padding uk-background-default">
             <a class="uk-accordion-title" href="#">Itinerary</a>

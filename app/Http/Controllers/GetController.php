@@ -120,4 +120,25 @@ class GetController extends Controller
 		$pdf = PDF::loadView('frontend.tour.pdf', compact('tour'));
 		return $pdf->download($tour->title.'.pdf');
 	}
+	public function stepOne($slug)
+	{		
+		$tour = Tour::where('slug','=', $slug)->first();		
+		return view('frontend.bookingstep1')->withTour($tour);
+	}
+
+	public function stepTwo(Request $request)
+	{
+		$data =  array(
+			'no' => $request->no_of_persons,
+			'date' => $request->date
+		 );
+		$tour = Tour::where('slug','=', $request->slug)->first();
+		return view('frontend.bookingform')
+		->withTour($tour)
+		->withData($data);
+	}
+	// public function getBookingstep1()
+	// {
+	// 	return view('frontend.bookingstep1');
+	// }
 }

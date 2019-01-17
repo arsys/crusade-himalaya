@@ -92,6 +92,7 @@ background-color: $green;
   position: relative;
   z-index: 20;
   background: white;
+  width:auto;
 
   
   &:after {
@@ -110,10 +111,4 @@ background-color: $green;
     max-width: 100%;
     height: auto;
   }
-}
-
-@media (min-width: 640px){
-  .article-wrap>* {
-    width: auto;
-}
 }

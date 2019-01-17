@@ -404,14 +404,21 @@ html{
 //booking-form-step 1 end
 
 // includes start -tabs
-.include-ul{
-    .include-list i{
-        color:$green;
-    }
+.icon:before{
+   font-family: FontAwesome;
+   display: inline-block;
+   padding-right: 10px;
+   vertical-align: middle;
+
 }
-.exclude-ul{
-    .exclude-list i{
-        color:red;
-    }
+ .include-list::before {
+  content: "\f00c";
+    color:$green;
+  }
+.exclude-list::before{
+    content: "\f00d";
+    color:red;
 }
+ 
 //includes end -tabs
+ 

@@ -15,10 +15,10 @@
                         <span class="travel-heading uk-flex uk-flex-column uk-width-4-5@l travel-title">
                            <a class="uk-heading-bullet" href="{{ route('fetchByCategory',$category->slug) }}">{{ $category->name }}</a>
                         </span>
-                        <span class="travel-tours uk-flex uk-flex-column uk-width-1-5@l  travel-tours">4 Tours</span>
+                        <span class="travel-tours uk-flex uk-flex-column uk-width-1-5@l  travel-tours">{{ $category->tours->count() }} Tours</span>
 
                     </div>
-                    <div class="travel-view"><a href="">View All tours </a></div>
+                    <div class="travel-view"><a href="{{ route('fetchByCategory',$category->slug) }}">View All tours </a></div>
   
                 </div>
             </div>

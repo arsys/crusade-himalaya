@@ -53,9 +53,20 @@
 							</div>
 						</div>
 					</li>
-					
-				</ul>
+				</ul>	
 			</div>
+			{{-- sim card start --}}
+			<div class="uk-card uk-card-body uk-card-default sim-wrapper  uk-padding-remove-top">
+				<span>Ncell Sim Card</span>
+					
+			</div>
+			{{-- sim card end --}}
+			{{-- Uno start --}}
+			<div class="uk-card uk-card-body uk-card-default uno-wrapper uk-padding-remove-top">
+				<span>uno offer</span>
+					
+			</div>
+			{{-- uno end --}}
 		</div>
 	</div>
 </div>

@@ -53,12 +53,12 @@ class Tour extends Model
     }
     public function includes()
     {
-        return $this->belongsToMany('App\Included','includes_tour', 'tour_id', 'included_id');
+        return $this->belongsToMany('App\Included','includes_tour', 'tour_id', 'included_id')->orderBy('name', 'asc');
     }
 
     public function excludes()
     {
-        return $this->belongsToMany('App\Excluded','excludes_tour', 'tour_id', 'excluded_id');
+        return $this->belongsToMany('App\Excluded','excludes_tour', 'tour_id', 'excluded_id')->orderBy('name', 'asc');
     }    
 
     public function image()
@@ -73,7 +73,7 @@ class Tour extends Model
 
     public function itinerary()
     {
-        return $this->hasMany('App\Itinerary', 'tour_id')->orderBy('id', 'asc');;
+        return $this->hasMany('App\Itinerary', 'tour_id')->orderBy('id', 'asc');
     }
 
     public function slides()

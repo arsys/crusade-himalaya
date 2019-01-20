@@ -65,7 +65,7 @@
        <!--overview end-->
        {{-- includes start --}}
         <li class="uk-box-shadow-small uk-padding uk-background-default">
-            <a class="uk-accordion-title" href="#">Includes & Excludes</a>
+            <a class="uk-accordion-title" href="#">Inclusion</a>
                 <div class="uk-accordion-content uk-animation-slide-top-medium">
                 @include ('frontend.tour.partials._include')
                 </div>
@@ -82,7 +82,7 @@
         <!--Itinerary end-->
         <!--Price & Availability start-->
         <li class="uk-box-shadow-small uk-padding uk-background-default">
-            <a class="uk-accordion-title" href="#">Price & Availability</a>
+            <a class="uk-accordion-title" href="#">Tour Dispatch</a>
                 <div class="uk-accordion-content uk-animation-slide-top-medium">
                     @include ('frontend.tour.partials._price-mobile')
                 </div>

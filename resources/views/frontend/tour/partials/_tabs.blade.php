@@ -53,9 +53,20 @@
 							</div>
 						</div>
 					</li>
-					
-				</ul>
+				</ul>	
 			</div>
+			{{-- sim card start --}}
+	{{-- 		<div class="uk-card uk-card-body uk-card-default sim-wrapper  uk-padding-remove-top">
+				<span>Ncell Sim Card</span>
+					
+			</div> --}}
+			{{-- sim card end --}}
+			{{-- Uno start --}}
+	{{-- 		<div class="uk-card uk-card-body uk-card-default uno-wrapper uk-padding-remove-top">
+				<span>uno offer</span>
+					
+			</div> --}}
+			{{-- uno end --}}
 		</div>
 	</div>
 </div>
@@ -65,9 +76,9 @@
 			<div class="uk-panel " id="tab-wrapper"  uk-sticky="offset: 0" >
 				<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 140" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color tab-ul" uk-nav>
 					<li class="uk-active uk-width-1-5 tab-li"><a href="#overview">Overview</a></li> 
-					<li class="uk-width-1-5  tab-li"><a href="#include">Includes & Excludes</a></li>
+					<li class="uk-width-1-5  tab-li"><a href="#include">Inclusion</a></li>
 					<li class="uk-width-1-5  tab-li"><a href="#itinerary">Itinerary</a></li>
-					<li class="uk-width-1-5  tab-li"><a href="#price">Price & Availability </a></li>
+					<li class="uk-width-1-5  tab-li"><a href="#price">Tour Dispatch</a></li>
 					<li class="uk-width-1-5  tab-li"><a href="#gallery">Gallery</a></li>
 				</ul>
 			</div>	

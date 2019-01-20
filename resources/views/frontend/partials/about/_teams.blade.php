@@ -13,7 +13,7 @@
             </div>
             <div class="uk-width-3-4@s">
                 <div class="uk-flex uk-flex-column">
-                    <span class="team-name"><b>{{ $team->name }}</b></span>
+                    <span class="team-name">{{ $team->name }}</span>
                     <span class="team-designation">{{ $team->position }}</span>
                 </div>
                 <div class="team">                              

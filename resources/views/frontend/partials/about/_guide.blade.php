@@ -8,8 +8,8 @@
                 <div class="uk-width-1-4@s  team">
                     <img class="uk-border-square uk-align-center" src="{{ $other->avatar }}" alt="{{ $other->name }}">
 
-                    <div class="uk-flex uk-flex-column">
-                        <span class="uk-text-center">{{ $other->name }}</span>
+                    <div class="uk-flex uk-flex-column guide-wrapper">
+                        <span class="uk-text-center guide-name">{{ $other->name }}</span>
                         <span class="team-designation uk-text-center">{{ $other->position }}</span>
                     </div>                 
                     <div class="field">

@@ -17,8 +17,10 @@
               <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($dos as $do)
                 <li>
-                  <h5><a href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }} </a></h5>
-                  <a href="{{ route('fetchByCategory',$do->slug) }}"><img src="{{ asset($do->nav) }}" alt="{{ $do->name }}"></a>
+                  <h5 class="nav-heading"><a class="nav-link" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }} </a></h5>
+                  <div class="navimg-wrapper">
+                    <a class="navimg-inner" href="{{ route('fetchByCategory',$do->slug) }}"><img src="{{ asset($do->nav) }}" alt="{{ $do->name }}"></a>
+                  </div>
                 </li>
                 @endforeach
               </ul>

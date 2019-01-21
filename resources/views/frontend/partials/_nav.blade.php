@@ -10,7 +10,7 @@
     </div>
     <div class="uk-navbar-right">
       <ul id="menu1" class="uk-navbar-nav uk-visible@l uk-margin-medium-right">
-        <li class="uk-active"><a href="/" class="nav-a">Home</a></li>
+        <li class="uk-active nav-link"><a href="/" class="nav-a">Home</a></li>
         <li class="nav-list"><a href="#" class="nav-a">What we do</a>
           <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">
             <div class="uk-position-relative uk-visible-toggle" uk-slider>
@@ -34,12 +34,13 @@
             <div class="uk-position-relative uk-visible-toggle" uk-slider>
               <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($wheres as $where)
-                <li  class="uk-inline-clip uk-transition-toggle" tabindex="0">
-                  <h5><a href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></h5>
-                  <a href="{{ route('fetchByRegion',$where->slug) }}"><img src="{{ asset($where->nav) }}" alt="{{ $where->name }}"></a>
-                     <div class="uk-transition-fade uk-position-cover uk-position-small uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle nav-wrap">
-                        <p class="uk-h4 uk-margin-remove nav-para"><a href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></p>
+                <li class="nav-list">
+                  <h5 class="nav-heading"><a class="nav-link" href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></h5>
+       
+                    <div class="navimg-wrapper">
+                        <a class="navimg-inner" href="{{ route('fetchByRegion',$where->slug) }}"><img  src="{{ asset($where->nav) }}" alt="{{ $where->name }}"></a>
                     </div>
+              
                 </li>
                 @endforeach
               </ul>

@@ -28,7 +28,7 @@
 
                     </div>
                     <div class=" uk-width-1-4@s uk-padding">
-                        <h5 class="user-instagram"><a href="https://www.instagram.com/crusadehimalya" target="_blank">@crusadehimalaya</a></h5>
+                        <h5 class="user-instagram"><a href="https://www.instagram.com/crusadehimalaya" target="_blank">@crusadehimalaya</a></h5>
                         <p class="caption-instagram">{{ $feed->caption }}</p>
                     </div>
                 </div>

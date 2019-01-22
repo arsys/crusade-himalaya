@@ -4,7 +4,7 @@
 				<li class="uk-active  uk-width-1-5 about-li"><a href="#justify">Why Nepal?</a></li>	     
 		        <li  class=" uk-width-1-5 about-li"><a href="#item1">Why Crusade Himalaya?</a></li>
 		        <li class="uk-width-1-5 about-li"><a href="#item2">How we work?</a></li>
-		        <li class="uk-width-1-5 about-li"><a href="#item3">What makes Crusade Himalaya different?</a></li>
+		        <li class="uk-width-1-5 about-li"><a href="#item3">What sets us apart?</a></li>
 	         	<li class="uk-width-1-5 about-li"><a href="#item4">What is our mission?</a></li>
 		</ul>
 	</div>	
@@ -39,7 +39,7 @@
 			<!-- How we work end -->
 			{{-- What makes Crusade Himalaya different start --}}
 			<div class="uk-card uk-card-body uk-card-default uk-margin-small-top" id="item3" > 
-					<h3 class="over"><span>What makes Crusade Himalaya different?</span></h3>
+					<h3 class="over"><span>What sets us apart?</span></h3>
 					<p>Besides <strong>&#39;knowledge infused with deep passion for meaningful travel&#39;</strong>, what sets Crusade Himalayas apart is their unique working style. We are an independent travel partner, and will therefore organize your trip as per your expectations, with our recommendations.</p>
 
 					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</p>

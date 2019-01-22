@@ -2,10 +2,12 @@
 @section('content')
 <section class="uk-container-expand about" uk-grid>
   <div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{asset('img/holi.png')}}" uk-img>
-    <h1 class="page-heading uk-margin-large-left">Event Calender</h1>
-    <p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">
-     The red letter days  in Nepalese calendar resembles to the festivals of Nepal. No matter which month of a year you choose to visit, there is always something happening. Just time your date to visit these festivals to coincide with culture and tradition endured for centuries.
-    </p>
+    <h1 class="calendar-heading uk-margin-large-left">Whats On</h1>
+    <blockquote class="calendar-subheading uk-margin-large-left uk-margin-bottom uk-margin-top">
+     The red letter days  in Nepalese calendar resembles to the festivals of Nepal. </blockquote>
+        <blockquote class="calendar-subheading uk-margin-large-left">No matter which month of a year you choose to visit, there is always something happening. </blockquote>
+         <blockquote class="calendar-subheading uk-margin-large-left"> Just time your date to visit these festivals to coincide with culture and tradition endured for centuries.</blockquote>
+   
     <div class="breadcrumb ">
       <ul class="uk-breadcrumb" id="breadcrumb">
         <li><a href="/" uk-icon="icon: home" ></a></li>
@@ -14,7 +16,6 @@
     </div>
   </div>
 </section>
-
 <div id="responsiveTabsDemo" class="r-tabs ">
     <ul class="r-tabs-nav">
     @for($i=1;$i<=12;$i++)

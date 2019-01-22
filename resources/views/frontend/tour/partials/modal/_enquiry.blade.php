@@ -4,7 +4,7 @@
 </div>
 <h3 >Enquiry Form</h3>
 <form action="{{ route('frontend-postEnquiry') }}" method="POST" id="quick-enquiry">
-	<input type="hidden" id="tour_id" value="{{ $tour->id }}">
+	<input type="hidden" id="tour_id" value="{{ $tour->id }}" name="tour_id">
 	<div class="uk-margin">
 		<label class="uk-form-label" for="form-stacked-text">Full Name</label>
 		<div class="uk-form-controls">  

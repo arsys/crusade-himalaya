@@ -44,6 +44,7 @@ class PostController extends Controller
 
     public function quickEnquiry(Request $request)
     {
+        // dd($request->all());
         $validator = Validator::make($request->all(), [
             'fullName' => 'required',
             'email' => 'required|email',
@@ -53,8 +54,10 @@ class PostController extends Controller
             $userIP = $request->ip();
             $IPdata = file_get_contents("http://api.ipstack.com/{$userIP}?access_key=2f40cb1cb05f40c9439fe91a309910b0");
             $IPdata = json_decode($IPdata);
-            $tour = Tour::where('id','=',$request->tour_id);
-            $sub = "Quick Enquiry for ".$tour->title." ".$tour->days." Days";
+
+            $tour = Tour::where('id',$request->tour_id)->firstOrFail();
+            // dd($tour);
+            $sub = "Quick Enquiry for ". $tour->title." ". $tour->days." Days";
             $user_info = "IP: {$IPdata->ip} <br> [ Country: <b>{$IPdata->country_name}</b> | City: {$IPdata->city} ]";
             $data = array(
                 'name' => $request->name,

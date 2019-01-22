@@ -1,18 +1,21 @@
-@extends('layouts.frontend') @section('content')
-<section class="uk-container-expand">
-    <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{asset('img/holi.png')}}" uk-img>
-        <h1 class="main-heading">Event Calender</h1>
-        <div class="breadcrumb ">
-            <ul class="uk-breadcrumb  " id="breadcrumb">
-                <li>
-                  <a href="/" uk-icon="icon: home"></a>
-                </li>
-                <li class="uk-disabled"><a href="{{url()->current()}}">What's on</a></li>
-            </ul>
-        </div>
+@extends('layouts.frontend') 
+@section('content')
+<section class="uk-container-expand about" uk-grid>
+  <div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{asset('img/holi.png')}}" uk-img>
+    <h1 class="calendar-heading uk-margin-large-left">Whats On</h1>
+    <blockquote class="calendar-subheading uk-margin-large-left uk-margin-bottom uk-margin-top">
+     The red letter days  in Nepalese calendar resembles to the festivals of Nepal. </blockquote>
+        <blockquote class="calendar-subheading uk-margin-large-left">No matter which month of a year you choose to visit, there is always something happening. </blockquote>
+         <blockquote class="calendar-subheading uk-margin-large-left"> Just time your date to visit these festivals to coincide with culture and tradition endured for centuries.</blockquote>
+   
+    <div class="breadcrumb ">
+      <ul class="uk-breadcrumb" id="breadcrumb">
+        <li><a href="/" uk-icon="icon: home" ></a></li>
+        <li class="uk-disabled"><a href="{{url()->current()}}">What's on</a></li>
+      </ul>
     </div>
+  </div>
 </section>
-
 <div id="responsiveTabsDemo" class="r-tabs ">
     <ul class="r-tabs-nav">
     @for($i=1;$i<=12;$i++)

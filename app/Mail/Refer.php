@@ -31,7 +31,7 @@ class Refer extends Mailable implements ShouldQueue
         $this->from($this->data['sender']);
         $this->subject($this->data['comment']);
         $this->to($this->data['receiver']);
-        $this->to('mail@crucadehimalaya.com');
+        $this->to('mail@crusadehimalaya.com');
         if (isset($this->data['receiver2'])) {
             $this->to($this->data['receiver2']);
         }

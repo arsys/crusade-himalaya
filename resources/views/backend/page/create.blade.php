@@ -26,7 +26,7 @@
                             @if($errors->has('subheading'))
                             <span class="help-block">{{ $errors->first('subheading') }}</span>
                             @endif
-                            {{ Form::label('subheading', 'Title ') }}
+                            {{ Form::label('subheading', 'Sub heading ') }}
                         </div>
                     </div>
                 </div>                

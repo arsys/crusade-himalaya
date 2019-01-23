@@ -68,6 +68,7 @@ class PageController extends Controller
 
         $page = new Page;
         $page->title = $request->title;
+        $page->subheading = $request->subheading;
         $page->position = $request->position;
         $page->main = $request->main;
         $page->status = $request->status;

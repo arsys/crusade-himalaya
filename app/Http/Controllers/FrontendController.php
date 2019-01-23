@@ -10,6 +10,7 @@ use App\Departure;
 use App\Insta;
 use App\Partner;
 use App\Event;
+use App\Page;
 use DB;
 
 use Illuminate\Http\Request;
@@ -122,7 +123,8 @@ public function getThankyou()
     return view('frontend.thankyou');
 }
 public function getSitemap(){
-    return view('frontend.sitemap');
+    $page = Page::where('slug','=','sitemap')->first();
+    return view('frontend.sitemap')->withPage($page);
 }
 
     //Gets single product details

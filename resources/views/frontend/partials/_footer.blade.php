@@ -50,8 +50,9 @@
     <div class="foobar-links ">
 
         <ul class="uk-list">
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="/contact">Terms & Conditions</a></li>
+{{--             <li><a href="#">Privacy policy</a></li>
+            <li><a href="/contact">Terms & Conditions</a></li> --}}
+            <li><a href="/link-exchange">Link Exchange</a></li>
             <li><a href="#">Site Map</a></li>
             <li>Address : 236 KESAR MAHAL MARG</li>
             <li>THAMEL-26, KATHMANDU-44600, NEPAL</li>

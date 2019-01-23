@@ -121,6 +121,9 @@ public function getThankyou()
 {
     return view('frontend.thankyou');
 }
+public function getSitemap(){
+    return view('frontend.sitemap');
+}
 
     //Gets single product details
 public function tourDetailtest($slug)

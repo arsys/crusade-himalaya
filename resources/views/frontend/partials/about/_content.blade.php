@@ -6,10 +6,11 @@
 		        <li class="uk-width-1-5 about-li"><a href="#item2">How we work?</a></li>
 		        <li class="uk-width-1-5 about-li"><a href="#item3">What sets us apart?</a></li>
 	         	<li class="uk-width-1-5 about-li"><a href="#item4">What is our mission?</a></li>
+	         	<li class="uk-width-1-5 about-li"><a href="#team-wrapper">Meet The Team</a></li>
 		</ul>
 	</div>	
 </div>
-<section class="uk-container uk-margin-small-top uk-margin-large-bottom  uk-visible@l" id="about-content-wrapper">
+<section class="uk-container uk-margin-small-top  uk-visible@l" id="about-content-wrapper">
 	<div class="uk-grid-small uk-grid-match uk-child-width-expand uk-grid" uk-grid="">
 		<div>
 			<div class="uk-card uk-card-body uk-card-default uk-margin-small-bottom" id="justify">
@@ -139,7 +140,7 @@
         <!--What is our mission end-->
     </ul>
 </div>
-<script>
+{{-- <script>
 window.addEventListener("load", function(){ 
 	
 	let about = document.getElementById("team-wrapper");
@@ -153,4 +154,4 @@ window.addEventListener("load", function(){
 
 });
 
-</script>
+</script> --}}

@@ -10,7 +10,7 @@
 		<div class="breadcrumb ">
 			<ul class="uk-breadcrumb" id="breadcrumb">
 				<li><a href="/" uk-icon="icon: home" ></a></li>
-				<li class="uk-disabled"><a href="{{ url()->current() }}">sitemap</a></li>
+				<li class="uk-disabled"><a href="{{ url()->current() }}">{{ $page->title }}</a></li>
 			</ul>
 		</div>
 	</div>

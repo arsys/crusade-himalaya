@@ -10,7 +10,7 @@
 		<div class="breadcrumb ">
 			<ul class="uk-breadcrumb" id="breadcrumb">
 				<li><a href="/" uk-icon="icon: home" ></a></li>
-				<li class="uk-disabled"><a href="#">sitemap</a></li>
+				<li class="uk-disabled"><a href="{{ url()->currnet() }}">sitemap</a></li>
 			</ul>
 		</div>
 	</div>
@@ -18,7 +18,7 @@
 {{-- image end --}}
 {{-- content start --}}
 <div class="uk-container uk-container-expand uk-margin-top uk-margin-bottom">
-	
+	{!! $page->content !!}
 </div>
 {{-- content end --}}
 

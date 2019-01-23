@@ -1,10 +1,10 @@
 
 <footer class="page footer " id="foobar" >
     <div class="uk-container">
-     <div class="uk-child-width-1-3@m uk-margin-medium-top uk-margin-xlarge-bottom" uk-grid>
+     <div class="uk-child-width-1-3@m uk-margin-medium-top uk-margin-large-bottom" uk-grid>
 
         <div class="uk-text-center">
-           <img data-src="{{asset('img/crusade-logo.svg')}}" alt="" style="width: 150px;"  uk-img class="foobar-logo">
+           <img  data-src="{{asset('img/crusade-logo.svg')}}" alt="" style="width: 150px;"  uk-img class="foobar-logo">
 
            <div class="uk-margin-small-top social-icons uk-margin-medium-top">
              <a href="{{ $setting->facebook }}" target="_blank"  class="uk-margin-left" >
@@ -50,13 +50,28 @@
     <div class="foobar-links ">
 
         <ul class="uk-list">
-{{--             <li><a href="#">Privacy policy</a></li>
-            <li><a href="/contact">Terms & Conditions</a></li> --}}
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">Privacy Policy</a></li>
             <li><a href="/link-exchange">Link Exchange</a></li>
             <li><a href="#">Site Map</a></li>
-            <li>Address : 236 KESAR MAHAL MARG</li>
-            <li>THAMEL-26, KATHMANDU-44600, NEPAL</li>
         </ul>
+        <div class="uk-flex affilate-wrapper">
+            <div class="uk-margin-left affilate-inner">
+                <img  data-src="{{asset('img/logo/keep.jpg')}}" alt=""  uk-img >
+            </div>
+            <div class="uk-margin-left affilate-inner">
+                <img  data-src="{{asset('img/logo/NMA.png')}}" alt=""   uk-img >
+            </div>
+            <div class="uk-margin-left affilate-inner">
+                <img  data-src="{{asset('img/logo/nep-gov.png')}}" alt=""   uk-img >
+            </div>
+             <div class="uk-margin-left affilate-inner">
+                <img  data-src="{{asset('img/logo/Nepal-Toursim-Board.jpg')}}" alt=""   uk-img >
+            </div>
+            <div class="uk-margin-left affilate-inner">
+                <img  data-src="{{asset('img/logo/taan.jpg')}}" alt=""   uk-img >
+            </div>
+        </div>
     </div>
 
 </div>

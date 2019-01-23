@@ -122,7 +122,7 @@ public function getThankyou()
 {
     return view('frontend.thankyou');
 }
-public function getSitemap(){
+public function getLinkexchange(){
     $page = Page::where('slug','=','sitemap')->first();
     return view('frontend.sitemap')->withPage($page);
 }

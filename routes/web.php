@@ -134,4 +134,4 @@ Route::get('/destination','FrontendController@getDestination');
 Route::get('/packages','FrontendController@getPackages');
 Route::get('/preloader', 'FrontendController@getPreloader');
 Route::get('/thankyou','FrontendController@getThankyou');
-Route::get('/sitemap','FrontendController@getSitemap');
+Route::get('/link-exchange','FrontendController@getLinkexchange');

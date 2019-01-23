@@ -47,3 +47,4 @@
 	</div>
 	{!! $tour->overview !!}
 </div>
+{{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum natus incidunt voluptatem rem quasi perferendis perspiciatis voluptate aliquid, tenetur, eligendi quod laborum nostrum quae eos, adipisci facere laboriosam. Omnis odit ullam quidem modi nesciunt perspiciatis, voluptates Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores dolores, quibusdam ipsa nulla facilis. Repellendus molestias, recusandae corporis quod repudiandae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sint distinctio iusto, expedita eum et explicabo beatae quas culpa vel. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo corporis impedit dolorem culpa hic animi soluta explicabo aperiam illum tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ipsa, debitis eos blanditiis .</p> --}}

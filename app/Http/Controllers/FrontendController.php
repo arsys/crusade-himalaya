@@ -123,7 +123,7 @@ public function getThankyou()
     return view('frontend.thankyou');
 }
 public function getLinkexchange(){
-    $page = Page::where('slug','=','sitemap')->first();
+    $page = Page::where('slug','=','link-exchange')->firstOrFail();
     return view('frontend.page')->withPage($page);
 }
 

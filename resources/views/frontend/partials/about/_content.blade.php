@@ -1,5 +1,5 @@
 <div class="uk-card uk-card-default uk-box-shadow-medium uk-visible@l" >	
-	<div class="uk-panel " id="about-content-wrapper"  uk-sticky="offset:80" >
+	<div class="uk-panel" id="about-content-wrapper"  uk-sticky="offset:80" >
 		<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 230" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color about-ul" uk-nav>
 				<li class="uk-active  uk-width-1-5 about-li"><a href="#justify">Why Nepal?</a></li>	     
 		        <li  class=" uk-width-1-5 about-li"><a href="#item1">Why Crusade Himalaya?</a></li>

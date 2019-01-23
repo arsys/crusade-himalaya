@@ -1,4 +1,4 @@
-<div class="uk-grid-divider uk-child-width-expand@s text-color include-wrapper" uk-grid>
+<div class="uk-grid-divider uk-child-width-expand@s uk-margin-medium-bottom text-color include-wrapper" uk-grid>
 	<div>
 		<h4>Includes</h4>
 		<ul class="uk-list includes">

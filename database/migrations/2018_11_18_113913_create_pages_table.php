@@ -17,7 +17,7 @@ class CreatePagesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('slug')->unique()->index();
-            $table->text('subheaading');
+            $table->text('subheading');
             $table->text('page_content');
             $table->text('banner');
             $table->boolean('parent_id')->nullable();

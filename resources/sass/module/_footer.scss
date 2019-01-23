@@ -49,6 +49,7 @@
 
 }
 .social-icons{
+
 	a{
 		color:$green;	
 		&:hover{
@@ -61,6 +62,14 @@
 				color: $black ;
 				@extend .hover-effect;
 			}
+		}
+	}
+}
+
+.affilate-wrapper{
+	.affilate-inner{
+		img{
+			width:30px;
 		}
 	}
 }

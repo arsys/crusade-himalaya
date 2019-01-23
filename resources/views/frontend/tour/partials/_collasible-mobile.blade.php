@@ -47,55 +47,38 @@
     </div>    
 </div>
 
-
-
-
 <div class="uk-container uk-padding-large uk-hidden@l">
-    <ul class="" uk-accordion>
-        <!--overview start-->
-        <li class="uk-box-shadow-small uk-padding uk-background-default  ">
-            <a class="uk-accordion-title" href="">Overview</a>
-            <div class="uk-accordion-content uk-animation-slide-top-medium">
-                <div class="left-img uk-width-medium@s uk-first-column uk-visible@l">
-                </div>
-            <div>
-               @include ('frontend.tour.partials._overview')    
-           </div>
-       </li>
-       <!--overview end-->
-       {{-- includes start --}}
-        <li class="uk-box-shadow-small uk-padding uk-background-default">
+    <ul uk-accordion="multiple: true">
+        <li class=" uk-box-shadow-small uk-padding uk-background-default">
+            <a class="uk-accordion-title" href="#">Overview</a>
+            <div class="uk-accordion-content">
+                @include ('frontend.tour.partials._overview')
+            </div>
+        </li>
+        <li class="uk-box-shadow-small uk-padding uk-background-default " >
             <a class="uk-accordion-title" href="#">Inclusion</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
+            <div class="uk-accordion-content">
                 @include ('frontend.tour.partials._include')
-                </div>
+            </div>
         </li>
-
-       {{-- includes end --}}
-       <!--Itinerary start-->
-        <li class="uk-box-shadow-small uk-padding uk-background-default">
+        <li class="uk-box-shadow-small uk-padding uk-background-default" >
             <a class="uk-accordion-title" href="#">Itinerary</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
-                @include ('frontend.tour.partials._itinerary')
-                </div>
+            <div class="uk-accordion-content">
+                 @include ('frontend.tour.partials._itinerary')
+            </div>
         </li>
-        <!--Itinerary end-->
-        <!--Price & Availability start-->
-        <li class="uk-box-shadow-small uk-padding uk-background-default">
+        <li class="uk-box-shadow-small uk-padding uk-background-default" >
             <a class="uk-accordion-title" href="#">Tour Dispatch</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
-                    @include ('frontend.tour.partials._price-mobile')
-                </div>
+            <div class="uk-accordion-content">
+                @include ('frontend.tour.partials._price-mobile')
+            </div>
         </li>
-        <!--Price & Availability end-->
-        <!--review start-->
         <li class="uk-box-shadow-small uk-padding uk-background-default">
             <a class="uk-accordion-title" href="#">Gallery</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
-                    @include ('frontend.tour.partials._gallery')
-                </div>
+            <div class="uk-accordion-content">
+               @include ('frontend.tour.partials._gallery')
+            </div>
         </li>
-        <!--review end-->
     </ul>
 </div>
 <div class="uk-card uk-card-default uk-card-body uk-margin-small-top  uk-hidden@l" id="mob-enquiry"> 

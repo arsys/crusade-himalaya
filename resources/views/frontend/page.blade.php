@@ -2,7 +2,7 @@
 @section('content')
 {{-- image start --}}
 <section class="uk-container-expand about" uk-grid>
-	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="https://source.unsplash.com/1200x800/?rose" uk-img>
+	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{ asset($page->banner) }}" uk-img>
 		<h1 class="page-heading uk-margin-large-left">{{ $page->title }}</h1>
 		<p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">
 			{{ $page->subheading }}
@@ -18,7 +18,7 @@
 {{-- image end --}}
 {{-- content start --}}
 <div class="uk-container uk-container-expand uk-margin-top uk-margin-bottom">
-	{!! $page->content !!}
+	{!! $page->page_content !!}
 </div>
 {{-- content end --}}
 

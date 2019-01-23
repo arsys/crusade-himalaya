@@ -124,7 +124,7 @@ public function getThankyou()
 }
 public function getLinkexchange(){
     $page = Page::where('slug','=','sitemap')->first();
-    return view('frontend.sitemap')->withPage($page);
+    return view('frontend.page')->withPage($page);
 }
 
     //Gets single product details

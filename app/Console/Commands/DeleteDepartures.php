@@ -52,5 +52,6 @@ class DeleteDepartures extends Command
                 }
             }
         }
+        echo 'Done Delete';
     }
 }

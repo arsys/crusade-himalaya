@@ -18,8 +18,8 @@ class DepartureController extends Controller
     public function index()
     {
         $collection = Departure::distinct()->select('tour_id')->get();
-        $departures = $collection->unique();
-        return view('backend.tour.departure.index')->withDepartures($departures);
+        // $departures = $collection->unique();
+        return view('backend.tour.departure.index')->withDepartures($collection);
     }
 
     /**

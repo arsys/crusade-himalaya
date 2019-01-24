@@ -6,19 +6,19 @@
    <div class="uk-text-center uk-process-step" uk-grid>
      <div class="uk-width-1-3 step circle">
        <div class="circle-text ">
-         <i class="medium  material-icons">Step 1</i>
+         <span class="medium  material-icons">Step 1</span>
        </div>
        <p class="center-align  uk-margin-top">Choose Your Trip</p>
      </div>
      <div class="uk-width-1-3 step active">
        <div class="circle-text a">
-         <i class="medium material-icons">Step 2</i>
+         <span class="medium material-icons">Step 2</span>
        </div>
        <p class="center-align uk-margin-top ">Request for reservation</p>
      </div>
      <div class="uk-width-1-3 step  ">
        <div class="circle-text ">
-         <i class="medium material-icons">Step 3</i>
+         <span class="medium material-icons">Step 3</span>
        </div>
        <p class="center-align  uk-margin-top">Successfully</p>
      </div>

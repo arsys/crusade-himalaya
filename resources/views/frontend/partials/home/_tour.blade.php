@@ -19,7 +19,7 @@
                                   <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><span class="hp-product">{{ $featured->title }}</span></a>
                                 </div>
                                 <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
-                                    <span class="hp-days">{{ $featured->days }} Days</span>
+                                    <h4 class="hp-days">{{ $featured->days }} Days</h4>
                                 </div>    
                             </div>
                         </div>

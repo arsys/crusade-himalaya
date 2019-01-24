@@ -39,7 +39,7 @@ class DeleteDepartures extends Command
     public function handle()
     {
         $tours = Tour::all();
-        $date = date('Y-m-d', strtotime("+1 week"));
+        $date = date('d-m-Y', strtotime("+1 week"));
         // $explode = explode("-", $week);
         foreach ($tours as $tour) 
         {
@@ -53,6 +53,5 @@ class DeleteDepartures extends Command
                 }
             }
         }
-        echo 'Done Delete';
     }
 }

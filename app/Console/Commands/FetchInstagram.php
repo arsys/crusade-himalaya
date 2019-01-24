@@ -50,6 +50,5 @@ class FetchInstagram extends Command
                 'caption' => $post->caption->text
             ]);
         }
-        return 'Done fetch Insta';
     }
 }

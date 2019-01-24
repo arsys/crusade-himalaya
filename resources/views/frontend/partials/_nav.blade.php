@@ -14,19 +14,18 @@
         <li class="nav-list"><a href="#" class="nav-a">What we do</a>
           <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">
             <div class="uk-position-relative uk-visible-toggle" uk-slider>
-              <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
-                @foreach($dos as $do)
-                <li>
-                  <h5 class="nav-heading"><a class="nav-link" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }} </a></h5>
-                  <div class="navimg-wrapper">
-                    <a class="navimg-inner" href="{{ route('fetchByCategory',$do->slug) }}"><img src="{{ asset($do->nav) }}" alt="{{ $do->name }}"></a>
-                  </div>
-                </li>
-                @endforeach
-              </ul>
-
-              <a class="uk-position-center-left uk-position-small uk-slidenav-large " href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-              <a class="uk-position-center-right uk-position-small uk-slidenav-large " href="#" uk-slidenav-next uk-slider-item="next"></a>
+                <ul class=" uk-slider-items uk-child-width-1-4" uk-grid uk-margin>
+                   @foreach($dos as $do)
+                    <li class="nav-list">
+                        <h5 class="nav-heading"><a class="nav-link" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }} </a></h5>
+                          <div class="navimg-wrapper">
+                            <a class="navimg-inner" href="{{ route('fetchByCategory',$do->slug) }}"><img src="{{ asset($do->nav) }}" alt="{{ $do->name }}"></a>
+                          </div>
+                    </li>
+                    @endforeach
+                </ul>
+                    <a class="uk-position-center-left uk-position-small uk-slidenav-large " href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-slidenav-large " href="#" uk-slidenav-next uk-slider-item="next"></a>
             </div>
 
           </div>
@@ -34,7 +33,7 @@
         <li class="nav-list"><a href="#" class="nav-a">Where We GO</a>
           <div class="uk-navbar-dropdown uk-margin-remove-top" uk-drop="boundary: .parent; boundary-align: true; pos: bottom-justify;">
             <div class="uk-position-relative uk-visible-toggle" uk-slider>
-              <ul class="uk-thumbnav uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
+              <ul class=" uk-slider-items  uk-child-width-1-4" uk-grid uk-margin>
                 @foreach($wheres as $where)
                 <li class="nav-list">
                   <h5 class="nav-heading"><a class="nav-link" href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></h5>
@@ -54,7 +53,7 @@
           </div>
         </li>
         <li class="nav-list"><a href="{{ route('frontend-eventCalender') }}" class="nav-a">Whats on</a></li>
-        <li class="nav-list"><a href="/about" class="nav-a">Who we are?</a></li>
+        <li class="nav-list"><a href="/about" class="nav-a">Who we are</a></li>
         <li>
           <div class="uk-navbar-item uk-margin-remove-left uk-margin-remove-top">
             <a class="contact-button" href="/contact">Contact</a>
@@ -231,7 +230,7 @@
         </li>
       </li></ul>          
 
-      <li><a href="/about">Who we are?</a></li>
+      <li><a href="/about">Who we are</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
   </div>

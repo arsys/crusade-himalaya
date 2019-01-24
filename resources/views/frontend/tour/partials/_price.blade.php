@@ -50,7 +50,10 @@
 				</tr>
 			</thead>
 			{{-- <div id="ajaxloader" style="display: none;">Loading...</div> --}}
-			<span uk-spinner="ratio: 3" class="ajaxloader" style="display: none;" ></span>
+			<div class="uk-position-bottom-center" style="display: none;">
+				<span uk-spinner="ratio: 3" class="ajaxloader"  ></span>
+			</div>
+			
 			<tbody class="ajaxloadmoredeparture">
 				@foreach($departures as $departure)
 				<tr>

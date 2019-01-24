@@ -1,4 +1,4 @@
-@if($partners->isNotEmpty())
+{{-- @if($partners->isNotEmpty())
 <div class="uk-container uk-container-expand  uk-margin-medium-bottom uk-margin-medium-top">
   	<div class="uk-container">
 	    <h2 class="  uk-text-center uk-margin-medium-bottom"><span>Featured In</span></h2> 
@@ -11,4 +11,4 @@
 	 	@endforeach
   	</div>
 </div>
-@endif
+@endif --}}

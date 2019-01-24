@@ -196,3 +196,21 @@
   line-height:0.5 !important;
 }
 //calender end
+//product-banner start
+.product-main-heading{
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 30px;
+  font-weight: bold;
+   top:50%;
+  &:after{
+    width: 200px;
+    content: "";
+    border-top: 1px solid $green;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -100px;
+  }
+}
+//product-banner end

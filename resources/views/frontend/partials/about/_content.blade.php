@@ -1,3 +1,4 @@
+
 <div class="uk-card uk-card-default uk-box-shadow-medium uk-visible@l" >	
 	<div class="uk-panel" id="about-content-wrapper"  uk-sticky="offset:80" >
 		<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 230" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color about-ul" uk-nav>
@@ -10,7 +11,8 @@
 		</ul>
 	</div>	
 </div>
-<section class="uk-container uk-margin-small-top  uk-visible@l" id="about-content-wrapper">
+
+<section class="uk-container uk-container-small uk-margin-small-top  uk-visible@l" id="about-content-wrapper">
 	<div class="uk-grid-small uk-grid-match uk-child-width-expand uk-grid" uk-grid="">
 		<div>
 			<div class="uk-card uk-card-body uk-card-default uk-margin-small-bottom" id="justify">

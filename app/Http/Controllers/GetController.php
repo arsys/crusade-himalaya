@@ -43,12 +43,21 @@ class GetController extends Controller
 	public function fetchByCategory($slug)
 	{
 		$category = TourCategory::where('slug','=', $slug)->first();
-		$tours = $category->tours()->with('region')->get(['region_id']);
-		$regions = $tours->pluck('region')->unique();
-
-		return view('frontend.pages.travel-style')
-		->withResults($regions)
-		->withCategory($category);
+		$tours = $category->tours()->has('region')->with('region')->get(['region_id']);
+		if ($tours->count() > 0) {
+			$regions = $tours->pluck('region')->unique();
+			return view('frontend.pages.travel-style')
+			->withResults($regions)
+			->withCategory($category);
+		}
+		else{
+			$query = Tour::whereHas('category', function ($r) use ($category) {
+				$r->where('tour_categories.slug', $category->slug);
+			})->get();
+			return view('frontend.pages.travel-style-no-region')
+			->withResults($query)
+			->withCategory($category);
+		}
 	}
 
 	public function region2package($category,$region)
@@ -131,7 +140,7 @@ class GetController extends Controller
 		$data =  array(
 			'no' => $request->no_of_persons,
 			'date' => $request->date
-		 );
+		);
 		$tour = Tour::where('slug','=', $request->slug)->first();
 		return view('frontend.bookingform')
 		->withTour($tour)

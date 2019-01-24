@@ -28,6 +28,8 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
         $schedule->command('Instagram:fetch')
         ->daily();
+        $schedule->command('Delete:Departure')
+        ->daily();
     }
 
     /**

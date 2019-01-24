@@ -1,5 +1,5 @@
 <div class="uk-section uk-section-small uk-section-default" id="team-wrapper">
-  <div class="uk-container">
+  <div class="uk-container uk-container-small">
     <div class="uk-card uk-card-body uk-card-default "> 
       <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Meet The Team</span></h2>
       <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span> Unquenchable thirst for fun ? meet ridiculously warm  &  talented team.</span></p>

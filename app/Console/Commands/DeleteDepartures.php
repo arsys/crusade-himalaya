@@ -42,7 +42,7 @@ class DeleteDepartures extends Command
         // $explode = explode("-", $week);
         foreach ($tours as $tour) 
         {
-            foreach($tour->datePrice as $d)
+            foreach($tour->departure as $d)
             {
                 if ($d->count() > 0) {
                     DB::table('departures')

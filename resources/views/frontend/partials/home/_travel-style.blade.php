@@ -22,7 +22,7 @@
                     </div>
                     <div class="uk-flex uk-flex-row  travel-details ">
                         <span class="travel-tours uk-flex uk-flex-column uk-width-4-5@l  travel-view"><a href="{{ route('fetchByCategory',$category->slug) }}">View All tours </a></span>
-                        <span class="travel-heading uk-flex uk-flex-column uk-width-1-5@l travel-tours">Tours</span>
+                        <span class="travel-heading uk-flex uk-flex-column uk-width-1-5@l travel-view">Tours</span>
                         
                     </div>
   

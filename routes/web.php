@@ -119,7 +119,7 @@ Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
 	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
 	Route::get('join/{slug}/{date}','GetController@stepOne')->name('stepOne');
-	Route::post('join/{slug}','GetController@stepTwo')->name('stepTwo');
+	// Route::post('join/{slug}','GetController@stepTwo')->name('stepTwo');
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');

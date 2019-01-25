@@ -120,7 +120,8 @@ Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
 	Route::post('join/{slug}/setp-1','GetController@stepOne')->name('stepOne'); //shows step 1 form
 	Route::post('join/{slug}/step-2','GetController@stepTwo')->name('stepTwo'); //shows step 2 form
-	Route::post('join/{slug}/step-3', 'GetController@stepThree')->name('stepThree');
+	Route::post('join/{slug}/step-3', 'GetController@stepThree')->name('stepThree'); //poost step 2 form
+	Route::get('join/{slug}/step-3','FrontendController@getThankyou')->name('thankyou'); //show step 3 thank you
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');
@@ -136,5 +137,5 @@ Route::prefix('destination')->group(function () {
 Route::get('/destination','FrontendController@getDestination');
 Route::get('/packages','FrontendController@getPackages');
 Route::get('/preloader', 'FrontendController@getPreloader');
-Route::get('/thankyou','FrontendController@getThankyou');
+
 Route::get('/link-exchange','FrontendController@getLinkexchange');

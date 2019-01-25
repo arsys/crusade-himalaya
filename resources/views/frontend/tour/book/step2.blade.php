@@ -35,6 +35,7 @@
        <form class="uk-form-stacked" action="{{ route('trip.stepThree', $tour->slug) }}" method="POST">
         @csrf
         <input type="hidden" value="{{ $data['travellers'] }}" name="travellers">
+        <input type="hidden" value="{{ $tour->id }}" name="tour_id">
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Full Name</label>
             <div class="uk-form-controls">

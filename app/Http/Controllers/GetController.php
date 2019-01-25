@@ -5,6 +5,9 @@ use App\Insta;
 use App\Tour;
 use App\Region;
 use App\TourCategory;
+use Session;
+use Mail;
+use App\Mail\Booking;
 use Vinkla\Instagram\Instagram;
 use Illuminate\Http\Request;
 use PDF;
@@ -175,7 +178,37 @@ class GetController extends Controller
 				'otherName.*' => 'required'
 			]);
 		}
-		dd($request->all());
+		$userIP = $request->ip();
+		$IPdata = file_get_contents("http://api.ipstack.com/{$userIP}?access_key=2f40cb1cb05f40c9439fe91a309910b0");
+		$IPdata = json_decode($IPdata);
+		$user_info = "IP: {$IPdata->ip} <br> [ Country: <b>{$IPdata->country_name}</b> | City: {$IPdata->city} ]";
+		$tour = Tour::where('id','=', $request->tour_id)->first();
+
+		$data = array(
+			'name' => $request->fullName,
+			'tour_name' => $tour->title .' '.$tour->days.' Day(s)',
+			'email' => $request->email,
+			'gender' => $request->gender,
+			'dob' => $request->dob,
+			'mobile' => $request->mobile,
+			'address' => $request->address,
+			'country' => $request->country,
+			'passport_no' => $request->passport_no,
+			'passport_exp' => $request->passport_exp,
+			'user_info' => $user_info,
+		);
+		if ($request->insurance) {
+			$data['insurance_policy_no'] = $request->insurance_policy;
+		}
+		if ($request->travellers > 1) {
+			for ($i = 0; $i < $request->travellers; $i++) {
+				$data["otherName" . $i] = $request->otherName[$i];
+			}
+		}
+		Mail::send(new Booking($data));
+
+		Session::flash('success', 'Email sent sucessfully!');
+		return route('thankyou', $tour->slug);
 
 	}
 	// public function getBookingstep1()

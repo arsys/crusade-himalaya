@@ -108,10 +108,10 @@ Route::get('/show-insta','GetController@showInsta')->name('show.Insta');
 Route::get('/fetch-insta','GetController@fetchInsta');
 
 
-Route::get('/review','FrontendController@getReview');
-Route::get('/bookingform','FrontendController@getBookingform');
+// Route::get('/review','FrontendController@getReview');
+// Route::get('/bookingform','FrontendController@getBookingform');
 
-Route::get('/bookingstep1','FrontendController@getBookingstep1');
+// Route::get('/bookingstep1','FrontendController@getBookingstep1');
 
 Route::get('/slideshow','FrontendController@getSlideshow');
 

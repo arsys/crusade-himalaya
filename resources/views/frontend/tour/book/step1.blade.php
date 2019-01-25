@@ -41,7 +41,7 @@
     <div class="uk-grid-small" uk-grid>
       <div class="uk-width-1-2@s">
         <label class="uk-form-label">Start Date</label>
-        <input class="uk-input" type="text" name="date" placeholder="{!! $_GET['date'] !!}" value="{!! $_GET['date'] !!}"  disabled>
+        <input class="uk-input" type="text" name="date" placeholder="{{ date("jS M, Y", strtotime($data['date']))}}" value="{{ $data['date'] }}"  disabled>
       </div>
       <div class="uk-width-1-2@s">
         <div class="uk-margin">

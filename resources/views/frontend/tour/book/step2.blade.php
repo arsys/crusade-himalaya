@@ -1,4 +1,3 @@
-{{ dd($tour) }}
 @extends('layouts.frontend')
 @section('content')
 <!-- booking step start -->

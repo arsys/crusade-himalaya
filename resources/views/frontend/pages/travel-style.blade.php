@@ -20,9 +20,10 @@
 	<div class=" uk-grid-match uk-grid-small uk-text-center " uk-grid>
 		@foreach($row as $region)
 		<div class="uk-width-1-2@s">
-			<a href="{{ route('region2package',[$category->slug,$region->slug]) }}"><div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($region->thumb) }}" uk-img></a>
-				<h3><a href="{{ route('region2package',[$category->slug,$region->slug]) }}">{{ $region->name }}</a></h3>
+			<a href="{{ route('region2package',[$category->slug,$region->slug]) }}"><div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="{{ asset($region->thumb) }}" uk-img> 
+				<h3>{{ $region->name }}</h3>
 			</div>
+		</a>
 		</div>
 		@endforeach
 	</div>

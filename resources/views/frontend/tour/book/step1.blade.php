@@ -5,19 +5,19 @@
  <div class="uk-text-center uk-process-step" uk-grid>
    <div class="uk-width-1-3 steps circle">
      <div class="circle-text ">
-       <i class="medium material-icons">steps 1</i>
+       <span class="medium material-icons">Step 1</span>
      </div>
      <p class="center-align  uk-margin-top">Choose Your Trip</p>
    </div>
    <div class="uk-width-1-3 steps ">
      <div class="circle-text a">
-       <i class="medium material-icons">steps 2</i>
+       <span class="medium material-icons">Step 2</span>
      </div>
      <p class="center-align uk-margin-top ">Request for reservation</p>
    </div>
    <div class="uk-width-1-3 steps">
      <div class="circle-text ">
-       <i class="medium material-icons">steps 3</i>
+       <span class="medium material-icons">Step 3</span>
      </div>
      <p class="center-align  uk-margin-top">Successfully</p>
    </div>
@@ -64,7 +64,7 @@
 
 
 @stop
-@section('styles')
+{{-- @section('styles')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
 @stop
@@ -77,4 +77,4 @@
     dateFormat: "Y-m-d",
   });
 </script>
-@stop
+@stop --}}

@@ -59,17 +59,17 @@
             <div class="uk-margin-left affilate-inner">
                 <img  data-src="{{asset('img/logo/keep.jpg')}}" alt=""  uk-img >
             </div>
-            <div class="uk-margin-left affilate-inner">
-                <img  data-src="{{asset('img/logo/NMA.png')}}" alt=""   uk-img >
+            <div class="uk-margin-left affilate-inner-logo">
+                <img  data-src="{{asset('img/logo/jjj.png')}}" alt=""    uk-img >
             </div>
-            <div class="uk-margin-left affilate-inner">
-                <img  data-src="{{asset('img/logo/nep-gov.png')}}" alt=""   uk-img >
+            <div class="uk-margin-left affilate-inner-logo">
+                <img  data-src="{{asset('img/logo/cnep-gov.png')}}" alt=""     uk-img >
             </div>
              <div class="uk-margin-left affilate-inner">
-                <img  data-src="{{asset('img/logo/Nepal-Toursim-Board.jpg')}}" alt=""   uk-img >
+                <img  data-src="{{asset('img/logo/cntb.png')}}" alt=""   uk-img >
             </div>
             <div class="uk-margin-left affilate-inner">
-                <img  data-src="{{asset('img/logo/taan.jpg')}}" alt=""   uk-img >
+                <img  data-src="{{asset('img/logo/ctaan.png')}}" alt=""   uk-img >
             </div>
         </div>
     </div>

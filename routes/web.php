@@ -87,6 +87,8 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::resource('/team', 'TeamController');
 	//Member Controller
 	Route::resource('/position', 'MemberController');
+	//Instagram Feeds
+	Route::resource('/instagram', 'InstaController');
 });
 Route::name('frontend-')->group(function () {
 	// Route::get('/','GetController@comingSoon');
@@ -97,7 +99,7 @@ Route::name('frontend-')->group(function () {
 });
 // Route::get('/', 'FrontendController@comingSoon');
 Route::get('/', 'FrontendController@getIndex');
-Route::get('/about', 'FrontendController@getAbout');
+Route::get('/who-we-are', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
 Route::get('/product','FrontendController@getProduct');
 Route::get('/category','FrontendController@getCategory');
@@ -116,8 +118,8 @@ Route::get('/slideshow','FrontendController@getSlideshow');
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
 	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
-	Route::get('join/{slug}','GetController@stepOne')->name('stepOne');
-	Route::post('join/{slug}','GetController@stepTwo')->name('stepTwo');
+	Route::get('join/{slug}/{date}','GetController@stepOne')->name('stepOne');
+	// Route::post('join/{slug}','GetController@stepTwo')->name('stepTwo');
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');

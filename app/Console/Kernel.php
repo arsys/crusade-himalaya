@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        'App\Console\Commands\DeleteDepartures',
+        'App\Console\Commands\FetchInstagram'
     ];
 
     /**
@@ -27,6 +28,8 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')
         //          ->hourly();
         $schedule->command('Instagram:fetch')
+        ->daily();
+        $schedule->command('Delete:Departure')
         ->daily();
     }
 

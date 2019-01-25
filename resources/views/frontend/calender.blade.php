@@ -2,6 +2,7 @@
 @section('content')
 <section class="uk-container-expand about" uk-grid>
   <div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{asset('img/holi.png')}}" uk-img>
+    <div class="uk-overlay-primary uk-position-cover overlay"></div>
     <h1 class="calendar-heading uk-margin-large-left">Whats On</h1>
     <blockquote class="calendar-subheading uk-margin-large-left uk-margin-bottom uk-margin-top">
      The red letter days  in Nepalese calendar resembles to the festivals of Nepal. </blockquote>

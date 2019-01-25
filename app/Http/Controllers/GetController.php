@@ -43,18 +43,27 @@ class GetController extends Controller
 	public function fetchByCategory($slug)
 	{
 		$category = TourCategory::where('slug','=', $slug)->first();
-		$tours = $category->tours()->with('region')->get(['region_id']);
-		$regions = $tours->pluck('region')->unique();
-
-		return view('frontend.pages.travel-style')
-		->withResults($regions)
-		->withCategory($category);
+		$tours = $category->tours()->has('region')->with('region')->get(['region_id']);
+		if ($tours->count() > 0) {
+			$regions = $tours->pluck('region')->unique();
+			return view('frontend.pages.travel-style')
+			->withResults($regions)
+			->withCategory($category);
+		}
+		else{
+			$query = Tour::whereHas('category', function ($r) use ($category) {
+				$r->where('tour_categories.slug', $category->slug);
+			})->get();
+			return view('frontend.pages.travel-style-no-region')
+			->withResults($query)
+			->withCategory($category);
+		}
 	}
 
 	public function region2package($category,$region)
 	{
-		$category = TourCategory::where('slug','=', $category)->first();
-		$region = Region::where('slug','=',$region)->first();
+		$category = TourCategory::where('slug','=', $category)->firstOrFail();
+		$region = Region::where('slug','=',$region)->firstOrFail();
 		$query = Tour::whereHas('category', function ($r) use ($category) {
 			$r->where('tour_categories.slug', $category->slug);
 		})->whereHas('region', function ($s) use ($region) {
@@ -123,7 +132,7 @@ class GetController extends Controller
 	public function stepOne($slug)
 	{		
 		$tour = Tour::where('slug','=', $slug)->first();		
-		return view('frontend.bookingstep1')->withTour($tour);
+		return view('frontend.tour.book.step1')->withTour($tour);
 	}
 
 	public function stepTwo(Request $request)
@@ -131,9 +140,9 @@ class GetController extends Controller
 		$data =  array(
 			'no' => $request->no_of_persons,
 			'date' => $request->date
-		 );
+		);
 		$tour = Tour::where('slug','=', $request->slug)->first();
-		return view('frontend.bookingform')
+		return view('frontend.tour.book.step2')
 		->withTour($tour)
 		->withData($data);
 	}

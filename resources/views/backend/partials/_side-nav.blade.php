@@ -124,7 +124,12 @@
 							<li><a href="{{ route('position.index') }}"><span class="title">Position</span></a></li>
 						</ul>
 					</li>				
-
+					<li>
+						<a href="{{ route('instagram.index') }}">
+							<div class="gui-icon"><i class="fab fa-instagram md"></i></div>
+							<span class="title ">Instagram</span>
+						</a>
+					</li>
 					<li>
 						<a href="{{ route('setting.index') }}">
 							<div class="gui-icon"><i class="fas fa-cog md"></i></div>

@@ -22,7 +22,7 @@ class FrontendController extends Controller
         $featureds = Tour::where('status',1)->where('featured',1)->take(6)->get();
         $categories = TourCategory::all();
         $carousels = Carousel::where('status' ,1)->get();
-        $instaFeeds = Insta::orderBy('id', 'desc')->take(10)->get();
+        $instaFeeds = Insta::orderByRaw('RAND()')->take(10)->get();
         $partners = Partner::all();
 
         $oddDestinations = DB::table('regions')

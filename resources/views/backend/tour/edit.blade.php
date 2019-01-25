@@ -57,7 +57,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            {{ Form::number('elevation', null, ['class' => 'form-control', 'id'=>'elevation']) }}
+                            {{ Form::text('elevation', null, ['class' => 'form-control', 'id'=>'elevation']) }}
                             @if($errors->has('elevation'))
                             <span class="help-block">{{ $errors->first('elevation') }}</span>
                             @endif

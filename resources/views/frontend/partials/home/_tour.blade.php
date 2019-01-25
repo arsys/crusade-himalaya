@@ -16,10 +16,10 @@
                         <div class="uk-overlay uk-overlay-default hp-wrapper">
                             <div class="uk-flex uk-flex-center">
                                 <div class="uk-flex uk-flex-column uk-width-4-5 hp-meta">
-                                  <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><span class="hp-product">{{ $featured->title }}</span></a>
+                                  <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><h4 class="hp-product">{{ $featured->title }}</h4></a>
                                 </div>
                                 <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
-                                    <span class="hp-days">{{ $featured->days }} Days</span>
+                                    <h4 class="hp-days">{{ $featured->days }} Days</h4>
                                 </div>    
                             </div>
                         </div>

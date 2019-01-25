@@ -80,13 +80,14 @@ class TourController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {        
+    {     
+    // dd($request->all())   ;
         try {
             $this->validate($request, [
                 'title' => 'required|max:255',
                 'days' => 'required|numeric|max:90',
                 'price' => 'required|numeric',
-                'elevation' => 'required|numeric',
+                'elevation' => 'required',
                 'difficulty' => 'required',
                 'group' => 'required',
                 'region' => 'sometimes',
@@ -220,7 +221,7 @@ class TourController extends Controller
                 'title' => 'required|max:255',
                 'days' => 'required|numeric|max:90',
                 'price' => 'required|numeric',
-                'elevation' => 'required|numeric',
+                'elevation' => 'required',
                 'difficulty' => 'required',
                 'group' => 'required',
                 'region' => 'sometimes',

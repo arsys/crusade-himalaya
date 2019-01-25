@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('Crucade Himalaya', 'Crucade Himalaya'),
+    'name' => env('Crusade Himalaya', 'Crusade Himalaya'),
 
     /*
     |--------------------------------------------------------------------------

@@ -64,17 +64,3 @@
 
 
 @stop
-{{-- @section('styles')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
-@stop
-@section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-  $("#start-date").flatpickr({
-    altInput: true,
-    altFormat: "F j, Y",
-    dateFormat: "Y-m-d",
-  });
-</script>
-@stop --}}

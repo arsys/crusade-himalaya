@@ -1,26 +1,27 @@
+@inject('countries','App\Http\Utilities\Country')
 @extends('layouts.frontend')
 @section('content')
 <!-- booking step start -->
 <section class=" booking">
-   <div class="uk-container  uk-container-expand uk-padding-large">
-     <div class="uk-text-center uk-process-step" uk-grid>
-       <div class="uk-width-1-3 step circle">
-         <div class="circle-text ">
-           <span class="medium  material-icons">Step 1</span>
-       </div>
-       <p class="center-align  uk-margin-top">Choose Your Trip</p>
-   </div>
-   <div class="uk-width-1-3 step active">
-     <div class="circle-text a">
-       <span class="medium material-icons">Step 2</span>
-   </div>
-   <p class="center-align uk-margin-top ">Request for reservation</p>
+ <div class="uk-container  uk-container-expand uk-padding-large">
+   <div class="uk-text-center uk-process-step" uk-grid>
+     <div class="uk-width-1-3 step circle">
+       <div class="circle-text ">
+         <span class="medium  material-icons">Step 1</span>
+     </div>
+     <p class="center-align  uk-margin-top">Choose Your Trip</p>
+ </div>
+ <div class="uk-width-1-3 step active">
+   <div class="circle-text a">
+     <span class="medium material-icons">Step 2</span>
+ </div>
+ <p class="center-align uk-margin-top ">Request for reservation</p>
 </div>
 <div class="uk-width-1-3 step  ">
- <div class="circle-text ">
-   <span class="medium material-icons">Step 3</span>
-</div>
-<p class="center-align  uk-margin-top">Successfully</p>
+   <div class="circle-text ">
+     <span class="medium material-icons">Step 3</span>
+ </div>
+ <p class="center-align  uk-margin-top">Successfully</p>
 </div>
 </div>
 </div>
@@ -28,8 +29,8 @@
 <!-- booking step end -->
 
 <div class="uk-container ">
- <h3 class="uk-padding-small uk-text-center"><span>Lead Traveller Details</span></h3> 
- <div class="" uk-grid>
+   <h3 class="uk-padding-small uk-text-center"><span>Lead Traveller Details</span></h3> 
+   <div class="" uk-grid>
     <div class="uk-width-3-5@m">           
         <form class="uk-form-stacked" action="">
             <div class="uk-margin">
@@ -54,7 +55,7 @@
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Date Of Birth</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" type="text" data-uk-datepicker="{format:'DD.MM.YYYY'}">
+                    <input class="uk-input" type="text" id="dob">
                 </div>
             </div>
 
@@ -62,23 +63,31 @@
                 <label class="uk-form-label" for="form-stacked-select">Country</label>
                 <div class="uk-form-controls">
                     <select class="uk-select" id="form-stacked-select">
-                        <option>Nepal</option>
-                        <option>India</option>
+                        <option></option>
+                        @foreach($countries::all() as $country)
+                        <option value="{{$country}}">{{$country}}</option>
+                        @endforeach
                     </select>
                 </div>
             </div>
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Passport No.</label>
                 <div class="uk-form-controls">
-                    <input class="uk-input" id="form-stacked-text" type="text" name="passport" placeholder="Passport Number.">
+                    <input class="uk-input" id="passport" type="text" name="passport" >
                 </div>
             </div>
 
             <div class="uk-margin">
                 <label class="uk-form-label">Do you have Insurance?</label>
                 <div class="uk-form-controls uk-margin">
-                    <label><input class="uk-radio" type="radio" name="radio1"><span class="uk-margin-left uk-margin-right">Yes</span> </label>
-                    <label><input class="uk-radio" type="radio" name="radio1"><span class="uk-margin-left uk-margin-right">No</span> </label>
+                    <label><input class="uk-radio" type="radio" name="insurance" value="1" ><span class="uk-margin-left uk-margin-right">Yes</span> </label>
+                    <label><input class="uk-radio" type="radio" name="insurance" value="0"><span class="uk-margin-left uk-margin-right">No</span> </label>
+                </div>
+            </div>
+            <div class="uk-margin" id="policy-wrapper">
+                <label class="uk-form-label" for="form-stacked-text">Policy no.</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-text" type="text" name="insurance_policy" >
                 </div>
             </div>
             <div class="uk-margin">
@@ -92,7 +101,7 @@
                 <img src="{{ asset($tour->image->thumb) }}" alt="{{ $tour->slug }}">
             </div>
             <div class="uk-card-body">
-                <h3 class="uk-card-title">{{ $tour->days .'Day(s) '.$tour->title}}</h3>
+                <h3 class="uk-card-title">{{ $tour->days .' Day(s) '.$tour->title}}</h3>
                 <div class="uk-flex  uk-flex-row">
                 </div>
                 <div class="uk-card-footer" uk-grid>
@@ -127,4 +136,33 @@
     </div>
 </div>
 </div>
+@stop
+@section('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
+@stop
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    $("#dob").flatpickr({
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
+    });
+    $("#passport").flatpickr({
+        altInput: true,
+        altFormat: "F j, Y",
+        dateFormat: "Y-m-d",
+    });
+    $('input[type=radio]').click(function(){
+        var value = $(this).val();
+        if (value == '1') {
+            $("#policy-wrapper").show();
+        }
+        else {
+            $("#policy-wrapper").hide();
+            $("#policy-wrapper").trigger("reset");
+        }
+    });
+</script>
 @stop

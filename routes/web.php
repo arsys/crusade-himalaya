@@ -88,7 +88,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	//Member Controller
 	Route::resource('/position', 'MemberController');
 	//Instagram Feeds
-	Route::resource('/instagram', 'InstaController',['only' => ['index', 'delete']]);
+	Route::resource('/instagram', 'InstaController');
 });
 Route::name('frontend-')->group(function () {
 	// Route::get('/','GetController@comingSoon');

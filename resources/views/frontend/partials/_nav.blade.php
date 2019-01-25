@@ -37,11 +37,11 @@
               @foreach($wheres as $where)
               <li class="nav-list">
                 <h5 class="nav-heading"><a class="nav-link" href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }} </a></h5>
-                
+
                 <div class="navimg-wrapper">
                   <a class="navimg-inner" href="{{ route('fetchByRegion',$where->slug) }}"><img  src="{{ asset($where->nav) }}" alt="{{ $where->name }}"></a>
                 </div>
-                
+
               </li>
               @endforeach
             </ul>
@@ -75,7 +75,7 @@
       <ul class="uk-nav uk-nav-default">
         <li class="uk-active"><a href="/">Home</a></li>              
         <li><ul uk-accordion>
-          <li><a class="uk-accordion-title" href="#">What  we do</a>
+          <li><a class="uk-accordion-title" href="#">What  We Do</a>
             <div class="uk-accordion-content">
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <ul uk-accordion>
@@ -102,7 +102,7 @@
         </ul>          
       </li>
       <li><ul uk-accordion>
-        <li><a class="uk-accordion-title" href="#">Where we go</a>
+        <li><a class="uk-accordion-title" href="#">Where We Go</a>
           <div class="uk-accordion-content">
             <ul class="uk-nav uk-navbar-dropdown-nav">
               <ul uk-accordion>

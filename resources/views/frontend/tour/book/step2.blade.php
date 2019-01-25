@@ -41,12 +41,7 @@
                 <input class="uk-input" id="form-stacked-text" type="text" name="fullname" placeholder="Enter Your Full Name.">
             </div>
         </div>
-        <div class="uk-margin">
-            <label class="uk-form-label" for="form-stacked-text">Email</label>
-            <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" type="email" name="email" placeholder="Enter Your Email Address">
-            </div>
-        </div>
+
         <div class="uk-margin">
             <label class="uk-form-label">Gender</label>
             <div class="uk-form-controls">
@@ -57,7 +52,25 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Date Of Birth</label>
             <div class="uk-form-controls">
-                <input class="uk-input" type="text" id="dob">
+                <input class="uk-input" type="text" id="dob" name="dob">
+            </div>
+        </div>
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-stacked-text">Email</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="form-stacked-text" type="email" name="email" placeholder="Enter Your Email Address">
+            </div>
+        </div>
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-stacked-text">Mobile no.</label>
+            <div class="uk-form-controls">
+                <input class="uk-input" id="form-stacked-text" type="text" name="mobile" placeholder="Mobile no.">
+            </div>
+        </div>
+        <div class="uk-margin">
+            <label class="uk-form-label" for="form-stacked-text">Address</label>
+            <div class="uk-form-controls">
+                <textarea class="uk-textarea uk-form-width-large" rows="4" required="" placeholder="Post Address" name="address"></textarea>                                     
             </div>
         </div>
 
@@ -81,21 +94,21 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Passport Expiry</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="passport" type="text" name="passport" >
+                <input class="uk-input" id="passport" type="text" name="passport_exp" >
             </div>
         </div>
 
         <div class="uk-margin">
             <label class="uk-form-label">Do you have Insurance?</label>
             <div class="uk-form-controls uk-margin">
-                <label><input class="uk-radio" type="radio" name="insurance" value="1" ><span class="uk-margin-left uk-margin-right">Yes</span> </label>
+                <label><input class="uk-radio" type="radio" name="insurance" value="1" checked ><span class="uk-margin-left uk-margin-right">Yes</span> </label>
                 <label><input class="uk-radio" type="radio" name="insurance" value="0"><span class="uk-margin-left uk-margin-right">No</span> </label>
             </div>
         </div>
         <div class="uk-margin" id="policy-wrapper" style="display: none;">
             <label class="uk-form-label" for="form-stacked-text">Policy no.</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" type="text" name="insurance_policy" >
+                <input class="uk-input" id="form-stacked-text" type="text" name="insurance_policy" required>
             </div>
         </div>
         @if($data['travellers'] > 1)
@@ -104,7 +117,7 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Traveller {{$i}}</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" type="text" name="otherName{{ $i}}" placeholder="Full Name">
+                <input class="uk-input" id="form-stacked-text" type="text" name="otherName[]" placeholder="Full Name" required>
             </div>
         </div>
         @endfor

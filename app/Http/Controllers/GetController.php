@@ -154,15 +154,15 @@ class GetController extends Controller
 	}
 	public function stepThree(Request $request)
 	{
-		// dd($request->all());
-		$data =  array(
-			'travellers' => $request->travellers,
-			'date' => $request->date
-		);
-		$tour = Tour::where('id','=', $request->tour_id)->first();
-		return view('frontend.tour.book.step2')
-		->withTour($tour)
-		->withData($data);
+		dd($request->all());
+		// $data =  array(
+		// 	'travellers' => $request->travellers,
+		// 	'date' => $request->date
+		// );
+		// $tour = Tour::where('id','=', $request->tour_id)->first();
+		// return view('frontend.tour.book.step2')
+		// ->withTour($tour)
+		// ->withData($data);
 	}
 	// public function getBookingstep1()
 	// {

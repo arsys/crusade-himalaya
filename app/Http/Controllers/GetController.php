@@ -62,8 +62,8 @@ class GetController extends Controller
 
 	public function region2package($category,$region)
 	{
-		$category = TourCategory::where('slug','=', $category)->first();
-		$region = Region::where('slug','=',$region)->first();
+		$category = TourCategory::where('slug','=', $category)->firstOrFail();
+		$region = Region::where('slug','=',$region)->firstOrFail();
 		$query = Tour::whereHas('category', function ($r) use ($category) {
 			$r->where('tour_categories.slug', $category->slug);
 		})->whereHas('region', function ($s) use ($region) {

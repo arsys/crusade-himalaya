@@ -108,10 +108,10 @@ Route::get('/show-insta','GetController@showInsta')->name('show.Insta');
 Route::get('/fetch-insta','GetController@fetchInsta');
 
 
-Route::get('/review','FrontendController@getReview');
-Route::get('/bookingform','FrontendController@getBookingform');
+// Route::get('/review','FrontendController@getReview');
+// Route::get('/bookingform','FrontendController@getBookingform');
 
-Route::get('/bookingstep1','FrontendController@getBookingstep1');
+// Route::get('/bookingstep1','FrontendController@getBookingstep1');
 
 Route::get('/slideshow','FrontendController@getSlideshow');
 
@@ -119,7 +119,7 @@ Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
 	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
 	Route::get('join/{slug}/{date}','GetController@stepOne')->name('stepOne');
-	// Route::post('join/{slug}','GetController@stepTwo')->name('stepTwo');
+	Route::post('join/{slug}','GetController@stepTwo')->name('stepTwo');
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');

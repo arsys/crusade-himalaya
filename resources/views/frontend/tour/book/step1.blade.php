@@ -34,20 +34,20 @@
     <div class="uk-margin">
       <div class="uk-form-controls">
         <label class="uk-form-label">Trip name</label>
-        <input type="hidden" name="tripName" value="{{$tour->slug}}">
+        <input type="hidden" name="tour_id" value="{{$tour->id}}">
         <input class="uk-input" type="text" placeholder="{{$tour->title}}" disabled>
       </div>
     </div>
     <div class="uk-grid-small" uk-grid>
       <div class="uk-width-1-2@s">
         <label class="uk-form-label">Start Date</label>
-        <input class="uk-input" type="text" name="date" placeholder="{{ date("jS M, Y", strtotime($data['date']))}}" value="{{ $data['date'] }}"  disabled>
+        <input class="uk-input" type="text" name="date"  value="{{ $data['date'] }}"  disabled>
       </div>
       <div class="uk-width-1-2@s">
         <div class="uk-margin">
           <div class="uk-form-controls">
             <label class="uk-form-label">No of People*</label>
-            <select class="uk-select" id="form-stacked-select" name="no_of_persons" required>
+            <select class="uk-select" id="form-stacked-select" name="travellers" required>
               @for($i=1; $i<=10; $i++)
               <option value="{{$i}}">{{$i}}</option>
               @endfor

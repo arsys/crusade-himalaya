@@ -143,10 +143,10 @@ class GetController extends Controller
 	public function stepTwo(Request $request)
 	{
 		$data =  array(
-			'no' => $request->no_of_persons,
+			'travellers' => $request->travellers,
 			'date' => $request->date
 		);
-		$tour = Tour::where('slug','=', $request->slug)->first();
+		$tour = Tour::where('id','=', $request->tour_id)->first();
 		return view('frontend.tour.book.step2')
 		->withTour($tour)
 		->withData($data);

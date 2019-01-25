@@ -49,7 +49,7 @@
 				<div class="uk-width-expand attr-details">
 					<div class="uk-flex uk-flex-column ">
 						<span class="attr-title">Max Alt.</span>
-						<span class="attr-meta">{{ $tour->elevation }}m</span>
+						<span class="attr-meta">{{ $tour->elevation }}</span>
 					</div>
 				</div>
 			</div>

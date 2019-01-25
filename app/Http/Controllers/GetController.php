@@ -132,7 +132,7 @@ class GetController extends Controller
 	public function stepOne($slug)
 	{		
 		$tour = Tour::where('slug','=', $slug)->first();		
-		return view('frontend.bookingstep1')->withTour($tour);
+		return view('frontend.tour.book.step1')->withTour($tour);
 	}
 
 	public function stepTwo(Request $request)
@@ -142,7 +142,7 @@ class GetController extends Controller
 			'date' => $request->date
 		);
 		$tour = Tour::where('slug','=', $request->slug)->first();
-		return view('frontend.bookingform')
+		return view('frontend.tour.book.step2')
 		->withTour($tour)
 		->withData($data);
 	}

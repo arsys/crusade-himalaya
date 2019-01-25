@@ -62,7 +62,7 @@
                 console.log(id);
                 $.ajax({
                     type: 'DELETE',
-                    url: '/manage/media/' + id,
+                    url: '/manage/instagram/' + id,
                     data: {
                         '_token': $('meta[name="csrf-token"]').attr('content'),
                         'id': $("#id-delete").val()

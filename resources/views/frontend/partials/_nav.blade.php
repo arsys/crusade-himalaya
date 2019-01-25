@@ -80,20 +80,7 @@
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <ul uk-accordion>
                   @foreach($dos as $do)
-                  <li class="list-item"><a class="uk-accordion-title" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a>
-                    <div class="uk-accordion-content">
-                      <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="list-item"><a href="#">Everest Base Camp Trek</a></li>
-                        <li class="list-item"><a href="#">Everest Base Camp via Gokyo</a></li>
-                        <li class="list-item"><a href="#">High Passes Trek</a></li>
-                        <li class="list-item"><a href="#">Gokyo Lake Trek</a></li>
-                        <li class="list-item"><a href="#">Everest View Trek</a></li>
-                        <li class="list-item"><a href="#">Everest Base Camp Trek and Fly</a></li>
-
-                      </ul>
-
-                    </div>
-                  </li>
+                  <li class="list-item"><a class="uk-accordion-title" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a></li>
                   @endforeach
                 </ul>
               </ul>
@@ -107,20 +94,7 @@
             <ul class="uk-nav uk-navbar-dropdown-nav">
               <ul uk-accordion>
                 @foreach($wheres as $where)
-                <li class="list-item"><a class="uk-accordion-title"{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}</a>
-                  <div class="uk-accordion-content">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li class="list-item"><a href="#">Everest Base Camp Trek</a></li>
-                      <li class="list-item"><a href="#">Everest Base Camp via Gokyo</a></li>
-                      <li class="list-item"><a href="#">High Passes Trek</a></li>
-                      <li class="list-item"><a href="#">Gokyo Lake Trek</a></li>
-                      <li class="list-item"><a href="#">Everest View Trek</a></li>
-                      <li class="list-item"><a href="#">Everest Base Camp Trek and Fly</a></li>
-
-                    </ul>
-
-                  </div>
-                </li>
+                <li class="list-item"><a class="uk-accordion-title"{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}</a></li>
                 @endforeach
               </ul>
             </ul>

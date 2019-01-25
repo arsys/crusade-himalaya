@@ -208,7 +208,7 @@ class GetController extends Controller
 		Mail::send(new Booking($data));
 
 		Session::flash('success', 'Email sent sucessfully!');
-		return route('trip.thankyou', $tour->slug);
+		return redirect()->route('trip.thankyou', $tour->slug);
 
 	}
 	// public function getBookingstep1()

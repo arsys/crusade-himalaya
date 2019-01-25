@@ -99,7 +99,7 @@ Route::name('frontend-')->group(function () {
 });
 // Route::get('/', 'FrontendController@comingSoon');
 Route::get('/', 'FrontendController@getIndex');
-Route::get('/about', 'FrontendController@getAbout');
+Route::get('/who-we-are', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
 Route::get('/product','FrontendController@getProduct');
 Route::get('/category','FrontendController@getCategory');

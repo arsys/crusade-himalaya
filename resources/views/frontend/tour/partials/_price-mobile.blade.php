@@ -58,7 +58,7 @@
 					<td>{{$departure->slot}} space left</td>
 					<td>USD {{$departure->price}}</td>
 					<td>
-						<form action="{{ route('trip.stepOne',$tour->slug) }}">
+						<form action="{{ route('trip.stepOne',$tour->slug) }}" method="POST">
 							@csrf
 							<input type="hidden" name="date" value="{{ $departure->start }}">
 							<button class="uk-button btn">Join</button>

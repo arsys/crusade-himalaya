@@ -18,7 +18,7 @@
 			<div class="uk-width-2-3 attr-details">
 				<div class="uk-flex uk-flex-column uk-width-1-2">
 					<span class="attr-title">Accommodation</span>
-					<span class="attr-meta">5 Star</span>
+					<span class="attr-meta">{{ $tour->accommodation->name }}</span>
 				</div>
 			</div>
 		</div>

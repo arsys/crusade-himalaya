@@ -127,7 +127,7 @@
 					<li>
 						<a href="{{ route('instagram.index') }}">
 							<div class="gui-icon"><i class="fab fa-instagram md"></i></div>
-							<span class="title ">Setting</span>
+							<span class="title ">Instagram</span>
 						</a>
 					</li>
 					<li>

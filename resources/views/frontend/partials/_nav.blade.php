@@ -53,7 +53,7 @@
         </div>
       </li>
       <li class="nav-list"><a href="{{ route('frontend-eventCalender') }}" class="nav-a">Whats on</a></li>
-      <li class="nav-list"><a href="/we-we-are" class="nav-a">Who we are</a></li>
+      <li class="nav-list"><a href="/who-we-are" class="nav-a">Who we are</a></li>
       <li>
         <div class="uk-navbar-item uk-margin-remove-left uk-margin-remove-top">
           <a class="contact-button" href="/contact">Contact</a>

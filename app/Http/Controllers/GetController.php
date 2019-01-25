@@ -154,7 +154,7 @@ class GetController extends Controller
 	}
 	public function stepThree(Request $request)
 	{
-		dd($request->all());
+		
 		$this->validate($request, [
 			'fullname' => 'required',
 			'email' => 'required',
@@ -165,6 +165,7 @@ class GetController extends Controller
 			'passport_no' => 'required',
 			'passport_exp' => 'required'
 		]);
+		dd($request->all());
 	}
 	// public function getBookingstep1()
 	// {

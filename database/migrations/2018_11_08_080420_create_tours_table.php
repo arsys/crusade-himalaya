@@ -19,7 +19,7 @@ class CreateToursTable extends Migration
             $table->string('slug');
             $table->integer('days');
             $table->integer('price');
-            $table->integer('elevation');
+            $table->string('elevation');
             $table->boolean('featured')->default(0);
             $table->boolean('status')->default(0);
             $table->boolean('trash')->default(0);

@@ -118,7 +118,7 @@ Route::get('/slideshow','FrontendController@getSlideshow');
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
 	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
-	Route::get('join/{slug}/setp-1','GetController@stepOne')->name('stepOne'); //shows step 1 form
+	Route::post('join/{slug}/setp-1','GetController@stepOne')->name('stepOne'); //shows step 1 form
 	Route::post('join/{slug}/step-2','GetController@stepTwo')->name('stepTwo'); //shows step 2 form
 	Route::post('join/step-3', 'GetController@stepThree')->name('stepThree');
 });

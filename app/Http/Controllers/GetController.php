@@ -183,10 +183,10 @@ class GetController extends Controller
 		$IPdata = json_decode($IPdata);
 		$user_info = "IP: {$IPdata->ip} <br> [ Country: <b>{$IPdata->country_name}</b> | City: {$IPdata->city} ]";
 		$tour = Tour::where('id','=', $request->tour_id)->first();
-
+		$sub = "!! New Booking !! for ". $tour->title." ". $tour->days." Days";
 		$data = array(
 			'name' => $request->fullName,
-			'tour_name' => $tour->title .' '.$tour->days.' Day(s)',
+			'subject' => $sub,
 			'email' => $request->email,
 			'gender' => $request->gender,
 			'dob' => $request->dob,

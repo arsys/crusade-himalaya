@@ -28,7 +28,7 @@ class Booking extends Mailable implements ShouldQueue
     public function build()
     {
         $this->from($this->data['email']);
-        $this->subject('!!New Booking for!! '.$this->data['subject']);
+        $this->subject($this->data['subject']);
         $this->to('mail@crusadehimalaya.com');
         $this->replyTo($this->data['email']);
         return $this->markdown('emails.Booking');

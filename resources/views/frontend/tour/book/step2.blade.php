@@ -74,7 +74,7 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Passport No.</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="passport" type="text" name="passport_no" >
+                <input class="uk-input"  type="text" name="passport_no" >
             </div>
         </div>
         <div class="uk-margin">

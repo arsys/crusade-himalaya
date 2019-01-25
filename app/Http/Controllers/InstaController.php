@@ -82,6 +82,6 @@ class InstaController extends Controller
     {
         $insta = Insta::findOrFail($id);
         $insta->delete();
-        return response()->json($media);
+        return response()->json($insta);
     }
 }

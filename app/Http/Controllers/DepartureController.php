@@ -42,10 +42,10 @@ class DepartureController extends Controller
     public function store(Request $request)
     {
         try {
-            $start = $request->start;
-            $end = $request->end;
-            if (strtotime($start) < strtotime($end)) {
+            if (strtotime($request->start) < strtotime($request->end)) {
                 foreach ($request->tours as $id) {
+                    $start = $request->start;
+                    $end = $request->end;
                     $tour = Tour::find($id);
                     date_default_timezone_set('Asia/Kathmandu');
                     while (strtotime($start) <= strtotime($end)) {

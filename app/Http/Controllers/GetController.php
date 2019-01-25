@@ -211,8 +211,8 @@ class GetController extends Controller
 		return redirect()->route('trip.thankyou', $tour->slug);
 
 	}
-	// public function getBookingstep1()
-	// {
-	// 	return view('frontend.bookingstep1');
-	// }
+	public function getThankyou()
+	{
+		return view('frontend.tour.book.step3');
+	}
 }

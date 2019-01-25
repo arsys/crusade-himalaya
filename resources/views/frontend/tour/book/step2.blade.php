@@ -34,6 +34,7 @@
        <h3 class="uk-padding-small uk-text-center"><span>Lead Traveller Details</span></h3> 
        <form class="uk-form-stacked" action="{{ route('trip.stepThree', $tour->slug) }}" method="POST">
         @csrf
+        <input type="hidden" value="{{ $data['travellers'] }}" name="travellers">
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Full Name</label>
             <div class="uk-form-controls">
@@ -49,8 +50,8 @@
         <div class="uk-margin">
             <label class="uk-form-label">Gender</label>
             <div class="uk-form-controls">
-                <label><input class="uk-radio" type="radio" name="radio1"><span class="uk-margin-left uk-margin-right">Male</span> </label>
-                <label><input class="uk-radio" type="radio" name="radio1"><span class="uk-margin-left uk-margin-right">Female</span> </label>
+                <label><input class="uk-radio" type="radio" name="gender" value="Male"><span class="uk-margin-left uk-margin-right">Male</span> </label>
+                <label><input class="uk-radio" type="radio" name="gender" value="Female"><span class="uk-margin-left uk-margin-right">Female</span> </label>
             </div>
         </div>
         <div class="uk-margin">

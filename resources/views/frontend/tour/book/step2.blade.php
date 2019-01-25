@@ -84,12 +84,23 @@
                     <label><input class="uk-radio" type="radio" name="insurance" value="0"><span class="uk-margin-left uk-margin-right">No</span> </label>
                 </div>
             </div>
-            <div class="uk-margin" id="policy-wrapper">
+            <div class="uk-margin" id="policy-wrapper" style="display: none;">
                 <label class="uk-form-label" for="form-stacked-text">Policy no.</label>
                 <div class="uk-form-controls">
                     <input class="uk-input" id="form-stacked-text" type="text" name="insurance_policy" >
                 </div>
             </div>
+            @if($data['travellers'] > 1)
+            <h3 class="uk-padding-small uk-text-center"><span> Other Traveller Details</span></h3> 
+            @for($i=1; $i<=$data['travellers']; $i++)
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Traveller {{$i}}</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="form-stacked-text" type="text" name="otherName{{ $i}}" placeholder="Full Name">
+                </div>
+            </div>
+            @endfor
+            @endif
             <div class="uk-margin">
                 <button class="uk-button uk-button">Submit</button>
             </div>
@@ -157,10 +168,10 @@
     $('input[type=radio]').click(function(){
         var value = $(this).val();
         if (value == '1') {
-            $("#policy-wrapper").show();
+            $("#policy-wrapper").fadeIn();
         }
         else {
-            $("#policy-wrapper").hide();
+            $("#policy-wrapper").fadeOut();
             $("#policy-wrapper").trigger("reset");
         }
     });

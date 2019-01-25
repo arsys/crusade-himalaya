@@ -157,15 +157,16 @@ class GetController extends Controller
 		dd($request->all());
 		$this->validate($request, [
 			'fullname' => 'required',
-			'email' => 'required',
+			'gender' => 'required',
 			'dob' => 'required',
+			'email' => 'required',
+			'mobile' => 'required',
 			'address' => 'required',
 			'country' => 'required',
-			'mobile' => 'required',
 			'passport_no' => 'required',
 			'passport_exp' => 'required'
 		]);
-		
+
 	}
 	// public function getBookingstep1()
 	// {

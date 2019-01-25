@@ -77,7 +77,7 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-select">Country</label>
             <div class="uk-form-controls">
-                <select class="uk-select" id="form-stacked-select" required>
+                <select class="uk-select" id="form-stacked-select" name="country" required>
                     <option></option>
                     @foreach($countries::all() as $country)
                     <option value="{{$country}}">{{$country}}</option>

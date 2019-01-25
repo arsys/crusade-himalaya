@@ -29,10 +29,11 @@
 <!-- booking step end -->
 
 <div class="uk-container ">
-   <h3 class="uk-padding-small uk-text-center"><span>Lead Traveller Details</span></h3> 
    <div class="" uk-grid>
     <div class="uk-width-3-5@m">           
-        <form class="uk-form-stacked" action="">
+     <h3 class="uk-padding-small uk-text-center"><span>Lead Traveller Details</span></h3> 
+        <form class="uk-form-stacked" action="" method="POST">
+            @csrf
             <div class="uk-margin">
                 <label class="uk-form-label" for="form-stacked-text">Full Name</label>
                 <div class="uk-form-controls">
@@ -131,7 +132,7 @@
 
         <div class="uk-card uk-card-default uk-margin-top uk-margin-bottom">
             <div class="uk-card-header">
-                <h3 class="uk-card-title uk-margin-remove-bottom">Sales</h3>
+                <h3 class="uk-card-title uk-margin-remove-bottom">Have any questions ?</h3>
             </div>
 
             <div class="uk-card-body booking-contact-info">

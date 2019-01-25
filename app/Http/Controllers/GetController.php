@@ -154,7 +154,6 @@ class GetController extends Controller
 	}
 	public function stepThree(Request $request)
 	{
-		dd($request->all());
 		$this->validate($request, [
 			'fullname' => 'required',
 			'gender' => 'required',
@@ -166,6 +165,17 @@ class GetController extends Controller
 			'passport_no' => 'required',
 			'passport_exp' => 'required'
 		]);
+		if ($request->insurance) {
+			$this->validate($request, [
+				'insurance_policy' => 'required'
+			]);
+		}
+		if ($request->travellers > 1) {
+			$this->validate($request, [
+				'otherName.*' => 'required'
+			]);
+		}
+		dd($request->all());
 
 	}
 	// public function getBookingstep1()

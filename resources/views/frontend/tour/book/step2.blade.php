@@ -38,7 +38,7 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Full Name</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" type="text" name="fullname" placeholder="Enter Your Full Name.">
+                <input class="uk-input" id="form-stacked-text" type="text" name="fullname" placeholder="Enter Your Full Name." required>
             </div>
         </div>
 
@@ -52,19 +52,19 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Date Of Birth</label>
             <div class="uk-form-controls">
-                <input class="uk-input" type="text" id="dob" name="dob">
+                <input class="uk-input" type="text" id="dob" name="dob" required>
             </div>
         </div>
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Email</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" type="email" name="email" placeholder="Enter Your Email Address">
+                <input class="uk-input" id="form-stacked-text" type="email" name="email" placeholder="Enter Your Email Address" required>
             </div>
         </div>
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Mobile no.</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" type="text" name="mobile" placeholder="Mobile no.">
+                <input class="uk-input" id="form-stacked-text" type="text" name="mobile" placeholder="Mobile no." required>
             </div>
         </div>
         <div class="uk-margin">
@@ -77,7 +77,7 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-select">Country</label>
             <div class="uk-form-controls">
-                <select class="uk-select" id="form-stacked-select">
+                <select class="uk-select" id="form-stacked-select" required>
                     <option></option>
                     @foreach($countries::all() as $country)
                     <option value="{{$country}}">{{$country}}</option>
@@ -88,21 +88,21 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Passport No.</label>
             <div class="uk-form-controls">
-                <input class="uk-input"  type="text" name="passport_no" >
+                <input class="uk-input"  type="text" name="passport_no" required >
             </div>
         </div>
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Passport Expiry</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="passport" type="text" name="passport_exp" >
+                <input class="uk-input" id="passport" type="text" name="passport_exp" required >
             </div>
         </div>
 
         <div class="uk-margin">
             <label class="uk-form-label">Do you have Insurance?</label>
             <div class="uk-form-controls uk-margin">
-                <label><input class="uk-radio" type="radio" name="insurance" value="1" checked ><span class="uk-margin-left uk-margin-right">Yes</span> </label>
-                <label><input class="uk-radio" type="radio" name="insurance" value="0"><span class="uk-margin-left uk-margin-right">No</span> </label>
+                <label><input class="uk-radio" type="radio" name="insurance" value="1" ><span class="uk-margin-left uk-margin-right">Yes</span> </label>
+                <label><input class="uk-radio" type="radio" name="insurance" value="0" checked><span class="uk-margin-left uk-margin-right">No</span> </label>
             </div>
         </div>
         <div class="uk-margin" id="policy-wrapper" style="display: none;">

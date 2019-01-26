@@ -57,7 +57,13 @@
 					<td>{{ date("jS M, Y", strtotime($departure->end))}}</td>
 					<td>{{$departure->slot}} space left</td>
 					<td>USD {{$departure->price}}</td>
-					<td><a class="uk-button btn" href="{{route('trip.stepOne',[$tour->slug,$departure->start])}}">Book Now</a></td>
+					<td>
+						<form action="{{ route('trip.stepOne',$tour->slug) }}" method="POST">
+							@csrf
+							<input type="hidden" name="date" value="{{ $departure->start }}">
+							<button class="uk-button btn">Join</button>
+						</form>
+					</td>
 				</tr>
 				@endforeach
 			</tbody>

@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class Contact extends Mailable implements ShouldQueue
+class Booking extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
     public $data;
@@ -20,7 +20,6 @@ class Contact extends Mailable implements ShouldQueue
     {
         $this->data = $data;
     }
-
     /**
      * Build the message.
      *
@@ -32,6 +31,6 @@ class Contact extends Mailable implements ShouldQueue
         $this->subject($this->data['subject']);
         $this->to('mail@crusadehimalaya.com');
         $this->replyTo($this->data['email']);
-        return $this->markdown('emails.contact');
+        return $this->markdown('emails.Booking');
     }
 }

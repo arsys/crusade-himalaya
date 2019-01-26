@@ -34,20 +34,20 @@
     <div class="uk-margin">
       <div class="uk-form-controls">
         <label class="uk-form-label">Trip name</label>
-        <input type="hidden" name="tripName" value="{{$tour->slug}}">
+        <input type="hidden" name="tour_id" value="{{$tour->id}}">
         <input class="uk-input" type="text" placeholder="{{$tour->title}}" disabled>
       </div>
     </div>
     <div class="uk-grid-small" uk-grid>
       <div class="uk-width-1-2@s">
         <label class="uk-form-label">Start Date</label>
-        <input class="uk-input" type="text" name="date" placeholder="{!! $_GET['date'] !!}" value="{!! $_GET['date'] !!}"  disabled>
+        <input class="uk-input" type="text" name="date"  value="{{ $data['date'] }}"  disabled>
       </div>
       <div class="uk-width-1-2@s">
         <div class="uk-margin">
           <div class="uk-form-controls">
             <label class="uk-form-label">No of People*</label>
-            <select class="uk-select" id="form-stacked-select" name="no_of_persons" required>
+            <select class="uk-select" id="form-stacked-select" name="travellers" required>
               @for($i=1; $i<=10; $i++)
               <option value="{{$i}}">{{$i}}</option>
               @endfor
@@ -64,17 +64,3 @@
 
 
 @stop
-{{-- @section('styles')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
-@stop
-@section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script>
-  $("#start-date").flatpickr({
-    altInput: true,
-    altFormat: "F j, Y",
-    dateFormat: "Y-m-d",
-  });
-</script>
-@stop --}}

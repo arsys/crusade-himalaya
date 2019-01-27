@@ -4,7 +4,7 @@
 	    <div class="uk-width-1-4">
 	       <div class="uk-card uk-card-default uk-box-shadow-medium uk-visible@l" >	
 				<div class="uk-panel" id="about-content-wrapper"  uk-sticky="offset:80" >
-					<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 130" class="uk-nav uk-nav-default uk-box-medium-shadow uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-column text-color about-ul" uk-nav>
+					<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 130" class="uk-box-shadow-medium uk-nav uk-nav-default uk-box-medium-shadow uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-column text-color about-ul" uk-nav>
 							<li class="uk-active  about-li"><a href="#justify">Why Nepal</a></li>	     
 					        <li  class=" about-li"><a href="#item1">Why Crusade Himalaya</a></li>
 					        <li class=" about-li"><a href="#item2">How we work</a></li>

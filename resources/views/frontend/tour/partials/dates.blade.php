@@ -1,13 +1,19 @@
 @forelse($departures as $departure)
+<tr class="table-row">
+    <td class="text-color">{{ date("jS M, Y", strtotime($departure->start))}}</td>
+    <td class="text-color">{{ date("jS M, Y", strtotime($departure->end))}}</td>
+    <td class="text-color">{{$departure->slot}} space left</td>
+    <td class="text-color">USD {{$departure->price}}</td>
+    <td class="text-color">
+        <form action="{{ route('trip.stepOne',$tour->slug) }}" method="POST">
+            @csrf
+            <input type="hidden" name="date" value="{{ $departure->start }}">
+            <button class="uk-button btn">Join</button>
+        </form>
+    </td>
+</tr>
+@empty
 <tr>
-    <td>{{ date("jS M, Y", strtotime($departure->start))}}</td>
-    <td>{{ date("jS M, Y", strtotime($departure->end))}}</td>
-    <td>{{$departure->slot}} space left</td>
-    <td>USD {{$departure->price}}</td>
-    <td><a class="uk-button btn" href="{{route('trip.stepOne',$tour->slug)}}">Book Now</a></td>
- </tr>
- @empty
- <tr>
     <td colspan="5">
         <div class="uk-alert-danger" uk-alert>
             <a class="uk-alert-close" uk-close></a>

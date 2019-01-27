@@ -39,7 +39,7 @@
 	</div>
 	<!--table start-->
 	<div class="uk-overflow-auto">					
-		<table class="uk-table uk-table-hover uk-table-divider">
+		<table class="uk-table uk-table-hover uk-table-divider table ">
 			<thead>
 				<tr class="table-wrapper">
 					<th>Start Date</th>
@@ -54,9 +54,9 @@
 				<span uk-spinner="ratio: 3" class="ajaxloader"  ></span>
 			</div>
 			
-			<tbody class="ajaxloadmoredeparture">
+			<tbody class="ajaxloadmoredeparture table-wrap">
 				@foreach($departures as $departure)
-				<tr>
+				<tr class="table-row">
 					<td class="text-color">{{ date("jS M, Y", strtotime($departure->start))}}</td>
 					<td class="text-color">{{ date("jS M, Y", strtotime($departure->end))}}</td>
 					<td class="text-color">{{$departure->slot}} space left</td>

@@ -1,6 +1,6 @@
 <div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top" >
 	<div class="" uk-grid>
-		<div class="uk-width-1-4">
+		<div class="uk-width-1-4@m">
 			<div class="attribute-wrapper" uk-grid>
 				<div class="uk-width-auto attr-icons">
 					<i class="fas fa-signal"></i>
@@ -13,7 +13,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="uk-width-3-4">
+		<div class="uk-width-3-4@m">
 			<div class="attribute-wrapper" uk-grid>
 				<div class="uk-width-auto attr-icons">
 					<i class="fas fa-calendar-alt"></i>
@@ -28,7 +28,7 @@
 		</div>
 	</div>
 	<div class="" uk-grid>
-		<div class="uk-width-1-4">
+		<div class="uk-width-1-4@m">
 			<div class="attribute-wrapper" uk-grid>
 				<div class="uk-width-auto attr-icons">
 					<i class="fas fa-mountain"></i>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="uk-width-3-4">
+		<div class="uk-width-3-4@m">
 			<div class="attribute-wrapper" uk-grid>
 				<div class="uk-width-auto attr-icons">
 					<i class="fas fa-mountain"></i>

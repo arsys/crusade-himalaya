@@ -88,7 +88,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	//Member Controller
 	Route::resource('/position', 'MemberController');
 	//Instagram Feeds
-	Route::resource('/instagram', 'InstaController',['only' => ['index', 'delete']]);
+	Route::resource('/instagram', 'InstaController');
 });
 Route::name('frontend-')->group(function () {
 	// Route::get('/','GetController@comingSoon');
@@ -99,7 +99,7 @@ Route::name('frontend-')->group(function () {
 });
 // Route::get('/', 'FrontendController@comingSoon');
 Route::get('/', 'FrontendController@getIndex');
-Route::get('/about', 'FrontendController@getAbout');
+Route::get('/who-we-are', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
 Route::get('/product','FrontendController@getProduct');
 Route::get('/category','FrontendController@getCategory');
@@ -108,18 +108,20 @@ Route::get('/show-insta','GetController@showInsta')->name('show.Insta');
 Route::get('/fetch-insta','GetController@fetchInsta');
 
 
-Route::get('/review','FrontendController@getReview');
-Route::get('/bookingform','FrontendController@getBookingform');
+// Route::get('/review','FrontendController@getReview');
+// Route::get('/bookingform','FrontendController@getBookingform');
 
-Route::get('/bookingstep1','FrontendController@getBookingstep1');
+// Route::get('/bookingstep1','FrontendController@getBookingstep1');
 
 Route::get('/slideshow','FrontendController@getSlideshow');
 
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
 	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
-	Route::get('join/{slug}','GetController@stepOne')->name('stepOne');
-	Route::post('join/{slug}','GetController@stepTwo')->name('stepTwo');
+	Route::post('join/{slug}/setp-1','GetController@stepOne')->name('stepOne'); //shows step 1 form
+	Route::post('join/{slug}/step-2','GetController@stepTwo')->name('stepTwo'); //shows step 2 form
+	Route::post('join/{slug}/step-3', 'GetController@stepThree')->name('stepThree'); //poost step 2 form
+	Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');
@@ -135,5 +137,5 @@ Route::prefix('destination')->group(function () {
 Route::get('/destination','FrontendController@getDestination');
 Route::get('/packages','FrontendController@getPackages');
 Route::get('/preloader', 'FrontendController@getPreloader');
-Route::get('/thankyou','FrontendController@getThankyou');
+
 Route::get('/link-exchange','FrontendController@getLinkexchange');

@@ -5,6 +5,9 @@ use App\Insta;
 use App\Tour;
 use App\Region;
 use App\TourCategory;
+use Session;
+use Mail;
+use App\Mail\Booking;
 use Vinkla\Instagram\Instagram;
 use Illuminate\Http\Request;
 use PDF;
@@ -129,25 +132,87 @@ class GetController extends Controller
 		$pdf = PDF::loadView('frontend.tour.pdf', compact('tour'));
 		return $pdf->download($tour->title.'.pdf');
 	}
-	public function stepOne($slug)
+	public function stepOne(Request $request)
 	{		
-		$tour = Tour::where('slug','=', $slug)->first();		
-		return view('frontend.bookingstep1')->withTour($tour);
+		$data =  array(
+			'date' => $request->date
+		);
+		$tour = Tour::where('slug','=', $request->slug)->first();		
+		return view('frontend.tour.book.step1')
+		->withTour($tour)
+		->withData($data);
 	}
 
 	public function stepTwo(Request $request)
 	{
+		// dd($request->all());
 		$data =  array(
-			'no' => $request->no_of_persons,
+			'travellers' => $request->travellers,
 			'date' => $request->date
 		);
-		$tour = Tour::where('slug','=', $request->slug)->first();
-		return view('frontend.bookingform')
+		$tour = Tour::where('id','=', $request->tour_id)->first();
+		return view('frontend.tour.book.step2')
 		->withTour($tour)
 		->withData($data);
 	}
-	// public function getBookingstep1()
-	// {
-	// 	return view('frontend.bookingstep1');
-	// }
+	public function stepThree(Request $request)
+	{
+		$this->validate($request, [
+			'fullname' => 'required',
+			'gender' => 'required',
+			'dob' => 'required',
+			'email' => 'required',
+			'mobile' => 'required',
+			'address' => 'required',
+			'country' => 'required',
+			'passport_no' => 'required',
+			'passport_exp' => 'required'
+		]);
+		if ($request->insurance) {
+			$this->validate($request, [
+				'insurance_policy' => 'required'
+			]);
+		}
+		if ($request->travellers > 1) {
+			$this->validate($request, [
+				'otherName.*' => 'required'
+			]);
+		}
+		$userIP = $request->ip();
+		$IPdata = file_get_contents("http://api.ipstack.com/{$userIP}?access_key=2f40cb1cb05f40c9439fe91a309910b0");
+		$IPdata = json_decode($IPdata);
+		$user_info = "IP: {$IPdata->ip} <br> [ Country: <b>{$IPdata->country_name}</b> | City: {$IPdata->city} ]";
+		$tour = Tour::where('id','=', $request->tour_id)->first();
+		$sub = "!! New Booking !! for ". $tour->title." ". $tour->days." Days";
+		$data = array(
+			'name' => $request->fullName,
+			'subject' => $sub,
+			'email' => $request->email,
+			'gender' => $request->gender,
+			'dob' => $request->dob,
+			'mobile' => $request->mobile,
+			'address' => $request->address,
+			'country' => $request->country,
+			'passport_no' => $request->passport_no,
+			'passport_exp' => $request->passport_exp,
+			'user_info' => $user_info,
+		);
+		if ($request->insurance) {
+			$data['insurance_policy_no'] = $request->insurance_policy;
+		}
+		if ($request->travellers > 1) {
+			for ($i = 0; $i < $request->travellers; $i++) {
+				$data["otherName" . $i] = $request->otherName[$i];
+			}
+		}
+		Mail::send(new Booking($data));
+
+		Session::flash('success', 'Email sent sucessfully!');
+		return redirect()->route('trip.thankyou', $tour->slug);
+
+	}
+	public function getThankyou()
+	{
+		return view('frontend.tour.book.step3');
+	}
 }

@@ -78,9 +78,10 @@ class InstaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Insta $insta)
+    public function destroy($id)
     {
+        $insta = Insta::findOrFail($id);
         $insta->delete();
-        return response()->json($media);
+        return response()->json($insta);
     }
 }

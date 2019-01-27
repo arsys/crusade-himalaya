@@ -5,21 +5,21 @@
 <section class=" booking">
  <div class="uk-container  uk-container-expand uk-padding-large">
    <div class="uk-text-center uk-process-step" uk-grid>
-     <div class="uk-width-1-3 step circle">
+     <div class="uk-width-1-3 step3 circle">
        <div class="circle-text ">
-         <i class="medium  material-icons">Step 1</i>
+         <span class="medium  material-icons"><i class="fas fa-check"></i></span>
        </div>
        <p class="center-align  uk-margin-top">Choose Your Trip</p>
      </div>
-     <div class="uk-width-1-3 step">
+     <div class="uk-width-1-3 step3">
        <div class="circle-text a">
-         <i class="medium material-icons">Step 2</i>
+         <span class="medium material-icons"><i class="fas fa-check"></i></span>
        </div>
        <p class="center-align uk-margin-top ">Request for reservation</p>
      </div>
-     <div class="uk-width-1-3 step  ">
+     <div class="uk-width-1-3 step3  ">
        <div class="circle-text ">
-         <i class="medium material-icons">Step 3</i>
+         <span class="medium material-icons"><i class="fas fa-check"></i></span>
        </div>
        <p class="center-align  uk-margin-top">Successfully</p>
      </div>

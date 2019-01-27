@@ -8,13 +8,14 @@
      <div class="uk-text-center uk-process-step" uk-grid>
        <div class="uk-width-1-3 step circle">
          <div class="circle-text ">
-           <span class="medium  material-icons">Step 1</span>
+           <span class="medium  material-icons"><i class="fas fa-check"></i></span>
        </div>
        <p class="center-align  uk-margin-top">Choose Your Trip</p>
    </div>
    <div class="uk-width-1-3 step active">
      <div class="circle-text a">
        <span class="medium material-icons">Step 2</span>
+       
    </div>
    <p class="center-align uk-margin-top ">Request for reservation</p>
 </div>
@@ -110,7 +111,7 @@
         <div class="uk-margin" id="policy-wrapper" style="display: none;">
             <label class="uk-form-label" for="form-stacked-text">Policy no.</label>
             <div class="uk-form-controls">
-                <input class="uk-input" id="form-stacked-text" type="text" name="insurance_policy" required>
+                <input class="uk-input" id="form-stacked-text" type="text" name="insurance_policy">
             </div>
         </div>
         @if($data['travellers'] > 1)
@@ -176,6 +177,7 @@
 <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
 @stop
 @section('scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
     $("#dob").flatpickr({

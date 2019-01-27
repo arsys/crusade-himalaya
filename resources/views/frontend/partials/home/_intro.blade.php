@@ -58,7 +58,7 @@
                 Get in touch with us, and plan your perfect holiday &ndash; an unforgettable holiday filled with
                 adventure, excitement, and memories.</p>
          
-                <a href="/about" class="button-link">Explore <span uk-icon="arrow-right"></span></a>
+                <a href="/who-we-are" class="button-link">Explore <span uk-icon="arrow-right"></span></a>
             </div>
     </div>
 </div>

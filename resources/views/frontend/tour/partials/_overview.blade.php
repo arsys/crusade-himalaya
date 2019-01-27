@@ -3,7 +3,7 @@
 		<div class="uk-width-1-4@m">
 			<div class="attribute-wrapper" uk-grid>
 				<div class="uk-width-auto attr-icons">
-					<i class="fas fa-signal"></i>
+					<i class="fas fa-users"></i>
 				</div>
 				<div class="uk-width-expand attr-details">
 					<div class="uk-flex uk-flex-column">
@@ -16,7 +16,7 @@
 		<div class="uk-width-3-4@m">
 			<div class="attribute-wrapper" uk-grid>
 				<div class="uk-width-auto attr-icons">
-					<i class="fas fa-calendar-alt"></i>
+					<i class="fas fa-bed"></i>
 				</div>
 				<div class="uk-width-expand attr-details">
 					<div class="uk-flex uk-flex-column ">
@@ -31,7 +31,7 @@
 		<div class="uk-width-1-4@m">
 			<div class="attribute-wrapper" uk-grid>
 				<div class="uk-width-auto attr-icons">
-					<i class="fas fa-mountain"></i>
+					<i class="fas fa-signal"></i>
 				</div>
 				<div class="uk-width-expand attr-details">
 					<div class="uk-flex uk-flex-column ">

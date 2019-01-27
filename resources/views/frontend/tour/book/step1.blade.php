@@ -1,4 +1,5 @@
 @extends('layouts.frontend')
+@section('robot')noindex, nofollow @endsection
 @section('content')
 <!-- booking step start -->
 <div class="uk-container uk-container-expand  uk-padding-large booking-step">

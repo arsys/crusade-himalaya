@@ -1,5 +1,6 @@
 @inject('countries','App\Http\Utilities\Country')
 @extends('layouts.frontend')
+@section('robot')noindex, nofollow @endsection
 @section('content')
 <!-- booking step start -->
 <section class=" booking">

@@ -8,7 +8,7 @@
                     @foreach($odds as $odd)
                     @if($loop->iteration % 2 == 0)
                     <div class="destination  uk-padding-xsmall">
-                        <a href="{{ route('fetchByRegion',$odd->slug) }}"><img src="{{ asset($odd->thumb) }}" alt="" >
+                        <a href="{{ route('fetchByRegion',$odd->slug) }}"><img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}" >
                         <div class="dest-topic ">
                             <div class="dest-title">{{ $odd->name }}</div>
                         </div>
@@ -20,7 +20,7 @@
                         @foreach($odds as $odd)
                         @if($loop->iteration % 2 != 0)
                         <div class="{{$loop->first ? 'uk-first-column': '' }}   destination uk-padding-xsmall  ">
-                            <a href="{{ route('fetchByRegion',$odd->slug) }}"><img src="{{ asset($odd->thumb) }}" alt="">
+                            <a href="{{ route('fetchByRegion',$odd->slug) }}"><img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
                                 <div class="dest-topic ">
                                     <div class="dest-title">{{ $odd->name }}</div>
                                 </div>
@@ -37,7 +37,7 @@
                         @foreach($evens as $even)
                         @if($loop->iteration % 2 != 0)
                         <div class="{{ $loop->first ? 'uk-first-column' : '' }} uk-panel  destination  uk-padding-xsmall">
-                            <a href="{{ route('fetchByRegion',$even->slug) }}"><img src="{{ asset($even->thumb) }}" alt="">
+                            <a href="{{ route('fetchByRegion',$even->slug) }}"><img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
                                 <div class="dest-topic ">            
                                         <div class="dest-title">{{ $even->name }}</div>
                                 </div>
@@ -49,7 +49,7 @@
                     @foreach($evens as $even)
                     @if($loop->iteration % 2 == 0)
                     <div class="destination uk-padding-xsmall">
-                        <a href="{{ route('fetchByRegion',$even->slug) }}"><img src="{{ asset($even->thumb) }}" alt="">
+                        <a href="{{ route('fetchByRegion',$even->slug) }}"><img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
                             <div class="dest-topic">
                                     <div class="dest-title">{{ $even->name }}</div> 
                             </div>

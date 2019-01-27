@@ -74,13 +74,14 @@
     <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide sidebar">
       <ul class="uk-nav uk-nav-default sidebar-list">
         <li class="uk-active sidebar-listing"><a href="/">Home</a></li>              
-        <li><ul uk-accordion>
-          <li><a class="uk-accordion-title" href="#">What  We Do</a>
+        <li>
+          <ul uk-accordion>
+          <li><a class="uk-accordion-title uk-margin-small-top" href="#">What  We Do</a>
             <div class="uk-accordion-content">
               <ul class="uk-nav uk-navbar-dropdown-nav">
-                <ul uk-accordion>
+                <ul   uk-accordion>
                   @foreach($dos as $do)
-                  <li class="list-item"><a class="uk-margin-left" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a></li>
+                  <li class="list-item"><a class="uk-margin-left"{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a></li>
                   @endforeach
                 </ul>
               </ul>
@@ -88,11 +89,12 @@
           </li>
         </ul>          
       </li>
-      <li><ul uk-accordion>
-        <li><a class="uk-accordion-title" href="#">Where We Go</a>
+      <li>
+        <ul class="uk-margin-small-top" uk-accordion>
+        <li><a class="uk-accordion-title " href="#">Where We Go</a>
           <div class="uk-accordion-content">
             <ul class="uk-nav uk-navbar-dropdown-nav">
-              <ul uk-accordion>
+              <ul  uk-accordion>
                 @foreach($wheres as $where)
                 <li class="list-item"><a class="uk-margin-left"{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}</a></li>
                 @endforeach
@@ -102,8 +104,8 @@
         </li>
       </li></ul>          
 
-      <li class="sidebar-listing"><a href="/who-we-are">Who we are</a></li>
-      <li class="sidebar-listing"><a href="/contact">Contact</a></li>
+      <li class="sidebar-listing uk-margin-small-top"><a href="/who-we-are">Who we are</a></li>
+      <li class="sidebar-listing "><a href="/contact">Contact</a></li>
     </ul>
   </div>
 </div>

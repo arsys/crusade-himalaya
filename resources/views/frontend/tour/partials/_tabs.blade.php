@@ -6,7 +6,7 @@
 		<div class="uk-flex uk-flex-column sticky-price" id="product-price">
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom text-color">		
 				<span class="top"> 
-					{{ $tour->days }} Days
+					{{ $tour->days }} Day(s)
 				</span>
 				<span class="middle uk-flex uk-flex-column ">
 					<span class="middle-1">From USD</span>

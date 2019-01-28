@@ -66,6 +66,7 @@
         background-color: $white;
         .about-li{
             padding: 20px 40px;
+            text-transform: capitalize;
             a{
               font-weight:bold;
             }
@@ -77,5 +78,11 @@
         }
     }
 }
-
+.over-wrapper{
+  .over{
+    span{
+      text-transform: capitalize;
+    }
+  }
+}
 

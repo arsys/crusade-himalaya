@@ -27,7 +27,11 @@ Route::prefix('admin/dashboard')->group(function() {
 	Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
 	Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 });
-
+Route::prefix('manage')->middleware('role:superadministrator|administrator|user')->group(function () {
+  Route::resource('/users', 'UsersController');
+  Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
+  Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
+});
 Route::prefix('manage')->middleware('role:superadministrator|administrator|user')->group(function () {
 	Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 

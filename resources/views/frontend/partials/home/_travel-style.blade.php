@@ -5,6 +5,7 @@
      @if($categories->count())
     <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-5@m">
         @foreach($categories as $category)
+        @if($category->tours->count() > 0)
         <li>
             <div class=" travel-wrapper uk-inline-clip   uk-transition-toggle" tabindex="0">
                 <a href="{{ route('fetchByCategory',$category->slug) }}">
@@ -29,6 +30,7 @@
                 </div>
             </div>
         </li>
+        @endif
         @endforeach
     </ul>
             @endif

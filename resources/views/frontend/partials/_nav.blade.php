@@ -16,12 +16,14 @@
             <div class="uk-position-relative uk-visible-toggle" uk-slider>
               <ul class=" uk-slider-items uk-child-width-1-4" uk-grid uk-margin>
                @foreach($dos as $do)
+               @if($do->tours->count() > 0)
                <li class="nav-list">
                 <h5 class="nav-heading"><a class="nav-link" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }} </a></h5>
                 <div class="navimg-wrapper">
                   <a class="navimg-inner" href="{{ route('fetchByCategory',$do->slug) }}"><img src="{{ asset($do->nav) }}" alt="{{ $do->name }}"></a>
                 </div>
               </li>
+              @endif
               @endforeach
             </ul>
             <a class="uk-position-center-left uk-position-small uk-slidenav-large " href="#" uk-slidenav-previous uk-slider-item="previous"></a>
@@ -76,38 +78,40 @@
         <li class="uk-active sidebar-listing"><a href="/">Home</a></li>              
         <li>
           <ul uk-accordion>
-          <li><a class="uk-accordion-title uk-margin-small-top" href="#">What  We Do</a>
-            <div class="uk-accordion-content">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <ul   uk-accordion>
-                  @foreach($dos as $do)
-                  <li class="list-item"><a class="uk-margin-left"{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a></li>
-                  @endforeach
+            <li><a class="uk-accordion-title uk-margin-small-top" href="#">What  We Do</a>
+              <div class="uk-accordion-content">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <ul   uk-accordion>
+                    @foreach($dos as $do)
+                    @if($do->tours->count() > 0)
+                    <li class="list-item"><a class="uk-margin-left" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}"></a></li>
+                    @endif
+                    @endforeach
+                  </ul>
                 </ul>
-              </ul>
-            </div>
-          </li>
-        </ul>          
-      </li>
-      <li>
-        <ul class="uk-margin-small-top" uk-accordion>
-        <li><a class="uk-accordion-title " href="#">Where We Go</a>
-          <div class="uk-accordion-content">
-            <ul class="uk-nav uk-navbar-dropdown-nav">
-              <ul  uk-accordion>
-                @foreach($wheres as $where)
-                <li class="list-item"><a class="uk-margin-left"{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}</a></li>
-                @endforeach
-              </ul>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>          
         </li>
-      </li></ul>          
+        <li>
+          <ul class="uk-margin-small-top" uk-accordion>
+            <li><a class="uk-accordion-title " href="#">Where We Go</a>
+              <div class="uk-accordion-content">
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                  <ul  uk-accordion>
+                    @foreach($wheres as $where)
+                    <li class="list-item"><a class="uk-margin-left" href=" {{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}"></a></li>
+                    @endforeach
+                  </ul>
+                </ul>
+              </div>
+            </li>
+          </li></ul>          
 
-      <li class="sidebar-listing uk-margin-small-top"><a href="/who-we-are">Who we are</a></li>
-      <li class="sidebar-listing "><a href="/contact">Contact</a></li>
-    </ul>
+          <li class="sidebar-listing uk-margin-small-top"><a href="/who-we-are">Who we are</a></li>
+          <li class="sidebar-listing "><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-<!-- off canvas end -->
+  <!-- off canvas end -->

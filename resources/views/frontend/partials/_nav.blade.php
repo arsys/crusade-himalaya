@@ -81,7 +81,8 @@
               <ul class="uk-nav uk-navbar-dropdown-nav">
                 <ul   uk-accordion>
                   @foreach($dos as $do)
-                  <li class="list-item"><a class="uk-margin-left"{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a></li>
+
+                  <li class="list-item"><a class="uk-margin-left" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}"></a></li>
                   @endforeach
                 </ul>
               </ul>
@@ -96,7 +97,7 @@
             <ul class="uk-nav uk-navbar-dropdown-nav">
               <ul  uk-accordion>
                 @foreach($wheres as $where)
-                <li class="list-item"><a class="uk-margin-left"{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}</a></li>
+                <li class="list-item"><a class="uk-margin-left" href=" {{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}"></a></li>
                 @endforeach
               </ul>
             </ul>

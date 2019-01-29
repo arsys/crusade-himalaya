@@ -165,9 +165,54 @@
 }
 //home intro end
 //carousel heading start
+.carousel-heading{
+display:block;
+animation:moveInLeft 1s ease-out;
+}
+.carousel-para{
+  display:block;
+animation:moveInRight 1s ease-out;
+}
 @media screen and (max-width: 812px){
   .carousel-heading{
    font-size:14px;
+  }
+}
+@media (min-width: 320px) and (max-width: 812px){
+  .carousel-para{
+   font-size:24px;
+  }
+}
+@keyframes moveInLeft{
+  0%{
+    opacity:0;
+    transform:translate(-100px);
+
+  }
+  
+  80%{
+    transform: translate(10px);
+
+  }
+  100%{
+    opacity: 1;
+    transform:translate(0);
+
+  }
+}
+@keyframes moveInRight{
+  0%{
+    opacity:0;
+    transform:translate(100px);
+  }
+  80%{
+    transform: translate(-10px);
+
+  }
+  100%{
+    opacity: 1;
+    transform:translate(0);
+
   }
 }
 //carousel heading end

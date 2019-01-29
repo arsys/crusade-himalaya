@@ -1,7 +1,7 @@
 <section class="uk-section uk-section-xsmall uk-section-default ">
     <div class="uk-margin-medium-top uk-margin-medium-bottom ">
         <div class="uk-container">
-            <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>DESTINATION</span></h2>
+            <h2 class="uk-h2  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>DESTINATION</span></h2>
             <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span>Ready to fall for nepalese charm ? start here </span></p>
             <div class="uk-grid-collapse uk-child-width-1-2 uk-child-height-1-2  uk-height-match uk-grid" uk-grid>
                 <div class="uk-first-column ">

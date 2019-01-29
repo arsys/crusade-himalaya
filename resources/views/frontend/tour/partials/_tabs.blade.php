@@ -48,7 +48,7 @@
 							</div>
 							<div>
 								<a class="uk-link-text uk-link-reset" href="{{ route('trip.download',$tour->slug) }}">
-									<span>Download Itinary</span>
+									<span>Download Itinerary</span>
 								</a>
 							</div>
 						</div>

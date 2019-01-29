@@ -1,5 +1,5 @@
 <div class="uk-section uk-section-xsmall uk-section-default uk-margin-medium-top uk-margin-medium-bottom">
-    <h2 class="uk-h1  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Travel Style</span></h2>
+    <h2 class="uk-h2  uk-text-center uk-margin-remove-bottom home-title uk-margin-large-bottom"><span>Travel Style</span></h2>
     <p class="uk-text-center uk-margin-remove-top home-heading-secondary uk-margin-large-bottom  " id="home-sub-title"><span> Don't Miss the best things, keep your eyes open</span></p>
     <div class="uk-position-relative uk-visible-toggle uk-light" uk-slider>
      @if($categories->count())

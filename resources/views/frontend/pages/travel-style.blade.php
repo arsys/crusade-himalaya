@@ -1,4 +1,8 @@
-
+@extends('layouts.frontend')
+@section('mtitle'){!! $category->name !!}@stop
+@section('title'){!! $category->name !!}
+@stop
+@section('description'){!! $category->description !!}@stop
 @extends('layouts.frontend')
 @section('content')
 <section class="uk-container-expand about" uk-grid>

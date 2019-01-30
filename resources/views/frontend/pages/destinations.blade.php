@@ -1,4 +1,3 @@
-@extends('layouts.frontend')
 @section('mtitle'){!! $region->name !!}@stop
 @section('title'){!! $region->name !!}
 @stop

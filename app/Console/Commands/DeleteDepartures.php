@@ -48,10 +48,11 @@ class DeleteDepartures extends Command
                 if ($d->count() > 0) {
                     DB::table('departures')
                     ->where('tour_id', '=', $tour->id)
-                    ->whereDate('start', '=', $date)
+                    ->whereDate('start', '<', $date)
                     ->delete();
                 }
             }
         }
+        echo "Done";
     }
 }

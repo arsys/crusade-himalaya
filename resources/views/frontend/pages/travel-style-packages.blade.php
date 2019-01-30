@@ -1,4 +1,3 @@
-@extends('layouts.frontend')
 @section('mtitle'){!! $category->name !!} in {!! $region->name !!}@stop
 @section('title'){!! $category->name !!} in {!! $region->name !!}@stop
 @section('description'){!! $category->description !!}@stop

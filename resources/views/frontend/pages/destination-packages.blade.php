@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
-@section('mtitle'){!! $category->name !!}{!! $region->name !!}@stop
-@section('title'){!! $category->name !!}|{!! $region->name !!}@stop
+@section('mtitle'){!! $category->name !!} | {!! $region->name !!}@stop
+@section('title'){!! $category->name !!} | {!! $region->name !!}@stop
 @section('description'){!! $category->description !!}@stop
 @extends('layouts.frontend')
 @section('content')

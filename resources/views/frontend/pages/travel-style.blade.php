@@ -1,4 +1,3 @@
-@extends('layouts.frontend')
 @section('mtitle')Travel Style | {!! $category->name !!}@stop
 @section('title')Travel Style | {!! $category->name !!}
 @stop

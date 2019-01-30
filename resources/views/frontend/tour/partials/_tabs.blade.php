@@ -47,7 +47,7 @@
 								<i class="fas fa-tasks"></i>
 							</div>
 							<div>
-								<a class="uk-link-text uk-link-reset" href="{{ route('trip.download',$tour->slug) }}">
+								<a class="uk-link-text uk-link-reset" href="{{ route('trip.download',$tour->slug) }}" rel="nofollow">
 									<span>Download Itinerary</span>
 								</a>
 							</div>

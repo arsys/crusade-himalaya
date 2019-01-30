@@ -168,19 +168,21 @@
 .carousel-heading{
 display:block;
 animation:moveInLeft 1s ease-out;
+animation-delay: 1s;
 }
 .carousel-para{
   display:block;
 animation:moveInRight 1s ease-out;
+animation-delay: 1s;
 }
-@media screen and (max-width: 812px){
+@media (min-width: 320px) and (max-width: 812px){
   .carousel-heading{
-   font-size:14px;
+   font-size:24px;
   }
 }
 @media (min-width: 320px) and (max-width: 812px){
   .carousel-para{
-   font-size:24px;
+   font-size:14px;
   }
 }
 @keyframes moveInLeft{
@@ -259,3 +261,4 @@ animation:moveInRight 1s ease-out;
   }
 }
 //product-banner end
+

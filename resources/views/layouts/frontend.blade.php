@@ -42,6 +42,8 @@
   <meta name="msapplication-TileImage" content="{{ asset('assets/img/ms-icon-144x144.png') }}">
   <meta name="theme-color" content="#ffffff"> {{-- favicon end --}}
   <!-- Update your html tag to include the itemscope and itemtype attributes. -->
+  <meta name="yandex-verification" content="dc1e4dda4c1cdf73"/>
+  <meta name="msvalidate.01" content="2CFAF954F4C05941F02B451A6BD7F3A7"/>
   <html itemscope itemtype="http://schema.org/Product">
 
   <!-- Place this data between the <head> tags of your website -->

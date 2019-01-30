@@ -2,14 +2,14 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131764624-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131764624-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'UA-131764624-1');
+    gtag('config', 'UA-131764624-1');
   </script>
 
   {{-- meta tag start --}}
@@ -68,7 +68,9 @@
     <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')" />
     <meta property="og:site_name" content="Crusade Himalaya" />
     @yield('og')
-    <meta property="fb:admins" content="2171959919686300" /> {{-- twitter card end --}}
+    <meta property="fb:admins" content="2171959919686300" />
+    <meta name="yandex-verification" content="dc1e4dda4c1cdf73" />
+    {{-- twitter card end --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -76,24 +78,24 @@
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     @yield('styles')
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="loader"></div>
     <div id="content">
-        @include('frontend.partials._nav') {{-- Navigation End --}} @yield('content')
+      @include('frontend.partials._nav') {{-- Navigation End --}} @yield('content')
 
-        <!-- footer start-->
-        @include('frontend.partials._footer')
-        <a href="#" id="scroll" style="display: none;"><span></span></a>
+      <!-- footer start-->
+      @include('frontend.partials._footer')
+      <a href="#" id="scroll" style="display: none;"><span></span></a>
     </div>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 {{--
-    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
-    <script src="{{asset('js/app.js')}}">
-    </script>
-    @yield('scripts')
-    </html>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> --}}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/js/uikit-icons.min.js"></script>
+  <script src="{{asset('js/app.js')}}">
+  </script>
+  @yield('scripts')
+  </html>

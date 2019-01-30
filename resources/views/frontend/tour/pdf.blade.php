@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta NAME="ROBOTS" CONTENT="noindex, nofollow">
 	<link rel="stylesheet" href="{{ asset('css/pdf/bootstrap.min.css') }}" media="all">
 	<link rel="stylesheet" href="{{ asset('css/pdf/iconfont/iconstyle.css') }}" media="all">
 	<link rel="stylesheet" href="{{ asset('css/pdf/font-awesome/css/font-awesome.css') }}" media="all">

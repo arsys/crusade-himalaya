@@ -1,4 +1,8 @@
 @extends('layouts.frontend')
+@section('mtitle'){!! $category->name !!}{!! $region->name !!}@stop
+@section('title'){!! $category->name !!}|{!! $region->name !!}@stop
+@section('description'){!! $category->description !!}@stop
+@extends('layouts.frontend')
 @section('content')
 <section class="uk-container-expand about" uk-grid>
  <div class="uk-height-large uk-width-*@s uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($region->path) }}" uk-img>

@@ -1,5 +1,5 @@
-@section('mtitle'){!! $region->name !!}@stop
-@section('title'){!! $region->name !!}
+@section('mtitle')Destionation|{!! $region->name !!}@stop
+@section('title')Destination|{!! $region->name !!}
 @stop
 @section('description'){!! $region->description !!}@stop
 @extends('layouts.frontend')

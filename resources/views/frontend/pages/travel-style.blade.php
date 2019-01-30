@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('mtitle'){!! $category->name !!}@stop
+@section('mtitle')Travel Style|{!! $category->name !!}@stop
 @section('title'){!! $category->name !!}
 @stop
 @section('description'){!! $category->description !!}@stop

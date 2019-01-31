@@ -569,11 +569,12 @@ html{
             color: #fff;
             line-height: 30px;
             z-index: 1;
-            position: relative;            
+            position: absolute;            
             content: "\f192";
             font-size: 1rem;
             font-family: "Font Awesome 5 Free";
             margin: 0px 8px;
+            left:-23px;
         }
     }
 }
@@ -590,46 +591,34 @@ html{
             color: #fff;
             line-height: 30px;
             z-index: 1;
-            position: relative;
+            position: absolute;
             content: "\f3c5";
             font-weight: bold;
             font-size: 1rem;
             font-family: "Font Awesome 5 Free";
             margin: 0px 8px;
+            left:-23px;
         }
     }
 }  
 
-// .itinerary-list{
-//     .itinerary-list-item{
-//         a span:after{ 
-//           border-right: 2px dashed #ccc;
-//           height: 100%;
-//           content: "";
-//           left: -98.25%;
-//           position: absolute;
-//           top: 16px;
-//           width: 100%;
-//           // margin-top:0 ;
-//           // margin-left:0px;
-//           margin: 0px 8px;
-//       }
 
-//   }
-// }
-// .itinerary-list{
-//     .itinerary-list-item:last-child {
-//         a span:after{
-//         border-right: none;
-//     }
-// }
-// }
+  .itinerary-list{
+    .itinerary-list-item
+     { 
+            position: relative; 
+            margin: 0;
+            border-left: 2px dashed #ccc;
+            padding-left: 30px;
+      }
 
-// .itinerary-list{
-//     .itinerary-list-item:last-child{
-//         a :after{
-//             border-right:unset;
-//         }
-//     }
+  }
+  .itinerary-list{
+    .itinerary-list-item:last-child
+     { 
+          border-left: none;
+        
+      }
 
-// }
+  }
+

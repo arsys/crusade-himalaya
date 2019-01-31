@@ -616,25 +616,9 @@ html{
   .itinerary-list{
     .itinerary-list-item:last-child
      { 
-          border-left: 2px dashed transparent;
+          border-left: none;
         
       }
 
   }
 
-// .itinerary-list{
-//     .itinerary-list-item:last-child {
-//         a span:after{
-//         border-right: none;
-//     }
-// }
-// }
-
-// .itinerary-list{
-//     .itinerary-list-item:last-child{
-//         a span:after{
-//             border-color:#fff !important;
-//         }
-//     }
-
-// }

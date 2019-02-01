@@ -84,7 +84,7 @@
                   <ul   uk-accordion>
                     @foreach($dos as $do)
                     @if($do->tours->count() > 0)
-                    <li class="list-item"><a class="uk-margin-left" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}"></a></li>
+                    <li class="list-item"><a class="uk-margin-left" href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a></li>
                     @endif
                     @endforeach
                   </ul>
@@ -100,7 +100,7 @@
                 <ul class="uk-nav uk-navbar-dropdown-nav">
                   <ul  uk-accordion>
                     @foreach($wheres as $where)
-                    <li class="list-item"><a class="uk-margin-left" href=" {{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}"></a></li>
+                    <li class="list-item"><a class="uk-margin-left" href="{{ route('fetchByRegion',$where->slug) }}">{{ $where->name }}</a></li>
                     @endforeach
                   </ul>
                 </ul>

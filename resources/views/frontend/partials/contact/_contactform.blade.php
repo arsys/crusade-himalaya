@@ -29,8 +29,7 @@
 						<div class="uk-margin">
 							<label class="uk-form-label" for="form-stacked-text">Message</label>
 							<div class="uk-form-controls">
-								<textarea class="uk-textarea uk-form-width-large" rows="4" required="" placeholder="Some Message...." name="contactMessage">								
-								</textarea>
+								<textarea class="uk-textarea uk-form-width-large" rows="4" required="" placeholder="Some Message...." name="contactMessage"></textarea>
 							</div>
 						</div>
 						<div class="uk-margin">

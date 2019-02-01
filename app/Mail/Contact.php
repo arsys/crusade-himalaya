@@ -31,6 +31,7 @@ class Contact extends Mailable implements ShouldQueue
         $this->from($this->data['email']);
         $this->subject($this->data['subject']);
         $this->to('mail@crusadehimalaya.com');
+        $this->bcc('sonam@crusadehimalaya.com');
         $this->replyTo($this->data['email']);
         return $this->markdown('emails.contact');
     }

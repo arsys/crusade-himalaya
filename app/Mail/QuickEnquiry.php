@@ -30,6 +30,7 @@ class QuickEnquiry extends Mailable implements ShouldQueue
     {
         $this->from($this->data['email']);
         $this->to('mail@crusadehimalaya.com');
+        $this->bcc('sonam@crusadehimalaya.com');
         $this->replyTo($this->data['email']);    
         $this->subject($this->data['subject']);    
         return $this->markdown('emails.enquiry');

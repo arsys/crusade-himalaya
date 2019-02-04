@@ -38,11 +38,19 @@
                 <span class=" uk-margin-small-top " uk-icon="chevron-right"></span>
             </a>
 
-            <a class="uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#">
+            <a class="uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#modal-overflow" uk-toggle>
                 <span class=" uk-margin-small-top " uk-icon="location"></span>
                 <span>Find Location</span> 
                 <span class=" uk-margin-small-top" uk-icon="chevron-right"></span>
             </a>
+            <div id="modal-overflow" class="uk-flex-top" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                    <button class="uk-modal-close-default" type="button" uk-close></button>
+                        <div class="map-wrapper uk-section-default">
+                            <div id="location" style="height: 500px;" ></div>
+                        </div>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -86,3 +94,22 @@
 </div>
 
 </footer>
+
+
+<script>
+    function initMap() {
+        var uluru = {lat: 27.7159776, lng: 85.3145912};
+        var map = new google.maps.Map(document.getElementById('location'), {
+            zoom: 18,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo_dSCAjkI&callback=initMap">
+</script>
+

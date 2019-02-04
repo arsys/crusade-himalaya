@@ -93,18 +93,15 @@
         <!--Why Nepal? start-->
         <li class="uk-box-shadow-small uk-padding uk-background-default  ">
             <a class="uk-accordion-title" href="#item1">Why Nepal</a>
-            <div class="uk-accordion-content uk-animation-slide-top-medium">
-                <div class="left-img uk-width-medium@s uk-first-column">
+       		    <div class="uk-accordion-content">            
                 	<p>Nepal as a destination often surpasses a visitor&#39;s expectations &ndash; the lush green plains to the world&#39;s tallest mountain, &nbsp;dense jungles to arid valleys, glacial lakes to raging rivers, diverse culture and their lives, to experience Nepal is one of the most exhilarating experience one can indulge in. &nbsp;&nbsp;</p>
 					<p>Although constituting &nbsp;a reasonably finite geographical area, the experiences one can indulge in this nation are infinite. Paradise like landscapes, pristine peaks, a day of solitude and yet the next day with adventure, the intertwining of history and modernity &ndash; these are only some of the facets of Nepal. To truly understand and fully comprehend the vastness of Nepal, one has to visit the nation.</p>
-                </div>
-            </div>
-
+            	</div>
        </li>
        <!--Why Nepal? end-->
      	<li class="uk-box-shadow-small uk-padding uk-background-default">
             <a class="uk-accordion-title" href="#">Why Crusade Himalaya</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                <div class="uk-accordion-content">
 	       			<p>Besides <strong>&#39;knowledge infused with deep passion for meaningful travel&#39;</strong>, what sets Crusade Himalayas apart is their unique working style. We are an independent travel partner, and will therefore organize your trip as per your expectations, with our recommendations.</p>
 
 					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</p>
@@ -113,7 +110,7 @@
        <!--How we work? start-->
         <li class="uk-box-shadow-small uk-padding uk-background-default">
             <a class="uk-accordion-title" href="#">How we work</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                <div class="uk-accordion-content">
 	       			<p>At Crusade Himalaya, we offer highly personalized travel plans and arrangements to ensure your satisfaction. </p>
 					<p>  Putting comfort and pleasure above anything else, we wish to earn your smiles. From the moment you land in Nepal, till the time we bid our goodbyes, the team of Crusade Himalaya will continuously strive to ensure your experience is highly memorable.</p>
 					<p><strong>Our team will be your perfect travel friend;<br />
@@ -129,7 +126,7 @@
         <!--What makes Crusade Himalaya differentstart-->
         <li class="uk-box-shadow-small uk-padding uk-background-default">
             <a class="uk-accordion-title" href="#">What makes Crusade Himalaya different</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                <div class="uk-accordion-content">
                		<p>Besides <strong>&#39;knowledge infused with deep passion for meaningful travel&#39;</strong>, what sets Crusade Himalayas apart is their unique working style. We are an independent travel partner, and will therefore organize your trip as per your expectations, with our recommendations.</p>
 
 					<p>At Crusade Himalayas, we <strong>give the power of choice to you</strong>. You decide where you want to go, what you want to see, how you want to get there, we are simply your travel friends.</p>
@@ -139,7 +136,7 @@
         <!--What is our mission start-->
         <li class="uk-box-shadow-small uk-padding uk-background-default" >
             <a class="uk-accordion-title" href="#">What is our mission</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                <div class="uk-accordion-content">
                   	<p>Our mission is simple, it is <strong>to make you happy</strong>. To do so, we will take you across many of the delights Nepal has to offer, introduce you to different cultures, and all the while ensuring your comfort and satisfaction.</p>
 			
 					<p><strong>Your adventure awaits you! </strong><br />
@@ -158,7 +155,7 @@
        	<!--  team start -->
    	    <li class="uk-box-shadow-small uk-padding uk-background-default" >
             <a class="uk-accordion-title" href="#">Meet Our Team</a>
-                <div class="uk-accordion-content uk-animation-slide-top-medium">
+                <div class="uk-accordion-content">
 				  	@include ('frontend.partials.about._teams')
 				  	@include ('frontend.partials.about._guide')
                 </div>

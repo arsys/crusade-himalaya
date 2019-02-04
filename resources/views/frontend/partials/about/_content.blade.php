@@ -70,6 +70,11 @@
 							</ul>
 
 							<p>&nbsp;</p>
+							<p>Crusade Himalaya is an initiative of Karmatara adventure Pvt Ltd- a government registered adventure travel company holding a substantial permit to operate & organize tours & trekking in Nepal.</p>
+							<p><strong>Karamtara adventure is licensed with tourism industry department, the ministry of tourism & civil aviation of Nepal.</strong>
+							</p> 
+
+
 						</div>
 						<!-- 	What is our missionend -->
 						<!-- meet our team start -->
@@ -149,6 +154,9 @@
 						<li><strong>Educate:</strong> Our website also offers important information concerning travelling in Nepal. One can simply read away, and visit Nepal upon their own. You may also address your questions regarding Nepal to us.</li>
 						<li><strong>Encourage</strong>: To travel is a beautiful thing, it broadens one&#39;s horizons, at the same time makes them humble. Therefore, we encourage all to travel.</li>
 					</ul>
+					<p>Crusade Himalaya is an initiative of Karmatara adventure Pvt Ltd- a government registered adventure travel company holding a substantial permit to operate & organize tours & trekking in Nepal.</p>
+					<p><strong>Karamtara adventure is licensed with tourism industry department, the ministry of tourism & civil aviation of Nepal.</strong>
+					</p> 
                 </div>
         </li>
         <!--What is our mission end-->

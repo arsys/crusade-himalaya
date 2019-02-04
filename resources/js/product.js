@@ -53,10 +53,10 @@ window.addEventListener("load", function(){
 				success: function (data) {
 					if($.isEmptyObject(data.error))
 					{
+						$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
 						$("#quick-enquiry").trigger("reset");
 						$('.print-error-msg').find('ul').empty();
 						$('.print-error-msg').css('display','block');
-						$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
 						$('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");
 						setTimeout(function() {
 							$('.print-error-msg').fadeOut();
@@ -71,6 +71,7 @@ window.addEventListener("load", function(){
 		});
 		$('#quick-enquiry-mob').on('submit', function(e){
 			e.preventDefault();
+			UIkit.modal('#modal-broucher').hide();
 			$(".submit").prop("disabled", true);
 			data = $(this).serialize();
 			action = $(this).attr('action');
@@ -84,15 +85,15 @@ window.addEventListener("load", function(){
 				success: function (data) {
 					if($.isEmptyObject(data.error))
 					{
+						$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
 						$("#quick-enquiry-mob").trigger("reset");
 						$('.print-error-msg').find('ul').empty();
 						$('.print-error-msg').css('display','block');
-						$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
 						$('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");
 						setTimeout(function() {
 							$('.print-error-msg').fadeOut();
-							$(".submit").prop("disabled", false);
-						}, 3000);
+							UIkit.modal('#modal-broucher').hide();
+						}, 2000);
 					}
 					else{
 						printMessageErrors(data.error);

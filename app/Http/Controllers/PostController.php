@@ -89,17 +89,27 @@ class PostController extends Controller
                 'bodyMessage' => $request->comment,
             );
             if(isset($request->sendTo2)) {
-             $data['receiver2'] = $request->sendTo2;
-         }
-         if(isset($request->sendTo3)) {
-             $data['receiver3'] = $request->sendTo3;
-         }
-         if(isset($request->copy)) {
-             $data['copy'] = $request->copy;
-         }
-         Mail::send(new Refer($data));
-         return response()->json(['success'=>'Mail sent sucessfully.']);
-     }
-     return response()->json(['error'=>$validator->errors()->all()]);
- }    
+               $data['receiver2'] = $request->sendTo2;
+           }
+           if(isset($request->sendTo3)) {
+               $data['receiver3'] = $request->sendTo3;
+           }
+           if(isset($request->copy)) {
+               $data['copy'] = $request->copy;
+           }
+           Mail::send(new Refer($data));
+           return response()->json(['success'=>'Mail sent sucessfully.']);
+       }
+       return response()->json(['error'=>$validator->errors()->all()]);
+   }    
+   public function requestBroucher(Request $request)
+   {
+    $validator = Validator::make($request->all(), [
+        'email' => 'required|email',
+    ]);
+    if ($validator->passes()) {
+        return response()->json(['success'=>'Mail sent sucessfully.']);
+    }
+    return response()->json(['error'=>$validator->errors()->all()]);
+ }
 }

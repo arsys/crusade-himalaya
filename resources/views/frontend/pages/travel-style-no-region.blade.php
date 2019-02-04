@@ -1,5 +1,7 @@
-@section('mtitle'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours@stop
-@section('title'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours@stop
+@section('mtitle'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours
+@stop
+@section('title'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours
+@stop
 @section('description'){!! $category->description !!}@stop
 @extends('layouts.frontend')
 @section('content')

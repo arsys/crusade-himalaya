@@ -177,8 +177,9 @@ a:hover{
 //destination overlay text start
 .destination {
   position: relative;
- /*    opacity: 0;
-   transition: .5s ease; */
+/* opacity: 0;
+  transition:all .5s ease; */
+  transition:all .5s;
  
 }
 .dest-topic{
@@ -193,8 +194,8 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-    opacity: 1;
-  transition: .5s ease;
+  opacity: 1;
+  transform: translate(0%);
 }
 
 .destination:hover .dest-topic {

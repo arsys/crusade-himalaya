@@ -72,7 +72,12 @@
 							<p>&nbsp;</p>
 						</div>
 						<!-- 	What is our missionend -->
-
+						<!-- meet our team start -->
+						<div class="uk-card uk-card-body uk-card-default uk-margin-small-top over-wrapper" id="team-wrapper">
+							@include('frontend.partials.about._teams')
+							@include('frontend.partials.about._guide')
+						</div>
+						<!-- meet our team start -->
 					</div>
 				</div>
 			</section>
@@ -150,6 +155,16 @@
                 </div>
         </li>
         <!--What is our mission end-->
+       	<!--  team start -->
+   	    <li class="uk-box-shadow-small uk-padding uk-background-default" >
+            <a class="uk-accordion-title" href="#">Meet Our Team</a>
+                <div class="uk-accordion-content uk-animation-slide-top-medium">
+				  	@include ('frontend.partials.about._teams')
+				  	@include ('frontend.partials.about._guide')
+                </div>
+        </li>
+    	<!--    team end -->
+
     </ul>
 </div>
 <script>

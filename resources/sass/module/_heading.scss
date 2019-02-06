@@ -168,12 +168,12 @@
 .carousel-heading{
 display:block;
 animation:moveInLeft 1s ease-out;
-animation-delay: 1s;
+
 }
 .carousel-para{
   display:block;
 animation:moveInRight 1s ease-out;
-animation-delay: 1s;
+
 }
 @media (min-width: 320px) and (max-width: 812px){
   .carousel-heading{
@@ -192,10 +192,7 @@ animation-delay: 1s;
 
   }
   
-  80%{
-    transform: translate(10px);
 
-  }
   100%{
     opacity: 1;
     transform:translate(0);
@@ -207,10 +204,7 @@ animation-delay: 1s;
     opacity:0;
     transform:translate(100px);
   }
-  80%{
-    transform: translate(-10px);
 
-  }
   100%{
     opacity: 1;
     transform:translate(0);

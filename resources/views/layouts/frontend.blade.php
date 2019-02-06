@@ -78,6 +78,16 @@
 
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5353692.js"></script>
+    <script type="text/javascript">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = 'fc758b4b810a5a7a7ece662bbbb6e1d691f50e23';
+        window.smartsupp||(function(d) {
+          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+          c.type='text/javascript';c.charset='utf-8';c.async=true;
+          c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+        </script>
     @yield('styles')
 </head>
 

@@ -34,7 +34,7 @@ class FrontendComposer
 
 	public function getPage(View $view)
 	{
-		$pages = Pages::where('main',1)->where('status',1)->orderBy('position', 'asc')->get();
+		$pages = Page::where('main',1)->where('status',1)->orderBy('position', 'asc')->get();
 		if ($pages) {
 			$view->withPages($pages);
 		}

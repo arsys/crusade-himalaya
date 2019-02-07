@@ -33,6 +33,7 @@ class NavServiceProvider extends ServiceProvider
     }     
     private function footerMenu(){
         view()->composer('frontend.partials._footer','App\Http\Composers\FrontendComposer@footer');
-        view()->composer('frontend.contact','App\Http\Composers\FrontendComposer@footer');              
+        view()->composer('frontend.contact','App\Http\Composers\FrontendComposer@footer');      
+        view()->composer('frontend.partials._footer','App\Http\Composers\FrontendComposer@getPage');
     }     
 }

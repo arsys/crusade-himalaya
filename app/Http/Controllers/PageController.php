@@ -54,7 +54,7 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-     dd($request->all());
+     // dd($request->all());
        try {
         $this->validate($request, [
             'title' => 'required|max:255',

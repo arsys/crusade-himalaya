@@ -144,3 +144,4 @@ Route::get('/packages','FrontendController@getPackages');
 Route::get('/preloader', 'FrontendController@getPreloader');
 
 Route::get('/link-exchange','FrontendController@getLinkexchange');
+Route::get('/terms','FrontendController@getterms');

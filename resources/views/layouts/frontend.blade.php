@@ -98,7 +98,7 @@
 
         <!-- footer start-->
         @include('frontend.partials._footer')
-        <a href="#" id="scroll" style="display: none;"><span></span></a>
+        <a href="#" id="scroll" style="display: none;"><span uk-icon="icon: chevron-up; ratio: 3.5"></span></a>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

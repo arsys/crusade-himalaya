@@ -82,7 +82,7 @@
 <div class="foobar-links ">
 
     <ul class="uk-list">
-        <li><a href="#">Terms & Condition</a></li>
+        <li><a href="terms">Terms & Condition</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="/link-exchange">Link Exchange</a></li>
         <li><a href="#">Site Map</a></li>

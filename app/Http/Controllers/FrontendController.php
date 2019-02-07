@@ -118,6 +118,10 @@ public function getPreloader()
 {
     return view('frontend.preloader');
 }
+public function getterms()
+{
+    return view('frontend.terms');
+}
 
 public function getLinkexchange(){
     $page = Page::where('slug','=','link-exchange')->firstOrFail();

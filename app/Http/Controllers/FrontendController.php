@@ -119,8 +119,8 @@ public function getPreloader()
     return view('frontend.preloader');
 }
 
-public function getLinkexchange(){
-    $page = Page::where('slug','=','link-exchange')->firstOrFail();
+public function getpage($slug){
+    $page = Page::where('slug','=', $slug)->firstOrFail();
     return view('frontend.page')->withPage($page);
 }
 

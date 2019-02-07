@@ -103,13 +103,13 @@ Route::name('frontend-')->group(function () {
 });
 // Route::get('/', 'FrontendController@comingSoon');
 Route::get('/', 'FrontendController@getIndex');
-Route::get('/who-we-are', 'FrontendController@getAbout');
-Route::get('/contact', 'FrontendController@getContact');
-Route::get('/product','FrontendController@getProduct');
-Route::get('/category','FrontendController@getCategory');
+// Route::get('/who-we-are', 'FrontendController@getAbout');
+// Route::get('/contact', 'FrontendController@getContact');
+// Route::get('/product','FrontendController@getProduct');
+// Route::get('/category','FrontendController@getCategory');
 
-Route::get('/show-insta','GetController@showInsta')->name('show.Insta');
-Route::get('/fetch-insta','GetController@fetchInsta');
+// Route::get('/show-insta','GetController@showInsta')->name('show.Insta');
+// Route::get('/fetch-insta','GetController@fetchInsta');
 
 
 // Route::get('/review','FrontendController@getReview');
@@ -117,7 +117,7 @@ Route::get('/fetch-insta','GetController@fetchInsta');
 
 // Route::get('/bookingstep1','FrontendController@getBookingstep1');
 
-Route::get('/slideshow','FrontendController@getSlideshow');
+// Route::get('/slideshow','FrontendController@getSlideshow');
 
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
@@ -139,8 +139,10 @@ Route::prefix('destination')->group(function () {
 	Route::get('{slug}','GetController@fetchByregion')->name('fetchByRegion');
 	Route::get('{destionation}/{category}','GetController@destination2package')->name('destionation2package');
 });
-Route::get('/destination','FrontendController@getDestination');
-Route::get('/packages','FrontendController@getPackages');
-Route::get('/preloader', 'FrontendController@getPreloader');
+// Route::get('/destination','FrontendController@getDestination');
+// Route::get('/packages','FrontendController@getPackages');
+// Route::get('/preloader', 'FrontendController@getPreloader');
 
-Route::get('/link-exchange','FrontendController@getLinkexchange');
+Route::name('page-')->group(function () {
+	Route::get('/{slug}','FrontendController@getPage')->name('getPage');
+});

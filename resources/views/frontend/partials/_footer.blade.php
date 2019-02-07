@@ -82,9 +82,9 @@
 <div class="foobar-links ">
 
     <ul class="uk-list">
-        <li><a href="/terms-and-conditions">Terms & Condition</a></li>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
-        <li><a href="/link-exchange">Link Exchange</a></li>
+        @foreach($pages as $page)
+        <li><a href="{{ route('page-getpage',$page->slug) }}">{{ $page->title }}</a></li>
+        @endforeach
         {{-- <li><a href="#">Site Map</a></li> --}}
     </ul>
     <div class="uk-flex affilate-wrapper">

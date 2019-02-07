@@ -82,10 +82,10 @@
 <div class="foobar-links ">
 
     <ul class="uk-list">
-        <li><a href="#">Terms & Condition</a></li>
-        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="/terms-and-conditions">Terms & Condition</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
         <li><a href="/link-exchange">Link Exchange</a></li>
-        <li><a href="#">Site Map</a></li>
+        {{-- <li><a href="#">Site Map</a></li> --}}
     </ul>
     <div class="uk-flex affilate-wrapper">
         <div class="uk-margin-left affilate-inner">

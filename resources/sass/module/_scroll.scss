@@ -4,10 +4,11 @@
     right:20px;
     top:100px;
     cursor:pointer;
-    width:50px;
-    height:50px;
+    width:40px;
+    height:40px;
     border-radius: 8px;
-    background-color:$dark;
+ /*    background-color:$dark; */
+    outline: 2px solid $dark;
     text-indent:-9999px;
     display:none;
     z-index:20;
@@ -16,17 +17,22 @@
 }
 #scroll span {
     position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-13px;
-    margin-top:-19px;
+    top:40%;
+    left:40%;
+    margin-left:-8px;
+    margin-top:-15px;
     height:0;
     width:0;
     border:12px solid transparent;
-    border-bottom-color:#ffffff;
+    border-bottom-color:$dark;
+
+}
+#scroll span:hover{
+     border-bottom-color:$green;
 }
 #scroll:hover {
-    background-color:$green;
+    outline: 2px solid $green;
+      border-bottom-color:$green;
     opacity:1;
     filter:"alpha(opacity=100)";
     -ms-filter:"alpha(opacity=100)";

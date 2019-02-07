@@ -83,7 +83,7 @@
 
     <ul class="uk-list">
         @foreach($pages as $page)
-        <li><a href="{{ route('page-getpage',$page->slug) }}">{{ $page->title }}</a></li>
+        <li><a href="{{ route('page-getPage',$page->slug) }}">{{ $page->title }}</a></li>
         @endforeach
         {{-- <li><a href="#">Site Map</a></li> --}}
     </ul>

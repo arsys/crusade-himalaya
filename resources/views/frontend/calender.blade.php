@@ -20,7 +20,7 @@
 <div id="responsiveTabsDemo" class="r-tabs ">
     <ul class="r-tabs-nav">
     @for($i=1;$i<=12;$i++)
-        <li class="r-tabs-tab @if($i== date('n')) r-tabs-state-active @endif"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
+        <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
     @endfor
     </ul>
 
@@ -289,7 +289,8 @@
 <script src="https://cdn.jsdelivr.net/npm/responsive-tabs@1.6.1/js/jquery.responsiveTabs.min.js"></script>
 <script>
   $('#responsiveTabsDemo').responsiveTabs({
-    startCollapsed: 'accordion'
+    startCollapsed: 'accordion',
+    active: {{ date('n') }}
   });
 </script>
 @stop

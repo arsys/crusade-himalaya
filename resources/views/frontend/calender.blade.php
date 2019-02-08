@@ -290,7 +290,7 @@
 <script>
   $('#responsiveTabsDemo').responsiveTabs({
     startCollapsed: 'accordion',
-    active: {{ date('n') }}
+    active: {{ date('n')-1 }}
   });
 </script>
 @stop

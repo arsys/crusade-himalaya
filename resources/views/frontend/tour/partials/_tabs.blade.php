@@ -13,7 +13,7 @@
 					<span class="middle-2"> <sup>$</sup> {{ $tour->price }}</span>
 				</span>
 				<span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column" uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
-					@if($tour->departures->count() > 0)
+					@if($tour->departure->count() > 0)
 					<a href="#price" class=" uk-button-default uk-margin-remove uk-padding-remove-bottom" id="goto">Dates </a>
 					@endif
 				</span>

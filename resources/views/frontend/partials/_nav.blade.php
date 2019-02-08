@@ -108,11 +108,11 @@
             </li>
           </li>
         </ul>          
-
-          <li class="sidebar-listing uk-margin-small-top"><a href="/who-we-are">Who we are</a></li>
-          <li class="sidebar-listing "><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
+        <li class="sidebar-listing uk-margin-small-top"><a href="{{ route('frontend-eventCalender') }}">Whats on</a></li>
+        <li class="sidebar-listing uk-margin-small-top"><a href="/who-we-are">Who we are</a></li>
+        <li class="sidebar-listing "><a href="/contact">Contact</a></li>
+      </ul>
     </div>
   </div>
-  <!-- off canvas end -->
+</div>
+<!-- off canvas end -->

@@ -15,16 +15,20 @@
 			</div>
 			{{-- includes & excludes end --}}
 			<!-- itinerary start -->
+			@if($tour->itinerary->count() > 0)
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-bottom " id="itinerary">
 				<h3 class=""><span>Detailed Itinerary ({{ $tour->days }} Days)</span></h3>
 				@include ('frontend.tour.partials._itinerary')
 			</div>
+			@endif
 			<!-- itinerary end -->
 			<!-- pricing start	 -->
+			@if($tour->departure->count() > 0)
 			<div class="uk-card uk-card-default uk-card-body " id="price">
 				<h3 class="uk-card-title "><span>Pricing & Availability</span></h3>
 				 @include ('frontend.tour.partials._price') 
 			</div>
+			@endif
 			<!-- pricing end -->
 			{{-- enquiry start --}}
 			<div class="uk-card uk-card-default uk-card-body uk-margin-small-top" id="enquiry" > 

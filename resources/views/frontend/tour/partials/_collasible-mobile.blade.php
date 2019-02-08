@@ -31,6 +31,7 @@
                             </div>
                         </div>
                     </li>
+                    @if($tour->itinerary->count() > 0)
                     <li>
                         <div class="uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle uk-grid" uk-grid="">
                             <div class="uk-width-auto uk-first-column">
@@ -41,6 +42,7 @@
                             </div>
                         </div>
                     </li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -61,18 +63,22 @@
                 @include ('frontend.tour.partials._include')
             </div>
         </li>
+        @if($tour->itinerary->count() > 0)
         <li class="uk-box-shadow-small uk-padding uk-background-default" >
             <a class="uk-accordion-title" href="#">Itinerary</a>
             <div class="uk-accordion-content">
                  @include ('frontend.tour.partials._itinerary')
             </div>
         </li>
+        @endif
+        @if($tour->departure->count() > 0)
         <li class="uk-box-shadow-small uk-padding uk-background-default" >
             <a class="uk-accordion-title" href="#">Tour Dispatch</a>
             <div class="uk-accordion-content">
                 @include ('frontend.tour.partials._price-mobile')
             </div>
         </li>
+        @endif
         <li class="uk-box-shadow-small uk-padding uk-background-default">
             <a class="uk-accordion-title" href="#">Gallery</a>
             <div class="uk-accordion-content">

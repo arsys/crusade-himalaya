@@ -12,11 +12,11 @@
 					<span class="middle-1">From USD</span>
 					<span class="middle-2"> <sup>$</sup> {{ $tour->price }}</span>
 				</span>
+				@if($tour->departure->count() > 0)
 				<span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column" uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
-					@if($tour->departure->count() > 0)
 					<a href="#price" class=" uk-button-default uk-margin-remove uk-padding-remove-bottom" id="goto">Dates </a>
-					@endif
 				</span>
+				@endif
 			</div>
 			<div class="uk-card uk-card-default uk-card-body trip-details">
 				<ul class="uk-list uk-list-divider text-color">
@@ -80,8 +80,12 @@
 				<ul uk-scrollspy-nav="closest: li; scroll: true; offset: 140" class="uk-nav uk-nav-default uk-nav-center tm-nav uk-nav-parent-icon  uk-flex  uk-flex-row text-color tab-ul" uk-nav>
 					<li class="uk-active uk-width-1-5 tab-li"><a href="#overview">Overview</a></li> 
 					<li class="uk-width-1-5  tab-li"><a href="#include">Inclusion</a></li>
+					@if($tour->itinerary->count() > 0)
 					<li class="uk-width-1-5  tab-li"><a href="#itinerary">Itinerary</a></li>
+					@endif
+					@if($tour->departure->count() > 0)
 					<li class="uk-width-1-5  tab-li"><a href="#price">Tour Dispatch</a></li>
+					@endif
 					<li class="uk-width-1-5  tab-li"><a href="#gallery">Gallery</a></li>
 				</ul>
 			</div>	

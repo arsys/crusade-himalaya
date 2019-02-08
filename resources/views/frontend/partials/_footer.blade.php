@@ -82,17 +82,10 @@
 <div class="foobar-links ">
 
     <ul class="uk-list">
-<<<<<<< HEAD
+
         @foreach($pages as $page)
         <li><a href="{{ route('page-getPage',$page->slug) }}">{{ $page->title }}</a></li>
         @endforeach
-        {{-- <li><a href="#">Site Map</a></li> --}}
-=======
-        <li><a href="terms">Terms & Condition</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="/link-exchange">Link Exchange</a></li>
-        <li><a href="#">Site Map</a></li>
->>>>>>> 65a78f9a7191ddafd156910577fa4ec2857fdabc
     </ul>
     <div class="uk-flex affilate-wrapper">
         <div class="uk-margin-left affilate-inner">

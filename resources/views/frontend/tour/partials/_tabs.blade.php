@@ -13,8 +13,9 @@
 					<span class="middle-2"> <sup>$</sup> {{ $tour->price }}</span>
 				</span>
 				<span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column" uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
-					
+					@if($tour->departures->count() > 0)
 					<a href="#price" class=" uk-button-default uk-margin-remove uk-padding-remove-bottom" id="goto">Dates </a>
+					@endif
 				</span>
 			</div>
 			<div class="uk-card uk-card-default uk-card-body trip-details">
@@ -41,6 +42,7 @@
 							</div>
 						</div>
 					</li>
+					@if($tour->itinerary->count() > 0)
 					<li>
 						<div class="uk-grid-small uk-child-width-expand uk-flex-nowrap uk-flex-middle uk-grid" uk-grid="">
 							<div class="uk-width-auto uk-first-column">
@@ -53,6 +55,7 @@
 							</div>
 						</div>
 					</li>
+					@endif
 				</ul>	
 			</div>
 			{{-- sim card start --}}

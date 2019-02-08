@@ -118,6 +118,10 @@ public function getPreloader()
 {
     return view('frontend.preloader');
 }
+public function getterms()
+{
+    return view('frontend.terms');
+}
 
 public function getpage($slug){
     $page = Page::where('slug','=', $slug)->firstOrFail();

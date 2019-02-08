@@ -103,8 +103,8 @@ Route::name('frontend-')->group(function () {
 });
 // Route::get('/', 'FrontendController@comingSoon');
 Route::get('/', 'FrontendController@getIndex');
-// Route::get('/who-we-are', 'FrontendController@getAbout');
-// Route::get('/contact', 'FrontendController@getContact');
+Route::get('/who-we-are', 'FrontendController@getAbout');
+Route::get('/contact', 'FrontendController@getContact');
 // Route::get('/product','FrontendController@getProduct');
 // Route::get('/category','FrontendController@getCategory');
 
@@ -142,6 +142,7 @@ Route::prefix('destination')->group(function () {
 // Route::get('/destination','FrontendController@getDestination');
 // Route::get('/packages','FrontendController@getPackages');
 // Route::get('/preloader', 'FrontendController@getPreloader');
+
 
 Route::name('page-')->group(function () {
 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');

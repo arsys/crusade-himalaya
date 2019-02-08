@@ -106,7 +106,8 @@
                 </ul>
               </div>
             </li>
-          </li></ul>          
+          </li>
+        </ul>          
 
           <li class="sidebar-listing uk-margin-small-top"><a href="/who-we-are">Who we are</a></li>
           <li class="sidebar-listing "><a href="/contact">Contact</a></li>

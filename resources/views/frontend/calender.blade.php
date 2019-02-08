@@ -20,7 +20,7 @@
 <div id="responsiveTabsDemo" class="r-tabs ">
     <ul class="r-tabs-nav">
     @for($i=1;$i<=12;$i++)
-        <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor @if($i== date('n')) r-tabs-state-active @endif"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
+        <li class="r-tabs-tab @if($i== date('n')) r-tabs-state-active @endif"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
     @endfor
     </ul>
 

@@ -1,8 +1,8 @@
 @section('mtitle')
-What's On This Month
+What's On This  | {{config('app.name')}}
 @stop
 @section('title')
-What's On This Month
+What's On This  | {{config('app.name')}}
 @stop
 @section('description')Happening things this month @stop
 @extends('layouts.frontend')

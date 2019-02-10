@@ -1,8 +1,8 @@
 @section('mtitle')
-{{$page->title}}
+{{$page->title}} | {{config('app.name')}}
 @stop
 @section('title')
-{{$page->title}}
+{{$page->title}} | {{config('app.name')}}
 @stop
 @section('description'){!! $page->description !!}@stop
 @extends('layouts.frontend')

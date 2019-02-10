@@ -41,7 +41,7 @@ class GetController extends Controller
 	{
 		$instas = Insta::all();
 		return view('frontend.insta')->withInstas($instas);
-	}	
+	}
 
 	public function fetchByCategory($slug)
 	{
@@ -71,8 +71,8 @@ class GetController extends Controller
 			$r->where('tour_categories.slug', $category->slug);
 		})->whereHas('region', function ($s) use ($region) {
 			$s->where('regions.slug', $region->slug);
-		})->get();  
-		return view('frontend.pages.travel-style-packages')        
+		})->get();
+		return view('frontend.pages.travel-style-packages')
 		->withCategory($category)
 		->withRegion($region)
 		->withResults($query);
@@ -97,14 +97,14 @@ class GetController extends Controller
 			$r->where('tour_categories.slug', $category->slug);
 		})->whereHas('region', function ($s) use ($region) {
 			$s->where('regions.slug', $region->slug);
-		})->get();  
-		return view('frontend.pages.destination-packages')        
+		})->get();
+		return view('frontend.pages.destination-packages')
 		->withCategory($category)
 		->withRegion($region)
 		->withResults($query);
 
-		
-	}	
+
+	}
 
 	public function tripDetail($slug)
 	{
@@ -133,11 +133,11 @@ class GetController extends Controller
 		return $pdf->download($tour->title.'.pdf');
 	}
 	public function stepOne(Request $request)
-	{		
+	{
 		$data =  array(
 			'date' => $request->date
 		);
-		$tour = Tour::where('slug','=', $request->slug)->first();		
+		$tour = Tour::where('slug','=', $request->slug)->first();
 		return view('frontend.tour.book.step1')
 		->withTour($tour)
 		->withData($data);
@@ -185,6 +185,7 @@ class GetController extends Controller
 		$tour = Tour::where('id','=', $request->tour_id)->first();
 		$sub = "!! New Booking !! for ". $tour->title." ". $tour->days." Days";
 		$data = array(
+            'start_date' => $request->start_date,
 			'name' => $request->fullName,
 			'subject' => $sub,
 			'email' => $request->email,

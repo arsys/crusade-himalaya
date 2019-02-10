@@ -15,7 +15,7 @@
    <div class="uk-width-1-3 step active">
      <div class="circle-text a">
        <span class="medium material-icons">Step 2</span>
-       
+
    </div>
    <p class="center-align uk-margin-top ">Request for reservation</p>
 </div>
@@ -32,8 +32,8 @@
 
 <div class="uk-container ">
  <div class="" uk-grid>
-    <div class="uk-width-3-5@m">           
-       <h3 class="uk-padding-small uk-text-center"><span>Lead Traveller Details</span></h3> 
+    <div class="uk-width-3-5@m">
+       <h3 class="uk-padding-small uk-text-center"><span>Lead Traveller Details</span></h3>
        <form class="uk-form-stacked" action="{{ route('trip.stepThree', $tour->slug) }}" method="POST">
         @csrf
         <input type="hidden" value="{{ $data['travellers'] }}" name="travellers">
@@ -73,7 +73,7 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Address</label>
             <div class="uk-form-controls">
-                <textarea class="uk-textarea uk-form-width-large" rows="4" required="" placeholder="Post Address" name="address"></textarea>                                     
+                <textarea class="uk-textarea uk-form-width-large" rows="4" required="" placeholder="Post Address" name="address"></textarea>
             </div>
         </div>
 
@@ -115,7 +115,7 @@
             </div>
         </div>
         @if($data['travellers'] > 1)
-        <h3 class="uk-padding-small uk-text-center"><span> Other Traveller Details</span></h3> 
+        <h3 class="uk-padding-small uk-text-center"><span> Other Traveller Details</span></h3>
         @for($i=1; $i<=$data['travellers']; $i++)
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Traveller {{$i}}</label>
@@ -130,7 +130,7 @@
         </div>
     </form>
 </div>
-<div class="uk-width-2-5@m ">   
+<div class="uk-width-2-5@m ">
     <div class="uk-card uk-card-default">
         <div class="uk-card-media-top">
             <img src="{{ asset($tour->image->thumb) }}" alt="{{ $tour->slug }}">
@@ -138,6 +138,8 @@
         <div class="uk-card-body">
             <h3 class="uk-card-title">{{ $tour->days .' Day(s) '.$tour->title}}</h3>
             <div class="uk-flex  uk-flex-row">
+            <span>Trip strat date: {{$data['date']}}</span>
+            <input type="hidden" name="date" value="{{$data['start_date']}}">
             </div>
             <div class="uk-card-footer" uk-grid>
                 <div class="uk-width-1-2">
@@ -160,7 +162,7 @@
 
         <div class="uk-card-body booking-contact-info">
             <div class="uk-flex uk-flex-column uk-width-1-1 contact-page">
-                <div class="booking-call"><span uk-icon="icon: receiver;"></span> 
+                <div class="booking-call"><span uk-icon="icon: receiver;"></span>
                     <span class="booking-call-details">Call Us On</span>
                 </div>
                 <span class="booking-call-meta">987654324</span>

@@ -13,9 +13,6 @@
 Route::redirect('/home', '/manage/dashboard');
 Route::redirect('/manage', '/manage/dashboard');
 
-
-// Route::get('/', 'FrontendController@gethome');
-
 Route::prefix('admin/dashboard')->group(function() {
 	Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 	Route::post('/login', 'Auth\LoginController@login')->name('login.submit');
@@ -54,8 +51,8 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::post('itinerary-edit', 'ItineraryController@update')->name('itinerary-edit');
 
 	Route::resource('departure','DepartureController');
-	
-//Tour attributes	
+
+//Tour attributes
 	Route::resource('difficulty', 'DifficultyController');
 	Route::resource('group', 'GroupController');
 	Route::resource('accommodation', 'AccommodationController');
@@ -69,7 +66,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 //Carousel management
 	Route::resource('carousel', 'CarouselController');
 	Route::get('carousel/{id}/publish', 'CarouselController@publish')->name('carousel.publish');
-	Route::get('carousel/{id}/unpublish', 'CarouselController@unpublish')->name('carousel.unpublish');	
+	Route::get('carousel/{id}/unpublish', 'CarouselController@unpublish')->name('carousel.unpublish');
 
 //Media management
 	Route::resource('media', 'MediaController');
@@ -95,29 +92,14 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::resource('/instagram', 'InstaController');
 });
 Route::name('frontend-')->group(function () {
-	// Route::get('/','GetController@comingSoon');
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
 	Route::post('/refer-a-friend','PostController@referFriend')->name('referFriend');
 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 });
-// Route::get('/', 'FrontendController@comingSoon');
 Route::get('/', 'FrontendController@getIndex');
 Route::get('/who-we-are', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
-// Route::get('/product','FrontendController@getProduct');
-// Route::get('/category','FrontendController@getCategory');
-
-// Route::get('/show-insta','GetController@showInsta')->name('show.Insta');
-// Route::get('/fetch-insta','GetController@fetchInsta');
-
-
-// Route::get('/review','FrontendController@getReview');
-// Route::get('/bookingform','FrontendController@getBookingform');
-
-// Route::get('/bookingstep1','FrontendController@getBookingstep1');
-
-// Route::get('/slideshow','FrontendController@getSlideshow');
 
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
@@ -139,10 +121,6 @@ Route::prefix('destination')->group(function () {
 	Route::get('{slug}','GetController@fetchByregion')->name('fetchByRegion');
 	Route::get('{destionation}/{category}','GetController@destination2package')->name('destionation2package');
 });
-// Route::get('/destination','FrontendController@getDestination');
-// Route::get('/packages','FrontendController@getPackages');
-// Route::get('/preloader', 'FrontendController@getPreloader');
-
 
 Route::name('page-')->group(function () {
 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');

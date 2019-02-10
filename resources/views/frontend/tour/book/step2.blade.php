@@ -1,3 +1,9 @@
+@section('mtitle')
+Join {{$tour->days}} Days {{$tour->title}}| Step 2 
+@stop
+@section('title')
+Join {{$tour->days}} Days {{$tour->title}}| Step 2
+@stop
 @inject('countries','App\Http\Utilities\Country')
 @extends('layouts.frontend')
 @section('robot')noindex, nofollow @endsection

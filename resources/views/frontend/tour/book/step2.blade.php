@@ -1,5 +1,5 @@
 @section('mtitle')
-Join {{$tour->days}} Days {{$tour->title}}| Step 2 
+Join {{$tour->days}} Days {{$tour->title}}| Step 2
 @stop
 @section('title')
 Join {{$tour->days}} Days {{$tour->title}}| Step 2
@@ -44,6 +44,7 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
         @csrf
         <input type="hidden" value="{{ $data['travellers'] }}" name="travellers">
         <input type="hidden" value="{{ $tour->id }}" name="tour_id">
+        <input type="hidden" name="start_date" value="{{$data['date']}}">
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Full Name</label>
             <div class="uk-form-controls">
@@ -145,7 +146,7 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
             <h3 class="uk-card-title">{{ $tour->days .' Day(s) '.$tour->title}}</h3>
             <div class="uk-flex  uk-flex-row">
             <span>Trip strat date: {{ date("jS M, Y", strtotime($data['date']))}}</span>
-            <input type="hidden" name="start_date" value="{{$data['date']}}">
+
             </div>
             <div class="uk-card-footer" uk-grid>
                 <div class="uk-width-1-2">

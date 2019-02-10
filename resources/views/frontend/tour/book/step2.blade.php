@@ -138,7 +138,7 @@
         <div class="uk-card-body">
             <h3 class="uk-card-title">{{ $tour->days .' Day(s) '.$tour->title}}</h3>
             <div class="uk-flex  uk-flex-row">
-            <span>Trip strat date: {{$data['date']}}</span>
+            <span>Trip strat date: {{ date("jS M, Y", strtotime($data['date']))}}</span>
             <input type="hidden" name="start_date" value="{{$data['date']}}">
             </div>
             <div class="uk-card-footer" uk-grid>

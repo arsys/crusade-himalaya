@@ -78,7 +78,7 @@
 						</div>
 						<!-- 	What is our missionend -->
 						<!-- meet our team start -->
-						<div class="uk-card uk-card-body uk-card-default uk-margin-small-top over-wrapper" id="team-wrapper">
+						<div class="uk-card uk-card-body uk-card-default uk-margin-small-top uk-margin-large-bottom over-wrapper" id="team-wrapper">
 							@include('frontend.partials.about._teams')
 							@include('frontend.partials.about._guide')
 						</div>
@@ -161,7 +161,7 @@
         </li>
         <!--What is our mission end-->
        	<!--  team start -->
-   	    <li class="uk-box-shadow-small uk-padding uk-background-default" >
+   	    <li class="uk-box-shadow-small uk-padding  uk-margin-large-bottom  uk-background-default" >
             <a class="uk-accordion-title" href="#">Meet Our Team</a>
                 <div class="uk-accordion-content">
 				  	@include ('frontend.partials.about._teams')

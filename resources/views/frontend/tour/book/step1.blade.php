@@ -42,7 +42,8 @@
     <div class="uk-grid-small" uk-grid>
       <div class="uk-width-1-2@s">
         <label class="uk-form-label">Start Date</label>
-        <input class="uk-input" type="text" name="date"  value="{{ $data['date'] }}"  disabled>
+        <input class="uk-input" type="text"  placeholder ="{{ date("jS M, Y", strtotime($data['date']))}}"  disabled>
+        <input type="hidden" name="date" value="{{$data['date']}}">
       </div>
       <div class="uk-width-1-2@s">
         <div class="uk-margin">

@@ -1,3 +1,10 @@
+@section('mtitle')
+{{$page->title}}
+@stop
+@section('title')
+{{$page->title}}
+@stop
+@section('description'){!! $page->description !!}@stop
 @extends('layouts.frontend')
 @section('content')
 {{-- image start --}}

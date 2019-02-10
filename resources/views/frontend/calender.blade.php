@@ -1,4 +1,11 @@
-@extends('layouts.frontend') 
+@section('mtitle')
+What's On This Month
+@stop
+@section('title')
+What's On This Month
+@stop
+@section('description')Happening things this month @stop
+@extends('layouts.frontend')
 @section('content')
 <section class="uk-container-expand about" uk-grid>
   <div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{asset('img/holi.png')}}" uk-img>
@@ -8,7 +15,7 @@
      The red letter days  in Nepalese calendar resembles to the festivals of Nepal. </blockquote>
         <blockquote class="calendar-subheading uk-margin-large-left">No matter which month of a year you choose to visit, there is always something happening. </blockquote>
          <blockquote class="calendar-subheading uk-margin-large-left"> Just time your date to visit these festivals to coincide with culture and tradition endured for centuries.</blockquote>
-   
+
     <div class="breadcrumb ">
       <ul class="uk-breadcrumb" id="breadcrumb">
         <li><a href="/" uk-icon="icon: home" ></a></li>
@@ -23,7 +30,7 @@
         <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
     @endfor
     </ul>
-    
+
 
 <div id="Jan" class="r-tabs-accordion-title r-tabs-tab">
     @foreach($jan as $event)

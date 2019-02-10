@@ -1,3 +1,9 @@
+@section('mtitle')
+Join {{$tour->days}} Days {{$tour->title}} | Step 1 
+@stop
+@section('title')
+Join {{$tour->days}} Days {{$tour->title}} | Step 1
+@stop
 @extends('layouts.frontend')
 @section('robot')noindex, nofollow @endsection
 @section('content')

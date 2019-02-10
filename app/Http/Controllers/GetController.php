@@ -186,7 +186,8 @@ class GetController extends Controller
 		$data = array(
             'start_date' => $request->start_date,
 			'name' => $request->fullName,
-			'subject' => $sub,
+            'subject' => $sub,
+            'trip_name' => $tour->title." ". $tour->days." Days",
 			'email' => $request->email,
 			'gender' => $request->gender,
 			'dob' => $request->dob,
@@ -208,7 +209,7 @@ class GetController extends Controller
 		Mail::send(new Booking($data));
 
 		Session::flash('success', 'Email sent sucessfully!');
-		return redirect()->route('trip.thankyou', $tour->slug);
+		return redirect()->route('trip.thankyou', $tour->slug)->withTour($tour);
 
 	}
 	public function getThankyou()

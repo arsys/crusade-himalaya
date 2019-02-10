@@ -2,6 +2,7 @@
 User Info: {!!$data['user_info']!!}<br>
 @component('mail::table')
 | ------------- |-----------------------------------------------------------------------:|
+| Trip Name    | {{ $data["trip_name"] }}     										     |
 | Start Date    | {{ $data["start_date"] }}     										 |
 | Name          | {{ $data["name"] }}                                                    |
 | Gender        | {{$data["gender"]}}                                                    |
@@ -16,7 +17,7 @@ User Info: {!!$data['user_info']!!}<br>
 @isset($data['otherName'])
 Additional Travellers
 @for($i=0;$i<$data['otherName'];$i++)
-| Name | {{$data["otherName"]. $i}}                                                          |
+| Name | {{$data["otherName"]. $i}}                                                      |
 @endfor
 @endif
 @endcomponent

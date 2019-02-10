@@ -185,7 +185,7 @@ class GetController extends Controller
 		$sub = "!! New Booking !! for ". $tour->title." ". $tour->days." Days";
 		$data = array(
             'start_date' => $request->start_date,
-			'name' => $request->fullName,
+			'name' => $request->fullname,
             'subject' => $sub,
             'trip_name' => $tour->title." ". $tour->days." Days",
 			'email' => $request->email,

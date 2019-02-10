@@ -2,9 +2,10 @@
 User Info: {!!$data['user_info']!!}<br>
 @component('mail::table')
 | ------------- |-----------------------------------------------------------------------:|
-| Trip Name    | {{ $data["trip_name"] }}     										     |
+| Trip Name     | {{ $data["trip_name"] }}     										     |
 | Start Date    | {{ $data["start_date"] }}     										 |
 | Name          | {{ $data["name"] }}                                                    |
+| DOB           | {{ $data["dob"] }}                                                     |
 | Gender        | {{$data["gender"]}}                                                    |
 | Mobile        | {{$data["mobile"]}}                                                    |
 | Address       | {{$data["address"]}}                                                   |

@@ -145,7 +145,6 @@ class GetController extends Controller
 
 	public function stepTwo(Request $request)
 	{
-		// dd($request->all());
 		$data =  array(
 			'travellers' => $request->travellers,
 			'date' => $request->date

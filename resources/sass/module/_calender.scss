@@ -16,6 +16,35 @@ background-color: $green;
   position: relative;
   background-color: $green;
 }
+@media  screen and (min-width: 320px) and (max-width:800px){
+  .r-tabs
+  {
+    .r-tabs-accordion-title {
+      .r-tabs-anchor {
+          text-align:center;
+          color:#fff;
+          content: "\f3c5";
+          font-weight: bold;
+          font-size: 1rem;
+          font-family: "Font Awesome 5 Free";
+      }
+    } 
+    }
+  }
+  @media  screen and (min-width: 320px) and (max-width:800px){
+  .r-tabs
+  {
+    .r-tabs-accordion-title {
+      .r-tabs-anchor::before {
+          text-align:center;
+          content: "\f784";
+          font-weight: bold;
+          font-family: "Font Awesome 5 Free";
+      }
+    } 
+    }
+  }
+
 
 /* Tab anchor */
 .r-tabs .r-tabs-nav .r-tabs-anchor {

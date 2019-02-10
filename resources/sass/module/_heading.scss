@@ -232,10 +232,17 @@ animation:moveInRight 1s ease-out;
 }
 .calendar-subheading{
     position: relative;
-  top: 55%;
-  bottom: 55%;
-  line-height:0.5 !important;
+    top: 55%;
+    bottom: 55%;
+    line-height:0.5;
 }
+@media  screen and (min-width: 320px) and (max-width:800px){
+  .calendar-subheading{
+      line-height:1.3 !important;
+      font-size:10px;
+  }
+
+  }
 //calender end
 //product-banner start
 .product-main-heading{

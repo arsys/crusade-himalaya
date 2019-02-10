@@ -23,6 +23,7 @@
         <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
     @endfor
     </ul>
+    
 
 <div id="Jan" class="r-tabs-accordion-title r-tabs-tab">
     @foreach($jan as $event)

@@ -47,7 +47,6 @@
 						<div class="call"><span uk-icon="icon: receiver; ratio: 2"></span>
                         <span class="call-details">Call Us On<span uk-icon="chevron-right"></span>{{$setting->mobile}}</span>
 						</div>
-							<span class="call-meta">{{ $setting->mobile }}</span>
 							<span class="call-meta">or Chat Online <i class="fab fa-whatsapp"></i>
 							</span>
 

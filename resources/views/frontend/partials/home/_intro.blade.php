@@ -2,7 +2,7 @@
     <div class="uk-container">
         <div class="uk-grid-divider uk-child-width-expand@s text-color " uk-grid>
             <div>
-                <h2 class="uk-h2  uk-text-center uk-margin-remove-bottom home-title"><span>Our Essence</span></h2>
+                <h2 class="uk-h2  uk-text-center uk-margin-remove-bottom home-title"><span>OUR ESSENCE</span></h2>
                  <p class="uk-text-center uk-margin-remove-top home-heading-secondary " id="home-sub-title"><span>Educate, Empower, Encourage</span></p>
 
 
@@ -10,20 +10,20 @@
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-hand-holding-heart intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Passion & Expertise</h6>
-                        <p class="uk-text-center intro-paragraph">we strive to open minds & refuse to sacrifice quality over quantity.</p>
+                        <p class="uk-text-center intro-paragraph">We strive to open minds & refuse to sacrifice quality over quantity.</p>
                     </div>
 
                     <div class="uk-width-1-3 intro ">
                         <i class="fas fa-compass intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Freedom to Explore</h6>
-                        <p class="uk-text-center intro-paragraph">we provide liberty to play on our trips & itineraries.</p>
+                        <p class="uk-text-center intro-paragraph">We provide liberty to play on our trips & itineraries.</p>
                     </div>
 
                     <div class="uk-width-1-3  intro">
                         <i class="fab fa-pagelines intro-icon"></i>
                         <h6 class="uk-text-center intro-title">Environmentally Engaged</h6>
-                        <p class="uk-text-center intro-paragraph">your least effort for the environment, you earn respect.</p>
-                        
+                        <p class="uk-text-center intro-paragraph">Your least effort for the environment, you earn respect.</p>
+
                     </div>
 
                 </div>
@@ -57,7 +57,7 @@
                 <p><strong>Your adventure awaits you! </strong><br />
                 Get in touch with us, and plan your perfect holiday &ndash; an unforgettable holiday filled with
                 adventure, excitement, and memories.</p>
-         
+
                 <a href="/who-we-are" class="button-link">Explore <span uk-icon="arrow-right"></span></a>
             </div>
     </div>

@@ -172,7 +172,7 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
                 <div class="booking-call"><span uk-icon="icon: receiver;"></span>
                     <span class="booking-call-details">Call Us On</span>
                 </div>
-                <span class="booking-call-meta">987654324</span>
+                <span class="booking-call-meta">+977-9808121644</span>
                 <span class="booking-call-meta">or Chat Online</span>
             </div>
         </div>

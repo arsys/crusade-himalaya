@@ -9,7 +9,7 @@
 						@csrf
 						<div class="uk-margin">
 							<label class="uk-form-label" for="form-stacked-text">Full Name</label>
-							<div class="uk-form-controls">  
+							<div class="uk-form-controls">
 								<input class="uk-input uk-form-width-large" type="text" placeholder="Full Name" name="fullName" required="">
 							</div>
 						</div>
@@ -22,7 +22,7 @@
 						</div>
 						<div class="uk-margin">
 							<label class="uk-form-label" for="form-stacked-text">Subject</label>
-							<div class="uk-form-controls">  
+							<div class="uk-form-controls">
 								<input class="uk-input uk-form-width-large" type="text" placeholder="Subject" name="subject" required="">
 							</div>
 						</div>
@@ -44,8 +44,8 @@
 			<div>
 				<div class="contact-info">
 					<div class="uk-flex uk-flex-column uk-width-1-1 contact-page">
-						<div class="call"><span uk-icon="icon: receiver; ratio: 2"></span> 
-							<span class="call-details">Call Us On<span uk-icon="chevron-right"></span></span>
+						<div class="call"><span uk-icon="icon: receiver; ratio: 2"></span>
+                        <span class="call-details">Call Us On<span uk-icon="chevron-right"></span>{{$setting->mobile}}</span>
 						</div>
 							<span class="call-meta">{{ $setting->mobile }}</span>
 							<span class="call-meta">or Chat Online <i class="fab fa-whatsapp"></i>

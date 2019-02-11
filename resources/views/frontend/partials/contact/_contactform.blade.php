@@ -55,7 +55,7 @@
 							<span class="mail-details">Operational Office<span uk-icon="chevron-right"></span> </span>
 						</div>
 							<span class="mail-meta">Crusade Himalaya</span>
-							<span class="mail-meta">P.O. Box 20062{{ $setting->mailbox }} </span>
+							<span class="mail-meta">{{ $setting->mailbox }} </span>
 							<span class="mail-meta">{{ $setting->phone }}</span>
 							<span class="mail-meta">{{ $setting->address }}</span>
 							<span class="mail-meta">{{ $setting->city }}, Nepal</span>

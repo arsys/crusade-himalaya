@@ -52,6 +52,8 @@ class SettingController extends Controller
                 $contact->address = $request->address;
                 $contact->city = $request->city;
                 $contact->phone = $request->phone;
+                $contact->mobile = $request->mobile;
+                $contact->mailbox = $request->mailbox;
                 $contact->website = $request->website;
                 $contact->facebook = $request->facebook;
                 $contact->twitter = $request->twitter;
@@ -109,6 +111,8 @@ class SettingController extends Controller
             $setting->address = $request->address;
             $setting->city = $request->city;
             $setting->phone = $request->phone;
+            $contact->mobile = $request->mobile;
+            $contact->mailbox = $request->mailbox;
             $setting->website = $request->website;
             $setting->facebook = $request->facebook;
             $setting->twitter = $request->twitter;

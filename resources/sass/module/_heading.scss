@@ -102,6 +102,16 @@
   top: 50%;
   bottom: 50%;
 }
+@media (min-width: 320px) and (max-width: 812px){
+  .heading-wrapper {
+    .page-heading{
+    font-size:25px;
+  }
+  .page-subheading{
+    font-size:13px;
+  }
+}
+}
 // page->packages->treking start
 .heading-wrapper{
   background:rgba(0,0,0,0.3) !important;

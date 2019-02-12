@@ -38,11 +38,11 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo
 @if(Session::has('success'))
 <!-- Event snippet for Interested-Lead conversion page -->
 <script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-764894982/xF7qCO77-JQBEIa-3ewC',
-      'value': 1.0,
-      'currency': 'USD'
-  });
+gtag('event', 'conversion', {
+     'send_to': 'AW-764894982/xF7qCO77-JQBEIa-3ewC',
+     'value': 1.0,
+     'currency': 'USD'
+     });
 </script>
 @endif
 @stop

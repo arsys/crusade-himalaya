@@ -89,6 +89,7 @@
         })(document);
     </script>
     @yield('styles')
+    @yield('conversion')
 </head>
 
 <body>

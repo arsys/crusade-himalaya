@@ -44,3 +44,14 @@ Complete | Step 3
 {{-- message end --}}
 
 @stop
+@section('conversion')
+<!-- Event snippet for Purchase conversion page -->
+<script>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-764894982/KI4RCOXvhZUBEIa-3ewC',
+        'value': 2.0,
+        'currency': 'USD',
+        'transaction_id': ''
+    });
+  </script>
+@endsection

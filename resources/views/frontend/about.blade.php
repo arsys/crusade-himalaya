@@ -1,11 +1,11 @@
 @section('mtitle')
-About	
+Who We Are
 @stop
 @section('title')
-About
+Who We Are
 @stop
 @section('description')
-About
+Who We Are
 @stop
 @extends('layouts.frontend')
 @section('content')
@@ -36,7 +36,7 @@ About
 		// $('.team').readmore({
 		// 	speed: 1000,
 		// 	collapsedHeight: lineHeight * lines
-		// });		
+		// });
 	});
 
 </script>

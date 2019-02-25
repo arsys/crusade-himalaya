@@ -3,7 +3,7 @@
 		<div class="uk-overlay-primary uk-position-cover overlay"></div>
 		<h1 class="page-heading uk-margin-large-left">Who We Are</h1>
 		<p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">
-			Nepal isn't a destination, it is an experience; 
+			Nepal isn't a destination, it is an experience;
 			an experience beyond the ordinary.
 		</p>
 		<div class="breadcrumb ">

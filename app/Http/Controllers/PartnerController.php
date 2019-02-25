@@ -52,7 +52,7 @@ class PartnerController extends Controller
         $name = md5(now().$file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
 
         $file->move($this->path, $name);
-        Image::make($this->path.'/'.$name)->fit(2000, 100, function ($constraint) {
+        Image::make($this->path.'/'.$name)->fit(200, 100, function ($constraint) {
 			$constraint->upsize();
 		})->save($this->path.'/'.$name);
         ImageOptimizer::optimize($this->path.'/'.$name);

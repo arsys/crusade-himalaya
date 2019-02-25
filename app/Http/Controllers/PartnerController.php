@@ -42,15 +42,30 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-         if (!is_dir($this->path)) {
-            mkdir($this->path, 0755, true);
-        }
+        //  if (!is_dir($this->path)) {
+        //     mkdir($this->path, 0755, true);
+        // }
+        // $partner = new Partner;
+        // $file = $request->file('photo');
+        // $name = md5($file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
+        // if (!is_dir($this->path)) {
+        //     mkdir($this->path, 0755, true);
+        // }
+        // $file->move($this->path, $name);
+        // ImageOptimizer::optimize($this->path.'/'.$name);
+        // $partner->create(['path'=> $this->path.'/'.$name]);
+        // return 'Done';
+        $this->validate($request, [
+            'photo' => 'required|mimes:jpg,jpeg|max:10000'
+        ]);
+
         $partner = new Partner;
+
         $file = $request->file('photo');
-        $name = md5($file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
-        if (!is_dir($this->path)) {
-            mkdir($this->path, 0755, true);
-        }
+        $name = md5(now().$file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
+        // if (!is_dir($this->path)) {
+        //     mkdir($this->path, 0755, true);
+        // }
         $file->move($this->path, $name);
         ImageOptimizer::optimize($this->path.'/'.$name);
         $partner->create(['path'=> $this->path.'/'.$name]);

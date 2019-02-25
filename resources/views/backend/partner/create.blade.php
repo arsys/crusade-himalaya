@@ -44,7 +44,7 @@
     Dropzone.options.addPhotosForm = {
         paramName: 'photo',
         maxFileSize: 20,
-        acceptedFiles: '.jpg, .jpeg','.png',
+        acceptedFiles: '.jpg, .jpeg,.png',
         dictDefaultMessage: "Drop images here to upload",
     };
 </script>

@@ -36,7 +36,7 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
                 @foreach($medias as $media)
                 <div class="uk-width-auto">
                 <a href="{{$media->link}}">
-                <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
+                <img data-src="{{$media->path}}" alt="{{$media->name}}" width="300px" height="150px" uk-img>
                     </a>
                 </div>
                 @endforeach

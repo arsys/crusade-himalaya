@@ -49,6 +49,7 @@ class PartnerController extends Controller
             mkdir($this->path, 0755, true);
         }
         $partner = new Partner;
+        $partner->type = $request->type;
         $file = $request->file('photo');
         $name = md5($file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
         if (!is_dir($this->path)) {

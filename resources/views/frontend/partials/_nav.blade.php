@@ -1,12 +1,12 @@
 <!-- nav bar start -->
-<div class=" uk-padding-remove uk-margin-remove uk-card uk-card-default " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" id="nav-wrapper">       
+<div class=" uk-padding-remove uk-margin-remove uk-card uk-card-default " uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" id="nav-wrapper">
   <nav class="uk-navbar-container  parent"  uk-navbar id="navbar">
-    <div class="uk-navbar-left "> 
+    <div class="uk-navbar-left ">
       <div class="uk-margin-medium-left">
         <a href="/">
           <img data-src="{{asset('img/crusade-logo.svg')}}" alt="" style=" width: 140px;" uk-img >
         </a>
-      </div> 
+      </div>
     </div>
     <div class="uk-navbar-right">
       <ul id="menu1" class="uk-navbar-nav uk-visible@l uk-margin-medium-right">
@@ -56,6 +56,7 @@
       </li>
       <li class="nav-list"><a href="{{ route('frontend-eventCalender') }}" class="nav-a">Whats on</a></li>
       <li class="nav-list"><a href="/who-we-are" class="nav-a">Who we are</a></li>
+      <li class="nav-list"><a href="/partners" class="nav-a">Partners</a></li>
       <li>
         <div class="uk-navbar-item uk-margin-remove-left uk-margin-remove-top">
           <a class="contact-button" href="/contact">Contact</a>
@@ -75,7 +76,7 @@
   <div id="offcanvas-nav" uk-offcanvas="flip: true; overlay: true">
     <div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide sidebar">
       <ul class="uk-nav uk-nav-default sidebar-list">
-        <li class="uk-active sidebar-listing"><a href="/">Home</a></li>              
+        <li class="uk-active sidebar-listing"><a href="/">Home</a></li>
         <li>
           <ul uk-accordion>
             <li><a class="uk-accordion-title uk-margin-small-top" href="#">What  We Do</a>
@@ -91,7 +92,7 @@
                 </ul>
               </div>
             </li>
-          </ul>          
+          </ul>
         </li>
         <li>
           <ul class="uk-margin-small-top" uk-accordion>
@@ -107,7 +108,7 @@
               </div>
             </li>
           </li>
-        </ul>          
+        </ul>
         <li class="sidebar-listing uk-margin-small-top"><a href="{{ route('frontend-eventCalender') }}">Whats on</a></li>
         <li class="sidebar-listing uk-margin-small-top"><a href="/who-we-are">Who we are</a></li>
         <li class="sidebar-listing "><a href="/contact">Contact</a></li>

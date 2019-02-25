@@ -63,7 +63,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                             @endif
                             {{ Form::label('elevation', 'Elevation') }}
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 {{--Price --}}
                 <div class="row">
@@ -73,7 +73,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                                 <option value="">&nbsp;</option>
                                 @foreach($difficulties as $level)
                                 <option value="{{ $level->id }}" {{($level->id == $tour->difficulty->id)?"selected":"" }}>{{ $level->name }}</option>
-                                t
                                 @endforeach
                             </select>
                             <label for="difficulty">Difficulty</label>
@@ -105,7 +104,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                             </select>
                             <label for="category">Category</label>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 {{--Altitude, group, difficulty --}}
                 <div class="row">
@@ -205,7 +204,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                 <i class="far fa-images"></i>  Gallery
             </button>
         </div>
-    </div>        
+    </div>
 </div>
 <div class="row">
     <div class="col-sm-6">
@@ -270,7 +269,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
             <div class="modal-body text-center">
                 @if(!empty($images))
                 <select class="image-picker show-html"
-                name="featured"> 
+                name="featured">
                 <option value=""></option>
                 @foreach($images  as $image)
                 <option data-img-src="{{asset($image->thumb)}}"

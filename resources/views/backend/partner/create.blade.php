@@ -16,9 +16,15 @@
                             class="dropzone"
                             id="addPhotosForm">
                         {{ csrf_field() }}
-                        <select>
-                            <option>Test</option>
-                        </select>
+                        <div class="form-group floating-label">
+                                <select name="type" id="type" class="form-control" required>
+                                    <option value="">&nbsp;</option>
+                                    <option value="media">Media</option>
+                                    <option value="accommodation">Accommodation</option>
+                                    <option value="travel">Travel</option>
+                                </select>
+                                <label for="type">type</label>
+                            </div>
                         <div class="dz-message">
                             <h3>Drop files here or click to upload.</h3>
                             <h4>Resolution: 165x155</h4>

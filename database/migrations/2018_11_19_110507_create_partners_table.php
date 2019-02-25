@@ -19,7 +19,6 @@ class CreatePartnersTable extends Migration
             $table->string('type')->nullable();
             $table->string('name')->nullable();
             $table->string('url')->nullable();
-            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

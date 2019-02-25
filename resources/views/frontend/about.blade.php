@@ -1,11 +1,11 @@
 @section('mtitle')
-Who We Are
+Who We Are | {{config('app.name')}}
 @stop
 @section('title')
-Who We Are
+Who We Are | {{config('app.name')}}
 @stop
 @section('description')
-Who We Are
+Nepal isn't a destination, it is an experience, an experience beyond the ordinary.
 @stop
 @extends('layouts.frontend')
 @section('content')

@@ -1,9 +1,9 @@
 @extends('layouts.frontend')
 @section('mtitle')
-Contact Us
+Contact Us | {{config('app.name')}}
 @stop
 @section('title')
-Contact Us
+Contact Us | {{config('app.name')}}
 @stop
 @section('description')
 Contact Us

@@ -19,9 +19,9 @@
                         <div class="form-group">
                                 <select name="type" id="type" class="form-control" required>
                                     <option value="">&nbsp;</option>
-                                    <option value="media">Media</option>
-                                    <option value="accommodation">Accommodation</option>
-                                    <option value="travel">Travel</option>
+                                    <option value="1">Media</option>
+                                    <option value="2">Accommodation</option>
+                                    <option value="3">Travel</option>
                                 </select>
                                 <label for="type">Type</label>
                             </div>

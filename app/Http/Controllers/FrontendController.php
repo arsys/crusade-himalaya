@@ -198,6 +198,12 @@ public function ajaxsearchdeparture(Request $request)
 }
 
 public function getPartner(){
-    return view('frontend.pages.partners');
+    $medias = Partner::where('type',1)->get(); //media
+    $accommodations = Partner::where('type',2)->get(); //accommodation
+    $travels = Partner::where('type',3)->get(); //travel
+    return view('frontend.pages.partners')
+    ->withMedias($medias)
+    ->withAccommodations($accommodations)
+    ->withTravels($travels);
 }
 }

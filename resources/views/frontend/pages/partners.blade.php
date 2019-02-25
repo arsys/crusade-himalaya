@@ -39,7 +39,7 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
                 <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
                     </a>
                 </div>
-                @endfor
+                @endforeach
             </div>
             {{-- <h3>Accommodation Partners</h3>
             <div uk-grid>

@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
 class PartnerController extends Controller
 {
-    private $path = "uploads/images/partner/";
+    private $path = "uploads/images/partner";
     /**
      * Display a listing of the resource.
      *
@@ -42,19 +42,6 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        //  if (!is_dir($this->path)) {
-        //     mkdir($this->path, 0755, true);
-        // }
-        // $partner = new Partner;
-        // $file = $request->file('photo');
-        // $name = md5($file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
-        // if (!is_dir($this->path)) {
-        //     mkdir($this->path, 0755, true);
-        // }
-        // $file->move($this->path, $name);
-        // ImageOptimizer::optimize($this->path.'/'.$name);
-        // $partner->create(['path'=> $this->path.'/'.$name]);
-        // return 'Done';
         $this->validate($request, [
             'photo' => 'required|mimes:jpg,jpeg,png|max:10000'
         ]);
@@ -63,10 +50,11 @@ class PartnerController extends Controller
 
         $file = $request->file('photo');
         $name = md5(now().$file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
-        // if (!is_dir($this->path)) {
-        //     mkdir($this->path, 0755, true);
-        // }
+
         $file->move($this->path, $name);
+        Image::make($this->path.'/'.$name)->fit(2000, 100, function ($constraint) {
+			$constraint->upsize();
+		})->save($this->path.'/'.$name);
         ImageOptimizer::optimize($this->path.'/'.$name);
         $partner->create([
             'path'=> $this->path.'/'.$name,

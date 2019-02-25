@@ -42,10 +42,10 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
-        $this->validate($request, [
-            'photo' => 'required|mimes:jpg,jpeg,png|max:10000'
-        ]);
+        // dd($request->all());
+        // $this->validate($request, [
+        //     'photo' => 'required|mimes:jpg,jpeg,png|max:10000'
+        // ]);
         if (!is_dir($this->path)) {
             mkdir($this->path, 0755, true);
         }

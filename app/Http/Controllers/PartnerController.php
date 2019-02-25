@@ -68,7 +68,10 @@ class PartnerController extends Controller
         // }
         $file->move($this->path, $name);
         ImageOptimizer::optimize($this->path.'/'.$name);
-        $partner->create(['path'=> $this->path.'/'.$name]);
+        $partner->create([
+            'path'=> $this->path.'/'.$name,
+            'type'=>$request->type
+            ]);
         return 'Done';
     }
 

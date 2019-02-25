@@ -16,6 +16,9 @@
                             class="dropzone"
                             id="addPhotosForm">
                         {{ csrf_field() }}
+                        <select>
+                            <option>Test</option>
+                        </select>
                         <div class="dz-message">
                             <h3>Drop files here or click to upload.</h3>
                             <h4>Resolution: 165x155</h4>

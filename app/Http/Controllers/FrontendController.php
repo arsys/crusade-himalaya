@@ -197,7 +197,7 @@ public function ajaxsearchdeparture(Request $request)
     return view('frontend.tour.partials.dates', compact('departures', 'tour'));
 }
 
-public function partner(){
+public function getPartner(){
     return view('frontend.pages.partners');
 }
 }

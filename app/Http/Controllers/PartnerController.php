@@ -56,7 +56,7 @@ class PartnerController extends Controller
         // $partner->create(['path'=> $this->path.'/'.$name]);
         // return 'Done';
         $this->validate($request, [
-            'photo' => 'required|mimes:jpg,jpeg|max:10000'
+            'photo' => 'required|mimes:jpg,jpeg,png|max:10000'
         ]);
 
         $partner = new Partner;

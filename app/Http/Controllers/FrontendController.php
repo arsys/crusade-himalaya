@@ -33,7 +33,7 @@ class FrontendController extends Controller
         $evenDestinations = DB::table('regions')
         ->select(DB::raw('*'))
         ->whereRaw('MOD(id, 2) = 0')
-        ->get();        
+        ->get();
 
         return view('frontend.home')
         ->withCarousels($carousels)
@@ -56,22 +56,22 @@ class FrontendController extends Controller
         return view('frontend.about')
         ->withTeams($teams)
         ->withOthers($others);
-    } 
+    }
 
     public function truelyNepal()
-    {        
+    {
         return view('frontend.trulynepal');
-    } 
+    }
 
     public function getServices()
     {
 
         return view('frontend.service');
-    }   
+    }
 
     public function getContact()
     {
-     return view('frontend.contact'); 
+     return view('frontend.contact');
  }
  public function getProduct()
  {
@@ -100,11 +100,11 @@ public function getBookingstep1()
 }
 public function getSlideshow()
 {
-    return view('frontend.slideshow'); 
+    return view('frontend.slideshow');
 }
 public function getDestination()
 {
-    return view('frontend.destination'); 
+    return view('frontend.destination');
 }
 public function getPackages(){
     return view('frontend.packages');
@@ -137,7 +137,7 @@ public function tourDetailtest($slug)
     $itineraries = Itinerary::where('tour_id','=', $tour->id)
     ->orderBy('id', 'asc')->get();
 
-    $dates_count = Departure::where('tour_id','=',$tour->id)->get();    
+    $dates_count = Departure::where('tour_id','=',$tour->id)->get();
 
     $cat = $tour->category->name;
 
@@ -164,7 +164,7 @@ public function tourDetailtest($slug)
     // ->withReviews($reviews)
     ->withSimilars($similars)
     ->withDatecount($dates_count);
-}  
+}
 
 public function eventCalender()
 {
@@ -197,5 +197,7 @@ public function ajaxsearchdeparture(Request $request)
     return view('frontend.tour.partials.dates', compact('departures', 'tour'));
 }
 
-
+public function partner(){
+    return view('frontend.pages.partners');
+}
 }

@@ -26,7 +26,7 @@
 </div>
 <div class="foobar-btn-wrapper ">
 
-    <div class="uk-flex uk-flex-column uk-flex-middle">                
+    <div class="uk-flex uk-flex-column uk-flex-middle">
         <a class=" uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#modal-broucher" uk-toggle>
             <span class=" uk-margin-small-top " uk-icon="file-text"></span>
             <span>Request Brochure</span>
@@ -48,7 +48,7 @@
                             <input class="uk-input uk-form-width-large uk-width-1-1" type="email" placeholder="Email" name="email" required="">
                         </div>
                     </div>
-                    
+
                     <div class="uk-margin">
                         <button class="uk-button  uk-button-medium uk-width-1-1" type="Submit"> Send Request</button>
                     </div>
@@ -58,13 +58,13 @@
         </div>
         <a class=" uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="/contact">
             <span class="uk-margin-small-top " uk-icon="mail"></span>
-            <span>Contact Us</span> 
+            <span>Contact Us</span>
             <span class=" uk-margin-small-top " uk-icon="chevron-right"></span>
         </a>
 
         <a class="uk-padding-small uk-padding-remove-vertical uk-button-default uk-width-2-3 uk-margin-small-top" href="#modal-overflow" uk-toggle>
             <span class=" uk-margin-small-top " uk-icon="location"></span>
-            <span>Find Location</span> 
+            <span>Find Location</span>
             <span class=" uk-margin-small-top" uk-icon="chevron-right"></span>
         </a>
         <div id="modal-overflow" class="uk-flex-top" uk-modal>
@@ -86,6 +86,7 @@
         @foreach($pages as $page)
         <li><a href="{{ route('page-getPage',$page->slug) }}">{{ $page->title }}</a></li>
         @endforeach
+        <li><a href="/partners">Partners</a></li>
     </ul>
     <div class="uk-flex affilate-wrapper">
         <div class="uk-margin-left affilate-inner">

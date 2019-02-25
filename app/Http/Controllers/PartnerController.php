@@ -43,6 +43,7 @@ class PartnerController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
+        return Response::json($request->all());
         // $this->validate($request, [
         //     'photo' => 'required|mimes:jpg,jpeg,png|max:10000'
         // ]);

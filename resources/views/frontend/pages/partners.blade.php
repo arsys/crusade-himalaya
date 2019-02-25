@@ -33,12 +33,34 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
         <div class="uk-container">
             <h3>Media Partners</h3>
             <div uk-grid>
-                @for($i=1;$i<=6;$i++)
+                @foreach($medias as $media)
                 <div class="uk-width-auto">
-                        <img data-src="https://source.unsplash.com/300x150/?logo" alt="" uk-img>
+                <a href="{{$media->link}}">
+                <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
+                    </a>
                 </div>
                 @endfor
             </div>
+            {{-- <h3>Accommodation Partners</h3>
+            <div uk-grid>
+                @foreach($medias as $media)
+                <div class="uk-width-auto">
+                <a href="{{$media->link}}">
+                <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
+                    </a>
+                </div>
+                @endfor
+            </div> --}}
+            {{-- <h3>Travel Partners</h3>
+            <div uk-grid>
+                @foreach($medias as $media)
+                <div class="uk-width-auto">
+                <a href="{{$media->link}}">
+                <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
+                    </a>
+                </div>
+                @endfor
+            </div> --}}
         </div>
     </div>
 <!-- partner end-->

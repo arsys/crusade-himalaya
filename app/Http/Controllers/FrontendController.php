@@ -198,9 +198,9 @@ public function ajaxsearchdeparture(Request $request)
 }
 
 public function getPartner(){
-    $medias = Partner::where('type',1)->get(); //media
-    $accommodations = Partner::where('type',2)->get(); //accommodation
-    $travels = Partner::where('type',3)->get(); //travel
+    $medias = Partner::where('type',1)->where('status',1)->get(); //media
+    $accommodations = Partner::where('type',2)->where('status',1)->get(); //accommodation
+    $travels = Partner::where('type',3)->where('status',1)->get(); //travel
     return view('frontend.pages.partners')
     ->withMedias($medias)
     ->withAccommodations($accommodations)

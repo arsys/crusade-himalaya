@@ -17,13 +17,13 @@
                             id="addPhotosForm">
                         {{ csrf_field() }}
                         <div class="form-group">
-                                <select name="type" id="type" class="form-control" required>
+                                {{-- <select name="type" id="type" class="form-control" required>
                                     <option value="">&nbsp;</option>
                                     <option value="1">Media</option>
                                     <option value="2">Accommodation</option>
                                     <option value="3">Travel</option>
                                 </select>
-                                <label for="type">Type</label>
+                                <label for="type">Type</label> --}}
                             </div>
                         <div class="dz-message">
                             <h3>Drop files here or click to upload.</h3>

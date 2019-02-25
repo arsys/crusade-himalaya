@@ -42,16 +42,13 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-        return Response::json($request->all());
-        // $this->validate($request, [
-        //     'photo' => 'required|mimes:jpg,jpeg,png|max:10000'
-        // ]);
+        $this->validate($request, [
+            'photo' => 'required|mimes:jpg,jpeg|max:10000'
+        ]);
         if (!is_dir($this->path)) {
             mkdir($this->path, 0755, true);
         }
         $partner = new Partner;
-        $partner->type = $request->type;
         $file = $request->file('photo');
         $name = md5($file->getClientOriginalName()).'.' .$file->getClientOriginalExtension();
         if (!is_dir($this->path)) {

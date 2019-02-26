@@ -1,8 +1,8 @@
 @section('mtitle')
-Partners | {{config('app.name')}}
+Press | {{config('app.name')}}
 @stop
 @section('title')
-Partners | {{config('app.name')}}
+Press | {{config('app.name')}}
 @stop
 @section('description')
 Nepal isn't a destination, it is an experience, an experience beyond the ordinary.
@@ -21,7 +21,7 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
 		<div class="breadcrumb ">
 			<ul class="uk-breadcrumb" id="breadcrumb">
 				<li><a href="/" uk-icon="icon: home" ></a></li>
-				<li class="uk-disabled"><a href="{{ url()->current() }}">Partners</a></li>
+				<li class="uk-disabled"><a href="{{ url()->current() }}">Press</a></li>
 			</ul>
 		</div>
 	</div>
@@ -31,7 +31,7 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
 <!-- partner start-->
 <div class="uk-section uk-section-muted">
         <div class="uk-container">
-            <h3>Media Partners</h3>
+            <h3>On Medias</h3>
             <div uk-grid>
                 @foreach($medias as $media)
                 <div class="uk-width-auto">

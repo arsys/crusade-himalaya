@@ -86,7 +86,7 @@
         @foreach($pages as $page)
         <li><a href="{{ route('page-getPage',$page->slug) }}">{{ $page->title }}</a></li>
         @endforeach
-        <li><a href="/partners">Partners</a></li>
+        <li><a href="/press">Press</a></li>
     </ul>
     <div class="uk-flex affilate-wrapper">
         <div class="uk-margin-left affilate-inner">

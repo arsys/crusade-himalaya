@@ -100,7 +100,7 @@ Route::name('frontend-')->group(function () {
 Route::get('/', 'FrontendController@getIndex');
 Route::get('/who-we-are', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
-Route::get('/partners', 'FrontendController@getPartner')->name('partner');
+Route::get('/press', 'FrontendController@getPartner')->name('partner');
 
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');

@@ -206,4 +206,7 @@ public function getPartner(){
     ->withAccommodations($accommodations)
     ->withTravels($travels);
 }
+public function getSitemap(){
+    return view('frontend.sitemap');
+}
 }

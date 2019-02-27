@@ -101,6 +101,7 @@ Route::get('/', 'FrontendController@getIndex');
 Route::get('/who-we-are', 'FrontendController@getAbout');
 Route::get('/contact', 'FrontendController@getContact');
 Route::get('/press', 'FrontendController@getPartner')->name('partner');
+Route::get('/sitemap', 'FrontendController@getSitemap')->name('sitemap');
 
 Route::prefix('trip')->name('trip.')->group(function () {
 	Route::get('{slug}','GetController@tripDetail')->name('detail');
@@ -126,5 +127,5 @@ Route::prefix('destination')->group(function () {
 Route::name('page-')->group(function () {
 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');
 });
-Route::view('/sitemap', 'frontend.sitemap.blade.php');
+
 

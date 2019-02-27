@@ -126,5 +126,5 @@ Route::prefix('destination')->group(function () {
 Route::name('page-')->group(function () {
 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');
 });
-Route::view('/sitemap', 'frontend.sitemap');
+Route::view('/sitemap', 'frontend.sitemap.blade.php');
 

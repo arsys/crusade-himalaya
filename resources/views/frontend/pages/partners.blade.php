@@ -5,7 +5,7 @@ Press | {{config('app.name')}}
 Press | {{config('app.name')}}
 @stop
 @section('description')
-Nepal isn't a destination, it is an experience, an experience beyond the ordinary.
+The genuine enthusiasm for travel worked for us. Because of Our unique approach We have been featured in the media across the world.
 @stop
 @extends('layouts.frontend')
 @section('content')
@@ -13,10 +13,9 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
 <section class="uk-container-expand about " uk-grid>
 	<div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{asset('img/dolls.webp')}}" uk-img>
 		<div class="uk-overlay-primary uk-position-cover overlay"></div>
-		<h1 class="page-heading uk-margin-large-left">partners</h1>
+		<h1 class="page-heading uk-margin-large-left">Press</h1>
 		<p class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom">
-			Nepal isn't a destination, it is an experience;
-			an experience beyond the ordinary.
+			The genuine enthusiasm for travel worked for us. Because of Our unique approach We have been featured in the media across the world.
 		</p>
 		<div class="breadcrumb ">
 			<ul class="uk-breadcrumb" id="breadcrumb">

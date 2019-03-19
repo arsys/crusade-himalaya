@@ -6,7 +6,7 @@
             <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
         </div>
         <div class="uk-width-1-2@m">
-
+            <img data-src="{{ asset('img/1.jpg') }}" width="576" height="486" alt="Crusade Himalay in Donation Program" uk-img>
         </div>
     </div>
 </div>

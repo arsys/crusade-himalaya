@@ -7,7 +7,7 @@
  <div class="uk-height-large uk-width-*@s uk-background-cover uk-light page-cover uk-background-fixed" data-src="{{ asset($category->path) }}" uk-img>
     <div class="uk-overlay uk-overlay-primary uk-position-bottom heading-wrapper">
         <h1 class="page-heading uk-margin-large-left">{{ $category->name }}</h1>
-        <h3 class="page-subheading uk-margin-large-left uk-margin-top uk-margin-bottom ">{{ $category->description }}</h3>
+        <h3 class="travel-sub-heading uk-margin-large-left uk-margin-top uk-margin-bottom ">{{ $category->description }}</h3>
     </div>
     <div class="breadcrumb uk-visible@l">
         <ul class="uk-breadcrumb" id="breadcrumb">
@@ -40,10 +40,10 @@
                                 </div>
                                 <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
                                     <h4 class="hp-days">{{ $package->days }} Days</h4>
-                                </div>    
+                                </div>
                             </div>
                         </div>
-                    </div>                        
+                    </div>
                 </div>
             </li>
             @endforeach

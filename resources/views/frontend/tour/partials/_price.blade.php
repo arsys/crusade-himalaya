@@ -1,19 +1,19 @@
 <div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">
 	<div class="uk-container-expand ">
-		<div class="uk-card uk-card-default uk-card-body ">
             @if (!empty($tour->budgetPrice))
-            <div uk-grid>
+            <div uk-grid class="uk-card-header">
                 <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-margin-remove-bottom">Luxury Package: USD {{$tour->price}}</p>
+                    <p class="uk-text-bold">Luxury Package: USD {{$tour->price}}</p>
                 </div>
                 <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-margin-remove-bottom">Budget Package: USD {{$tour->budgetPrice}}</p>
+                    <p class="uk-text-bold">Budget Package: USD {{$tour->budgetPrice}}</p>
                 </div>
                 <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-margin-remove-bottom">Single Supplement: USD {{$tour->signleSupp}}</p>
+                    <p class="uk-text-bold">Single Supplement: USD {{$tour->signleSupp}}</p>
                 </div>
             </div>
             @endif
+		<div class="uk-card uk-card-default uk-card-body ">
 			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small search-wrapper">
 				<div>
 					<p class="text-color">Please Check Available Dates for The Year:</p>

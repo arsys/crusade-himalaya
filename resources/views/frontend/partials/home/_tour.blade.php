@@ -10,7 +10,13 @@
                         <a href="{{ route('trip.detail',$featured->slug) }}" class="hp-link"><img    src="{{ asset($featured->image->thumb) }}" alt="{{ $featured->slug }}"></a>
                         <div class="uk-overlay uk-overlay-default uk-position-top price-wrapper" >
                             <span class="price">
-                                <span>USD ${{ $featured->price }}</span>
+                                <span>USD $
+                                    @if (!empty($featured->budgetPrice))
+                                        {{$featured->budgetPrice}}
+                                    @else
+                                        {{ $featured->price }}
+                                    @endif
+                                </span>
                             </span>
                         </div>
                         <div class="uk-overlay uk-overlay-default hp-wrapper">
@@ -20,10 +26,10 @@
                                 </div>
                                 <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
                                     <h4 class="hp-days">{{ $featured->days }} Days</h4>
-                                </div>    
+                                </div>
                             </div>
                         </div>
-                    </div>                        
+                    </div>
                 </div>
            </li>
             @endforeach

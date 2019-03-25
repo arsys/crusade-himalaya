@@ -31,7 +31,13 @@
                     </a>
                     <div class="uk-overlay uk-overlay-default uk-position-top price-wrapper">
                             <span class="price">
-                               <span>USD ${{ $package->price }}</span>
+                               <span>USD $
+                                @if (!empty($package->budgetPrice))
+                                    {{$package->budgetPrice}}
+                                @else
+                                    {{ $package->price }}
+                                @endif
+                               </span>
                            </span>
                     </div>
                     <div class="uk-overlay uk-overlay-default uk-padding-medium hp-wrapper">
@@ -41,10 +47,10 @@
                             </div>
                             <div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
                                 <h4 class="hp-days">{{ $package->days }} Days</h4>
-                            </div>    
+                            </div>
                         </div>
                     </div>
-                </div>                        
+                </div>
             </div>
         </li>
         @endforeach

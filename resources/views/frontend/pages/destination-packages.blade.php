@@ -30,7 +30,13 @@
                         </a>
                         <div class="uk-overlay uk-overlay-default uk-position-top price-wrapper">
                             <span class="price">
-                               <span>USD ${{ $package->price }}</span>
+                               <span>USD $
+                                @if (!empty($package->budgetPrice))
+                                    {{$package->budgetPrice}}
+                                @else
+                                    {{ $package->price }}
+                                @endif
+                               </span>
                            </span>
                         </div>
                         <div class="uk-overlay uk-overlay-default  hp-wrapper">

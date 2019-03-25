@@ -1,5 +1,5 @@
 @section('mtitle')
-Join {{$tour->days}} Days {{$tour->title}} | Step 1 
+Join {{$tour->days}} Days {{$tour->title}} | Step 1
 @stop
 @section('title')
 Join {{$tour->days}} Days {{$tour->title}} | Step 1
@@ -35,7 +35,7 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
 
 <!-- fieldsets  start-->
 <div class="uk-container uk-container-xsmall uk-padding">
-  <h3 class="uk-padding-small uk-text-center"><span>No. of Travellers</span></h3> 
+  <h3 class="uk-padding-small uk-text-center"><span>No. of Travellers</span></h3>
   <form class="uk-form-stacked" method="POST" action="{{route('trip.stepTwo',$tour->slug)}}">
     @csrf
     <div class="uk-margin">
@@ -45,6 +45,14 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
         <input class="uk-input" type="text" placeholder="{{$tour->title}}" disabled>
       </div>
     </div>
+    @if (!empty($tour->price) && !empty($tour->budgetPrice))
+    <div class="uk-margin">
+        <div class="uk-form-controls">
+            <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->price}}">Budget ( USD {{$tour->price}})</label>
+            <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->budgetPrice}}" >Budget ( USD {{$tour->budgetPrice}})</label>
+        </div>
+    </div>
+    @endif
     <div class="uk-grid-small" uk-grid>
       <div class="uk-width-1-2@s">
         <label class="uk-form-label">Start Date</label>

@@ -135,7 +135,7 @@ class GetController extends Controller
 	public function stepOne(Request $request)
 	{
 		$data =  array(
-			'date' => $request->date
+            'date' => $request->date
 		);
 		$tour = Tour::where('slug','=', $request->slug)->first();
 		return view('frontend.tour.book.step1')
@@ -147,7 +147,8 @@ class GetController extends Controller
 	{
 		$data =  array(
 			'travellers' => $request->travellers,
-			'date' => $request->date
+            'date' => $request->date,
+            'budget' => $request->budget
 		);
 		$tour = Tour::where('id','=', $request->tour_id)->first();
 		return view('frontend.tour.book.step2')
@@ -185,6 +186,7 @@ class GetController extends Controller
 		$sub = "!! New Booking !! for ". $tour->title." ". $tour->days." Days";
 		$data = array(
             'start_date' => $request->start_date,
+            'start_date' => $request->budget,
 			'name' => $request->fullname,
             'subject' => $sub,
             'trip_name' => $tour->title." ". $tour->days." Days",

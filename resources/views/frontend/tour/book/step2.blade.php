@@ -45,6 +45,7 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
         <input type="hidden" value="{{ $data['travellers'] }}" name="travellers">
         <input type="hidden" value="{{ $tour->id }}" name="tour_id">
         <input type="hidden" name="start_date" value="{{$data['date']}}">
+        <input type="hidden" name="budget" value="${{$data['budget']}}">
         <div class="uk-margin">
             <label class="uk-form-label" for="form-stacked-text">Full Name</label>
             <div class="uk-form-controls">
@@ -150,10 +151,10 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
             </div>
             <div class="uk-card-footer" uk-grid>
                 <div class="uk-width-1-2">
-                    <span>${{ $tour->price }} x {{ $data['travellers'] }} person</span>
+                    <span>${{ $data['budget']}} x {{ $data['travellers'] }} person</span>
                 </div>
                 <div class="uk-width-1-2">
-                    <span>${{ $tour->price*$data['travellers'] }}</span>
+                    <span>${{ $data['budget']*$data['travellers'] }}</span>
                 </div>
             </div>
             <div class="uk-card-footer">

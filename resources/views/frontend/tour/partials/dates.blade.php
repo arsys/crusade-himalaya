@@ -3,7 +3,6 @@
     <td class="text-color">{{ date("jS M, Y", strtotime($departure->start))}}</td>
     <td class="text-color">{{ date("jS M, Y", strtotime($departure->end))}}</td>
     <td class="text-color">{{$departure->slot}} space left</td>
-    <td class="text-color">USD {{$departure->price}}</td>
     <td class="text-color">
         <form action="{{ route('trip.stepOne',$tour->slug) }}" method="POST">
             @csrf

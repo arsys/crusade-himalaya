@@ -10,7 +10,14 @@
 				</span>
 				<span class="middle uk-flex uk-flex-column ">
 					<span class="middle-1">From USD</span>
-                    <span class="middle-2"> <sup>$</sup> {{ $tour->price }}</span>
+                    <span class="middle-2">
+                        <sup>$</sup>
+                        @if (!empty($tour->budgetPrice))
+                            {{$tour->budgetPrice}}
+                        @else
+                            {{ $tour->price }}
+                        @endif
+                    </span>
                     <span>per person</span>
 				</span>
 				@if($tour->departure->count() > 0)

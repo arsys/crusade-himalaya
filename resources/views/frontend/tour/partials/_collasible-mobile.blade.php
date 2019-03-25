@@ -13,7 +13,14 @@
                     <span class="uk-align-center">{{ $tour->days }} Days</span>
                 </div>
                 <div class="uk-flex uk-flex-row">
-                    <span class="uk-align-center">USD <sup>$</sup>{{ $tour->price }}</span>
+                    <span class="uk-align-center">
+                        USD <sup>$</sup>
+                        @if (!empty($tour->budgetPrice))
+                            {{$tour->budgetPrice}}
+                        @else
+                            {{ $tour->price }}
+                        @endif
+                    </span>
                 </div>
                 <div class="uk-flex uk-flex-row">
                     <span class="uk-align-center">per person</span>

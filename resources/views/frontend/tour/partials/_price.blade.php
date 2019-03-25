@@ -1,4 +1,4 @@
-<div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">		
+<div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">
 	<div class="uk-container-expand ">
 		<div class="uk-card uk-card-default uk-card-body ">
 			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small search-wrapper">
@@ -38,14 +38,13 @@
 		</div>
 	</div>
 	<!--table start-->
-	<div class="uk-overflow-auto">					
+	<div class="uk-overflow-auto">
 		<table class="uk-table uk-table-hover uk-table-divider table ">
 			<thead>
 				<tr class="table-wrapper">
 					<th>Start Date</th>
 					<th>End Date</th>
 					<th>Status</th>
-					<th>Cost</th>
 					<th></th>
 				</tr>
 			</thead>
@@ -53,14 +52,13 @@
 			<div class="uk-position-bottom-center" style="display: none;">
 				<span uk-spinner="ratio: 3" class="ajaxloader"  ></span>
 			</div>
-			
+
 			<tbody class="ajaxloadmoredeparture table-wrap">
 				@foreach($departures as $departure)
 				<tr class="table-row">
 					<td class="text-color">{{ date("jS M, Y", strtotime($departure->start))}}</td>
 					<td class="text-color">{{ date("jS M, Y", strtotime($departure->end))}}</td>
 					<td class="text-color">{{$departure->slot}} space left</td>
-					<td class="text-color">USD {{$departure->price}}</td>
 					<td class="text-color">
 						<form action="{{ route('trip.stepOne',$tour->slug) }}" method="POST">
 							@csrf
@@ -72,6 +70,6 @@
 				@endforeach
 			</tbody>
 		</table>
-	</div>	
+	</div>
 	<!--table end-->
 </div>

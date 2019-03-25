@@ -8,9 +8,11 @@
                 <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
                     <p class="uk-text-bold">Budget Package: USD {{$tour->budgetPrice}}</p>
                 </div>
+                @if (!empty($tour->singleSupp))
                 <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
                     <p class="uk-text-bold">Single Supplement: USD {{$tour->signleSupp}}</p>
                 </div>
+                @endif
             </div>
             @endif
 		<div class="uk-card uk-card-default uk-card-body ">

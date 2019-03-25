@@ -26,9 +26,44 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                         </div>
                     </div>
                 </div>
-                {{--Title --}}
                 <div class="row">
                     <div class="col-sm-4">
+                        <div class="form-group floating-label">
+                            <input type="number" class="form-control"
+                            id="price {{$errors->has('price') ? 'inputError' : ''}}" name="price"
+                            value="{{ old('price') }}" required>
+                            @if($errors->has('price'))
+                            <span class="help-block">{{ $errors->first('price') }}</span>
+                            @endif
+                            {{ Form::label('price', 'Luxury Price') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group floating-label">
+                            <input type="number" class="form-control"
+                            id="budgetPrice {{$errors->has('budgetPrice') ? 'inputError' : ''}}" name="budgetPrice"
+                            value="{{ old('budgetPrice') }}" required>
+                            @if($errors->has('budgetPrice'))
+                            <span class="help-block">{{ $errors->first('budgetPrice') }}</span>
+                            @endif
+                            {{ Form::label('budgetPrice', 'Budget Price') }}
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group floating-label">
+                            <input type="number" class="form-control"
+                            id="singleSupp {{$errors->has('singleSupp') ? 'inputError' : ''}}" name="singleSupp"
+                            value="{{ old('singleSupp') }}" required>
+                            @if($errors->has('singleSupp'))
+                            <span class="help-block">{{ $errors->first('singleSupp') }}</span>
+                            @endif
+                            {{ Form::label('singleSupp', 'Single Supplement Price') }}
+                        </div>
+                    </div>
+                </div>
+                {{--Title --}}
+                <div class="row">
+                    <div class="col-sm-6">
                         <div class="form-group floating-label {{$errors->has('days') ? 'has-error' : ''}}">
                             <input type="number" class="form-control"
                             id="days {{$errors->has('days') ? 'inputError' : ''}}" name="days"
@@ -38,19 +73,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                             @endif
                             {{ Form::label('days', 'Days ') }}
                         </div>
-                    </div>   
-                    <div class="col-sm-4">
-                        <div class="form-group floating-label">
-                            <input type="number" class="form-control"
-                            id="price {{$errors->has('price') ? 'inputError' : ''}}" name="price"
-                            value="{{ old('price') }}" required>
-                            @if($errors->has('price'))
-                            <span class="help-block">{{ $errors->first('price') }}</span>
-                            @endif
-                            {{ Form::label('price', 'Price') }}
-                        </div>
                     </div>
-                    <div class="col-sm-4">
+
+                    <div class="col-sm-6">
                         <div class="form-group floating-label">
                             <input type="text" class="form-control"
                             id="elevation {{$errors->has('elevation') ? 'inputError' : ''}}" name="elevation"
@@ -60,7 +85,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                             @endif
                             {{ Form::label('elevation', 'Max elevation ') }}
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 {{--Price --}}
                 <div class="row">
@@ -97,7 +122,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                             </select>
                             <label for="category">Category</label>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 {{--Altitude, group, difficulty --}}
                 <div class="row">

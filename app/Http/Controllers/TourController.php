@@ -80,13 +80,15 @@ class TourController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {     
+    {
     // dd($request->all())   ;
         try {
             $this->validate($request, [
                 'title' => 'required|max:255',
                 'days' => 'required|numeric|max:90',
                 'price' => 'required|numeric',
+                'budgetPrice' => 'sometimes|numeric',
+                'singleSupp' => 'sometimes|numeric',
                 'elevation' => 'required',
                 'difficulty' => 'required',
                 'group' => 'required',
@@ -150,10 +152,10 @@ class TourController extends Controller
                 $upload = new UploadImage;
                 $sImage = new Slide;
                 $sImage->tour_id = $tour->id;
-                $sImage->media_id = $media->id; 
+                $sImage->media_id = $media->id;
                 $sImage->path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
                 $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
-                $sImage->name = $media->name; 
+                $sImage->name = $media->name;
                 $sImage->save();
             }
 
@@ -221,6 +223,8 @@ class TourController extends Controller
                 'title' => 'required|max:255',
                 'days' => 'required|numeric|max:90',
                 'price' => 'required|numeric',
+                'budgetPrice' => 'sometimes|numeric',
+                'singleSupp' => 'sometimes|numeric',
                 'elevation' => 'required',
                 'difficulty' => 'required',
                 'group' => 'required',
@@ -239,6 +243,12 @@ class TourController extends Controller
             $tour->title = $request->title;
             $tour->days = $request->days;
             $tour->price = $request->price;
+            if (!empty($request->budgetPrice)) {
+                $tour->budgetPrice = $request->budgetPrice;
+            }
+            if (!empty($request->singleSupp)) {
+                $tour->singleSupp = $request->singleSupp;
+            }
             $tour->elevation = $request->elevation;
             $tour->difficulty_id = $request->difficulty;
             $tour->group_id = $request->group;
@@ -297,10 +307,10 @@ class TourController extends Controller
                     $upload = new UploadImage;
                     $sImage = new Slide;
                     $sImage->tour_id = $tour->id;
-                    $sImage->media_id = $media->id; 
+                    $sImage->media_id = $media->id;
                     $sImage->path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
                     $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
-                    $sImage->name = $media->name; 
+                    $sImage->name = $media->name;
                     $sImage->save();
                 }
             }
@@ -310,7 +320,7 @@ class TourController extends Controller
             Session::flash('success', $e->getMessage());
         }
         Session::flash('success', 'Tour created sucessfully !');
-        return redirect()->route('tour.show',$tour->id);        
+        return redirect()->route('tour.show',$tour->id);
     }
 
     /**
@@ -341,12 +351,12 @@ class TourController extends Controller
         if ($test = $tour->excludes()->count() != null) {
             $tour->excludes()->detach();
         }
-        
+
         $tour->delete();
 
         Session::flash('success', 'Tour deleted sucessfully !');
         return redirect()
-        ->route('tour.index');        
+        ->route('tour.index');
     }
 
     public function publish($id)
@@ -374,7 +384,7 @@ class TourController extends Controller
         $tours = Tour::where('featured',1)->get();
         return view('backend.tour.featured')->withTours($tours);
     }
-    
+
     public function setAsfeatured($id){
         $tour = Tour::find($id);
         $tour->featured = 1;
@@ -395,7 +405,7 @@ class TourController extends Controller
         return redirect()
         ->route('tour.index');
 
-    }    
+    }
 
     public function moveTotrash($id)
     {
@@ -413,7 +423,7 @@ class TourController extends Controller
         $tour->save();
         Session::flash('info', 'Tour remove to Trash !');
         return redirect()->route('tour.index');
-    }    
+    }
 
     public function viewTrash()
     {

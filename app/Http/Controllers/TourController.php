@@ -108,6 +108,15 @@ class TourController extends Controller
             $tour->title = $request->title;
             $tour->days = $request->days;
             $tour->price = $request->price;
+
+            if (!empty($request->budgetPrice)) {
+                $tour->budgetPrice = $request->budgetPrice;
+            }
+
+            if (!empty($request->singleSupp)) {
+                $tour->singleSupp = $request->singleSupp;
+            }
+
             $tour->elevation = $request->elevation;
             $tour->difficulty_id = $request->difficulty;
             $tour->group_id = $request->group;

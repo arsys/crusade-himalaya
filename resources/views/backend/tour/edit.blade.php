@@ -35,9 +35,41 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>
 
                 </div>
-                {{--Title --}}
                 <div class="row">
                     <div class="col-sm-4">
+                        <div class="form-group floating-label">
+                            {{ Form::number('price', null, ['class' => 'form-control', 'id'=>'price']) }}
+                            @if($errors->has('price'))
+                            <span class="help-block">{{ $errors->first('price') }}</span>
+                            @endif
+                            {{ Form::label('price', 'Luxury Price') }}
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="form-group floating-label">
+                            {{ Form::number('budgetPrice', null, ['class' => 'form-control', 'id'=>'budgetPrice']) }}
+                            @if($errors->has('budgetPrice'))
+                            <span class="help-block">{{ $errors->first('budgetPrice') }}</span>
+                            @endif
+                            {{ Form::label('budgetPrice', 'Budget Price') }}
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-4">
+                        <div class="form-group floating-label">
+                            {{ Form::number('singleSupp', null, ['class' => 'form-control', 'id'=>'singleSupp']) }}
+                            @if($errors->has('singleSupp'))
+                            <span class="help-block">{{ $errors->first('singleSupp') }}</span>
+                            @endif
+                            {{ Form::label('singleSupp', 'Single Supplement Price') }}
+                        </div>
+                    </div>
+                </div>
+                {{--Title --}}
+                <div class="row">
+                    <div class="col-sm-6">
                         <div class="form-group floating-label {{$errors->has('days') ? 'has-error' : ''}}">
                             {{ Form::number('days', null, ['class' => 'form-control', 'id'=>'days']) }}
                             @if($errors->has('days'))
@@ -46,16 +78,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                             {{ Form::label('days', 'Days ') }}
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="form-group floating-label">
-                            {{ Form::number('price', null, ['class' => 'form-control', 'id'=>'price']) }}
-                            @if($errors->has('price'))
-                            <span class="help-block">{{ $errors->first('price') }}</span>
-                            @endif
-                            {{ Form::label('price', 'Price') }}
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="form-group floating-label">
                             {{ Form::text('elevation', null, ['class' => 'form-control', 'id'=>'elevation']) }}
                             @if($errors->has('elevation'))

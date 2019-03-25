@@ -92,7 +92,7 @@
 					<li class="uk-width-1-5  tab-li"><a href="#itinerary">Itinerary</a></li>
 					@endif
 					@if($tour->departure->count() > 0)
-					<li class="uk-width-1-5  tab-li"><a href="#price">Departure Dates</a></li>
+					<li class="uk-width-1-5  tab-li"><a href="#price">Departures</a></li>
 					@endif
 					<li class="uk-width-1-5  tab-li"><a href="#gallery">Gallery</a></li>
 				</ul>

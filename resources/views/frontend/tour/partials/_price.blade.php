@@ -1,6 +1,17 @@
 <div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">
 	<div class="uk-container-expand ">
 		<div class="uk-card uk-card-default uk-card-body ">
+            @if (!empty($tour->budgetPrice))
+            <div uk-grid>
+                <div class="uk-width-1-1">
+                    <div class="uk-text-left">
+                        <h3>Luxury Package: {{$tour->price}}</h3>
+                        <h3>Budget Package: {{$tour->budgetPrice}}</h3>
+                        <h3>Single Supplement: {{$tour->signleSupp}}</h3>
+                    </div>
+                </div>
+            </div>
+            @endif
 			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small search-wrapper">
 				<div>
 					<p class="text-color">Please Check Available Dates for The Year:</p>

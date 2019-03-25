@@ -48,8 +48,8 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
     @if (!empty($tour->price) && !empty($tour->budgetPrice))
     <div class="uk-margin">
         <div class="uk-form-controls">
-            <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->price}}">Budget ( USD {{$tour->price}})</label>
-            <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->budgetPrice}}" >Budget ( USD {{$tour->budgetPrice}})</label>
+            <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->price}}"> Luxury Package ( USD {{$tour->price}})</label>
+            <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->budgetPrice}}" > Budget Package ( USD {{$tour->budgetPrice}})</label>
         </div>
     </div>
     @endif
@@ -64,7 +64,7 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
           <div class="uk-form-controls">
             <label class="uk-form-label">No of People*</label>
             <select class="uk-select" id="form-stacked-select" name="travellers" required>
-              @for($i=1; $i<=10; $i++)
+              @for($i=2; $i<=10; $i++)
               <option value="{{$i}}">{{$i}}</option>
               @endfor
             </select>

@@ -18,7 +18,13 @@
                             {{ $tour->price }}
                         @endif
                     </span>
-                    <span>per person</span>
+                    <span>
+                        @if (!empty($tour->budgetPrice))
+                        per person
+                        @else
+                        per 2 person
+                        @endif
+                    </span>
 				</span>
 				@if($tour->departure->count() > 0)
 				<span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column" uk-scrollspy-nav="closest: a; scroll: true; offset: 120">

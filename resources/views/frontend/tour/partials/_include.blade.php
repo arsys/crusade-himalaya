@@ -60,7 +60,7 @@
         <h4>Excludes</h4>
         <ul class="uk-list includes">
             @foreach($tour->excludes as $exclude)
-            <li><span class="uk-margin-small-right included" uk-icon="check"></span>{{ $exclude->name }}</li>
+            <li><span class="uk-margin-small-right included" uk-icon="close"></span>{{ $exclude->name }}</li>
             @endforeach
         </ul>
 

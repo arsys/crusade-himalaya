@@ -1,7 +1,7 @@
 <div class="uk-grid-divider uk-child-width-expand@s uk-margin-medium-bottom text-color include-wrapper" uk-grid>
     @if ($tour->includes->count() > 0 && $tour->excludes->count() > 0 && $tour->budgetIncludes->count() > 0 && $tour->budgetExcludes->count() > 0)
     <div>
-            <ul class="uk-child-width-expand" uk-tab>
+            <ul class="uk-child-width-expand budget-style-list" uk-tab>
                 <li class="uk-active"><a href="#">Luxury Style</a></li>
                 <li><a href="#">Budget Style</a></li>
             </ul>

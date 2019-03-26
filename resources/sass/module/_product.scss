@@ -10,7 +10,7 @@
 // breadcrumbs start
 #breadcrumb{
     position: relative;
-    li a{        
+    li a{
         color:$white;
 
     }
@@ -60,11 +60,11 @@
     }
 }
 .mobile-duration{
-    .price-details{ 
+    .price-details{
         font-size: 20px;
         font-weight: bold;
     }
-    
+
 }
 .price-divide{
     border-left:3px solid $teal-lighten-1;
@@ -158,7 +158,7 @@
    position: relative;
 }
 #product-price{
-    position: absolute;     
+    position: absolute;
     z-index: 1;
     background-color:$white;
     width: inherit;
@@ -177,7 +177,7 @@
         .middle-2{
             font-size: 40px;
             font-weight: 600;
-        }        
+        }
     }
     .bottom{
         #goto{
@@ -187,7 +187,7 @@
 
 }
 .non-sticky{
-    bottom:20px; 
+    bottom:20px;
 }
 .sticky-price{
     top: -200px;
@@ -244,7 +244,7 @@
   .sticky-price{
     display:none;
 }
-} 
+}
 
 
 #tab-wrapper{
@@ -369,7 +369,7 @@
 }
 .a {
   display: inline-block;
-  position: relative;  
+  position: relative;
 }
 .uk-process-step {
     position: relative;
@@ -377,7 +377,7 @@
 }
 .step:not(:first-child)::before {
     content: "";
-    
+
     left: -50%;
     position: absolute;
     top: 77px;
@@ -458,7 +458,7 @@ html{
 .includes{
    .included{
     color:$green;
-} 
+}
 }
 .excludes{
   .excluded{
@@ -492,9 +492,9 @@ html{
     height:100%;
     position: absolute;
     z-index:1;
-    animation: slide 5s infinite 5s;  
-  /* 
-  CSS Gradient - complete browser support from http://www.colorzilla.com/gradient-editor/ 
+    animation: slide 5s infinite 5s;
+  /*
+  CSS Gradient - complete browser support from http://www.colorzilla.com/gradient-editor/
   */
   background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
 
@@ -518,7 +518,7 @@ html{
     color:$white;
     text-align: center;
     line-height:40px;
-    border-bottom: 3px solid #2ed3ae; 
+    border-bottom: 3px solid #2ed3ae;
 }
 /* Shine */
 .uno-wrapper:after {
@@ -529,9 +529,9 @@ html{
     height:100%;
     position: absolute;
     z-index:1;
-    animation: slide 5s infinite 5s;  
-  /* 
-  CSS Gradient - complete browser support from http://www.colorzilla.com/gradient-editor/ 
+    animation: slide 5s infinite 5s;
+  /*
+  CSS Gradient - complete browser support from http://www.colorzilla.com/gradient-editor/
   */
   background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
 
@@ -558,7 +558,7 @@ html{
 // itinerary end
 .itinerary-list{
     .itinerary-list-item {
-        a span:before{         
+        a span:before{
             display: inline-block;
             height: 30px;
             width: 30px;
@@ -569,7 +569,7 @@ html{
             color: #fff;
             line-height: 30px;
             z-index: 1;
-            position: absolute;            
+            position: absolute;
             content: "\f192";
             font-size: 1rem;
             font-family: "Font Awesome 5 Free";
@@ -580,7 +580,7 @@ html{
 }
 .itinerary-list{
     .itinerary-list-item:first-child, .itinerary-list-item:last-child{
-        a span:before{         
+        a span:before{
             display: inline-block;
             height: 30px;
             width: 30px;
@@ -600,13 +600,13 @@ html{
             left:-23px;
         }
     }
-}  
+}
 
 
   .itinerary-list{
     .itinerary-list-item
-     { 
-            position: relative; 
+     {
+            position: relative;
             margin: 0;
             border-left: 2px dashed #ccc;
             padding-left: 30px;
@@ -615,10 +615,19 @@ html{
   }
   .itinerary-list{
     .itinerary-list-item:last-child
-     { 
+     {
           border-left: none;
-        
+
       }
 
   }
 
+ul{
+    .budget-style-list{
+        li .uk-active{
+            a{
+                border-bottom: 1px solid $green;
+            }
+        }
+    }
+}

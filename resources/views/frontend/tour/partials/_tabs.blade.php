@@ -20,9 +20,9 @@
                     </span>
                     <span>
                         @if (!empty($tour->budgetPrice))
-                        per person
-                        @else
                         per 2 person
+                        @else
+                        per person
                         @endif
                     </span>
 				</span>

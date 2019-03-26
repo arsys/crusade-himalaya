@@ -2,15 +2,15 @@
 	<div class="uk-container-expand ">
             @if (!empty($tour->budgetPrice))
             <div uk-grid class="uk-card-header">
-                <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-text-bold">Luxury Package: USD {{$tour->price}}</p>
+                <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">
+                    <p class="uk-text-bold">Luxury: USD {{$tour->price}}</p>
                 </div>
-                <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-text-bold">Budget Package: USD {{$tour->budgetPrice}}</p>
+                <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">
+                    <p class="uk-text-bold">Budget: USD {{$tour->budgetPrice}}</p>
                 </div>
                 @if (!empty($tour->singleSupp))
-                <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-text-bold">Single Supplement: USD {{$tour->singleSupp}}</p>
+                <div class="uk-width-1-1 uk-text-left">
+                    <p class="uk-text-bold">Additional USD {{$tour->singleSupp}} for single suppliment.</p>
                 </div>
                 @endif
             </div>

@@ -3,16 +3,14 @@
             @if (!empty($tour->budgetPrice))
             <div uk-grid class="uk-card-header">
                 <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-text-bold">Luxury: USD {{$tour->price}}</p>
+                    <p class="uk-text-bold">Luxury Style: USD {{$tour->price}}</p>
+                    @if (!empty($tour->singleSupp))
+                    <p class="uk-text-bold">Additional USD {{$tour->singleSupp}} for single suppliment.</p>
+                    @endif
                 </div>
                 <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-text-bold">Budget: USD {{$tour->budgetPrice}}</p>
+                    <p class="uk-text-bold">Budget Style: USD {{$tour->budgetPrice}}</p>
                 </div>
-                @if (!empty($tour->singleSupp))
-                <div class="uk-width-1-1 uk-text-left">
-                    <p class="uk-text-bold">Additional USD {{$tour->singleSupp}} for single suppliment.</p>
-                </div>
-                @endif
             </div>
             @endif
 		<div class="uk-card uk-card-default uk-card-body ">

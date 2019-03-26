@@ -11,7 +11,6 @@
 				<span class="middle uk-flex uk-flex-column ">
 					<span class="middle-1">From USD</span>
                     <span class="middle-2">
-                        <sup>$</sup>
                         @if (!empty($tour->budgetPrice))
                             {{$tour->budgetPrice}}
                         @else

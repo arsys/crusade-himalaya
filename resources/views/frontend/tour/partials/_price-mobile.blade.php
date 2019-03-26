@@ -1,5 +1,18 @@
-<div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">		
+<div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top">
 	<div class="uk-container-expand ">
+            @if (!empty($tour->budgetPrice))
+            <div uk-grid class="uk-card-header">
+                <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">
+                    <p class="uk-text-bold">Luxury: USD {{$tour->price}}</p>
+                    @if (!empty($tour->singleSupp))
+                    <p class="uk-text-bold">Additional USD {{$tour->singleSupp}} for single suppliment.</p>
+                    @endif
+                </div>
+                <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">
+                    <p class="uk-text-bold">Budget: USD {{$tour->budgetPrice}}</p>
+                </div>
+            </div>
+            @endif
 		<div class="uk-card uk-card-default uk-card-body ">
 			<div uk-grid class="uk-child-width-1-4@m uk-child-width-1-1@s  uk-grid-match uk-grid-small search-wrapper-mob">
 				<div>
@@ -38,7 +51,7 @@
 		</div>
 	</div>
 	<!--table start-->
-	<div class="uk-overflow-auto uk-padding-large ">					
+	<div class="uk-overflow-auto uk-padding-large ">
 		<table class="uk-table uk-table-hover uk-table-divider">
 			<thead>
 				<tr>
@@ -68,6 +81,6 @@
 				@endforeach
 			</tbody>
 		</table>
-	</div>	
+	</div>
 	<!--table end-->
 </div>

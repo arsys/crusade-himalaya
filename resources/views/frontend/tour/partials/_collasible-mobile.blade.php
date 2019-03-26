@@ -14,7 +14,7 @@
                 </div>
                 <div class="uk-flex uk-flex-row">
                     <span class="uk-align-center">
-                        USD <sup>$</sup>
+                        From USD
                         @if (!empty($tour->budgetPrice))
                             {{$tour->budgetPrice}}
                         @else
@@ -23,7 +23,13 @@
                     </span>
                 </div>
                 <div class="uk-flex uk-flex-row">
-                    <span class="uk-align-center">per person</span>
+                    <span class="uk-align-center">
+                        @if (!empty($tour->budgetPrice))
+                        per 2 person
+                        @else
+                        per person
+                        @endif
+                    </span>
                 </div>
             </div>
             <div class="uk-width-1-2 price-divide">

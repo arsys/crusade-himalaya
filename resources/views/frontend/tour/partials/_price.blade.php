@@ -10,7 +10,7 @@
                 </div>
                 @if (!empty($tour->singleSupp))
                 <div class="uk-width-1-3 uk-child-width-1-1@s uk-text-left">
-                    <p class="uk-text-bold">Single Supplement: USD {{$tour->signleSupp}}</p>
+                    <p class="uk-text-bold">Single Supplement: USD {{$tour->singleSupp}}</p>
                 </div>
                 @endif
             </div>

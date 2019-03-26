@@ -59,7 +59,7 @@ class Tour extends Model
     public function excludes()
     {
         return $this->belongsToMany('App\Excluded','excludes_tour', 'tour_id', 'excluded_id')->orderBy('name', 'asc');
-    }    
+    }
 
     public function image()
     {
@@ -81,5 +81,14 @@ class Tour extends Model
         return $this->hasMany('App\Slide', 'tour_id');
     }
 
+    public function budgetIncludes()
+    {
+        return $this->belongsToMany('App\Included','includeds_btour', 'tour_id', 'included_id')->orderBy('name', 'asc');
+    }
+
+    public function budgetExcludes()
+    {
+        return $this->belongsToMany('App\Excluded','excludeds_btour', 'tour_id', 'excluded_id')->orderBy('name', 'asc');
+    }
 
 }

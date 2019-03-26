@@ -168,68 +168,67 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>
                 </div>
                 {{--Accommodation, Meal--}}
-                <div class="row">
-{{--                         <div class="col-sm-6">
-                            <div class="form-group floating-label {{$errors->has('start') ? 'has-error' : ''}}">
-                                <select id="start {{$errors->has('start')? 'inputError' : ''}}" name="start"
-                                        class="form-control" value="{{ old('start') }}">
-                                    <option value="">&nbsp;</option>
-                                    @foreach($locations as $location)
-                                        <option value="{{ $location->id }}">{{ $location->name }}</option>
-                                    @endforeach
-                                </select>
-                                @if ($errors->has('start'))
-                                    <span class="help-block">{{$errors->first('start')}}</span>
-                                @endif
-                                <label for="start">Starts from</label>
-                            </div>
-                        </div> --}}
-{{--                         <div class="col-sm-6">
-                            <div class="form-group floating-label {{$errors->has('end') ? 'has-error' : ''}}">
-                                <select id="end {{$errors->has('end')? 'inputError' : ''}}" name="end"
-                                        class="form-control" value="{{ old('end') }}">
-                                    <option value="">&nbsp;</option>
-                                    @foreach($locations as $location)
-                                        <option value="{{ $location->id }}">{{ $location->name }}</option>
-                                    @endforeach
-                                </select>
-                                @if ($errors->has('end'))
-                                    <span class="help-block">{{$errors->first('end')}}</span>
-                                @endif
-                                <label for="end">Ends at</label>
-                            </div>
-                        </div> --}}
-                    </div>{{-- Start Location, End Location--}}
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label for="includes">Includes</label>
+                                <label for="includes">Luxury Includes</label>
                                 <select class="form-control" id="includes" multiple="multiple" name="includes[]"
                                 value="{{ old('includes[]') }}" class="includes">
                                 @foreach($includes as $include)
                                 <option value="{{ $include->id }}">{{ $include->name }}</option>
                                 @endforeach
                             </select>
-                            @if ($errors->has('includes'))
-                            <span class="help-block">{{$errors->first('includes')}}</span>
+                                @if ($errors->has('includes'))
+                                <span class="help-block">{{$errors->first('includes')}}</span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="excludes">Luxury Excludes</label>
+                                <select class="form-control" id="excludes" multiple="multiple" name="excludes[]"
+                                value="{{ old('excludes[]') }}" class="excludes">
+                                @foreach($excludes as $exclude)
+                                <option value="{{ $exclude->id }}">{{ $exclude->name }}</option>t
+                                @endforeach
+                            </select>
+                            @if ($errors->has('excludes'))
+                            <span class="help-block">{{$errors->first('excludes')}}</span>
+                            @endif
+                        </div>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="budgetIncludes">Budget Includes</label>
+                            <select class="form-control" id="budgetIncludes" multiple="multiple" name="budgetIncludes[]"
+                            value="{{ old('budgetIncludes[]') }}" class="budgetIncludes">
+                            @foreach($includes as $include)
+                            <option value="{{ $include->id }}">{{ $include->name }}</option>
+                            @endforeach
+                        </select>
+                            @if ($errors->has('budgetIncludes'))
+                            <span class="help-block">{{$errors->first('budgetIncludes')}}</span>
                             @endif
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <label for="excludes">Excludes</label>
-                            <select class="form-control" id="excludes" multiple="multiple" name="excludes[]"
-                            value="{{ old('excludes[]') }}" class="excludes">
+                            <label for="budgetExcludes">Budget Excludes</label>
+                            <select class="form-control" id="budgetExcludes" multiple="multiple" name="budgetExcludes[]"
+                            value="{{ old('budgetExcludes[]') }}" class="budgetExcludes">
                             @foreach($excludes as $exclude)
                             <option value="{{ $exclude->id }}">{{ $exclude->name }}</option>t
                             @endforeach
                         </select>
-                        @if ($errors->has('excludes'))
-                        <span class="help-block">{{$errors->first('excludes')}}</span>
+                        @if ($errors->has('budgetExcludes'))
+                        <span class="help-block">{{$errors->first('budgetExcludes')}}</span>
                         @endif
                     </div>
                 </div>
-            </div>
+        </div>
 
             <div class="row">
                 <div class="col-sm-6">
@@ -389,7 +388,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.min.js"></script>
 <script>
-    $('#includes,#excludes').multiselect({
+    $('#includes,#excludes,#budgetIncludes,#budgetExcludes').multiselect({
         includeSelectAllOption: true,
         selectAllJustVisible: false,
         enableFiltering: true,

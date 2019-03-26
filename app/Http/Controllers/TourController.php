@@ -143,6 +143,15 @@ class TourController extends Controller
             if (isset($request->excludes)) {
                 $tour->excludes()->sync($request->excludes, false);
             }
+
+            if (isset($request->budgetIncludes) ) {
+                $tour->budgetIncludes()->sync($request->budgetIncludes, false);
+            }
+
+            if (isset($request->budgetExcludes)) {
+                $tour->budgetExcludes()->sync($request->budgetExcludes, false);
+            }
+
             // if (! File::exists($this->banner) || ! File::exists($this->thumb)) {
             //     File::makeDirectory($this->banner,0775, true);
             //     File::makeDirectory($this->thumb,0775, true);
@@ -282,6 +291,14 @@ class TourController extends Controller
 
             if (isset($request->excludes)) {
                 $tour->excludes()->sync($request->excludes);
+            }
+
+            if (isset($request->budgetIncludes) ) {
+                $tour->budgetIncludes()->sync($request->budgetIncludes);
+            }
+
+            if (isset($request->budgetExcludes)) {
+                $tour->budgetExcludes()->sync($request->budgetExcludes);
             }
 
             if (!empty($request->featured)) {

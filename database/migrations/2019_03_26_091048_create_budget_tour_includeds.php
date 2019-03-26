@@ -13,7 +13,7 @@ class CreateBudgetTourIncludeds extends Migration
      */
     public function up()
     {
-        Schema::table('includeds_btour', function (Blueprint $table) {
+        Schema::create('includeds_btour', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('tour_id')->unsigned();
             $table->foreign('tour_id')->references('id')->on('tours')->onDelete('cascade');;

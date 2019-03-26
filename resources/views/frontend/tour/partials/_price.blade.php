@@ -5,7 +5,7 @@
                 <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">
                     <p class="uk-text-bold">Luxury Style: USD {{$tour->price}}</p>
                     @if (!empty($tour->singleSupp))
-                    <p class="uk-text-bold">Additional USD {{$tour->singleSupp}} for single suppliment.</p>
+                    <p class="uk-text-bold">The above mentioned cost are based on minimum 2 pax. Additional USD {{$tour->singleSupp}} for single suppliment.</p>
                     @endif
                 </div>
                 <div class="uk-width-1-2 uk-child-width-1-1@s uk-text-left">

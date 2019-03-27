@@ -150,12 +150,22 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
 
             </div>
             <div class="uk-card-footer" uk-grid>
+                @if ($data['traveller'] > 1)
                 <div class="uk-width-1-2">
                     <span>${{ $data['budget']}} x {{ $data['travellers'] }} person</span>
                 </div>
                 <div class="uk-width-1-2">
                     <span>${{ $data['budget']*$data['travellers'] }}</span>
                 </div>
+                @endif
+                @if (!empty($tour->singleSupp) && $data['traveller'] > 1)
+                <div class="uk-width-1-2">
+                    <span>${{ $data['budget']}} x {{ $data['travellers'] }} person + {{$tour->singleSupp}} for single supplement.</span>
+                    </div>
+                    <div class="uk-width-1-2">
+                        <span>${{ $data['budget']*$data['travellers'] + $tour->singleSupp }}</span>
+                    </div>
+                @endif
             </div>
             <div class="uk-card-footer">
                 Please note: All holidays and flights (if applicable) are subject to availability. Please see terms and conditions.<a href="#" class="">terms and conditions.</a>

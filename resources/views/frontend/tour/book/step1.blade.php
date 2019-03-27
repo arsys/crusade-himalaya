@@ -51,6 +51,7 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
             <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->price}}"> Luxury Package ( USD {{$tour->price}})</label>
             <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->budgetPrice}}" > Budget Package ( USD {{$tour->budgetPrice}})</label>
         </div>
+        <span class="singleSupp-msg" style="display:none;">Additional USD {{$tour->singleSupp}}.</span>
     </div>
     @endif
     <div class="uk-grid-small" uk-grid>
@@ -64,7 +65,7 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
           <div class="uk-form-controls">
             <label class="uk-form-label">No of People*</label>
             <select class="uk-select" id="form-stacked-select" name="travellers" required>
-              @for($i=2; $i<=10; $i++)
+              @for($i=1; $i<=10; $i++)
               <option value="{{$i}}">{{$i}}</option>
               @endfor
             </select>
@@ -79,4 +80,16 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
 </div>
 
 
+@stop
+@section('scripts')
+<script>
+    $('select').on('change', function() {
+        pax = ( this.value );
+        if(pax == 1){
+            $('.singleSupp-msg').show();
+        }else{
+            $('.singleSupp-msg').hide();
+        }
+    });
+</script>
 @stop

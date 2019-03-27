@@ -9,7 +9,14 @@
                        		<a href="{{ route('trip.detail',$similar->slug) }}" class="hp-link"><img src="{{ asset($similar->image->thumb) }}" alt="{{ $similar->title }}"></a>
 	                   	<div class="uk-overlay uk-overlay-default uk-position-top price-wrapper" id="price-wrapper">
 	                       <span class="price">
-	                           <span>USD ${{ $similar->price }}</span>
+                               <span>
+                                    USD
+                               @if (!empty($tour->budgetPrice))
+                                {{ $similar->budgetPrice }}
+                               @else
+                                {{ $similar->price }}
+                               @endif
+                            </span>
 	                       </span>
 	                   	</div>
 	                   	<div class="uk-overlay uk-overlay-default uk-padding-small similar-wrapper">
@@ -19,10 +26,10 @@
 	                           	</div>
 	                           	<div class="uk-flex uk-flex-column uk-width-1-5 hp-meta">
 	                               <span class="hp-days">{{ $similar->days }} Days</span>
-	                           	</div>    
+	                           	</div>
 	                       	</div>
 	                   	</div>
-                    </div>                        
+                    </div>
                 </div>
             </li>
             @endforeach

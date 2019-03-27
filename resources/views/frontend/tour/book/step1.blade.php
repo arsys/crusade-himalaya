@@ -51,7 +51,7 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
             <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->price}}"> Luxury Package ( USD {{$tour->price}})</label>
             <label><input class="uk-radio" type="radio" name="budget" value="{{$tour->budgetPrice}}" > Budget Package ( USD {{$tour->budgetPrice}})</label>
         </div>
-        <span class="singleSupp-msg" style="display:none;">Additional USD {{$tour->singleSupp}}.</span>
+        <span class="singleSupp-msg" style="display:none;">Additional USD {{$tour->singleSupp}} for single supplement.</span>
     </div>
     @endif
     <div class="uk-grid-small" uk-grid>

@@ -65,6 +65,7 @@ Join {{$tour->days}} Days {{$tour->title}} | Step 1
           <div class="uk-form-controls">
             <label class="uk-form-label">No of People*</label>
             <select class="uk-select" id="form-stacked-select" name="travellers" required>
+              <option></option>
               @for($i=1; $i<=10; $i++)
               <option value="{{$i}}">{{$i}}</option>
               @endfor

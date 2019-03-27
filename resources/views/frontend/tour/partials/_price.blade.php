@@ -9,9 +9,7 @@
                     <p class="uk-text-bold">Budget Style: USD {{$tour->budgetPrice}}</p>
                 </div>
                 @if (!empty($tour->singleSupp))
-                <div class="uk-width-1-1 uk-text-left">
-                    <p class="uk-text-bold">The above mentioned cost are based on minimum 2 pax. Additional USD {{$tour->singleSupp}} for single suppliment.</p>
-                </div>
+                <span>The above mentioned cost are based on minimum 2 pax. Additional USD {{$tour->singleSupp}} for single suppliment.</span>
                 @endif
             </div>
             @endif

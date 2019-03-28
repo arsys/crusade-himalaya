@@ -10,7 +10,7 @@
                     <div class="destination  uk-padding-xsmall">
                         <a href="{{ route('fetchByRegion',$odd->slug) }}"><img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}" >
                         <div class="dest-topic ">
-                            <div class="dest-title">{{ $odd->name }}</div>
+                            <div class="dest-title"><h4>{{ $odd->name }}</h4></div>
                         </div>
                         </a>
                     </div>
@@ -22,7 +22,7 @@
                         <div class="{{$loop->first ? 'uk-first-column': '' }}   destination uk-padding-xsmall  ">
                             <a href="{{ route('fetchByRegion',$odd->slug) }}"><img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
                                 <div class="dest-topic ">
-                                    <div class="dest-title">{{ $odd->name }}</div>
+                                    <div class="dest-title"><h4>{{ $odd->name }}</h4></div>
                                 </div>
                             </a>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="{{ $loop->first ? 'uk-first-column' : '' }} uk-panel  destination  uk-padding-xsmall">
                             <a href="{{ route('fetchByRegion',$even->slug) }}"><img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
                                 <div class="dest-topic ">            
-                                        <div class="dest-title">{{ $even->name }}</div>
+                                        <div class="dest-title"><h4>{{ $even->name }}</h4></div>
                                 </div>
                             </a>
                         </div>
@@ -51,7 +51,7 @@
                     <div class="destination uk-padding-xsmall">
                         <a href="{{ route('fetchByRegion',$even->slug) }}"><img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
                             <div class="dest-topic">
-                                    <div class="dest-title">{{ $even->name }}</div> 
+                                    <div class="dest-title"><h4>{{ $even->name }}</h4></div> 
                             </div>
                         </a>
                     </div>

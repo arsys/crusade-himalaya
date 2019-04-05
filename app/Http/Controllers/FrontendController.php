@@ -58,10 +58,10 @@ class FrontendController extends Controller
         ->withOthers($others);
     }
 
-    public function truelyNepal()
-    {
-        return view('frontend.trulynepal');
-    }
+        public function feeds(Request $request, Tour $tour)
+        {
+            return $tour;
+        }
 
     public function getServices()
     {

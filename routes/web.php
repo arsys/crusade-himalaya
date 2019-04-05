@@ -127,5 +127,7 @@ Route::prefix('destination')->group(function () {
 Route::name('page-')->group(function () {
 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');
 });
-
+Route::get('/feeds', 'PubliController@feeds')
+    ->name('feeds.show');
+Route::feeds();
 

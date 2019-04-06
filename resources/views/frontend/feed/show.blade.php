@@ -65,7 +65,7 @@
         @foreach ($tour->departure as $departure)
         <StartDate><![CDATA[{{ $departure->start }}]]></StartDate>
         <EndDate><![CDATA[{{ $departure->end }}]]></EndDate>
-        <SpaceLeft><![CDATA[{{ $departure->end }}]]><SpaceLeft>
+        <SpaceLeft><![CDATA[{{ $departure->end }}]]></SpaceLeft>
         @endforeach
     </DepartureDates>
 	<created_at>{{$tour->created_at->toAtomString()}}</created_at>

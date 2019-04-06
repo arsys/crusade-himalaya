@@ -5,6 +5,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title> <![CDATA[ {{$tour->title}} ]]> </title>
     <days> <![CDATA[ {{$tour->days}} ]]> </days>
+    <thumbnail><![CDATA[ {{$tour->image->thumb}} ]]></thumbnail>
     <LuxuryPrice> <![CDATA[ USD {{$tour->price}} ]]> </LuxuryPrice>
     <BudgetPrice> <![CDATA[ USD {{$tour->budgetPrice}} ]]> </BudgetPrice>
     @if (!empty($tour->singleSupp))

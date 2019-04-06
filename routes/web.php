@@ -111,8 +111,8 @@ Route::prefix('trip')->name('trip.')->group(function () {
 	Route::post('join/{slug}/step-3', 'GetController@stepThree')->name('stepThree'); //poost step 2 form
     Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
 });
-Route::prefix('feed')->name('tour.')->group(function () {
-    Route::get('/{id}', 'GetController@getFeed')
+Route::prefix('tour/feed')->name('tour.')->group(function () {
+    Route::get('{id}', 'GetController@getFeed')
     ->name('feed');
 });
 Route::prefix('ajax')->group(function () {

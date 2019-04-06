@@ -98,7 +98,6 @@ class Tour extends Model implements Feedable
         return FeedItem::create()
             ->id($this->id)
             ->title($this->title)
-            ->slug($this->slug)
             ->summary($this->overview)
             ->updated($this->updated_at)
             ->link($this->link)

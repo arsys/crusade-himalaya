@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<root>
+<?=
+    /* Using an echo tag here so the `<? ... ?>` won't get parsed as short tags */
+    '<?xml version="1.0" encoding="UTF-8"?>'.PHP_EOL
+?>
+<feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{$tour->title}}</title>
     <days>{{$tour->days}}</days>
     <LuxuryPrice>USD {{$tour->price}}</LuxuryPrice>
@@ -67,4 +70,4 @@
     </DepartureDates>
 	<created_at>{{$tour->created_at}}</created_at>
 	<updated_at>{{$tour->updated_at}}</updated_at>
-</root>
+</feed>

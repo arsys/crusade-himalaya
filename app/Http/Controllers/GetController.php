@@ -221,8 +221,7 @@ class GetController extends Controller
 
     public function getFeed($slug)
     {
-        dd($slug);
-        $tour = Tour::where('slug', $slug)->first();
+        $tour = Tour::find($id);
         return view('frontend.feed.show')->withTour($tour);
     }
 }

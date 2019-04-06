@@ -222,6 +222,9 @@ class GetController extends Controller
     public function getFeed($id)
     {
         $tour = Tour::find($id);
-        return view('frontend.feed.show')->withTour($tour);
+        return view('frontend.feed.show')
+        ->withTour($tour)
+        ->header(‘Content-Type’, ‘application/xml’)
+        ->header(‘charset’,’utf-8′);
     }
 }

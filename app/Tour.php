@@ -4,7 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
-class Tour extends Model
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
+class Tour extends Model implements Feedable
 {
 	use Sluggable;
 
@@ -89,6 +91,27 @@ class Tour extends Model
     public function budgetExcludes()
     {
         return $this->belongsToMany('App\Excluded','excludeds_btour', 'tour_id', 'excluded_id')->orderBy('name', 'asc');
+    }
+
+    public function toFeedItem()
+    {
+        return FeedItem::create()
+            ->id($this->id)
+            ->title($this->title)
+            ->summary($this->overview)
+            ->updated($this->updated_at)
+            ->link($this->link)
+            ->author('Crusade Himalaya');
+    }
+
+    public static function getFeedItems()
+    {
+        return static::all();
+    }
+
+    public function getLinkAttribute()
+    {
+        return route('feeds.show', $this);
     }
 
 }

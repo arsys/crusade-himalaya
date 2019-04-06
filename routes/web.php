@@ -109,7 +109,11 @@ Route::prefix('trip')->name('trip.')->group(function () {
 	Route::post('join/{slug}/setp-1','GetController@stepOne')->name('stepOne'); //shows step 1 form
 	Route::post('join/{slug}/step-2','GetController@stepTwo')->name('stepTwo'); //shows step 2 form
 	Route::post('join/{slug}/step-3', 'GetController@stepThree')->name('stepThree'); //poost step 2 form
-	Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
+    Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
+});
+Route::prefix('feed')->name('trip.')->group(function () {
+    Route::get('/{id}', 'GetController@getFeed')
+    ->name('feed');
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');
@@ -127,5 +131,4 @@ Route::prefix('destination')->group(function () {
 Route::name('page-')->group(function () {
 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');
 });
-
-
+Route::feeds();

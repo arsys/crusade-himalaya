@@ -209,4 +209,5 @@ public function getPartner(){
 public function getSitemap(){
     return view('frontend.sitemap');
 }
+
 }

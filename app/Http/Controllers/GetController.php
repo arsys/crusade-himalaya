@@ -217,5 +217,10 @@ class GetController extends Controller
 	public function getThankyou()
 	{
 		return view('frontend.tour.book.step3');
-	}
+    }
+
+    public function getFeed(Request $request, Tour $tour)
+    {
+        return $tour;
+    }
 }

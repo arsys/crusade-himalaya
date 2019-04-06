@@ -16,7 +16,7 @@ return [
             /*
              * The feed will be available on this url.
              */
-            'url' => '/rss/feeds.rss',
+            'url' => '/rss/feeds',
 
             'title' => 'Crusade Himalaya Travel Packages',
 

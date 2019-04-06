@@ -111,7 +111,7 @@ class Tour extends Model implements Feedable
 
     public function getLinkAttribute()
     {
-        return route('feeds.show', $this);
+        return route('tour.feed', $this);
     }
 
 }

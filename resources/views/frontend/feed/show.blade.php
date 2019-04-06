@@ -25,7 +25,7 @@
     </overview>
     <itinerary>
             @foreach($tour->itinerary as $itinerary)
-            {{'<Day'.$itinerary->day.'>'.$itinerary->plan.'</Day>'}}
+            {{'<Day'.$itinerary->day.'>'.$itinerary->plan.'</'.$itinerary->day.'Day>'}}
             <Detail><![CDATA[ {!!$itinerary->plan!!} ]]></Detail>
             @endforeach
     </itinerary>

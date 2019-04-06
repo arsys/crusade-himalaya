@@ -24,7 +24,7 @@
     </overview>
     <itinerary>
             @foreach($tour->itinerary as $itinerary)
-            {{'<Day'.$itinerary->day.'>'.$itinerary->day.'</Day>'}}
+            {{'<Day'$itinerary->day'>'.$itinerary->day.'</Day>'}}
             {{'<Plan>'.$itinerary->plan.'</Plan>'}}
             <Detail><![CDATA[ {!!$itinerary->plan!!} ]]></Detail>
             @endforeach
@@ -32,33 +32,33 @@
     @if ($tour->includes->count() > 0 && $tour->excludes->count() > 0 && $tour->budgetIncludes->count() > 0 && $tour->budgetExcludes->count() > 0)
     <LuxuryIncludes>
         @foreach($tour->includes as $include)
-        {{'<LuxuryInclude'.$loop->iteration.}}type="html"> <![CDATA[{{ $include->name }}]]> </LuxuryInclude>
+        {{'<LuxuryInclude'$loop->iteration}}type="html"> <![CDATA[{{ $include->name }}]]> </LuxuryInclude>
         @endforeach
     </LuxuryIncludes>
     <LuxuryExcludes>
         @foreach($tour->excludes as $exclude)
-        {{'<LuxuryExclude'.$loop->iteration.}}type="html"> <![CDATA[{{ $exclude->name }}]]> </LuxuryExclude>
+        {{'<LuxuryExclude'$loop->iteration}}type="html"> <![CDATA[{{ $exclude->name }}]]> </LuxuryExclude>
         @endforeach
     </LuxuryExcludes>
     <BudgetIncludes>
             @foreach($tour->budgetIncludes as $include)
-            {{'<BudgetInclude'.$loop->iteration.}}type="html"> <![CDATA[{{ $exclude->name }}]]> </BudgetInclude>
+            {{'<BudgetInclude'$loop->iteration}}type="html"> <![CDATA[{{ $exclude->name }}]]> </BudgetInclude>
             @endforeach
         </BudgetIncludes>
         <BudgetExcludes>
             @foreach($tour->budgetExcludes as $exclude)
-            {{'<BudgetExclude'.$loop->iteration.}}type="html"> <![CDATA[{{ $exclude->name }}]]> </BudgetExclude>
+            {{'<BudgetExclude'$loop->iteration}}type="html"> <![CDATA[{{ $exclude->name }}]]> </BudgetExclude>
             @endforeach
         </BudgetExcludes>
     @else
     <Includes>
             @foreach($tour->includes as $include)
-            {{'<Include'.$loop->iteration.}}type="html"> <![CDATA[{{ $include->name }}]]> </Include>
+            {{'<Include'$loop->iteration}}type="html"> <![CDATA[{{ $include->name }}]]> </Include>
             @endforeach
         </Includes>
         <Excludes>
             @foreach($tour->excludes as $exclude)
-            {{'<Exclude'.$loop->iteration.}}type="html"> <![CDATA[{{ $exclude->name }}]]> </Exclude>
+            {{'<Exclude'$loop->iteration}}type="html"> <![CDATA[{{ $exclude->name }}]]> </Exclude>
             @endforeach
         </Excludes>
     @endif

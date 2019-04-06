@@ -224,7 +224,6 @@ class GetController extends Controller
         $tour = Tour::find($id);
         return view('frontend.feed.show')
         ->withTour($tour)
-        ->header(‘Content-Type’, ‘application/xml’)
-        ->header(‘charset’,’utf-8′);
+        ->header('Content-Type', 'text/xml');
     }
 }

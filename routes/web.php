@@ -112,7 +112,7 @@ Route::prefix('trip')->name('trip.')->group(function () {
     Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
 });
 Route::prefix('tour/feed')->name('tour.')->group(function () {
-    Route::get('{slug}', 'GetController@getFeed')
+    Route::get('{id}', 'GetController@getFeed')
     ->name('feed');
 });
 Route::prefix('ajax')->group(function () {

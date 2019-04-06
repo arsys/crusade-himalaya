@@ -219,7 +219,7 @@ class GetController extends Controller
 		return view('frontend.tour.book.step3');
     }
 
-    public function getFeed($slug)
+    public function getFeed($id)
     {
         $tour = Tour::find($id);
         return view('frontend.feed.show')->withTour($tour);

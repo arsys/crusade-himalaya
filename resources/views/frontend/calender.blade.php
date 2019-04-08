@@ -42,7 +42,7 @@ What's On This  | {{config('app.name')}}
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
                       <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
                           
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
@@ -59,9 +59,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -77,9 +77,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -95,9 +95,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -113,9 +113,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -131,9 +131,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -149,9 +149,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -167,9 +167,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -185,9 +185,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -203,9 +203,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -221,9 +221,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -239,9 +239,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
+                          <li> <span class="uk-margin-left"><i class="fas fa-calendar-week"></i>  {{ $event->start_date }}</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -266,7 +266,7 @@ What's On This  | {{config('app.name')}}
                   <div class="uk-card-body article-inner">
                       <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
                           <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
-                              <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                              <li><span class="uk-margin-left"><i class="fas fa-calendar-week"></i> {{ $event->start_date }}</span></li>
                               
                           </ul>
                       <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif

@@ -7,6 +7,7 @@ What's On This  | {{config('app.name')}}
 @section('description')Happening things this month @stop
 @extends('layouts.frontend')
 @section('content')
+{{--Large and x large --}}
 <section class="uk-container-expand about" uk-grid>
   <div class="uk-height-large  uk-width-*@s  uk-background-cover uk-light page-cover" data-src="{{asset('img/holi.png')}}" uk-img>
     <div class="uk-overlay-primary uk-position-cover overlay"></div>
@@ -24,7 +25,7 @@ What's On This  | {{config('app.name')}}
     </div>
   </div>
 </section>
-<div class="uk-container">
+<div class="uk-container uk-visible@l">
   <ul class="uk-child-width-expand calender-month" uk-tab uk-switcher>
       @for($i=1;$i<=12;$i++)
         <li><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
@@ -249,273 +250,34 @@ What's On This  | {{config('app.name')}}
       </li>
   </ul>
 </div>
-{{-- <div id="responsiveTabsDemo" class="r-tabs ">
-    <ul class="r-tabs-nav">
-    @for($i=1;$i<=12;$i++)
-        <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
-    @endfor
-    </ul>
-
-
-<div id="Jan" class="r-tabs-accordion-title r-tabs-tab">
-    @foreach($jan as $event)
-    <div class="uk-container">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-            <div class="uk-card-media-left  article-body">
-              <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-            </div>
-
-            <div class="uk-card-body article-inner">
-                <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                        <li><span>color festival</span></li>
-                    </ul>
-                <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-            </div>
-        </div>
-    </div>
-    @endforeach
-</div>
-
-<div id="Feb" class="r-tabs-tab">
-    @foreach($feb as $event)
-    <div class="uk-container ">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-            <div class="uk-card-media-left  article-body">
-                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-            </div>
-
-            <div class="uk-card-body article-inner">
-            <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                    <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                    <li><span>color festival</span></li>
-                </ul>
-            <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-            </div>
-
-        </div>
-    </div>
-    @endforeach
-</div>
-
-<div id="Mar" class="r-tabs-tab">
-  @foreach($mar as $event)
-    <div class="uk-container">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-            <div class="uk-card-media-left  article-body">
-                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-            </div>
-
-            <div class="uk-card-body article-inner">
-                <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                    <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                    <li><span>color festival</span></li>
-                </ul>
-                <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-            </div>
-        </div>
-    </div>
-  @endforeach
-</div>
-<div id="Apr" class="r-tabs-tab">
-    @foreach($apr as $event)
-    <div class="uk-container">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-            <div class="uk-card-media-left  article-body">
-              <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-            </div>
-
-            <div class="uk-card-body article-inner">
-                <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                    <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                    <li><span>color festival</span></li>
-                </ul>
-                <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-            </div>
-        </div>
-    </div>
-    @endforeach
-</div>
-
-<div id="May" class="r-tabs-tab">
-    @foreach($may as $event)
-    <div class="uk-container">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-            <div class="uk-card-media-left  article-body">
-              <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-            </div>
-
-            <div class="uk-card-body article-inner">
-              <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                <li><span>color festival</span></li>
-              </ul>
-              <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-            </div>
-
+{{--Medium and below --}}
+<div class="uk-container uk-margin ul-margin-remove-horizontal uk-hidden@l">
+  <ul uk-accordion>
+      @for($i=1;$i<=12;$i++)
+      <li>
+          <a class="uk-accordion-title" href="#">{{ date('F', mktime(0, 0, 0, $i, 1)) }}</a>
+          <div class="uk-accordion-content">
+              @foreach($jan as $event)
+              <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+                  <div class="uk-card-media-left  article-body">
+                    <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+                  </div>
+      
+                  <div class="uk-card-body article-inner">
+                      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                          <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                              <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                              <li><span>color festival</span></li>
+                          </ul>
+                      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+                  </div>
+              </div>
+              @endforeach
           </div>
-    </div>
-      @endforeach
+      </li>
+    @endfor
+  </ul>
 </div>
-
-<div id="Jun" class="r-tabs-tab">
-  @foreach($jun as $event)
-   <div class="uk-container">
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-    <div class="uk-card-media-left  article-body">
-      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-    </div>
-
-    <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-        <li><span>color festival</span></li>
-      </ul>
-      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-    </div>
-
-  </div>
-</div>
-  @endforeach
-</div>
-<div id="Jul" class="r-tabs-tab">
-  @foreach($jul as $event)
-   <div class="uk-container">
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-    <div class="uk-card-media-left  article-body">
-      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-    </div>
-
-    <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-        <li><span>color festival</span></li>
-      </ul>
-      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-    </div>
-
-  </div>
-</div>
-  @endforeach
-</div>
-
-<div id="Aug" class="r-tabs-tab">
-  @foreach($aug as $aug)
-   <div class="uk-container">
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-    <div class="uk-card-media-left  article-body">
-      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-    </div>
-
-    <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-        <li><span>color festival</span></li>
-      </ul>
-      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-    </div>
-
-  </div>
-</div>
-  @endforeach
-</div>
-
-<div id="Sep" class="r-tabs-tab">
-  @foreach($sep as $event)
-   <div class="uk-container">
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-    <div class="uk-card-media-left  article-body">
-      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-    </div>
-
-    <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-        <li><span>color festival</span></li>
-      </ul>
-      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-    </div>
-
-  </div>
-</div>
-  @endforeach
-</div>
-<div id="Oct" class="r-tabs-tab">
-  @foreach($oct as $event)
-   <div class="uk-container">
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-    <div class="uk-card-media-left  article-body">
-      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-    </div>
-
-    <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-        <li><span>color festival</span></li>
-      </ul>
-      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-    </div>
-
-  </div>
-</div>
-  @endforeach
-</div>
-
-<div id="Nov" class="r-tabs-tab">
-  @foreach($nov as $event)
-   <div class="uk-container">
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-    <div class="uk-card-media-left  article-body">
-      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-    </div>
-
-    <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-        <li><span>color festival</span></li>
-      </ul>
-      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-    </div>
-
-  </div>
-</div>
-  @endforeach
-</div>
-
-<div id="Dec" class="r-tabs-tab">
-  @foreach($dec as $event)
-   <div class="uk-container">
-  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
-    <div class="uk-card-media-left  article-body">
-      <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
-    </div>
-
-    <div class="uk-card-body article-inner">
-      <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-        <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-        <li><span>color festival</span></li>
-      </ul>
-      <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
-    </div>
-
-  </div>
-</div>
-  @endforeach
-</div>
-</div> --}}
-
 @stop 
 @section('scripts')
 @stop

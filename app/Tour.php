@@ -106,12 +106,11 @@ class Tour extends Model implements Feedable
 
     public static function getFeedItems()
     {
-       return Tour::all();
+        return static::all();
     }
 
     public function getLinkAttribute()
     {
-        return route('tour.feed', $this);
-    }
-
+        return route('events.show', $this);
+    }    
 }

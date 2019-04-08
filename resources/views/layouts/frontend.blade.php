@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-        @include('feed::links')
+    @include('feed::links')
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131764624-1"></script>
     <script>

@@ -28,7 +28,7 @@ What's On This  | {{config('app.name')}}
 <div class="uk-container uk-visible@l">
   <ul class="uk-child-width-expand calender-month" uk-tab uk-switcher>
       @for($i=1;$i<=12;$i++)
-        <li><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
+        <li><a href="#" @if($i == date('n')) class="uk-active" @endif> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
       @endfor
   </ul>
   <ul class="uk-switcher uk-margin">
@@ -41,9 +41,9 @@ What's On This  | {{config('app.name')}}
   
               <div class="uk-card-body article-inner">
                   <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                      <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
                           <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                          <li><span>color festival</span></li>
+                          
                       </ul>
                   <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
               </div>
@@ -254,7 +254,7 @@ What's On This  | {{config('app.name')}}
 <div class="uk-container uk-margin ul-margin-remove-horizontal uk-hidden@l">
   <ul uk-accordion>
       @for($i=1;$i<=12;$i++)
-      <li>
+      <li @if($i == date('n')) class="uk-open" @endif>
           <a class="uk-accordion-title" href="#">{{ date('F', mktime(0, 0, 0, $i, 1)) }}</a>
           <div class="uk-accordion-content">
               @foreach($jan as $event)
@@ -265,9 +265,9 @@ What's On This  | {{config('app.name')}}
       
                   <div class="uk-card-body article-inner">
                       <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
-                          <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <ul class="uk-comment-meta uk-subnav  uk-margin-remove-top">
                               <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
-                              <li><span>color festival</span></li>
+                              
                           </ul>
                       <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
                   </div>
@@ -279,5 +279,3 @@ What's On This  | {{config('app.name')}}
   </ul>
 </div>
 @stop 
-@section('scripts')
-@stop

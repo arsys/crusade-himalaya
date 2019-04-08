@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 @section('mtitle'){!! $tour->mtitle !!}@stop
-@section('title'){!! ucfirst($tour->title) !!}-{{$tour->days}} @if($tour->days > 1) Days @else Day @endif
+@section('title'){!! ucfirst($tour->title) !!}|{{$tour->days}} @if($tour->days > 1) Days @else Day @endif
 @stop
 @section('description'){!! $tour->description !!}@stop
 @section('twitter')

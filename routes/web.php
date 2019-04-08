@@ -25,9 +25,9 @@ Route::prefix('admin/dashboard')->group(function() {
 	Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 });
 Route::prefix('manage')->middleware('role:superadministrator|administrator|user')->group(function () {
-  Route::resource('/users', 'UsersController');
-  Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
-  Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
+  Route::resource('/users', 'UsersControllers');
+//   Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
+//   Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
 });
 Route::prefix('manage')->middleware('role:superadministrator|administrator|user')->group(function () {
 	Route::get('/dashboard', 'HomeController@index')->name('dashboard');
@@ -109,7 +109,11 @@ Route::prefix('trip')->name('trip.')->group(function () {
 	Route::post('join/{slug}/setp-1','GetController@stepOne')->name('stepOne'); //shows step 1 form
 	Route::post('join/{slug}/step-2','GetController@stepTwo')->name('stepTwo'); //shows step 2 form
 	Route::post('join/{slug}/step-3', 'GetController@stepThree')->name('stepThree'); //poost step 2 form
-	Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
+    Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
+});
+Route::prefix('tour/feed')->name('tour.')->group(function () {
+    Route::get('{id}', 'GetController@getFeed')
+    ->name('feed');
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');

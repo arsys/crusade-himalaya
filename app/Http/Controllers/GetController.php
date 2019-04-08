@@ -217,5 +217,14 @@ class GetController extends Controller
 	public function getThankyou()
 	{
 		return view('frontend.tour.book.step3');
-	}
+    }
+
+    public function getFeed($id)
+    {
+        $tour = Tour::find($id);
+        // return view('frontend.feed.show')
+        // ->withTour($tour)
+        // ->header('Content-Type', 'text/xml');
+        return response()->view('frontend.feed.show', compact('tour'))->header('Content-Type', 'text/xml');
+    }
 }

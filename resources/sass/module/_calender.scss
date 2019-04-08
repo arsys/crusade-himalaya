@@ -1,102 +1,4 @@
 
-.r-tabs {
-  position: relative;
-background-color: $green;
-  border-radius: 1px;
- 
-
-}
-.r-tabs-nav{
-  text-align: center;
-
-}
-
-/* Tab element */
-.r-tabs .r-tabs-nav .r-tabs-tab {
-  position: relative;
-  background-color: $green;
-}
-@media  screen and (min-width: 320px) and (max-width:800px){
-  .r-tabs
-  {
-    .r-tabs-accordion-title {
-      .r-tabs-anchor {
-          text-align:center;
-          color:#fff;
-          content: "\f3c5";
-          font-weight: bold;
-          font-size: 1rem;
-          font-family: "Font Awesome 5 Free";
-      }
-    } 
-    }
-  }
-  @media  screen and (min-width: 320px) and (max-width:800px){
-  .r-tabs
-  {
-    .r-tabs-accordion-title {
-      .r-tabs-anchor::before {
-          text-align:center;
-          content: "\f784";
-          font-weight: bold;
-          font-family: "Font Awesome 5 Free";
-      }
-    } 
-    }
-  }
-
-
-/* Tab anchor */
-.r-tabs .r-tabs-nav .r-tabs-anchor {
-  display: inline-block;
-  padding: 20px 20px;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-}
-
-
-/* Active state tab anchor */
-.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
-  color: $green;
-  text-shadow: none;
-  background-color: white;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-}
-
-/* Tab panel */
-.r-tabs .r-tabs-panel {
-  background-color: white;
-  border-bottom: 4px solid white;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-
-}
-
-/* Accordion anchor */
-.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
-  display: block;
-  padding: 10px;
-  border:1px solid $green;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-  font-size: 14px;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-}
-
-/* Active accordion anchor */
-.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
-  background-color: #fff;
-  color: $green;
-  text-shadow: none;
-}
-
 .article-wrap{
   position: relative;
   z-index: 10;
@@ -141,4 +43,14 @@ background-color: $green;
     height: auto;
   }
 }
-
+.calender-month{
+  li {
+    a{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    &.uk-active a{
+      border-bottom: 1.5px solid $green;
+    }
+  }
+}

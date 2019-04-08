@@ -24,7 +24,232 @@ What's On This  | {{config('app.name')}}
     </div>
   </div>
 </section>
-<div id="responsiveTabsDemo" class="r-tabs ">
+<div class="uk-container">
+  <ul class="uk-child-width-expand calender-month" uk-tab uk-switcher>
+      @for($i=1;$i<=12;$i++)
+        <li><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
+      @endfor
+  </ul>
+  <ul class="uk-switcher uk-margin">
+      <li>
+          @foreach($jan as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($feb as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($mar as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($apr as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($may as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($jun as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($jul as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($aug as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($sep as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($oct as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($nov as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+      <li>
+          @foreach($dec as $event)
+          <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
+              <div class="uk-card-media-left  article-body">
+                <img src="{{ asset($event->path) }}" alt="{{ $event->title }}">
+              </div>
+  
+              <div class="uk-card-body article-inner">
+                  <h4 class="uk-comment-title uk-margin-remove"><span>{{ $event->title }}</span></h4>
+                      <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                          <li><i class="fas fa-calendar-week"></i> <span class="uk-margin-left">{{ $event->start_date }}</span></li>
+                          <li><span>color festival</span></li>
+                      </ul>
+                  <p>{{ $event->description }}</p> @if($event->url)<a href="{{ $event->url }}">Read More</a>@endif
+              </div>
+          </div>
+          @endforeach
+      </li>
+  </ul>
+</div>
+{{-- <div id="responsiveTabsDemo" class="r-tabs ">
     <ul class="r-tabs-nav">
     @for($i=1;$i<=12;$i++)
         <li class="r-tabs-tab"><a href="#{{ date('M', mktime(0, 0, 0, $i, 1)) }}" class="r-tabs-anchor"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
@@ -289,16 +514,8 @@ What's On This  | {{config('app.name')}}
 </div>
   @endforeach
 </div>
-</div>
+</div> --}}
 
-@stop @section('scripts')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/responsive-tabs@1.6.3/css/responsive-tabs.min.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/responsive-tabs@1.6.1/js/jquery.responsiveTabs.min.js"></script>
-<script>
-  $('#responsiveTabsDemo').responsiveTabs({
-    startCollapsed: 'accordion',
-    active: {{ date('n')-1 }}
-  });
-</script>
+@stop 
+@section('scripts')
 @stop

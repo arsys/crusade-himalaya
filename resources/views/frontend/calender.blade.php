@@ -31,8 +31,8 @@ What's On This  | {{config('app.name')}}
         <li><a href="#" @if($i == date('n')) class="uk-active" @endif> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
       @endfor
   </ul>
-  <ul class="uk-switcher uk-margin">
-      <li>
+  <ul class="uk-switcher">
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($jan as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -68,7 +68,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($mar as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -86,7 +86,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($apr as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -104,7 +104,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($may as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -122,7 +122,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($jun as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -140,7 +140,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($jul as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -158,7 +158,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($aug as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -176,7 +176,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($sep as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -194,7 +194,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($oct as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -212,7 +212,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($nov as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">
@@ -230,7 +230,7 @@ What's On This  | {{config('app.name')}}
           </div>
           @endforeach
       </li>
-      <li>
+      <li class="uk-margin uk-margin-remove-horizontal">
           @foreach($dec as $event)
           <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s  uk-margin article-wrap" uk-grid>
               <div class="uk-card-media-left  article-body">

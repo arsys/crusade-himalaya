@@ -76,7 +76,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                             <select name="difficulty" id="difficulty" class="form-control" required>
                                 <option value="">&nbsp;</option>
                                 @foreach($difficulties as $level)
-                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty->id)?"selected":"" }}>{{ $level->name }}</option>
+                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty_id)?"selected":"" }}>{{ $level->name }}</option>
                                 @endforeach
                             </select>
                             <label for="difficulty">Difficulty</label>
@@ -97,11 +97,9 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                         <div class="form-group floating-label {{$errors->has('category') ? 'has-error' : ''}}">
                             <select id="category {{$errors->has('category')? 'inputError' : ''}}" name="category" class="form-control category" value="{{ old('category') }}" required>
                                 @foreach($categories as $category) 
-                                @if(!empty($tour->$category->id ))
                                 <option value="{{ $category->id }}" {{($category->id == $tour->category_id)?"selected":"" }}>{{ $category->name }}</option>
                                 @else
                                 <option value="{{$category->id}}">{{$category->name}}</option>
-                                @endif 
                                 @endforeach
                             </select>
                             <label for="category">Category</label>

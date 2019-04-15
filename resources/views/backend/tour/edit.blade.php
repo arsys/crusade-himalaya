@@ -97,7 +97,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                         <div class="form-group floating-label {{$errors->has('category') ? 'has-error' : ''}}">
                             <select id="category {{$errors->has('category')? 'inputError' : ''}}" name="category" class="form-control category" value="{{ old('category') }}" required>
                                 @foreach($categories as $category) 
-                                @if(!empty($tour->$category_id ))
+                                @if(!empty($tour->category_id ))
                                 <option value="{{ $category->id }}" {{($category->id == $tour->category_id)?"selected":"" }}>{{ $category->name }}</option>
                                 @else
                                 <option value="{{$category->id}}">{{$category->name}}</option>

@@ -87,7 +87,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                             <select name="group" id="group" class="form-control" required>
                                 <option value=""></option>
                                 @foreach($groups as $size)
-                                <option value="{{ $size->id }}" {{($size->id == $tour->group->id)?"selected":"" }}>{{ $size->name }}</option>
+                                <option value="{{ $size->id }}" {{($size->id == $tour->group_id)?"selected":"" }}>{{ $size->name }}</option>
                                 t @endforeach
                             </select>
                             <label for="group">Group Size</label>
@@ -96,11 +96,13 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                     <div class="col-sm-4">
                         <div class="form-group floating-label {{$errors->has('category') ? 'has-error' : ''}}">
                             <select id="category {{$errors->has('category')? 'inputError' : ''}}" name="category" class="form-control category" value="{{ old('category') }}" required>
-                                @foreach($categories as $category) @if(!empty($tour->$category->id ))
-                                <option value="{{ $category->id }}" {{($category->id == $tour->category->id)?"selected":"" }}>{{ $category->name }}</option>
+                                @foreach($categories as $category) 
+                                @if(!empty($tour->$category->id ))
+                                <option value="{{ $category->id }}" {{($category->id == $tour->category_id)?"selected":"" }}>{{ $category->name }}</option>
                                 @else
                                 <option value="{{$category->id}}">{{$category->name}}</option>
-                                @endif @endforeach
+                                @endif 
+                                @endforeach
                             </select>
                             <label for="category">Category</label>
                         </div>

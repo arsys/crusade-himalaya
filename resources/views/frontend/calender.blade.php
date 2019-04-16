@@ -26,9 +26,9 @@ What's On This  | {{config('app.name')}}
   </div>
 </section>
 <div class="uk-container uk-visible@l">
-  <ul class="uk-child-width-expand calender-month" uk-tab uk-switcher>
+ <ul class="uk-child-width-expand calender-month" uk-tab uk-switcher data-uk-active="{{data('n')}}">
       @for($i=1;$i<=12;$i++)
-        <li><a href="#" @if($i == date('n')) class="uk-active" @endif> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
+        <li><a href="#"> {{ date('F', mktime(0, 0, 0, $i, 1)) }} </a></li>
       @endfor
   </ul>
   <ul class="uk-switcher">

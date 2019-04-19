@@ -76,7 +76,11 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                             <select name="difficulty" id="difficulty" class="form-control" >
                                 <option value="">&nbsp;</option>
                                 @foreach($difficulties as $level)
-                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty_id)?"selected":"" }}>{{ $level->name }}</option>
+                                @if (!empty($tour->difficulty_id))
+                                <option value="{{ $level->id }}">{{ $level->name }}</option>
+                                @else
+                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty->id)?"selected":"" }}>{{ $size->name }}</option>
+                                @endif    
                                 @endforeach
                             </select>
                             <label for="difficulty">Difficulty</label>
@@ -87,8 +91,12 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                             <select name="group" id="group" class="form-control" >
                                 <option value=""></option>
                                 @foreach($groups as $size)
-                                <option value="{{ $size->id }}" {{($size->id == $tour->group_id)?"selected":"" }}>{{ $size->name }}</option>
-                                t @endforeach
+                                @if (!empty($tour->group_id))
+                                <option value="{{ $size->id }}">{{ $size->name }}</option>
+                                @else
+                                <option value="{{ $size->id }}" {{($size->id == $tour->group->id)?"selected":"" }}>{{ $size->name }}</option>
+                                @endif                                   
+                                @endforeach
                             </select>
                             <label for="group">Group Size</label>
                         </div>
@@ -132,7 +140,11 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                             <select id="accommodation {{$errors->has('accommodation')? 'inputError' : ''}}" name="accommodation" class="form-control" value="{{ old('accommodation') }}" >
                                 <option value="">&nbsp;</option>
                                 @foreach($accommodations as $accommodation)
-                                <option value="{{ $accommodation->id }}" {{($accommodation->id == $tour->accommodation->id)?"selected":"" }}>{{ $accommodation->name }}</option>
+                                @if (!empty($tour->accommodation_id))
+                                <option value="{{ $accommodation->id }}">{{ $accommodation->name }}</option>
+                                @else
+                                <option value="{{ $accommodation->id }}" {{($accommodation->id == $tour->accommodation->id)?"selected":"" }}>{{ $accommodation->name }}</option>    
+                                @endif                                
                                 @endforeach
                             </select>
                             <label for="accommodation">Accommodation</label>
@@ -142,8 +154,13 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                         <div class="form-group floating-label {{$errors->has('meal') ? 'has-error' : ''}}">
                             <select id="meal {{$errors->has('meal')? 'inputError' : ''}}" name="meal" class="form-control" value="{{ old('meal') }}" >
                                 <option value="">&nbsp;</option>
+                                
                                 @foreach($meals as $meal)
-                                <option value="{{ $meal->id }}" {{($meal->id == $tour->meal->id)?"selected":"" }}>{{ $meal->name }}</option>
+                                @if (!empty($tour->meal_id))
+                                <option value="{{ $meal->id }}">{{ $meal->name }}</option>
+                                @else
+                                <option value="{{ $meal->id }}" {{($meal->id == $tour->meal->id)?"selected":"" }}>{{ $accommodation->name }}</option>    
+                                @endif   
                                 @endforeach
                             </select>
                             <label for="meal">Meal Plan</label>

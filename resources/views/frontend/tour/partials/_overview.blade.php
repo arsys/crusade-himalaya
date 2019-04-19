@@ -1,4 +1,5 @@
 <div class="uk-panel uk-padding-large uk-padding-remove-horizontal uk-padding-remove-top" >
+	@if (!empty($tour->group->name) || !empty($tour->accomodation->name) || !empty($tour->difficulty->name) || !empty($tour->elevation))	
 	<div class="" uk-grid>
 		<div class="uk-width-2-5@m">
 			<div class="attribute-wrapper" uk-grid>
@@ -55,6 +56,7 @@
 			</div>
 		</div>
 	</div>
+	@endif
 	{!! $tour->overview !!}
 </div>
 

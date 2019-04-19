@@ -6,8 +6,11 @@
 @section('twitter')
 <meta name="twitter:data1" content="${{ $tour->price }}">
 <meta name="twitter:label1" content="Price">
+@if (!empty( $tour->difficulty->name))
 <meta name="twitter:data2" content="{{ $tour->difficulty->name }}">
 <meta name="twitter:label2" content="Difficulty">
+@endif
+
 @stop
 @section('og')
 <meta property="og:price:amount" content="{{ $tour->price }}" />

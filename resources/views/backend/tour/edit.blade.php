@@ -143,7 +143,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                                 @if (!empty($tour->accommodation_id))
                                 <option value="{{ $accommodation->id }}">{{ $accommodation->name }}</option>
                                 @else
-                                <option value="{{ $accommodation->id }}" {{($accommodation->id == $tour->accommodation->id)?"selected":"" }}>{{ $accommodation->name }}</option>    
+                                <option value="{{ $accommodation->id }}" {{($accommodation->id == $tour->accommodation_id)?"selected":"" }}>{{ $accommodation->name }}</option>    
                                 @endif                                
                                 @endforeach
                             </select>
@@ -159,7 +159,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                                 @if (!empty($tour->meal_id))
                                 <option value="{{ $meal->id }}">{{ $meal->name }}</option>
                                 @else
-                                <option value="{{ $meal->id }}" {{($meal->id == $tour->meal->id)?"selected":"" }}>{{ $accommodation->name }}</option>    
+                                <option value="{{ $meal->id }}" {{($meal->id == $tour->meal_id)?"selected":"" }}>{{ $accommodation->name }}</option>    
                                 @endif   
                                 @endforeach
                             </select>

@@ -79,7 +79,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                         <div class="form-group floating-label">
                             <input type="text" class="form-control"
                             id="elevation {{$errors->has('elevation') ? 'inputError' : ''}}" name="elevation"
-                            value="{{ old('elevation') }}" required>
+                            value="{{ old('elevation') }}" >
                             @if($errors->has('elevation'))
                             <span class="help-block">{{ $errors->first('elevation') }}</span>
                             @endif
@@ -91,7 +91,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            <select name="difficulty" id="difficulty" class="form-control" required>
+                            <select name="difficulty" id="difficulty" class="form-control" >
                                 <option value=""></option>
                                 @foreach($difficulties as $level)
                                 <option value="{{$level->id}}">{{$level->name}}</option>
@@ -102,7 +102,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            <select name="group" id="group" class="form-control" required>
+                            <select name="group" id="group" class="form-control" >
                                 <option value=""></option>
                                 @foreach($groups as $size)
                                 <option value="{{$size->id}}">{{$size->name}}</option>
@@ -145,7 +145,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                         <div class="form-group floating-label {{$errors->has('accommodation') ? 'has-error' : ''}}">
                             <select id="accommodation {{$errors->has('accommodation')? 'inputError' : ''}}"
                                 name="accommodation" class="form-control" value="{{ old('accommodation') }}"
-                                required>
+                                >
                                 <option value=""></option>
                                 @foreach($accommodations as $accommodation)
                                 <option value="{{$accommodation->id}}">{{$accommodation->name}}</option>
@@ -157,7 +157,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                     <div class="col-sm-6">
                         <div class="form-group floating-label {{$errors->has('meal') ? 'has-error' : ''}}">
                             <select id="meal {{$errors->has('meal')? 'inputError' : ''}}" name="meal"
-                                class="form-control" value="{{ old('meal') }}" required>
+                                class="form-control" value="{{ old('meal') }}" >
                                 <option value=""></option>
                                 @foreach($meals as $meals)
                                 <option value="{{$meals->id}}">{{$meals->name}}</option>

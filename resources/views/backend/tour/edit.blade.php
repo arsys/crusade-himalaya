@@ -79,7 +79,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                                 @if (!empty($tour->difficulty_id))
                                 <option value="{{ $level->id }}">{{ $level->name }}</option>
                                 @else
-                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty->id)?"selected":"" }}>{{ $size->name }}</option>
+                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty_id)?"selected":"" }}>{{ $size->name }}</option>
                                 @endif    
                                 @endforeach
                             </select>
@@ -94,7 +94,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                                 @if (!empty($tour->group_id))
                                 <option value="{{ $size->id }}">{{ $size->name }}</option>
                                 @else
-                                <option value="{{ $size->id }}" {{($size->id == $tour->group->id)?"selected":"" }}>{{ $size->name }}</option>
+                                <option value="{{ $size->id }}" {{($size->id == $tour->group_id)?"selected":"" }}>{{ $size->name }}</option>
                                 @endif                                   
                                 @endforeach
                             </select>

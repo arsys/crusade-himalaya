@@ -73,7 +73,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            <select name="difficulty" id="difficulty" class="form-control" required>
+                            <select name="difficulty" id="difficulty" class="form-control" >
                                 <option value="">&nbsp;</option>
                                 @foreach($difficulties as $level)
                                 <option value="{{ $level->id }}" {{($level->id == $tour->difficulty_id)?"selected":"" }}>{{ $level->name }}</option>
@@ -84,7 +84,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                     </div>
                     <div class="col-sm-4">
                         <div class="form-group floating-label">
-                            <select name="group" id="group" class="form-control" required>
+                            <select name="group" id="group" class="form-control" >
                                 <option value=""></option>
                                 @foreach($groups as $size)
                                 <option value="{{ $size->id }}" {{($size->id == $tour->group_id)?"selected":"" }}>{{ $size->name }}</option>
@@ -129,7 +129,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group floating-label {{$errors->has('accommodation') ? 'has-error' : ''}}">
-                            <select id="accommodation {{$errors->has('accommodation')? 'inputError' : ''}}" name="accommodation" class="form-control" value="{{ old('accommodation') }}" required>
+                            <select id="accommodation {{$errors->has('accommodation')? 'inputError' : ''}}" name="accommodation" class="form-control" value="{{ old('accommodation') }}" >
                                 <option value="">&nbsp;</option>
                                 @foreach($accommodations as $accommodation)
                                 <option value="{{ $accommodation->id }}" {{($accommodation->id == $tour->accommodation->id)?"selected":"" }}>{{ $accommodation->name }}</option>
@@ -140,7 +140,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group floating-label {{$errors->has('meal') ? 'has-error' : ''}}">
-                            <select id="meal {{$errors->has('meal')? 'inputError' : ''}}" name="meal" class="form-control" value="{{ old('meal') }}" required>
+                            <select id="meal {{$errors->has('meal')? 'inputError' : ''}}" name="meal" class="form-control" value="{{ old('meal') }}" >
                                 <option value="">&nbsp;</option>
                                 @foreach($meals as $meal)
                                 <option value="{{ $meal->id }}" {{($meal->id == $tour->meal->id)?"selected":"" }}>{{ $meal->name }}</option>

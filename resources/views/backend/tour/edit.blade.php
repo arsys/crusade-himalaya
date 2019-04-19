@@ -79,7 +79,7 @@ $budexIds =json_decode(json_encode($tour->budgetExcludes()->allRelatedIds()), tr
                                 @if (!empty($tour->difficulty_id))
                                 <option value="{{ $level->id }}">{{ $level->name }}</option>
                                 @else
-                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty_id)?"selected":"" }}>{{ $size->name }}</option>
+                                <option value="{{ $level->id }}" {{($level->id == $tour->difficulty_id)?"selected":"" }}>{{ $difficulty->name }}</option>
                                 @endif    
                                 @endforeach
                             </select>

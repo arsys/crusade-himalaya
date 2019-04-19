@@ -89,12 +89,12 @@ class TourController extends Controller
                 'price' => 'required|numeric',
                 'budgetPrice' => 'sometimes|numeric',
                 'singleSupp' => 'sometimes|numeric',
-                'elevation' => 'required',
-                'difficulty' => 'required',
-                'group' => 'required',
+                'elevation' => 'sometimes',
+                'difficulty' => 'sometimes',
+                'group' => 'sometimes',
                 'region' => 'sometimes',
-                'accommodation' => 'required',
-                'meal' => 'required',
+                'accommodation' => 'sometimes',
+                'meal' => 'sometimes',
                 'includes'  => 'required|array|min:1',
                 'excludes'  => 'required|array|min:1',
                 'featured' => 'required',
@@ -116,18 +116,29 @@ class TourController extends Controller
             if (!empty($request->singleSupp)) {
                 $tour->singleSupp = $request->singleSupp;
             }
-
-            $tour->elevation = $request->elevation;
-            $tour->difficulty_id = $request->difficulty;
-            $tour->group_id = $request->group;
+            if (!empty($request->elevation)) {
+                $tour->elevation = $request->elevation;
+            }
+            if (!empty($request->difficulty)) {
+                $tour->difficulty_id = $request->difficulty;
+            }
+            if (!empty($request->group)) {
+                $tour->group_id = $request->group;
+            }
 
             $tour->category_id = $request->category;
 
             if (!empty($request->region)) {
                 $tour->region_id = $request->region;
             }
-            $tour->accommodation_id = $request->accommodation;
-            $tour->meal_id = $request->meal;
+
+            if (!empty($request->accommodation)) {
+                $tour->accommodation_id = $request->accommodation;
+            }
+
+            if (!empty($request->meal)) {
+                $tour->meal_id = $request->meal;
+            }
 
             $tour->status = $request->status;
             $tour->overview = $request->overview;
@@ -243,12 +254,12 @@ class TourController extends Controller
                 'price' => 'required|numeric',
                 // 'budgetPrice' => 'sometimes|numeric',
                 // 'singleSupp' => 'sometimes|numeric',
-                'elevation' => 'required',
-                'difficulty' => 'required',
-                'group' => 'required',
+                'elevation' => 'sometimes',
+                'difficulty' => 'sometimes',
+                'group' => 'sometimes',
                 'region' => 'sometimes',
-                'accommodation' => 'required',
-                'meal' => 'required',
+                'accommodation' => 'sometimes',
+                'meal' => 'sometimes',
                 'includes'  => 'required|array|min:1',
                 'excludes'  => 'required|array|min:1',
                 'featured' => 'sometimes',
@@ -267,17 +278,27 @@ class TourController extends Controller
             if (!empty($request->singleSupp)) {
                 $tour->singleSupp = $request->singleSupp;
             }
-            $tour->elevation = $request->elevation;
-            $tour->difficulty_id = $request->difficulty;
+            if (!empty($request->elevation)) {
+                $tour->elevation = $request->elevation;
+            }
+            if (!empty($request->difficulty)) {
+                $tour->difficulty_id = $request->difficulty;
+            }
+            if (!empty($request->group)) {
             $tour->group_id = $request->group;
+            }
 
             $tour->category_id = $request->category;
 
             if (!empty($request->region)) {
                 $tour->region_id = $request->region;
             }
-            $tour->accommodation_id = $request->accommodation;
-            $tour->meal_id = $request->meal;
+            if (!empty($request->accommodation)) {
+                $tour->accommodation_id = $request->accommodation;
+            }
+            if (!empty($request->meal)) {
+                $tour->meal_id = $request->meal;
+            }
 
             $tour->status = $request->status;
             $tour->overview = $request->overview;

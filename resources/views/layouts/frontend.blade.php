@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="@yield('mtitle','Crusade Himalaya | Himalaya Tours')">
+    <meta name="title" content="@yield('mtitle','Crusade Himalaya | Empower, Educate, Encourage')">
     <meta name="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
     <meta name="robots" content="@yield('robot','index, follow')">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

@@ -4,7 +4,7 @@
         <li>
             <img src="{{ $carousel->path }}" alt="{{ $carousel->name }}" uk-cover>
             <div class="uk-position-center uk-position-small uk-text-center uk-overlay-panel uk-overlay-background uk-overlay-fade uk-light">
-               <p class=" uk-heading-secondary carousel-heading" uk-slideshow-parallax="x: 600,-600">{{ $carousel->header}}</p>
+               <p class=" uk-heading-primary carousel-heading" uk-slideshow-parallax="x: 600,-600">{{ $carousel->header}}</p>
                <p class="uk-text-lead carousel-para" uk-slideshow-parallax="x: 400,-400">{{ $carousel->subheader}}</p>
            </div>
        </li>

@@ -42,7 +42,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                         <div class="form-group floating-label">
                             <input type="number" class="form-control"
                             id="budgetPrice {{$errors->has('budgetPrice') ? 'inputError' : ''}}" name="budgetPrice"
-                            value="{{ old('budgetPrice') }}" required>
+                            value="{{ old('budgetPrice') }}" >
                             @if($errors->has('budgetPrice'))
                             <span class="help-block">{{ $errors->first('budgetPrice') }}</span>
                             @endif
@@ -53,7 +53,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bo
                         <div class="form-group floating-label">
                             <input type="number" class="form-control"
                             id="singleSupp {{$errors->has('singleSupp') ? 'inputError' : ''}}" name="singleSupp"
-                            value="{{ old('singleSupp') }}" required>
+                            value="{{ old('singleSupp') }}" >
                             @if($errors->has('singleSupp'))
                             <span class="help-block">{{ $errors->first('singleSupp') }}</span>
                             @endif

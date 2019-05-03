@@ -275,17 +275,32 @@ class TourController extends Controller
             if (!empty($request->budgetPrice)) {
                 $tour->budgetPrice = $request->budgetPrice;
             }
+            else{
+                $tour->budgetPrice = null;
+            }
             if (!empty($request->singleSupp)) {
                 $tour->singleSupp = $request->singleSupp;
+            }
+            else{
+                $tour->singleSupp = null;
             }
             if (!empty($request->elevation)) {
                 $tour->elevation = $request->elevation;
             }
+            else{
+                $tour->elevation = null;
+            }
             if (!empty($request->difficulty)) {
                 $tour->difficulty_id = $request->difficulty;
             }
+            else{
+                $tour->difficulty_id = null;
+            }
             if (!empty($request->group)) {
             $tour->group_id = $request->group;
+            }
+            else{
+                $tour->group_id = null;
             }
 
             $tour->category_id = $request->category;
@@ -293,11 +308,20 @@ class TourController extends Controller
             if (!empty($request->region)) {
                 $tour->region_id = $request->region;
             }
+            else{
+                $tour->region_id = null;
+            }
             if (!empty($request->accommodation)) {
                 $tour->accommodation_id = $request->accommodation;
             }
+            else{
+                $tour->accommodation_id = null;
+            }
             if (!empty($request->meal)) {
                 $tour->meal_id = $request->meal;
+            }
+            else{
+                $tour->meal_id = null;
             }
 
             $tour->status = $request->status;

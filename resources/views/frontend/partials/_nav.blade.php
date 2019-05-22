@@ -58,7 +58,6 @@
       <li class="nav-list"><a href="/who-we-are" class="nav-a">Who we are</a></li>
 
       <li class="nav-list"><a href="{{ route('frontend-travelBlog') }}" class="nav-a">Travel Blog</a></li>
-      <li class="nav-list"><a href="/post" class="nav-a">Blog Post</a></li>
 
       <li>
         <div class="uk-navbar-item uk-margin-remove-left uk-margin-remove-top">

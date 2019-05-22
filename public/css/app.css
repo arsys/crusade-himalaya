@@ -2189,7 +2189,8 @@ textarea.parsley-error {
   padding: 20px !important;
 }
 
-.blogPost--title {
+.blogPost--title a {
+  color: #333;
   font-weight: 500;
 }
 
@@ -2203,7 +2204,8 @@ textarea.parsley-error {
   font-size: 1.125rem;
 }
 
-.inCategory {
+.inCategory a {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #333;
 }
 

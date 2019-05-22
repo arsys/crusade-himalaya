@@ -102,7 +102,7 @@ Route::name('frontend-')->group(function () {
 	Route::post('/refer-a-friend','PostController@referFriend')->name('referFriend');
 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 	Route::get('/travel-blog','FrontendController@travelBlog')->name('travelBlog');
-	Route::get('/post','FrontendController@blogPost')->name('blogPost');
+	Route::get('/post/{slug}','FrontendController@singlePost')->name('singlePost');
 });
 Route::get('/', 'FrontendController@getIndex');
 Route::get('/who-we-are', 'FrontendController@getAbout');

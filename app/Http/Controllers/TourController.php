@@ -445,7 +445,7 @@ class TourController extends Controller
         $tour = Tour::find($id);
         $tour->status = 0;
         $tour->save();
-        Session::flash('success', 'Tour set as published!');
+        Session::flash('success', 'Tour set as unpublished!');
         return redirect()
         ->route('tour.index');
     }

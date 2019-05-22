@@ -1,0 +1,12 @@
+.blogIndex-header, .blogIndex-body{
+    &--title{
+        font-weight: 500;
+    }
+}
+.blogPost--card{
+    padding: 20px !important;
+}
+.blogPost--title a{
+    color: #333;
+    font-weight: 500;
+}

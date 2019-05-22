@@ -88,6 +88,17 @@
 							<span class="title">Page</span>
 						</a>
 					</li>
+					<li class="gui-folder">
+							<a>
+								<div class="gui-icon"><i class="fa fa-suitcase"></i></div>
+								<span class="title">Blog</span>
+							</a>
+							<!--start submenu -->
+							<ul>
+								<li><a href="{{ route('blog-post.index') }}"><span class="title">Posts</span></a></li>
+								 <li><a href="{{ route('post-category.index') }}"><span class="title">Category</span></a></li>
+							</ul>
+						</li>
 					<li>
 						<a href="{{ route('media.index') }}" >
 							<div class="gui-icon"><i class="far fa-images fa md"></i></div>

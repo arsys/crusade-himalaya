@@ -11,6 +11,7 @@ use App\Insta;
 use App\Partner;
 use App\Event;
 use App\Page;
+use App\Post;
 use DB;
 
 use Illuminate\Http\Request;
@@ -209,5 +210,16 @@ public function getPartner(){
 public function getSitemap(){
     return view('frontend.sitemap');
 }
+
+public function travelBlog(){
+    $posts = Post::where('published',1)->get();
+    return view('frontend.blog.index')->withPosts($posts);
+}
+ public function singlePost($slug)
+ {
+    $post = Post::where('slug','=', $slug)->firstOrFail();
+     return view('frontend.blog.post')->withPost($post);
+ }
+
 
 }

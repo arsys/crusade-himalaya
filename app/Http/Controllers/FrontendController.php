@@ -210,4 +210,12 @@ public function getSitemap(){
     return view('frontend.sitemap');
 }
 
+public function travelBlog(){
+    return view('frontend.blog.index');
+}
+ public function blogPost()
+ {
+     return view('frontend.blog.post');
+ }
+ 
 }

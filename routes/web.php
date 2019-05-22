@@ -90,12 +90,19 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::resource('/position', 'MemberController');
 	//Instagram Feeds
 	Route::resource('/instagram', 'InstaController');
+	//Blog Post Category
+	Route::resource('/post-category', 'PostCategoryController');
+	Route::resource('/blog-post', 'BlogPostController');
+	Route::get('blog-post/{id}/publish','BlogPostController@publish')->name('blog-post.publish');
+	Route::get('blog-post/{id}/unpublish','BlogPostController@unpublish')->name('blog-post.unpublish');
 });
 Route::name('frontend-')->group(function () {
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
 	Route::post('/refer-a-friend','PostController@referFriend')->name('referFriend');
 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
+	Route::get('/travel-blog','FrontendController@travelBlog')->name('travelBlog');
+	Route::get('/post','FrontendController@blogPost')->name('blogPost');
 });
 Route::get('/', 'FrontendController@getIndex');
 Route::get('/who-we-are', 'FrontendController@getAbout');
@@ -131,7 +138,5 @@ Route::prefix('destination')->group(function () {
 Route::name('page-')->group(function () {
 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');
 });
-Route::get('/feeds', 'PubliController@feeds')
-    ->name('feeds.show');
 Route::feeds();
 

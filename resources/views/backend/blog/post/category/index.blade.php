@@ -109,7 +109,7 @@ aria-hidden="true">
                     },
                     success: function (data) {
                         $('#deleteModal').modal('hide');
-                        toastr.success('Page deleted sucessfully!', 'Success Alert');
+                        toastr.success('Category deleted sucessfully!', 'Success Alert');
                         $('.item' + data['id']).remove();
                     }
 

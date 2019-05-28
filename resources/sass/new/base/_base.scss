@@ -1,0 +1,13 @@
+body{
+    background-color:$white;
+}
+.uk-margin-remove-horizontal {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+p{
+    color: $dark;
+}
+a, a:hover{
+    text-decoration: none;
+}

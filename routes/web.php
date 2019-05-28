@@ -140,3 +140,8 @@ Route::name('page-')->group(function () {
 });
 Route::feeds();
 
+
+Route::name('new')->prefix('new')->group(function () {
+	Route::get('/home', 'FrontendController@newHome');
+Route::get('/product', 'FrontendController@newProduct');
+});

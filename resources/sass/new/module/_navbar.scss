@@ -1,0 +1,29 @@
+.nav-container {
+    background-color: $white !important;
+    @extend .uk-navbar-container, .uk-box-shadow-medium;
+
+    .nav-wrapper {
+        @extend .uk-navbar;
+        .logo-wrapper {
+            @extend .uk-navbar-left;
+        }
+        .link-wrapper {
+            @extend .uk-navbar-right;
+            .nav-list {
+                @extend .uk-navbar-nav;
+                &__item {
+                    &--link {
+                        @extend .uk-text-uppercase;
+                        font-family: $font-primary !important;
+                        color: $black !important;
+                        font-weight: 500
+                        ;
+                    }
+                }
+            }
+        }
+    }
+}
+.uk-sticky-placeholder{
+    display: none;
+}

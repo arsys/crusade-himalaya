@@ -1,0 +1,20 @@
+.section-white{
+    @extend .uk-section;
+    background-color: $white;
+}
+.section-dashed{
+    @extend .uk-section;
+    background-color: $dashed;
+    &--mobile{
+        @extend .uk-padding-remove-top;
+    }
+}
+.container{
+    @extend .uk-container;
+}
+.title-wrapper{
+    @extend .uk-text-center;
+}
+.slider-wrapper{
+    @extend .uk-margin-medium-top;
+}

@@ -1,0 +1,68 @@
+.footerSection-1 {
+    .footerLogo-wrapper {
+        @extend .uk-logo;
+        img {
+            width: 38%;
+        }
+    }
+    .socialLink--list {
+        @extend .uk-flex, .uk-margin-top;
+        &__item {
+            padding: 10px 14px;
+            color: $dark;
+            transition: ease-in 0.4s;
+            &:not(:last-child) {
+                @extend .uk-margin-small-right;
+            }
+            &:hover {
+                color: $white;
+            }
+        }
+        .fb:hover {
+            background-color: #3b5998;
+        }
+        .tw:hover {
+            background-color: #3b8aca;
+        }
+        .inst:hover {
+            background-color: #464646;
+        }
+        .yt:hover {
+            background-color: #cc181e;
+        }
+    }
+}
+.footerSection-2, .footerSection-3 {
+    .footerLink--wrapper {
+        @extend .uk-flex, .uk-flex-column;
+        .footerLink__itemButton {
+            font-family: $font-primary;
+            @extend .uk-button, .uk-text-uppercase;;
+            border: 1px solid $dark;
+            margin: 0 40px;
+            transition: all 0.3s;
+            color: $dark;
+            span {
+                color: $dark;
+            }
+            &:not(:last-child) {
+                @extend .uk-margin-small-bottom;
+            }
+            &:hover {
+                background-color: $primary;
+                color: $white;
+                border-color: $primary;
+                span {
+                    color: $white;
+                }
+            }
+        }
+        .footerLink__item{
+            color: $black;
+            font-family: $font-primary;
+            &:not(:last-child) {
+                @extend .uk-margin-small-bottom;
+            }
+        }
+    }
+}

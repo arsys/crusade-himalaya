@@ -1,0 +1,27 @@
+.button-default {
+    font-family: $font-primary;
+    @extend .uk-button, .uk-text-uppercase;
+    border: 1px solid $black;
+    transition: all 0.3s;
+    color: $dark;
+    font-weight: 500;
+    &:hover {
+        background-color: $primary;
+        color: $white;
+        border-color: $primary;
+    }
+}
+.button-primary{
+    @extend .uk-button  , .uk-button-default;
+    font-family: $font-primary;
+    border: 1px solid $primary;
+    transition: all 0.3s;
+    font-weight: 500;
+    background-color: $primary;
+    color: $white;
+    &:hover {
+        background-color: #073B4C;
+        color: $white;
+        border-color: #073B4C;
+    }
+}

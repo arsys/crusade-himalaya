@@ -1,0 +1,50 @@
+.header {
+    @extend .uk-section-default;
+    .hero-slider {
+        @extend .uk-position-relative, .uk-visible-toggle;
+        ul {
+            .slide-item {
+                &--content {
+                    @extend .uk-position-large, .uk-overlay;
+                    &__heading {
+                        font-family: $font-primary;
+                        font-weight: 800;
+                        font-size: 80px;
+                        line-height: 60px;
+                        // color: #272b2b;
+                        color: $white;
+                    }
+                    &__subheading {
+                        font-family: $font-primary;
+                        font-weight: 600;
+                        font-size: 35px;
+                        line-height: 3;
+                        // color: #272b2b;
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .scroll-down-wrapper {
+            @extend .uk-position-large, .uk-overlay;
+            .scroll-down{
+                color: $white;
+                text-decoration: none;
+                span {
+                    animation: sdb 2s infinite;
+                }
+            }
+        }
+    }
+}
+@keyframes sdb {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0,10px);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+}

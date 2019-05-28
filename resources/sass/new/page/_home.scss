@@ -1,0 +1,110 @@
+.sliderWrapper,
+.destinationsWrapper,.tourPacakge-wrapper {
+    @extend .uk-margin-medium-top;
+}
+
+.content-wrapper {
+    @extend .uk-margin-medium-top;
+    .content-item {
+        @extend .uk-text-center;
+        i {
+            color: $light-black;
+            font-size: 3.5rem;
+        }
+        &:hover {
+            i {
+                animation: ease-in 0.2s;
+                color: $primary;
+            }
+        }
+        &__title {
+            font-family: $font-primary;
+            font-weight: 600;
+            @extend .uk-margin, .uk-margin-remove-horizontal;
+            font-size: 1.0625rem;
+        }
+        &__paragraph {
+            font-family: $font-secondary;
+        }
+    }
+    .read-more {
+        display: inline-block;
+        color: $dark;
+        font-family: $font-primary;
+        span {
+            font-size: 2rem;
+            vertical-align: sub;
+        }
+        &:hover {
+            color: $primary;
+            transition: all 0.5s ease-in-out;
+            transform: translateX(-5px);
+        }
+    }
+}
+#prologue p {
+    font-family: $font-secondary;
+    font-size: 1.0625rem;
+}
+
+.sliderWrapper {
+    @extend .uk-position-relative, .uk-visible-toggle, .uk-light;
+    .sliderList--item {
+        @extend .uk-transition-toggle;
+    }
+    .sliderList--item {
+        .sliderPanel {
+            @extend .uk-panel;
+            &--textHolder {
+                @extend .uk-overlay, .uk-text-left;
+                background-color: rgba(0, 0, 0, 0.1);
+                transition: 0.8s ease-out;
+                h3 {
+                    margin: 0 0 25px 50px !important;
+                }
+                &__hover {
+                    @extend .uk-transition-fade,
+                        .uk-position-cover,
+                        .uk-overlay;
+                    color: $white;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    p {
+                        color: $white;
+                    }
+                    a {
+                        transition: 0.6s ease-out;
+                        span {
+                            font-size: 2rem;
+                            vertical-align: sub;
+                        }
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover .sliderPanel--textHolder {
+            display: none;
+        }
+    }
+}
+
+.destinationsWrapper {
+    @extend .uk-grid-small;
+    .destinationLeft > div,
+    .destinationRight > div {
+        padding-bottom: 15px;
+    }
+}
+
+.tourPacakge-wrapper{
+    .tourPackage--detailWrapper{
+        @extend .uk-card-body, .uk-padding-small;
+        h4{
+            padding-bottom: 8px;
+            font-family: $font-teritary;
+            font-size: 19px;
+        }
+    }
+}

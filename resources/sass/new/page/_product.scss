@@ -1,0 +1,326 @@
+.stickyWrapper {
+    top: -200px;
+    @extend .uk-panel;
+    transition: ease-in 0.5s;
+    .priceHolder {
+        @extend .uk-card,
+            .uk-card-default,
+            .uk-card-body,
+            .uk-flex,
+            .uk-flex-column,
+            .uk-text-center,
+            .uk-padding;
+        margin-bottom: 15px;
+        span {
+            padding: 5px 0px;
+            color: $black;
+        }
+        &--day {
+            font-size: 1.25rem;
+            font-family: $font-primary;
+            font-weight: 600;
+        }
+        &--from {
+            // font-size: 16px;
+            font-weight: 500;
+        }
+        &--price {
+            font-family: $font-primary;
+            font-weight: 60;
+            font-size: 2.125rem;
+            font-weight: 600;
+        }
+    }
+    .sideBar-action {
+        border-top: 2px solid $primary;
+        border-bottom: 2px solid $primary;
+        color: $black;
+        @extend .uk-card,
+            .uk-card-default,
+            .uk-card-body,
+            .uk-flex,
+            .uk-flex-column,
+            .uk-text-center,
+            .uk-padding;
+        .sideBar--list {
+            @extend .uk-list, .uk-list-divider;
+            &__item {
+                div {
+                    @extend .uk-flex-nowrap, .uk-flex-middle, .uk-grid-small;
+                    a {
+                        @extend .uk-link-text, .uk-link-reset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .tab-wrapper {
+.productTab {
+    margin-left: 0px;
+    .uk-active {
+        border-bottom: 2px solid $primary !important;
+        transition: ease-in 0.1s;
+        a {
+            border: unset;
+            color: $dark;
+        }
+    }
+    @extend .uk-box-shadow-medium;
+    background-color: $white;
+    li {
+        padding: 15px 0px;
+        a {
+            color: $dark;
+            font-family: $font-primary;
+            padding-right: unset;
+            @extend .uk-text-capitalize;
+            font-weight: 600;
+        }
+    }
+}
+
+.overviewMeta {
+    &:last-child {
+        margin-bottom: 40px;
+    }
+    .attribute-wrapper {
+        .attr-icons {
+            i {
+                font-size: 2.5rem;
+                color: $primary;
+            }
+        }
+        .attr-details {
+            .attr-title{
+                font-size: 1rem;
+                font-weight: 700;
+                color: $light-black;
+                font-family: $font-primary;
+            }
+            .attr-meta {
+                font-size: 1rem;
+                font-weight: 500;
+                color: $light-black;
+                font-family: $font-primary;
+            }
+        }
+    }
+}
+
+.productContent {
+    @extend .uk-card, .uk-card-default, .uk-card-body, .uk-margin-medium-bottom;
+    font-family: $font-secondary;
+    p,
+    ul,
+    li {
+        font-family: $font-secondary !important;
+    }
+}
+
+//Included Excluded Tab
+.inex-wrapper {
+    .inex--type {
+        li {
+            a {
+                color: $light-black;
+            }
+        }
+        .uk-active {
+            a {
+                border-color: $primary;
+                color: $dark;
+            }
+        }
+    }
+
+    .inex--list {
+        @extend .uk-margin;
+
+        .includedList,
+        .excludedList {
+            @extend .uk-list;
+        }
+
+        .includedList {
+            &--item {
+                span {
+                    @extend .uk-margin-small-right, .uk-text-success;
+                }
+            }
+        }
+
+        .excludedList {
+            &--item {
+                span {
+                    @extend .uk-margin-small-right, .uk-text-danger;
+                }
+            }
+        }
+    }
+}
+
+//Itinerary Section
+.itinerary-wrapper {
+    @extend .uk-panel,
+        .uk-padding-large,
+        .uk-padding-remove-horizontal,
+        .uk-padding-remove-top;
+    .itinerary-list {
+        @extend .uk-list, .uk-list-divider;
+        .itinerary-list-item {
+            .itinerary-item-link {
+                @extend .uk-accordion-title;
+                color: $black;
+            }
+            .itinerary-item-content {
+                @extend .uk-margin-large-left;
+                color: $light-black;
+            }
+        }
+    }
+}
+
+// itinerary end
+.itinerary-list {
+    .itinerary-list-item {
+        a span:before {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: $primary;
+            color: #fff;
+            line-height: 30px;
+            z-index: 1;
+            position: absolute;
+            content: "\f192";
+            font-size: 1rem;
+            font-family: "Font Awesome 5 Free";
+            margin: 0px 8px;
+            left: -23px;
+        }
+    }
+}
+.itinerary-list {
+    .itinerary-list-item:first-child,
+    .itinerary-list-item:last-child {
+        a span:before {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 50%;
+            background: $primary;
+            color: #fff;
+            line-height: 30px;
+            z-index: 1;
+            position: absolute;
+            content: "\f3c5";
+            font-weight: bold;
+            font-size: 1rem;
+            font-family: "Font Awesome 5 Free";
+            margin: 0px 8px;
+            left: -23px;
+        }
+    }
+}
+
+.itinerary-list {
+    .itinerary-list-item {
+        position: relative;
+        margin: 0;
+        border-left: 2px dashed #ccc;
+        padding-left: 30px;
+    }
+}
+.itinerary-list {
+    .itinerary-list-item:last-child {
+        border-left: none;
+    }
+}
+
+.searchWrapper {
+    @extend .uk-grid-small;
+    p {
+        @extend .uk-margin-remove;
+    }
+}
+.departureWrapper {
+    @extend .uk-overflow-auto;
+    table {
+        @extend .uk-table, .uk-table-hover, .uk-table-divider;
+        thead {
+            tr {
+                th {
+                    color: $light-black;
+                    @extend .uk-text-capitalize;
+                    font-weight: bold;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    color: $light-black;
+                }
+            }
+        }
+    }
+}
+//Mobile & tablet
+.packageMeta-wrapper--sm {
+    @extend .uk-card, .uk-card-default, .uk-card-body;
+    div {
+        @extend .uk-text-center;
+    }    
+    &__day {
+        @extend .uk-flex, .uk-flex-row;
+        font-size: 1.5rem;
+        font-family: $font-primary;
+        font-weight: 600;
+        color: $light-black;
+    }
+    &__price {
+        @extend .uk-flex, .uk-flex-row;
+        font-family: $font-primary;
+        font-weight: 60;
+        font-size: 1.625rem;
+        font-weight: 600;
+        color: $light-black;
+    }
+    .withborder{
+        border-left:3px solid $primary;
+        .actionlist{
+            @extend .uk-list , .uk-list-divider;
+            .actionWrapper{
+                @extend .uk-grid-small,
+                .uk-flex-nowrap ,
+                .uk-flex-middle;
+                &--icon{
+                    @extend .uk-width-auto ;
+                    i{
+                        color: $light-black;
+                    }
+                }
+                &--action{
+                    a{
+                        @extend .uk-link-text, .uk-link-reset;
+                        color: $light-black !important;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mobileContent-list{
+    &--item{
+        @extend .uk-box-shadow-medium ,.uk-padding ,.uk-background-default;
+    }
+}

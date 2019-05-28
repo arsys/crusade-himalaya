@@ -221,5 +221,13 @@ public function travelBlog(){
      return view('frontend.blog.post')->withPost($post);
  }
 
+ public function newHome()
+ {
+     return view('new.index');
+ }
 
+ public function newProduct()
+ {
+     return view('new.product.index');
+ }
 }

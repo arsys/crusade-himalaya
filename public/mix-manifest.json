@@ -1,7 +1,6 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/assets/backend/css/style.css": "/assets/backend/css/style.css",
-    "/js/product.js": "/js/product.js",
-    "/js/navbar.js": "/js/navbar.js"
+    "/js/new.js": "/js/new.js",
+    "/css/main.css": "/css/main.css",
+    "/js/sticky-nav.js": "/js/sticky-nav.js",
+    "/js/new-product.js": "/js/new-product.js"
 }

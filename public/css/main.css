@@ -12500,8 +12500,7 @@ ul.uk-nav-sub {
 /* Title
  ========================================================================== */
 
-.uk-accordion-title,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link {
+.uk-accordion-title {
   display: block;
   font-size: 1.25rem;
   line-height: 1.4;
@@ -12509,8 +12508,7 @@ ul.uk-nav-sub {
   overflow: hidden;
 }
 
-.uk-accordion-title::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before {
+.uk-accordion-title::before {
   content: "";
   width: 1.4em;
   height: 1.4em;
@@ -12521,17 +12519,14 @@ ul.uk-nav-sub {
   background-position: 50% 50%;
 }
 
-.uk-open > .uk-accordion-title::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before {
+.uk-open > .uk-accordion-title::before {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
 /* Hover + Focus */
 
 .uk-accordion-title:hover,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link:hover,
-.uk-accordion-title:focus,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link:focus {
+.uk-accordion-title:focus {
   color: #666;
   text-decoration: none;
   outline: none;
@@ -18142,6 +18137,7 @@ iframe.uk-cover {
  ========================================================================== */
 
 .uk-margin-remove,
+.productContent--title,
 .searchWrapper p {
   margin: 0 !important;
 }
@@ -25043,53 +25039,7 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-accordion-title::before,
 .uk-offcanvas-bar .uk-accordion-title::before,
 .image-page-header .uk-accordion-title::before,
-.sliderWrapper .uk-accordion-title::before,
-.uk-light .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-light .itinerary-item-link::before,
-.uk-section-primary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-section-primary:not(.uk-preserve-color) .itinerary-item-link::before,
-.uk-section-secondary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-section-secondary:not(.uk-preserve-color) .itinerary-item-link::before,
-.uk-tile-primary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-tile-primary:not(.uk-preserve-color) .itinerary-item-link::before,
-.uk-tile-secondary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-tile-secondary:not(.uk-preserve-color) .itinerary-item-link::before,
-.uk-card-primary.uk-card-body .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary.uk-card-body .itinerary-item-link::before,
-.tourPacakge-wrapper .uk-card-primary.tourPackage--detailWrapper .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .tourPacakge-wrapper .uk-card-primary.tourPackage--detailWrapper .itinerary-item-link::before,
-.stickyWrapper .uk-card-primary.priceHolder .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-primary.priceHolder .itinerary-item-link::before,
-.stickyWrapper .uk-card-primary.sideBar-action .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-primary.sideBar-action .itinerary-item-link::before,
-.uk-card-primary.productContent .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary.productContent .itinerary-item-link::before,
-.uk-card-primary.packageMeta-wrapper--sm .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary.packageMeta-wrapper--sm .itinerary-item-link::before,
-.uk-card-primary > :not([class*='uk-card-media']) .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary > :not([class*='uk-card-media']) .itinerary-item-link::before,
-.uk-card-secondary.uk-card-body .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary.uk-card-body .itinerary-item-link::before,
-.tourPacakge-wrapper .uk-card-secondary.tourPackage--detailWrapper .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .tourPacakge-wrapper .uk-card-secondary.tourPackage--detailWrapper .itinerary-item-link::before,
-.stickyWrapper .uk-card-secondary.priceHolder .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-secondary.priceHolder .itinerary-item-link::before,
-.stickyWrapper .uk-card-secondary.sideBar-action .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-secondary.sideBar-action .itinerary-item-link::before,
-.uk-card-secondary.productContent .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary.productContent .itinerary-item-link::before,
-.uk-card-secondary.packageMeta-wrapper--sm .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary.packageMeta-wrapper--sm .itinerary-item-link::before,
-.uk-card-secondary > :not([class*='uk-card-media']) .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary > :not([class*='uk-card-media']) .itinerary-item-link::before,
-.uk-overlay-primary .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-overlay-primary .itinerary-item-link::before,
-.uk-offcanvas-bar .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-offcanvas-bar .itinerary-item-link::before,
-.image-page-header .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .image-page-header .itinerary-item-link::before,
-.sliderWrapper .itinerary-wrapper .itinerary-list .itinerary-list-item .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .sliderWrapper .itinerary-item-link::before {
+.sliderWrapper .uk-accordion-title::before {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
@@ -25115,53 +25065,7 @@ iframe.uk-cover {
 .uk-overlay-primary .uk-open > .uk-accordion-title::before,
 .uk-offcanvas-bar .uk-open > .uk-accordion-title::before,
 .image-page-header .uk-open > .uk-accordion-title::before,
-.sliderWrapper .uk-open > .uk-accordion-title::before,
-.uk-light .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-light .uk-open > .itinerary-item-link::before,
-.uk-section-primary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-section-primary:not(.uk-preserve-color) .uk-open > .itinerary-item-link::before,
-.uk-section-secondary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-section-secondary:not(.uk-preserve-color) .uk-open > .itinerary-item-link::before,
-.uk-tile-primary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-tile-primary:not(.uk-preserve-color) .uk-open > .itinerary-item-link::before,
-.uk-tile-secondary:not(.uk-preserve-color) .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-tile-secondary:not(.uk-preserve-color) .uk-open > .itinerary-item-link::before,
-.uk-card-primary.uk-card-body .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary.uk-card-body .uk-open > .itinerary-item-link::before,
-.tourPacakge-wrapper .uk-card-primary.tourPackage--detailWrapper .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .tourPacakge-wrapper .uk-card-primary.tourPackage--detailWrapper .uk-open > .itinerary-item-link::before,
-.stickyWrapper .uk-card-primary.priceHolder .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-primary.priceHolder .uk-open > .itinerary-item-link::before,
-.stickyWrapper .uk-card-primary.sideBar-action .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-primary.sideBar-action .uk-open > .itinerary-item-link::before,
-.uk-card-primary.productContent .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary.productContent .uk-open > .itinerary-item-link::before,
-.uk-card-primary.packageMeta-wrapper--sm .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary.packageMeta-wrapper--sm .uk-open > .itinerary-item-link::before,
-.uk-card-primary > :not([class*='uk-card-media']) .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-primary > :not([class*='uk-card-media']) .uk-open > .itinerary-item-link::before,
-.uk-card-secondary.uk-card-body .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary.uk-card-body .uk-open > .itinerary-item-link::before,
-.tourPacakge-wrapper .uk-card-secondary.tourPackage--detailWrapper .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .tourPacakge-wrapper .uk-card-secondary.tourPackage--detailWrapper .uk-open > .itinerary-item-link::before,
-.stickyWrapper .uk-card-secondary.priceHolder .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-secondary.priceHolder .uk-open > .itinerary-item-link::before,
-.stickyWrapper .uk-card-secondary.sideBar-action .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .stickyWrapper .uk-card-secondary.sideBar-action .uk-open > .itinerary-item-link::before,
-.uk-card-secondary.productContent .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary.productContent .uk-open > .itinerary-item-link::before,
-.uk-card-secondary.packageMeta-wrapper--sm .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary.packageMeta-wrapper--sm .uk-open > .itinerary-item-link::before,
-.uk-card-secondary > :not([class*='uk-card-media']) .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-card-secondary > :not([class*='uk-card-media']) .uk-open > .itinerary-item-link::before,
-.uk-overlay-primary .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-overlay-primary .uk-open > .itinerary-item-link::before,
-.uk-offcanvas-bar .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .uk-offcanvas-bar .uk-open > .itinerary-item-link::before,
-.image-page-header .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .image-page-header .uk-open > .itinerary-item-link::before,
-.sliderWrapper .itinerary-wrapper .itinerary-list .itinerary-list-item .uk-open > .itinerary-item-link::before,
-.itinerary-wrapper .itinerary-list .itinerary-list-item .sliderWrapper .uk-open > .itinerary-item-link::before {
+.sliderWrapper .uk-open > .uk-accordion-title::before {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22rgba(255, 255, 255, 0.7)%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E");
 }
 
@@ -25841,6 +25745,26 @@ iframe.uk-cover {
   margin: 20px auto 20px auto;
 }
 
+.heading-underlined {
+  position: relative;
+  display: unset;
+}
+
+.heading-underlined:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+  bottom: -4px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #3AAFA9;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 body {
   background-color: #ffffff;
 }
@@ -25900,9 +25824,9 @@ a:hover {
 }
 
 .button-primary:hover {
-  background-color: #073B4C;
+  background-color: #36a29d;
   color: #ffffff;
-  border-color: #073B4C;
+  border-color: #36a29d;
 }
 
 .header .hero-slider ul .slide-item--content__heading {
@@ -26038,8 +25962,15 @@ a:hover {
 }
 
 .image-page-header {
-  height: 90vh;
   position: relative;
+}
+
+.image-page-header-l {
+  height: 90vh;
+}
+
+.image-page-header-m {
+  height: 70vh;
 }
 
 .page-title__wrapper {

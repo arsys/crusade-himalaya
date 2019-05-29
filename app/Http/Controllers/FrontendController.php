@@ -230,4 +230,9 @@ public function travelBlog(){
  {
      return view('new.product.index');
  }
+
+  public function newCategory()
+ {
+     return view('new.product.category');
+ }
 }

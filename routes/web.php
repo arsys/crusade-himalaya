@@ -25,7 +25,7 @@ Route::prefix('admin/dashboard')->group(function() {
 	Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 });
 Route::prefix('manage')->middleware('role:superadministrator|administrator|user')->group(function () {
-  Route::resource('/users', 'UsersControllers');
+	Route::resource('/users', 'UsersControllers');
 //   Route::resource('/permissions', 'PermissionController', ['except' => 'destroy']);
 //   Route::resource('/roles', 'RoleController', ['except' => 'destroy']);
 });
@@ -119,8 +119,8 @@ Route::prefix('trip')->name('trip.')->group(function () {
     Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
 });
 Route::prefix('tour/feed')->name('tour.')->group(function () {
-    Route::get('{id}', 'GetController@getFeed')
-    ->name('feed');
+	Route::get('{id}', 'GetController@getFeed')
+	->name('feed');
 });
 Route::prefix('ajax')->group(function () {
 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');
@@ -143,5 +143,6 @@ Route::feeds();
 
 Route::name('new')->prefix('new')->group(function () {
 	Route::get('/home', 'FrontendController@newHome');
-Route::get('/product', 'FrontendController@newProduct');
+	Route::get('/product', 'FrontendController@newProduct');
+	Route::get('/category', 'FrontendController@newCategory');
 });

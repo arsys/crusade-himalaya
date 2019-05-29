@@ -26,3 +26,22 @@ $font-teritary: "Karla", sans-serif;;
     height: 3px;
     margin:20px auto 20px auto;
 }
+
+.heading-underlined{
+    position: relative;
+    display: unset;
+    &:after {
+        position: absolute;
+        content: '';
+        height: 2px;
+        /* adjust this to move up and down. you may have to adjust the line height of the paragraph if you move it down a lot. */
+        bottom: -4px; 
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: $primary;
+        transition:.5s;
+    }
+
+}

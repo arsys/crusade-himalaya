@@ -1,11 +1,15 @@
 .image-page-header{
-    @extend  .uk-height-large , .uk-flex , .uk-flex-center , .uk-flex-middle , .uk-background-cover , .uk-light;
-    height: 90vh;
-    position: relative;
-
-
+	@extend  .uk-height-large , .uk-flex , .uk-flex-center , .uk-flex-middle , .uk-background-cover , .uk-light;
+	// height: 90vh;
+	position: relative;
+	&-l{
+		height: 90vh;
+	}
+	&-m{
+		height: 70vh;
+	}
 }
 .page-title__wrapper{
-        @extend .uk-position-cover, .uk-flex;
-        background: rgba(34, 34, 34, 0.4);
-    }
+	@extend .uk-position-cover, .uk-flex;
+	background: rgba(34, 34, 34, 0.4);
+}

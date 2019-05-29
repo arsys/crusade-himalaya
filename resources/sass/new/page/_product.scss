@@ -56,6 +56,9 @@
     }
 }
 
+.productContent--title{
+    @extend .uk-margin-remove;
+}
 // .tab-wrapper {
 .productTab {
     margin-left: 0px;
@@ -171,7 +174,7 @@
         @extend .uk-list, .uk-list-divider;
         .itinerary-list-item {
             .itinerary-item-link {
-                @extend .uk-accordion-title;
+                // @extend .uk-accordion-title;
                 color: $black;
             }
             .itinerary-item-content {

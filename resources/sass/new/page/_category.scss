@@ -1,3 +1,21 @@
 .description-holder{
     @extend .uk-overlay;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.3);
+    .descriptionTitle{
+        @extend .heading-underlined;
+    }
+    .descriptionContent{
+        color: $white;
+        font-size: 1.25rem;
+    }
+}
+.categoryWrapper{
+    @extend .uk-grid-match , .uk-grid-small;
+    .categoryLink{
+        .categoryName{
+            @extend .uk-overlay, .uk-margin-remove;
+            color: $white;
+        }
+    }
 }

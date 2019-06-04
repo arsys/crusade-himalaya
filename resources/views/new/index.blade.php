@@ -312,7 +312,8 @@ _
 
         <div class="uk-child-width-1-3@m uk-child-width-1-1 uk-grid tourPacakge-wrapper" uk-grid="">
             {{-- loop start --}}
-            @for ($i = 1; $i <= 6; $i++) <div>
+            @for ($i = 1; $i <= 6; $i++) 
+            <div>
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-media-top">
                         <img src="https://source.unsplash.com/1800x1200/?nepal" alt="">
@@ -324,18 +325,19 @@ _
                         </div>
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">15 Days</h4>
-                            <button class="uk-button uk-button-default uk-button-small">Read More</button>
+                            <button class="button-default">Read More</button>
                         </div>
                     </div>
                 </div>
-        </div>
-        @endfor
-        {{-- loop end --}}
+            </div>
+            @endfor
+    </div>
+    {{-- loop end --}}
     </div>
 
     </div> {{--container end --}}
 </section>
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/sticky-nav.js') }}"></script>
+<script src="{{ asset('js/sticky-nav.js') }}"></script>
 @endsection

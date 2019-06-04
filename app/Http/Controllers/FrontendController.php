@@ -233,6 +233,32 @@ public function travelBlog(){
 
   public function newCategory()
  {
-     return view('new.product.category');
+     return view('new.category');
  }
+
+ public function newDestination()
+ {
+     return view('new.destination');
+ } 
+
+ public function newTravelstyle()
+ {
+     return view('new.travel-style');
+ } 
+
+ public function newPackages()
+ {
+     return view('new.packages');
+ } 
+
+ public function newAbout()
+ {
+     return view('new.about');
+ } 
+
+ public function newContact()
+ {
+     return view('new.contact');
+ } 
+
 }

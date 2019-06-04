@@ -1,6 +1,6 @@
 @extends('layouts.new')
 @section('content')
-<section class="image-page-header image-page-header-l" data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
+<section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px" data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
     <div class="page-title__wrapper">
         <div class="uk-position-large uk-position-center">
             <h1>Package Name</h1>
@@ -234,7 +234,7 @@
                         </div>
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">15 Days</h4>
-                            <button class="uk-button uk-button-default uk-button-small">Read More</button>
+                            <button class="button-default">Read More</button>
                         </div>
                     </div>
                 </div>

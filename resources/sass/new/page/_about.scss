@@ -1,0 +1,70 @@
+.aboutSidebar-wrapper {
+    @extend .uk-card, .uk-card-default, .uk-box-shadow-medium;
+    .aboutSidebar-list {
+        @extend .uk-box-shadow-medium,
+            .uk-nav,
+            .uk-nav-default,
+            .uk-box-shadow-medium,
+            .uk-flex,
+            .uk-text-center,
+            .uk-flex-column;
+
+        .uk-active {
+            border-bottom: solid 2px $primary;
+        }
+        &--item {
+            padding: 20px 40px;
+            text-transform: capitalize;
+            a {
+                font-weight: 500;
+                color: $black !important;
+                font-family: $font-primary;
+            }
+        }
+    }
+}
+.aboutContent-wrapper {
+    @extend .uk-card, .uk-card-default, .uk-card-body;
+    font-family: $font-secondary;
+    .aboutContent-title {
+        font-family: $font-primary;
+    }
+    &:not(:last-child) {
+        @extend .uk-margin-medium-bottom;
+    }
+}
+.teamMember-wrapper {
+    @extend .uk-text-left;
+    color: $black;
+    .teamMember-meta {
+        @extend .uk-flex, .uk-flex-column;
+        .teamMember-name {
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+        .teamMember-designation {
+            font-size: 1.125;
+            font-style: italic;
+        }
+        .teamMember-description {
+            color: $black;
+        }
+    }
+}
+
+.aboutMobile-wrapper {
+    .container {
+        @extend .uk-padding-large;
+        .aboutMobile-list {
+            .aboutMobile-list--item {
+                @extend .uk-box-shadow-small,
+                    .uk-padding,
+                    .uk-background-default;
+                    font-family: $font-secondary;
+                    &:last-child{
+                        @extend .uk-margin-large-bottom;
+                    }
+            }
+        }
+    }
+}

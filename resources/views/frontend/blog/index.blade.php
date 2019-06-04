@@ -7,9 +7,9 @@
             <div class="uk-width-expand uk-padding">
                 <div class="blogIndex-header">
                     <h1 class="blogIndex-header--title">Travel Blog</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolor, modi a dolores
-                        vitae, necessitatibus beatae error sunt expedita neque ex incidunt repudiandae harum fugiat
-                        aliquam. Illum, nulla consectetur. Nostrum!</p>
+                    <p>Oh Hey, check out the stuff we post on this travel blog. This is probably the best page on our
+                        website that may help you to make decisions while you are planning to travel Nepal. Just snoop
+                        around &amp; see if something catches your eye.</p>
                 </div>
                 <div class="blogIndex-body">
                     <h4 class="blogIndex-body--title">Latest</h4>

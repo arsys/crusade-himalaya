@@ -9,7 +9,15 @@
 		height: 70vh;
 	}
 }
-.page-title__wrapper{
-	@extend .uk-position-cover, .uk-flex;
-	background: rgba(34, 34, 34, 0.4);
+
+.pageDescription-holder{
+    @extend .uk-overlay;
+    width: 60%;
+    .pageTitle{
+        @extend .heading-underlined;
+    }
+    .pageDescription{
+        color: $white;
+        font-size: 1.25rem;
+    }
 }

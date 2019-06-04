@@ -19,9 +19,6 @@
         <a href="{{ $setting->youtube }}" target="_blank"  class="uk-margin-left">
             <i class="fab fa-youtube"></i>
         </a>
-        <a href="{{ $setting->googleplus }}"  target="_blank" class="uk-margin-left">
-            <i class="fab fa-google-plus-g"></i>
-        </a>
     </div>
 </div>
 <div class="foobar-btn-wrapper ">

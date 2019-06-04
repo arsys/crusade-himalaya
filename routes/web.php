@@ -145,4 +145,9 @@ Route::name('new')->prefix('new')->group(function () {
 	Route::get('/home', 'FrontendController@newHome');
 	Route::get('/product', 'FrontendController@newProduct');
 	Route::get('/category', 'FrontendController@newCategory');
+	Route::get('/destination', 'FrontendController@newDestination');
+	Route::get('/travel-style', 'FrontendController@newTravelstyle');
+	Route::get('/packages', 'FrontendController@newPackages');
+	Route::get('/about', 'FrontendController@newAbout');
+	Route::get('/contact', 'FrontendController@newContact');
 });

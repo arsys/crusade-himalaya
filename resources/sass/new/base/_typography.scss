@@ -30,6 +30,7 @@ $font-teritary: "Karla", sans-serif;;
 .heading-underlined{
     position: relative;
     display: unset;
+    padding-bottom: .5rem;
     &:after {
         position: absolute;
         content: '';

@@ -17,6 +17,7 @@
                     <li class="nav-list__item"><a class="nav-list__item--link" href="/new/contact">Contact</a></li>
                     <li class="nav-list__item"><a class="nav-list__item--link" href="/new/blog">Blog Index</a></li>
                     <li class="nav-list__item"><a class="nav-list__item--link" href="/new/single-post">Single Post</a></li>
+                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/event">Event</a></li>
                     
                 </ul>
                 

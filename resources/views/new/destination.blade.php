@@ -21,11 +21,13 @@
 <section class="section-dashed">
 	<div class="container">
 		<div class="uk-child-width-1-2 categoryWrapper" uk-grid>
-			@for ($i = 1; $i <= 6; $i++) <div>
+			@for ($i = 1; $i <= 6; $i++) 
+			<div>
 				<a href="#" class="uk-inline categoryLink">
 					<img src="https://source.unsplash.com/800x400/?android" alt="">
 					<h3 class="uk-position-center categoryName">Overlay Text</h3>
 				</a>
+		</div>
 				@endfor
 		</div>
 	</div>

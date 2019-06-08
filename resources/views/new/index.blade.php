@@ -4,44 +4,23 @@ _
     <div class="hero-slider" tabindex="-1" uk-slideshow="animation: fade">
 
         <ul class="uk-slideshow-items" uk-height-viewport="min-height: 300">
+            @foreach ($carousels as $carousel)
             <li class="slide-item">
-                <img src="{{ asset('img/11.jpg') }}" alt="" uk-cover>
+                <img src="{{ asset($carousel->path) }}" alt="{{ $carousel->name }}" uk-cover>
                 <div class="slide-item--content  uk-position-center-left">
-                    <h2 class="slide-item--content__heading uk-margin-remove ">Heading</h2>
-                    <p class="slide-item--content__subheading uk-margin-remove uk-text-lead uk-text-uppercase">Lorem
-                        ipsum dolor sit amet.</p>
+                    <h2 class="slide-item--content__heading uk-margin-remove ">{{ $carousel->header }}</h2>
+                    <p class="slide-item--content__subheading uk-margin-remove uk-text-lead uk-text-uppercase">
+                        {{ $carousel->subheader }}</p>
                 </div>
             </li>
-            <li class="slide-item">
-                <img src="{{ asset('img/2.jpg') }}" alt="" uHeadingk-cover>
-                <div class="slide-item--content  uk-position-center-left">
-                    <h2 class="slide-item--content__heading uk-margin-remove">Heading</h2>
-                    <p class="slide-item--content__subheading uk-margin-remove uk-text-lead uk-text-uppercase">Lorem
-                        ipsum dolor sit amet.</p>
-                </div>
-            </li>
-            <li class="slide-item">
-                <img src="{{ asset('img/3.jpg') }}" alt="" uk-cover>
-                <div class="slide-item--content  uk-position-center-left">
-                    <h2 class="slide-item--content__heading uk-margin-remove">Heading</h2>
-                    <p class="slide-item--content__subheading uk-margin-remove uk-text-lead uk-text-uppercase">Lorem
-                        ipsum dolor sit amet.</p>
-                </div>
-            </li>
-            <li class="slide-item">
-                <img src="{{ asset('img/4.jpg') }}" alt="" uk-cover>
-                <div class="slide-item--content  uk-position-center-left">
-                    <h2 class="slide-item--content__heading uk-margin-remove">Heading</h2>
-                    <p class="slide-item--content__subheading uk-margin-remove uk-text-lead uk-text-uppercase">Lorem
-                        ipsum dolor sit amet.</p>
-                </div>
-            </li>
+            @endforeach
         </ul>
         <div class="scroll-down-wrapper  uk-position-bottom-center">
             <a href="#" class="scroll-down"><span uk-icon="icon: chevron-down;ratio: 3.5"></span></a>
         </div>
     </div>
 </header>
+
 <section class="section-white" id="scroll-end">
     <div class="container">
         <div uk-grid class="uk-child-width-1-1 uk-child-width-1-2@l uk-grid-divider uk-height-match">
@@ -133,6 +112,7 @@ _
     </div>
 </section>
 
+{{-- travel style --}}
 <section class="section-dashed">
     <div class="container">
         <div class="title-wrapper">
@@ -146,71 +126,21 @@ _
         <div class="sliderWrapper" tabindex="-1" uk-slider>
 
             <ul class="uk-slider-items uk-grid uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2" uk-grid>
+                @foreach ($categories as $category)
                 <li class="sliderList--item ">
                     <div class="sliderPanel">
-                        <img src="https://source.unsplash.com/320x480?flower" alt="">
+                        <img src="{{ asset($category->path) }}" alt="{{$category->name}}">
                         <div class="sliderPanel--textHolder uk-position-cover">
-                            <h3 class="uk-position-bottom">Bottom</h3>
+                            <h3 class="uk-position-bottom">{{$category->name}}</h3>
                         </div>
                         <div class="sliderPanel--textHolder__hover">
-                            <h4>Title</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <h4>{{$category->name}}</h4>
+                            <p>{{$category->description}}</p>
                             <a href="#">View all <span>&rarr;</span></a>
                         </div>
                     </div>
                 </li>
-                <li class="sliderList--item ">
-                    <div class="sliderPanel">
-                        <img src="https://source.unsplash.com/320x480?flower" alt="">
-                        <div class="sliderPanel--textHolder uk-position-cover">
-                            <h3 class="uk-position-bottom">Bottom</h3>
-                        </div>
-                        <div class="sliderPanel--textHolder__hover">
-                            <h4>Title</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <a href="#">View all <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="sliderList--item ">
-                    <div class="sliderPanel">
-                        <img src="https://source.unsplash.com/320x480?flower" alt="">
-                        <div class="sliderPanel--textHolder uk-position-cover">
-                            <h3 class="uk-position-bottom ">Bottom</h3>
-                        </div>
-                        <div class="sliderPanel--textHolder__hover">
-                            <h4>Title</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <a href="#">View all <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="sliderList--item ">
-                    <div class="sliderPanel">
-                        <img src="https://source.unsplash.com/320x480?flower" alt="">
-                        <div class="sliderPanel--textHolder uk-position-cover">
-                            <h3 class="uk-position-bottom">Bottom</h3>
-                        </div>
-                        <div class="sliderPanel--textHolder__hover">
-                            <h4>Title</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <a href="#">View all <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="sliderList--item ">
-                    <div class="sliderPanel">
-                        <img src="https://source.unsplash.com/320x480?flower" alt="">
-                        <div class="sliderPanel--textHolder uk-position-cover">
-                            <h3 class="uk-position-bottom">Bottom</h3>
-                        </div>
-                        <div class="sliderPanel--textHolder__hover">
-                            <h4>Title</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <a href="#">View all <span>&rarr;</span></a>
-                        </div>
-                    </div>
-                </li>
+                @endforeach
             </ul>
 
         </div>
@@ -218,6 +148,7 @@ _
 
 </section>
 
+{{-- destinations --}}
 <section class="section-white">
     <div class="container">
         <div class="title-wrapper">
@@ -232,65 +163,61 @@ _
             {{-- left --}}
             <div class="destinationLeft">
                 {{-- single article--}}
+                @foreach($odds as $odd)
+                @if($loop->iteration % 2 == 0)
                 <div class="uk-inline">
-                    <img src="https://source.unsplash.com/800x400/?norway" alt="">
+                    <img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
                     <div class="uk-position-cover"></div>
-                    <div class="uk-overlay uk-position-bottom uk-dark">
-                        <h3>Title</h3>
+                    <div class="uk-overlay uk-position-bottom uk-light">
+                        <h3>{{$odd->name}}</h3>
                     </div>
                 </div>
+                @endif
+                @endforeach
 
                 {{-- double article --}}
                 <div class="uk-child-width-1-2 uk-grid-small " uk-grid>
-                    <div class="uk-inline">
-                        <img src="https://source.unsplash.com/800x400/?sweden" alt="">
-                        <div class="uk-position-cover"></div>
-                        <div class="uk-overlay uk-position-bottom uk-dark">
-                            <h3>Title</h3>
+                    @foreach($odds as $odd)
+                    @if($loop->iteration % 2 != 0)
+                        <div class="uk-inline">
+                            <img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
+                            <div class="uk-position-cover"></div>
+                            <div class="uk-overlay uk-position-bottom uk-light">
+                                <h3>{{$odd->name}}</h3>
+                            </div>
                         </div>
-                    </div>
-
-
-                    <div class="uk-inline">
-                        <img src="https://source.unsplash.com/800x400/?denmark" alt="">
-                        <div class="uk-position-cover"></div>
-                        <div class="uk-overlay uk-position-bottom uk-dark">
-                            <h3>Title</h3>
-                        </div>
-                    </div>
-
+                    @endif
+                    @endforeach
                 </div>
             </div>
             {{-- right --}}
             <div class="destinationRight">
                 {{-- double article --}}
-                <div class="uk-child-width-1-2 uk-grid-small " uk-grid>
-                    <div class="uk-inline">
-                        <img src="https://source.unsplash.com/800x400/?germany" alt="">
-                        <div class="uk-position-cover"></div>
-                        <div class="uk-overlay uk-position-bottom uk-dark">
-                            <h3>Title</h3>
+                <div class="uk-child-width-1-2 uk-grid-small " uk-grid>                    
+                    @foreach($evens as $even)
+                    @if($loop->iteration % 2 != 0)
+                        <div class="uk-inline">
+                                <img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
+                            <div class="uk-position-cover"></div>
+                            <div class="uk-overlay uk-position-bottom uk-light">
+                                <h3>{{$even->name}}</h3>
+                            </div>
                         </div>
-                    </div>
-
-
-                    <div class="uk-inline">
-                        <img src="https://source.unsplash.com/800x400/?france" alt="">
-                        <div class="uk-position-cover"></div>
-                        <div class="uk-overlay uk-position-bottom uk-dark">
-                            <h3>Title</h3>
-                        </div>
-                    </div>
-
+                    @endif
+                    @endforeach
                 </div>
                 {{-- single article--}}
-                <div class="uk-inline">
-                    <img src="https://source.unsplash.com/800x400/?czech" alt="">
-                    <div class="uk-position-cover"></div>
-                    <div class="uk-overlay uk-position-bottom uk-dark">
-                        <h3>Title</h3>
+                @foreach($evens as $even)
+                @if($loop->iteration % 2 == 0)
+                    <div class="uk-inline">
+                            <img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
+                        <div class="uk-position-cover"></div>
+                        <div class="uk-overlay uk-position-bottom uk-light">
+                            <h3>{{$even->name}}</h3>
+                        </div>
                     </div>
-                </div>
+                @endif
+                @endforeach
 
             </div>
         </div>
@@ -298,6 +225,7 @@ _
     </div>
 </section>
 
+{{-- handpicked tours --}}
 <section class="section-dashed">
     <div class="container">
 
@@ -312,7 +240,7 @@ _
 
         <div class="uk-child-width-1-3@m uk-child-width-1-1 uk-grid tourPacakge-wrapper" uk-grid="">
             {{-- loop start --}}
-            @for ($i = 1; $i <= 6; $i++) 
+            @foreach($featureds as $featured)
             <div>
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-media-top">
@@ -320,17 +248,17 @@ _
                     </div>
                     <div class="tourPackage--detailWrapper">
                         <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">Media Top</h4>
-                            <h4 class="uk-margin-remove">USD 1500</h4>
+                            <h4 class="uk-margin-remove">{{$featured->title}}</h4>
+                            <h4 class="uk-margin-remove">USD {{$featured->price}}</h4>
                         </div>
                         <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">15 Days</h4>
-                            <button class="button-default">Read More</button>
+                            <h4 class="uk-margin-remove">{{$featured->days}} Days</h4>
+                            <a class="button-default" href="#">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
-            @endfor
+            @endforeach
     </div>
     {{-- loop end --}}
     </div>

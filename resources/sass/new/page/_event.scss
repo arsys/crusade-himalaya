@@ -1,0 +1,47 @@
+.event-month-list {
+    li {
+        color: $light-black;
+        font-family: $font-primary;
+    }
+    .uk-active {
+        a {
+            border-bottom: 2px solid $primary !important;
+        }
+    }
+}
+.event-list, .event-list--sm {
+    .event-list__item {
+        @extend .uk-padding;
+        .eventWrapper {
+            @extend .uk-card, .uk-card-default, .uk-grid-collapse, .uk-margin;
+            .eventImage {
+                @extend .uk-cover-container;
+            }
+            .eventContent {
+                p {
+                    font-family: $font-secondary;
+                }
+                @extend .uk-card-body;
+                .eventTitle {
+                    @extend .uk-comment-title, .uk-margin-remove;
+                    font-family: $font-primary;
+                }
+                .eventDate {
+                    @extend .uk-comment-meta,
+                        .uk-subnav,
+                        .uk-subnav-divider,
+                        .uk-margin-remove-top;
+                    color: $black;
+                    li {
+                        font-family: $font-primary;
+                        padding-top: 5px;
+                        span {
+                            color: $black;
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

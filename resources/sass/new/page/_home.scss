@@ -96,6 +96,9 @@
     .destinationRight > div {
         padding-bottom: 15px;
     }
+    .destinationName{
+        @extend .uk-overlay, .uk-position-bottom, .uk-light;
+    }
 }
 
 .tourPacakge-wrapper{
@@ -108,3 +111,8 @@
         }
     }
 }
+@media (min-width: 481px) and (max-width: 767px) {  
+    .content-wrapper{
+        padding: 5px 10px;
+    }    
+  }

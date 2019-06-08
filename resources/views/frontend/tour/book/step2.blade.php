@@ -150,7 +150,7 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
 
             </div>
             <div class="uk-card-footer" uk-grid>
-                @if ($data['traveller'] > 1)
+                @if ($data['travellers'] > 1)
                 <div class="uk-width-1-2">
                     <span>${{ $data['budget']}} x {{ $data['travellers'] }} person</span>
                 </div>

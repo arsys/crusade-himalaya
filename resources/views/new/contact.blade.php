@@ -1,19 +1,26 @@
 @extends('layouts.new')
+@section('mtitle')
+Contact | {{config('app.name')}}
+@stop
+@section('title')
+Contact | {{config('app.name')}}
+@stop
+@section('description')
+Contact
+@stop
 @section('content')
 <section class="image-page-header " uk-height-viewport="expand: true"
-    data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
+    data-src="{{ asset('img/contact.jpg') }}" uk-img>
     <div class="page-title__wrapper">
 
         <div class=" uk-flex uk-flex-center uk-flex-middle uk-height-small pageDescription-holder">
-            <h1 class="pageTitle">Test</h1>
+            <h1 class="pageTitle">Contact</h1>
         </div>
 
         <div class="uk-position-large uk-position-bottom-right ">
             <ul class="uk-breadcrumb">
-                <li><a href="" uk-icon="icon: home"></a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Region</a></li>
-                <li class="uk-disabled"><span>Active</span></li>
+                <li><a href="/" uk-icon="icon: home"></a></li>
+                <li class="uk-disabled"><a href="{{ url()->current() }}">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -22,7 +29,7 @@
     <div class="container">
         <div class="uk-child-width-1-2@m " uk-grid>
 
-            <div>
+            <div class="contact-meta">
                 <div class="section-dashed uk-panel uk-padding">
                     <h5>
                         Our helpline is always open to receive any inquiry or feedback. Please feel free to drop us an
@@ -32,18 +39,18 @@
                     <div uk-grid>
                         <div class="uk-width-1-2">
                             <div uk-grid class="uk-grid-small">
-                                <div class="uk-width-1-3">
-                                    <span uk-icon="heart"></span>
+                                <div class="uk-width-1-4">
+                                    <span uk-icon="location"></span>
                                 </div>
-                                <div class="uk-width-2-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="uk-width-3-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
                             </div>
                         </div>
                         <div class="uk-width-1-2">
                             <div uk-grid class="uk-grid-small">
-                                <div class="uk-width-1-3">
+                                <div class="uk-width-1-4">
                                     <span uk-icon="receiver"></span>
                                 </div>
-                                <div class="uk-width-2-3"> 879-890-9767</div>
+                                <div class="uk-width-3-4"> 879-890-9767</div>
                             </div>
                         </div>
                     </div>
@@ -51,18 +58,20 @@
                     <div uk-grid>
                         <div class="uk-width-1-2">
                             <div uk-grid class="uk-grid-small">
-                                <div class="uk-width-1-3">
+                                <div class="uk-width-1-4">
                                     <span uk-icon="mail"></span>
                                 </div>
-                                <div class="uk-width-2-3">6</div>
+                                <div class="uk-width-3-4">mail@crusadehimalaya.com</div>
                             </div>
                         </div>
                         <div class="uk-width-1-2">
                             <div uk-grid class="uk-grid-small">
-                                <div class="uk-width-1-3">
-                                    <span uk-icon="heart"></span>
+                                <div class="uk-width-1-4">
+                                    <span uk-icon="clock"></span>
                                 </div>
-                                <div class="uk-width-2-3">8</div>
+                                <div class="uk-width-3-4">
+                                    Sun-Fri (9 am-5 pm)
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -70,8 +79,8 @@
                 </div>
             </div>
 
-            <div>
-                    @include('new.partials._message')
+            <div class="contact-form">
+                 @include('new.partials._message')
                 <form method="POST" action="{{ route('frontend-postContact') }}" data-parsley-validate>
                     @csrf
                     <div class="uk-margin">
@@ -114,4 +123,39 @@
         </div>
     </div>
 </section>
+<section class="section-white">
+        <div id="map" style="height: 300px;"></div>
+</section>
 @endsection
+@section('scripts')
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
+<script>
+    function initMap() {
+        var uluru = {lat: 27.7159776, lng: 85.3145912};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 18,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo_dSCAjkI&callback=initMap">
+</script>
+@stop
+@section('conversion')
+@if(Session::has('success'))
+<!-- Event snippet for Interested-Lead conversion page -->
+<script>
+gtag('event', 'conversion', {
+     'send_to': 'AW-764894982/xF7qCO77-JQBEIa-3ewC',
+     'value': 1.0,
+     'currency': 'USD'
+     });
+</script>
+@endif
+@stop

@@ -1,6 +1,7 @@
 @extends('layouts.new')
 @section('content')
-<section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px" data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
+<section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px"
+    data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
     <div class="page-title__wrapper">
         <div class="uk-position-large uk-position-center">
             <h1>Package Name</h1>
@@ -27,7 +28,11 @@
                         <span class="priceHolder--day">15 Day(s)</span>
                         <span class="priceHolder--from">From USD</span>
                         <span class="priceHolder--price">$ 1590</span>
-                        <a class="button-default" href="#">Dates</a>
+                        <span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column"
+                            uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
+                            <a class="button-default" href="#departures">Dates</a>
+                        </span>
+
                     </div>
                     <div class="sideBar-action">
                         <ul class="sideBar--list">
@@ -38,7 +43,7 @@
                                     </div>
                                     <div uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
                                         <a href="#enquiry"><span>Quick
-                                        Enquiry</span></a>
+                                                Enquiry</span></a>
                                     </div>
                                 </div>
                             </li>
@@ -76,47 +81,47 @@
             <div class="uk-width-3-4@l">
 
                 <ul uk-scrollspy-nav="closest: li; scroll: true; offset: 0;" class="uk-child-width-expand productTab"
-                uk-tab uk-sticky="offset:0" id="tab-wrapper">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#inclusion">Inclusion</a></li>
-                <li><a href="#itinerary">Itinerary</a></li>
-                <li><a href="#departures">Depatures</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-            </ul>
+                    uk-tab uk-sticky="offset:0" id="tab-wrapper">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#inclusion">Inclusion</a></li>
+                    <li><a href="#itinerary">Itinerary</a></li>
+                    <li><a href="#departures">Depatures</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
 
-            <div id="overview" class="productContent">
-                <h3 class="productContent--title">Overview</h3>
-                @include('new.product.partials._overview-meta')                    
-            </div>
+                <div id="overview" class="productContent">
+                    <h3 class="productContent--title">Overview</h3>
+                    @include('new.product.partials._overview-meta')
+                </div>
 
-            <div id="inclusion" class="productContent">
-                <h3 class="productContent--title">Includes & Excludes</h3>
-                @include('new.product.partials._inex')    
-            </div>
+                <div id="inclusion" class="productContent">
+                    <h3 class="productContent--title">Includes & Excludes</h3>
+                    @include('new.product.partials._inex')
+                </div>
 
-            <div id="itinerary" class="productContent">
-                <h3 class="productContent--title">Detailed Itinerary (15 Days)</h3>
-                @include('new.product.partials._itinerary')  
-            </div>
+                <div id="itinerary" class="productContent">
+                    <h3 class="productContent--title">Detailed Itinerary (15 Days)</h3>
+                    @include('new.product.partials._itinerary')
+                </div>
 
-            <div id="departures" class="productContent">
-                @include('new.product.partials._departures')
-            </div>
-            <div id="#enquiry" class="productContent">
-                @include('new.product.partials._form')
-            </div>
-            <div id="gallery" class="productContent">
-                <h3 class="productContent--title">Gallery</h3>
-                @include('new.product.partials._gallery')
-            </div>
+                <div id="departures" class="productContent">
+                    @include('new.product.partials._departures')
+                </div>
+                <div id="enquiry" class="productContent">
+                    @include('new.product.partials._form')
+                </div>
+                <div id="gallery" class="productContent">
+                    <h3 class="productContent--title">Gallery</h3>
+                    @include('new.product.partials._gallery')
+                </div>
 
+            </div>
         </div>
     </div>
-</div>
 </section>
 
-<section class="section-dashed section-dashed--mobile">
-    <div class="container uk-hidden@l uk-padding">
+<section class="section-dashed section-dashed--mobile  uk-hidden@l">
+    <div class="container uk-padding">
         <div class="packageMeta-wrapper--sm">
             <div uk-grid>
                 <div class="uk-width-1-2">
@@ -137,7 +142,7 @@
                                     <i class="fas fa-info"></i>
                                 </div>
                                 <div class="actionWrapper--action">
-                                    <a href="#mob-enquiry" >Quick Enquiry</a>
+                                    <a href="#mob-enquiry">Quick Enquiry</a>
                                 </div>
                             </div>
                         </li>
@@ -147,8 +152,8 @@
                                     <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="actionWrapper--action">
-                                    <a href="#modal-refer-friend"  uk-toggle>Email a
-                                    friend</a>
+                                    <a href="#modal-refer-friend" uk-toggle>Email a
+                                        friend</a>
                                 </div>
                             </div>
                         </li>
@@ -159,7 +164,7 @@
                                     <i class="fas fa-tasks"></i>
                                 </div>
                                 <div class="actionWrapper--action">
-                                    <a  href="#" rel="nofollow">Download Itinary</a>
+                                    <a href="#" rel="nofollow">Download Itinary</a>
                                 </div>
                             </div>
                         </li>
@@ -173,7 +178,7 @@
             <li class="mobileContent-list--item">
                 <a class="uk-accordion-title" href="#">Overview</a>
                 <div class="uk-accordion-content">
-                    @include('new.product.partials._overview-meta')                    
+                    @include('new.product.partials._overview-meta')
                 </div>
             </li>
             <li class="mobileContent-list--item">
@@ -205,7 +210,7 @@
                 <div class="uk-accordion-content">
                     @include('new.product.partials._gallery')
                 </div>
-            </li>        
+            </li>
         </ul>
 
         <div class="uk-card uk-card-body uk-card-default">
@@ -238,10 +243,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            @endfor
-            {{-- loop end --}}
         </div>
+        @endfor
+        {{-- loop end --}}
+    </div>
 
     </div> {{--container end --}}
 </section>

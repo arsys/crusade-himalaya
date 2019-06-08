@@ -158,7 +158,7 @@ Join {{$tour->days}} Days {{$tour->title}}| Step 2
                     <span>${{ $data['budget']*$data['travellers'] }}</span>
                 </div>
                 @endif
-                @if (!empty($tour->singleSupp) && $data['traveller'] > 1)
+                @if (!empty($tour->singleSupp) && $data['travellers'] > 1)
                 <div class="uk-width-1-2">
                     <span>${{ $data['budget']}} x {{ $data['travellers'] }} person + {{$tour->singleSupp}} for single supplement.</span>
                     </div>

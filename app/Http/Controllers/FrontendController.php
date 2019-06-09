@@ -305,4 +305,29 @@ public function travelBlog(){
     ->withOct($Oct)->withNov($Nov)->withDec($Dec);     
  } 
 
+ public function newBlog()
+ {
+     return view('new.blog.index');
+ }
+
+ public function newPost()
+ {
+     return view('new.blog.post');
+ }
+
+ public function newStep1()
+ {
+     return view('new.product.booking.1');
+ }
+
+ public function newStep2()
+ {
+return view('new.product.booking.2');
+ }
+
+ public function newStep3()
+ {
+return view('new.product.booking.3');
+ }
+
 }

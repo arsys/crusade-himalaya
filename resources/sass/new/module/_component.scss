@@ -26,3 +26,17 @@
         border-color: #36a29d;
     }
 }
+.button-arrow {
+    display: inline-block;
+    color: $light-black1;
+    font-family: $font-primary;
+    span {
+        font-size: 2rem;
+        vertical-align: sub;
+    }
+    &:hover {
+        color: $primary;
+        transition: all 0.5s ease-in-out;
+        transform: translateX(-5px);
+    }
+}

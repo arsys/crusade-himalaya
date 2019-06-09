@@ -104,7 +104,7 @@ _
                         Get in touch with us, and plan your perfect holiday – an unforgettable holiday filled with
                         adventure, excitement, and memories.</p>
 
-                    <p><a href="#" class="read-more">READ MORE <span>&rarr;</span></a></p>
+                    <p><a href="#" class="button-arrow">READ MORE <span>&rarr;</span></a></p>
 
                 </div>
             </div>

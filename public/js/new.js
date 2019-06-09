@@ -110,16 +110,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_uikit_dist_js_uikit_icons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_uikit_dist_js_uikit_icons__);
 
 
-
 // loads the Icon plugin
 __WEBPACK_IMPORTED_MODULE_0_uikit___default.a.use(__WEBPACK_IMPORTED_MODULE_1_uikit_dist_js_uikit_icons___default.a);
 
 $(function () {
-  //Homepage Scroll Down Button
-  $('.scroll-down').click(function () {
-    $('html, body').animate({ scrollTop: $('section#scroll-end').offset().top }, 'slow');
-    return false;
-  });
+    //Homepage Scroll Down Button
+    $('.scroll-down').click(function () {
+        $('html, body').animate({ scrollTop: $('section#scroll-end').offset().top }, 'slow');
+        return false;
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#toTop').fadeIn();
+        } else {
+            $('#toTop').fadeOut();
+        }
+    });
+    $('#toTop').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 });
 
 /***/ }),

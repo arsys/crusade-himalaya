@@ -151,4 +151,9 @@ Route::name('new')->prefix('new')->group(function () {
 	Route::get('/event', 'FrontendController@newEvents');
 	Route::get('/about', 'FrontendController@newAbout');
 	Route::get('/contact', 'FrontendController@newContact');
+	Route::get('/blog', 'FrontendController@newBlog');
+	Route::get('/single-post', 'FrontendController@newPost');
+	Route::get('/step1', 'FrontendController@newStep1');
+	Route::get('/step2', 'FrontendController@newStage2');
+	Route::get('/step3', 'FrontendController@newStaage3');
 });

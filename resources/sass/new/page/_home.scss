@@ -27,20 +27,6 @@
             font-family: $font-secondary;
         }
     }
-    .read-more {
-        display: inline-block;
-        color: $dark;
-        font-family: $font-primary;
-        span {
-            font-size: 2rem;
-            vertical-align: sub;
-        }
-        &:hover {
-            color: $primary;
-            transition: all 0.5s ease-in-out;
-            transform: translateX(-5px);
-        }
-    }
 }
 #prologue p {
     font-family: $font-secondary;

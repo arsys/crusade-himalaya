@@ -16,14 +16,33 @@
                         @extend .uk-text-uppercase;
                         font-family: $font-primary !important;
                         color: $black !important;
-                        font-weight: 500
-                        ;
+                        font-weight: 500;
+                        color: $light-black;
                     }
                 }
             }
         }
     }
 }
-.uk-sticky-placeholder{
+.uk-sticky-placeholder {
     display: none;
+}
+
+.mobile-nav {
+    @extend .uk-navbar-right;
+    .toggleButton {
+        @extend .uk-navbar-toggle;
+    }
+}
+.mobileMenu-list {
+    @extend .uk-nav, .uk-nav-default;
+    &__item {
+        &:not(:first-child){
+            @extend .uk-margin-small-top;
+        }
+        &--link {
+            font-size: 1.25rem;
+            color: $white !important;
+        }
+    }
 }

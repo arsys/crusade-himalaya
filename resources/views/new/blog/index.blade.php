@@ -4,7 +4,7 @@
     <div class="page-title__wrapper">
 
         <div class="uk-position-large uk-position-center uk-overlay ">
-            <h1 class="blogPage-title">Test</h1>
+            <h1 class="blogPage-title">Travel Blog</h1>
             <p class="blogPage-description">Oh Hey, check out the stuff we post on this travel blog. This is probably
                 the
                 best page on our website that may help you to make decisions while you are planning to travel Nepal.

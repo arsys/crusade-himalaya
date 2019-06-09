@@ -9,20 +9,59 @@
 
             <div class="link-wrapper uk-visible@m">
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/home">Home</a></li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/product">Product</a></li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/destination">Destinations</a>
+                    <li class="nav-list__item"><a class="nav-list__item--link" href="/">Home</a></li>
+                    <li class="nav-list__item">
+                        <a class="nav-list__item--link" href="/new/product">What We Do</a>
+
+                        <div class="nav-list__item--dropdown-wrapper" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify; offset:5" >
+                            <div uk-slider>
+                                <ul class="uk-slider-items uk-child-width-1-4@m thumbNav--list">
+                                    @foreach($dos as $do)
+                                    @if($do->tours->count() > 0)
+                                    <li class="thumbNav--list__item">
+                                        <h4><a href="">{{$do->name}}</a></h4>
+                                        <a href="">
+                                            <img src="{{ asset($do->nav) }}" alt="{{$do->name}}">
+                                        </a>
+                                    </li>                                    
+                                    @endif
+                                    @endforeach
+                                </ul>
+                                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            
+                            </div>
+                        </div>
                     </li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/travel-style">Travel Style
+                    <li class="nav-list__item">
+                        <a class="nav-list__item--link" href="/new/destination">Where We Go</a>
+                        <div class="nav-list__item--dropdown-wrapper" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify; offset:5" >
+                            <div uk-slider>
+                                <ul class="uk-slider-items uk-child-width-1-4@m thumbNav--list">
+                                    @foreach($wheres as $where)
+                                    <li class="thumbNav--list__item">
+                                        <h4><a href="">{{$where->name}}</a></h4>
+                                        <a href="">
+                                            <img src="{{ asset($where->nav) }}" alt="{{$where->name}}">
+                                        </a>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+                            
+                            </div>
+                        </div>                        
+                    </li>
+                    <li class="nav-list__item"><a class="nav-list__item--link" href="{{ route('frontend.whatsOn') }}">What's On
                         </a></li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/packages">Packages </a></li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/about">About</a></li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/contact">Contact</a></li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/blog">Blog Index</a></li>
+                    <li class="nav-list__item"><a class="nav-list__item--link" href="{{ route('frontend.about') }}">Who We Are </a></li>
+                    <li class="nav-list__item"><a class="nav-list__item--link" href="{{ route('frontend.posts') }}">Travel Blog</a></li>
+                    <li class="nav-list__item"><a class="nav-list__item--link" href="{{ route('frontend.contact') }}">Contact</a></li>
+                    {{-- <li class="nav-list__item"><a class="nav-list__item--link" href="/new/blog">Blog Index</a></li>
                     <li class="nav-list__item"><a class="nav-list__item--link" href="/new/single-post">Single Post</a>
                     </li>
-                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/event">Event</a></li>
-
+                    <li class="nav-list__item"><a class="nav-list__item--link" href="/new/event">Event</a></li> --}}
                 </ul>
 
             </div>

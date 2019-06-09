@@ -36,7 +36,7 @@ class FrontendController extends Controller
         ->whereRaw('MOD(id, 2) = 0')
         ->get();
 
-        return view('frontend.home')
+        return view('new.index')
         ->withCarousels($carousels)
         ->withCategories($categories)
         ->withFeatureds($featureds)

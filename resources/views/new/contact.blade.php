@@ -81,7 +81,7 @@ Contact
 
             <div class="contact-form">
                  @include('new.partials._message')
-                <form method="POST" action="{{ route('frontend-postContact') }}" data-parsley-validate>
+                <form method="POST" action="{{ route('frontend.postContact') }}" data-parsley-validate>
                     @csrf
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">Full Name</label>

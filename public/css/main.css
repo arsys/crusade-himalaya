@@ -6727,6 +6727,8 @@ a.uk-link-reset,
 .stickyWrapper .sideBar-action .sideBar--list,
 .inex-wrapper .inex--list .includedList,
 .inex-wrapper .inex--list .excludedList,
+.inex-wrapper .single-includedList,
+.inex-wrapper .single-excludedList,
 .itinerary-wrapper .itinerary-list,
 .packageMeta-wrapper--sm .withborder .actionlist {
   padding: 0;
@@ -6741,12 +6743,16 @@ a.uk-link-reset,
 .stickyWrapper .sideBar-action .sideBar--list > li::before,
 .inex-wrapper .inex--list .includedList > li::before,
 .inex-wrapper .inex--list .excludedList > li::before,
+.inex-wrapper .single-includedList > li::before,
+.inex-wrapper .single-excludedList > li::before,
 .itinerary-wrapper .itinerary-list > li::before,
 .packageMeta-wrapper--sm .withborder .actionlist > li::before,
 .uk-list > li::after,
 .stickyWrapper .sideBar-action .sideBar--list > li::after,
 .inex-wrapper .inex--list .includedList > li::after,
 .inex-wrapper .inex--list .excludedList > li::after,
+.inex-wrapper .single-includedList > li::after,
+.inex-wrapper .single-excludedList > li::after,
 .itinerary-wrapper .itinerary-list > li::after,
 .packageMeta-wrapper--sm .withborder .actionlist > li::after {
   content: "";
@@ -6757,6 +6763,8 @@ a.uk-link-reset,
 .stickyWrapper .sideBar-action .sideBar--list > li::after,
 .inex-wrapper .inex--list .includedList > li::after,
 .inex-wrapper .inex--list .excludedList > li::after,
+.inex-wrapper .single-includedList > li::after,
+.inex-wrapper .single-excludedList > li::after,
 .itinerary-wrapper .itinerary-list > li::after,
 .packageMeta-wrapper--sm .withborder .actionlist > li::after {
   clear: both;
@@ -6770,6 +6778,8 @@ a.uk-link-reset,
 .stickyWrapper .sideBar-action .sideBar--list > li > :last-child,
 .inex-wrapper .inex--list .includedList > li > :last-child,
 .inex-wrapper .inex--list .excludedList > li > :last-child,
+.inex-wrapper .single-includedList > li > :last-child,
+.inex-wrapper .single-excludedList > li > :last-child,
 .itinerary-wrapper .itinerary-list > li > :last-child,
 .packageMeta-wrapper--sm .withborder .actionlist > li > :last-child {
   margin-bottom: 0;
@@ -6783,6 +6793,8 @@ a.uk-link-reset,
 .stickyWrapper .sideBar-action .sideBar--list ul,
 .inex-wrapper .inex--list .includedList ul,
 .inex-wrapper .inex--list .excludedList ul,
+.inex-wrapper .single-includedList ul,
+.inex-wrapper .single-excludedList ul,
 .itinerary-wrapper .itinerary-list ul,
 .packageMeta-wrapper--sm .withborder .actionlist ul {
   margin: 0;
@@ -6798,12 +6810,16 @@ a.uk-link-reset,
 .stickyWrapper .sideBar-action .sideBar--list > li:nth-child(n+2),
 .inex-wrapper .inex--list .includedList > li:nth-child(n+2),
 .inex-wrapper .inex--list .excludedList > li:nth-child(n+2),
+.inex-wrapper .single-includedList > li:nth-child(n+2),
+.inex-wrapper .single-excludedList > li:nth-child(n+2),
 .itinerary-wrapper .itinerary-list > li:nth-child(n+2),
 .packageMeta-wrapper--sm .withborder .actionlist > li:nth-child(n+2),
 .uk-list > li > ul,
 .stickyWrapper .sideBar-action .sideBar--list > li > ul,
 .inex-wrapper .inex--list .includedList > li > ul,
 .inex-wrapper .inex--list .excludedList > li > ul,
+.inex-wrapper .single-includedList > li > ul,
+.inex-wrapper .single-excludedList > li > ul,
 .itinerary-wrapper .itinerary-list > li > ul,
 .packageMeta-wrapper--sm .withborder .actionlist > li > ul {
   margin-top: 10px;
@@ -16703,7 +16719,8 @@ ul.uk-nav-sub {
 }
 
 .uk-text-success,
-.inex-wrapper .inex--list .includedList--item span {
+.inex-wrapper .inex--list .includedList--item span,
+.inex-wrapper .single-includedList--item span {
   color: #32d296 !important;
 }
 
@@ -16712,7 +16729,8 @@ ul.uk-nav-sub {
 }
 
 .uk-text-danger,
-.inex-wrapper .inex--list .excludedList--item span {
+.inex-wrapper .inex--list .excludedList--item span,
+.inex-wrapper .single-excludedList--item span {
   color: #f0506e !important;
 }
 
@@ -18598,6 +18616,7 @@ iframe.uk-cover {
 .uk-margin,
 .content-wrapper .content-item__title,
 .inex-wrapper .inex--list,
+.inex-wrapper .single-includedList,
 .event-list .event-list__item .eventWrapper,
 .event-list--sm .event-list__item .eventWrapper {
   margin-bottom: 20px;
@@ -18606,6 +18625,7 @@ iframe.uk-cover {
 * + .uk-margin,
 .content-wrapper * + .content-item__title,
 .inex-wrapper * + .inex--list,
+.inex-wrapper * + .single-includedList,
 .event-list .event-list__item * + .eventWrapper,
 .event-list--sm .event-list__item * + .eventWrapper {
   margin-top: 20px !important;
@@ -18659,7 +18679,9 @@ iframe.uk-cover {
 .uk-margin-small-right,
 .footerSection-1 .socialLink--list__item:not(:last-child),
 .inex-wrapper .inex--list .includedList--item span,
-.inex-wrapper .inex--list .excludedList--item span {
+.inex-wrapper .inex--list .excludedList--item span,
+.inex-wrapper .single-includedList--item span,
+.inex-wrapper .single-excludedList--item span {
   margin-right: 10px !important;
 }
 
@@ -32462,6 +32484,15 @@ a:hover {
   border-top: 2px solid #3AAFA9;
   border-bottom: 2px solid #3AAFA9;
   color: #333333;
+}
+
+.productContent--title {
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 15px;
+}
+
+.productContent--subtitle {
+  font-family: "Poppins", sans-serif;
 }
 
 .productTab {

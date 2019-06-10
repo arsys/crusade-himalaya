@@ -58,6 +58,11 @@
 
 .productContent--title{
     @extend .uk-margin-remove;
+    font-family: $font-primary;
+    padding-bottom: 15px;
+}
+.productContent--subtitle{
+    font-family: $font-primary;
 }
 // .tab-wrapper {
 .productTab {
@@ -155,6 +160,25 @@
         }
 
         .excludedList {
+            &--item {
+                span {
+                    @extend .uk-margin-small-right, .uk-text-danger;
+                }
+            }
+        }
+    }
+    .single{
+        &-includedList{
+            @extend .uk-margin;
+            @extend .uk-list;
+            &--item {
+                span {
+                    @extend .uk-margin-small-right, .uk-text-success;
+                }
+            }
+        }
+        &-excludedList{
+            @extend .uk-list;
             &--item {
                 span {
                     @extend .uk-margin-small-right, .uk-text-danger;

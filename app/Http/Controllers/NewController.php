@@ -92,7 +92,7 @@ class NewController extends Controller
 		->get();
 
 		$depature_dates = $tour->departure()->fixedDates($tour->id, date('m'),date('Y'))->get();
-		return view('frontend.tour.details')
+		return view('new.product.index')
 		->withTour($tour)
 		->withSimilars($similars)
 		->withDepartures($depature_dates);
@@ -109,20 +109,35 @@ class NewController extends Controller
 		->withCategories($categories)
 		->withRegion($region);
     }
+
+    public function destination2package($region,$category)
+	{
+		$category = TourCategory::where('slug','=', $category)->first();
+		$region = Region::where('slug','=',$region)->first();
+		$query = Tour::whereHas('category', function ($r) use ($category) {
+			$r->where('tour_categories.slug', $category->slug);
+		})->whereHas('region', function ($s) use ($region) {
+			$s->where('regions.slug', $region->slug);
+		})->get();
+		return view('new.destination-packages')
+		->withCategory($category)
+		->withRegion($region)
+		->withResults($query);
+
+
+	}
     //Travel Style
     public function fetchByCategory($slug)
 	{
 		$category = TourCategory::where('slug','=', $slug)->first();
         $tours = $category->tours()->has('region')->with('region')->get(['region_id']);
 		if ($tours->count() > 0) {
-            return 1;
 			$regions = $tours->pluck('region')->unique();
 			return view('new.travel-style')
 			->withResults($regions)
 			->withCategory($category);
 		}
 		else{
-            return 2;
 			$query = Tour::whereHas('category', function ($r) use ($category) {
 				$r->where('tour_categories.slug', $category->slug);
 			})->get();
@@ -130,5 +145,33 @@ class NewController extends Controller
 			->withResults($query)
 			->withCategory($category);
 		}
-	}
+    }
+    
+	public function region2package($category,$region)
+	{
+		$category = TourCategory::where('slug','=', $category)->firstOrFail();
+		$region = Region::where('slug','=',$region)->firstOrFail();
+		$query = Tour::whereHas('category', function ($r) use ($category) {
+			$r->where('tour_categories.slug', $category->slug);
+		})->whereHas('region', function ($s) use ($region) {
+			$s->where('regions.slug', $region->slug);
+		})->get();
+		return view('new.travel-style-packages')
+		->withCategory($category)
+		->withRegion($region)
+		->withResults($query);
+    }   
+
+    //Ajax Search 
+    public function ajaxsearchdeparture(Request $request)
+    {
+        $tour = Tour::find($request->tour_id);
+        $departures = Departure::where('tour_id', '=', $request->tour_id)
+        ->whereMonth('start', '=', $request->month)
+        ->whereYear('start', '=', $request->year)
+        ->get();
+    
+        return view('new.product.partials.dates', compact('departures', 'tour'));
+    }    
+     
 }

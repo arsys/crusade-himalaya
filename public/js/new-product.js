@@ -107,6 +107,60 @@ $(function () {
 			$("#nav-wrapper").removeClass("uk-animation-slide-top-medium uk-animation-reverse").addClass("uk-animation-slide-top-small");
 		}
 	});
+
+	//Search Date Price
+	$('.search-wrapper').on('click', '#find-dates', function (a) {
+		a.preventDefault();
+		var t = $("#tour-id").val(),
+		    e = $("#travel-year").val(),
+		    o = $("#travel-month").val();
+
+		$(".ajaxloader").show(), $.ajax({
+			type: "GET",
+			url: "/ajax/fetch-departures",
+			headers: {
+				"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+			},
+			data: {
+				tour_id: t,
+				year: e,
+				month: o
+			},
+			success: function success(a) {
+				$(".ajaxloadmoredeparture").html(a), $(".ajaxloader").hide();
+			}
+		});
+	});
+	//Post Quick Enquiry
+	$('#quick-enquiry').on('submit', function (e) {
+		e.preventDefault();
+		$(".submit").prop("disabled", true);
+		data = $(this).serialize();
+		action = $(this).attr('action');
+		$.ajax({
+			type: 'POST',
+			url: action,
+			data: data,
+			headers: {
+				"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+			},
+			success: function success(data) {
+				if ($.isEmptyObject(data.error)) {
+					$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
+					$("#quick-enquiry").trigger("reset");
+					$('.print-error-msg').find('ul').empty();
+					$('.print-error-msg').css('display', 'block');
+					$('.print-error-msg').find('ul').append("<li>" + data.success + "</li>");
+					setTimeout(function () {
+						$('.print-error-msg').fadeOut();
+						$(".submit").prop("disabled", false);
+					}, 3000);
+				} else {
+					printMessageErrors(data.error);
+				}
+			}
+		});
+	});
 });
 
 /***/ })

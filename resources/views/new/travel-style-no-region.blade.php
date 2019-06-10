@@ -1,19 +1,21 @@
+@section('mtitle'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours
+@stop
+@section('title'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours
+@stop
+@section('description'){!! $category->description !!}@stop
 @extends('layouts.new')
 @section('content')
-<section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px" data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
+<section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px" data-src="{{ asset($category->path) }}" uk-img>
 	<div class="page-title__wrapper">
 
 		<div class="uk-position-center-left uk-position-large description-holder">
-			<h1 class="descriptionTitle">Test</h1>
-			<p class="descriptionContent">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, aut. At,
-				possimus! Sapiente fugit animi rerum, molestiae laudantium beatae voluptate.</p>
+			<h1 class="descriptionTitle">{{ $category->name }}</h1>
+			<p class="descriptionContent">{{ $category->description }}</p>
 		</div>
 		<div class="uk-position-large uk-position-bottom-right ">
 			<ul class="uk-breadcrumb">
-				<li><a href="" uk-icon="icon: home"></a></li>
-				<li><a href="#">Category</a></li>
-				<li><a href="#">Region</a></li>
-				<li class="uk-disabled"><span>Active</span></li>
+				<li><a href="/" uk-icon="icon: home"></a></li>
+				<li class="uk-disabled"><a href="{{url()->current()}}">{{ ucfirst($category->name) }}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -21,25 +23,25 @@
 <section class="section-dashed">
 	<div class="container">
 		<div class="uk-child-width-1-3@m uk-child-width-1-2@s  tourPacakge-wrapper" uk-grid>
-			@for ($i = 1; $i <= 6; $i++) 
+			@foreach($results as $package)
             <div>
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-media-top">
-                        <img src="https://source.unsplash.com/1800x1200/?nepal" alt="">
+                        <img src="{{ asset($package->image->thumb) }}" alt="{{ $package->slug }}">
                     </div>
                     <div class="tourPackage--detailWrapper">
                         <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">Media Top</h4>
-                            <h4 class="uk-margin-remove">USD 1500</h4>
+                            <h4 class="uk-margin-remove">{{ $package->title }}</h4>
+                            <h4 class="uk-margin-remove">USD {{ $package->price }}</h4>
                         </div>
                         <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">15 Days</h4>
-                            <button class="button-default">Read More</button>
+                            <h4 class="uk-margin-remove">{{ $package->days }} Days</h4>
+                            <a href="{{ route('trip.detail',$package->slug) }}" class="button-default">Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
-			@endfor
+			@endforeach
 		</div>		
 	</div>
 </section>

@@ -1,17 +1,38 @@
+@section('mtitle'){!! $tour->mtitle !!}@stop
+@section('title'){!! ucfirst($tour->title) !!} | {{$tour->days}} @if($tour->days > 1) Days @else Day @endif
+@stop
+@section('description'){!! $tour->description !!}@stop
+@section('twitter')
+<meta name="twitter:data1" content="${{ $tour->price }}">
+<meta name="twitter:label1" content="Price">
+@if (!empty( $tour->difficulty->name))
+<meta name="twitter:data2" content="{{ $tour->difficulty->name }}">
+<meta name="twitter:label2" content="Difficulty">
+@endif
+
+@stop
+@section('og')
+<meta property="og:price:amount" content="{{ $tour->price }}" />
+<meta property="og:price:currency" content="USD" />
+@stop
 @extends('layouts.new')
 @section('content')
 <section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px"
     data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
     <div class="page-title__wrapper">
         <div class="uk-position-large uk-position-center">
-            <h1>Package Name</h1>
+            <h1>{{$tour->title}}</h1>
         </div>
         <div class="uk-position-large uk-position-bottom-right ">
             <ul class="uk-breadcrumb">
                 <li><a href="" uk-icon="icon: home"></a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Region</a></li>
-                <li class="uk-disabled"><span>Active</span></li>
+                <li><a href="{{ route('frontend.fetchByCategory',$tour->category->slug) }}">{{ $tour->category->name }}</a></li>
+				@if(!is_null($tour->region))
+				<li>
+					<a href="{{ route('frontend.region2package',[$tour->category->slug,$tour->region->slug]) }}">{{ $tour->region->name }}</a>
+				</li>
+				@endif					
+                <li class="uk-disabled"><a href="{{url()->current()}}">{{ $tour->title }}</a></li>
             </ul>
         </div>
     </div>
@@ -25,9 +46,9 @@
             <div class="uk-width-1-4 ">
                 <div class="stickyWrapper" uk-sticky="offset: 0;" id="datePrice--wrapper">
                     <div class="priceHolder">
-                        <span class="priceHolder--day">15 Day(s)</span>
+                        <span class="priceHolder--day">{{ $tour->title }} Day(s)</span>
                         <span class="priceHolder--from">From USD</span>
-                        <span class="priceHolder--price">$ 1590</span>
+                        <span class="priceHolder--price">$ {{ $tour->price }}</span>
                         <span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column"
                             uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
                             <a class="button-default" href="#departures">Dates</a>
@@ -84,8 +105,12 @@
                     uk-tab uk-sticky="offset:0" id="tab-wrapper">
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="#inclusion">Inclusion</a></li>
+                    @if($tour->itinerary->count() > 0)  
                     <li><a href="#itinerary">Itinerary</a></li>
-                    <li><a href="#departures">Depatures</a></li>
+                    @endif
+                    @if($tour->departure->count() > 0)
+                    <li><a href="#departures">Depatures</a></li>                    
+                    @endif                                        
                     <li><a href="#gallery">Gallery</a></li>
                 </ul>
 
@@ -96,17 +121,21 @@
 
                 <div id="inclusion" class="productContent">
                     <h3 class="productContent--title">Includes & Excludes</h3>
-                    @include('new.product.partials._inex')
+                    @include('new.product.partials._inexSingle')
                 </div>
-
+                @if($tour->itinerary->count() > 0)                
                 <div id="itinerary" class="productContent">
                     <h3 class="productContent--title">Detailed Itinerary (15 Days)</h3>
                     @include('new.product.partials._itinerary')
                 </div>
+                @endif
 
+                @if($tour->departure->count() > 0)
                 <div id="departures" class="productContent">
-                    @include('new.product.partials._departures')
-                </div>
+                        @include('new.product.partials._departures')
+                </div>                
+                @endif
+
                 <div id="enquiry" class="productContent">
                     @include('new.product.partials._form')
                 </div>

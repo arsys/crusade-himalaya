@@ -61,7 +61,8 @@
     <meta name="twitter:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
     <meta name="twitter:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
     <meta name="twitter:creator" content="@CrusadeHimalaya">
-    <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}"> @yield('twitter')
+    <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}"> 
+    @yield('twitter')
     <!-- Open Graph data -->
     <meta property="og:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')" />
     <meta property="og:type" content="article" />
@@ -69,9 +70,11 @@
     <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
     <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')"
     />
-    <meta property="og:site_name" content="Crusade Himalaya" /> @yield('og')
+    <meta property="og:site_name" content="Crusade Himalaya" /> 
+    @yield('og')
     <meta property="fb:admins" content="2171959919686300" />
-    <meta name="yandex-verification" content="dc1e4dda4c1cdf73" /> {{-- twitter card end --}}
+    <meta name="yandex-verification" content="dc1e4dda4c1cdf73" /> 
+    {{-- twitter card end --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.25/css/uikit.min.css" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">

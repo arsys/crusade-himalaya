@@ -1,20 +1,10 @@
 <div class="uk-child-width-1-3@m" uk-grid uk-lightbox="animation: scale">
+    @foreach($tour->slides as $slide)
     <div>
-        <a class="uk-inline" href="https://source.unsplash.com/1800x1200/?vintage"
-            data-caption="Caption 1">
-            <img src="https://source.unsplash.com/1800x1200/?vintage" alt="">
+        <a class="uk-inline" href="{{asset($slide->path)}}"
+            data-caption="{{ $slide->name }}">
+            <img src="{{ asset($slide->thumb) }}" alt="{{ $slide->name }}">
         </a>
     </div>
-    <div>
-        <a class="uk-inline" href="https://source.unsplash.com/1800x1200/?vintage"
-            data-caption="Caption 2">
-            <img src="https://source.unsplash.com/1800x1200/?vintage" alt="">
-        </a>
-    </div>
-    <div>
-        <a class="uk-inline" href="https://source.unsplash.com/1800x1200/?vintage"
-            data-caption="Caption 3">
-            <img src="https://source.unsplash.com/1800x1200/?vintage" alt="">
-        </a>
-    </div>
+    @endforeach
 </div>

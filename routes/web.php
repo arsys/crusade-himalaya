@@ -173,14 +173,20 @@ Route::name('frontend.')->group(function () {
 	//Travel Style
 	Route::prefix('travel-style')->group(function () {
 		Route::get('{slug}','NewController@fetchByCategory')->name('fetchByCategory');
-		// Route::get('{category}/{region}','GetController@region2package')->name('region2package');
+		Route::get('{category}/{region}','NewController@region2package')->name('region2package');
 	});
 	//Destinations
 	Route::prefix('destination')->group(function () {
 		Route::get('{slug}','NewController@fetchByregion')->name('fetchByRegion');
-		// Route::get('{destionation}/{category}','GetController@destination2package')->name('destionation2package');
+		Route::get('{destionation}/{category}','NewController@destination2package')->name('destionation2package');
 	});
 	
 	//Post Requests
 	Route::post('/contact','PostController@postContact')->name('postContact');
+	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
+
+	Route::prefix('ajax')->group(function () {
+		Route::get('fetch-departures','NewController@ajaxsearchdeparture')->name('departure');
+		// Route::post('brochure-request','PostController@requestBroucher')->name('brochure');
+	});
 });

@@ -127,6 +127,7 @@
 
             <ul class="uk-slider-items uk-grid uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2" uk-grid>
                 @foreach ($categories as $category)
+                @if($category->tours->count() > 0)
                 <li class="sliderList--item ">
                     <div class="sliderPanel">
                         <img src="{{ asset($category->thumb) }}" alt="{{$category->name}}">
@@ -140,6 +141,7 @@
                         </div>
                     </div>
                 </li>
+                @endif
                 @endforeach
             </ul>
 
@@ -250,6 +252,7 @@
             {{-- loop start --}}
             @foreach($featureds as $featured)
             <div>
+                <a href="{{ route('frontend.tripDetail', $featured->slug) }}">
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-media-top">
                         <img src="{{ asset($featured->image->thumb) }}" alt="{{$featured->title}}">
@@ -265,6 +268,7 @@
                         </div>
                     </div>
                 </div>
+                </a>
             </div>
             @endforeach
     </div>

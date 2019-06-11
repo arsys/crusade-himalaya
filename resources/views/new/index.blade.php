@@ -136,7 +136,7 @@
                         </div>
                         <div class="sliderPanel--textHolder__hover">
                             <h4>{{$category->name}}</h4>
-                            <p>{{$category->description}}</p>
+                            <p>{{ substr($category->description, 0, 80) }}{{ strlen($category->description) > 80 ? '...' : "" }}</p>
                             <a href="{{ route('frontend.fetchByCategory',$category->slug) }}" class="button-textOnly">View all <span>&rarr;</span></a>
                         </div>
                     </div>

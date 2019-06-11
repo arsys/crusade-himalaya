@@ -51,7 +51,7 @@
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
     <meta itemprop="description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
-    <meta itemprop="image" content="{{ asset('assets/img/apple-icon-180x180.png') }}">
+    <meta itemprop="image" content="@yield('ogImage',asset('assets/img/apple-icon-180x180.png"'))">  
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="product">
@@ -59,13 +59,13 @@
     <meta name="twitter:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')">
     <meta name="twitter:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')">
     <meta name="twitter:creator" content="@CrusadeHimalaya">
-    <meta name="twitter:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}"> 
+    <meta name="twitter:image" content="@yield('ogImage',asset('assets/img/apple-icon-180x180.png"'))"> 
     @yield('twitter')
     <!-- Open Graph data -->
     <meta property="og:title" content="@yield('title','Crusade Himalaya | Empower, Educate, Encourage')" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:image" content="{{ asset('assets/img/apple-icon-180x180.png') }}" />
+    <meta property="og:image" content="@yield('ogImage',asset('assets/img/apple-icon-180x180.png"'))">
     <meta property="og:description" content="@yield('description','Crusade Himalaya is a unique and independent travel partner; we wish to Empower, Educate, and Encourage you to have real-life experiences.')"
     />
     <meta property="og:site_name" content="Crusade Himalaya" /> 

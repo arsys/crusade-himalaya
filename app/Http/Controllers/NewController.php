@@ -217,5 +217,16 @@ class NewController extends Controller
 		$tour = Tour::where('slug','=', $slug)->first();
 		$pdf = PDF::loadView('new.product.pdf', compact('tour'));
 		return $pdf->download($tour->title.'.pdf');
-	}    
+    }   
+    
+    public function travelBlog(){
+        $posts = Post::where('published',1)->get();
+        return view('new.blog.index')->withPosts($posts);
+    }
+
+    public function singlePost($slug)
+    {
+    $post = Post::where('slug','=', $slug)->firstOrFail();
+        return view('new.blog.post')->withPost($post);
+    }    
 }

@@ -196,8 +196,8 @@ Route::name('frontend.')->group(function () {
 		// Route::post('brochure-request','PostController@requestBroucher')->name('brochure');
 	});
 
-	Route::get('/travel-blog','FrontendController@travelBlog')->name('travelBlog');
-	Route::get('/travel-blog/{slug}','FrontendController@singlePost')->name('singlePost');
+	Route::get('/travel-blog','NewController@travelBlog')->name('travelBlog');
+	Route::get('/travel-blog/{slug}','NewController@singlePost')->name('singlePost');
 
 	Route::get('/sitemap', 'NewController@getSitemap')->name('sitemap');
 	Route::get('/press', 'NewController@getPartner')->name('press');

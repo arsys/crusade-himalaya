@@ -257,24 +257,25 @@
         </div>
         <div class="uk-child-width-1-3@m width-1-4@l uk-child-width-1-1 uk-grid tourPacakge-wrapper" uk-grid>
             {{-- loop start --}}
-            @for ($i = 1; $i <= 3; $i++) <div>
+            @foreach ($similars as $similar)
+            <div>
                 <div class="uk-card uk-card-default">
                     <div class="uk-card-media-top">
-                        <img src="https://source.unsplash.com/1800x1200/?nepal" alt="">
+                        <img src="{{ asset($similar->image->thumb) }}" alt="{{ $similar->title }}">
                     </div>
                     <div class="tourPackage--detailWrapper">
                         <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">Media Top</h4>
-                            <h4 class="uk-margin-remove">USD 1500</h4>
+                            <h4 class="uk-margin-remove">{{ $similar->title }}</h4>
+                            <h4 class="uk-margin-remove">USD {{ $similar->price }}</h4>
                         </div>
                         <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">15 Days</h4>
-                            <button class="button-default">Read More</button>
+                            <h4 class="uk-margin-remove">{{ $similar->days }} Days</h4>
+                            <a class="button-default" href="{{ route('frontend.tripDetail', $featured->slug) }}">Read More</a>
                         </div>
                     </div>
                 </div>
         </div>
-        @endfor
+        @endforeach
         {{-- loop end --}}
     </div>
 

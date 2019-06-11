@@ -20,7 +20,7 @@
 </section>
 <section class="section-dashed">
     <div uk-grid>
-        <div class="uk-width-1-4 uk-visible@m"></div>
+        <div class="uk-width-1-6 uk-visible@m"></div>
         <div class="uk-width-expand blogPost-wrapper">
             @foreach ($posts as $post)         
             <article class="blogPost-article">
@@ -44,7 +44,7 @@
 
                 </header>
                 <div class="uk-card-media-top">
-                    <img src="https://source.unsplash.com/1024x512/?steak" alt="">
+                    <img src="{{asset($post->thumb)}}" alt="{{$post->slug}}">
                 </div>
                 <div class="blogPost-desc">
                     <p>{{$post->desctiption}}</p>
@@ -53,7 +53,7 @@
             </article>
             @endforeach
         </div>
-        <div class="uk-width-1-4 uk-visible@m"></div>
+        <div class="uk-width-1-6 uk-visible@m"></div>
     </div>
 </section>
 @stop

@@ -35,7 +35,7 @@
             <div class="footerSection-3">
                 <div class=" footerLink--wrapper">
                     @foreach($pages as $page)
-                    <a class="footerLink__item" href="{{ route('page.getPage',$page->slug) }}">T{{ $page->title }}</a>
+                    <a class="footerLink__item" href="{{ route('page.getPage',$page->slug) }}">{{ $page->title }}</a>
                     @endforeach
                     <a class="footerLink__item" href="{{ route('frontend.press') }}">Press</a>
                     <a class="footerLink__item" href="{{ route('frontend.sitemap') }}">Sitemap</a>

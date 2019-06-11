@@ -157,10 +157,22 @@ $(function () {
 					}, 3000);
 				} else {
 					printMessageErrors(data.error);
+					$(".submit").prop("disabled", false);
+					setTimeout(function () {
+						$('.print-error-msg').fadeOut();
+					}, 3000);
 				}
 			}
 		});
 	});
+	//Print error message
+	function printMessageErrors(msg) {
+		$('.print-error-msg').find('ul').empty();
+		$('.print-error-msg').css('display', 'block');
+		$.each(msg, function (key, value) {
+			$('.print-error-msg').find('ul').append("<li>" + value + "</li>");
+		});
+	}
 });
 
 /***/ })

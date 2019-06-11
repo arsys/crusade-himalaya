@@ -55,7 +55,7 @@
                 <td>{{ date("jS M, Y", strtotime($departure->end))}}</td>
                 <td>{{$departure->slot}} space left </td>
                 <td>
-                    <form action="#" method="POST">
+                    <form action="{{ route('frontend.tripBook', $tour->slug) }}" method="POST">
                         @csrf
                         <input type="hidden" name="date" value="{{ $departure->start }}">
                         <button type="submit" class="button-primary">Join</button>

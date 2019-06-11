@@ -169,6 +169,9 @@ Route::name('frontend.')->group(function () {
 
 	Route::prefix('trip')->group(function () {
 		Route::get('{slug}','NewController@tripDetail')->name('tripDetail');
+		Route::post('{slug}/book','NewController@tripBook')->name('tripBook');
+		Route::post('{slug}/complete','PostController@bookingComplete')->name('bookingComplete');
+		Route::get('{slug}/thank-you','NewController@thankYou')->name('thankYou');
 	});
 	//Travel Style
 	Route::prefix('travel-style')->group(function () {
@@ -189,4 +192,10 @@ Route::name('frontend.')->group(function () {
 		Route::get('fetch-departures','NewController@ajaxsearchdeparture')->name('departure');
 		// Route::post('brochure-request','PostController@requestBroucher')->name('brochure');
 	});
+	Route::get('/sitemap', 'NewController@getSitemap')->name('sitemap');
+	Route::get('/press', 'NewController@getPartner')->name('press');
+});
+
+Route::name('page.')->group(function () {
+	Route::get('/{slug}','NewController@getPage')->name('getPage');
 });

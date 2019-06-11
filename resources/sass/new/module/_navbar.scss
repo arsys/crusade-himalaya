@@ -18,8 +18,9 @@
                         .thumbNav--list {
                             @extend .uk-grid;
                             .thumbNav--list__item {
-                                h4 a{
+                                h4 {
                                     color: $light-black1;
+                                    font-family: $font-primary;
                                 }
                                 transition: transform 0.4s;
                                 &:hover {

@@ -1,6 +1,6 @@
-@section('mtitle'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours
+@section('mtitle'){!! $category->name !!} | {{config('app.name')}}
 @stop
-@section('title'){!! $category->name !!} | Crusade Himalaya | Himalaya Tours
+@section('title'){!! $category->name !!} | {{config('app.name')}}
 @stop
 @section('description'){!! $category->description !!}@stop
 @extends('layouts.new')

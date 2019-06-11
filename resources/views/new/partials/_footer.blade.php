@@ -17,27 +17,40 @@
                 <div class=" footerLink--wrapper">
                     <a class="footerLink__itemButton  " href="#">
                         <span uk-icon="file-text"></span>
-                        Request
+                        Request Broucher
                         <span uk-icon="chevron-right"></span>
                     </a>
                     <a class="footerLink__itemButton " href="#">
                         <span uk-icon="mail"></span>
-                        Link
+                        Contact Us
                         <span uk-icon="chevron-right"></span>
                     </a>
                     <a class="footerLink__itemButton " href="#">
                         <span uk-icon="location"></span>
-                        Link
+                        Find Location
                         <span uk-icon="chevron-right"></span>
                     </a>
                 </div>
             </div>
             <div class="footerSection-3">
                 <div class=" footerLink--wrapper">
-                    <a class="footerLink__item" href="#">Request Broucher</a>
-                    <a class="footerLink__item" href="#">Contact Us</a>
-                    <a class="footerLink__item" href="#">Location</a>
+                    @foreach($pages as $page)
+                    <a class="footerLink__item" href="{{ route('page.getPage',$page->slug) }}">T{{ $page->title }}</a>
+                    @endforeach
+                    <a class="footerLink__item" href="{{ route('frontend.press') }}">Press</a>
+                    <a class="footerLink__item" href="{{ route('frontend.sitemap') }}">Sitemap</a>
                 </div>
+                <ul class="footerAffiliate--wrapper">
+                    <li class="footerAffiliate__image">
+                        <img data-src="{{asset('img/taan.png')}}" alt="" uk-img>
+                    </li>
+                    <li class="footerAffiliate__image">
+                        <img data-src="{{asset('img/ntb.png')}}" alt="" uk-img>
+                    </li>
+                    <li class="footerAffiliate__image">
+                        <img data-src="{{asset('img/gov.png')}}" alt="" uk-img>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

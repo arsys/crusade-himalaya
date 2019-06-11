@@ -22,8 +22,8 @@
                     <div class="bookingMeta-details">
                         <h4 class="bookingMeta-details--name">Media Top</h4>
                         <div class="uk-flex uk-flex-column">
-                            <span>Price: USD 1500</span>
-                            <span>Days: 15 Day(s)</span>
+                            <span>Price: USD {{$tour->price}}</span>
+                            <span>Days: {{$tour->days}} Day(s)</span>
                             <span id="total"></span>
                         </div>
                     </div>
@@ -31,8 +31,10 @@
             </div>
 
             <div class="uk-width-2-3">
-                <form class="uk-card uk-card-default uk-card-body uk-form-stacked">
-                    <input type="hidden" id="price" value="1500">
+                <form class="uk-card uk-card-default uk-card-body uk-form-stacked" method="POST" action="{{ route('frontend.bookingComplete', $tour->slug) }}">
+                    @csrf
+                    <input type="hidden" id="price" value="{{$tour->price}}">
+                    <input type="hidden" name="tour_id" value="{{$tour->id}}">
                     <div class="uk-margin">
                         <label class="uk-form-label" for="pax">No. of travellers</label>
                         <div class="uk-form-controls">
@@ -46,7 +48,7 @@
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">Date</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="depDate" type="text">
+                        <input class="uk-input" id="depDate" name="depDate" type="text" value="{{str_replace('-','/',$data['date'])}}">
                         </div>
                     </div>
 
@@ -55,14 +57,21 @@
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">Full Name</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="text" placeholder="Some text...">
+                            <input class="uk-input" id="form-stacked-text" type="text" name="fullName" required>
                         </div>
                     </div>
 
                     <div class="uk-margin">
+                            <label class="uk-form-label" for="form-stacked-text">Email</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="form-stacked-text" type="email" name="email" required>
+                            </div>
+                        </div>                    
+
+                    <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">Contact no.</label>
                         <div class="uk-form-controls">
-                            <input class="uk-input" id="form-stacked-text" type="tel" name="contact">
+                            <input class="uk-input" id="form-stacked-text" type="tel" name="contact" required>
                         </div>
                     </div>
 
@@ -70,7 +79,7 @@
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-select">Country</label>
                         <div class="uk-form-controls">
-                            <select class="uk-select" id="form-stacked-select" name="country">
+                            <select class="uk-select" id="form-stacked-select" name="country" required>
                                 @foreach($countries::all() as $country)
                                 <option value="{{$country}}">{{$country}}</option>
                                 @endforeach
@@ -84,7 +93,7 @@
                     </div>
 
                     <div class="uk-margin">
-                        <input class="uk-checkbox" type="checkbox">
+                        <input class="uk-checkbox" type="checkbox" required>
                         <span>By selecting to complete this booking I acknowledge that I have read and accept the
                             <a class="uk-link-text uk-text-bold" href="#">
                                 terms & conditions
@@ -116,6 +125,7 @@
 <script>
     $('#depDate').datepicker({
     language: 'en',
+    dateFormat:"yyyy/mm/dd",
     minDate: new Date()
 });
 $('#pax').on('change', function() {

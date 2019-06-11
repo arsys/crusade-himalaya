@@ -19,8 +19,8 @@
                                     @foreach($dos as $do)
                                     @if($do->tours->count() > 0)
                                     <li class="thumbNav--list__item">
-                                        <h4><a href="">{{$do->name}}</a></h4>
-                                        <a href="">
+                                        <a href="{{ route('frontend.fetchByCategory',$do->slug) }}">
+                                        <h4 class="thumbNav--list__item--title">{{$do->name}}</h4>                                        
                                             <img src="{{ asset($do->nav) }}" alt="{{$do->name}}">
                                         </a>
                                     </li>                                    
@@ -40,8 +40,8 @@
                                 <ul class="uk-slider-items uk-child-width-1-4@m thumbNav--list">
                                     @foreach($wheres as $where)
                                     <li class="thumbNav--list__item">
-                                        <h4><a href="">{{$where->name}}</a></h4>
-                                        <a href="">
+                                        <a href="{{ route('frontend.fetchByRegion',$where->slug) }}">
+                                            <h4 class="thumbNav--list__item--title">{{$where->name}}</h4>                                        
                                             <img src="{{ asset($where->nav) }}" alt="{{$where->name}}">
                                         </a>
                                     </li>

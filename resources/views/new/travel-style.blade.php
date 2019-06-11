@@ -1,5 +1,5 @@
-@section('mtitle')Travel Style | {!! $category->name !!}@stop
-@section('title')Travel Style | {!! $category->name !!}
+@section('mtitle')Travel Style | {!! $category->name !!} in Nepal @stop
+@section('title')Travel Style | {!! $category->name !!} in Nepal
 @stop
 @section('description'){!! $category->description !!}@stop
 @extends('layouts.new')

@@ -8,7 +8,7 @@
                 <div class="uk-flex uk-flex-column">
                     <span class="attr-title">Group Size</span>
                     <span class="attr-meta">
-                        {{-- {{$tour->group->name}} --}}
+                        {{$tour->group->name}}
                     </span>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                 <div class="uk-flex uk-flex-column ">
                     <span class="attr-title">Accommodation</span>
                     <span class="attr-meta">
-                        {{-- {{ $tour->accommodation->name }} --}}
+                        {{ $tour->accommodation->name }}
                     </span>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="uk-flex uk-flex-column ">
                     <span class="attr-title">Difficulty</span>
                     <span class="attr-meta">
-                        {{-- {{ $tour->difficulty->name }} --}}
+                        {{ $tour->difficulty->name }}
                     </span>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                 <div class="uk-flex uk-flex-column ">
                     <span class="attr-title">Max Alt.</span>
                     <span class="attr-meta">
-                        {{-- {{ $tour->elevation }} --}}
+                        {{ $tour->elevation }}m
                     </span>
                 </div>
             </div>

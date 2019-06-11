@@ -42,7 +42,11 @@ Contact
                                 <div class="uk-width-1-4">
                                     <span uk-icon="location"></span>
                                 </div>
-                                <div class="uk-width-3-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="uk-width-3-4">
+                                    Karma Tara Adventure                                    
+                                    {{ $setting->address }}
+                                    {{ $setting->city }}, Nepal
+                                </div>
                             </div>
                         </div>
                         <div class="uk-width-1-2">
@@ -50,7 +54,7 @@ Contact
                                 <div class="uk-width-1-4">
                                     <span uk-icon="receiver"></span>
                                 </div>
-                                <div class="uk-width-3-4"> 879-890-9767</div>
+                                <div class="uk-width-3-4"> {{ $setting->phone }}</div>
                             </div>
                         </div>
                     </div>
@@ -81,7 +85,7 @@ Contact
 
             <div class="contact-form">
                  @include('new.partials._message')
-                <form method="POST" action="{{ route('frontend-postContact') }}" data-parsley-validate>
+                <form method="POST" action="{{ route('frontend.postContact') }}" data-parsley-validate>
                     @csrf
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">Full Name</label>
@@ -130,6 +134,9 @@ Contact
 @section('scripts')
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo_dSCAjkI&callback=initMap">
+</script>
 <script>
     function initMap() {
         var uluru = {lat: 27.7159776, lng: 85.3145912};
@@ -143,9 +150,7 @@ Contact
         });
     }
 </script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo_dSCAjkI&callback=initMap">
-</script>
+
 @stop
 @section('conversion')
 @if(Session::has('success'))

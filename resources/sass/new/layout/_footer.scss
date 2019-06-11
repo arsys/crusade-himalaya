@@ -10,7 +10,7 @@
         &__item {
             padding: 10px 14px;
             color: $dark;
-            transition: ease-in 0.4s;
+            transition: ease-in 0.2s;
             &:not(:last-child) {
                 @extend .uk-margin-small-right;
             }
@@ -25,19 +25,28 @@
             background-color: #3b8aca;
         }
         .inst:hover {
-            background-color: #464646;
+            background: #d6249f;
+            background: radial-gradient(
+                circle at 30% 107%,
+                #fdf497 0%,
+                #fdf497 5%,
+                #fd5949 45%,
+                #d6249f 60%,
+                #285aeb 90%
+            );
         }
         .yt:hover {
             background-color: #cc181e;
         }
     }
 }
-.footerSection-2, .footerSection-3 {
+.footerSection-2,
+.footerSection-3 {
     .footerLink--wrapper {
         @extend .uk-flex, .uk-flex-column;
         .footerLink__itemButton {
             font-family: $font-primary;
-            @extend .uk-button, .uk-text-uppercase;;
+            @extend .uk-button, .uk-text-uppercase;
             border: 1px solid $dark;
             margin: 0 40px;
             transition: all 0.3s;
@@ -52,12 +61,13 @@
                 background-color: $primary;
                 color: $white;
                 border-color: $primary;
+                transition: background-color 0.3s;
                 span {
                     color: $white;
                 }
             }
         }
-        .footerLink__item{
+        .footerLink__item {
             color: $black;
             font-family: $font-primary;
             &:not(:last-child) {
@@ -65,4 +75,22 @@
             }
         }
     }
+}
+.footerSection-3 {
+    .footerAffiliate--wrapper {
+        @extend .uk-flex, .uk-flex-row;
+        padding-left: 0;
+        .footerAffiliate__image {            
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+.footerCopyright{
+    @extend .uk-text-center, .uk-margin-medium-top;
 }

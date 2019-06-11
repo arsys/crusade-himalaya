@@ -110,7 +110,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_uikit_dist_js_uikit_icons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_uikit_dist_js_uikit_icons__);
 
 
-
 // loads the Icon plugin
 __WEBPACK_IMPORTED_MODULE_0_uikit___default.a.use(__WEBPACK_IMPORTED_MODULE_1_uikit_dist_js_uikit_icons___default.a);
 
@@ -120,6 +119,65 @@ $(function () {
     $('html, body').animate({ scrollTop: $('section#scroll-end').offset().top }, 'slow');
     return false;
   });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#toTop').fadeIn();
+    } else {
+      $('#toTop').fadeOut();
+    }
+  });
+  $('#toTop').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+
+  //Broucher
+  $("#requestBroucher").submit(function (e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var data = $(this).serialize();
+    var action = $(this).attr('action');
+
+    $.ajax({
+      type: 'POST',
+      url: action,
+      data: data,
+      headers: {
+        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+      },
+      success: function success(data) {
+        if ($.isEmptyObject(data.error)) {
+          $('#requestBroucher').trigger("reset");
+          $("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
+          $('.print-error-msg').find('ul').empty();
+          $('.print-error-msg').css('display', 'block');
+          $('.print-error-msg').find('ul').append("<li>" + data.success + "</li>");
+          setTimeout(function () {
+            __WEBPACK_IMPORTED_MODULE_0_uikit___default.a.modal('#request-broucher').hide();
+            $('.print-error-msg').fadeOut();
+            $(".submit").prop("disabled", false);
+          }, 3000);
+        } else {
+          printMessageErrors(data.error);
+          $(".submit").prop("disabled", false);
+          setTimeout(function () {
+            $('.print-error-msg').fadeOut();
+          }, 3000);
+        }
+      }
+
+    });
+  });
+  //Print error message
+  function printMessageErrors(msg) {
+    $('.print-error-msg').find('ul').empty();
+    $('.print-error-msg').css('display', 'block');
+    $.each(msg, function (key, value) {
+      $('.print-error-msg').find('ul').append("<li>" + value + "</li>");
+    });
+  }
 });
 
 /***/ }),

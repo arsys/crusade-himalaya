@@ -92,10 +92,14 @@ class PartnerController extends Controller
     public function update(Request $request, Partner $partner)
     {
         $this->validate($request, [
-            'name' => 'required|max:244'
+            'name' => 'required|max:244',
+            'url' => 'required|max:244',
+            'type' => 'required',
         ]);
         $partner = Partner::find($request->id);
         $partner->name = $request->name;
+        $partner->url = $request->url;
+        $partner->type = $request->type;
 
         $partner->save();
 

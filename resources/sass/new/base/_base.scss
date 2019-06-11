@@ -11,3 +11,20 @@ p{
 a, a:hover{
     text-decoration: none;
 }
+
+
+#toTop{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    color: $dark;
+    line-height: 25px;
+    z-index: 1;
+    position: fixed;           
+    margin: 0px 20px;
+    right:0;
+    top:100px;
+    outline: 2px solid $dark;
+}

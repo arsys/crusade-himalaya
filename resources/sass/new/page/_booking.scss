@@ -1,0 +1,13 @@
+.bookingMeta-wrapper {
+    @extend .uk-card, .uk-card-default;
+    font-family: $font-primary;
+    .bookingMeta-details {
+        @extend .uk-card-body;
+        padding: 15px 20px;
+        &--name{
+            font-family: $font-primary;
+            @extend  .uk-margin-remove;
+            font-weight: 600;
+        }
+    }
+}

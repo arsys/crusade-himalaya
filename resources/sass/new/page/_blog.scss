@@ -1,0 +1,89 @@
+.blogPage-title {
+    @extend .uk-text-center, .uk-text-uppercase;
+    color: $white;
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 3.4375‬rem;
+}
+.blogPage-description {
+    color: $white;
+    font-family: $font-secondary;
+    @extend .uk-text-center;
+    font-size: 1.125rem;
+}
+.blogPost-wrapper {
+    @extend .uk-padding;
+    .blogPost-article {
+        @extend .uk-comment, .uk-card-body, .uk-card-default;
+        &:not(:first-child){
+            @extend .uk-margin-medium-top;
+        }
+        .blogPost-header {
+            @extend .uk-comment-header, .uk-grid-medium, .uk-flex-middle;
+            .blogPost-datewrapper {
+                @extend .uk-flex, .uk-flex-column;
+                padding-right: 15px;
+                border-right: 3px solid $dark;
+                font-family: $font-primary;
+                .blogPost-date {
+                    color: $light-black1;
+                    font-size: 3.375rem;
+                    font-weight: 700;
+                }
+                .blogPost-year {
+                    color: $light-black1;
+                }
+            }
+
+            .blogPost-title {
+                @extend .uk-comment-title, .uk-margin-remove;
+                font-weight: 700;
+                font-family: $font-primary;
+                font-size: 2.125rem;
+                color: $light-black1;
+            }
+
+            .blogPost-meta {
+                @extend .uk-comment-meta,
+                    .uk-subnav,
+                    .uk-subnav-divider,
+                    .uk-margin-remove-top;
+                li {
+                    .blogPost-metaicon {
+                        color: $primary;
+                        padding-right: 8px;
+                    }
+                    color: $light-black1;
+                }
+            }
+        }
+        .blogPost-desc{            
+            @extend .uk-comment-body;
+            p{
+                margin-top: 20px;
+                font-family: $font-secondary;
+            }
+        }
+    }
+}
+
+.blogPost-contentwrapper{
+    background-color:$white;
+    .articleWrapper{
+        @extend .uk-article, .uk-padding-small;
+        .articleTitle{
+            @extend .uk-article-title;
+            font-family: $font-blog;
+        }
+        .articleMeta{
+            @extend .uk-article-meta;
+            font-family: $font-primary;
+            color: $light-black;
+        }
+        .postContent{
+            p,a ,ul li{
+                font-family: $font-secondary;
+            }
+        }
+    }
+}

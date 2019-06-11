@@ -1,6 +1,6 @@
 .nav-container {
     background-color: $white !important;
-    @extend .uk-navbar-container, .uk-box-shadow-medium;
+    @extend .uk-navbar-container, .uk-box-shadow-large;
 
     .nav-wrapper {
         @extend .uk-navbar;
@@ -12,18 +12,55 @@
             .nav-list {
                 @extend .uk-navbar-nav;
                 &__item {
+                    &--dropdown-wrapper {
+                        @extend .uk-navbar-dropdown;
+                        background-color: $dashed;
+                        .thumbNav--list {
+                            @extend .uk-grid;
+                            .thumbNav--list__item {
+                                h4 {
+                                    color: $light-black1;
+                                    font-family: $font-primary;
+                                }
+                                transition: transform 0.4s;
+                                &:hover {
+                                    transform: translateY(-5px) scale(1.01);
+                                    color: $light-black;
+                                }
+                            }
+                        }
+                    }
                     &--link {
                         @extend .uk-text-uppercase;
                         font-family: $font-primary !important;
                         color: $black !important;
-                        font-weight: 500
-                        ;
+                        font-weight: 500;
+                        color: $light-black;
                     }
                 }
             }
         }
     }
 }
-.uk-sticky-placeholder{
+.uk-sticky-placeholder {
     display: none;
+}
+
+.mobile-nav {
+    @extend .uk-navbar-right;
+    .toggleButton {
+        @extend .uk-navbar-toggle;
+    }
+}
+.mobileMenu-list {
+    @extend .uk-nav, .uk-nav-default;
+    &__item {
+        &:not(:first-child) {
+            @extend .uk-margin-small-top;
+        }
+        &--link {
+            font-size: 1.25rem;
+            color: $white !important;
+        }
+    }
 }

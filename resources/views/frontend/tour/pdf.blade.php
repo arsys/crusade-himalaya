@@ -10,7 +10,7 @@
 	body{
 		color: #333 !important;
 	}
-	.container-fluid{
+	.container{
 		background-color: white !important
 	}
 	ul.trip-overview .fa, ul.trip-overview .glyphicon, ul.trip-overview [class^=icon-]{
@@ -19,7 +19,7 @@
 </style>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="tab-panel active" id="overview">
 			<div class="row">
 				<div class="col-sm-6 col-lg-6 col-md-6">

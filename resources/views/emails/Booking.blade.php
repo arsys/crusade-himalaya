@@ -1,26 +1,18 @@
 @component('mail::message')
 User Info: {!!$data['user_info']!!}<br>
 @component('mail::table')
-| ------------- |-----------------------------------------------------------------------:|
-| Trip Name     | {{ $data["trip_name"] }}     										     |
-| Start Date    | {{ $data["start_date"] }}     										 |
-| Name          | {{ $data["name"] }}                                                    |
-| DOB           | {{ $data["dob"] }}                                                     |
-| Gender        | {{$data["gender"]}}                                                    |
-| Mobile        | {{$data["mobile"]}}                                                    |
-| Address       | {{$data["address"]}}                                                   |
-| Country       | {{$data["country"]}}                                                   |
-| Passport no.  | {{$data["passport_no"]}}                                               |
-| Passport exp. | {{$data["passport_exp"]}}                                              |
-@isset($data['insurance'])
-| Insurance | {{$data["insurance"]}}                                                     |
-@endempty
-@isset($data['otherName'])
-Additional Travellers
-@for($i=0;$i<$data['otherName'];$i++)
-| Name | {{$data["otherName"]. $i}}                                                      |
-@endfor
-@endif
+|                   	|                        	|
+|-------------------	|------------------------	|
+| Trip              	| {{ $data["trip"] }}    	|
+| Start Date        	| {{ $data["date"] }}    	|
+| Name              	| {{ $data["name"] }}    	|
+| Email             	| {{ $data["email"] }}   	|
+| Contact           	| {{ $data["contact"] }} 	|
+| Country           	| {{ $data["country"] }} 	|
+| No. of Travellers 	| {{ $data["pax"] }}     	|
+@isset($data['bodyMessage'])
+| Message           	| {{ $data["a"] }}       	|  
+@endempty 
 @endcomponent
 <br>
 {{ config('app.name') }}

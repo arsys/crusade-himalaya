@@ -47,11 +47,8 @@
                     <img src="https://source.unsplash.com/1024x512/?steak" alt="">
                 </div>
                 <div class="blogPost-desc">
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                        sit amet.</p>
-                    <a href="#" class="button-arrow">READ MORE <span>&rarr;</span></a>
+                    <p>{{$post->desctiption}}</p>
+                    <a href="{{ route('frontend.singlePost', $post->slug) }}" class="button-arrow">READ MORE <span>&rarr;</span></a>
                 </div>
             </article>
             @endfor

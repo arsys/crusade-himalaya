@@ -22,18 +22,20 @@
     <div uk-grid>
         <div class="uk-width-1-4 uk-visible@m"></div>
         <div class="uk-width-expand blogPost-wrapper">
-            @for ($i = 1; $i <=6; $i++)              
+            @foreach ($posts as $post)         
             <article class="blogPost-article">
                 <header class="blogPost-header" uk-grid>
                     <div class="uk-width-auto blogPost-datewrapper">
-                        <span class="blogPost-date">25</span>
-                        <span class="blogPost-year">July 2019</span>
+                        <span class="blogPost-date">{{date_format($post->created_at,"d")}}</span>
+                        <span class="blogPost-year">{{date_format($post->created_at,"M Y")}}</span>
                     </div>
 
                     <div class="uk-width-expand">
-                        <h4 class="blogPost-title"><a class="uk-link-reset" href="#">Post Title</a></h4>
+                        <h4 class="blogPost-title">
+                            <a class="uk-link-reset" href="{{ route('frontend.singlePost', $post->slug) }}">{{$post->title}}
+                        </h4>
                         <ul class=" blogPost-meta">
-                            <li><span class="blogPost-metaicon" uk-icon="icon: tag"></span> Travel</li>
+                            <li><span class="blogPost-metaicon" uk-icon="icon: tag"></span>{{$post->category->title}}</li>
                             <li><span class="blogPost-metaicon" uk-icon="icon: pencil"></span> {{config('app.name')}}
                             </li>
                             <li><span class="blogPost-metaicon" uk-icon="icon: social"></span> Share</li>

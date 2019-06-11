@@ -15,7 +15,7 @@
             </div>
             <div class="footerSection-2">
                 <div class=" footerLink--wrapper">
-                    <a class="footerLink__itemButton  " href="#broucher-modal" uk-toggle>
+                    <a class="footerLink__itemButton  " href="#request-broucher" uk-toggle>
                         <span uk-icon="file-text"></span>
                         Request Broucher
                         <span uk-icon="chevron-right"></span>
@@ -25,7 +25,7 @@
                         Contact Us
                         <span uk-icon="chevron-right"></span>
                     </a>
-                    <a class="footerLink__itemButton " href="#">
+                    <a class="footerLink__itemButton " href="#findLocation" uk-toggle>
                         <span uk-icon="location"></span>
                         Find Location
                         <span uk-icon="chevron-right"></span>
@@ -58,7 +58,7 @@
         </div>
     </div>
 </footer>
-<div id="broucher-modal" class="uk-flex-top request-wrapper" uk-modal>
+<div id="request-broucher" class="uk-flex-top request-wrapper" uk-modal>
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical request-details">
 
         <button class="uk-modal-close-default" type="button" uk-close></button>
@@ -82,3 +82,29 @@
     </div>
     </form>
 </div>
+<div id="findLocation" class="uk-flex-top" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="map-wrapper uk-section-default">
+            <div id="location" style="height: 500px;" ></div>
+        </div>
+    </div>
+</div>
+@section('scripts')
+<script>
+        function loadMap() {
+            var uluru = {lat: 27.7159776, lng: 85.3145912};
+            var map = new google.maps.Map(document.getElementById('location'), {
+                zoom: 18,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+</script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo_dSCAjkI&callback=loadMap">
+</script>    
+@endsection

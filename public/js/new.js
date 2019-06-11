@@ -155,7 +155,7 @@ $(function () {
           $('.print-error-msg').css('display', 'block');
           $('.print-error-msg').find('ul').append("<li>" + data.success + "</li>");
           setTimeout(function () {
-            __WEBPACK_IMPORTED_MODULE_0_uikit___default.a.modal('#broucher-modal').hide();
+            __WEBPACK_IMPORTED_MODULE_0_uikit___default.a.modal('#request-broucher').hide();
             $('.print-error-msg').fadeOut();
             $(".submit").prop("disabled", false);
           }, 3000);

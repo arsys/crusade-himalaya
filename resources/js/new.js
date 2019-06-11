@@ -46,7 +46,7 @@ $("#requestBroucher").submit(function(e) {
             $('.print-error-msg').css('display','block');
             $('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");
             setTimeout(function() {
-              UIkit.modal('#broucher-modal').hide();
+              UIkit.modal('#request-broucher').hide();
               $('.print-error-msg').fadeOut();
               $(".submit").prop("disabled", false);
             }, 3000);

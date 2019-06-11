@@ -18,7 +18,7 @@
 @extends('layouts.new')
 @section('content')
 <section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px"
-    data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
+    data-src="{{ asset($tour->image->banner) }}" uk-img>
     <div class="page-title__wrapper">
         <div class="uk-position-large uk-position-center">
             <h1>{{$tour->title}}</h1>
@@ -76,23 +76,24 @@
                                     </div>
                                     <div>
                                         <a href="#modal-refer-friend" uk-toggle><span>Email a friend</span></a>
-                                        {{-- @include('frontend.tour.partials.modal._refer') --}}
+                                        @include('new.product.partials._refer')
                                     </div>
                                 </div>
                             </li>
-
+                            @if($tour->itinerary->count() > 0)
                             <li class="sideBar--list__item">
                                 <div class="uk-child-width-expand" uk-grid>
                                     <div class="uk-width-auto">
                                         <i class="fas fa-tasks"></i>
                                     </div>
                                     <div>
-                                        <a href="#" rel="nofollow">
+                                        <a href="{{ route('frontend.download', $tour->slug) }}" rel="nofollow">
                                             <span>Download Itinerary</span>
                                         </a>
                                     </div>
                                 </div>
                             </li>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -170,7 +171,7 @@
                                 <div class="actionWrapper--icon">
                                     <i class="fas fa-info"></i>
                                 </div>
-                                <div class="actionWrapper--action">
+                                <div class="actionWrapper--action" uk-scrollspy-nav="closest: a; scroll: true; offset:0" >
                                     <a href="#mob-enquiry">Quick Enquiry</a>
                                 </div>
                             </div>
@@ -186,18 +187,18 @@
                                 </div>
                             </div>
                         </li>
-                        {{-- @if($tour->itinerary->count() > 0) --}}
+                        @if($tour->itinerary->count() > 0)
                         <li>
                             <div class="uk-child-width-expand actionWrapper" uk-grid>
                                 <div class="actionWrapper--icon">
                                     <i class="fas fa-tasks"></i>
                                 </div>
                                 <div class="actionWrapper--action">
-                                    <a href="#" rel="nofollow">Download Itinary</a>
+                                    <a href="{{ route('frontend.download', $tour->slug) }}" rel="nofollow">Download Itinary</a>
                                 </div>
                             </div>
                         </li>
-                        {{-- @endif --}}
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -228,7 +229,7 @@
                     @include('new.product.partials._departures')
                 </div>
             </li>
-            <li class="mobileContent-list--item">
+            <li class="mobileContent-list--item" id="mob-enquiry">
                 <a class="uk-accordion-title" href="#">Itinerary</a>
                 <div class="uk-accordion-content">
                     @include('new.product.partials._form')

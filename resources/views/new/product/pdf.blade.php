@@ -14,7 +14,7 @@
 		background-color: white !important
 	}
 	ul.trip-overview .fa, ul.trip-overview .glyphicon, ul.trip-overview [class^=icon-]{
-		color:#2ed3ae !important;
+		color:#329590 !important;
 	}
 </style>
 </head>

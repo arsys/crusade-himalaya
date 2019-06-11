@@ -15,12 +15,12 @@
             </div>
             <div class="footerSection-2">
                 <div class=" footerLink--wrapper">
-                    <a class="footerLink__itemButton  " href="#">
+                    <a class="footerLink__itemButton  " href="#broucher-modal" uk-toggle>
                         <span uk-icon="file-text"></span>
                         Request Broucher
                         <span uk-icon="chevron-right"></span>
                     </a>
-                    <a class="footerLink__itemButton " href="#">
+                    <a class="footerLink__itemButton " href="{{ route('frontend.contact') }}">
                         <span uk-icon="mail"></span>
                         Contact Us
                         <span uk-icon="chevron-right"></span>
@@ -53,5 +53,32 @@
                 </ul>
             </div>
         </div>
+        <div class="footerCopyright">
+            <span> © {{date('Y')}} KARMA TARA ADVENTURE PVT. LTD. KATHMANDU NEPAL</span>
+        </div>
     </div>
 </footer>
+<div id="broucher-modal" class="uk-flex-top request-wrapper" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical request-details">
+
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h3>Request a brochure</h3>
+        <div class="uk-alert-danger print-error-msg uk-alert" id="response-msg" style="display: none;">
+            <ul class="uk-list">
+            </ul>
+        </div>
+        <form method="POST" action="{{ route('frontend.brochure') }}" id="requestBroucher">
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Email *</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input uk-form-width-xlarge" type="email" placeholder="Email" id="email"
+                        name="email">
+                </div>
+            </div>
+
+            <p class="uk-text-right">
+                <button class="uk-button submit uk-width-1-1 button-primary" type="submit">Send</button>
+            </p>
+    </div>
+    </form>
+</div>

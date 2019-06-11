@@ -15,6 +15,7 @@ use App\Event;
 use App\Page;
 use App\Post;
 use DB;
+use PDF;
 class NewController extends Controller
 {
     //Get Home Page
@@ -209,5 +210,12 @@ class NewController extends Controller
         ->withMedias($medias)
         ->withAccommodations($accommodations)
         ->withTravels($travels);
-    }    
+    }  
+    
+	public function downloadPDF($slug)
+	{
+		$tour = Tour::where('slug','=', $slug)->first();
+		$pdf = PDF::loadView('new.product.pdf', compact('tour'));
+		return $pdf->download($tour->title.'.pdf');
+	}    
 }

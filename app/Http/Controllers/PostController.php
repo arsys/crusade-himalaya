@@ -10,6 +10,7 @@ use App\Mail\Contact;
 use App\Mail\QuickEnquiry;
 use App\Mail\Refer;
 use App\Mail\Booking;
+use App\Mail\Broucher;
 use Session;
 class PostController extends Controller
 {
@@ -104,6 +105,13 @@ class PostController extends Controller
         'email' => 'required|email',
     ]);
     if ($validator->passes()) {
+        $user_info = $this->ipLocation($request->ip());   
+        $data = array(
+            'email' => $request->email,
+            'user_info' => $user_info
+        );
+//            dd($data);
+        Mail::send(new Broucher($data));
         return response()->json(['success'=>'Mail sent sucessfully.']);
     }
     return response()->json(['error'=>$validator->errors()->all()]);

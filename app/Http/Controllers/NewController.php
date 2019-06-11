@@ -220,7 +220,7 @@ class NewController extends Controller
     }   
     
     public function travelBlog(){
-        $posts = Post::where('published',1)->get();
+        $posts = Post::where('published',1)->latest();
         return view('new.blog.index')->withPosts($posts);
     }
 

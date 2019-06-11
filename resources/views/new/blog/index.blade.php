@@ -51,7 +51,7 @@
                     <a href="{{ route('frontend.singlePost', $post->slug) }}" class="button-arrow">READ MORE <span>&rarr;</span></a>
                 </div>
             </article>
-            @endfor
+            @endforeach
         </div>
         <div class="uk-width-1-4 uk-visible@m"></div>
     </div>

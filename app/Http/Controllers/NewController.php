@@ -15,6 +15,7 @@ use App\Event;
 use App\Page;
 use App\Post;
 use DB;
+use PDF;
 class NewController extends Controller
 {
     //Get Home Page
@@ -80,6 +81,7 @@ class NewController extends Controller
         return view('new.contact');
     } 
 
+    //Get Single Trip
 	public function tripDetail($slug)
 	{
 		$tour = Tour::where('slug','=', $slug)->first();
@@ -96,6 +98,18 @@ class NewController extends Controller
 		->withTour($tour)
 		->withSimilars($similars)
 		->withDepartures($depature_dates);
+    }
+
+    //Get Booking Page
+    public function tripBook(Request $request)
+    {
+		$data =  array(
+            'date' => $request->date
+		);
+		$tour = Tour::where('slug','=', $request->slug)->first();
+		return view('new.product.booking.book')
+		->withTour($tour)
+		->withData($data);        
     }
     
     //Destination
@@ -174,4 +188,34 @@ class NewController extends Controller
         return view('new.product.partials.dates', compact('departures', 'tour'));
     }    
      
+    public function thankYou()
+    {
+        return view('new.product.booking.thankyou');
+    }
+
+    public function getpage($slug){
+        $page = Page::where('slug','=', $slug)->firstOrFail();
+        return view('new.page')->withPage($page);
+    }    
+
+    public function getSitemap(){
+        return view('new.sitemap');
+    }
+
+    public function getPartner(){
+        $medias = Partner::where('type',1)->get(); //media
+        $accommodations = Partner::where('type',2)->get(); //accommodation
+        $travels = Partner::where('type',3)->get(); //travel
+        return view('new.press')
+        ->withMedias($medias)
+        ->withAccommodations($accommodations)
+        ->withTravels($travels);
+    }  
+    
+	public function downloadPDF($slug)
+	{
+		$tour = Tour::where('slug','=', $slug)->first();
+		$pdf = PDF::loadView('new.product.pdf', compact('tour'));
+		return $pdf->download($tour->title.'.pdf');
+	}    
 }

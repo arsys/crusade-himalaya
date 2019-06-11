@@ -101,7 +101,7 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 // Route::name('frontend-')->group(function () {
 // 	Route::post('/contact','PostController@postContact')->name('postContact');
 // 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
-// 	Route::post('/refer-a-friend','PostController@referFriend')->name('referFriend');
+	Route::post('/refer-a-friend','PostController@referFriend')->name('referFriend');
 // 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
 // 	Route::get('/travel-blog','FrontendController@travelBlog')->name('travelBlog');
 // 	Route::get('/post/{slug}','FrontendController@singlePost')->name('singlePost');
@@ -169,6 +169,10 @@ Route::name('frontend.')->group(function () {
 
 	Route::prefix('trip')->group(function () {
 		Route::get('{slug}','NewController@tripDetail')->name('tripDetail');
+		Route::post('{slug}/book','NewController@tripBook')->name('tripBook');
+		Route::post('{slug}/complete','PostController@bookingComplete')->name('bookingComplete');
+		Route::get('{slug}/thank-you','NewController@thankYou')->name('thankYou');
+		Route::get('download/{slug}','NewController@downloadPDF')->name('download');
 	});
 	//Travel Style
 	Route::prefix('travel-style')->group(function () {
@@ -184,9 +188,18 @@ Route::name('frontend.')->group(function () {
 	//Post Requests
 	Route::post('/contact','PostController@postContact')->name('postContact');
 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
+	Route::post('brochure-request','PostController@requestBroucher')->name('brochure');
+	Route::post('refer-a-friend','PostController@referFriend')->name('referFriend');
 
 	Route::prefix('ajax')->group(function () {
 		Route::get('fetch-departures','NewController@ajaxsearchdeparture')->name('departure');
 		// Route::post('brochure-request','PostController@requestBroucher')->name('brochure');
 	});
+	Route::get('/sitemap', 'NewController@getSitemap')->name('sitemap');
+	Route::get('/press', 'NewController@getPartner')->name('press');
+		
+});
+
+Route::name('page.')->group(function () {
+	Route::get('/{slug}','NewController@getPage')->name('getPage');
 });

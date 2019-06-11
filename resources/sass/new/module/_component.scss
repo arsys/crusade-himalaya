@@ -1,5 +1,5 @@
 .button-default {
-    font-family: $font-primary;
+    font-family: $font-teritary;
     @extend .uk-button, .uk-text-uppercase;
     border: 1px solid $black;
     transition: all 0.3s;
@@ -12,9 +12,9 @@
         border-color: $primary;
     }
 }
-.button-primary{
-    @extend .uk-button  , .uk-button-default;
-    font-family: $font-primary;
+.button-primary {
+    @extend .uk-button, .uk-button-default;
+    font-family: $font-teritary;
     border: 1px solid $primary;
     transition: all 0.3s;
     font-weight: 500;
@@ -29,7 +29,7 @@
 .button-arrow {
     display: inline-block;
     color: $light-black1;
-    font-family: $font-primary;
+    font-family: $font-teritary;
     span {
         font-size: 2rem;
         vertical-align: sub;
@@ -38,5 +38,16 @@
         color: $primary;
         transition: all 0.5s ease-in-out;
         transform: translateX(-5px);
+    }
+}
+.button-textOnly {
+    font-family: $font-teritary;
+    transition: 0.6s ease-out;
+    span {
+        font-size: 2rem;
+        vertical-align: sub;
+    }
+    &:hover {
+        color: $primary;
     }
 }

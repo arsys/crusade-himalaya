@@ -20,7 +20,10 @@
                 <h4><span class="text-danger">No alt name given</span></h4>
                 @endif
                 <p>
-                    <button  type="button" class="btn btn-info" data-id="{{$partner->id}}" data-name="{{$partner->name}}"  data-toggle="modal"
+                    <button  type="button" class="btn btn-info" data-id="{{$partner->id}}" data-name="{{$partner->name}}" 
+                        data-type="{{$partner->type}}"  
+                        data-url="{{$partner->url}}"
+                        data-toggle="modal"
                        data-target="#editModal" id="edit-modal"><i class="fa fa-pencil-square-o"></i> Edit</button>
                        <button type="button" class="btn btn-danger" id="delete-modal" data-id="{{$partner->id}}"   data-toggle="modal"
                         data-target="#myModal"><i
@@ -46,6 +49,18 @@
                             <div class="form-group">
                                 <label for="name-edit" class="col-sm-2">Name</label>
                                 <input type="text" class=" col-sm-8" id="name-edit" >
+                            </div>
+                            <div class="form-group">
+                                    <label for="name-edit" class="col-sm-2">URL</label>
+                                    <input type="text" class=" col-sm-8" id="url-edit" >
+                                </div>
+                            <div class="form-group ">
+                                <select class="form-control m-b-sm" name="type" id="type-edit">
+                                    <option value="1">Media</option>
+                                    <option value="2">Accommodation</option>
+                                    <option value="3">Travel</option>
+                                </select>
+                                <label class="control-label">Type</label>
                             </div>
                         </div>
                     </div>
@@ -98,7 +113,9 @@
                     data: {
                         '_token': $('meta[name="csrf-token"]').attr('content'),
                         'id': $("#id-edit").val(),
-                        'name': $('#name-edit').val()
+                        'name': $('#name-edit').val(),
+                        'type': $('#type-edit').val(),
+                        'url': $('#url-edit').val()
                     },
                     success: function (data) {
                         $('#myModal').modal('hide');

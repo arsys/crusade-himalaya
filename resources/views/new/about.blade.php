@@ -5,16 +5,14 @@
     <div class="page-title__wrapper">
 
         <div class="uk-position-center-left uk-position-large pageDescription-holder">
-            <h1 class="pageTitle">Test</h1>
+            <h1 class="pageTitle">Who We Are</h1>
             <p class="pageDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, aut. At,
                 possimus! Sapiente fugit animi rerum, molestiae laudantium beatae voluptate.</p>
         </div>
         <div class="uk-position-large uk-position-bottom-right ">
             <ul class="uk-breadcrumb">
                 <li><a href="" uk-icon="icon: home"></a></li>
-                <li><a href="#">Category</a></li>
-                <li><a href="#">Region</a></li>
-                <li class="uk-disabled"><span>Active</span></li>
+                <li class="uk-disabled"><a href="{{ url()->current() }}">Who We Are</a></li>
             </ul>
         </div>
     </div>

@@ -157,10 +157,55 @@ $(function () {
 					}, 3000);
 				} else {
 					printMessageErrors(data.error);
+					$(".submit").prop("disabled", false);
+					setTimeout(function () {
+						$('.print-error-msg').fadeOut();
+					}, 3000);
 				}
 			}
 		});
 	});
+
+	//Refer a friend
+	$('#refer-friend').on('submit', function (e) {
+		e.preventDefault();
+		$(".send-refer").prop("disabled", true);
+		data = $(this).serialize();
+		action = $(this).attr('action');
+		$.ajax({
+			type: 'POST',
+			url: action,
+			data: data,
+			headers: {
+				"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+			},
+			success: function success(data) {
+				if ($.isEmptyObject(data.error)) {
+					$("#refer-friend").trigger("reset");
+					$('.print-error-msg').find('ul').empty();
+					$('.print-error-msg').css('display', 'block');
+					$('.print-error-msg').find('ul').append("<li>" + data.success + "</li>");
+					$("#modal-refer-friend").fadeOut();
+					setTimeout(function () {
+						$("#response-msg").toggleClass('uk-alert-success uk-alert-danger');
+						$('.print-error-msg').fadeOut();
+						$(".send-refer").prop("disabled", false);
+					}, 3000);
+				} else {
+					printMessageErrors(data.error);
+				}
+			}
+		});
+	});
+
+	//Print error message
+	function printMessageErrors(msg) {
+		$('.print-error-msg').find('ul').empty();
+		$('.print-error-msg').css('display', 'block');
+		$.each(msg, function (key, value) {
+			$('.print-error-msg').find('ul').append("<li>" + value + "</li>");
+		});
+	}
 });
 
 /***/ })

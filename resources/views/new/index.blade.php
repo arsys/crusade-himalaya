@@ -137,7 +137,7 @@
                         <div class="sliderPanel--textHolder__hover">
                             <h4>{{$category->name}}</h4>
                             <p>{{$category->description}}</p>
-                            <a href="{{ route('frontend.fetchByCategory',$category->slug) }}">View all <span>&rarr;</span></a>
+                            <a href="{{ route('frontend.fetchByCategory',$category->slug) }}" class="button-textOnly">View all <span>&rarr;</span></a>
                         </div>
                     </div>
                 </li>
@@ -167,12 +167,12 @@
                 {{-- single article--}}
                 @foreach($odds as $odd)
                 @if($loop->iteration % 2 == 0)
-                <div class="uk-inline">
+                <div class="uk-inline destinationItem">
                     <a href="{{ route('frontend.fetchByRegion',$odd->slug) }}">
                         <img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
                         <div class="uk-position-cover"></div>
-                        <div class="uk-overlay uk-position-bottom uk-light">
-                            <h3>{{$odd->name}}</h3>
+                        <div class="uk-position-bottom  destinationItem__overlay">
+                            <h3 class="destinationItem__overlay--title">{{$odd->name}}</h3>
                         </div>
                     </a>
                 </div>
@@ -183,12 +183,12 @@
                 <div class="uk-child-width-1-2 uk-grid-small " uk-grid>
                     @foreach($odds as $odd)
                     @if($loop->iteration % 2 != 0)
-                        <div class="uk-inline">
+                        <div class="uk-inline destinationItem">
                             <a href="{{ route('frontend.fetchByRegion',$odd->slug) }}">
                                 <img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
                                 <div class="uk-position-cover"></div>
-                                <div class="uk-overlay uk-position-bottom uk-light">
-                                    <h3>{{$odd->name}}</h3>
+                                <div class="uk-position-bottom  destinationItem__overlay">
+                                    <h3 class="destinationItem__overlay--title">{{$odd->name}}</h3>
                                 </div>
                             </a>
                         </div>
@@ -202,12 +202,12 @@
                 <div class="uk-child-width-1-2 uk-grid-small " uk-grid>                    
                     @foreach($evens as $even)
                     @if($loop->iteration % 2 != 0)
-                        <div class="uk-inline">
+                        <div class="uk-inline destinationItem">
                             <a href="{{ route('frontend.fetchByRegion',$even->slug) }}">
                                 <img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
                                 <div class="uk-position-cover"></div>
-                                <div class="uk-overlay uk-position-bottom uk-light">
-                                    <h3>{{$even->name}}</h3>
+                                <div class="uk-position-bottom  destinationItem__overlay">
+                                    <h3 class="destinationItem__overlay--title">{{$even->name}}</h3>
                                 </div>
                             </a>
                         </div>
@@ -217,12 +217,12 @@
                 {{-- single article--}}
                 @foreach($evens as $even)
                 @if($loop->iteration % 2 == 0)
-                    <div class="uk-inline">
+                    <div class="uk-inline destinationItem">
                         <a href="{{ route('frontend.fetchByRegion',$even->slug) }}">
                             <img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
                             <div class="uk-position-cover"></div>
-                            <div class="uk-overlay uk-position-bottom uk-light">
-                                <h3>{{$even->name}}</h3>
+                            <div class="uk-position-bottom  destinationItem__overlay">
+                                <h3 class="destinationItem__overlay--title">{{$even->name}}</h3>
                             </div>
                         </a>
                     </div>

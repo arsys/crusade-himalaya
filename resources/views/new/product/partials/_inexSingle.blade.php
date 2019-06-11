@@ -13,7 +13,7 @@
         @foreach($tour->excludes as $exclude)
         <li class="single-excludedList--item">
             <span uk-icon="close"></span>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto.
+            {{$exclude->name}}
         </li>
         @endforeach
     </ul>

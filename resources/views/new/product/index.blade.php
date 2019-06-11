@@ -2,6 +2,7 @@
 @section('title'){!! ucfirst($tour->title) !!} | {{$tour->days}} @if($tour->days > 1) Days @else Day @endif
 @stop
 @section('description'){!! $tour->description !!}@stop
+@section('ogImage'){{ asset($tour->image->thumb) }}@stop
 @section('twitter')
 <meta name="twitter:data1" content="${{ $tour->price }}">
 <meta name="twitter:label1" content="Price">
@@ -270,7 +271,7 @@
                         </div>
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">{{ $similar->days }} Days</h4>
-                            <a class="button-default" href="{{ route('frontend.tripDetail', $featured->slug) }}">Read More</a>
+                            <a class="button-default" href="{{ route('frontend.tripDetail', $similar->slug) }}">Read More</a>
                         </div>
                     </div>
                 </div>

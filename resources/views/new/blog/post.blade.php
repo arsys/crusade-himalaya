@@ -8,7 +8,7 @@
                 <article class="articleWrapper">
                     <h1 class="articleTitle"><a class="uk-link-reset" href="">Heading</a></h1>
 
-                    <p class="articleMeta">Written by {{config('app.name')}}on 12 April 2012 {{dateformat($post->created_at,"d F Y")}}. Posted in
+                    <p class="articleMeta">Written by {{config('app.name')}}on 12 April 2012 {{date_format($post->created_at,"d F Y")}}. Posted in
                         {{$post->category->title}}
                     </p>
 

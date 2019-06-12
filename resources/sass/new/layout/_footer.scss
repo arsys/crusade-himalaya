@@ -80,7 +80,8 @@
     .footerAffiliate--wrapper {
         @extend .uk-flex, .uk-flex-row;
         padding-left: 0;
-        .footerAffiliate__image {            
+        .footerAffiliate__image {   
+            list-style: none;         
             &:not(:last-child) {
                 margin-right: 10px;
             }

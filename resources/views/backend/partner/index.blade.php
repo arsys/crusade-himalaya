@@ -20,65 +20,60 @@
                 <h4><span class="text-danger">No alt name given</span></h4>
                 @endif
                 <p>
-                    <button  type="button" class="btn btn-info" data-id="{{$partner->id}}" data-name="{{$partner->name}}" 
-                        data-type="{{$partner->type}}"  
-                        data-url="{{$partner->url}}"
-                        data-toggle="modal"
-                       data-target="#editModal" id="edit-modal"><i class="fa fa-pencil-square-o"></i> Edit</button>
-                       <button type="button" class="btn btn-danger" id="delete-modal" data-id="{{$partner->id}}"   data-toggle="modal"
-                        data-target="#myModal"><i
-                        class="fa fa-trash-o"></i> Delete</button>
-                    </p>
-                </div>
+                    <button type="button" class="btn btn-info" data-id="{{$partner->id}}" data-name="{{$partner->name}}"
+                        data-type="{{$partner->type}}" data-url="{{$partner->url}}" data-toggle="modal"
+                        data-target="#editModal" id="edit-modal"><i class="fa fa-pencil-square-o"></i> Edit</button>
+                    <button type="button" class="btn btn-danger" id="delete-modal" data-id="{{$partner->id}}"
+                        data-toggle="modal" data-target="#myModal"><i class="fa fa-trash-o"></i> Delete</button>
+                </p>
             </div>
         </div>
-        @endforeach
     </div>
+    @endforeach
+</div>
 
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Edit </h4>
-                    </div>
-                    <div class="modal-body text-center">
-                        <input type="hidden" id="id-edit">
-                        <div class="row">
-                            <div class="form-group">
-                                <label for="name-edit" class="col-sm-2">Name</label>
-                                <input type="text" class=" col-sm-8" id="name-edit" >
-                            </div>
-                            <div class="form-group">
-                                    <label for="name-edit" class="col-sm-2">URL</label>
-                                    <input type="text" class=" col-sm-8" id="url-edit" >
-                                </div>
-                            <div class="form-group ">
-                                <select class="form-control m-b-sm" name="type" id="type-edit">
-                                    <option value="1">Media</option>
-                                    <option value="2">Accommodation</option>
-                                    <option value="3">Travel</option>
-                                </select>
-                                <label class="control-label">Type</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success save">Save changes</button>
-                    </div>
+                <h4 class="modal-title" id="myModalLabel">Edit </h4>
+            </div>
+            <div class="modal-body card-body form">
+                <input type="hidden" id="id-edit">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name-edit">
+                    <label for="name-edit">Name</label>
                 </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="url-edit">
+                    <label for="url-edit">URL</label>
+                </div>
+                <div class="form-group">
+                    <select id="type-edit" name="type-edit" class="form-control">
+                        <option value="1">Media</option>
+                        <option value="2">Accommodation</option>
+                        <option value="3">Travel</option>
+                    </select>
+                    <label for="type-edit">Type</label>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success save">Save changes</button>
             </div>
         </div>
-        {{--delete modal--}}
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-        aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"
-                    aria-label="Close"><span aria-hidden="true">&times;</span>
+    </div>
+</div>
+{{--delete modal--}}
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title" id="myModalLabel">Are you sure you want delete ? </h4>
             </div>
@@ -103,6 +98,8 @@
             $(document).on('click', '#edit-modal', function () {
                 $('#id-edit').val($(this).data('id'));
                 $('#name-edit').val($(this).data('name'));
+                $('#url-edit').val($(this).data('url'));
+                $('#type-edit').val($(this).data('type'));
             });
 
             $('.modal-footer').on('click', '.save', function () {
@@ -150,5 +147,5 @@
             });
 
         });
-    </script>
-    @stop
+</script>
+@stop

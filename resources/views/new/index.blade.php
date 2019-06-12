@@ -9,8 +9,8 @@
                 <img src="{{ asset($carousel->path) }}" alt="{{ $carousel->name }}" uk-cover>
                 <div class="slide-item--content  uk-position-center-left">
                     <h2 class="slide-item--content__heading uk-margin-remove ">{{ $carousel->header }}</h2>
-                    <p class="slide-item--content__subheading uk-margin-remove uk-text-lead uk-text-uppercase">
-                        {{ $carousel->subheader }}</p>
+                    <p class="slide-item--content__subheading">
+                        {{ $carousel->subheader }} </p>
                 </div>
             </li>
             @endforeach

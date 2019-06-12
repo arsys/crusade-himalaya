@@ -104,7 +104,6 @@
             });
         }
 </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBViS7sZ08YQOLHNVbTf3gi10mx8QPDmSI=loadMap">
-</script>    
+<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=%20AIzaSyAa-WwqfFg8ITGVqC6X8bErughw98aYzUY">
+</script>  
 @endsection

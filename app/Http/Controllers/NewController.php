@@ -67,7 +67,11 @@ class NewController extends Controller
 
     public function getAbout()
     {
-        return view('new.about');
+        $teams = Team::whereHas('member', function ($r) {
+            $r->where('name', 'Administration')->orderBy('name', 'asc');
+        })->get();
+        return view('new.about')
+        ->withTeams($teams);       
     } 
 
     public function getPosts()

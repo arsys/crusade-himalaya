@@ -16683,6 +16683,7 @@ ul.uk-nav-sub {
 .uk-text-uppercase,
 .nav-container .nav-wrapper .link-wrapper .nav-list__item--link,
 .button-default,
+.header .hero-slider ul .slide-item--content__subheading,
 .footerSection-2 .footerLink--wrapper .footerLink__itemButton,
 .footerSection-3 .footerLink--wrapper .footerLink__itemButton,
 .blogPage-title {
@@ -18941,6 +18942,7 @@ iframe.uk-cover {
  ========================================================================== */
 
 .uk-margin-remove,
+.header .hero-slider ul .slide-item--content__subheading,
 .productContent--title,
 .searchWrapper p,
 .categoryWrapper .categoryLink .categoryName,

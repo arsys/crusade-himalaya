@@ -1,3 +1,12 @@
+@section('mtitle')
+Who We Are | {{config('app.name')}}
+@stop
+@section('title')
+Who We Are | {{config('app.name')}}
+@stop
+@section('description')
+Nepal isn't a destination, it is an experience, an experience beyond the ordinary.
+@stop
 @extends('layouts.new')
 @section('content')
 <section class="image-page-header " uk-height-viewport="offset-top: true; offset-bottom: 50px"

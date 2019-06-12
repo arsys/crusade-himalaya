@@ -3,41 +3,38 @@
     <div class="dividerMinimal"></div>
 </div>
 
+@foreach($teams as $team)
+@if($loop->iteration % 2 == 0)
 <div class="teamMember-wrapper" uk-grid>
     <div class="uk-width-2-5@s">
-        <img src="https://source.unsplash.com/300x300/?face" alt="">
+        <img src="{{ $team->avatar }}" alt="{{ $team->name }}">
     </div>
     <div class="uk-width-3-5@s">
         <div class="teamMember-meta">
-            <span class="teamMember-name">Name</span>
-            <span class="teamMember-designation">Designation</span>
+            <span class="teamMember-name">{{ $team->name }}</span>
+            <span class="teamMember-designation">{{ $team->position }}</span>
         </div>
         <div class="teamMember-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta quam
-            voluptate dolore. Delectus accusamus tempore iusto, quod repellendus quos temporibus
-            mollitia assumenda aspernatur vero quidem blanditiis autem fuga atque odit earum
-            sint quis, sit alias accusantium? Alias modi pariatur distinctio optio facere quidem
-            consequuntur.
+            {!! $team->description !!}
         </div>
     </div>
 </div>
-
+@endif
+@if($loop->iteration % 2 != 0)
 <div class="teamMember-wrapper" uk-grid>
     <div class="uk-width-3-5@s">
         <div class="teamMember-meta">
-            <span class="teamMember-name">Name</span>
-            <span class="teamMember-designation">Designation</span>
+            <span class="teamMember-name">{{ $team->name }}</span>
+            <span class="teamMember-designation">{{ $team->position }}</span>
         </div>
         <div class="teamMember-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus dicta quam
-            voluptate dolore. Delectus accusamus tempore iusto, quod repellendus quos temporibus
-            mollitia assumenda aspernatur vero quidem blanditiis autem fuga atque odit earum
-            sint quis, sit alias accusantium? Alias modi pariatur distinctio optio facere quidem
-            consequuntur.
+            {!! $team->description !!}
         </div>
     </div>
 
     <div class="uk-width-2-5@s">
-        <img src="https://source.unsplash.com/300x300/?face" alt="">
+        <img src="{{ $team->avatar }}" alt="{{ $team->name }}">
     </div>
 </div>
+@endif
+@endforeach

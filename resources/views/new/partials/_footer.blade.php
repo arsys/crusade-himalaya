@@ -18,7 +18,7 @@
                 <div class=" footerLink--wrapper">
                     <a class="footerLink__itemButton  " href="#request-broucher" uk-toggle>
                         <span uk-icon="file-text"></span>
-                        Request Broucher
+                        Request Brochure
                         <span uk-icon="chevron-right"></span>
                     </a>
                     <a class="footerLink__itemButton " href="{{ route('frontend.contact') }}">
@@ -91,18 +91,3 @@
         </div>
     </div>
 </div>
-<script>
-        function loadMap() {
-            var uluru = {lat: 27.7159776, lng: 85.3145912};
-            var map = new google.maps.Map(document.getElementById('location'), {
-                zoom: 18,
-                center: uluru
-            });
-            var marker = new google.maps.Marker({
-                position: uluru,
-                map: map
-            });
-        }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBnBrosAWWNEMciy59M0LLqW-4TY4n_0&callback=loadMap"
-type="text/javascript"></script>

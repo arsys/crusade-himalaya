@@ -127,15 +127,13 @@ Contact
         </div>
     </div>
 </section>
-<section class="section-white">
-        <div id="map" style="height: 300px;"></div>
+<section>
+        <div id="map" style="height: 400px;"></div>
 </section>
 @endsection
 @section('scripts')
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBnBrosAWWNEMciy59M0LLqW-4TY4n_0&callback=initMap"
-type="text/javascript"></script>>
 <script>
     function initMap() {
         var uluru = {lat: 27.7159776, lng: 85.3145912};
@@ -149,7 +147,8 @@ type="text/javascript"></script>>
         });
     }
 </script>
-
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF6eDSkRPK0Y6PGcLQXX3e9hxNMUfm7NI&callback=initMap"
+type="text/javascript"></script>
 @stop
 @section('conversion')
 @if(Session::has('success'))

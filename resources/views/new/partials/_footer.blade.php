@@ -87,7 +87,7 @@
     <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
         <button class="uk-modal-close-default" type="button" uk-close></button>
         <div class="map-wrapper uk-section-default">
-            <div id="location" style="height: 500px;" ></div>
+            <img src="{{ asset('img/location.jpg') }}" alt="Karma Tara Adventure " class="uk-img">
         </div>
     </div>
 </div>

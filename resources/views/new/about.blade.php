@@ -10,7 +10,7 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
 @extends('layouts.new')
 @section('content')
 <section class="image-page-header " uk-height-viewport="offset-top: true; offset-bottom: 50px"
-    data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
+    data-src="{{ asset('img/team.JPG') }}" uk-img>
     <div class="page-title__wrapper">
 
         <div class="uk-position-center-left uk-position-large pageDescription-holder">

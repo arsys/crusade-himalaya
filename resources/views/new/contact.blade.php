@@ -135,7 +135,7 @@ Contact
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL_fHyHReJANrNN1TACrswYpo_dSCAjkI&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBViS7sZ08YQOLHNVbTf3gi10mx8QPDmSI=initMap">
 </script>
 <script>
     function initMap() {

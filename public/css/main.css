@@ -32375,6 +32375,10 @@ a:hover {
   padding-left: 0;
 }
 
+.footerSection-3 .footerAffiliate--wrapper .footerAffiliate__image {
+  list-style: none;
+}
+
 .footerSection-3 .footerAffiliate--wrapper .footerAffiliate__image:not(:last-child) {
   margin-right: 10px;
 }

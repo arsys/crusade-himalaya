@@ -7,12 +7,13 @@
                     <img data-src="{{ asset('img/crusade-logo.svg') }}" width="1800" height="1200" alt="" uk-img>
                 </a>
                 <div class="socialLink--list">
-                    <a href="" class="socialLink--list__item fb" uk-icon="facebook"></a>
-                    <a href="" class="socialLink--list__item tw" uk-icon="twitter"></a>
-                    <a href="" class="socialLink--list__item inst" uk-icon="instagram"></a>
-                    <a href="" class="socialLink--list__item yt" uk-icon="youtube"></a>
+                    <a href="{{ $setting->facebook }}" target="_blank" class="socialLink--list__item fb" uk-icon="facebook"></a>
+                    <a href="{{ $setting->twitter }}"  target="_blank" class="socialLink--list__item tw" uk-icon="twitter"></a>
+                    <a href="{{ $setting->instagram }}"  target="_blank" class="socialLink--list__item inst" uk-icon="instagram"></a>
+                    <a href="{{ $setting->youtube }}"  target="_blank" class="socialLink--list__item yt" uk-icon="youtube"></a>
                 </div>
             </div>
+
             <div class="footerSection-2">
                 <div class=" footerLink--wrapper">
                     <a class="footerLink__itemButton  " href="#request-broucher" uk-toggle>
@@ -90,7 +91,6 @@
         </div>
     </div>
 </div>
-@section('scripts')
 <script>
         function loadMap() {
             var uluru = {lat: 27.7159776, lng: 85.3145912};
@@ -104,7 +104,5 @@
             });
         }
 </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBViS7sZ08YQOLHNVbTf3gi10mx8QPDmSI=loadMap">
-</script>    
-@endsection
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBnBrosAWWNEMciy59M0LLqW-4TY4n_0&callback=loadMap"
+type="text/javascript"></script>

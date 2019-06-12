@@ -134,9 +134,8 @@ Contact
 @section('scripts')
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBViS7sZ08YQOLHNVbTf3gi10mx8QPDmSI=initMap">
-</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOBnBrosAWWNEMciy59M0LLqW-4TY4n_0&callback=initMap"
+type="text/javascript"></script>>
 <script>
     function initMap() {
         var uluru = {lat: 27.7159776, lng: 85.3145912};

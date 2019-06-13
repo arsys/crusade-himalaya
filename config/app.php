@@ -105,6 +105,7 @@ return [
     */
 
     'key' => env('APP_KEY'),
+    'google_map_api' => env('GOOGLE_MAP_API_KEY'),
 
     'cipher' => 'AES-256-CBC',
 

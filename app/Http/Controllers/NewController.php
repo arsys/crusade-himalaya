@@ -233,4 +233,38 @@ class NewController extends Controller
     $post = Post::where('slug','=', $slug)->firstOrFail();
         return view('new.blog.post')->withPost($post);
     }    
+
+    public function getCategories()
+    {
+        $categories = TourCategory::all();
+        return view('new.categories')->withCategories($categories);
+    } 
+
+    public function byCategory($category)
+    {
+        $category = TourCategory::where('slug','=', $category)->firstOrFail();
+		$results = Tour::whereHas('category', function ($r) use ($category) {
+			$r->where('tour_categories.slug', $category->slug);
+		})->get();
+        return view('new.packages')
+        ->withCategory($category)
+        ->withResults($results);        
+    }
+
+    public function getRegions()
+    {
+        $regions = Region::all();
+        return view('new.regions')->withRegions($regions);
+    }   
+
+    public function byRegion($region)
+    {
+        $region = Region::where('slug','=',$region)->firstOrFail();
+		$results = Tour::whereHas('region', function ($s) use ($region) {
+			$s->where('regions.slug', $region->slug);
+        })->get();  
+        return view('new.packages')
+        ->withCategory($region)
+        ->withResults($results);      
+    }
 }

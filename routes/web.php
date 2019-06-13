@@ -97,75 +97,22 @@ Route::prefix('manage')->middleware('role:superadministrator|administrator|user'
 	Route::get('blog-post/{id}/unpublish','BlogPostController@unpublish')->name('blog-post.unpublish');
 });
 
-
-// Route::name('frontend-')->group(function () {
-// 	Route::post('/contact','PostController@postContact')->name('postContact');
-// 	Route::post('/quickEnquiry','PostController@quickEnquiry')->name('postEnquiry');
-	Route::post('/refer-a-friend','PostController@referFriend')->name('referFriend');
-// 	Route::get('/whats-on','FrontendController@eventCalender')->name('eventCalender');
-// 	Route::get('/travel-blog','FrontendController@travelBlog')->name('travelBlog');
-// 	Route::get('/post/{slug}','FrontendController@singlePost')->name('singlePost');
-// });
-// Route::get('/', 'FrontendController@getIndex');
-// Route::get('/who-we-are', 'FrontendController@getAbout');
-// Route::get('/contact', 'FrontendController@getContact');
-// Route::get('/press', 'FrontendController@getPartner')->name('partner');
-// Route::get('/sitemap', 'FrontendController@getSitemap')->name('sitemap');
-
-// Route::prefix('trip')->name('trip.')->group(function () {
-// 	Route::get('{slug}','GetController@tripDetail')->name('detail');
-// 	Route::get('download/{slug}','GetController@downloadPDF')->name('download');
-// 	Route::post('join/{slug}/setp-1','GetController@stepOne')->name('stepOne'); //shows step 1 form
-// 	Route::post('join/{slug}/step-2','GetController@stepTwo')->name('stepTwo'); //shows step 2 form
-// 	Route::post('join/{slug}/step-3', 'GetController@stepThree')->name('stepThree'); //poost step 2 form
-//     Route::get('join/{slug}/step-3','GetController@getThankyou')->name('thankyou'); //show step 3 thank you
-// });
-// Route::prefix('tour/feed')->name('tour.')->group(function () {
-// 	Route::get('{id}', 'GetController@getFeed')
-// 	->name('feed');
-// });
-// Route::prefix('ajax')->group(function () {
-// 	Route::get('fetch-departures','FrontendController@ajaxsearchdeparture')->name('departure');
-// 	Route::post('brochure-request','PostController@requestBroucher')->name('brochure');
-// });
-// Route::prefix('travel-style')->group(function () {
-// 	Route::get('{slug}','GetController@fetchByCategory')->name('fetchByCategory');
-// 	Route::get('{category}/{region}','GetController@region2package')->name('region2package');
-// });
-// Route::prefix('destination')->group(function () {
-// 	Route::get('{slug}','GetController@fetchByregion')->name('fetchByRegion');
-// 	Route::get('{destionation}/{category}','GetController@destination2package')->name('destionation2package');
-// });
-
-// Route::name('page-')->group(function () {
-// 	Route::get('/{slug}','FrontendController@getPage')->name('getPage');
-// });
-// Route::feeds();
-
-
-// Route::name('new')->prefix('new')->group(function () {
-// 	Route::get('/home', 'FrontendController@newHome');
-// 	Route::get('/product', 'FrontendController@newProduct');
-// 	Route::get('/category', 'FrontendController@newCategory');
-// 	Route::get('/destination', 'FrontendController@newDestination');
-// 	Route::get('/travel-style', 'FrontendController@newTravelstyle');
-// 	Route::get('/packages', 'FrontendController@newPackages');
-// 	Route::get('/event', 'FrontendController@newEvents');
-// 	Route::get('/about', 'FrontendController@newAbout');
-// 	Route::get('/contact', 'FrontendController@newContact');
-// 	Route::get('/blog', 'FrontendController@newBlog');
-// 	Route::get('/single-post', 'FrontendController@newPost');
-// 	Route::get('/step1', 'FrontendController@newStep1');
-// 	Route::get('/step2', 'FrontendController@newStage2');
-// 	Route::get('/step3', 'FrontendController@newStaage3');
-// });
-
 Route::name('frontend.')->group(function () {
 	Route::get('/', 'NewController@getIndex');
 	Route::get('/whats-on', 'NewController@getEvents')->name('whatsOn');
 	Route::get('/who-we-are', 'NewController@getAbout')->name('about');
 	Route::get('/travel-blog', 'NewController@getPosts')->name('posts');
 	Route::get('/contact', 'NewController@getContact')->name('contact');
+
+	Route::prefix('what-we-do')->group(function () {
+		Route::get('/', 'NewController@getCategories')->name('weDo');
+		Route::get('/{category}', 'NewController@byCategory')->name('byCategory');
+	});
+
+	Route::prefix('where-we-go')->group(function () {
+		Route::get('/', 'NewController@getRegions')->name('where');
+		Route::get('/{category}', 'NewController@byRegion')->name('byRegion');
+	});
 
 	Route::prefix('trip')->group(function () {
 		Route::get('{slug}','NewController@tripDetail')->name('tripDetail');

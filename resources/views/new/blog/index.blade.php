@@ -32,19 +32,21 @@
 
                     <div class="uk-width-expand">
                         <h4 class="blogPost-title">
-                            <a class="uk-link-reset" href="{{ route('frontend.singlePost', $post->slug) }}">{{$post->title}}
+                            <a class="uk-link-reset" href="{{ route('frontend.singlePost', $post->slug) }}">{{$post->title}}</a>
                         </h4>
-                        <ul class=" blogPost-meta">
+                        <ul class="blogPost-meta">
                             <li><span class="blogPost-metaicon" uk-icon="icon: tag"></span>{{$post->category->title}}</li>
-                            <li><span class="blogPost-metaicon" uk-icon="icon: pencil"></span> {{config('app.name')}}
+                            <li>
+                                <span class="blogPost-metaicon" uk-icon="icon: pencil"></span> {{config('app.name')}}
                             </li>
-                            <li><span class="blogPost-metaicon" uk-icon="icon: social"  uk-toggle="target: #toggle-animation; animation: uk-animation-fade"></span> Share</li>
+                            <li>
+                                <span class="blogPost-metaicon share" uk-icon="icon: social"  uk-toggle="target: #toggle-share; animation: uk-animation-fade"></span> Share
+                            </li>
+                            <div id="toggle-share" hidden>
+                                <a class="share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" target="_blank" uk-icon="icon: facebook"></a>
+                                <a class="share-tw" href="http://twitter.com/share?text=Check this cool blog post by @CrusadeHimalaya&url={{ url()->current() }}&hashtags=Nepal,crusadehimalaya,trekkinginnepal,visitnepal2020" uk-icon="icon: twitter"></a>
+                            </div>
                         </ul>
-                        <span id="toggle-animation" class="uk-card uk-card-default uk-card-body uk-margin-small">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ url()->current() }}" target="_blank" uk-icon="icon: facebook"></a>
-                            <a href="http://twitter.com/share?text=Check this cool blog post by @CrusadeHimalaya&url={{ url()->current() }}&hashtags=Nepal,crusadehimalaya,trekkinginnepal,visitnepal2020" uk-icon="icon: twitter"></a>
-                            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ url()->current() }}&title={{ $post->title }}" uk-icon="icon:linkedin"></a>
-                        </span> 
                     </div>
 
                 </header>

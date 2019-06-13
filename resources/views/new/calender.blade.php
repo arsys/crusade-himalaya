@@ -7,7 +7,7 @@ What's On This Month | {{config('app.name')}}
 @section('description')Happening things this month @stop
 @extends('layouts.new')
 @section('content')
-<section class="image-page-header image-page-header-m" data-src="https://source.unsplash.com/1800x1200/?guitar" uk-img>
+<section class="image-page-header image-page-header-m" data-src="{{ asset('img/event.jpg') }}" uk-img>
 	<div class="page-title__wrapper">
 
 		<div class="uk-position-center-left uk-position-large description-holder description-holder-plain">

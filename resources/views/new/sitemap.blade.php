@@ -281,6 +281,8 @@ Thank you!
 www.xml-sitemaps.com
 -->
 	</div>
+	<div id="footer">
+	</div>
 </body>
 
 </html>

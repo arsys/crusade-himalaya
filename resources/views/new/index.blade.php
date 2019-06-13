@@ -264,7 +264,7 @@
                         </div>
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">{{$featured->days}} Days</h4>
-                            <a class="button-default" href="{{ route('frontend.tripDetail', $featured->slug) }}">Read More</a>
+                            <a class="button-default" href="{{ route('frontend.tripDetail', $featured->slug) }}">Find Out More</a>
                         </div>
                     </div>
                 </div>

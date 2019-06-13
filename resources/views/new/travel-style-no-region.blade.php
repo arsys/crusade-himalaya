@@ -36,7 +36,7 @@
                         </div>
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">{{ $package->days }} Days</h4>
-                            <a href="{{ route('trip.detail',$package->slug) }}" class="button-default">Read More</a>
+                            <a href="{{ route('frontend.tripDetail',$package->slug) }}" class="button-default">Find Out More</a>
                         </div>
                     </div>
                 </div>

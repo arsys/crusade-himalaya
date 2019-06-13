@@ -11,7 +11,7 @@
                 <ul class="nav-list">
                     <li class="nav-list__item"><a class="nav-list__item--link" href="/">Home</a></li>
                     <li class="nav-list__item">
-                        <a class="nav-list__item--link" href="#">What We Do</a>
+                        <a class="nav-list__item--link" href="{{ route('frontend.weDo') }}">What We Do</a>
 
                         <div class="nav-list__item--dropdown-wrapper" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify; offset:5" >
                             <div uk-slider>
@@ -34,7 +34,7 @@
                         </div>
                     </li>
                     <li class="nav-list__item">
-                        <a class="nav-list__item--link" href="#">Where We Go</a>
+                        <a class="nav-list__item--link" href="{{ route('frontend.where') }}">Where We Go</a>
                         <div class="nav-list__item--dropdown-wrapper" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify; offset:5" >
                             <div uk-slider>
                                 <ul class="uk-slider-items uk-child-width-1-4@m thumbNav--list">

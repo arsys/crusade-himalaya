@@ -17,10 +17,10 @@
             <div class="uk-width-1-3">
                 <div class=" bookingMeta-wrapper">
                     <div class="uk-card-media-top">
-                        <img src="https://source.unsplash.com/400x300/?ramen" alt="">
+                        <img src="{{ asset($tour->image->thumb) }}" alt="{{$tour->title}}">
                     </div>
                     <div class="bookingMeta-details">
-                        <h4 class="bookingMeta-details--name">Media Top</h4>
+                        <h4 class="bookingMeta-details--name">{{$tour->title}}</h4>
                         <div class="uk-flex uk-flex-column">
                             <span>Price: USD {{$tour->price}}</span>
                             <span>Days: {{$tour->days}} Day(s)</span>

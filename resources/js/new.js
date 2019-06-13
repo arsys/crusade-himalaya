@@ -1,9 +1,13 @@
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
+window.moment = require('moment/moment');
 // loads the Icon plugin
 UIkit.use(Icons);
 
 $(function() {
+ var date = moment().format('M');
+ UIkit.tab('.event-month-list').show(date-1);
+ UIkit.accordion('.event-list--sm').toggle(date-1, true);
   //Homepage Scroll Down Button
   $('.scroll-down').click (function() {
     $('html, body').animate({scrollTop: $('section#scroll-end').offset().top }, 'slow');

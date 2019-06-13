@@ -562,8 +562,8 @@ What's On This Month | {{config('app.name')}}
 	</div>
 </section>
 @stop
-@section('scripts')
+{{-- @section('scripts')
 <script>
 	UIkit.tab(".uk-tab").show({{ date('n')-1}});
 </script>
-@endsection
+@endsection --}}

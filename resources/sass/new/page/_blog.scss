@@ -53,7 +53,25 @@
                         color: $primary;
                         padding-right: 8px;
                     }
+                    .share{
+                        cursor: pointer;
+                    }
                     color: $light-black1;
+                }
+                #toggle-share{
+                    .share-fb:hover{
+                        color: #3b5998;
+                    }
+                    .share-tw:hover{
+                        color:  #3b8aca;
+                    }
+                    a{
+                        color: $light-black1;
+                        transition:  ease-in .2s;
+                     &:not(:last-child)  {
+                         padding-right: 10px;
+                     }
+                    }
                 }
             }
         }

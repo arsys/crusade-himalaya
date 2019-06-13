@@ -32866,6 +32866,28 @@ a:hover {
   padding-right: 8px;
 }
 
+.blogPost-wrapper .blogPost-article .blogPost-header .blogPost-meta li .share {
+  cursor: pointer;
+}
+
+.blogPost-wrapper .blogPost-article .blogPost-header .blogPost-meta #toggle-share .share-fb:hover {
+  color: #3b5998;
+}
+
+.blogPost-wrapper .blogPost-article .blogPost-header .blogPost-meta #toggle-share .share-tw:hover {
+  color: #3b8aca;
+}
+
+.blogPost-wrapper .blogPost-article .blogPost-header .blogPost-meta #toggle-share a {
+  color: #272b2b;
+  -webkit-transition: ease-in .2s;
+  transition: ease-in .2s;
+}
+
+.blogPost-wrapper .blogPost-article .blogPost-header .blogPost-meta #toggle-share a:not(:last-child) {
+  padding-right: 10px;
+}
+
 .blogPost-wrapper .blogPost-article .blogPost-desc p {
   margin-top: 20px;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;

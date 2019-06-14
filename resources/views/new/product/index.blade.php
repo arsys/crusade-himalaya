@@ -47,13 +47,15 @@
             <div class="uk-width-1-4 ">
                 <div class="stickyWrapper" uk-sticky="offset: 0;" id="datePrice--wrapper">
                     <div class="priceHolder">
-                        <span class="priceHolder--day">{{ $tour->title }} Day(s)</span>
+                        <span class="priceHolder--day">{{ $tour->day }} Day(s)</span>
                         <span class="priceHolder--from">From USD</span>
                         <span class="priceHolder--price">$ {{ $tour->price }}</span>
+                        @if($tour->itinerary->count() > 0)
                         <span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column"
                             uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
                             <a class="button-default" href="#departures">Dates</a>
                         </span>
+                        @endif
 
                     </div>
                     <div class="sideBar-action">

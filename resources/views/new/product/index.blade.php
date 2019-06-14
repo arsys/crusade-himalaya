@@ -157,11 +157,11 @@
             <div uk-grid>
                 <div class="uk-width-1-2">
                     <div class="packageMeta-wrapper--sm__day">
-                        <span class="uk-align-center">15 Day(s)</span>
+                        <span class="uk-align-center">{{$tour->days}} Day(s)</span>
                     </div>
                     <div class="packageMeta-wrapper--sm__price">
                         <span class="uk-align-center">
-                            From USD 1500
+                            From USD {{$tour->price}}
                         </span>
                     </div>
                 </div>

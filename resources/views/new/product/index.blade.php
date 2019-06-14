@@ -47,7 +47,7 @@
             <div class="uk-width-1-4 ">
                 <div class="stickyWrapper" uk-sticky="offset: 0;" id="datePrice--wrapper">
                     <div class="priceHolder">
-                        <span class="priceHolder--day">{{ $tour->day }} Day(s)</span>
+                        <span class="priceHolder--day">{{ $tour->days }} Day(s)</span>
                         <span class="priceHolder--from">From USD</span>
                         <span class="priceHolder--price">$ {{ $tour->price }}</span>
                         @if($tour->itinerary->count() > 0)

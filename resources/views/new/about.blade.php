@@ -15,8 +15,8 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
 
         <div class="uk-position-center-left uk-position-large pageDescription-holder">
             <h1 class="pageTitle">Who We Are</h1>
-            <p class="pageDescription">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, aut. At,
-                possimus! Sapiente fugit animi rerum, molestiae laudantium beatae voluptate.</p>
+            <p class="pageDescription">Nepal isn't a destination, it is an experience;
+                an experience beyond the ordinary</p>
         </div>
         <div class="uk-position-large uk-position-bottom-right ">
             <ul class="uk-breadcrumb">

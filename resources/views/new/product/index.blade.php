@@ -47,13 +47,15 @@
             <div class="uk-width-1-4 ">
                 <div class="stickyWrapper" uk-sticky="offset: 0;" id="datePrice--wrapper">
                     <div class="priceHolder">
-                        <span class="priceHolder--day">{{ $tour->title }} Day(s)</span>
+                        <span class="priceHolder--day">{{ $tour->day }} Day(s)</span>
                         <span class="priceHolder--from">From USD</span>
                         <span class="priceHolder--price">$ {{ $tour->price }}</span>
+                        @if($tour->itinerary->count() > 0)
                         <span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column"
                             uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
                             <a class="button-default" href="#departures">Dates</a>
                         </span>
+                        @endif
 
                     </div>
                     <div class="sideBar-action">
@@ -157,11 +159,11 @@
             <div uk-grid>
                 <div class="uk-width-1-2">
                     <div class="packageMeta-wrapper--sm__day">
-                        <span class="uk-align-center">15 Day(s)</span>
+                        <span class="uk-align-center">{{$tour->days}} Day(s)</span>
                     </div>
                     <div class="packageMeta-wrapper--sm__price">
                         <span class="uk-align-center">
-                            From USD 1500
+                            From USD {{$tour->price}}
                         </span>
                     </div>
                 </div>

@@ -125,7 +125,7 @@ class PostController extends Controller
         'fullName' => 'required',
         'email' => 'required|email',
         'contact' => 'required',
-        'bookingMessage' => 'min:10|sometimes']);
+        'bookingMessage' => 'sometimes']);
 
     $user_info = $this->ipLocation($request->ip());   
     $tour = Tour::where('id',$request->tour_id)->firstOrFail();

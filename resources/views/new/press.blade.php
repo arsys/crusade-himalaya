@@ -1,8 +1,8 @@
 @section('mtitle')
-Press | {{config('app.name')}}
+Press | {{config('app.name')}} | Empower, Educate, Encourage
 @stop
 @section('title')
-Press | {{config('app.name')}}
+Press | {{config('app.name')}} | Empower, Educate, Encourage
 @stop
 @section('description')
 The genuine enthusiasm for travel worked for us. Because of Our unique approach We have been featured in the media
@@ -37,7 +37,7 @@ across the world.
             <div uk-grid>                
                 @foreach($medias as $media)
                 <div class="uk-width-auto">
-                    <a href="{{$media->link}}">
+                    <a href="{{$media->url}}">
                         <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
                     </a>
                 </div>
@@ -50,7 +50,7 @@ across the world.
             <div uk-grid>                
                 @foreach($medias as $media)
                 <div class="uk-width-auto">
-                    <a href="{{$media->link}}">
+                    <a href="{{$media->url}}">
                         <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
                     </a>
                 </div>
@@ -63,7 +63,7 @@ across the world.
             <div uk-grid>                
                 @foreach($medias as $media)
                 <div class="uk-width-auto">
-                    <a href="{{$media->link}}">
+                    <a href="{{$media->url}}">
                         <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
                     </a>
                 </div>

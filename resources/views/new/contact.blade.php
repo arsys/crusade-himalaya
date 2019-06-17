@@ -1,9 +1,9 @@
 @extends('layouts.new')
 @section('mtitle')
-Contact | {{config('app.name')}}
+Contact | {{config('app.name')}} | Empower, Educate, Encourage
 @stop
 @section('title')
-Contact | {{config('app.name')}}
+Contact | {{config('app.name')}} | Empower, Educate, Encourage
 @stop
 @section('description')
 Contact

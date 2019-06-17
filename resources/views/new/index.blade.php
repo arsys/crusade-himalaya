@@ -277,6 +277,24 @@
 
     </div> {{--container end --}}
 </section>
+
+{{-- featured media --}}
+<section class="section-dashed" id="featured-media">
+    <div class="container">
+        <div class="titleMinimal-wrapper uk-text-left">
+            <h4 class="titleMinimal">As mentioned on:</h4>
+        </div>
+        <div uk-grid>
+            @foreach ($medias as $media)               
+            <div class="uk-width-auto">
+                <a href="{{$media->url}}" target="_blank">
+                    <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
+                </a>                
+            </div>
+            @endforeach
+        </div>
+</section>
+
 @endsection
 @section('scripts')
 <script src="{{ asset('js/sticky-nav.js') }}"></script>

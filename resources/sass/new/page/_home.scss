@@ -103,3 +103,7 @@
         padding: 5px 10px;
     }    
   }
+
+  #featured-media{
+      @extend .uk-padding, .uk-padding-remove-horizontal;
+  }

@@ -37,7 +37,7 @@ across the world.
             <div uk-grid>                
                 @foreach($medias as $media)
                 <div class="uk-width-auto">
-                    <a href="{{$media->url}}">
+                    <a href="{{$media->url}}" target="_blank">
                         <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
                     </a>
                 </div>
@@ -50,7 +50,7 @@ across the world.
             <div uk-grid>                
                 @foreach($medias as $media)
                 <div class="uk-width-auto">
-                    <a href="{{$media->url}}">
+                    <a href="{{$media->url}}" target="_blank">
                         <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
                     </a>
                 </div>
@@ -63,7 +63,7 @@ across the world.
             <div uk-grid>                
                 @foreach($medias as $media)
                 <div class="uk-width-auto">
-                    <a href="{{$media->url}}">
+                    <a href="{{$media->url}}" target="_blank">
                         <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
                     </a>
                 </div>

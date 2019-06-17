@@ -21,10 +21,11 @@ class NewController extends Controller
     //Get Home Page
     public function getIndex()
     {
-        $featureds = Tour::where('status',1)->where('featured',1)->take(6)->get();
+        $featureds = Tour::where('status',1)->where('featured',1)->take(9)->get();
         $categories = TourCategory::all();
         $carousels = Carousel::where('status' ,1)->get();
         $partners = Partner::all();
+        $medias = Partner::where('type',1)->get(); //media
 
         $oddDestinations = DB::table('regions')
         ->select(DB::raw('*'))
@@ -42,7 +43,8 @@ class NewController extends Controller
         ->withFeatureds($featureds)
         ->withPartners($partners)
         ->withOdds($oddDestinations)
-        ->withEvens($evenDestinations);
+        ->withEvens($evenDestinations)
+        ->withMedias($medias);
     }
     //Get Events
     public function getEvents()

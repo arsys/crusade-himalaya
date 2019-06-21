@@ -1,0 +1,30 @@
+@media (min-width: 320px) and (max-width: 480px) {
+    .destinationsWrapper {
+        .destinationItem{
+            &__overlay{
+                &--title{
+                    font-family: $font-teritary;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    //Travel Style
+    .sliderList--item{
+        .sliderPanel{
+            .sliderPanel--textHolder{
+                padding:5px !important;
+                #travelStyle-name{
+                    margin-left: 0 !important;
+                    margin-bottom: 0 !important;
+                    padding: 0px 0px 15px 15px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    .sliderWrapper .sliderList--item .sliderPanel--textHolder__hover h4{
+        font-size: 1rem !important;
+    }
+}

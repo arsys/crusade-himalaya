@@ -170,7 +170,7 @@ class TourController extends Controller
             $media = Media::find($request->featured);
             $upload = new UploadImage;
             $bannerPath = $upload->uploadSingle($this->banner, $media->path, 1024,512);
-            $thumbPath = $upload->uploadSingle($this->thumb, $media->path, 400,300);
+            $thumbPath = $upload->uploadSingle($this->thumb, $media->path, 800,600);
             // dd($thumbPath);
             $tour->image()->save(new FeaturedImage([
                 'banner' => $bannerPath,
@@ -183,7 +183,7 @@ class TourController extends Controller
                 $sImage->tour_id = $tour->id;
                 $sImage->media_id = $media->id;
                 $sImage->path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
-                $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
+                $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 800,600);
                 $sImage->name = $media->name;
                 $sImage->save();
             }
@@ -356,7 +356,7 @@ class TourController extends Controller
                 $upload = new UploadImage;
 
                 $image->banner = $upload->uploadSingle($this->banner, $media->path, 1024,512);
-                $image->thumb = $upload->uploadSingle($this->thumb, $media->path, 400,300);
+                $image->thumb = $upload->uploadSingle($this->thumb, $media->path, 800,600);
 
                 $tour->image()->save($image);
                 File::delete(public_path($oldBanner));
@@ -380,7 +380,7 @@ class TourController extends Controller
                     $sImage->tour_id = $tour->id;
                     $sImage->media_id = $media->id;
                     $sImage->path = $upload->uploadSingle($this->slide, $media->path, 1024,768);
-                    $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 400,300);
+                    $sImage->thumb = $upload->uploadSingle($this->sthumb, $media->path, 800,600);
                     $sImage->name = $media->name;
                     $sImage->save();
                 }

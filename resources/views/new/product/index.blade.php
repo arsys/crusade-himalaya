@@ -49,7 +49,7 @@
                     <div class="priceHolder">
                         <span class="priceHolder--day">{{ $tour->days }} Day(s)</span>
                         <span class="priceHolder--from">From USD</span>
-                        <span class="priceHolder--price">$ {{ $tour->price }}</span>
+                        <span class="priceHolder--price">$ {{ $tour->price }} per pax</span>
                         @if($tour->itinerary->count() > 0)
                         <span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column"
                             uk-scrollspy-nav="closest: a; scroll: true; offset: 120">
@@ -163,7 +163,7 @@
                     </div>
                     <div class="packageMeta-wrapper--sm__price">
                         <span class="uk-align-center">
-                            From USD {{$tour->price}}
+                            From USD {{$tour->price}} per pax
                         </span>
                     </div>
                 </div>

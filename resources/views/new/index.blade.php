@@ -1,16 +1,19 @@
-@extends('layouts.new') 
+@extends('layouts.new')
 @section('content')
-<header class="header">
-    <div class="hero-slider" tabindex="-1" uk-slideshow="animation: fade">
+<header class="header-wrapper js-slideshow-animation" uk-slideshow="ratio: false">
 
-        <ul class="uk-slideshow-items" uk-height-viewport="min-height: 300">
+    <div class="hero-slider" tabindex="-1">
+
+        <ul class="uk-slideshow-items slidelist" uk-height-viewport="min-height: 300" style="min-height: calc(100vh);">
             @foreach ($carousels as $carousel)
-            <li class="slide-item">
-                <img src="{{ asset($carousel->path) }}" alt="{{ $carousel->name }}" uk-cover>
-                <div class="slide-item--content  uk-position-center-left">
-                    <h2 class="slide-item--content__heading uk-margin-remove ">{{ $carousel->header }}</h2>
-                    <p class="slide-item--content__subheading">
-                        {{ $carousel->subheader }} </p>
+            <li tabindex="-1" class="slidelist--item" style="transform: translate3d(0px, 0px, 0px);">
+                <img src="{{ asset($carousel->path) }}" alt="" uk-cover="" class="uk-cover"
+                    style="height: 1013px; width: 1520px;">
+                <div class="uk-position-center-left slidelist--item__content">
+                    <h2 class="slidelist--item__content--heading" uk-slideshow-parallax="y: -100,0,0; opacity: 0,1,1;"
+                        style="transform: translateX(0px);">{{$carousel->header}}</h2>
+                    <p class="slidelist--item__content--subheading" uk-slideshow-parallax="y: 100,0,0; opacity: 0,1,1;"
+                        style="transform: translateX(0px);">{{$carousel->subheader}}</p>
                 </div>
             </li>
             @endforeach
@@ -18,7 +21,9 @@
         <div class="scroll-down-wrapper  uk-position-bottom-center">
             <a href="#" class="scroll-down"><span uk-icon="icon: chevron-down;ratio: 3.5"></span></a>
         </div>
+
     </div>
+
 </header>
 
 <section class="section-white" id="scroll-end">
@@ -136,8 +141,10 @@
                         </div>
                         <div class="sliderPanel--textHolder__hover">
                             <h4>{{$category->name}}</h4>
-                            <p>{{ substr($category->description, 0, 80) }}{{ strlen($category->description) > 80 ? '...' : "" }}</p>
-                            <a href="{{ route('frontend.fetchByCategory',$category->slug) }}" class="button-textOnly">View all <span>&rarr;</span></a>
+                            <p>{{ substr($category->description, 0, 80) }}{{ strlen($category->description) > 80 ? '...' : "" }}
+                            </p>
+                            <a href="{{ route('frontend.fetchByCategory',$category->slug) }}"
+                                class="button-textOnly">View all <span>&rarr;</span></a>
                         </div>
                     </div>
                 </li>
@@ -183,15 +190,15 @@
                 <div class="uk-child-width-1-2 uk-grid-small " uk-grid>
                     @foreach($odds as $odd)
                     @if($loop->iteration % 2 != 0)
-                        <div class="uk-inline destinationItem">
-                            <a href="{{ route('frontend.fetchByRegion',$odd->slug) }}">
-                                <img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
-                                <div class="uk-position-cover"></div>
-                                <div class="uk-position-bottom  destinationItem__overlay">
-                                    <h3 class="destinationItem__overlay--title">{{$odd->name}}</h3>
-                                </div>
-                            </a>
-                        </div>
+                    <div class="uk-inline destinationItem">
+                        <a href="{{ route('frontend.fetchByRegion',$odd->slug) }}">
+                            <img src="{{ asset($odd->thumb) }}" alt="{{ $odd->name }}">
+                            <div class="uk-position-cover"></div>
+                            <div class="uk-position-bottom  destinationItem__overlay">
+                                <h3 class="destinationItem__overlay--title">{{$odd->name}}</h3>
+                            </div>
+                        </a>
+                    </div>
                     @endif
                     @endforeach
                 </div>
@@ -199,24 +206,9 @@
             {{-- right --}}
             <div class="destinationRight">
                 {{-- double article --}}
-                <div class="uk-child-width-1-2 uk-grid-small " uk-grid>                    
+                <div class="uk-child-width-1-2 uk-grid-small " uk-grid>
                     @foreach($evens as $even)
                     @if($loop->iteration % 2 != 0)
-                        <div class="uk-inline destinationItem">
-                            <a href="{{ route('frontend.fetchByRegion',$even->slug) }}">
-                                <img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
-                                <div class="uk-position-cover"></div>
-                                <div class="uk-position-bottom  destinationItem__overlay">
-                                    <h3 class="destinationItem__overlay--title">{{$even->name}}</h3>
-                                </div>
-                            </a>
-                        </div>
-                    @endif
-                    @endforeach
-                </div>
-                {{-- single article--}}
-                @foreach($evens as $even)
-                @if($loop->iteration % 2 == 0)
                     <div class="uk-inline destinationItem">
                         <a href="{{ route('frontend.fetchByRegion',$even->slug) }}">
                             <img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
@@ -226,6 +218,21 @@
                             </div>
                         </a>
                     </div>
+                    @endif
+                    @endforeach
+                </div>
+                {{-- single article--}}
+                @foreach($evens as $even)
+                @if($loop->iteration % 2 == 0)
+                <div class="uk-inline destinationItem">
+                    <a href="{{ route('frontend.fetchByRegion',$even->slug) }}">
+                        <img src="{{ asset($even->thumb) }}" alt="{{ $even->name }}">
+                        <div class="uk-position-cover"></div>
+                        <div class="uk-position-bottom  destinationItem__overlay">
+                            <h3 class="destinationItem__overlay--title">{{$even->name}}</h3>
+                        </div>
+                    </a>
+                </div>
                 @endif
                 @endforeach
 
@@ -253,26 +260,27 @@
             @foreach($featureds as $featured)
             <div>
                 <a href="{{ route('frontend.tripDetail', $featured->slug) }}">
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="{{ asset($featured->image->thumb) }}" alt="{{$featured->title}}">
-                    </div>
-                    <div class="tourPackage--detailWrapper">
-                        <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">{{$featured->title}}</h4>
-                            <h4 class="uk-margin-remove">USD {{$featured->price}}</h4>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="{{ asset($featured->image->thumb) }}" alt="{{$featured->title}}">
                         </div>
-                        <div class="uk-flex uk-flex-between">
-                            <h4 class="uk-margin-remove">{{$featured->days}} Days</h4>
-                            <a class="button-default" href="{{ route('frontend.tripDetail', $featured->slug) }}">Find Out More</a>
+                        <div class="tourPackage--detailWrapper">
+                            <div class="uk-flex uk-flex-between">
+                                <h4 class="uk-margin-remove">{{$featured->title}}</h4>
+                                <h4 class="uk-margin-remove">USD {{$featured->price}}</h4>
+                            </div>
+                            <div class="uk-flex uk-flex-between">
+                                <h4 class="uk-margin-remove">{{$featured->days}} Days</h4>
+                                <a class="button-default"
+                                    href="{{ route('frontend.tripDetail', $featured->slug) }}">Find Out More</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </a>
             </div>
             @endforeach
-    </div>
-    {{-- loop end --}}
+        </div>
+        {{-- loop end --}}
     </div>
 
     </div> {{--container end --}}
@@ -285,11 +293,11 @@
             <h4 class="titleMinimal">As mentioned on:</h4>
         </div>
         <div uk-grid>
-            @foreach ($medias as $media)               
+            @foreach ($medias as $media)
             <div class="uk-width-auto">
                 <a href="{{$media->url}}" target="_blank">
                     <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
-                </a>                
+                </a>
             </div>
             @endforeach
         </div>

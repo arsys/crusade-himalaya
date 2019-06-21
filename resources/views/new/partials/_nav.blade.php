@@ -83,37 +83,34 @@
                                         <div class="uk-accordion-content">
                                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                                 <ul uk-accordion>
-                                                    {{-- @foreach($dos as $do)
+                                                    @foreach($dos as $do)
                                                     @if($do->tours->count() > 0)
-                                                    <li class="list-item"><a class="uk-margin-left"
-                                                            href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a>
+                                                    <li class="list-item">
+                                                        <a  class="uk-margin-left" href="{{ route('frontend.fetchByCategory',$do->slug) }}">{{ $do->name }}</a>
                                                     </li>
                                                     @endif
-                                                    @endforeach --}}
-                                                    <li class="list-item"><a class="uk-margin-left"
-                                                        href="#">Link</a>
+                                                    @endforeach
                                                 </li>
                                                 </ul>
                                             </ul>
                                         </div>
                                     </li>
                                 </ul>
-                            </li class="mobileMenu-list__item">
-                            <li>
+                            </li>
+
+                            <li class="mobileMenu-list__item">
                                     <ul uk-accordion>
                                         <li><a class="uk-accordion-title mobileMenu-list__item--link" href="#">Where We Go</a>
                                             <div class="uk-accordion-content">
                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                                     <ul uk-accordion>
-                                                        {{-- @foreach($dos as $do)
+                                                        @foreach($dos as $do)
                                                         @if($do->tours->count() > 0)
-                                                        <li class="list-item"><a class="uk-margin-left"
-                                                                href="{{ route('fetchByCategory',$do->slug) }}">{{ $do->name }}</a>
+                                                        <li class="list-item">
+                                                            <a  class="uk-margin-left" href="{{ route('frontend.fetchByRegion',$where->slug) }}">{{ $do->name }}</a>
                                                         </li>
                                                         @endif
-                                                        @endforeach --}}
-                                                        <li class="list-item"><a class="uk-margin-left"
-                                                            href="#">Link</a>
+                                                        @endforeach
                                                     </li>
                                                     </ul>
                                                 </ul>

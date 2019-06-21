@@ -137,7 +137,7 @@
                     <div class="sliderPanel">
                         <img src="{{ asset($category->thumb) }}" alt="{{$category->name}}">
                         <div class="sliderPanel--textHolder uk-position-cover">
-                            <h3 class="uk-position-bottom">{{$category->name}}</h3>
+                            <h3 class="uk-position-bottom" id="travelStyle-name">{{$category->name}}</h3>
                         </div>
                         <div class="sliderPanel--textHolder__hover">
                             <h4>{{$category->name}}</h4>

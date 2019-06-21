@@ -1,33 +1,21 @@
-.header {
-    @extend .uk-section-default;
+@keyframes sdb {
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0, 10px);
+    }
+    40% {
+        transform: translate(0, 0);
+    }
+}
+.header-wrapper {
+    @extend .uk-margin-remove, .uk-slideshow;
     .hero-slider {
-        @extend .uk-position-relative, .uk-visible-toggle;
-        ul {
-            .slide-item {
-                &--content {
-                    @extend .uk-position-large, .uk-overlay;
-                    &__heading {
-                        font-family: $font-primary;
-                        font-weight: 600;
-                        font-size: 5rem;
-                        line-height: 60px;
-                        // color: #272b2b;
-                        color: $white;
-                    }
-                    &__subheading {
-                        @extend .uk-margin-remove , .uk-text-uppercase;
-                        font-family: $font-primary;
-                        font-weight: 600;
-                        font-size:2.1875rem;
-                        line-height: 3;
-                        color: $white;
-                    }
-                }
-            }
-        }
+        @extend .uk-position-relative, .uk-visible-toggle, .uk-light;
         .scroll-down-wrapper {
-            @extend .uk-position-large, .uk-overlay;
-            .scroll-down{
+            @extend .uk-position-medium, .uk-overlay;
+            .scroll-down {
                 color: $white;
                 text-decoration: none;
                 span {
@@ -35,16 +23,79 @@
                 }
             }
         }
+        .slidelist {
+            &--item {
+                &__content {
+                    @extend .uk-position-large;
+                    &--heading {
+                        font-family: $font-primary;
+                        font-weight: 600;
+                        font-size: 5rem;
+                        line-height: 60px;
+                        color: #272b2b;
+                        color: $white;
+                    }
+                    &--subheading {
+                        @extend .uk-margin-remove, .uk-text-uppercase;
+                        font-family: $font-primary;
+                        font-weight: 600;
+                        font-size: 2.1875rem;
+                        line-height: 3;
+                        color: $white;
+                    }
+                }
+            }
+        }
     }
 }
-@keyframes sdb {
-    0% {
-        transform: translate(0, 0);
+
+//##Device = Low Resolution Tablets, Mobiles (Landscape)
+//##Screen = B/w 481px to 767px
+//*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .header-wrapper {
+        .hero-slider {
+            .slidelist {
+                &--item {
+                    &__content {
+                        &--heading {
+                            font-size: 2rem;
+                            line-height: 1;
+                        }
+                        &--subheading {
+                            font-size: 1rem;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
     }
-    20% {
-        transform: translate(0,10px);
-    }
-    40% {
-        transform: translate(0, 0);
+}
+
+/* 
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .header-wrapper {
+        .hero-slider {
+            .slidelist {
+                &--item {
+                    &__content {
+                        &--heading {
+                            font-size: 2rem;
+                            line-height: 1;
+                        }
+                        &--subheading {
+                            font-size: 1rem;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

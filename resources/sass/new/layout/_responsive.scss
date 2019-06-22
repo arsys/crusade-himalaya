@@ -27,4 +27,17 @@
     .sliderWrapper .sliderList--item .sliderPanel--textHolder__hover h4{
         font-size: 1rem !important;
     }
+
+    //Travel Style Page
+    .page-title__wrapper{
+        .description-holder{
+            width: 100%;
+            .descriptionTitle{
+                font-size: 1rem;
+            }
+            .descriptionContent{
+                font-size: 0.75rem;
+            }
+        }
+    }
 }

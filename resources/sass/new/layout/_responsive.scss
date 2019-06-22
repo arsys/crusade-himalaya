@@ -21,6 +21,12 @@
                     padding: 0px 0px 15px 15px;
                     font-size: 1rem;
                 }
+                .sliderPanel--textHolder__hover{
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -31,7 +37,7 @@
     //Travel Style Page
     .page-title__wrapper{
         .description-holder{
-            width: 100%;
+            width: 80%;
             .descriptionTitle{
                 font-size: 1rem;
             }

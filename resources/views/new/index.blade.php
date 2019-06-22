@@ -137,14 +137,10 @@
                     <div class="sliderPanel">
                         <img src="{{ asset($category->thumb) }}" alt="{{$category->name}}">
                         <div class="sliderPanel--textHolder uk-position-cover">
-                            <h3 class="uk-position-bottom" id="travelStyle-name">{{$category->name}}</h3>
-                        </div>
-                        <div class="sliderPanel--textHolder__hover">
-                            <h4>{{$category->name}}</h4>
-                            <p>{{ substr($category->description, 0, 80) }}{{ strlen($category->description) > 80 ? '...' : "" }}
-                            </p>
-                            <a href="{{ route('frontend.fetchByCategory',$category->slug) }}"
-                                class="button-textOnly">View all <span>&rarr;</span></a>
+                            <h3 class="uk-position-bottom" id="travelStyle-name">
+                                <a href="{{ route('frontend.fetchByCategory',$category->slug) }}"
+                                class="button-textOnly">{{$category->name}}</a>
+                            </h3>
                         </div>
                     </div>
                 </li>

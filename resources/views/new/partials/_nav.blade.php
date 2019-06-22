@@ -104,12 +104,10 @@
                                             <div class="uk-accordion-content">
                                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                                     <ul uk-accordion>
-                                                        @foreach($dos as $do)
-                                                        @if($do->tours->count() > 0)
+                                                        @foreach($wheres as $where)
                                                         <li class="list-item">
-                                                            <a  class="uk-margin-left" href="{{ route('frontend.fetchByRegion',$where->slug) }}">{{ $do->name }}</a>
-                                                        </li>
-                                                        @endif
+                                                                <a  class="uk-margin-left" href="{{ route('frontend.fetchByRegion',$where->slug) }}">{{ $where->name }}</a>
+                                                            </li>
                                                         @endforeach
                                                     </li>
                                                     </ul>

@@ -32,7 +32,7 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
         <div uk-grid class="uk-grid-small uk-visible@l ">
             <div class="uk-width-1-4">
                 <div class="aboutSidebar-wrapper">
-                    <div class="uk-panel" uk-sticky="offset:80">
+                    <div class="uk-panel" uk-sticky="offset:80" id="sticky-menu">
                         <ul uk-scrollspy-nav="closest: li; scroll: true; offset: 130" class="aboutSidebar-list" uk-nav>
                             <li class="aboutSidebar-list--item"><a href="#first">Why Nepal</a></li>
                             <li class="aboutSidebar-list--item"><a href="#second">Why Crusade Himalaya</a></li>
@@ -248,3 +248,6 @@ Nepal isn't a destination, it is an experience, an experience beyond the ordinar
     </div>
 </section>
 @stop
+@section('scripts')
+<script src="{{ asset('js/about.js') }}"></script>    
+@endsection

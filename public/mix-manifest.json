@@ -2,5 +2,6 @@
     "/js/new.js": "/js/new.js",
     "/css/main.css": "/css/main.css",
     "/js/sticky-nav.js": "/js/sticky-nav.js",
-    "/js/new-product.js": "/js/new-product.js"
+    "/js/new-product.js": "/js/new-product.js",
+    "/js/about.js": "/js/about.js"
 }

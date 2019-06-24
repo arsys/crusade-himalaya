@@ -107,3 +107,8 @@
   #featured-media{
       @extend .uk-padding, .uk-padding-remove-horizontal;
   }
+  .mentioned-list{
+    &__item{
+        padding:0px 8px;
+    }
+  }

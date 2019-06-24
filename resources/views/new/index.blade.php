@@ -288,15 +288,23 @@
         <div class="titleMinimal-wrapper uk-text-left">
             <h4 class="titleMinimal">As mentioned on:</h4>
         </div>
-        <div uk-grid>
-            @foreach ($medias as $media)
-            <div class="uk-width-auto">
-                <a href="{{$media->url}}" target="_blank">
-                    <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
-                </a>
+
+        <div uk-slider="" class="uk-slider uk-slider-container">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+                <ul class="uk-slider-items mentioned-list">
+                    @foreach ($medias as $media)
+                    <li class="mentioned-list__item">
+                        <a href="{{$media->url}}" target="_blank">
+                            <img data-src="{{$media->path}}" alt="{{$media->name}}" uk-img>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
             </div>
-            @endforeach
         </div>
+    </div>
+    
 </section>
 
 @endsection

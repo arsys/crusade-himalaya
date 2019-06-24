@@ -24,4 +24,5 @@ mix.browserSync('localhost:8000')
 .sass('resources/sass/new/main.scss', 'public/css')
 .js('resources/js/new.js', 'public/js')
 .js('resources/js/sticky-nav.js', 'public/js')
-.js('resources/js/new-product.js', 'public/js');
+.js('resources/js/new-product.js', 'public/js')
+.js('resources/js/about.js', 'public/js');

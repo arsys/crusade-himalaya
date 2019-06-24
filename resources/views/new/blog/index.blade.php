@@ -3,7 +3,7 @@
 <section class="image-page-header image-page-header-m" data-src="{{ asset('img/blog-cover.jpg') }}" uk-img>
     <div class="page-title__wrapper">
 
-        <div class="uk-position-large uk-position-center uk-overlay ">
+        <div class="uk-position-xlarge uk-position-center uk-overlay ">
             <h1 class="blogPage-title">Travel Blog</h1>
             <p class="blogPage-description">Oh Hey, check out the stuff we post on this travel blog. This is probably
                 the
@@ -21,7 +21,7 @@
 <section class="section-dashed">
     <div uk-grid>
         <div class="uk-width-1-6 uk-visible@m"></div>
-        <div class="uk-width-expand blogPost-wrapper">
+        <div class="uk-width-expand uk-width-1-1@s blogPost-wrapper">
             @foreach ($posts as $post)         
             <article class="blogPost-article">
                 <header class="blogPost-header" uk-grid>

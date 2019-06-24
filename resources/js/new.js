@@ -6,8 +6,7 @@ UIkit.use(Icons);
 
 $(function() {
  var date = moment().format('M');
- UIkit.tab('.event-month-list').show(date-1);
- UIkit.accordion('.event-list--sm').toggle(date-1, true);
+
   //Homepage Scroll Down Button
   $('.scroll-down').click (function() {
     $('html, body').animate({scrollTop: $('section#scroll-end').offset().top }, 'slow');
@@ -74,4 +73,7 @@ function printMessageErrors(msg){
 		$('.print-error-msg').find('ul').append("<li>"+ value +"</li>");
 	});
 }
+UIkit.tab('.event-month-list').toggle(date-1);
+UIkit.accordion('.event-list--sm').toggle(date-1, true);
+
 });

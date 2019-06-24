@@ -1,5 +1,6 @@
 .sliderWrapper,
-.destinationsWrapper,.tourPacakge-wrapper {
+.destinationsWrapper,
+.tourPacakge-wrapper {
     @extend .uk-margin-medium-top;
 }
 
@@ -45,7 +46,7 @@
                 @extend .uk-overlay, .uk-text-left;
                 background-color: rgba(0, 0, 0, 0.1);
                 transition: 0.8s ease-out;
-                
+
                 h3 {
                     margin: 0 0 25px 50px !important;
                     font-family: $font-primary;
@@ -56,7 +57,7 @@
                         .uk-overlay;
                     color: $white;
                     background-color: rgba(0, 0, 0, 0.2);
-                    h4{
+                    h4 {
                         font-family: $font-primary;
                     }
                     p {
@@ -78,37 +79,45 @@
     .destinationRight > div {
         padding-bottom: 15px;
     }
-    .destinationItem{
-        &__overlay{
-            @extend .uk-overlay , .uk-light;
-            &--title{
+    .destinationItem {
+        &__overlay {
+            @extend .uk-overlay, .uk-light;
+            &--title {
                 font-family: $font-teritary;
             }
         }
     }
 }
 
-.tourPacakge-wrapper{
-    .tourPackage--detailWrapper{
+.tourPacakge-wrapper {
+    .tourPackage--detailWrapper {
         @extend .uk-card-body, .uk-padding-small;
-        h4{
+        h4 {
             padding-bottom: 8px;
             font-family: $font-teritary;
             font-size: 19px;
         }
     }
 }
-@media (min-width: 481px) and (max-width: 767px) {  
-    .content-wrapper{
+@media (min-width: 481px) and (max-width: 767px) {
+    .content-wrapper {
         padding: 5px 10px;
-    }    
-  }
-
-  #featured-media{
-      @extend .uk-padding, .uk-padding-remove-horizontal;
-  }
-  .mentioned-list{
-    &__item{
-        padding:0px 8px;
     }
-  }
+}
+
+#featured-media {
+    @extend .uk-padding, .uk-padding-remove-horizontal;
+}
+.mentioned-list {
+    &__item {
+        padding: 0px 8px;
+        a img {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+            transition: ease-in .2s;
+            &:hover{
+                filter: none;
+            }
+        }
+    }
+}

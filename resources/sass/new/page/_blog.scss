@@ -13,6 +13,7 @@
 }
 .blogPost-wrapper {
     @extend .uk-padding;
+    padding-right: unset;
     .blogPost-article {
         @extend .uk-comment, .uk-card-body, .uk-card-default;
         &:not(:first-child){

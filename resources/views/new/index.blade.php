@@ -1,6 +1,6 @@
 @extends('layouts.new')
 @section('content')
-<header class="header-wrapper js-slideshow-animation" uk-slideshow="ratio: false; autoplay:true">
+<header class="header-wrapper js-slideshow-animation" uk-slideshow="ratio: 4:3; autoplay:true">
 
     <div class="hero-slider" tabindex="-1">
 

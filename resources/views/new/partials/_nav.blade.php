@@ -116,7 +116,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                            <li class="mobileMenu-list__item"><a class="mobileMenu-list__item--link" href="#">Whats
+                            <li class="mobileMenu-list__item"><a class="mobileMenu-list__item--link" href="{{ route('frontend.about') }}">Whats
                                     On</a></li>
                             <li class="mobileMenu-list__item"><a class="mobileMenu-list__item--link" href="{{ route('frontend.about') }}">Who We
                                     Are</a></li>

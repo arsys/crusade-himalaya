@@ -8,7 +8,7 @@
 <section class="section-dashed">
     <div class="container">
         <div uk-grid class="uk-margin-large-top">
-            <div class="uk-width-1-6 uk-hidden@m"></div>
+            <div class="uk-width-1-6 uk-visible@m"></div>
             <div class="uk-width-expand blogPost-contentwrapper">
                 <article class="articleWrapper">
                     <h1 class="articleTitle"><a class="uk-link-reset" href="">{{$post->title}}</a></h1>
@@ -23,7 +23,7 @@
                     <div id="disqus_thread"></div>
                 </article>
             </div>    
-            <div class="uk-width-1-6 uk-hidden@m"></div>        
+            <div class="uk-width-1-6 uk-visible@m"></div>        
         </div>
             
     </div>

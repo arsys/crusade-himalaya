@@ -24,7 +24,7 @@
 
     </div>
 
-</header>
+</header> 
 
 <section class="section-white" id="scroll-end">
     <div class="container">

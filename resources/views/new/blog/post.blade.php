@@ -20,14 +20,12 @@
                     <span class="postContent">
                         {!!$post->postContent!!}
                     </span>
-
+                    <div id="disqus_thread"></div>
                 </article>
             </div>    
             <div class="uk-width-1-6 uk-hidden@m"></div>        
         </div>
-        <div uk-grid>
-            <div id="disqus_thread"></div>
-        </div>
+            
     </div>
 </section>
 @stop

@@ -73,7 +73,7 @@ function printMessageErrors(msg){
 		$('.print-error-msg').find('ul').append("<li>"+ value +"</li>");
 	});
 }
-UIkit.tab('.event-month-list').toggle(date-1);
-UIkit.accordion('.event-list--sm').toggle(date-1, true);
+// UIkit.tab('.event-month-list').toggle(date-1);
+// UIkit.accordion('.event-list--sm').toggle(date-1, true);
 
 });

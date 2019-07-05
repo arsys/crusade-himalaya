@@ -56,6 +56,9 @@
         </div>
         <div class="footerCopyright">
             <span> © {{date('Y')}} KARMA TARA ADVENTURE PVT. LTD. KATHMANDU NEPAL</span>
+            <a href="//www.dmca.com/Protection/Status.aspx?ID=b418099e-cf75-4088-a5e4-0e5faeb71936" title="DMCA.com Protection Status" class="dmca-badge"> 
+                <img src ="https://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=b418099e-cf75-4088-a5e4-0e5faeb71936"  alt="DMCA.com Protection Status" /></a>  
+                <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
         </div>
     </div>
 </footer>

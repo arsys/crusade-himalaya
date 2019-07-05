@@ -1,3 +1,17 @@
+.banner-content {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: left;
+}
+
+
+
 @media (min-width: 320px) and (max-width: 480px) {
     .destinationsWrapper {
         .destinationItem{
@@ -33,11 +47,40 @@
         .description-holder{
             width: 70%;
             .descriptionTitle{
-                font-size: 1rem;
+                font-size: 1rem ;
             }
             .descriptionContent{
                 font-size: 0.75rem;
             }
         }
     }
+}
+
+@media screen and (max-device-width:320px), screen and (max-width:768px) {
+    .blogPost-wrapper .blogPost-article .blogPost-header .blogPost-title {
+    font-size: 1rem !important;
+
+    }
+
+
+    .blogPost-wrapper .blogPost-article .blogPost-header .blogPost-meta>:nth-child(n+2):not(.uk-first-column):before 
+   {
+
+    margin-right: 0px;
+    border-left:none;
+
+}
+.eventContent{
+    .eventTitle{
+    font-size:1rem !important;
+    }
+    p{
+    font-size:.8rem !important;
+    }
+}
+.nav-container .nav-wrapper .logo-wrapper a img{
+    padding-left:10px;
+
+}
+
 }

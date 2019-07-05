@@ -27,7 +27,7 @@
         </div>
             
     </div>
-</section>
+</section> 
 @stop
 
 @section('scripts')

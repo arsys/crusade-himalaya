@@ -2,30 +2,29 @@
 @section('content')
 <header class="header-wrapper js-slideshow-animation" uk-slideshow="ratio: 4:3; autoplay:true">
 
-    <div class="hero-slider" tabindex="-1">
-
-        <ul class="uk-slideshow-items slidelist" uk-height-viewport="min-height: 300" style="min-height: calc(100vh);">
-            @foreach ($carousels as $carousel)
-            <li tabindex="-1" class="slidelist--item" style="transform: translate3d(0px, 0px, 0px);">
-                <img src="{{ asset($carousel->path) }}" alt="" uk-cover="" class="uk-cover"
-                    style="height: 1013px; width: 1520px;">
-                <div class="uk-position-center-left slidelist--item__content">
-                    <h2 class="slidelist--item__content--heading" uk-slideshow-parallax="y: -100,0,0; opacity: 0,1,1;"
-                        style="transform: translateX(0px);">{{$carousel->header}}</h2>
-                    <p class="slidelist--item__content--subheading" uk-slideshow-parallax="y: 100,0,0; opacity: 0,1,1;"
-                        style="transform: translateX(0px);">{{$carousel->subheader}}</p>
-                </div>
-            </li>
-            @endforeach
-        </ul>
-        <div class="scroll-down-wrapper  uk-position-bottom-center">
-            <a href="#" class="scroll-down"><span uk-icon="icon: chevron-down;ratio: 3.5"></span></a>
+        <div class="hero-slider" tabindex="-1">
+    
+            <ul class="uk-slideshow-items slidelist" uk-height-viewport="min-height: 300" style="min-height: calc(100vh);">
+                @foreach ($carousels as $carousel)
+                <li tabindex="-1" class="slidelist--item" style="transform: translate3d(0px, 0px, 0px);">
+                    <img src="{{ asset($carousel->path) }}" alt="" uk-cover="" class="uk-cover"
+                        style="height: 1013px; width: 1520px;">
+                    <div class="uk-position-center-left slidelist--item__content">
+                        <h2 class="slidelist--item__content--heading" uk-slideshow-parallax="y: -100,0,0; opacity: 0,1,1;"
+                            style="transform: translateX(0px);">{{$carousel->header}}</h2>
+                        <p class="slidelist--item__content--subheading" uk-slideshow-parallax="y: 100,0,0; opacity: 0,1,1;"
+                            style="transform: translateX(0px);">{{$carousel->subheader}}</p>
+                    </div>
+                </li>
+                @endforeach
+            </ul>
+            <div class="scroll-down-wrapper  uk-position-bottom-center">
+                <a href="#" class="scroll-down"><span uk-icon="icon: chevron-down;ratio: 3.5"></span></a>
+            </div>
+    
         </div>
-
-    </div>
-
-</header> 
-
+    
+    </header>
 <section class="section-white" id="scroll-end">
     <div class="container">
         <div uk-grid class="uk-child-width-1-1 uk-child-width-1-2@l uk-grid-divider uk-height-match">
@@ -109,7 +108,8 @@
                         Get in touch with us, and plan your perfect holiday – an unforgettable holiday filled with
                         adventure, excitement, and memories.</p>
 
-                    <p><a href="{{ route('frontend.about') }}" class="button-arrow">READ MORE <span>&rarr;</span></a></p>
+                    <p><a href="{{ route('frontend.about') }}" class="button-arrow">READ MORE <span>&rarr;</span></a>
+                    </p>
 
                 </div>
             </div>
@@ -139,7 +139,7 @@
                         <div class="sliderPanel--textHolder uk-position-cover">
                             <h3 class="uk-position-bottom" id="travelStyle-name">
                                 <a href="{{ route('frontend.fetchByCategory',$category->slug) }}"
-                                class="button-textOnly">{{$category->name}}</a>
+                                    class="button-textOnly">{{$category->name}}</a>
                             </h3>
                         </div>
                     </div>
@@ -304,10 +304,12 @@
             </div>
         </div>
     </div>
-    
+
 </section>
 
 @endsection
+
 @section('scripts')
+
 <script src="{{ asset('js/sticky-nav.js') }}"></script>
 @endsection

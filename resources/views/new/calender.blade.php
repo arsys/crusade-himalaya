@@ -279,6 +279,8 @@ What's On This Month | {{config('app.name')}}
 	</div>
 </section>
 {{--Medium and below --}}
+
+
 <section class="section-white uk-hidden@m">
 	<div class="container">
 		<ul uk-accordion class="event-list--sm">
@@ -287,20 +289,20 @@ What's On This Month | {{config('app.name')}}
 				<a class="uk-accordion-title" href="#">January</a>
 				<div class="uk-accordion-content">
 					@foreach($jan as $event)
-					<div class="eventWrapper" uk-grid>
-						<div class="eventImage uk-card-media-left uk-width-1-3">
+					<div class=" uk-card eventWrapper" uk-grid>
+						<div class="eventImage uk-card-media-top">
 							<img src="{{ asset($event->path) }}" alt="{{ $event->title }}" uk-cover>
 							<canvas width="600" height="400"></canvas>
 						</div>
-						<div class="uk-width-2-3">
-							<div class="eventContent">
-								<h3 class="eventTitle">{{ $event->title }}</h3>
-								<ul class="eventDate">
-									<li><span uk-icon="icon: calendar"></span> {{ $event->start_date }}</li>
-								</ul>
-								<p>{{ $event->description }}</p>
-							</div>
+						
+						<div class="eventContent">
+							<h3 class="eventTitle">{{ $event->title }}</h3>
+							<ul class="eventDate">
+								<li><span uk-icon="icon: calendar"></span> {{ $event->start_date }}</li>
+							</ul>
+							<p>{{ $event->description }}</p>
 						</div>
+					
 					</div>
 					@endforeach
 				</div>

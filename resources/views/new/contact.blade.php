@@ -147,7 +147,7 @@ Contact
         });
     }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key={{config('app.google_map_api')}}&callback=initMap"
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{env('GOOGLE_MAP_API'))}}&callback=initMap"
 type="text/javascript"></script>
 @stop
 @section('conversion')

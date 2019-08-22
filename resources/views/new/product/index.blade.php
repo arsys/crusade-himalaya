@@ -21,14 +21,14 @@
     {
   "@context": "https://schema.org/",
   "@type": "Product",
-  "name": "{{$product->title.''. $product->days}}",
+  "name": "{{$tour->title.''. $tour->days}}",
   "image": [
     "{{ asset('img/Flag.png') }}"
    ],
-  "description": "{{$product->description}}",
+  "description": "{{$tour->description}}",
   "brand": {
     "@type": "Thing",
-    "name": "{{$product->title.''. $product->days}}"
+    "name": "{{$tour->title.''. $tour->days}}"
   },
   "review": {
     "@type": "Review",

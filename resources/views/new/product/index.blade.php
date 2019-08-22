@@ -16,6 +16,54 @@
 <meta property="og:price:amount" content="{{ $tour->price }}" />
 <meta property="og:price:currency" content="USD" />
 @stop
+@section('json')
+<script type="application/ld+json">
+    {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{$product->title.''. $product->days}}",
+  "image": [
+    "{{ asset('img/Flag.png') }}"
+   ],
+  "description": "{{$product->description}}",
+  "brand": {
+    "@type": "Thing",
+    "name": "{{$product->title.''. $product->days}}"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4",
+      "bestRating": "5"
+    },
+    "author": {
+        "@type": "Organization",
+        "name": "Crusade Himalaya"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "89"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "{{url()->current()}}",
+    "priceCurrency": "USD",
+    "price": "119.99",
+    "priceValidUntil": "2020-11-05",
+    "itemCondition": "https://schema.org/UsedCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Limited space available."
+    }
+  }
+}
+  
+</script>
+@stop
 @extends('layouts.new')
 @section('content')
 <section class="image-page-header" uk-height-viewport="offset-top: true; offset-bottom: 50px"
@@ -27,12 +75,15 @@
         <div class="uk-position-large uk-position-bottom-right ">
             <ul class="uk-breadcrumb">
                 <li><a href="" uk-icon="icon: home"></a></li>
-                <li><a href="{{ route('frontend.fetchByCategory',$tour->category->slug) }}">{{ $tour->category->name }}</a></li>
-				@if(!is_null($tour->region))
-				<li>
-					<a href="{{ route('frontend.region2package',[$tour->category->slug,$tour->region->slug]) }}">{{ $tour->region->name }}</a>
-				</li>
-				@endif					
+                <li><a
+                        href="{{ route('frontend.fetchByCategory',$tour->category->slug) }}">{{ $tour->category->name }}</a>
+                </li>
+                @if(!is_null($tour->region))
+                <li>
+                    <a
+                        href="{{ route('frontend.region2package',[$tour->category->slug,$tour->region->slug]) }}">{{ $tour->region->name }}</a>
+                </li>
+                @endif
                 <li class="uk-disabled"><a href="{{url()->current()}}">{{ $tour->title }}</a></li>
             </ul>
         </div>
@@ -110,12 +161,12 @@
                     uk-tab uk-sticky="offset:0" id="tab-wrapper">
                     <li><a href="#overview">Overview</a></li>
                     <li><a href="#inclusion">Inclusion</a></li>
-                    @if($tour->itinerary->count() > 0)  
+                    @if($tour->itinerary->count() > 0)
                     <li><a href="#itinerary">Itinerary</a></li>
                     @endif
                     @if($tour->departure->count() > 0)
-                    <li><a href="#departures">Depatures</a></li>                    
-                    @endif                                        
+                    <li><a href="#departures">Depatures</a></li>
+                    @endif
                     <li><a href="#gallery">Gallery</a></li>
                 </ul>
 
@@ -128,7 +179,7 @@
                     <h3 class="productContent--title">Includes & Excludes</h3>
                     @include('new.product.partials._inexSingle')
                 </div>
-                @if($tour->itinerary->count() > 0)                
+                @if($tour->itinerary->count() > 0)
                 <div id="itinerary" class="productContent">
                     <h3 class="productContent--title">Detailed Itinerary (15 Days)</h3>
                     @include('new.product.partials._itinerary')
@@ -137,8 +188,8 @@
 
                 @if($tour->departure->count() > 0)
                 <div id="departures" class="productContent">
-                        @include('new.product.partials._departures')
-                </div>                
+                    @include('new.product.partials._departures')
+                </div>
                 @endif
 
                 <div id="enquiry" class="productContent">
@@ -165,7 +216,7 @@
                     <div class="packageMeta-wrapper--sm__price">
                         <span class="uk-align-center">
                             From USD {{$tour->price}}
-                        </span>                        
+                        </span>
                     </div>
                     <div>
                         <span class="priceHolder--pax">per pax</span>
@@ -179,7 +230,8 @@
                                 <div class="actionWrapper--icon">
                                     <i class="fas fa-info"></i>
                                 </div>
-                                <div class="actionWrapper--action" uk-scrollspy-nav="closest: a; scroll: true; offset:0" >
+                                <div class="actionWrapper--action"
+                                    uk-scrollspy-nav="closest: a; scroll: true; offset:0">
                                     <a href="#mob-enquiry">Quick Enquiry</a>
                                 </div>
                             </div>
@@ -202,7 +254,8 @@
                                     <i class="fas fa-tasks"></i>
                                 </div>
                                 <div class="actionWrapper--action">
-                                    <a href="{{ route('frontend.download', $tour->slug) }}" rel="nofollow">Download Itinary</a>
+                                    <a href="{{ route('frontend.download', $tour->slug) }}" rel="nofollow">Download
+                                        Itinary</a>
                                 </div>
                             </div>
                         </li>
@@ -272,14 +325,15 @@
                         </div>
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">{{ $similar->days }} Days</h4>
-                            <a class="button-default" href="{{ route('frontend.tripDetail', $similar->slug) }}">Find Out More</a>
+                            <a class="button-default" href="{{ route('frontend.tripDetail', $similar->slug) }}">Find Out
+                                More</a>
                         </div>
                     </div>
                 </div>
+            </div>
+            @endforeach
+            {{-- loop end --}}
         </div>
-        @endforeach
-        {{-- loop end --}}
-    </div>
 
     </div> {{--container end --}}
 </section>

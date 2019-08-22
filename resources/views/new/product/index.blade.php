@@ -21,7 +21,7 @@
     {
   "@context": "https://schema.org/",
   "@type": "Product",
-  "name": "{{$tour->title.''. $tour->days}}",
+  "name": "{{$tour->title.''. $tour->days.' Days'}}",
   "image": [
     "{{ asset('img/Flag.png') }}"
    ],

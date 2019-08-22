@@ -237,12 +237,6 @@
                     @include('new.product.partials._departures')
                 </div>
             </li>
-            <li class="mobileContent-list--item" id="mob-enquiry">
-                <a class="uk-accordion-title" href="#">Itinerary</a>
-                <div class="uk-accordion-content">
-                    @include('new.product.partials._form')
-                </div>
-            </li>
             <li class="mobileContent-list--item">
                 <a class="uk-accordion-title" href="#">Gallery</a>
                 <div class="uk-accordion-content">

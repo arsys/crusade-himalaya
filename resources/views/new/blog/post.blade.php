@@ -1,10 +1,42 @@
 
+@section('json')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ url()->current() }}"
+  },
+  "headline": "{{$post->title}}",
+  "image": [
+    "{{asset($post->thumb)}}"
+   ],
+  "datePublished": "{{$post->created_at}}",
+  "dateModified": "{{$post->created_at}}",
+  "author": {
+    "@type": "Person",
+    "name": "Hawrry Bhattarai"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "Crusade Himalaya",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{asset('assets/img/favicon-96x96.png')}}"
+    }
+  },
+  "description": "{{$post->description}}"
+}
+</script>
+@stop
 @section('mtitle'){{$post->title}}|Travel Blog @stop
 @section('title'){{$post->title}}|Travel Blog 
 @stop
 @section('description'){!! $post->desctiption !!}@stop
 @extends('layouts.new')
 @section('content')
+
 <section class="section-dashed">
     <div class="container">
         <div uk-grid class="uk-margin-large-top">

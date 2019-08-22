@@ -43,8 +43,6 @@
     <!-- Update your html tag to include the itemscope and itemtype attributes. -->
     <meta name="yandex-verification" content="dc1e4dda4c1cdf73" />
     <meta name="msvalidate.01" content="2CFAF954F4C05941F02B451A6BD7F3A7" />
-    <html itemscope itemtype="http://schema.org/Product">
-
     <!-- Place this data between the <head> tags of your website -->
     <title>@yield('title','Crusade Himalaya | Empower, Educate, Encourage')</title>
 
@@ -72,7 +70,7 @@
     @yield('og')
     <meta property="fb:admins" content="2171959919686300" />
     <meta name="yandex-verification" content="dc1e4dda4c1cdf73" /> 
-
+    @yield('json')
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
         var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

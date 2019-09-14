@@ -4,7 +4,7 @@
 @section('description'){!! $tour->description !!}@stop
 @section('ogImage'){{ asset($tour->image->thumb) }}@stop
 @section('twitter')
-<meta name="twitter:data1" content="${{ $tour->price }}">
+<meta name="twitter:data1" content="${{ $tour->budgetPrice }}">
 <meta name="twitter:label1" content="Price">
 @if (!empty( $tour->difficulty->name))
 <meta name="twitter:data2" content="{{ $tour->difficulty->name }}">
@@ -13,7 +13,7 @@
 
 @stop
 @section('og')
-<meta property="og:price:amount" content="{{ $tour->price }}" />
+<meta property="og:price:amount" content="{{ $tour->budgetPrice }}" />
 <meta property="og:price:currency" content="USD" />
 @stop
 @section('json')
@@ -100,7 +100,7 @@
                     <div class="priceHolder">
                         <span class="priceHolder--day">{{ $tour->days }} Day(s)</span>
                         <span class="priceHolder--from">From USD</span>
-                        <span class="priceHolder--price">$ {{ $tour->price }} </span>
+                        <span class="priceHolder--price">$ {{ $tour->budgetPrice }} </span>
                         <span class="priceHolder--pax">per pax</span>
                         @if($tour->itinerary->count() > 0)
                         <span class="bottom uk-padding-remove-bottom  uk-flex  uk-flex-column"
@@ -215,7 +215,7 @@
                     </div>
                     <div class="packageMeta-wrapper--sm__price">
                         <span class="uk-align-center">
-                            From USD {{$tour->price}}
+                            From USD {{$tour->budgetPrice}}
                         </span>
                     </div>
                     <div>
@@ -321,7 +321,7 @@
                     <div class="tourPackage--detailWrapper">
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">{{ $similar->title }}</h4>
-                            <h4 class="uk-margin-remove">USD {{ $similar->price }}</h4>
+                            <h4 class="uk-margin-remove">USD {{ $similar->budgetPrice }}</h4>
                         </div>
                         <div class="uk-flex uk-flex-between">
                             <h4 class="uk-margin-remove">{{ $similar->days }} Days</h4>

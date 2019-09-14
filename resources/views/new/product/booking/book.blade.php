@@ -22,7 +22,7 @@
                     <div class="bookingMeta-details">
                         <h4 class="bookingMeta-details--name">{{$tour->title}}</h4>
                         <div class="uk-flex uk-flex-column">
-                            <span>Price: USD {{$tour->price}}</span>
+                            <span>Price: USD {{$tour->budgetPrice}}</span>
                             <span>Days: {{$tour->days}} Day(s)</span>
                             <span id="total"></span>
                         </div>
@@ -33,7 +33,7 @@
             <div class="uk-width-2-3">
                 <form class="uk-card uk-card-default uk-card-body uk-form-stacked" method="POST" action="{{ route('frontend.bookingComplete', $tour->slug) }}">
                     @csrf
-                    <input type="hidden" id="price" value="{{$tour->price}}">
+                    <input type="hidden" id="price" value="{{$tour->budgetPrice}}">
                     <input type="hidden" name="tour_id" value="{{$tour->id}}">
                     <div class="uk-margin">
                         <label class="uk-form-label" for="pax">No. of travellers</label>

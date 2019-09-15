@@ -32,7 +32,7 @@
                         <div class="tourPackage--detailWrapper">
                             <div class="uk-flex uk-flex-between">
                                 <h4 class="uk-margin-remove">{{$package->title}}</h4>
-                                <h4 class="uk-margin-remove">USD {{$package->price}}</h4>
+                                <h4 class="uk-margin-remove">USD {{$package->budgetPrice}}</h4>
                             </div>
                             <div class="uk-flex uk-flex-between">
                                 <h4 class="uk-margin-remove">{{$package->days}} Days</h4>

@@ -107,7 +107,7 @@ $('#quick-enquiry-mob').on('submit', function(e){
 			if($.isEmptyObject(data.error))
 			{
 				$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
-				$("#quick-enquiry").trigger("reset");
+				$("#quick-enquiry-mob").trigger("reset");
 				$('.print-error-msg').find('ul').empty();
 				$('.print-error-msg').css('display','block');
 				$('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");

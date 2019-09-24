@@ -181,7 +181,7 @@
                 </div>
                 @if($tour->itinerary->count() > 0)
                 <div id="itinerary" class="productContent">
-                    <h3 class="productContent--title">Detailed Itinerary (15 Days)</h3>
+                    <h3 class="productContent--title">Detailed Itinerary ({{$tour->days}})</h3>
                     @include('new.product.partials._itinerary')
                 </div>
                 @endif

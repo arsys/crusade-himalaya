@@ -299,7 +299,7 @@
         </ul>
 
         <div class="uk-card uk-card-body uk-card-default">
-            @include('new.product.partials._form')
+            @include('new.product.partials._form_mobile')
         </div>
     </div>
 </section>

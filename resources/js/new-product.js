@@ -91,6 +91,42 @@ $('#quick-enquiry').on('submit', function(e){
 	});
 });
 
+$('#quick-enquiry-mob').on('submit', function(e){
+	e.preventDefault();
+	$(".submit").prop("disabled", true);
+	data = $(this).serialize();
+	action = $(this).attr('action');
+	$.ajax({
+		type: 'POST',
+		url: action,
+		data: data,
+		headers: {
+			"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+		},
+		success: function (data) {
+			if($.isEmptyObject(data.error))
+			{
+				$("#response-msg").toggleClass('uk-alert-danger uk-alert-success');
+				$("#quick-enquiry").trigger("reset");
+				$('.print-error-msg').find('ul').empty();
+				$('.print-error-msg').css('display','block');
+				$('.print-error-msg').find('ul').append("<li>"+ data.success +"</li>");
+				setTimeout(function() {
+					$('.print-error-msg').fadeOut();
+					$(".submit").prop("disabled", false);
+				}, 3000);
+			}
+			else{
+				printMessageErrors(data.error);
+				$(".submit").prop("disabled", false);
+				setTimeout(function() {					
+					$('.print-error-msg').fadeOut();					
+				}, 3000);
+			}
+		}
+	});
+});
+
 //Refer a friend
 $('#refer-friend').on('submit', function(e){
 	e.preventDefault();
